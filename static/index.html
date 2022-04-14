@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="referrer" content="same-origin"/>
+    <meta name="robots" content="noindex"/>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+    <title>Kindle News Rack</title>
+    <style>
+        {css}
+    </style>
+</head>
+<body>
+    <h1>
+        <img src="favicon.svg" alt="Kindle icon">
+        <a href="{publish_site}">Kindle News Rack</a>
+    </h1>
+    <main>
+        <ol class="books">
+            {listing}
+        </ol>
+    </main>
+    <footer>
+        Optimised for the Kindle browser.
+        <div class="refreshed-info">
+            {total_checked} recipes configured.
+            Generated <span id="refreshed_dt" data-refreshed-date="{refreshed_ts}">at {refreshed_dt:%-d %B, %Y %-I:%M%p %z}</span>, and took about {elapsed}.
+        </div>
+    </footer>
+    <script type="application/javascript">{js}</script>
+</body>
+</html>

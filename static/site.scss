@@ -1,0 +1,70 @@
+/* Use pt instead of px because px is odd on the Kindle browser */
+html {
+    font-size: 11pt;
+}
+body {
+    font-family: sans-serif;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: #000;
+    background-color: #ffffff;
+}
+h1 {
+    font-size: 1.25rem;
+
+    svg, img {
+        vertical-align: middle;
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
+.books li {
+    margin-bottom: 0.5rem;
+
+    .pub-date {
+        display: block;
+        margin-top: 0.2rem;
+        font-size: 0.8rem;
+        color: #555555;
+    }
+}
+.book {
+    margin-left: 0.5rem;
+    font-family: monospace;
+    background-color: #eaeaea;
+    border: 1px solid #555555;
+    padding: 1pt 4pt;
+    border-radius: 3pt;
+    display: inline-block;
+
+    .file-size {
+        margin-left: 0.3rem;
+        font-size: 0.7rem;
+        color: #555555;
+    }
+}
+
+footer {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #555555;
+    font-size: 0.8rem;
+    text-align: center;
+    .refreshed-info {
+        margin-top: 0.2rem;
+        font-size: 0.7rem;
+    }
+}
+
+// Saner defaults for large screens
+@media (min-width: 1280px) {
+
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        margin: 2rem;
+    }
+}

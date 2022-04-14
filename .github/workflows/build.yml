@@ -1,0 +1,68 @@
+name: "Build"
+
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '!**'
+  pull_request:
+    branches:
+      - '**'
+  schedule:
+    - cron: "0 0,10 * * *"
+  workflow_dispatch:
+    inputs:
+      REGENERATE:
+        description: Enter csv of recipe slugs to specifically regenerate
+        required: false
+      SKIP:
+        description: Enter csv of recipe slugs to specifically skip
+        required: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install npm dependencies
+        run: npm install -g sass terser html-minifier-terser
+
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+
+      - name: Install python requirements
+        run: pip install -r requirements.txt
+
+      - name: Install calibre
+        run: |
+          mkdir -p ~/calibre-bin
+          wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin install_dir=~/calibre-bin isolated=y
+          export PATH=$PATH:~/calibre-bin/calibre
+          calibre --version
+
+      - name: Generate .mobi
+        env:
+          CALIBRE_CONFIG_DIRECTORY: ${{ github.workspace }}/calibre_config/
+        run: |
+          export PATH=$PATH:~/calibre-bin/calibre
+          sh _build.sh
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public

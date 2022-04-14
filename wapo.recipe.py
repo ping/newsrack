@@ -1,0 +1,251 @@
+__license__ = "GPL v3"
+__copyright__ = "2011, Darko Miletic <darko.miletic at gmail.com>"
+"""
+www.washingtonpost.com
+"""
+from datetime import datetime
+import json
+from urllib.parse import urljoin
+
+from calibre.web.feeds.news import BasicNewsRecipe
+from calibre.ebooks.BeautifulSoup import BeautifulSoup
+
+
+def classes(classes):
+    q = frozenset(classes.split(" "))
+    return dict(attrs={"class": lambda x: x and frozenset(x.split()).intersection(q)})
+
+
+class TheWashingtonPost(BasicNewsRecipe):
+    title = "The Washington Post"
+    __author__ = "Darko Miletic"
+    description = "Breaking news and analysis on politics, business, world national news, entertainment more. In-depth DC, Virginia, Maryland news coverage including traffic, weather, crime, education, restaurant reviews and more."  # noqa
+    publisher = "The Washington Post Company"
+    category = "news, politics, USA"
+    publication_type = "newspaper"
+    use_embedded_content = False
+    no_stylesheets = True
+    remove_javascript = True
+    remove_empty_feeds = True
+    auto_cleanup = False
+    encoding = "utf-8"
+    language = "en"
+
+    oldest_article = 1
+    max_articles_per_feed = 25
+    ignore_duplicate_articles = {"url"}
+    masthead_url = "https://www.washingtonpost.com/sf/brand-connect/dell-technologies/the-economics-of-change/media/wp_logo_black.png"
+
+    compress_news_images = True
+    scale_news_images = (800, 800)
+    scale_news_images_to_device = False  # force img to be resized to scale_news_images
+    timeout = 20
+    timefmt = "%-d, %b %Y"
+    pub_date = None  # custom publication date
+
+    remove_attributes = ["style"]
+
+    extra_css = """
+    .headline { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .sub-headline { font-size: 1.4rem; margin-top: 0; margin-bottom: 0.5rem; }
+    .article-meta { margin-top: 0.8rem; margin-bottom: 1rem; }
+    .article-meta .author { font-weight: bold; color: #444; display: block; }
+    .figure, .video { margin: 0.5rem 0; }
+    .figure img { max-width: 100%; height: auto; }
+    .figure .caption { font-size: 0.8rem; margin-top: 0.2rem; }
+    .video { color: #444; font-size: 0.8rem; }
+    .video .caption { margin-top: 0.2rem; }
+    .keyupdates li { margin-bottom: 0.5rem; }
+    """
+
+    feeds = [
+        ("World", "http://feeds.washingtonpost.com/rss/world"),
+        ("National", "http://feeds.washingtonpost.com/rss/national"),
+        ("White House", "http://feeds.washingtonpost.com/rss/politics/whitehouse"),
+        ("Business", "http://feeds.washingtonpost.com/rss/business"),
+        ("Opinions", "http://feeds.washingtonpost.com/rss/opinions"),
+        # ("Local", "http://feeds.washingtonpost.com/rss/local"),
+        # ("Entertainment", "http://feeds.washingtonpost.com/rss/entertainment"),
+        # (u"Sports", u"http://feeds.washingtonpost.com/rss/sports"),
+        # (u"Redskins", u"http://feeds.washingtonpost.com/rss/sports/redskins"),
+    ]
+
+    def _extract_child_nodes(self, nodes, parent_element, soup):
+        if not nodes:
+            return
+        for c in nodes:
+            try:
+                if c["type"] in ["interstitial_link", "", "custom_embed"]:
+                    continue
+                if c["type"] == "text":
+                    para_ele = soup.new_tag("p")
+                    para_ele.append(BeautifulSoup(c["content"]))
+                    parent_element.append(para_ele)
+                elif c["type"] == "image":
+                    figure_ele = soup.new_tag("figure", attrs={"class": "figure"})
+                    # img_url = f'https://www.washingtonpost.com/wp-apps/imrs.php?{urlencode({"src": c["url"], "w": 916})}'
+                    img_ele = soup.new_tag("img", src=c["url"])
+                    figure_ele.append(img_ele)
+                    caption_ele = soup.new_tag("figcaption", attrs={"class": "caption"})
+                    caption_ele.string = c.get("credits_caption_display", "")
+                    figure_ele.append(caption_ele)
+                    parent_element.append(figure_ele)
+                elif c["type"] == "video":
+                    video_url = urljoin(
+                        "https://www.washingtonpost.com", c["canonical_url"]
+                    )
+                    container_ele = soup.new_tag("div", attrs={"class": "video"})
+                    video_link_ele = soup.new_tag("a", href=video_url)
+                    video_link_ele.string = video_url
+                    caption_ele = soup.new_tag("figcaption", attrs={"class": "caption"})
+                    caption_ele.string = (
+                        f'Video: {c.get("credits_caption_display", "")}'
+                    )
+                    container_ele.append(caption_ele)
+                    container_ele.append(video_link_ele)
+                    parent_element.append(container_ele)
+                elif c["type"] == "header":
+                    header_ele = soup.new_tag(f'h{c["level"]}')
+                    header_ele.string = c["content"]
+                    parent_element.append(header_ele)
+                elif c["type"] == "correction":
+                    para_ele = soup.new_tag("p", attrs={"class": "correction"})
+                    para_ele.append(BeautifulSoup(c.get("content") or c.get("text")))
+                    parent_element.append(para_ele)
+                elif c["type"] == "oembed_response":
+                    embed_ele = BeautifulSoup(c["raw_oembed"]["html"])
+                    parent_element.append(embed_ele)
+                elif c["type"] == "raw_html":
+                    content = BeautifulSoup(c["content"])
+                    container = content.find(
+                        "div", attrs={"data-fallback-image-url": True}
+                    )
+                    if container:
+                        figure_ele = soup.new_tag("figure")
+                        figure_ele["class"] = "figure"
+                        img_url = container["data-fallback-image-url"]
+                        img_ele = soup.new_tag("img", src=img_url)
+                        figure_ele.append(img_ele)
+                        caption_ele = soup.new_tag(
+                            "figcaption", attrs={"class": "caption"}
+                        )
+                        caption_ele.string = c.get("additional_properties", {}).get(
+                            "fallback_image_description", ""
+                        )
+                        figure_ele.append(caption_ele)
+                        parent_element.append(figure_ele)
+                elif (
+                    c["type"] in ["keyupdates", "list"]
+                    and c.get("list_type") == "unordered"
+                ):
+                    container_ele = soup.new_tag("div", attrs={"class": c["type"]})
+                    header_string = c.get("additional_properties", {}).get(
+                        "header", ""
+                    ) or c.get("header")
+                    if header_string:
+                        header_ele = soup.new_tag("h3")
+                        header_ele.string = header_string
+                        container_ele.append(header_ele)
+                    ol_ele = soup.new_tag("ol")
+                    for i in c.get("items", []):
+                        li_ele = soup.new_tag("li")
+                        li_ele.append(BeautifulSoup(i["content"]))
+                        ol_ele.append(li_ele)
+                    container_ele.append(ol_ele)
+                    parent_element.append(container_ele)
+                elif c["type"] == "story" and c["subtype"] in [
+                    "live-update",
+                    "live-reporter-insight",
+                ]:
+                    container_ele = soup.new_tag("div", attrs={"class": c["type"]})
+                    # add a hr to separate stories
+                    container_ele.append(soup.new_tag("hr", attrs={"class": "story"}))
+
+                    header_ele = soup.new_tag("h3")
+                    header_ele.append(
+                        BeautifulSoup(c.get("headlines", {}).get("basic", ""))
+                    )
+                    container_ele.append(header_ele)
+
+                    # 2022-04-13T14:04:03.051Z
+                    post_date = datetime.strptime(
+                        c["display_date"][:-5], "%Y-%m-%dT%H:%M:%S"
+                    )
+                    meta_ele = BeautifulSoup(
+                        f"""<div class="article-meta">
+                            <span class="author"></span>
+                            <span class="published-dt">{post_date:%-I:%M%p %-d %B, %Y}</span>
+                        </div>"""
+                    )
+                    authors = [a["name"] for a in c.get("credits", {}).get("by", [])]
+                    meta_ele.find("span", class_="author").string = ", ".join(authors)
+                    container_ele.append(meta_ele)
+                    self._extract_child_nodes(
+                        c["content_elements"], container_ele, soup
+                    )
+                    parent_element.append(container_ele)
+                elif c["type"] == "quote" and c.get("subtype") == "blockquote":
+                    container_ele = soup.new_tag("blockquote")
+                    self._extract_child_nodes(
+                        c["content_elements"], container_ele, soup
+                    )
+                    parent_element.append(container_ele)
+                else:
+                    self.log("!" * 8, json.dumps(c))
+            except Exception as err:
+                self.log("*" * 10, c.get("type"), str(err))
+                self.log(json.dumps(c))
+
+    def publication_date(self):
+        return self.pub_date
+
+    def preprocess_raw_html(self, raw_html, url):
+        soup = BeautifulSoup(raw_html)
+        data = json.loads(
+            soup.find(
+                "script", attrs={"id": "__NEXT_DATA__", "type": "application/json"}
+            ).text
+        )
+        content = data.get("props", {}).get("pageProps", {}).get("globalContent", {})
+        # 2022-04-13T14:04:03.051Z
+        post_date = datetime.strptime(content["display_date"][:-5], "%Y-%m-%dT%H:%M:%S")
+        if post_date > datetime.today():  # it happens
+            try:
+                post_date = datetime.strptime(
+                    content["publish_date"][:-5], "%Y-%m-%dT%H:%M:%S"
+                )
+            except:  # noqa
+                # do nothing
+                pass
+        if not self.pub_date or post_date > self.pub_date:
+            self.pub_date = post_date
+            self.title = f"The Washington Post: {post_date:%-d %b, %Y}"
+        title = content["headlines"]["basic"]
+        html = f"""<html>
+        <head></head>
+        <body>
+            <h1 class="headline"></h1>
+            <article>
+                <div class="sub-headline"></div>
+                <div class="article-meta">
+                    <span class="author"></span>
+                    <span class="published-dt">{post_date:%-I:%M%p %-d %B, %Y}</span>
+                </div>
+            </div>
+            </article>
+        </body></html>"""
+        new_soup = BeautifulSoup(html)
+        title_ele = new_soup.new_tag("title")
+        title_ele.string = title
+        new_soup.head.append(title_ele)
+        new_soup.body.h1.string = title
+        if content.get("subheadlines", {}).get("basic", ""):
+            new_soup.find("div", class_="sub-headline").string = content[
+                "subheadlines"
+            ]["basic"]
+        authors = [a["name"] for a in content.get("credits", {}).get("by", [])]
+        new_soup.find("span", class_="author").string = ", ".join(authors)
+        self._extract_child_nodes(
+            content.get("content_elements"), new_soup.body.article, new_soup
+        )
+        return str(new_soup)
