@@ -10,7 +10,7 @@ on:
     branches:
       - '**'
   schedule:
-    - cron: "0 0,10 * * *"
+    - cron: "0 9,23 * * *"
   workflow_dispatch:
     inputs:
       REGENERATE:
