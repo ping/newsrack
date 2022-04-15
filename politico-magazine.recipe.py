@@ -14,29 +14,45 @@ class PoliticoMagazine(BasicNewsRecipe):
     publisher = "Capitol News Company, LLC"
     category = "news, politics, USA"
     publication_type = "magazine"
+    encoding = "utf-8"
+    language = "en"
+    masthead_url = "https://www.politico.com/dims4/default/bbb0fd2/2147483647/resize/1160x%3E/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F0e%2F5b%2F3cf3e0f04ca58370112ab667c255%2Fpolitico-logo.png"
+    no_stylesheets = True
+    remove_javascript = True
+    use_embedded_content = False
 
     oldest_article = 7
-    max_articles_per_feed = 100
-    use_embedded_content = True
-    no_stylesheets = True
+    max_articles_per_feed = 25
+
     compress_news_images = True
-    masthead_url = "https://www.politico.com/dims4/default/bbb0fd2/2147483647/resize/1160x%3E/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F0e%2F5b%2F3cf3e0f04ca58370112ab667c255%2Fpolitico-logo.png"
     scale_news_images = (800, 800)
     scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    remove_javascript = True
-    encoding = "UTF-8"
-    language = "en"
     pub_date = None  # custom publication date
+
+    keep_only_tags = [dict(name=["main"])]
+    remove_tags = [
+        dict(
+            class_=[
+                "story-section",
+                "social-tools",
+                "below-article-section",
+                "pop-up-bar",
+            ]
+        )
+    ]
+
+    extra_css = """
+    .fig-graphic img { max-width: 100%; height: auto; }
+    .story-meta__credit { font-size: 0.8rem; margin-top: 0.2rem; }
+    """
 
     feeds = [("Magazine", "https://rss.politico.com/magazine.xml")]
 
-    # overwrite
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
             self.title = f"POLITICO Magazine: {article.utctime:%-d %b, %Y}"
 
-    # overwrite
     def publication_date(self):
         return self.pub_date
 
@@ -56,10 +72,7 @@ class PoliticoMagazine(BasicNewsRecipe):
         parsed_feed = parsed_feeds[0]
         for i, a in enumerate(articles, start=1):
             date_published = a.utctime.replace(tzinfo=timezone.utc)
-            date_published_loc = date_published.astimezone(
-                timezone(offset=timedelta(hours=9))  # Seoul time
-            )
-            article_index = f"{date_published_loc:%-d %B, %Y}"
+            article_index = f"{date_published:%-d %B, %Y}"
             if i == 1:
                 curr_feed = Feed(log=parsed_feed.logger)
                 curr_feed.title = article_index

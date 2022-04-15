@@ -50,7 +50,9 @@ class FiveBooks(BasicNewsRecipe):
                 "-donate",
                 "update",
                 "social-buttons",
+                "ebook-button",
                 "book-links",
+                "bio-component",
             ]
         ),
         dict(name=["script", "noscript", "style"]),

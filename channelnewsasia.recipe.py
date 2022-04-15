@@ -30,14 +30,23 @@ class ChannelNewsAsia(BasicNewsRecipe):
     remove_tags_after = [dict(class_=["content"])]
     remove_attributes = ["style"]
     remove_tags = [
-        dict(class_=["js-popup-content", "referenced-card", "layout__region--second"]),
+        dict(
+            class_=[
+                "js-popup-content",
+                "referenced-card",
+                "block--related-topics",
+                "block-ad-entity",
+                "block-block-content",
+                "from-library",
+            ]
+        ),
         dict(name="div", attrs={"data-ad-entity": True}),
         dict(name="div", attrs={"data-js-options": True}),
         dict(name=["script", "noscript", "style"]),
     ]
 
     extra_css = """
-    .figure__caption { color: #555555; font-size: 0.8rem; }
+    .figure__caption { font-size: 0.8rem; }
     .figure__caption p { margin-top: 0.2rem; margin-bottom: 1rem; }
     """
 

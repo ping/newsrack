@@ -33,7 +33,7 @@ class FinancialTimes(BasicNewsRecipe):
     .headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
     .sub-headline { color: #444; font-size: 1.2rem; margin-bottom: 2rem; }
     .article-meta { padding-bottom: 0.2rem; border-bottom: 1px solid #aaa; }
-    .article-meta .author { font-weight: bold; }
+    .article-meta .author { font-weight: bold; color: #444; }
     .article-meta .published-dt { margin-left: 0.5rem; }
     .article-img { margin-bottom: 0.8rem; }
     .article-img img { display: block; margin-bottom: 0.3rem; }

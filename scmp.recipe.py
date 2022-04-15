@@ -64,7 +64,7 @@ class SCMP(BasicNewsRecipe):
     .sub-headline ul { padding-left: 1rem; }
     .sub-headline ul li { fmargin-bottom: 0.8rem; }
     .article-meta, .article-header__publish { padding-bottom: 0.5rem; }
-    .article-meta .author { text-transform: uppercase; font-weight: bold; }
+    .article-meta .author { font-weight: bold; color: #444; }
     .article-meta .published-dt { margin-left: 0.5rem; }
     .article-img { margin-bottom: 0.8rem; max-width: 100%; }
     .article-img img, .carousel__slide img {
