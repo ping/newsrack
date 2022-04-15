@@ -38,6 +38,8 @@ class ChannelNewsAsia(BasicNewsRecipe):
                 "block-ad-entity",
                 "block-block-content",
                 "from-library",
+                "block-field-blocknodearticlefield-author",  # author bio
+                "mobile_author_card",  # author bio
             ]
         ),
         dict(name="div", attrs={"data-ad-entity": True}),
