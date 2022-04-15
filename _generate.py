@@ -77,6 +77,14 @@ recipes = [
         timeout=default_recipe_timeout,
     ),
     Receipe(
+        recipe="economist",
+        name="The Economist",
+        slug="economist",
+        src_ext="mobi",
+        target_ext=[],
+        timeout=300,
+    ),
+    Receipe(
         recipe="joongangdaily",
         name="Joongang Daily",
         slug="joongang-daily",
@@ -124,7 +132,6 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
     ),
-
 ]
 
 # use environment variables to skip certain recipes in CI
@@ -294,7 +301,6 @@ for recipe in recipes:
                 "ebook-convert",
                 source_file_path,
                 target_file_path,
-                "--dont-download-recipe",
             ]
             if not glob.glob(publish_folder + f"/{recipe.slug}*.{ext}"):
                 exit_code = subprocess.call(
