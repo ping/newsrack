@@ -75,7 +75,13 @@ class TheWashingtonPost(BasicNewsRecipe):
             return
         for c in nodes:
             try:
-                if c["type"] in ["interstitial_link", "", "custom_embed"]:
+                if c["type"] in [
+                    "interstitial_link",
+                    "",
+                    "custom_embed",
+                    "divider",
+                    "gallery",  # real estate ads
+                ]:
                     continue
                 if c["type"] == "text":
                     para_ele = soup.new_tag("p")
@@ -191,6 +197,7 @@ class TheWashingtonPost(BasicNewsRecipe):
                     )
                     parent_element.append(container_ele)
                 else:
+                    self.log(f'[!] Unexpected element type: {c["type"]}')
                     self.log("!" * 8, json.dumps(c))
             except Exception as err:
                 self.log("*" * 10, c.get("type"), str(err))
