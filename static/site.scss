@@ -18,14 +18,18 @@ h1 {
         height: 1.25rem;
     }
 }
-.books li {
-    margin-bottom: 0.5rem;
+.books {
+    padding-left: 1.5rem;
 
-    .pub-date {
-        display: block;
-        margin-top: 0.2rem;
-        font-size: 0.8rem;
-        color: #555555;
+    li {
+        margin-bottom: 0.5rem;
+
+        .pub-date {
+            display: block;
+            margin-top: 0.2rem;
+            font-size: 0.8rem;
+            color: #555555;
+        }
     }
 }
 .book {

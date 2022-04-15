@@ -1,3 +1,10 @@
+*.recipe
+*.epub
+*.mobi
+public/
+debug/
+static/*.css
+
 venv/
 venv3/
 .vscode/
