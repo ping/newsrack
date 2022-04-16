@@ -133,14 +133,16 @@ class NYTimesBooks(BasicNewsRecipe):
         new_soup = BeautifulSoup(html_output, "html.parser")
 
         for c in document_block.get("content@filterEmpty", []):
-            if c["typename"] in [
+            content_type = c["typename"]
+            if content_type in [
                 "Dropzone",
                 "RelatedLinksBlock",
                 "EmailSignupBlock",
                 "CapsuleBlock",  # ???
+                "InteractiveBlock",
             ]:
                 continue
-            if c["typename"] in [
+            if content_type in [
                 "HeaderBasicBlock",
                 "HeaderFullBleedVerticalBlock",
                 "HeaderFullBleedHorizontalBlock",
@@ -200,26 +202,25 @@ class NYTimesBooks(BasicNewsRecipe):
                         break
                     if image_block.get("legacyHtmlCaption"):
                         span_ele = new_soup.new_tag("span", attrs={"class": "caption"})
-                        span_ele.string = image_block["legacyHtmlCaption"]
+                        span_ele.append(BeautifulSoup(image_block["legacyHtmlCaption"]))
                         container_ele.append(span_ele)
                     new_soup.body.article.append(container_ele)
                 if header_block.get("byline"):
+                    authors = []
+                    for b in content_service[header_block["byline"]["id"]]["bylines"]:
+                        for creator in content_service[b["id"]]["creators"]:
+                            authors.append(
+                                content_service[creator["id"]]["displayName"]
+                            )
                     pub_dt_ele = new_soup.find("span", class_="author")
-                    pub_dt_ele.string = ", ".join(
-                        [
-                            content_service[b["id"]]["renderedRepresentation"]
-                            for b in content_service[header_block["byline"]["id"]][
-                                "bylines"
-                            ]
-                        ]
-                    )
-            elif c["typename"] == "ParagraphBlock":
+                    pub_dt_ele.string = ", ".join(authors)
+            elif content_type == "ParagraphBlock":
                 para_ele = new_soup.new_tag("p")
                 para_ele.string = ""
                 for cc in content_service.get(c["id"], {}).get("content", []):
                     para_ele.string += content_service.get(cc["id"], {}).get("text", "")
                 new_soup.body.article.append(para_ele)
-            elif c["typename"] == "ImageBlock":
+            elif content_type == "ImageBlock":
                 image_block = content_service.get(
                     content_service.get(c["id"], {}).get("media", {}).get("id", "")
                 )
@@ -239,7 +240,34 @@ class NYTimesBooks(BasicNewsRecipe):
                     span_ele.append(BeautifulSoup(image_block["legacyHtmlCaption"]))
                     container_ele.append(span_ele)
                 new_soup.body.article.append(container_ele)
-            elif c["typename"] == "DetailBlock":
+            elif content_type == "DiptychBlock":
+                # 2-image block
+                diptych_block = content_service[c["id"]]
+                image_block_ids = [
+                    diptych_block["imageOne"]["id"],
+                    diptych_block["imageTwo"]["id"],
+                ]
+                for image_block_id in image_block_ids:
+                    image_block = content_service[image_block_id]
+                    container_ele = new_soup.new_tag(
+                        "div", attrs={"class": "article-img"}
+                    )
+                    for k, v in image_block.items():
+                        if not k.startswith("crops("):
+                            continue
+                        img_url = content_service[
+                            content_service[v[0]["id"]]["renditions"][0]["id"]
+                        ]["url"]
+                        img_ele = new_soup.new_tag("img")
+                        img_ele["src"] = img_url
+                        container_ele.append(img_ele)
+                        break
+                    if image_block.get("legacyHtmlCaption"):
+                        span_ele = new_soup.new_tag("span", attrs={"class": "caption"})
+                        span_ele.append(BeautifulSoup(image_block["legacyHtmlCaption"]))
+                        container_ele.append(span_ele)
+                    new_soup.body.article.append(container_ele)
+            elif content_type == "DetailBlock":
                 container_ele = new_soup.new_tag("div", attrs={"class": "detail"})
                 for x in content_service[c["id"]]["content"]:
                     d = content_service[x["id"]]
@@ -248,7 +276,7 @@ class NYTimesBooks(BasicNewsRecipe):
                     elif d["__typename"] == "TextInline":
                         container_ele.append(d["text"])
                 new_soup.body.article.append(container_ele)
-            elif c["typename"] == "BlockquoteBlock":
+            elif content_type == "BlockquoteBlock":
                 container_ele = new_soup.new_tag("blockquote")
                 for x in content_service[c["id"]]["content"]:
                     if x["typename"] == "ParagraphBlock":
@@ -260,19 +288,22 @@ class NYTimesBooks(BasicNewsRecipe):
                             )
                         container_ele.append(para_ele)
                 new_soup.body.article.append(container_ele)
-            elif c["typename"] in ["Heading1Block", "Heading2Block", "Heading3Block"]:
-                if c["typename"] == "Heading1Block":
+            elif content_type in ["Heading1Block", "Heading2Block", "Heading3Block"]:
+                if content_type == "Heading1Block":
                     container_tag = "h1"
-                elif c["typename"] == "Heading2Block":
+                elif content_type == "Heading2Block":
                     container_tag = "h2"
                 else:
                     container_tag = "h3"
                 container_ele = new_soup.new_tag(container_tag)
                 for x in content_service[c["id"]]["content"]:
                     if x["typename"] == "TextInline":
-                        container_ele.append(content_service[x["id"]]["text"])
+                        container_ele.append(
+                            content_service[x["id"]].get("text", "")
+                            or content_service[x["id"]].get("text@stripHtml", "")
+                        )
                 new_soup.body.article.append(container_ele)
-            elif c["typename"] == "ListBlock":
+            elif content_type == "ListBlock":
                 list_block = content_service[c["id"]]
                 if list_block["style"] == "UNORDERED":
                     container_ele = new_soup.new_tag("ul")
@@ -287,13 +318,13 @@ class NYTimesBooks(BasicNewsRecipe):
                             for z in content_service.get(y["id"], {}).get(
                                 "content", []
                             ):
-                                para_ele.string += content_service.get(z["id"], {}).get(
-                                    "text", ""
+                                para_ele.append(
+                                    content_service.get(z["id"], {}).get("text", "")
                                 )
                             li_ele.append(para_ele)
                     container_ele.append(li_ele)
                 new_soup.body.article.append(container_ele)
-            elif c["typename"] == "PullquoteBlock":
+            elif content_type == "PullquoteBlock":
                 container_ele = new_soup.new_tag("blockquote")
                 for x in content_service[c["id"]]["quote"]:
                     if x["typename"] == "TextInline":
@@ -306,12 +337,47 @@ class NYTimesBooks(BasicNewsRecipe):
                             )
                         container_ele.append(para_ele)
                 new_soup.body.article.append(container_ele)
-            elif c["typename"] == "RuleBlock":
+            elif content_type == "VideoBlock":
+                container_ele = new_soup.new_tag("div", attrs={"class": "embed"})
+                container_ele.string = "[Embedded video available]"
+                new_soup.body.article.append(container_ele)
+            elif content_type == "AudioBlock":
+                container_ele = new_soup.new_tag("div", attrs={"class": "embed"})
+                container_ele.string = "[Embedded audio available]"
+                new_soup.body.article.append(container_ele)
+            elif content_type == "BylineBlock":
+                # For podcasts? - TBD
+                pass
+            elif content_type == "YouTubeEmbedBlock":
+                container_ele = new_soup.new_tag("div", attrs={"class": "embed"})
+                yt_link = f'https://www.youtube.com/watch?v={content_service[c["id"]]["youTubeId"]}'
+                a_ele = new_soup.new_tag("a", href=yt_link)
+                a_ele.string = yt_link
+                container_ele.append(a_ele)
+                new_soup.body.article.append(container_ele)
+            elif content_type == "TwitterEmbedBlock":
+                container_ele = new_soup.new_tag("div", attrs={"class": "embed"})
+                container_ele.append(BeautifulSoup(content_service[c["id"]]["html"]))
+                new_soup.body.article.append(container_ele)
+            elif content_type == "LabelBlock":
+                container_ele = new_soup.new_tag("h4", attrs={"class": "label"})
+                for x in content_service[c["id"]]["content"]:
+                    if x["typename"] == "TextInline":
+                        container_ele.append(content_service[x["id"]]["text"])
+                new_soup.body.article.append(container_ele)
+            elif content_type == "TimestampBlock":
+                timestamp_val = content_service[c["id"]]["timestamp"]
+                container_ele = new_soup.new_tag(
+                    "time", attrs={"data-timestamp": timestamp_val}
+                )
+                container_ele.append(timestamp_val)
+                new_soup.body.article.append(container_ele)
+            elif content_type == "RuleBlock":
                 new_soup.body.article.append(new_soup.new_tag("hr"))
             else:
-                self.log(f'[!] {url} has unexpected element: {c["typename"]}')
-                # self.log("!" * 10, json.dumps(c))
-                # self.log(content_service[c["id"]])
+                self.log.warning(f"{url} has unexpected element: {content_type}")
+                self.log.debug(json.dumps(c))
+                self.log.debug(json.dumps(content_service[c["id"]]))
 
         return str(new_soup)
 

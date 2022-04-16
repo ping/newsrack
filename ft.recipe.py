@@ -68,7 +68,7 @@ class FinancialTimes(BasicNewsRecipe):
                 continue
             break
         if not (article and article.get("articleBody")):
-            self.abort_article("Unable to find article.")
+            self.abort_article(f"Unable to find article: {url}")
 
         author = article.get("author", {}).get("name", "")
         date_published = article.get("datePublished", None)
