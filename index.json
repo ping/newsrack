@@ -17,9 +17,7 @@
 "The Economist": [
 "economist-2022-04-15.mobi"
 ],
-"Joongang Daily": [
-"joongang-daily-2022-04-15.mobi"
-],
+"Joongang Daily": [],
 "South China Morning Post": [
 "scmp-2022-04-16.mobi"
 ],
@@ -35,5 +33,5 @@
 "New York Times Books": [
 "nytimes-books-2022-04-16.mobi"
 ],
-"_generated": 1650096823
+"_generated": 1650101937
 }
