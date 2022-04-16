@@ -61,6 +61,14 @@ recipes = [
         timeout=600,
     ),
     Receipe(
+        recipe="guardian",
+        name="The Guardian",
+        slug="guardian",
+        src_ext="mobi",
+        target_ext=[],
+        timeout=default_recipe_timeout,
+    ),
+    Receipe(
         recipe="ft",
         name="Financial Times",
         slug="ft",
