@@ -172,12 +172,12 @@ class NYTimesBooks(BasicNewsRecipe):
                     subheadline = new_soup.find("div", class_="sub-headline")
                     subheadline.string = summary_text
                 if header_block.get("timestampBlock"):
-                    # 2022-04-12T09:00:05.000Z
+                    # Example 2022-04-12T09:00:05.000Z
                     post_date = datetime.strptime(
                         content_service[header_block["timestampBlock"]["id"]][
                             "timestamp"
-                        ][:-5],
-                        "%Y-%m-%dT%H:%M:%S",
+                        ],
+                        "%Y-%m-%dT%H:%M:%S.%fZ",
                     )
                     pub_dt_ele = new_soup.find("span", class_="published-dt")
                     pub_dt_ele.string = f"{post_date:%-d %B, %Y}"
@@ -260,11 +260,14 @@ class NYTimesBooks(BasicNewsRecipe):
                             )
                         container_ele.append(para_ele)
                 new_soup.body.article.append(container_ele)
-            elif c["typename"] in ["Heading2Block", "Heading3Block"]:
-                if c["typename"] == "Heading2Block":
-                    container_ele = new_soup.new_tag("h2")
+            elif c["typename"] in ["Heading1Block", "Heading2Block", "Heading3Block"]:
+                if c["typename"] == "Heading1Block":
+                    container_tag = "h1"
+                elif c["typename"] == "Heading2Block":
+                    container_tag = "h2"
                 else:
-                    container_ele = new_soup.new_tag("h3")
+                    container_tag = "h3"
+                container_ele = new_soup.new_tag(container_tag)
                 for x in content_service[c["id"]]["content"]:
                     if x["typename"] == "TextInline":
                         container_ele.append(content_service[x["id"]]["text"])
@@ -290,13 +293,25 @@ class NYTimesBooks(BasicNewsRecipe):
                             li_ele.append(para_ele)
                     container_ele.append(li_ele)
                 new_soup.body.article.append(container_ele)
-
+            elif c["typename"] == "PullquoteBlock":
+                container_ele = new_soup.new_tag("blockquote")
+                for x in content_service[c["id"]]["quote"]:
+                    if x["typename"] == "TextInline":
+                        container_ele.append(content_service[x["id"]]["text"])
+                    if x["typename"] == "ParagraphBlock":
+                        para_ele = new_soup.new_tag("p")
+                        for z in content_service.get(x["id"], {}).get("content", []):
+                            para_ele.append(
+                                content_service.get(z["id"], {}).get("text", "")
+                            )
+                        container_ele.append(para_ele)
+                new_soup.body.article.append(container_ele)
             elif c["typename"] == "RuleBlock":
                 new_soup.body.article.append(new_soup.new_tag("hr"))
             else:
+                self.log(f'[!] {url} has unexpected element: {c["typename"]}')
                 # self.log("!" * 10, json.dumps(c))
                 # self.log(content_service[c["id"]])
-                self.log(f"[!] {url} has unexpected elements")
 
         return str(new_soup)
 

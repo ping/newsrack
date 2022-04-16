@@ -343,7 +343,7 @@ class Economist(BasicNewsRecipe):
             ]["canonical"]
             self.log("Got cover:", self.cover_url)
 
-            # 2022-04-16T00:00:00Z
+            # Example 2022-04-16T00:00:00Z
             date_published = datetime.strptime(
                 data["props"]["pageProps"]["content"]["datePublished"],
                 "%Y-%m-%dT%H:%M:%SZ",

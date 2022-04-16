@@ -173,9 +173,9 @@ class TheWashingtonPost(BasicNewsRecipe):
                     )
                     container_ele.append(header_ele)
 
-                    # 2022-04-13T14:04:03.051Z
+                    # Example 2022-04-13T14:04:03.051Z
                     post_date = datetime.strptime(
-                        c["display_date"][:-5], "%Y-%m-%dT%H:%M:%S"
+                        c["display_date"], "%Y-%m-%dT%H:%M:%S.%fZ"
                     )
                     meta_ele = BeautifulSoup(
                         f"""<div class="article-meta">
@@ -214,8 +214,8 @@ class TheWashingtonPost(BasicNewsRecipe):
             ).text
         )
         content = data.get("props", {}).get("pageProps", {}).get("globalContent", {})
-        # 2022-04-13T14:04:03.051Z
-        post_date = datetime.strptime(content["display_date"][:-5], "%Y-%m-%dT%H:%M:%S")
+        # Example 2022-04-13T14:04:03.051Z
+        post_date = datetime.strptime(content["display_date"], "%Y-%m-%dT%H:%M:%S.%fZ")
         if post_date > datetime.today():  # it happens
             try:
                 post_date = datetime.strptime(

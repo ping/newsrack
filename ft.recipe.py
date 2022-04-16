@@ -75,7 +75,7 @@ class FinancialTimes(BasicNewsRecipe):
         if date_published:
             # Example: 2022-03-29T04:00:05.154Z
             date_published = datetime.strptime(
-                date_published[0:-5], "%Y-%m-%dT%H:%M:%S"
+                date_published, "%Y-%m-%dT%H:%M:%S.%fZ"
             ).replace(tzinfo=timezone.utc)
 
         paragraphs = []
