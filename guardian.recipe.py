@@ -73,6 +73,10 @@ class Guardian(BasicNewsRecipe):
     def preprocess_html(self, soup):
         meta = soup.find(attrs={"data-gu-name": "meta"})
         if meta:
+            # remove author image
+            for img in meta.find_all("img"):
+                img.decompose()
+
             # reformat the displayed date
             details = meta.find("details")
             if not details:
@@ -91,11 +95,6 @@ class Guardian(BasicNewsRecipe):
                 details.append(update)
             details.name = "div"
             details["class"] = "meta-date"
-
-            # remove author image
-            author_img = meta.find("img")
-            if author_img:
-                author_img.decompose()
 
         # search for highest resolution image
         for picture in soup.find_all("picture"):
