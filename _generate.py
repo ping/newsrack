@@ -145,17 +145,23 @@ recipes = [
 # use environment variables to skip certain recipes in CI
 skip_recipes_slugs = []
 try:
-    skip_recipes_slugs = str(os.environ["SKIP"])
+    skip_recipes_slugs = str(os.environ["skip"])
     skip_recipes_slugs = [r.strip() for r in skip_recipes_slugs.split(",") if r.strip()]
 except (KeyError, ValueError):
     pass
 
 regenerate_recipes_slugs = []
 try:
-    regenerate_recipes_slugs = str(os.environ["REGENERATE"])
+    regenerate_recipes_slugs = str(os.environ["regenerate"])
     regenerate_recipes_slugs = [
         r.strip() for r in regenerate_recipes_slugs.split(",") if r.strip()
     ]
+except (KeyError, ValueError):
+    pass
+
+verbose_mode = False
+try:
+    verbose_mode = str(os.environ["verbose"]).strip()
 except (KeyError, ValueError):
     pass
 
@@ -206,6 +212,8 @@ for recipe in recipes:
     ]
     if recipe.src_ext == "mobi":
         cmd.extend(["--output-profile=kindle_oasis", "--mobi-file-type=both"])
+    if verbose_mode:
+        cmd.append("-vv")
 
     exit_code = 0
 

@@ -14,11 +14,14 @@ on:
     - cron: "0 3,7,11,15,19,23 * * *"
   workflow_dispatch:
     inputs:
-      REGENERATE:
+      regenerate:
         description: Enter csv of recipe slugs to specifically regenerate
         required: false
-      SKIP:
+      skip:
         description: Enter csv of recipe slugs to specifically skip
+        required: false
+      verbose:
+        description: Run recipe in verbose mode (empty for false)
         required: false
 
 jobs:
