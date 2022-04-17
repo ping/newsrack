@@ -49,6 +49,16 @@
         var publishedDate = new Date(parseInt(pubDateEle.attributes["data-pub-date"].value));
         pubDateEle.title = publishedDate.toLocaleString();
         pubDateEle.innerHTML = "Published " + getRelativeTime(publishedDate);
+
+        pubDateEle.addEventListener("pointerenter", function( event ) {
+            var publishedDate = new Date(parseInt(event.target.attributes["data-pub-date"].value));
+            event.target.innerHTML = "Published " + publishedDate.toLocaleString();
+        }, false);
+
+        pubDateEle.addEventListener("pointerleave", function( event ) {
+            var publishedDate = new Date(parseInt(event.target.attributes["data-pub-date"].value));
+            event.target.innerHTML = "Published " + getRelativeTime(publishedDate);
+        }, false);
     }
 
 })();
