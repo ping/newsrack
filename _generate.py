@@ -372,6 +372,15 @@ for recipe_name, books in sorted(
     </span>
     </li>"""
 
+for r in recipes:
+    success = False
+    for recipe_name, _ in generated_items:
+        if recipe_name == r.name:
+            success = True
+            break
+    if not success:
+        listing += f"""<li class="not-available">{r.name}
+            <span class="pub-date">Not available</span></li>"""
 
 with open(os.path.join(publish_folder, "index.json"), "w", encoding="utf-8") as f_in:
     index["_generated"] = int(time.time())
@@ -388,7 +397,6 @@ with open("static/index.html", "r", encoding="utf-8") as f_in:
         js=site_js,
         publish_site=publish_site,
         elapsed=humanize.naturaldelta(elapsed_time, minimum_unit="seconds"),
-        total_checked=len(recipes),
     )
     index_html_file = os.path.join(publish_folder, "index.html")
     with open(index_html_file, "w", encoding="utf-8") as f:
