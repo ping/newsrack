@@ -5,9 +5,7 @@
 "The Washington Post": [
 "wapo-2022-04-17.mobi"
 ],
-"The Guardian": [
-"guardian-2022-04-17.mobi"
-],
+"The Guardian": [],
 "Financial Times": [
 "ft-2022-04-17.mobi"
 ],
@@ -33,5 +31,5 @@
 "New York Times Books": [
 "nytimes-books-2022-04-16.mobi"
 ],
-"_generated": 1650159486
+"_generated": 1650161679
 }
