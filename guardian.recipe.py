@@ -55,13 +55,13 @@ class Guardian(BasicNewsRecipe):
     ]
 
     extra_css = """
-    [data-component="meta-byline"] { margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; color: gray; }
+    [data-component="meta-byline"] { margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; color: #444; }
     *[data-gu-name="media"] span, *[item-prop="description"],
     div[data-spacefinder-type$=".ImageBlockElement"] > div,
     div.caption { font-size: 0.8rem; }
     img { width: 100%; height: auto; margin-bottom: 0.2rem; }
-    [data-name="placeholder"] { color: gray; font-style: italic; }
-    [data-name="placeholder"] a { color: gray; }
+    [data-name="placeholder"] { color: #444; font-style: italic; }
+    [data-name="placeholder"] a { color: #444; }
     
     time { margin-right: 0.5rem; }
     """
@@ -109,6 +109,20 @@ class Guardian(BasicNewsRecipe):
                         max_img_url = img_url
             img = picture.find("img")
             img["src"] = max_img_url
+
+        # remove share on social media links for live articles
+        for unordered_list in soup.find_all("ul"):
+            is_social_media = False
+            for list_item in unordered_list.find_all("li"):
+                a_link = list_item.find("a", attrs={"aria-label": True})
+                if a_link and a_link["aria-label"] in [
+                    "Share on Facebook",
+                    "Share on Twitter",
+                ]:
+                    is_social_media = True
+                    break
+            if is_social_media:
+                unordered_list.decompose()
         return soup
 
     def populate_article_metadata(self, article, __, _):
