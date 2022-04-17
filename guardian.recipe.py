@@ -32,7 +32,7 @@ class Guardian(BasicNewsRecipe):
     remove_tags_after = [dict(name="main")]
     remove_tags = [
         dict(name=["svg", "input", "button", "label"]),
-        dict(id=["bannerandheader", "the-caption"]),
+        dict(id=["bannerandheader", "the-caption", "liveblog-navigation"]),
         dict(
             class_=[
                 "skip",
@@ -49,12 +49,17 @@ class Guardian(BasicNewsRecipe):
         dict(name="div", attrs={"data-print-layout": "hide"}),
         dict(attrs={"name": "FilterKeyEventsToggle"}),
         dict(attrs={"aria-hidden": "true"}),
+        dict(
+            name="time", attrs={"data-relativeformat": "med"}
+        ),  # remove the relative timestamp, e.g. 8h ago
     ]
 
     extra_css = """
     [data-component="meta-byline"] { margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; color: gray; }
-    [data-gu-name="media"] span { font-size: 0.8rem; }
-    img { max-width: 100%; height: auto; margin-bottom: 0.2rem; }
+    *[data-gu-name="media"] span, *[item-prop="description"],
+    div[data-spacefinder-type$=".ImageBlockElement"] > div,
+    div.caption { font-size: 0.8rem; }
+    img { width: 100%; height: auto; margin-bottom: 0.2rem; }
     [data-name="placeholder"] { color: gray; font-style: italic; }
     [data-name="placeholder"] a { color: gray; }
     
@@ -66,27 +71,45 @@ class Guardian(BasicNewsRecipe):
     ]
 
     def preprocess_html(self, soup):
-        # reformat the displayed date
         meta = soup.find(attrs={"data-gu-name": "meta"})
-        if not meta:
-            return soup
-        details = meta.find("details")
-        if not details:
-            return soup
-        summary = details.find("summary")
-        update_date = None
-        if len(details.contents) > 1:
-            update_date = details.contents[1]
-        details.clear()
-        published = soup.new_tag("div", attrs={"class": "published-date"})
-        published.append(summary.string)
-        details.append(published)
-        if update_date:
-            update = soup.new_tag("div", attrs={"class": "last-updated-date"})
-            update.append(update_date)
-            details.append(update)
-        details.name = "div"
-        details["class"] = "meta-date"
+        if meta:
+            # reformat the displayed date
+            details = meta.find("details")
+            if not details:
+                return soup
+            summary = details.find("summary")
+            update_date = None
+            if len(details.contents) > 1:
+                update_date = details.contents[1]
+            details.clear()
+            published = soup.new_tag("div", attrs={"class": "published-date"})
+            published.append(summary.string)
+            details.append(published)
+            if update_date:
+                update = soup.new_tag("div", attrs={"class": "last-updated-date"})
+                update.append(update_date)
+                details.append(update)
+            details.name = "div"
+            details["class"] = "meta-date"
+
+            # remove author image
+            author_img = meta.find("img")
+            if author_img:
+                author_img.decompose()
+
+        # search for highest resolution image
+        for picture in soup.find_all("picture"):
+            max_img_width = 0
+            max_img_url = None
+            for source in picture.find_all("source"):
+                for img in source["srcset"].split(","):
+                    img_url, img_width = img.strip().split(" ")
+                    # Example: 1400w
+                    img_width = int(img_width[:-1])
+                    if img_width > max_img_width:
+                        max_img_url = img_url
+            img = picture.find("img")
+            img["src"] = max_img_url
         return soup
 
     def populate_article_metadata(self, article, __, _):
