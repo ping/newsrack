@@ -128,7 +128,7 @@ class Guardian(BasicNewsRecipe):
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
-            self.title = f"The Guardian: {article.utctime:%-d %b, %Y}"
+            self.title = f"Guardian: {article.utctime:%-d %b, %Y}"
 
     def publication_date(self):
         return self.pub_date

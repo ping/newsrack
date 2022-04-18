@@ -217,7 +217,7 @@ class TheWashingtonPost(BasicNewsRecipe):
                 pass
         if not self.pub_date or post_date > self.pub_date:
             self.pub_date = post_date
-            self.title = f"The Washington Post: {post_date:%-d %b, %Y}"
+            self.title = f"Washington Post: {post_date:%-d %b, %Y}"
         title = content["headlines"]["basic"]
         html = f"""<html>
         <head></head>

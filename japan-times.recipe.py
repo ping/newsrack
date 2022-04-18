@@ -132,7 +132,7 @@ class JapanTimes(BasicNewsRecipe):
             meta.append(pub_date_ele)
             if (not self.pub_date) or pub_date > self.pub_date:
                 self.pub_date = pub_date
-                self.title = f"The Japan Times: {pub_date:%-d %B, %Y}"
+                self.title = f"Japan Times: {pub_date:%-d %B, %Y}"
         soup.body.h1.insert_after(meta)
         return soup
 

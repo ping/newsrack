@@ -298,6 +298,7 @@ class Economist(BasicNewsRecipe):
             ).replace(tzinfo=timezone.utc)
             if not self.pub_date or date_published > self.pub_date:
                 self.pub_date = date_published
+                self.title = f"Economist: {date_published:%-d %b, %Y}"
 
     def publication_date(self):
         # if edition_date:
@@ -348,7 +349,7 @@ class Economist(BasicNewsRecipe):
                 data["props"]["pageProps"]["content"]["datePublished"],
                 "%Y-%m-%dT%H:%M:%SZ",
             ).replace(tzinfo=timezone.utc)
-            self.title = f"The Economist: {date_published:%-d %b, %Y}"
+            self.title = f"Economist: {date_published:%-d %b, %Y}"
 
         feeds = []
         for section in soup.findAll(**classes("layout-weekly-edition-section")):
