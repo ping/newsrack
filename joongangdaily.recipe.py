@@ -33,13 +33,11 @@ class KoreaJoongAngDaily(BasicNewsRecipe):
         ("Korea JoongAng Daily", "https://koreajoongangdaily.joins.com/xmls/joins"),
     ]
 
-    # overwrite
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
             self.title = f"Korea JoongAng Daily: {article.utctime:%-d %b, %Y}"
 
-    # overwrite
     def publication_date(self):
         return self.pub_date
 
