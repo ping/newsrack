@@ -84,6 +84,7 @@ class JapanTimes(BasicNewsRecipe):
                 "note-to-commenters",
                 "note-to-non-commenters",
                 "pagetop-wrap",
+                "jt-related-stories",
             ]
         ),
     ]
@@ -93,7 +94,7 @@ class JapanTimes(BasicNewsRecipe):
     .article-meta .author { font-weight: bold; color: #444; margin-right: 0.5rem; }
     ul.slides { list-style: none; }
     .slide_image img { max-width: 100%; height: auto; }
-    .slide_image div { font-size: 0.8rem; margin-top: 0.2rem; }
+    .slide_image div, .inline_image div { font-size: 0.8rem; margin-top: 0.2rem; }
     """
 
     feeds = [
@@ -115,6 +116,10 @@ class JapanTimes(BasicNewsRecipe):
             for img_div in slides.find_all(attrs={"class": "slide_image"}):
                 slides.insert_after(img_div.extract())
             slides.decompose()
+
+        lazy_loaded_images = soup.find_all(name="img", attrs={"data-src": True})
+        for img in lazy_loaded_images:
+            img["src"] = img["data-src"]
 
         meta = soup.new_tag("div", attrs={"class": "article-meta"})
         credit = soup.find(name="meta", attrs={"name": "cXenseParse:jat-credit"})
