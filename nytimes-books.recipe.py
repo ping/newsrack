@@ -59,6 +59,7 @@ class NYTimesBooks(BasicNewsRecipe):
         display: block; margin-bottom: 0.3rem; max-width: 100%; height: auto;
         box-sizing: border-box; }
     .article-img .caption { font-size: 0.8rem; }
+    div.summary { font-size: 1.2rem; margin: 1rem 0; }
     """
 
     feeds = [
@@ -361,6 +362,12 @@ class NYTimesBooks(BasicNewsRecipe):
                 new_soup.body.article.append(container_ele)
             elif content_type == "LabelBlock":
                 container_ele = new_soup.new_tag("h4", attrs={"class": "label"})
+                for x in content_service[c["id"]]["content"]:
+                    if x["typename"] == "TextInline":
+                        container_ele.append(content_service[x["id"]]["text"])
+                new_soup.body.article.append(container_ele)
+            elif content_type == "SummaryBlock":
+                container_ele = new_soup.new_tag("div", attrs={"class": "summary"})
                 for x in content_service[c["id"]]["content"]:
                     if x["typename"] == "TextInline":
                         container_ele.append(content_service[x["id"]]["text"])
