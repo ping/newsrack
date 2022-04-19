@@ -74,11 +74,9 @@ class FiveBooks(BasicNewsRecipe):
         ("Popular", "https://fivebooks.com/interviews/?order=popular"),
     ]
 
-    # overwrite
     def publication_date(self):
         return self.pub_date
 
-    # overwrite
     def populate_article_metadata(self, article, soup, first):
         post_date = None
         dt = soup.find(class_="date")
@@ -100,7 +98,6 @@ class FiveBooks(BasicNewsRecipe):
         if description_tag:
             article.text_summary = description_tag["data-post-description"]
 
-    # overwrite
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
         content = soup.find(class_="main-content")
@@ -118,7 +115,6 @@ class FiveBooks(BasicNewsRecipe):
             break
         return str(soup)
 
-    # overwrite
     def parse_index(self):
         br = self.get_browser()
         articles = {}

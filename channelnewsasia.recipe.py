@@ -79,12 +79,10 @@ class ChannelNewsAsia(BasicNewsRecipe):
         ),
     ]
 
-    # overwrite
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
             self.title = f"ChannelNewsAsia: {article.utctime:%-d %b, %Y}"
 
-    # overwrite
     def publication_date(self):
         return self.pub_date

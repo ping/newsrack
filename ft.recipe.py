@@ -54,11 +54,9 @@ class FinancialTimes(BasicNewsRecipe):
         # ("How to Spend It", "https://www.ft.com/htsi?format=rss"),
     ]
 
-    # overwrite
     def print_version(self, url):
         return urljoin("https://ft.com", url)
 
-    # overwrite
     def preprocess_raw_html(self, raw_html, url):
         article = None
         soup = BeautifulSoup(raw_html)
@@ -122,7 +120,6 @@ class FinancialTimes(BasicNewsRecipe):
         """
         return html_output
 
-    # overwrite
     def populate_article_metadata(self, article, soup, _):
         # pick up the og link from preprocess_raw_html() and set it as url instead of the rss url
         og_link = soup.select("[data-og-link]")
@@ -132,6 +129,5 @@ class FinancialTimes(BasicNewsRecipe):
             self.pub_date = article.utctime
             self.title = f"Financial Times: {article.utctime:%-d %b, %Y}"
 
-    # overwrite
     def publication_date(self):
         return self.pub_date

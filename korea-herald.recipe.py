@@ -80,6 +80,7 @@ class KoreaHerald(BasicNewsRecipe):
     def preprocess_html(self, soup):
         byline_date = soup.find(attrs={"class": "view_tit_byline_r"})
         if byline_date:
+            # format the published/updated date properly
             date_elements = []
             # Published : Apr 18, 2022 - 16:41       Updated : Apr 18, 2022 - 16:41
             date_re = r"(Published|Updated).+?\:.+?(?P<date>[a-z]{3}\s\d+),.+?(?P<time>\d+\:\d+)"

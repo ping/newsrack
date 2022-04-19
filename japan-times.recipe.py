@@ -111,16 +111,19 @@ class JapanTimes(BasicNewsRecipe):
         return self.pub_date
 
     def preprocess_html(self, soup):
+        # "unbullet" the images
         slides = soup.find(name="ul", attrs={"class": "slides"})
         if slides:
             for img_div in slides.find_all(attrs={"class": "slide_image"}):
                 slides.insert_after(img_div.extract())
             slides.decompose()
 
+        # embed the lazy loaded images
         lazy_loaded_images = soup.find_all(name="img", attrs={"data-src": True})
         for img in lazy_loaded_images:
             img["src"] = img["data-src"]
 
+        # reformat the article meta
         meta = soup.new_tag("div", attrs={"class": "article-meta"})
         credit = soup.find(name="meta", attrs={"name": "cXenseParse:jat-credit"})
         if credit:
@@ -142,6 +145,7 @@ class JapanTimes(BasicNewsRecipe):
         return soup
 
     def parse_feeds(self):
+        # because feed is not sorted by date
         parsed_feeds = super().parse_feeds()
         for feed in parsed_feeds:
             articles = feed.articles

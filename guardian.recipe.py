@@ -135,7 +135,7 @@ class Guardian(BasicNewsRecipe):
             if is_social_media:
                 unordered_list.decompose()
 
-        # Embed YT blocks
+        # embed YT blocks
         for yt in soup.find_all(
             attrs={
                 "data-spacefinder-type": "model.dotcomrendering.pageElements.YoutubeBlockElement"
@@ -153,6 +153,7 @@ class Guardian(BasicNewsRecipe):
             a_link.append(link)
             yt.append(a_link)
             self.log("*" * 5, yt)
+
         return soup
 
     def populate_article_metadata(self, article, __, _):
