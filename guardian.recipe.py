@@ -2,6 +2,8 @@
 guardian.com
 """
 from datetime import timezone, timedelta
+import json
+
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.web.feeds import Feed
 
@@ -73,6 +75,7 @@ class Guardian(BasicNewsRecipe):
     [data-name="placeholder"] a { color: #444; }
     
     time { margin-right: 0.5rem; }
+    .embed { color: #444; font-size: 0.8rem; }
     """
 
     feeds = [
@@ -131,6 +134,25 @@ class Guardian(BasicNewsRecipe):
                     break
             if is_social_media:
                 unordered_list.decompose()
+
+        # Embed YT blocks
+        for yt in soup.find_all(
+            attrs={
+                "data-spacefinder-type": "model.dotcomrendering.pageElements.YoutubeBlockElement"
+            }
+        ):
+            info_ele = yt.find(name="gu-island")
+            if not info_ele:
+                continue
+            info = json.loads(info_ele["props"])
+            link = f'https://www.youtube.com/watch?v={info["assetId"]}'
+            yt.clear()
+            yt["class"] = "embed"
+            yt.append(f'{info["mediaTitle"]} ')
+            a_link = soup.new_tag("a", href=link)
+            a_link.append(link)
+            yt.append(a_link)
+            self.log("*" * 5, yt)
         return soup
 
     def populate_article_metadata(self, article, __, _):
