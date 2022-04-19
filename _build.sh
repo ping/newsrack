@@ -1,4 +1,8 @@
-sh _prebuild.sh
+# change .recipe.py files to .recipe
+for f in *.recipe.py; do
+    cp -p "$f" "${f%.py}"
+done
+
 mkdir -p public \
 && cp -p static/favicon.svg public/ \
 && sass -s compressed --no-source-map static/site.scss static/site.css \
