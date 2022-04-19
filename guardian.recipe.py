@@ -44,6 +44,7 @@ class Guardian(BasicNewsRecipe):
                 "js-most-popular-footer",
                 "submeta",
                 "block-share",
+                "content-footer",
             ]
         ),
         dict(name="div", attrs={"data-print-layout": "hide"}),
@@ -52,13 +53,21 @@ class Guardian(BasicNewsRecipe):
         dict(
             name="time", attrs={"data-relativeformat": "med"}
         ),  # remove the relative timestamp, e.g. 8h ago
+        dict(attrs={"data-component": "podcast-help"}),
     ]
 
     extra_css = """
-    [data-component="meta-byline"] { margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; color: #444; }
+    [data-component="series"], [data-component="section"] { margin-right: 0.5rem; }
+    [data-gu-name="meta"] { margin-bottom: 1.5rem; }
+    [data-component="meta-byline"] {
+        margin-top: 1rem; margin-bottom: 1rem;
+        font-weight: bold; color: #444; font-style: normal;
+    }
+    [data-component="meta-byline"] div { display: inline-block; margin-right: 0.5rem; }
+    [data-component="meta-byline"] a { color: #444; }
     *[data-gu-name="media"] span, *[item-prop="description"],
     div[data-spacefinder-type$=".ImageBlockElement"] > div,
-    div.caption { font-size: 0.8rem; }
+    div.caption { font-size: 0.8rem; margin-bottom: 0.5rem; }
     img { width: 100%; height: auto; margin-bottom: 0.2rem; }
     [data-name="placeholder"] { color: #444; font-style: italic; }
     [data-name="placeholder"] a { color: #444; }
@@ -78,23 +87,22 @@ class Guardian(BasicNewsRecipe):
                 img.decompose()
 
             # reformat the displayed date
-            details = meta.find("details")
-            if not details:
-                return soup
-            summary = details.find("summary")
-            update_date = None
-            if len(details.contents) > 1:
-                update_date = details.contents[1]
-            details.clear()
-            published = soup.new_tag("div", attrs={"class": "published-date"})
-            published.append(summary.string)
-            details.append(published)
-            if update_date:
-                update = soup.new_tag("div", attrs={"class": "last-updated-date"})
-                update.append(update_date)
-                details.append(update)
-            details.name = "div"
-            details["class"] = "meta-date"
+            details = meta.find_all("details")
+            for detail in details:
+                summary = detail.find("summary")
+                update_date = None
+                if len(detail.contents) > 1:
+                    update_date = detail.contents[1]
+                published = soup.new_tag("div", attrs={"class": "published-date"})
+                published.append(summary.string)
+                detail.clear()
+                detail.append(published)
+                if update_date:
+                    update = soup.new_tag("div", attrs={"class": "last-updated-date"})
+                    update.append(update_date)
+                    detail.append(update)
+                detail.name = "div"
+                detail["class"] = "meta-date"
 
         # search for highest resolution image
         for picture in soup.find_all("picture"):
