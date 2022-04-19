@@ -11,9 +11,12 @@ import json
 from urllib.parse import urljoin
 import shutil
 from timeit import default_timer as timer
+import argparse
 
 import requests
 import humanize
+
+from _recipes import recipes
 
 logger = logging.getLogger(__file__)
 ch = logging.StreamHandler(sys.stdout)
@@ -21,15 +24,14 @@ ch.setLevel(logging.DEBUG)
 logger.addHandler(ch)
 logger.setLevel(logging.INFO)
 
+parser = argparse.ArgumentParser()
+parser.add_argument("publish_site", type=str, help="Deployment site url")
+args = parser.parse_args()
 
 start_time = timer()
 publish_folder = "public"
-publish_site = "https://ping.github.io/newsrack/"
-default_recipe_timeout = 120
+publish_site = args.publish_site
 
-Receipe = namedtuple(
-    "Recipe", ["recipe", "name", "slug", "src_ext", "target_ext", "timeout"]
-)
 ReceipeOutput = namedtuple(
     "ReceipeOutput", ["title", "file", "rename_to", "published_dt"]
 )
@@ -42,121 +44,6 @@ with open("static/site.css", "r", encoding="utf-8") as f:
 with open("static/site.js", "r", encoding="utf-8") as f:
     site_js = f.read()
 
-# the azw3 formats don't open well in the kindle (stuck, cannot return to library)
-recipes = [
-    Receipe(
-        recipe="channelnewsasia",
-        name="ChannelNewsAsia",
-        slug="channelnewsasia",
-        src_ext="mobi",
-        target_ext=[],
-        timeout=default_recipe_timeout,
-    ),
-    Receipe(
-        recipe="thediplomat",
-        name="The Diplomat",
-        slug="the-diplomat",
-        src_ext="mobi",
-        target_ext=[],
-        timeout=default_recipe_timeout,
-    ),
-    Receipe(
-        recipe="economist",
-        name="The Economist",
-        slug="economist",
-        src_ext="mobi",
-        target_ext=[],
-        timeout=300,
-    ),
-    Receipe(
-        recipe="ft",
-        name="Financial Times",
-        slug="ft",
-        src_ext="mobi",
-        target_ext=[],
-        timeout=default_recipe_timeout,
-    ),
-    Receipe(
-        recipe="fivebooks",
-        name="Five Books",
-        slug="fivebooks",
-        src_ext="mobi",
-        target_ext=[],
-        timeout=default_recipe_timeout,
-    ),
-    Receipe(
-        recipe="guardian",
-        name="The Guardian",
-        slug="guardian",
-        src_ext="mobi",
-        target_ext=[],
-        timeout=default_recipe_timeout,
-    ),
-    Receipe(
-        recipe="japan-times",
-        name="Japan Times",
-        slug="japan-times",
-        src_ext="mobi",
-        target_ext=[],
-        timeout=default_recipe_timeout,
-    ),
-    Receipe(
-        recipe="joongangdaily",
-        name="Joongang Daily",
-        slug="joongang-daily",
-        src_ext="mobi",
-        target_ext=[],
-        timeout=default_recipe_timeout,
-    ),
-    Receipe(
-        recipe="korea-herald",
-        name="Korea Herald",
-        slug="korea-herald",
-        src_ext="mobi",
-        target_ext=[],
-        timeout=default_recipe_timeout,
-    ),
-    Receipe(
-        recipe="nytimes-global",
-        name="NY Times Global",
-        slug="nytimes-global",
-        src_ext="mobi",
-        target_ext=[],
-        timeout=default_recipe_timeout,
-    ),
-    Receipe(
-        recipe="nytimes-books",
-        name="New York Times Books",
-        slug="nytimes-books",
-        src_ext="mobi",
-        target_ext=[],
-        timeout=default_recipe_timeout,
-    ),
-    Receipe(
-        recipe="politico-magazine",
-        name="POLITICO Magazine",
-        slug="politico-magazine",
-        src_ext="mobi",
-        target_ext=[],
-        timeout=default_recipe_timeout,
-    ),
-    Receipe(
-        recipe="scmp",
-        name="South China Morning Post",
-        slug="scmp",
-        src_ext="mobi",
-        target_ext=[],
-        timeout=default_recipe_timeout,
-    ),
-    Receipe(
-        recipe="wapo",
-        name="The Washington Post",
-        slug="wapo",
-        src_ext="mobi",
-        target_ext=[],
-        timeout=600,
-    ),
-]
 
 # use environment variables to skip certain recipes in CI
 skip_recipes_slugs = []
