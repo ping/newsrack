@@ -9,6 +9,15 @@ default_recipe_timeout = 120
 # the azw3 formats don't open well in the kindle (stuck, cannot return to library)
 recipes = [
     Receipe(
+        recipe="asian-review",
+        name="Asian Review of Books",
+        slug="arb",
+        src_ext="mobi",
+        target_ext=[],
+        timeout=default_recipe_timeout,
+        overwrite_cover=True,
+    ),
+    Receipe(
         recipe="channelnewsasia",
         name="ChannelNewsAsia",
         slug="channelnewsasia",
