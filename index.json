@@ -23,7 +23,9 @@
 "Japan Times": [
 "japan-times-2022-04-20.mobi"
 ],
-"Joongang Daily": [],
+"Joongang Daily": [
+"joongang-daily-2022-04-20.mobi"
+],
 "Korea Herald": [
 "korea-herald-2022-04-20.mobi"
 ],
@@ -45,5 +47,5 @@
 "The Washington Post": [
 "wapo-2022-04-20.mobi"
 ],
-"_generated": 1650464538
+"_generated": 1650467765
 }
