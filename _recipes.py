@@ -1,7 +1,8 @@
 from collections import namedtuple
 
 Receipe = namedtuple(
-    "Recipe", ["recipe", "name", "slug", "src_ext", "target_ext", "timeout"]
+    "Recipe",
+    ["recipe", "name", "slug", "src_ext", "target_ext", "timeout", "overwrite_cover"],
 )
 default_recipe_timeout = 120
 
@@ -14,6 +15,7 @@ recipes = [
         src_ext="mobi",
         target_ext=[],
         timeout=default_recipe_timeout,
+        overwrite_cover=True,
     ),
     Receipe(
         recipe="thediplomat",
@@ -22,6 +24,7 @@ recipes = [
         src_ext="mobi",
         target_ext=[],
         timeout=default_recipe_timeout,
+        overwrite_cover=True,
     ),
     Receipe(
         recipe="economist",
@@ -30,6 +33,7 @@ recipes = [
         src_ext="mobi",
         target_ext=[],
         timeout=300,
+        overwrite_cover=True,
     ),
     Receipe(
         recipe="ft",
@@ -38,6 +42,7 @@ recipes = [
         src_ext="mobi",
         target_ext=[],
         timeout=default_recipe_timeout,
+        overwrite_cover=True,
     ),
     Receipe(
         recipe="fivebooks",
@@ -46,6 +51,7 @@ recipes = [
         src_ext="mobi",
         target_ext=[],
         timeout=default_recipe_timeout,
+        overwrite_cover=True,
     ),
     Receipe(
         recipe="guardian",
@@ -54,6 +60,7 @@ recipes = [
         src_ext="mobi",
         target_ext=[],
         timeout=default_recipe_timeout,
+        overwrite_cover=True,
     ),
     Receipe(
         recipe="japan-times",
@@ -62,6 +69,7 @@ recipes = [
         src_ext="mobi",
         target_ext=[],
         timeout=default_recipe_timeout,
+        overwrite_cover=True,
     ),
     Receipe(
         recipe="joongangdaily",
@@ -70,6 +78,7 @@ recipes = [
         src_ext="mobi",
         target_ext=[],
         timeout=default_recipe_timeout,
+        overwrite_cover=True,
     ),
     Receipe(
         recipe="korea-herald",
@@ -78,6 +87,16 @@ recipes = [
         src_ext="mobi",
         target_ext=[],
         timeout=default_recipe_timeout,
+        overwrite_cover=True,
+    ),
+    Receipe(
+        recipe="london-review",
+        name="London Review of Books",
+        slug="lrb",
+        src_ext="mobi",
+        target_ext=[],
+        timeout=default_recipe_timeout,
+        overwrite_cover=False,
     ),
     Receipe(
         recipe="nytimes-global",
@@ -86,6 +105,7 @@ recipes = [
         src_ext="mobi",
         target_ext=[],
         timeout=default_recipe_timeout,
+        overwrite_cover=True,
     ),
     Receipe(
         recipe="nytimes-books",
@@ -94,6 +114,7 @@ recipes = [
         src_ext="mobi",
         target_ext=[],
         timeout=default_recipe_timeout,
+        overwrite_cover=True,
     ),
     Receipe(
         recipe="politico-magazine",
@@ -102,6 +123,7 @@ recipes = [
         src_ext="mobi",
         target_ext=[],
         timeout=default_recipe_timeout,
+        overwrite_cover=True,
     ),
     Receipe(
         recipe="scmp",
@@ -110,6 +132,7 @@ recipes = [
         src_ext="mobi",
         target_ext=[],
         timeout=default_recipe_timeout,
+        overwrite_cover=True,
     ),
     Receipe(
         recipe="wapo",
@@ -118,5 +141,6 @@ recipes = [
         src_ext="mobi",
         target_ext=[],
         timeout=600,
+        overwrite_cover=True,
     ),
 ]

@@ -18,6 +18,7 @@ In alphabetical order:
 - [The Japan Times](https://www.japantimes.co.jp/)
 - [The JoongAng Daily](https://koreajoongangdaily.joins.com/)
 - [The Korea Herald](https://koreaherald.com/)
+- [London Review of Books](https://www.lrb.co.uk/)
 - [The New York Times](https://www.nytimes.com/)
 - [The New Yorks Times - Books](https://www.nytimes.com/section/books)
 - [Politico](https://www.politico.com/)

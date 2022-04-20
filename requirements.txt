@@ -1,2 +1,3 @@
 requests
 humanize
+Pillow
