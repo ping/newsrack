@@ -53,7 +53,7 @@ jobs:
       - name: Install calibre
         run: |
           mkdir -p ~/calibre-bin
-          wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin install_dir=~/calibre-bin isolated=y version=5.41.0
+          wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin install_dir=~/calibre-bin isolated=y
           export PATH=$PATH:~/calibre-bin/calibre
           calibre --version
 
