@@ -62,7 +62,7 @@ jobs:
           CALIBRE_CONFIG_DIRECTORY: ${{ github.workspace }}/calibre_config/
         run: |
           export PATH=$PATH:~/calibre-bin/calibre
-          export CI_PAGES_URL="https://${GITHUB_REPOSITORY_OWNER}/github.io${GITHUB_REPOSITORY:${#GITHUB_REPOSITORY_OWNER}}/"
+          export CI_PAGES_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io${GITHUB_REPOSITORY:${#GITHUB_REPOSITORY_OWNER}}/"
           sh _build.sh
 
       - name: Deploy
