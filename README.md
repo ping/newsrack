@@ -9,6 +9,8 @@ Deployed at [https://ping.github.io/newsrack/](https://ping.github.io/newsrack/)
 
 In alphabetical order:
 
+- [The Atlantic](https://www.theatlantic.com/)
+- [The Atlantic Magazine](https://www.theatlantic.com/magazine/)
 - [Channel News Asia](https://www.channelnewsasia.com/)
 - [The Diplomat](https://thediplomat.com/)
 - [The Economist](https://www.economist.com/printedition)
@@ -23,4 +25,5 @@ In alphabetical order:
 - [The New Yorks Times - Books](https://www.nytimes.com/section/books)
 - [Politico](https://www.politico.com/)
 - [South China Morning Post](https://www.scmp.com/)
+- [The Third Pole](https://www.thethirdpole.net/)
 - [The Washington Post](https://www.washingtonpost.com/)

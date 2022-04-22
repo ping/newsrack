@@ -78,15 +78,16 @@ def load_article_from_json(raw, root):
         style="margin-bottom: 1rem; ",
         datecreated=data["dateModified"],
     )
-    images = data["image"]
-    if "main" in images:
+    main_image_url = (
+        data.get("image", {}).get("main", {}).get("url", {}).get("canonical")
+    )
+    if main_image_url:
         div = E(article, "div")
         try:
-            E(div, "img", src=images["main"]["url"]["canonical"])
+            E(div, "img", src=main_image_url)
         except Exception:
             pass
-    text = data["text"]
-    for node in text:
+    for node in data["text"]:
         process_node(node, article)
 
 
@@ -250,8 +251,7 @@ class Economist(BasicNewsRecipe):
         br.set_handle_gzip(True)
         return br
 
-    def preprocess_raw_html(self, raw, url):
-        # open('/t/raw.html', 'wb').write(raw.encode('utf-8'))
+    def preprocess_raw_html(self, raw, _):
         root = parse(raw)
         script = root.xpath('//script[@id="__NEXT_DATA__"]')
         if script:
@@ -307,9 +307,6 @@ class Economist(BasicNewsRecipe):
         return self.pub_date
 
     def parse_index(self):
-        # return [('Articles', [{'title':'test',
-        #     'url':'file:///t/raw.html'
-        # }])]
         if edition_date:
             url = "https://www.economist.com/weeklyedition/" + edition_date
             self.timefmt = " [" + edition_date + "]"

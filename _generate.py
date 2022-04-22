@@ -8,7 +8,7 @@ import subprocess
 from collections import namedtuple
 import glob
 import json
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 import shutil
 from timeit import default_timer as timer
 import argparse
@@ -33,6 +33,9 @@ args = parser.parse_args()
 start_time = timer()
 publish_folder = "public"
 publish_site = args.publish_site
+parsed_site = urlparse(publish_site)
+username, domain, _ = parsed_site.netloc.split(".")
+source_url = f"https://{domain}.com/{username}{parsed_site.path}"
 
 # for cover generation
 font_big = ImageFont.truetype("static/OpenSans-Bold.ttf", 82)
@@ -385,6 +388,7 @@ with open("static/index.html", "r", encoding="utf-8") as f_in:
         js=site_js,
         publish_site=publish_site,
         elapsed=humanize.naturaldelta(elapsed_time, minimum_unit="seconds"),
+        source_link=f'<a href="{source_url}">Source</a>.'
     )
     index_html_file = os.path.join(publish_folder, "index.html")
     with open(index_html_file, "w", encoding="utf-8") as f:
