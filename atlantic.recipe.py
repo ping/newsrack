@@ -139,7 +139,7 @@ class TheAtlantic(BasicNewsRecipe):
     scale_news_images = (800, 800)
     scale_news_images_to_device = False  # force img to be resized to scale_news_images
     timeout = 20
-    timefmt = "%-d, %b %Y"
+    timefmt = ""
     pub_date = None  # custom publication date
 
     remove_attributes = ["style", "width", "height"]
@@ -239,6 +239,11 @@ class TheAtlantic(BasicNewsRecipe):
         return self.pub_date
 
     def populate_article_metadata(self, article, soup, _):
+        headline = soup.find("h1", attrs={"class": "headline"})
+        if headline:
+            # reset the title because the title in the rss feed can contain tags, e.g. <em>
+            article.title = headline.text
+
         modified = soup.find(attrs={"data-modified": True})
         if modified:
             modified_date = datetime.strptime(

@@ -24,7 +24,7 @@ recipes = [
         src_ext="mobi",
         target_ext=[],
         timeout=180,
-        overwrite_cover=False,
+        overwrite_cover=True,
     ),
     Receipe(
         recipe="atlantic-magazine",
