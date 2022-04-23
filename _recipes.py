@@ -2,7 +2,16 @@ from collections import namedtuple
 
 Receipe = namedtuple(
     "Recipe",
-    ["recipe", "name", "slug", "src_ext", "target_ext", "timeout", "overwrite_cover"],
+    [
+        "recipe",
+        "name",
+        "slug",
+        "src_ext",
+        "target_ext",
+        "timeout",
+        "overwrite_cover",
+        "category",
+    ],
 )
 default_recipe_timeout = 120
 
@@ -16,6 +25,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=True,
+        category="books",
     ),
     Receipe(
         recipe="atlantic",
@@ -25,6 +35,7 @@ recipes = [
         target_ext=[],
         timeout=180,
         overwrite_cover=True,
+        category="magazine",
     ),
     Receipe(
         recipe="atlantic-magazine",
@@ -34,6 +45,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=False,
+        category="magazine",
     ),
     Receipe(
         recipe="channelnewsasia",
@@ -43,6 +55,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=True,
+        category="news",
     ),
     Receipe(
         recipe="thediplomat",
@@ -52,6 +65,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=True,
+        category="magazine",
     ),
     Receipe(
         recipe="economist",
@@ -61,6 +75,7 @@ recipes = [
         target_ext=[],
         timeout=300,
         overwrite_cover=True,
+        category="news",
     ),
     Receipe(
         recipe="ft",
@@ -70,6 +85,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=True,
+        category="news",
     ),
     Receipe(
         recipe="fivebooks",
@@ -79,6 +95,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=True,
+        category="books",
     ),
     Receipe(
         recipe="guardian",
@@ -88,6 +105,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=True,
+        category="news",
     ),
     Receipe(
         recipe="japan-times",
@@ -97,6 +115,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=True,
+        category="news",
     ),
     Receipe(
         recipe="joongangdaily",
@@ -106,6 +125,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=True,
+        category="news",
     ),
     Receipe(
         recipe="korea-herald",
@@ -115,6 +135,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=True,
+        category="news",
     ),
     Receipe(
         recipe="london-review",
@@ -124,6 +145,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=False,
+        category="books",
     ),
     Receipe(
         recipe="newyorker",
@@ -133,6 +155,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=True,
+        category="magazine",
     ),
     Receipe(
         recipe="nytimes-global",
@@ -142,6 +165,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=True,
+        category="news",
     ),
     Receipe(
         recipe="nytimes-books",
@@ -151,6 +175,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=True,
+        category="books",
     ),
     Receipe(
         recipe="politico-magazine",
@@ -160,6 +185,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=True,
+        category="magazine",
     ),
     Receipe(
         recipe="scmp",
@@ -169,6 +195,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=True,
+        category="news",
     ),
     Receipe(
         recipe="thirdpole",
@@ -178,6 +205,7 @@ recipes = [
         target_ext=[],
         timeout=default_recipe_timeout,
         overwrite_cover=True,
+        category="magazine",
     ),
     Receipe(
         recipe="wapo",
@@ -187,5 +215,6 @@ recipes = [
         target_ext=[],
         timeout=600,
         overwrite_cover=True,
+        category="news",
     ),
 ]

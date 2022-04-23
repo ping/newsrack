@@ -18,11 +18,24 @@ h1 {
         height: 1.25rem;
     }
 }
-.books {
+.categories {
     padding-left: 1.5rem;
 
     li {
+        text-transform: capitalize;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+.books {
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+
+    li {
         margin-bottom: 0.5rem;
+        font-size: 1rem;
+        text-transform: none;
 
         .pub-date {
             display: block;

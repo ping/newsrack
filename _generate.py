@@ -13,6 +13,7 @@ import shutil
 from timeit import default_timer as timer
 import argparse
 import textwrap
+from functools import cmp_to_key
 
 import requests
 import humanize
@@ -42,7 +43,7 @@ font_big = ImageFont.truetype("static/OpenSans-Bold.ttf", 82)
 font_med = ImageFont.truetype("static/OpenSans-Semibold.ttf", 72)
 
 ReceipeOutput = namedtuple(
-    "ReceipeOutput", ["title", "file", "rename_to", "published_dt"]
+    "ReceipeOutput", ["title", "file", "rename_to", "published_dt", "category"]
 )
 
 # default style
@@ -166,7 +167,9 @@ for recipe in recipes:
     logger.info(f'{"-" * 20} Executing "{recipe.name}" recipe... {"-" * 30}')
     recipe_start_time = timer()
 
-    generated[recipe.name] = []
+    if recipe.category not in generated:
+        generated[recipe.category] = {}
+    generated[recipe.category][recipe.name] = []
     index[recipe.name] = []
     source_file_name = f"{recipe.slug}.{recipe.src_ext}"
     source_file_path = os.path.join(publish_folder, source_file_name)
@@ -266,12 +269,13 @@ for recipe in recipes:
         if mobj:
             title = mobj.group("title")
         rename_file_name = f"{recipe.slug}-{pub_date:%Y-%m-%d}.{recipe.src_ext}"
-        generated[recipe.name].append(
+        generated[recipe.category][recipe.name].append(
             ReceipeOutput(
                 title=title,
                 file=source_file_name,
                 rename_to=rename_file_name,
                 published_dt=pub_date,
+                category=recipe.category,
             )
         )
 
@@ -294,6 +298,7 @@ for recipe in recipes:
 
         index[recipe.name].append(f"{recipe.slug}-{pub_date:%Y-%m-%d}.{recipe.src_ext}")
 
+        # convert generate book into alternative formats
         for ext in recipe.target_ext:
             target_file_name = f"{recipe.slug}.{ext}"
             target_file_path = os.path.join(publish_folder, target_file_name)
@@ -316,12 +321,13 @@ for recipe in recipes:
             target_file_name = os.path.basename(target_file_path)
 
             if not exit_code:
-                generated[recipe.name].append(
+                generated[recipe.category][recipe.name].append(
                     ReceipeOutput(
                         title=title,
                         file=target_file_name,
                         rename_to=f"{recipe.slug}-{pub_date:%Y-%m-%d}.{ext}",
                         published_dt=pub_date,
+                        category=recipe.category,
                     )
                 )
                 index[recipe.name].append(f"{recipe.slug}-{pub_date:%Y-%m-%d}.{ext}")
@@ -331,41 +337,75 @@ for recipe in recipes:
             f'{"=" * 20} "{recipe.name}" recipe took {humanize.precisedelta(recipe_elapsed_time)} {"=" * 20}'
         )
 
+
+sorted_categories = ["news", "magazine", "books"]
+
+
+def sort_category(a, b):
+    try:
+        a_index = sorted_categories.index(a[0])
+    except ValueError:
+        a_index = 999
+    try:
+        b_index = sorted_categories.index(b[0])
+    except ValueError:
+        b_index = 999
+
+    if a_index < b_index:
+        return -1
+    if a_index > b_index:
+        return 1
+    if a_index == b_index:
+        if a[0] < b[0]:
+            return -1
+        else:
+            return 1
+
+
+sort_category_key = cmp_to_key(sort_category)
+
 listing = ""
-generated_items = [(k, v) for k, v in generated.items() if v]
-for recipe_name, books in sorted(
-    generated_items, key=lambda item: item[1][0].published_dt, reverse=True
-):
-    book_links = []
-    for book in books:
-        # change filename to datestamped name
-        if book.file != book.rename_to:
-            os.rename(
-                os.path.join(publish_folder, book.file),
-                os.path.join(publish_folder, book.rename_to),
+for category, publications in sorted(generated.items(), key=sort_category_key):
+    generated_items = [(k, v) for k, v in publications.items() if v]
+    publication_listing = []
+    for recipe_name, books in sorted(
+        generated_items, key=lambda item: item[1][0].published_dt, reverse=True
+    ):
+        book_links = []
+        for book in books:
+            # change filename to datestamped name
+            if book.file != book.rename_to:
+                os.rename(
+                    os.path.join(publish_folder, book.file),
+                    os.path.join(publish_folder, book.rename_to),
+                )
+            file_size = os.path.getsize(os.path.join(publish_folder, book.rename_to))
+            book_links.append(
+                f'<div class="book"><a href="{book.rename_to}">{os.path.splitext(book.file)[1]}<span class="file-size">{humanize.naturalsize(file_size).replace(" ", "")}</span></a></div>'
             )
-        file_size = os.path.getsize(os.path.join(publish_folder, book.rename_to))
-        book_links.append(
-            f'<div class="book"><a href="{book.rename_to}">{os.path.splitext(book.file)[1]}<span class="file-size">{humanize.naturalsize(file_size).replace(" ", "")}</span></a></div>'
+        publication_listing.append(
+            f"""<li>{books[0].title or recipe_name}{" ".join(book_links)}
+            <span class="pub-date" data-pub-date="{int(books[0].published_dt.timestamp() * 1000)}">
+                Published at {books[0].published_dt:%Y-%m-%d %-I:%M%p %z}
+            </span>
+            </li>"""
         )
+    category_recipes = [r for r in recipes if r.category == category]
+    for r in category_recipes:
+        success = False
+        for recipe_name, _ in generated_items:
+            if recipe_name == r.name:
+                success = True
+                break
+        if not success:
+            publication_listing.append(
+                f"""<li class="not-available">{r.name}
+                <span class="pub-date">Not available</span></li>"""
+            )
 
-    listing += f"""<li>
-    {books[0].title or recipe_name}
-    {" ".join(book_links)}
-    <span class="pub-date" data-pub-date="{int(books[0].published_dt.timestamp() * 1000)}">
-        Published at {books[0].published_dt:%Y-%m-%d %-I:%M%p %z}
-    </span>
+    listing += f"""<li>{category}
+    <ol class="books">{"".join(publication_listing)}</ol>
     </li>"""
-
-for r in recipes:
-    success = False
-    for recipe_name, _ in generated_items:
-        if recipe_name == r.name:
-            success = True
-            break
-    if not success:
-        listing += f"""<li class="not-available">{r.name}
-            <span class="pub-date">Not available</span></li>"""
 
 with open(os.path.join(publish_folder, "index.json"), "w", encoding="utf-8") as f_in:
     index["_generated"] = int(time.time())
