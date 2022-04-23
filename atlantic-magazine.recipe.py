@@ -61,7 +61,7 @@ def json_to_html(raw):
     ).replace(tzinfo=timezone.utc)
     pub_ele = new_soup.new_tag("span", attrs={"class": "published-dt"})
     pub_ele["data-published"] = f"{published_date:%Y-%m-%dT%H:%M:%SZ}"
-    pub_ele.append(f"{published_date:%H:%M%p, %-d %B, %Y}")
+    pub_ele.append(f"{published_date:%-I:%M%p, %-d %B, %Y}")
     meta.append(pub_ele)
     if article.get("dateModified"):
         modified_date = datetime.strptime(
@@ -69,7 +69,7 @@ def json_to_html(raw):
         ).replace(tzinfo=timezone.utc)
         upd_ele = new_soup.new_tag("span", attrs={"class": "modified-dt"})
         upd_ele["data-modified"] = f"{modified_date:%Y-%m-%dT%H:%M:%SZ}"
-        upd_ele.append(f"Updated {modified_date:%H.%M%p, %-d %B, %Y}")
+        upd_ele.append(f"Updated {modified_date:%-I.%M%p, %-d %B, %Y}")
         meta.append(upd_ele)
 
     new_soup.main.append(meta)
