@@ -1,0 +1,240 @@
+#!/usr/bin/env python
+# vim:fileencoding=utf-8
+# License: GPLv3 Copyright: 2016, Kovid Goyal <kovid at kovidgoyal.net>
+
+# Original from https://github.com/kovidgoyal/calibre/blob/29cd8d64ea71595da8afdaec9b44e7100bff829a/recipes/new_yorker.recipe
+from __future__ import absolute_import, division, print_function, unicode_literals
+
+from collections import defaultdict
+import json
+from datetime import datetime, timezone
+
+from calibre import browser
+from calibre.ebooks.BeautifulSoup import BeautifulSoup, Tag
+from calibre.web.feeds.news import BasicNewsRecipe
+from calibre.utils.cleantext import clean_ascii_chars
+
+
+def classes(classes):
+    q = frozenset(classes.split(" "))
+    return dict(attrs={"class": lambda x: x and frozenset(x.split()).intersection(q)})
+
+
+def absurl(x):
+    if x.startswith("/") and not x.startswith("//"):
+        x = "https://www.newyorker.com" + x
+    return x
+
+
+def class_as_string(x):
+    if isinstance(x, (list, tuple)):
+        x = " ".join(x)
+    return x
+
+
+def class_startswith(*prefixes):
+    def q(x):
+        if x:
+            x = class_as_string(x)
+            for prefix in prefixes:
+                if x.startswith(prefix):
+                    return True
+        return False
+
+    return dict(attrs={"class": q})
+
+
+class NewYorker(BasicNewsRecipe):
+
+    title = "New Yorker Magazine"
+    description = "Content from the New Yorker website"
+
+    url_list = []
+    language = "en"
+    __author__ = "Kovid Goyal"
+    encoding = "utf-8"
+    no_stylesheets = True
+    remove_javascript = True
+    remove_empty_feeds = True
+    masthead_url = "https://www.newyorker.com/verso/static/the-new-yorker/assets/logo-seo.38af6104b89a736857892504d04dbb9a3a56e570.png"
+
+    compress_news_images = True
+    scale_news_images = (800, 800)
+    scale_news_images_to_device = False  # force img to be resized to scale_news_images
+    timeout = 20
+    timefmt = ""
+    pub_date = None  # custom publication date
+
+    extra_css = """
+        [data-testid="message-banner"] { font-size: 0.8rem; }
+        [data-testid="message-banner"] h4 { margin-bottom: 0.2rem; }
+        .headline { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .sub-headline { font-size: 1.2rem; margin-top: 0; margin-bottom: 0.5rem; }
+        .article-meta {  margin-top: 1rem; margin-bottom: 1rem; }
+        .article-meta .author { font-weight: bold; color: #444; display: inline-block; }
+        .article-meta .published-dt { display: inline-block; margin-left: 0.5rem; }
+        .article-meta .modified-dt { display: block; margin-top: 0.2rem; font-style: italic; }
+        .responsive-asset img { max-width: 100%; height: auto; }
+        h3 { margin-bottom: 6px; }
+        .caption { font-size: 0.8rem; font-weight: normal; }
+    """
+    keep_only_tags = [
+        dict(attrs={"class": "og"}),
+        dict(attrs={"data-attribute-verso-pattern": "article-body"}),
+        dict(
+            attrs={
+                "data-testid": [
+                    # "ContentHeaderRubric",
+                    # "SplitScreenContentHeaderWrapper",
+                    "MagazineDisclaimerWrapper",
+                ]
+            }
+        ),
+    ]
+
+    remove_tags = [
+        classes("social-icons"),
+        dict(childtypes="iframe"),
+        dict(name=["button"]),
+    ]
+    remove_attributes = ["style"]
+
+    def publication_date(self):
+        return self.pub_date
+
+    def preprocess_raw_html(self, raw_html, url):
+        soup = BeautifulSoup(raw_html)
+        for script in soup.find_all(name="script", type="application/ld+json"):
+            info = json.loads(script.text)
+            if not info.get("headline"):
+                continue
+
+            h1 = soup.new_tag("h1", attrs={"class": "og headline"})
+            h1.append(info["headline"])
+            soup.body.insert(0, h1)
+
+            meta = soup.new_tag("div", attrs={"class": "og article-meta"})
+            authors = [a["name"] for a in info.get("author", [])]
+            if authors:
+                author_ele = soup.new_tag("span", attrs={"class": "author"})
+                author_ele.append(", ".join(authors))
+                meta.append(author_ele)
+
+            pub_date = datetime.fromisoformat(info["datePublished"])
+            pub_ele = soup.new_tag("span", attrs={"class": "published-dt"})
+            pub_ele["datePublished"] = info["datePublished"]
+            pub_ele.append(f"{pub_date:%-d %B, %Y}")
+            meta.append(pub_ele)
+
+            if info.get("dateModified"):
+                mod_date = datetime.fromisoformat(info["dateModified"])
+                mod_ele = soup.new_tag("span", attrs={"class": "modified-dt"})
+                mod_ele["dateModified"] = info["dateModified"]
+                mod_ele.append(f"Updated {mod_date:%-I:%M%p %-d %B, %Y}")
+                meta.append(mod_ele)
+            h1.insert_after(meta)
+
+            if info.get("description"):
+                subheadline = soup.new_tag("div", attrs={"class": "og sub-headline"})
+                subheadline.append(info["description"])
+                h1.insert_after(subheadline)
+
+            break
+
+        return str(soup)
+
+    def preprocess_html(self, soup):
+        for noscript in soup.findAll("noscript"):
+            noscript.name = "div"
+
+        # rearrange page elements
+        article_body = soup.find(attrs={"data-attribute-verso-pattern": "article-body"})
+        rubric = soup.find(attrs={"data-testid": "ContentHeaderRubric"})
+        if rubric:
+            rubric = rubric.extract()
+            article_body.insert_before(rubric)
+        header = soup.find(attrs={"data-testid": "SplitScreenContentHeaderWrapper"})
+        if header:
+            header = header.extract()
+            article_body.insert_before(header)
+        return soup
+
+    def populate_article_metadata(self, article, soup, _):
+        pub_ele = soup.find(attrs={"datepublished": True})
+        if pub_ele:
+            pub_date = datetime.fromisoformat(pub_ele["datepublished"])
+            pub_date_utc = pub_date.astimezone(timezone.utc)
+            article.localtime = pub_date
+            article.utctime = pub_date_utc
+            if not self.pub_date or pub_date_utc > self.pub_date:
+                self.pub_date = pub_date_utc
+                self.title = f"New Yorker: {pub_date:%-d %b, %Y}"
+
+        mod_ele = soup.find(attrs={"datemodified": True})
+        if mod_ele:
+            mod_date = datetime.fromisoformat(mod_ele["datemodified"])
+            mod_date_utc = mod_date.astimezone(timezone.utc)
+            if not self.pub_date or mod_date_utc > self.pub_date:
+                self.pub_date = mod_date_utc
+
+    def parse_index(self):
+        soup = self.index_to_soup("https://www.newyorker.com/magazine?intcid=magazine")
+        # soup = self.index_to_soup('file:///t/raw.html')
+        cover_soup = self.index_to_soup("https://www.newyorker.com/archive")
+        cover_img = cover_soup.find(
+            attrs={"class": lambda x: x and "MagazineSection__cover___" in x}
+        )
+        if cover_img is not None:
+            cover_img = cover_img.find("img")
+            if cover_img is not None:
+                self.cover_url = cover_img.get("src")
+                try:
+                    # the src original resolution w_280 was too low, replace w_280 with w_560
+                    cover_url_width_index = self.cover_url.find("w_")
+                    old_width = self.cover_url[
+                        cover_url_width_index : cover_url_width_index + 5
+                    ]
+                    self.cover_url = self.cover_url.replace(old_width, "w_560")
+                except Exception:
+                    self.log("Failed enlarging cover img, using the original one")
+
+                self.log("Found cover:", self.cover_url)
+        stories = defaultdict(list)
+        last_section = "Unknown"
+        for story in soup.findAll(
+            attrs={"class": lambda x: x and "River__riverItemContent___" in x}
+        ):
+            try:
+                section = self.tag_to_string(story.find("a")["title"]) or last_section
+            except KeyError:
+                section = last_section
+            last_section = section
+            h4 = story.find("h4")
+            title = self.tag_to_string(h4)
+            a = story.find("h4").parent
+            url = absurl(a["href"])
+            desc = ""
+            body = story.find(attrs={"class": "River__dek___CayIg"})
+            if body is not None:
+                desc = body.contents[0]
+            self.log("Found article:", title)
+            self.log("\t" + url)
+            self.log("\t" + desc)
+            self.log("")
+            stories[section].append({"title": title, "url": url, "description": desc})
+
+        return [(k, stories[k]) for k in sorted(stories)]
+
+    # The New Yorker changes the content it delivers based on cookies, so the
+    # following ensures that we send no cookies
+    def get_browser(self, *args, **kwargs):
+        return self
+
+    def clone_browser(self, *args, **kwargs):
+        return self.get_browser()
+
+    def open_novisit(self, *args, **kwargs):
+        br = browser()
+        return br.open_novisit(*args, **kwargs)
+
+    open = open_novisit

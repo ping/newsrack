@@ -126,6 +126,15 @@ recipes = [
         overwrite_cover=False,
     ),
     Receipe(
+        recipe="newyorker",
+        name="The New Yorker",
+        slug="newyorker",
+        src_ext="mobi",
+        target_ext=[],
+        timeout=default_recipe_timeout,
+        overwrite_cover=True,
+    ),
+    Receipe(
         recipe="nytimes-global",
         name="NY Times Global",
         slug="nytimes-global",
