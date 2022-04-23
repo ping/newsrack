@@ -89,15 +89,6 @@ def fetch_cache():
         return {}
 
 
-# format file size in human readable format
-def human_readable_size(size, decimal_places=2):
-    for unit in ["B", "KiB", "MiB", "GiB", "TiB", "PiB"]:
-        if size < 1024.0 or unit == "PiB":
-            break
-        size /= 1024.0
-    return f"{size:.{decimal_places}f}{unit}"
-
-
 def generate_cover(file_name, title_text, cover_width=889, cover_height=1186):
     """
     Generate a plain image cover file
@@ -274,16 +265,19 @@ for recipe in recipes:
         mobj = re.search(r"Title\s+:\s(?P<title>.+)", meta_out)
         if mobj:
             title = mobj.group("title")
+        rename_file_name = f"{recipe.slug}-{pub_date:%Y-%m-%d}.{recipe.src_ext}"
         generated[recipe.name].append(
             ReceipeOutput(
                 title=title,
                 file=source_file_name,
-                rename_to=f"{recipe.slug}-{pub_date:%Y-%m-%d}.{recipe.src_ext}",
+                rename_to=rename_file_name,
                 published_dt=pub_date,
             )
         )
 
-        if recipe.overwrite_cover and title:
+        # (rename_file_name != source_file_name) checks that it is a newly generated file
+        # so that we don't regenerate the cover needlessly
+        if recipe.overwrite_cover and title and rename_file_name != source_file_name:
             # customise cover
             try:
                 cover_file_path = f"{source_file_path}.png"
@@ -352,7 +346,7 @@ for recipe_name, books in sorted(
             )
         file_size = os.path.getsize(os.path.join(publish_folder, book.rename_to))
         book_links.append(
-            f'<div class="book"><a href="{book.rename_to}">{os.path.splitext(book.file)[1]}<span class="file-size">{human_readable_size(file_size, decimal_places=1)}</span></a></div>'
+            f'<div class="book"><a href="{book.rename_to}">{os.path.splitext(book.file)[1]}<span class="file-size">{humanize.naturalsize(file_size).replace(" ", "")}</span></a></div>'
         )
 
     listing += f"""<li>
@@ -388,7 +382,7 @@ with open("static/index.html", "r", encoding="utf-8") as f_in:
         js=site_js,
         publish_site=publish_site,
         elapsed=humanize.naturaldelta(elapsed_time, minimum_unit="seconds"),
-        source_link=f'<a href="{source_url}">Source</a>.'
+        source_link=f'<a href="{source_url}">Source</a>.',
     )
     index_html_file = os.path.join(publish_folder, "index.html")
     with open(index_html_file, "w", encoding="utf-8") as f:
