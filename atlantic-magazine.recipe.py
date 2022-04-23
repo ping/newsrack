@@ -2,7 +2,7 @@
 # vim:fileencoding=utf-8
 # License: GPLv3 Copyright: 2015, Kovid Goyal <kovid at kovidgoyal.net>
 from __future__ import unicode_literals
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 import json
 import re
 
@@ -58,9 +58,7 @@ def json_to_html(raw):
     # Example: 2022-04-04T10:00:00Z
     published_date = datetime.strptime(
         article["datePublished"], "%Y-%m-%dT%H:%M:%SZ"
-    ).replace(
-        tzinfo=timezone(offset=timedelta(hours=-5))
-    )  # ET
+    ).replace(tzinfo=timezone.utc)
     pub_ele = new_soup.new_tag("span", attrs={"class": "published-dt"})
     pub_ele["data-published"] = f"{published_date:%Y-%m-%dT%H:%M:%SZ}"
     pub_ele.append(f"{published_date:%H:%M%p, %-d %B, %Y}")
@@ -68,9 +66,7 @@ def json_to_html(raw):
     if article.get("dateModified"):
         modified_date = datetime.strptime(
             article["dateModified"], "%Y-%m-%dT%H:%M:%SZ"
-        ).replace(
-            tzinfo=timezone(offset=timedelta(hours=-5))
-        )  # ET
+        ).replace(tzinfo=timezone.utc)
         upd_ele = new_soup.new_tag("span", attrs={"class": "modified-dt"})
         upd_ele["data-modified"] = f"{modified_date:%Y-%m-%dT%H:%M:%SZ}"
         upd_ele.append(f"Updated {modified_date:%H.%M%p, %-d %B, %Y}")
@@ -199,24 +195,18 @@ class TheAtlanticMagazine(BasicNewsRecipe):
         # if modified:
         #     modified_date = datetime.strptime(
         #         modified["data-modified"], "%Y-%m-%dT%H:%M:%SZ"
-        #     ).replace(
-        #         tzinfo=timezone(offset=timedelta(hours=-5))
-        #     )  # ET
-        #     modified_date_utc = modified_date.astimezone(timezone.utc)
-        #     if (not self.pub_date) or modified_date_utc > self.pub_date:
-        #         self.pub_date = modified_date_utc
+        #     ).replace(tzinfo=timezone.utc)
+        #     if (not self.pub_date) or modified_date > self.pub_date:
+        #         self.pub_date = modified_date
 
         published = soup.find(attrs={"data-published": True})
         if published:
             published_date = datetime.strptime(
                 published["data-published"], "%Y-%m-%dT%H:%M:%SZ"
-            ).replace(
-                tzinfo=timezone(offset=timedelta(hours=-5))
-            )  # ET
-            published_date_utc = published_date.astimezone(timezone.utc)
-            article.utctime = published_date_utc
-            if (not self.pub_date) or published_date_utc > self.pub_date:
-                self.pub_date = published_date_utc
+            ).replace(tzinfo=timezone.utc)
+            article.utctime = published_date
+            if (not self.pub_date) or published_date > self.pub_date:
+                self.pub_date = published_date
 
     def parse_index(self):
         soup = self.index_to_soup(self.INDEX)
