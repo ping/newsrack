@@ -29,11 +29,23 @@ logger.setLevel(logging.INFO)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("publish_site", type=str, help="Deployment site url")
+parser.add_argument(
+    "-v",
+    "--verbose",
+    dest="verbose",
+    action="store_true",
+    help="Enable more verbose messages for debugging",
+)
 args = parser.parse_args()
+if args.verbose:
+    logger.setLevel(logging.DEBUG)
 
 start_time = timer()
 publish_folder = "public"
 publish_site = args.publish_site
+if not publish_site.endswith("/"):
+    publish_site += "/"
+
 parsed_site = urlparse(publish_site)
 username, domain, _ = parsed_site.netloc.split(".")
 source_url = f"https://{domain}.com/{username}{parsed_site.path}"
@@ -171,6 +183,7 @@ for recipe in recipes:
         generated[recipe.category] = {}
     generated[recipe.category][recipe.name] = []
     index[recipe.name] = []
+
     source_file_name = f"{recipe.slug}.{recipe.src_ext}"
     source_file_path = os.path.join(publish_folder, source_file_name)
     cmd = [
@@ -188,17 +201,15 @@ for recipe in recipes:
 
     # use glob for re-run cases in local dev
     if not glob.glob(publish_folder + f"/{recipe.slug}*.{recipe.src_ext}"):
+        # existing file does not exist
         try:
-            # existing file does not exist
-            if not regenerate_recipes_slugs:
-                exit_code = subprocess.call(
-                    cmd,
-                    timeout=recipe.timeout,
-                    stdout=sys.stdout,
-                    stderr=sys.stderr,
-                )
-            elif regenerate_recipes_slugs and recipe.slug in regenerate_recipes_slugs:
-                # regenerate restriction in place, so we only regenerate the ones specified
+            # regenerate restriction is not in place and recipe is enabled
+            if (recipe.is_enabled() and not regenerate_recipes_slugs) or (
+                # regenerate restriction is in place and recipe is included
+                regenerate_recipes_slugs
+                and recipe.slug in regenerate_recipes_slugs
+            ):
+                # run recipe
                 exit_code = subprocess.call(
                     cmd,
                     timeout=recipe.timeout,
@@ -206,8 +217,8 @@ for recipe in recipes:
                     stderr=sys.stderr,
                 )
             else:
-                # regeneration restriction in place and this recipe is not in the list
-                # we will try to fetch an existing copy
+                # use cache
+                logger.warning(f'Using cached copy for "{recipe.name}".')
                 if cached.get(recipe.name):
                     for name in cached[recipe.name]:
                         ebook_url = urljoin(publish_site, name)
@@ -219,13 +230,15 @@ for recipe in recipes:
                         ) as f:
                             shutil.copyfileobj(ebook_res.raw, f)
                 else:
-                    # not cached, so generate anyway
+                    # not cached, so run it anyway to ensure that we try to have a copy
+                    logger.warning(f'"{recipe.name}" is not cached.')
                     exit_code = subprocess.call(
                         cmd,
                         timeout=recipe.timeout,
                         stdout=sys.stdout,
                         stderr=sys.stderr,
                     )
+
         except subprocess.TimeoutExpired:
             logger.exception(f"[!] TimeoutExpired fetching '{recipe.name}'")
             recipe_elapsed_time = timedelta(seconds=timer() - recipe_start_time)
@@ -251,6 +264,7 @@ for recipe in recipes:
     source_file_name = os.path.basename(source_file_path)
 
     if not exit_code:
+        logger.debug(f'Get book meta info for "{source_file_path}"')
         proc = subprocess.Popen(
             ["ebook-meta", source_file_path], stdout=subprocess.PIPE
         )
@@ -283,6 +297,7 @@ for recipe in recipes:
         # so that we don't regenerate the cover needlessly
         if recipe.overwrite_cover and title and rename_file_name != source_file_name:
             # customise cover
+            logger.debug(f'Setting cover for "{source_file_path}"')
             try:
                 cover_file_path = f"{source_file_path}.png"
                 generate_cover(cover_file_path, title)
@@ -356,10 +371,7 @@ def sort_category(a, b):
     if a_index > b_index:
         return 1
     if a_index == b_index:
-        if a[0] < b[0]:
-            return -1
-        else:
-            return 1
+        return -1 if a[0] < b[0] else 1
 
 
 sort_category_key = cmp_to_key(sort_category)
