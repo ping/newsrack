@@ -1,9 +1,7 @@
 
 # newsrack
 
-Generate a "newsrack" of .mobi periodicals for reading on the Kindle.
-
-Deployed at [https://ping.github.io/newsrack/](https://ping.github.io/newsrack/).
+Generate a "newsrack" of .mobi periodicals using [calibre](https://calibre-ebook.com/) and [GitHub Actions](.github/workflows/build.yml).
 
 ## Available
 
@@ -23,7 +21,9 @@ In alphabetical order:
 - [London Review of Books](https://www.lrb.co.uk/)
 - [The New York Times](https://www.nytimes.com/)
 - [The New Yorks Times - Books](https://www.nytimes.com/section/books)
+- [The New Yorker](https://www.newyorker.com/)
 - [Politico](https://www.politico.com/)
+- [Scientific American](https://www.scientificamerican.com/)
 - [South China Morning Post](https://www.scmp.com/)
 - [The Third Pole](https://www.thethirdpole.net/)
 - [The Washington Post](https://www.washingtonpost.com/)
