@@ -33,8 +33,12 @@ def get_local_now(offset: float = 0.0):
     )
 
 
-def onlyon_days(days_of_the_week: List[int], offset: float = 0.0):
+def onlyon_weekdays(days_of_the_week: List[int], offset: float = 0.0):
     return get_local_now(offset).weekday() in days_of_the_week
+
+
+def onlyon_days(days_of_the_month: List[int], offset: float = 0.0):
+    return get_local_now(offset).day in days_of_the_month
 
 
 def onlyat_hours(hours_of_the_day: List[int], offset: float = 0.0):
@@ -49,7 +53,7 @@ recipes = [
         slug="arb",
         src_ext="mobi",
         category="books",
-        enable_on=onlyon_days([0, 1, 2, 3, 4], 8),
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], 8),
     ),
     Recipe(
         recipe="atlantic",
@@ -57,7 +61,7 @@ recipes = [
         slug="the-atlantic",
         src_ext="mobi",
         timeout=180,
-        category="magazine",
+        category="magazines",
     ),
     Recipe(
         recipe="atlantic-magazine",
@@ -65,8 +69,8 @@ recipes = [
         slug="atlantic-magazine",
         src_ext="mobi",
         overwrite_cover=False,
-        category="magazine",
-        enable_on=onlyon_days([0, 1, 2, 3, 4], -4),
+        category="magazines",
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -4),
     ),
     Recipe(
         recipe="channelnewsasia",
@@ -80,8 +84,8 @@ recipes = [
         name="The Diplomat",
         slug="the-diplomat",
         src_ext="mobi",
-        category="magazine",
-        enable_on=onlyon_days([0, 1, 2, 3, 4, 5], 5.5),
+        category="magazines",
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4, 5], 5.5),
     ),
     Recipe(
         recipe="economist",
@@ -104,7 +108,7 @@ recipes = [
         slug="fivebooks",
         src_ext="mobi",
         category="books",
-        enable_on=onlyon_days([0, 1, 2, 3, 4]),
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4]),
     ),
     Recipe(
         recipe="guardian",
@@ -141,16 +145,16 @@ recipes = [
         src_ext="mobi",
         overwrite_cover=False,
         category="books",
-        enable_on=onlyon_days([0, 1, 2, 3, 4]),
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4]),
     ),
     Recipe(
         recipe="newyorker",
         name="The New Yorker",
         slug="newyorker",
         src_ext="mobi",
-        category="magazine",
+        category="magazines",
         overwrite_cover=False,
-        enable_on=onlyon_days([0, 1, 2, 3, 4], -5),
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -5),
     ),
     Recipe(
         recipe="nytimes-global",
@@ -165,15 +169,24 @@ recipes = [
         slug="nytimes-books",
         src_ext="mobi",
         category="books",
-        enable_on=onlyon_days([0, 1, 2, 3, 4], -5),
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -5),
     ),
     Recipe(
         recipe="politico-magazine",
         name="POLITICO Magazine",
         slug="politico-magazine",
         src_ext="mobi",
-        category="magazine",
-        enable_on=onlyon_days([0, 1, 2, 3, 4, 5], -5),
+        category="magazines",
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4, 5], -5),
+    ),
+    Recipe(
+        recipe="scientific-american",
+        name="Scientific American",
+        slug="scientific-american",
+        src_ext="mobi",
+        category="magazines",
+        overwrite_cover=False,
+        enable_on=onlyon_days(list(range(13, 18)), -5),  # middle of the month?
     ),
     Recipe(
         recipe="scmp",
@@ -187,7 +200,7 @@ recipes = [
         name="The Third Pole",
         slug="thirdpole",
         src_ext="mobi",
-        category="magazine",
+        category="magazines",
         enable_on=onlyat_hours(list(range(5, 20)), 5.5),
     ),
     Recipe(

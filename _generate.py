@@ -353,7 +353,7 @@ for recipe in recipes:
         )
 
 
-sorted_categories = ["news", "magazine", "books"]
+sorted_categories = ["news", "magazines", "books"]
 
 
 def sort_category(a, b):
