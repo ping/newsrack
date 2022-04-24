@@ -1,6 +1,8 @@
 from collections import namedtuple
 
-Receipe = namedtuple(
+default_recipe_timeout = 120
+
+Recipe = namedtuple(
     "Recipe",
     [
         "recipe",
@@ -13,11 +15,10 @@ Receipe = namedtuple(
         "category",
     ],
 )
-default_recipe_timeout = 120
 
 # the azw3 formats don't open well in the kindle (stuck, cannot return to library)
 recipes = [
-    Receipe(
+    Recipe(
         recipe="asian-review",
         name="Asian Review of Books",
         slug="arb",
@@ -27,7 +28,7 @@ recipes = [
         overwrite_cover=True,
         category="books",
     ),
-    Receipe(
+    Recipe(
         recipe="atlantic",
         name="The Atlantic",
         slug="the-atlantic",
@@ -37,7 +38,7 @@ recipes = [
         overwrite_cover=True,
         category="magazine",
     ),
-    Receipe(
+    Recipe(
         recipe="atlantic-magazine",
         name="The Atlantic Magazine",
         slug="atlantic-magazine",
@@ -47,7 +48,7 @@ recipes = [
         overwrite_cover=False,
         category="magazine",
     ),
-    Receipe(
+    Recipe(
         recipe="channelnewsasia",
         name="ChannelNewsAsia",
         slug="channelnewsasia",
@@ -57,7 +58,7 @@ recipes = [
         overwrite_cover=True,
         category="news",
     ),
-    Receipe(
+    Recipe(
         recipe="thediplomat",
         name="The Diplomat",
         slug="the-diplomat",
@@ -67,7 +68,7 @@ recipes = [
         overwrite_cover=True,
         category="magazine",
     ),
-    Receipe(
+    Recipe(
         recipe="economist",
         name="The Economist",
         slug="economist",
@@ -77,7 +78,7 @@ recipes = [
         overwrite_cover=True,
         category="news",
     ),
-    Receipe(
+    Recipe(
         recipe="ft",
         name="Financial Times",
         slug="ft",
@@ -87,7 +88,7 @@ recipes = [
         overwrite_cover=True,
         category="news",
     ),
-    Receipe(
+    Recipe(
         recipe="fivebooks",
         name="Five Books",
         slug="fivebooks",
@@ -97,7 +98,7 @@ recipes = [
         overwrite_cover=True,
         category="books",
     ),
-    Receipe(
+    Recipe(
         recipe="guardian",
         name="The Guardian",
         slug="guardian",
@@ -107,7 +108,7 @@ recipes = [
         overwrite_cover=True,
         category="news",
     ),
-    Receipe(
+    Recipe(
         recipe="japan-times",
         name="Japan Times",
         slug="japan-times",
@@ -117,7 +118,7 @@ recipes = [
         overwrite_cover=True,
         category="news",
     ),
-    Receipe(
+    Recipe(
         recipe="joongangdaily",
         name="Joongang Daily",
         slug="joongang-daily",
@@ -127,7 +128,7 @@ recipes = [
         overwrite_cover=True,
         category="news",
     ),
-    Receipe(
+    Recipe(
         recipe="korea-herald",
         name="Korea Herald",
         slug="korea-herald",
@@ -137,7 +138,7 @@ recipes = [
         overwrite_cover=True,
         category="news",
     ),
-    Receipe(
+    Recipe(
         recipe="london-review",
         name="London Review of Books",
         slug="lrb",
@@ -147,7 +148,7 @@ recipes = [
         overwrite_cover=False,
         category="books",
     ),
-    Receipe(
+    Recipe(
         recipe="newyorker",
         name="The New Yorker",
         slug="newyorker",
@@ -157,7 +158,7 @@ recipes = [
         overwrite_cover=True,
         category="magazine",
     ),
-    Receipe(
+    Recipe(
         recipe="nytimes-global",
         name="NY Times Global",
         slug="nytimes-global",
@@ -167,7 +168,7 @@ recipes = [
         overwrite_cover=True,
         category="news",
     ),
-    Receipe(
+    Recipe(
         recipe="nytimes-books",
         name="New York Times Books",
         slug="nytimes-books",
@@ -177,7 +178,7 @@ recipes = [
         overwrite_cover=True,
         category="books",
     ),
-    Receipe(
+    Recipe(
         recipe="politico-magazine",
         name="POLITICO Magazine",
         slug="politico-magazine",
@@ -187,7 +188,7 @@ recipes = [
         overwrite_cover=True,
         category="magazine",
     ),
-    Receipe(
+    Recipe(
         recipe="scmp",
         name="South China Morning Post",
         slug="scmp",
@@ -197,7 +198,7 @@ recipes = [
         overwrite_cover=True,
         category="news",
     ),
-    Receipe(
+    Recipe(
         recipe="thirdpole",
         name="The Third Pole",
         slug="thirdpole",
@@ -207,7 +208,7 @@ recipes = [
         overwrite_cover=True,
         category="magazine",
     ),
-    Receipe(
+    Recipe(
         recipe="wapo",
         name="The Washington Post",
         slug="wapo",

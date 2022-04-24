@@ -42,8 +42,8 @@ source_url = f"https://{domain}.com/{username}{parsed_site.path}"
 font_big = ImageFont.truetype("static/OpenSans-Bold.ttf", 82)
 font_med = ImageFont.truetype("static/OpenSans-Semibold.ttf", 72)
 
-ReceipeOutput = namedtuple(
-    "ReceipeOutput", ["title", "file", "rename_to", "published_dt", "category"]
+RecipeOutput = namedtuple(
+    "RecipeOutput", ["title", "file", "rename_to", "published_dt", "category"]
 )
 
 # default style
@@ -270,7 +270,7 @@ for recipe in recipes:
             title = mobj.group("title")
         rename_file_name = f"{recipe.slug}-{pub_date:%Y-%m-%d}.{recipe.src_ext}"
         generated[recipe.category][recipe.name].append(
-            ReceipeOutput(
+            RecipeOutput(
                 title=title,
                 file=source_file_name,
                 rename_to=rename_file_name,
@@ -322,7 +322,7 @@ for recipe in recipes:
 
             if not exit_code:
                 generated[recipe.category][recipe.name].append(
-                    ReceipeOutput(
+                    RecipeOutput(
                         title=title,
                         file=target_file_name,
                         rename_to=f"{recipe.slug}-{pub_date:%Y-%m-%d}.{ext}",
