@@ -415,9 +415,8 @@ for category, publications in sorted(generated.items(), key=sort_category_key):
                 <span class="pub-date">Not available</span></li>"""
             )
 
-    listing += f"""<li>{category}
-    <ol class="books">{"".join(publication_listing)}</ol>
-    </li>"""
+    listing += f"""<h2 class="category">{category}</h2>
+    <ol class="books">{"".join(publication_listing)}</ol>"""
 
 with open(os.path.join(publish_folder, "index.json"), "w", encoding="utf-8") as f_in:
     index["_generated"] = int(time.time())

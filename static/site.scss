@@ -18,18 +18,17 @@ h1 {
         height: 1.25rem;
     }
 }
-.categories {
-    padding-left: 1.5rem;
 
-    li {
-        text-transform: capitalize;
-        margin-bottom: 1.5rem;
-        font-size: 1.1rem;
-    }
+h2.category {
+    text-transform: capitalize;
+    margin-bottom: 0.6rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #444;
+    font-weight: 500;
 }
 
 .books {
-    padding-left: 1rem;
+    padding-left: 1.5rem;
     margin-top: 0.5rem;
 
     li {
@@ -75,13 +74,17 @@ footer {
 }
 
 // Saner defaults for large screens
-@media (min-width: 1280px) {
+@media (min-width: 1380px) {
 
     html {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     body {
         margin: 2rem;
+    }
+
+    main {
+        max-width: 800px;
     }
 }
