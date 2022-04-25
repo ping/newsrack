@@ -222,7 +222,7 @@ for recipe in recipes:
                 if cached.get(recipe.name):
                     for name in cached[recipe.name]:
                         ebook_url = urljoin(publish_site, name)
-                        ebook_res = cache_sess.get(ebook_url, timeout=15, stream=True)
+                        ebook_res = cache_sess.get(ebook_url, timeout=120, stream=True)
                         ebook_res.raise_for_status()
                         with open(
                             os.path.join(publish_folder, os.path.basename(ebook_url)),
