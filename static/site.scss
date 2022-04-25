@@ -75,16 +75,13 @@ footer {
 
 // Saner defaults for large screens
 @media (min-width: 1380px) {
-
     html {
         font-size: 18px;
     }
 
     body {
-        margin: 2rem;
-    }
-
-    main {
         max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
