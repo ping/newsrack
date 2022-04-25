@@ -17,12 +17,15 @@ on:
       regenerate:
         description: Enter csv of recipe slugs to specifically regenerate
         required: false
+        type: string
       skip:
         description: Enter csv of recipe slugs to specifically skip
         required: false
+        type: string
       verbose:
         description: Run recipe in verbose mode (empty for false)
         required: false
+        type: boolean
 
 jobs:
   deploy:
@@ -61,6 +64,9 @@ jobs:
         env:
           CALIBRE_CONFIG_DIRECTORY: ${{ github.workspace }}/calibre_config/
         run: |
+          echo ${{ github.event.inputs.regenerate }}
+          echo ${{ github.event.inputs.skip }}
+          echo ${{ github.event.inputs.verbose }}
           export PATH=$PATH:~/calibre-bin/calibre
           export CI_PAGES_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io${GITHUB_REPOSITORY:${#GITHUB_REPOSITORY_OWNER}}/"
           sh _build.sh
