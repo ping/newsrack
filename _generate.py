@@ -86,7 +86,7 @@ except (KeyError, ValueError):
 
 verbose_mode = False
 try:
-    verbose_mode = str(os.environ["verbose"]).strip()
+    verbose_mode = str(os.environ["verbose"]).strip().lower() == "true"
 except (KeyError, ValueError):
     pass
 

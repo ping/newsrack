@@ -23,7 +23,7 @@ on:
         required: false
         type: string
       verbose:
-        description: Run recipe in verbose mode (empty for false)
+        description: Run recipe in verbose mode
         required: false
         type: boolean
 
@@ -63,10 +63,13 @@ jobs:
       - name: Generate .mobi
         env:
           CALIBRE_CONFIG_DIRECTORY: ${{ github.workspace }}/calibre_config/
+          regenerate: ${{ github.event.inputs.regenerate }}
+          skip: ${{ github.event.inputs.skip }}
+          verbose: ${{ github.event.inputs.verbose }}
         run: |
-          echo ${{ github.event.inputs.regenerate }}
-          echo ${{ github.event.inputs.skip }}
-          echo ${{ github.event.inputs.verbose }}
+          echo "regenerate: $regenerate"
+          echo "skip: $skip"
+          echo "verbose: $verbose"
           export PATH=$PATH:~/calibre-bin/calibre
           export CI_PAGES_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io${GITHUB_REPOSITORY:${#GITHUB_REPOSITORY_OWNER}}/"
           sh _build.sh
