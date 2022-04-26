@@ -12,14 +12,12 @@ from urllib.parse import urljoin, urlparse
 import shutil
 from timeit import default_timer as timer
 import argparse
-import textwrap
-from functools import cmp_to_key
 
 import requests
 import humanize
-from PIL import Image, ImageDraw, ImageFont
 
-from _recipes import recipes
+from _utils import generate_cover
+from _recipes import recipes, sort_category_key
 
 logger = logging.getLogger(__file__)
 ch = logging.StreamHandler(sys.stdout)
@@ -50,9 +48,6 @@ parsed_site = urlparse(publish_site)
 username, domain, _ = parsed_site.netloc.split(".")
 source_url = f"https://{domain}.com/{username}{parsed_site.path}"
 
-# for cover generation
-font_big = ImageFont.truetype("static/OpenSans-Bold.ttf", 82)
-font_med = ImageFont.truetype("static/OpenSans-Semibold.ttf", 72)
 
 RecipeOutput = namedtuple(
     "RecipeOutput", ["title", "file", "rename_to", "published_dt", "category"]
@@ -67,7 +62,7 @@ with open("static/site.js", "r", encoding="utf-8") as f:
     site_js = f.read()
 
 
-# use environment variables to skip certain recipes in CI
+# use environment variables to skip specified recipes in CI
 skip_recipes_slugs = []
 try:
     skip_recipes_slugs = str(os.environ["skip"])
@@ -75,6 +70,7 @@ try:
 except (KeyError, ValueError):
     pass
 
+# use environment variables to run specified recipes in CI
 regenerate_recipes_slugs = []
 try:
     regenerate_recipes_slugs = str(os.environ["regenerate"])
@@ -89,6 +85,8 @@ try:
     verbose_mode = str(os.environ["verbose"]).strip().lower() == "true"
 except (KeyError, ValueError):
     pass
+if verbose_mode:
+    logger.setLevel(logging.DEBUG)
 
 
 # fetch index.json from published site
@@ -100,69 +98,6 @@ def fetch_cache():
     except Exception as err:  # noqa
         logger.exception("[!] Error fetching index.json")
         return {}
-
-
-def generate_cover(file_name, title_text, cover_width=889, cover_height=1186):
-    """
-    Generate a plain image cover file
-
-    :param file_name: Filename to be saved as
-    :param title_text: Cover text
-    :param cover_width: Width
-    :param cover_height: Height
-    :return:
-    """
-    rectangle_offset = 25
-    title_texts = [t.strip() for t in title_text.split(":")]
-
-    img = Image.new("RGB", (cover_width, cover_height), color="white")
-    img_draw = ImageDraw.Draw(img)
-    # rectangle outline
-    img_draw.rectangle(
-        (
-            rectangle_offset,
-            rectangle_offset,
-            cover_width - rectangle_offset,
-            cover_height - rectangle_offset,
-        ),
-        width=2,
-        outline="black",
-    )
-
-    total_height = 0
-    line_gap = 25
-    text_w_h = []
-    for i, text in enumerate(title_texts):
-        if i == 0:
-            wrapper = textwrap.TextWrapper(width=15)
-            word_list = wrapper.wrap(text=text)
-
-            for ii in word_list[:-1]:
-                text_w, text_h = img_draw.textsize(ii, font=font_big)
-                text_w_h.append([ii, text_w, text_h, text_h, font_big])
-                total_height += text_h + line_gap
-
-            text_w, text_h = img_draw.textsize(word_list[-1], font=font_big)
-            text_w_h.append([word_list[-1], text_w, text_h, text_h, font_big])
-            total_height += text_h + line_gap
-        else:
-            text_w, text_h = img_draw.textsize(text, font=font_med)
-            text_w_h.append([text, text_w, text_h, text_h, font_med])
-            total_height += text_h + line_gap
-
-    cumu_offset = 0
-    for text, text_w, text_h, h_offset, font in text_w_h:
-        img_draw.text(
-            (
-                int((cover_width - text_w) / 2),
-                int((cover_height - total_height) / 2) + cumu_offset,
-            ),
-            text,
-            font=font,
-            fill="black",
-        )
-        cumu_offset += h_offset
-    img.save(file_name)
 
 
 generated = {}
@@ -322,7 +257,10 @@ for recipe in recipes:
                 "ebook-convert",
                 source_file_path,
                 target_file_path,
+                "--output-profile=tablet",
             ]
+            if verbose_mode:
+                cmd.append("-vv")
             if not glob.glob(publish_folder + f"/{recipe.slug}*.{ext}"):
                 exit_code = subprocess.call(
                     cmd,
@@ -351,30 +289,6 @@ for recipe in recipes:
         logger.info(
             f'{"=" * 20} "{recipe.name}" recipe took {humanize.precisedelta(recipe_elapsed_time)} {"=" * 20}'
         )
-
-
-sorted_categories = ["news", "magazines", "books"]
-
-
-def sort_category(a, b):
-    try:
-        a_index = sorted_categories.index(a[0])
-    except ValueError:
-        a_index = 999
-    try:
-        b_index = sorted_categories.index(b[0])
-    except ValueError:
-        b_index = 999
-
-    if a_index < b_index:
-        return -1
-    if a_index > b_index:
-        return 1
-    if a_index == b_index:
-        return -1 if a[0] < b[0] else 1
-
-
-sort_category_key = cmp_to_key(sort_category)
 
 listing = ""
 for category, publications in sorted(generated.items(), key=sort_category_key):
