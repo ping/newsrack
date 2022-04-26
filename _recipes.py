@@ -94,6 +94,7 @@ recipes = [
         src_ext="mobi",
         overwrite_cover=False,
         category="news",
+        timeout=240,
     ),
     Recipe(
         recipe="ft",
