@@ -5,14 +5,13 @@
 # Original from https://github.com/kovidgoyal/calibre/blob/29cd8d64ea71595da8afdaec9b44e7100bff829a/recipes/new_yorker.recipe
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-from collections import defaultdict
+from collections import OrderedDict
 import json
 from datetime import datetime, timezone
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup, Tag
 from calibre.web.feeds.news import BasicNewsRecipe
-from calibre.utils.cleantext import clean_ascii_chars
 
 
 def classes(classes):
@@ -47,7 +46,7 @@ def class_startswith(*prefixes):
 class NewYorker(BasicNewsRecipe):
 
     title = "New Yorker Magazine"
-    description = "Content from the New Yorker website"
+    description = "Articles of the week's New Yorker magazine"
 
     url_list = []
     language = "en"
@@ -178,8 +177,9 @@ class NewYorker(BasicNewsRecipe):
                 self.pub_date = mod_date_utc
 
     def parse_index(self):
-        soup = self.index_to_soup("https://www.newyorker.com/magazine?intcid=magazine")
-        # soup = self.index_to_soup('file:///t/raw.html')
+
+        # Get cover
+
         cover_soup = self.index_to_soup("https://www.newyorker.com/archive")
         cover_img = cover_soup.find(
             attrs={"class": lambda x: x and "MagazineSection__cover___" in x}
@@ -196,34 +196,64 @@ class NewYorker(BasicNewsRecipe):
                     ]
                     self.cover_url = self.cover_url.replace(old_width, "w_560")
                 except Exception:
-                    self.log("Failed enlarging cover img, using the original one")
+                    self.log.warning(
+                        "Failed enlarging cover img, using the original one"
+                    )
 
                 self.log("Found cover:", self.cover_url)
-        stories = defaultdict(list)
-        last_section = "Unknown"
-        for story in soup.findAll(
-            attrs={"class": lambda x: x and "River__riverItemContent___" in x}
-        ):
-            try:
-                section = self.tag_to_string(story.find("a")["title"]) or last_section
-            except KeyError:
-                section = last_section
-            last_section = section
-            h4 = story.find("h4")
-            title = self.tag_to_string(h4)
-            a = story.find("h4").parent
-            url = absurl(a["href"])
-            desc = ""
-            body = story.find(attrs={"class": "River__dek___CayIg"})
-            if body is not None:
-                desc = body.contents[0]
-            self.log("Found article:", title)
-            self.log("\t" + url)
-            self.log("\t" + desc)
-            self.log("")
-            stories[section].append({"title": title, "url": url, "description": desc})
 
-        return [(k, stories[k]) for k in sorted(stories)]
+        # Get content
+
+        soup = self.index_to_soup("https://www.newyorker.com/magazine?intcid=magazine")
+
+        stories = OrderedDict()  # So we can list sections in order
+
+        # Iterate sections of content
+
+        for section_soup in soup.findAll(
+            attrs={"class": lambda x: x and "MagazinePageSection__section___21cc7" in x}
+        ):
+            section = section_soup.find("h2").text
+            self.log("Found section:", section)
+
+            # Iterate stories in section
+
+            is_mail_section = section == "Mail"
+
+            if is_mail_section:
+                cname = "Link__link___"
+            else:
+                cname = "River__riverItemContent___"
+
+            for story in section_soup.findAll(
+                attrs={"class": lambda x: x and cname in x}
+            ):
+                desc = ""
+                if is_mail_section:
+                    title = story.text
+                    url = absurl(story["href"])
+                else:
+                    h4 = story.find("h4")
+                    title = self.tag_to_string(h4)
+                    a = story.find("h4").parent
+                    url = absurl(a["href"])
+                    # Get description
+                    body = story.find(attrs={"class": "River__dek___CayIg"})
+                    if body is not None:
+                        desc = body.contents[0]
+
+                self.log("Found article:", title)
+                self.log("\t" + url)
+                self.log("\t" + desc)
+                self.log("")
+
+                if section not in stories:
+                    stories[section] = []
+                stories[section].append(
+                    {"title": title, "url": url, "description": desc}
+                )
+
+        return [(k, stories[k]) for k, v in stories.items()]
 
     # The New Yorker changes the content it delivers based on cookies, so the
     # following ensures that we send no cookies
