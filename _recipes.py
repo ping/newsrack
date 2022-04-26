@@ -9,15 +9,19 @@ default_recipe_timeout = 120
 class Recipe:
     """A Calibre recipe definition"""
 
-    recipe: str
-    name: str
-    slug: str
-    src_ext: str
-    category: str
-    target_ext: List[str] = field(default_factory=list)
-    timeout: int = default_recipe_timeout
-    overwrite_cover: bool = True
-    enable_on: Union[bool, Callable[[], bool]] = True
+    recipe: str  # actual recipe name
+    name: str  # display name
+    slug: str  # file name slug
+    src_ext: str  # recipe output format
+    category: str  # category, e.g. News
+    target_ext: List[str] = field(
+        default_factory=list
+    )  # alt formats that src_ext will be converted to
+    timeout: int = default_recipe_timeout  # max time allowed for executing the recipe
+    overwrite_cover: bool = True  # generate a plain cover to overwrite Calibre's
+    enable_on: Union[
+        bool, Callable[[], bool]
+    ] = True  # determines when to run the recipe
 
     def is_enabled(self):
         if callable(self.enable_on):
