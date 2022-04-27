@@ -57,8 +57,9 @@ jobs:
         run: |
           mkdir -p ~/calibre-bin
           wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin install_dir=~/calibre-bin isolated=y
-          export PATH=$PATH:~/calibre-bin/calibre
+          export PATH=$PATH:$HOME/calibre-bin/calibre
           calibre --version
+          echo "$HOME/calibre-bin/calibre" >> $GITHUB_PATH
 
       - name: Generate .mobi
         env:
@@ -67,7 +68,6 @@ jobs:
           skip: ${{ github.event.inputs.skip }}
           verbose: ${{ github.event.inputs.verbose }}
         run: |
-          export PATH=$PATH:~/calibre-bin/calibre
           export CI_PAGES_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io${GITHUB_REPOSITORY:${#GITHUB_REPOSITORY_OWNER}}/"
           sh _build.sh
           echo -e "\n<"'!'"-- Commit ${GITHUB_SHA:0:7} -->" >> public/index.html
