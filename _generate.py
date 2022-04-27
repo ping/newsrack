@@ -156,12 +156,7 @@ for recipe in recipes:
                 logger.warning(f'Using cached copy for "{recipe.name}".')
                 if cached.get(recipe.name):
                     for cached_item in cached[recipe.name]:
-                        if type(cached_item) == str:
-                            # old format
-                            name = cached_item
-                        else:
-                            name = cached_item["filename"]
-                        ebook_url = urljoin(publish_site, name)
+                        ebook_url = urljoin(publish_site, cached_item["filename"])
                         ebook_res = cache_sess.get(ebook_url, timeout=120, stream=True)
                         ebook_res.raise_for_status()
                         with open(
