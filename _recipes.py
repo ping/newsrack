@@ -64,7 +64,7 @@ def get_local_now(offset: float = 0.0):
 
 def onlyon_weekdays(days_of_the_week: List[int], offset: float = 0.0):
     """
-    Enable recipe only an the specified days_of_the_week
+    Enable recipe only on the specified days_of_the_week
 
     :param days_of_the_week: Starts with 0 = Monday
     :param offset: timezone offset hours
@@ -75,7 +75,7 @@ def onlyon_weekdays(days_of_the_week: List[int], offset: float = 0.0):
 
 def onlyon_days(days_of_the_month: List[int], offset: float = 0.0):
     """
-    Enable recipe only an the specified days_of_the_month
+    Enable recipe only on the specified days_of_the_month
 
     :param days_of_the_month:
     :param offset: timezone offset hours
