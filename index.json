@@ -1,66 +1,129 @@
 {
 "Asian Review of Books": [
-"arb-2022-04-26.mobi"
+{
+"filename": "arb-2022-04-26.mobi",
+"published": 1651012500.0
+}
 ],
 "The Atlantic": [
-"the-atlantic-2022-04-26.mobi"
+{
+"filename": "the-atlantic-2022-04-26.mobi",
+"published": 1651016461.0
+}
 ],
 "The Atlantic Magazine": [
-"atlantic-magazine-2022-04-19.mobi"
+{
+"filename": "atlantic-magazine-2022-04-19.mobi",
+"published": 1650362400.0
+}
 ],
 "ChannelNewsAsia": [
-"channelnewsasia-2022-04-26.mobi"
+{
+"filename": "channelnewsasia-2022-04-27.mobi",
+"published": 1651030409.0
+}
 ],
 "The Diplomat": [
-"the-diplomat-2022-04-26.mobi"
+{
+"filename": "the-diplomat-2022-04-27.mobi",
+"published": 1651024990.0
+}
 ],
 "The Economist": [
-"economist-2022-04-26.mobi"
+{
+"filename": "economist-2022-04-26.mobi",
+"published": 1650979245.0
+}
 ],
 "Financial Times": [
-"ft-2022-04-26.mobi"
+{
+"filename": "ft-2022-04-27.mobi",
+"published": 1651028426.0
+}
 ],
 "Five Books": [
-"fivebooks-2022-04-21.mobi"
+{
+"filename": "fivebooks-2022-04-21.mobi",
+"published": 1650566901.0
+}
 ],
 "The Guardian": [
-"guardian-2022-04-26.mobi"
+{
+"filename": "guardian-2022-04-27.mobi",
+"published": 1651030160.0
+}
 ],
 "Japan Times": [
-"japan-times-2022-04-26.mobi"
+{
+"filename": "japan-times-2022-04-27.mobi",
+"published": 1651029713.0
+}
 ],
 "Joongang Daily": [
-"joongang-daily-2022-04-26.mobi"
+{
+"filename": "joongang-daily-2022-04-27.mobi",
+"published": 1651030239.0
+}
 ],
 "Korea Herald": [
-"korea-herald-2022-04-26.mobi"
+{
+"filename": "korea-herald-2022-04-27.mobi",
+"published": 1651027776.0
+}
 ],
 "London Review of Books": [
-"lrb-2022-04-25.mobi"
+{
+"filename": "lrb-2022-04-25.mobi",
+"published": 1650886926.0
+}
 ],
 "The New Yorker": [
-"newyorker-2022-04-18.mobi"
+{
+"filename": "newyorker-2022-04-18.mobi",
+"published": 1650276000.0
+}
 ],
 "NY Times Global": [
-"nytimes-global-2022-04-26.mobi"
+{
+"filename": "nytimes-global-2022-04-27.mobi",
+"published": 1651031864.0
+}
 ],
 "New York Times Books": [
-"nytimes-books-2022-04-26.mobi"
+{
+"filename": "nytimes-books-2022-04-27.mobi",
+"published": 1651024393.0
+}
 ],
 "POLITICO Magazine": [
-"politico-magazine-2022-04-26.mobi"
+{
+"filename": "politico-magazine-2022-04-26.mobi",
+"published": 1650961800.0
+}
 ],
 "Scientific American": [
-"scientific-american-2022-04-01.mobi"
+{
+"filename": "scientific-american-2022-04-01.mobi",
+"published": 1648818000.0
+}
 ],
 "South China Morning Post": [
-"scmp-2022-04-26.mobi"
+{
+"filename": "scmp-2022-04-27.mobi",
+"published": 1651032197.0
+}
 ],
 "The Third Pole": [
-"thirdpole-2022-04-26.mobi"
+{
+"filename": "thirdpole-2022-04-26.mobi",
+"published": 1650990796.0
+}
 ],
 "The Washington Post": [
-"wapo-2022-04-26.mobi"
+{
+"filename": "wapo-2022-04-27.mobi",
+"published": 1651032077.0
+}
 ],
-"_generated": 1651014982
+"_generated": 1651032649
 }
