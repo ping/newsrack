@@ -155,7 +155,12 @@ for recipe in recipes:
                 # use cache
                 logger.warning(f'Using cached copy for "{recipe.name}".')
                 if cached.get(recipe.name):
-                    for name in cached[recipe.name]:
+                    for cached_item in cached[recipe.name]:
+                        if type(cached_item) == str:
+                            # old format
+                            name = cached_item
+                        else:
+                            name = cached_item["filename"]
                         ebook_url = urljoin(publish_site, name)
                         ebook_res = cache_sess.get(ebook_url, timeout=120, stream=True)
                         ebook_res.raise_for_status()
@@ -246,7 +251,12 @@ for recipe in recipes:
             except Exception:  # noqa
                 logger.exception("Error generating cover")
 
-        index[recipe.name].append(f"{recipe.slug}-{pub_date:%Y-%m-%d}.{recipe.src_ext}")
+        index[recipe.name].append(
+            {
+                "filename": f"{recipe.slug}-{pub_date:%Y-%m-%d}.{recipe.src_ext}",
+                "published": pub_date.timestamp(),
+            }
+        )
 
         # convert generate book into alternative formats
         for ext in recipe.target_ext:
@@ -283,7 +293,12 @@ for recipe in recipes:
                         category=recipe.category,
                     )
                 )
-                index[recipe.name].append(f"{recipe.slug}-{pub_date:%Y-%m-%d}.{ext}")
+                index[recipe.name].append(
+                    {
+                        "filename": f"{recipe.slug}-{pub_date:%Y-%m-%d}.{ext}",
+                        "published": pub_date.timestamp(),
+                    }
+                )
 
         recipe_elapsed_time = timedelta(seconds=timer() - recipe_start_time)
         logger.info(
