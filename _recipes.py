@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Union, Callable
 from datetime import datetime, timezone, timedelta
+import time
 from functools import cmp_to_key
 
 default_recipe_timeout = 120
@@ -23,11 +24,20 @@ class Recipe:
     enable_on: Union[
         bool, Callable[[], bool]
     ] = True  # determines when to run the recipe
+    run_interval_in_days: float = 0  # kinda like Calibre's every X days
+    drift_in_hours: float = (
+        1  # allowance for schedule drift since scheduler is not precise
+    )
+    job_log: dict = field(default_factory=dict, init=False)
 
-    def is_enabled(self):
+    def is_enabled(self) -> bool:
+        is_due = self.job_log.get(self.name, 0) < (
+            time.time()
+            - (24 * self.run_interval_in_days - self.drift_in_hours) * 60 * 60
+        )
         if callable(self.enable_on):
-            return self.enable_on()
-        return self.enable_on
+            return is_due and self.enable_on()
+        return is_due and self.enable_on
 
 
 sorted_categories = ["news", "magazines", "books"]

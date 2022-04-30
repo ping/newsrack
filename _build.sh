@@ -3,7 +3,7 @@ for f in *.recipe.py; do
     cp -p "$f" "${f%.py}"
 done
 
-mkdir -p public \
+mkdir -p public cache \
 && cp -p static/favicon.svg public/ \
 && sass -s compressed --no-source-map static/site.scss static/site.css \
 && python3 _generate.py "$CI_PAGES_URL" \

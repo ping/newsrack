@@ -40,6 +40,8 @@ if args.verbose:
 
 start_time = timer()
 publish_folder = "public"
+cache_folder = "cache"
+job_log_filename = "job_log.json"
 publish_site = args.publish_site
 if not publish_site.endswith("/"):
     publish_site += "/"
@@ -100,6 +102,14 @@ def fetch_cache():
         return {}
 
 
+curr_job_log = {}
+job_log = {}
+try:
+    with open(os.path.join(cache_folder, job_log_filename), "r", encoding="utf-8") as f:
+        job_log = json.load(f)
+except:  # noqa
+    pass
+
 generated = {}
 today = datetime.utcnow().replace(tzinfo=timezone.utc)
 index = {}  # generate index.json
@@ -107,6 +117,8 @@ cached = fetch_cache()
 cache_sess = requests.Session()
 
 for recipe in recipes:
+    recipe.job_log = job_log
+
     if recipe.slug in skip_recipes_slugs:
         logger.info(f'[!] SKIPPED recipe: "{recipe.slug}"')
         continue
@@ -151,6 +163,7 @@ for recipe in recipes:
                     stdout=sys.stdout,
                     stderr=sys.stderr,
                 )
+                curr_job_log[recipe.name] = int(time.time())
             else:
                 # use cache
                 logger.warning(f'Using cached copy for "{recipe.name}".')
@@ -173,6 +186,7 @@ for recipe in recipes:
                         stdout=sys.stdout,
                         stderr=sys.stderr,
                     )
+                    curr_job_log[recipe.name] = int(time.time())
 
         except subprocess.TimeoutExpired:
             logger.exception(f"[!] TimeoutExpired fetching '{recipe.name}'")
@@ -347,6 +361,10 @@ with open(os.path.join(publish_folder, "index.json"), "w", encoding="utf-8") as 
     json.dump(index, f_in, indent=0)
 
 elapsed_time = timedelta(seconds=timer() - start_time)
+
+job_log.update(curr_job_log)
+with open(os.path.join(cache_folder, job_log_filename), "w", encoding="utf-8") as f:
+    json.dump(job_log, f)
 
 with open("static/index.html", "r", encoding="utf-8") as f_in:
     html_output = f_in.read().format(

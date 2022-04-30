@@ -61,6 +61,13 @@ jobs:
           calibre --version
           echo "$HOME/calibre-bin/calibre" >> $GITHUB_PATH
 
+      - name: Cache
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: cache
+          key: cache
+
       - name: Generate .mobi
         env:
           CALIBRE_CONFIG_DIRECTORY: ${{ github.workspace }}/calibre_config/
