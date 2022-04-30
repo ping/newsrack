@@ -45,6 +45,7 @@ job_log_filename = "job_log.json"
 publish_site = args.publish_site
 if not publish_site.endswith("/"):
     publish_site += "/"
+max_retry_attempts = 1
 
 parsed_site = urlparse(publish_site)
 username, domain, _ = parsed_site.netloc.split(".")
@@ -170,13 +171,28 @@ for recipe in recipes:
                 if cached.get(recipe.name):
                     for cached_item in cached[recipe.name]:
                         ebook_url = urljoin(publish_site, cached_item["filename"])
-                        ebook_res = cache_sess.get(ebook_url, timeout=120, stream=True)
-                        ebook_res.raise_for_status()
-                        with open(
-                            os.path.join(publish_folder, os.path.basename(ebook_url)),
-                            "wb",
-                        ) as f:
-                            shutil.copyfileobj(ebook_res.raw, f)
+                        timeout = 120
+                        for attempt in range(1 + max_retry_attempts):
+                            try:
+                                ebook_res = cache_sess.get(
+                                    ebook_url, timeout=120, stream=True
+                                )
+                                ebook_res.raise_for_status()
+                                with open(
+                                    os.path.join(
+                                        publish_folder, os.path.basename(ebook_url)
+                                    ),
+                                    "wb",
+                                ) as f:
+                                    shutil.copyfileobj(ebook_res.raw, f)
+                                break
+                            except requests.exceptions.ReadTimeout as err:
+                                if attempt < max_retry_attempts:
+                                    logger.warning(f"ReadTimeout for {ebook_url}")
+                                    timeout += 30
+                                    time.sleep(2)
+                                    continue
+                                raise
                 else:
                     # not cached, so run it anyway to ensure that we try to have a copy
                     logger.warning(f'"{recipe.name}" is not cached.')
