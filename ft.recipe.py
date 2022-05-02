@@ -44,7 +44,7 @@ class FinancialTimes(BasicNewsRecipe):
         ("Home", "https://www.ft.com/rss/home"),
         # ("Home (International)", "https://www.ft.com/rss/home/international"),
         ("World", "https://www.ft.com/world?format=rss"),
-        # ("US", "https://www.ft.com/world/us?format=rss"),
+        ("US", "https://www.ft.com/world/us?format=rss"),
         ("Technology", "https://www.ft.com/technology?format=rss"),
         # ("Markets", "https://www.ft.com/markets?format=rss"),
         # ("Climate", "https://www.ft.com/climate-capital?format=rss"),
@@ -53,6 +53,15 @@ class FinancialTimes(BasicNewsRecipe):
         # ("Life & Arts", "https://www.ft.com/life-arts?format=rss"),
         # ("How to Spend It", "https://www.ft.com/htsi?format=rss"),
     ]
+
+    def get_cover_url(self):
+        soup = self.index_to_soup(
+            "https://www.todayspapers.co.uk/the-financial-times-front-page-today/"
+        )
+        tag = soup.find("div", attrs={"class": "elementor-image"})
+        if tag:
+            self.cover_url = tag.find("img")["src"]
+        return getattr(self, "cover_url", self.cover_url)
 
     def print_version(self, url):
         return urljoin("https://ft.com", url)
