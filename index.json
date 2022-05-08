@@ -7,8 +7,8 @@
 ],
 "The Atlantic": [
 {
-"filename": "the-atlantic-2022-05-07.mobi",
-"published": 1651954575.0
+"filename": "the-atlantic-2022-05-08.mobi",
+"published": 1651989656.0
 }
 ],
 "The Atlantic Magazine": [
@@ -20,7 +20,7 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-05-08.mobi",
-"published": 1651980644.0
+"published": 1651992544.0
 }
 ],
 "The Diplomat": [
@@ -38,7 +38,7 @@
 "Financial Times": [
 {
 "filename": "ft-2022-05-08.mobi",
-"published": 1651969801.0
+"published": 1651989633.0
 }
 ],
 "Five Books": [
@@ -50,20 +50,25 @@
 "The Guardian": [
 {
 "filename": "guardian-2022-05-08.mobi",
-"published": 1651979450.0
+"published": 1651991819.0
 }
 ],
 "Japan Times": [
 {
 "filename": "japan-times-2022-05-08.mobi",
-"published": 1651978842.0
+"published": 1651988544.0
 }
 ],
-"Joongang Daily": [],
+"Joongang Daily": [
+{
+"filename": "joongang-daily-2022-05-08.mobi",
+"published": 1651993280.0
+}
+],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-05-08.mobi",
-"published": 1651977706.0
+"published": 1651992703.0
 }
 ],
 "London Review of Books": [
@@ -81,7 +86,7 @@
 "NY Times Global": [
 {
 "filename": "nytimes-global-2022-05-08.mobi",
-"published": 1651979924.0
+"published": 1651989038.0
 }
 ],
 "New York Times Books": [
@@ -105,20 +110,20 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-05-08.mobi",
-"published": 1651978822.0
+"published": 1651992213.0
 }
 ],
 "The Third Pole": [
 {
-"filename": "thirdpole-2022-05-06.mobi",
-"published": 1651826537.0
+"filename": "thirdpole-2022-05-08.mobi",
+"published": 1651986969.0
 }
 ],
 "The Washington Post": [
 {
 "filename": "wapo-2022-05-08.mobi",
-"published": 1651980034.0
+"published": 1651992790.0
 }
 ],
-"_generated": 1651981377
+"_generated": 1651993891
 }
