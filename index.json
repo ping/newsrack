@@ -8,7 +8,7 @@
 "The Atlantic": [
 {
 "filename": "the-atlantic-2022-05-11.mobi",
-"published": 1652265056.0
+"published": 1652280667.0
 }
 ],
 "The Atlantic Magazine": [
@@ -20,25 +20,25 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-05-11.mobi",
-"published": 1652266353.0
+"published": 1652281075.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-05-11.mobi",
-"published": 1652265142.0
+"published": 1652281020.0
 }
 ],
 "The Economist": [
 {
-"filename": "economist-2022-05-10.mobi",
-"published": 1652180024.0
+"filename": "economist-2022-05-11.mobi",
+"published": 1652276375.0
 }
 ],
 "Financial Times": [
 {
 "filename": "ft-2022-05-11.mobi",
-"published": 1652266297.0
+"published": 1652279272.0
 }
 ],
 "Five Books": [
@@ -47,30 +47,15 @@
 "published": 1652227200.0
 }
 ],
-"The Guardian": [
-{
-"filename": "guardian-2022-05-11.mobi",
-"published": 1652266476.0
-}
-],
+"The Guardian": [],
 "Japan Times": [
 {
 "filename": "japan-times-2022-05-11.mobi",
-"published": 1652265899.0
+"published": 1652273279.0
 }
 ],
-"Joongang Daily": [
-{
-"filename": "joongang-daily-2022-05-11.mobi",
-"published": 1652264346.0
-}
-],
-"Korea Herald": [
-{
-"filename": "korea-herald-2022-05-11.mobi",
-"published": 1652266987.0
-}
-],
+"Joongang Daily": [],
+"Korea Herald": [],
 "London Review of Books": [
 {
 "filename": "lrb-2022-05-09.mobi",
@@ -86,13 +71,13 @@
 "NY Times Global": [
 {
 "filename": "nytimes-global-2022-05-11.mobi",
-"published": 1652266962.0
+"published": 1652281660.0
 }
 ],
 "New York Times Books": [
 {
 "filename": "nytimes-books-2022-05-11.mobi",
-"published": 1652259620.0
+"published": 1652275315.0
 }
 ],
 "POLITICO Magazine": [
@@ -110,7 +95,7 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-05-11.mobi",
-"published": 1652265718.0
+"published": 1652278510.0
 }
 ],
 "The Third Pole": [
@@ -122,8 +107,8 @@
 "The Washington Post": [
 {
 "filename": "wapo-2022-05-11.mobi",
-"published": 1652267134.0
+"published": 1652281910.0
 }
 ],
-"_generated": 1652267764
+"_generated": 1652282227
 }
