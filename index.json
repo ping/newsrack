@@ -8,7 +8,7 @@
 "The Atlantic": [
 {
 "filename": "the-atlantic-2022-05-11.mobi",
-"published": 1652227271.0
+"published": 1652265056.0
 }
 ],
 "The Atlantic Magazine": [
@@ -20,13 +20,13 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-05-11.mobi",
-"published": 1652252149.0
+"published": 1652266353.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-05-11.mobi",
-"published": 1652245492.0
+"published": 1652265142.0
 }
 ],
 "The Economist": [
@@ -38,40 +38,45 @@
 "Financial Times": [
 {
 "filename": "ft-2022-05-11.mobi",
-"published": 1652252240.0
+"published": 1652266297.0
 }
 ],
 "Five Books": [
 {
-"filename": "fivebooks-2022-05-09.mobi",
-"published": 1652054400.0
+"filename": "fivebooks-2022-05-11.mobi",
+"published": 1652227200.0
 }
 ],
 "The Guardian": [
 {
 "filename": "guardian-2022-05-11.mobi",
-"published": 1652251882.0
+"published": 1652266476.0
 }
 ],
 "Japan Times": [
 {
 "filename": "japan-times-2022-05-11.mobi",
-"published": 1652252411.0
+"published": 1652265899.0
 }
 ],
 "Joongang Daily": [
 {
 "filename": "joongang-daily-2022-05-11.mobi",
-"published": 1652252238.0
+"published": 1652264346.0
 }
 ],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-05-11.mobi",
-"published": 1652252284.0
+"published": 1652266987.0
 }
 ],
-"London Review of Books": [],
+"London Review of Books": [
+{
+"filename": "lrb-2022-05-09.mobi",
+"published": 1652110600.0
+}
+],
 "The New Yorker": [
 {
 "filename": "newyorker-2022-05-09.mobi",
@@ -81,19 +86,19 @@
 "NY Times Global": [
 {
 "filename": "nytimes-global-2022-05-11.mobi",
-"published": 1652252838.0
+"published": 1652266962.0
 }
 ],
 "New York Times Books": [
 {
-"filename": "nytimes-books-2022-05-10.mobi",
-"published": 1652214314.0
+"filename": "nytimes-books-2022-05-11.mobi",
+"published": 1652259620.0
 }
 ],
 "POLITICO Magazine": [
 {
-"filename": "politico-magazine-2022-05-10.mobi",
-"published": 1652210660.0
+"filename": "politico-magazine-2022-05-11.mobi",
+"published": 1652257800.0
 }
 ],
 "Scientific American": [
@@ -105,20 +110,20 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-05-11.mobi",
-"published": 1652250612.0
+"published": 1652265718.0
 }
 ],
 "The Third Pole": [
 {
-"filename": "thirdpole-2022-05-10.mobi",
-"published": 1652203669.0
+"filename": "thirdpole-2022-05-11.mobi",
+"published": 1652260215.0
 }
 ],
 "The Washington Post": [
 {
 "filename": "wapo-2022-05-11.mobi",
-"published": 1652253499.0
+"published": 1652267134.0
 }
 ],
-"_generated": 1652253789
+"_generated": 1652267764
 }
