@@ -219,7 +219,13 @@ class NYTimesBooks(BasicNewsRecipe):
                 para_ele = new_soup.new_tag("p")
                 para_ele.string = ""
                 for cc in content_service.get(c["id"], {}).get("content", []):
-                    para_ele.string += content_service.get(cc["id"], {}).get("text", "")
+                    d = content_service.get(cc["id"], {})
+                    if d["__typename"] == "LineBreakInline":
+                        para_ele.append(new_soup.new_tag("br"))
+                    elif d["__typename"] == "TextInline":
+                        para_ele.append(d.get("text", ""))
+                    else:
+                        para_ele.append(d.get("text", ""))
                 new_soup.body.article.append(para_ele)
             elif content_type == "ImageBlock":
                 image_block = content_service.get(
