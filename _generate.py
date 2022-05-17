@@ -170,6 +170,9 @@ for recipe in recipes:
                 logger.warning(f'Using cached copy for "{recipe.name}".')
                 if cached.get(recipe.name):
                     for cached_item in cached[recipe.name]:
+                        _, ext = os.path.splitext(cached_item["filename"])
+                        if ext != f".{recipe.src_ext}":
+                            continue
                         ebook_url = urljoin(publish_site, cached_item["filename"])
                         timeout = 120
                         for attempt in range(1 + max_retry_attempts):
