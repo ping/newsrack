@@ -11,36 +11,13 @@ from datetime import datetime, timezone
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup, Tag
-from calibre.web.feeds.news import BasicNewsRecipe
-
-
-def classes(classes):
-    q = frozenset(classes.split(" "))
-    return dict(attrs={"class": lambda x: x and frozenset(x.split()).intersection(q)})
+from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 
 def absurl(x):
     if x.startswith("/") and not x.startswith("//"):
         x = "https://www.newyorker.com" + x
     return x
-
-
-def class_as_string(x):
-    if isinstance(x, (list, tuple)):
-        x = " ".join(x)
-    return x
-
-
-def class_startswith(*prefixes):
-    def q(x):
-        if x:
-            x = class_as_string(x)
-            for prefix in prefixes:
-                if x.startswith(prefix):
-                    return True
-        return False
-
-    return dict(attrs={"class": q})
 
 
 class NewYorker(BasicNewsRecipe):

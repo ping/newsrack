@@ -16,8 +16,7 @@ from lxml import etree
 from calibre import replace_entities
 from calibre.ebooks.BeautifulSoup import NavigableString, Tag
 from calibre.utils.cleantext import clean_ascii_chars
-from calibre.utils.date import parse_only_date
-from calibre.web.feeds.news import BasicNewsRecipe
+from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 # For past editions, set date to, for example, '2020-11-28'
 edition_date = None
@@ -89,11 +88,6 @@ def load_article_from_json(raw, root):
             pass
     for node in data["text"]:
         process_node(node, article)
-
-
-def classes(classes):
-    q = frozenset(classes.split(" "))
-    return dict(attrs={"class": lambda x: x and frozenset(x.split()).intersection(q)})
 
 
 def new_tag(soup, name, attrs=()):

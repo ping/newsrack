@@ -5,12 +5,7 @@
 # Original at: https://github.com/kovidgoyal/calibre/blob/640ca33197ea2c7772278183b3f77701009bb733/recipes/lrb.recipe
 from datetime import datetime, timezone
 import json
-from calibre.web.feeds.news import BasicNewsRecipe
-
-
-def classes(classes):
-    q = frozenset(classes.split(" "))
-    return dict(attrs={"class": lambda x: x and frozenset(x.split()).intersection(q)})
+from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 
 def absolutize(href):
