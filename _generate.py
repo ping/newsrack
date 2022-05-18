@@ -297,6 +297,10 @@ for recipe in recipes:
                 target_file_path,
                 "--output-profile=tablet",
             ]
+            customised_css_filename = os.path.join("static", f"{ext}.css")
+            if os.path.exists(customised_css_filename):
+                cmd.append(f"--extra-css={customised_css_filename}")
+
             if verbose_mode:
                 cmd.append("-vv")
             if not glob.glob(publish_folder + f"/{recipe.slug}*.{ext}"):
