@@ -29,6 +29,7 @@ In alphabetical order:
 5. [Politico](https://www.politico.com/)
 6. [Scientific American](https://www.scientificamerican.com/)
 7. [The Third Pole](https://www.thethirdpole.net/)
+8. [Vox](https://www.vox.com/)
 
 ### Books
 1. [Asian Review of Books](https://asianreviewofbooks.com)

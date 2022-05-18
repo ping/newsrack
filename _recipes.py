@@ -106,6 +106,17 @@ def onlyat_hours(hours_of_the_day: List[int], offset: float = 0.0):
 
 
 # Only mobi work as periodicals on the Kindle
+# Notes:
+#   - When epub is converted to mobi periodicals:
+#       - masthead is lost
+#       - mobi retains periodical support but has the non-funtional
+#         calibre generated nav, e.g. Next Section, Main, etc
+#       - article summary/description is lost
+#   - When mobi periodical is converted to epub:
+#       - epub loses the calibre generated nav, e.g. Next Section, Main, etc
+#         but full toc is retained
+#   - Recipe can be defined twice with different src_ext, will work except
+#     for potential throttling and time/bandwidth taken
 recipes = [
     Recipe(
         recipe="asian-review",
@@ -263,6 +274,13 @@ recipes = [
         src_ext="mobi",
         category="magazines",
         enable_on=onlyat_hours(list(range(5, 20)), 5.5),
+    ),
+    Recipe(
+        recipe="vox",
+        name="Vox",
+        slug="vox",
+        src_ext="mobi",
+        category="magazines",
     ),
     Recipe(
         recipe="wapo",
