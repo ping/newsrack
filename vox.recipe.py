@@ -1,10 +1,4 @@
-from datetime import timezone, datetime
-import re
-import json
-
 from calibre.web.feeds.news import BasicNewsRecipe
-from calibre.web.feeds import Feed
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
 
 class Vox(BasicNewsRecipe):
