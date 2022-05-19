@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack</title>
-<updated>2022-05-19T06:16:12Z</updated>
+<updated>2022-05-19T07:28:15Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -11,8 +11,8 @@
 <id>Korea Herald</id>
 <title>Korea Herald: 19 May, 2022</title>
 <summary>Korea Herald: 19 May, 2022</summary>
-<content type="text/html">Korea Herald: 19 May, 2022 published at 2022-05-19 06:03AM.</content>
-<updated>2022-05-19T06:03:59Z</updated>
+<content type="text/html">Korea Herald: 19 May, 2022 published at 2022-05-19 07:13AM.</content>
+<updated>2022-05-19T07:13:13Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
@@ -20,59 +20,11 @@
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="korea-herald-2022-05-19.mobi"/>
 </entry>
 <entry>
-<id>NY Times Global</id>
-<title>NY Times: 19 May, 2022</title>
-<summary>NY Times: 19 May, 2022</summary>
-<content type="text/html">NY Times: 19 May, 2022 published at 2022-05-19 06:01AM.</content>
-<updated>2022-05-19T06:01:10Z</updated>
-<category label="News"/>
-<author>
-<name>News</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-global-2022-05-19.mobi"/>
-</entry>
-<entry>
-<id>The Washington Post</id>
-<title>Washington Post: 19 May, 2022</title>
-<summary>Washington Post: 19 May, 2022</summary>
-<content type="text/html">Washington Post: 19 May, 2022 published at 2022-05-19 06:00AM.</content>
-<updated>2022-05-19T06:00:44Z</updated>
-<category label="News"/>
-<author>
-<name>News</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="wapo-2022-05-19.mobi"/>
-</entry>
-<entry>
-<id>The Guardian</id>
-<title>Guardian: 19 May, 2022</title>
-<summary>Guardian: 19 May, 2022</summary>
-<content type="text/html">Guardian: 19 May, 2022 published at 2022-05-19 05:58AM.</content>
-<updated>2022-05-19T05:58:41Z</updated>
-<category label="News"/>
-<author>
-<name>News</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="guardian-2022-05-19.mobi"/>
-</entry>
-<entry>
-<id>Financial Times</id>
-<title>Financial Times: 19 May, 2022</title>
-<summary>Financial Times: 19 May, 2022</summary>
-<content type="text/html">Financial Times: 19 May, 2022 published at 2022-05-19 05:56AM.</content>
-<updated>2022-05-19T05:56:26Z</updated>
-<category label="News"/>
-<author>
-<name>News</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="ft-2022-05-19.mobi"/>
-</entry>
-<entry>
 <id>ChannelNewsAsia</id>
 <title>ChannelNewsAsia: 19 May, 2022</title>
 <summary>ChannelNewsAsia: 19 May, 2022</summary>
-<content type="text/html">ChannelNewsAsia: 19 May, 2022 published at 2022-05-19 05:51AM.</content>
-<updated>2022-05-19T05:51:00Z</updated>
+<content type="text/html">ChannelNewsAsia: 19 May, 2022 published at 2022-05-19 07:09AM.</content>
+<updated>2022-05-19T07:09:00Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
@@ -83,8 +35,8 @@
 <id>Joongang Daily</id>
 <title>JoongAng Daily: 19 May, 2022</title>
 <summary>JoongAng Daily: 19 May, 2022</summary>
-<content type="text/html">JoongAng Daily: 19 May, 2022 published at 2022-05-19 05:41AM.</content>
-<updated>2022-05-19T05:41:56Z</updated>
+<content type="text/html">JoongAng Daily: 19 May, 2022 published at 2022-05-19 07:07AM.</content>
+<updated>2022-05-19T07:07:25Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
@@ -92,28 +44,76 @@
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="joongang-daily-2022-05-19.mobi"/>
 </entry>
 <entry>
-<id>Japan Times</id>
-<title>Japan Times: 19 May, 2022</title>
-<summary>Japan Times: 19 May, 2022</summary>
-<content type="text/html">Japan Times: 19 May, 2022 published at 2022-05-19 05:16AM.</content>
-<updated>2022-05-19T05:16:18Z</updated>
+<id>The Washington Post</id>
+<title>Washington Post: 19 May, 2022</title>
+<summary>Washington Post: 19 May, 2022</summary>
+<content type="text/html">Washington Post: 19 May, 2022 published at 2022-05-19 07:04AM.</content>
+<updated>2022-05-19T07:04:29Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
 </author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="japan-times-2022-05-19.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="wapo-2022-05-19.mobi"/>
+</entry>
+<entry>
+<id>NY Times Global</id>
+<title>NY Times: 19 May, 2022</title>
+<summary>NY Times: 19 May, 2022</summary>
+<content type="text/html">NY Times: 19 May, 2022 published at 2022-05-19 07:03AM.</content>
+<updated>2022-05-19T07:03:36Z</updated>
+<category label="News"/>
+<author>
+<name>News</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-global-2022-05-19.mobi"/>
 </entry>
 <entry>
 <id>South China Morning Post</id>
 <title>South China Morning Post: 19 May, 2022</title>
 <summary>South China Morning Post: 19 May, 2022</summary>
-<content type="text/html">South China Morning Post: 19 May, 2022 published at 2022-05-19 05:14AM.</content>
-<updated>2022-05-19T05:14:27Z</updated>
+<content type="text/html">South China Morning Post: 19 May, 2022 published at 2022-05-19 07:00AM.</content>
+<updated>2022-05-19T07:00:27Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="scmp-2022-05-19.mobi"/>
+</entry>
+<entry>
+<id>The Guardian</id>
+<title>Guardian: 19 May, 2022</title>
+<summary>Guardian: 19 May, 2022</summary>
+<content type="text/html">Guardian: 19 May, 2022 published at 2022-05-19 06:55AM.</content>
+<updated>2022-05-19T06:55:29Z</updated>
+<category label="News"/>
+<author>
+<name>News</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="guardian-2022-05-19.mobi"/>
+</entry>
+<entry>
+<id>Financial Times</id>
+<title>Financial Times: 19 May, 2022</title>
+<summary>Financial Times: 19 May, 2022</summary>
+<content type="text/html">Financial Times: 19 May, 2022 published at 2022-05-19 06:45AM.</content>
+<updated>2022-05-19T06:45:54Z</updated>
+<category label="News"/>
+<author>
+<name>News</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="ft-2022-05-19.mobi"/>
+</entry>
+<entry>
+<id>Japan Times</id>
+<title>Japan Times: 19 May, 2022</title>
+<summary>Japan Times: 19 May, 2022</summary>
+<content type="text/html">Japan Times: 19 May, 2022 published at 2022-05-19 06:13AM.</content>
+<updated>2022-05-19T06:13:00Z</updated>
+<category label="News"/>
+<author>
+<name>News</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="japan-times-2022-05-19.mobi"/>
 </entry>
 <entry>
 <id>The Economist</id>
@@ -128,6 +128,18 @@
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-05-18.mobi"/>
 </entry>
 <entry>
+<id>The Diplomat</id>
+<title>The Diplomat: 19 May, 2022</title>
+<summary>The Diplomat: 19 May, 2022</summary>
+<content type="text/html">The Diplomat: 19 May, 2022 published at 2022-05-19 06:18AM.</content>
+<updated>2022-05-19T06:18:09Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-diplomat-2022-05-19.mobi"/>
+</entry>
+<entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 19 May, 2022</title>
 <summary>The Atlantic: 19 May, 2022</summary>
@@ -140,16 +152,16 @@
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-05-19.mobi"/>
 </entry>
 <entry>
-<id>The Diplomat</id>
-<title>The Diplomat: 19 May, 2022</title>
-<summary>The Diplomat: 19 May, 2022</summary>
-<content type="text/html">The Diplomat: 19 May, 2022 published at 2022-05-19 05:59AM.</content>
-<updated>2022-05-19T05:59:47Z</updated>
+<id>The Third Pole</id>
+<title>The Third Pole: 19 May, 2022</title>
+<summary>The Third Pole: 19 May, 2022</summary>
+<content type="text/html">The Third Pole: 19 May, 2022 published at 2022-05-19 04:43AM.</content>
+<updated>2022-05-19T04:43:34Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
 </author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-diplomat-2022-05-19.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-05-19.mobi"/>
 </entry>
 <entry>
 <id>Vox</id>
@@ -186,18 +198,6 @@
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nature-2022-05-18.mobi"/>
-</entry>
-<entry>
-<id>The Third Pole</id>
-<title>The Third Pole: 17 May, 2022</title>
-<summary>The Third Pole: 17 May, 2022</summary>
-<content type="text/html">The Third Pole: 17 May, 2022 published at 2022-05-17 12:40PM.</content>
-<updated>2022-05-17T12:40:44Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-05-17.mobi"/>
 </entry>
 <entry>
 <id>The Atlantic Magazine</id>
