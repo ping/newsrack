@@ -11,11 +11,13 @@ import json
 from urllib.parse import urljoin, urlparse
 import shutil
 from timeit import default_timer as timer
+from xml.dom import minidom
 import argparse
 
 import requests
 import humanize
 
+from _opds import init_feed, simple_tag, extension_contenttype_map
 from _utils import generate_cover
 from _recipes import recipes, sort_category_key
 
@@ -47,6 +49,7 @@ if not publish_site.endswith("/"):
     publish_site += "/"
 max_retry_attempts = 1
 
+catalog_path = "catalog.xml"
 parsed_site = urlparse(publish_site)
 username, domain, _ = parsed_site.netloc.split(".")
 source_url = f"https://{domain}.com/{username}{parsed_site.path}"
@@ -398,8 +401,87 @@ with open("static/index.html", "r", encoding="utf-8") as f_in:
         js=site_js,
         publish_site=publish_site,
         elapsed=humanize.naturaldelta(elapsed_time, minimum_unit="seconds"),
+        catalog=catalog_path,
         source_link=f'<a href="{source_url}">Source</a>.',
     )
     index_html_file = os.path.join(publish_folder, "index.html")
     with open(index_html_file, "w", encoding="utf-8") as f:
         f.write(html_output)
+
+
+# Generate minimal OPDS
+main_doc = minidom.Document()
+main_feed = init_feed(main_doc, publish_site, "kindle-newsrack", "Kindle News Rack")
+
+for category, publications in sorted(generated.items(), key=sort_category_key):
+    generated_items = [(k, v) for k, v in publications.items() if v]
+    publication_listing = []
+    for recipe_name, books in sorted(
+        generated_items, key=lambda item: item[1][0].published_dt, reverse=True
+    ):
+        book_links = []
+        entry = main_doc.createElement("entry")
+        entry.appendChild(simple_tag(main_doc, "id", recipe_name))
+        entry.appendChild(
+            simple_tag(
+                main_doc,
+                "title",
+                f"{books[0].title or recipe_name}",
+            )
+        )
+        entry.appendChild(
+            simple_tag(
+                main_doc,
+                "summary",
+                books[0].title or recipe_name,
+            )
+        )
+        entry.appendChild(
+            simple_tag(
+                main_doc,
+                "content",
+                f"{books[0].title or recipe_name} published at {books[0].published_dt:%Y-%m-%d %H:%M%p}.",
+                attributes={"type": "text/html"},
+            )
+        )
+        entry.appendChild(
+            simple_tag(
+                main_doc,
+                "updated",
+                f"{books[0].published_dt:%Y-%m-%dT%H:%M:%SZ}",
+            )
+        )
+        entry.appendChild(
+            simple_tag(
+                main_doc,
+                "category",
+                attributes={"label": category.title()},
+            )
+        )
+        author_tag = simple_tag(main_doc, "author")
+        author_tag.appendChild(simple_tag(main_doc, "name", category.title()))
+        entry.appendChild(author_tag)
+
+        for book in books:
+            book_ext = os.path.splitext(book.file)[1]
+            link_type = (
+                extension_contenttype_map.get(book_ext) or "application/octet-stream"
+            )
+
+            entry.appendChild(
+                simple_tag(
+                    main_doc,
+                    "link",
+                    attributes={
+                        "rel": "http://opds-spec.org/acquisition",
+                        "type": link_type,
+                        "href": f"{os.path.basename(book.rename_to)}",
+                    },
+                )
+            )
+
+        main_feed.appendChild(entry)
+
+opds_xml_path = os.path.join(publish_folder, catalog_path)
+with open(opds_xml_path, "wb") as f:
+    f.write(main_doc.toprettyxml(encoding="utf-8", indent=""))
