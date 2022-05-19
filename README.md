@@ -31,6 +31,7 @@ In alphabetical order:
 7. [Scientific American](https://www.scientificamerican.com/)
 8. [The Third Pole](https://www.thethirdpole.net/)
 9. [Vox](https://www.vox.com/)
+10. [Wired](https://www.wired.com/magazine/)
 
 ### Books
 1. [Asian Review of Books](https://asianreviewofbooks.com)

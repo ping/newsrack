@@ -299,4 +299,13 @@ recipes = [
         timeout=600,
         category="news",
     ),
+    Recipe(
+        recipe="wired",
+        name="Wired",
+        slug="wired",
+        src_ext="mobi",
+        timeout=default_recipe_timeout,
+        overwrite_cover=True,
+        category="magazines",
+    ),
 ]
