@@ -1,8 +1,8 @@
 {
 "Asian Review of Books": [
 {
-"filename": "arb-2022-05-17.mobi",
-"published": 1652830428.0
+"filename": "arb-2022-05-19.mobi",
+"published": 1652926933.0
 }
 ],
 "The Atlantic": [
@@ -19,14 +19,14 @@
 ],
 "ChannelNewsAsia": [
 {
-"filename": "channelnewsasia-2022-05-18.mobi",
-"published": 1652914140.0
+"filename": "channelnewsasia-2022-05-19.mobi",
+"published": 1652931480.0
 }
 ],
 "The Diplomat": [
 {
-"filename": "the-diplomat-2022-05-18.mobi",
-"published": 1652893975.0
+"filename": "the-diplomat-2022-05-19.mobi",
+"published": 1652932139.0
 }
 ],
 "The Economist": [
@@ -37,8 +37,8 @@
 ],
 "Financial Times": [
 {
-"filename": "ft-2022-05-18.mobi",
-"published": 1652914808.0
+"filename": "ft-2022-05-19.mobi",
+"published": 1652929228.0
 }
 ],
 "Five Books": [
@@ -49,32 +49,38 @@
 ],
 "The Guardian": [
 {
-"filename": "guardian-2022-05-18.mobi",
-"published": 1652914343.0
+"filename": "guardian-2022-05-19.mobi",
+"published": 1652930747.0
 }
 ],
 "Japan Times": [
 {
-"filename": "japan-times-2022-05-18.mobi",
-"published": 1652876769.0
+"filename": "japan-times-2022-05-19.mobi",
+"published": 1652928749.0
 }
 ],
 "Joongang Daily": [
 {
-"filename": "joongang-daily-2022-05-18.mobi",
-"published": 1652886000.0
+"filename": "joongang-daily-2022-05-19.mobi",
+"published": 1652931580.0
 }
 ],
 "Korea Herald": [
 {
-"filename": "korea-herald-2022-05-18.mobi",
-"published": 1652905858.0
+"filename": "korea-herald-2022-05-19.mobi",
+"published": 1652928259.0
 }
 ],
 "London Review of Books": [
 {
 "filename": "lrb-2022-05-18.mobi",
 "published": 1652882605.0
+}
+],
+"Nature": [
+{
+"filename": "nature-2022-05-18.mobi",
+"published": 1652832000.0
 }
 ],
 "The New Yorker": [
@@ -85,8 +91,8 @@
 ],
 "NY Times Global": [
 {
-"filename": "nytimes-global-2022-05-18.mobi",
-"published": 1652914997.0
+"filename": "nytimes-global-2022-05-19.mobi",
+"published": 1652931316.0
 }
 ],
 "New York Times Books": [
@@ -109,8 +115,8 @@
 ],
 "South China Morning Post": [
 {
-"filename": "scmp-2022-05-18.mobi",
-"published": 1652913010.0
+"filename": "scmp-2022-05-19.mobi",
+"published": 1652929331.0
 }
 ],
 "The Third Pole": [
@@ -127,9 +133,9 @@
 ],
 "The Washington Post": [
 {
-"filename": "wapo-2022-05-18.mobi",
-"published": 1652914966.0
+"filename": "wapo-2022-05-19.mobi",
+"published": 1652931571.0
 }
 ],
-"_generated": 1652915718
+"_generated": 1652933112
 }
