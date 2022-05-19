@@ -25,11 +25,12 @@ In alphabetical order:
 1. [The Atlantic](https://www.theatlantic.com/)
 2. [The Atlantic Magazine](https://www.theatlantic.com/magazine/)
 3. [The Diplomat](https://thediplomat.com/)
-4. [The New Yorker](https://www.newyorker.com/)
-5. [Politico](https://www.politico.com/)
-6. [Scientific American](https://www.scientificamerican.com/)
-7. [The Third Pole](https://www.thethirdpole.net/)
-8. [Vox](https://www.vox.com/)
+4. [Nature](https://www.nature.com/nature/current-issue/)
+5. [The New Yorker](https://www.newyorker.com/)
+6. [Politico](https://www.politico.com/)
+7. [Scientific American](https://www.scientificamerican.com/)
+8. [The Third Pole](https://www.thethirdpole.net/)
+9. [Vox](https://www.vox.com/)
 
 ### Books
 1. [Asian Review of Books](https://asianreviewofbooks.com)

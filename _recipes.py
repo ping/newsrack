@@ -220,6 +220,15 @@ recipes = [
         enable_on=onlyon_weekdays([0, 1, 2, 3, 4]),
     ),
     Recipe(
+        recipe="nature",
+        name="Nature",
+        slug="nature",
+        src_ext="mobi",
+        category="magazines",
+        overwrite_cover=False,
+        enable_on=onlyon_weekdays([2, 3, 4], 0),
+    ),
+    Recipe(
         recipe="newyorker",
         name="The New Yorker",
         slug="newyorker",
