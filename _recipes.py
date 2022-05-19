@@ -301,7 +301,7 @@ recipes = [
     ),
     Recipe(
         recipe="wired",
-        name="Wired",
+        name="Wired Magazine",
         slug="wired",
         src_ext="mobi",
         timeout=default_recipe_timeout,

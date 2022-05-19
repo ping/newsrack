@@ -84,7 +84,7 @@ class WiredDailyNews(BasicNewsRecipe):
         post_date = datetime.strptime(pub_date_meta["content"], "%Y-%m-%dT%H:%M:%S.%fZ")
         if not self.pub_date or post_date > self.pub_date:
             self.pub_date = post_date
-            self.title = f"Wired: {post_date:%-d %b, %Y}"
+            self.title = f"Wired Magazine: {post_date:%-d %b, %Y}"
 
         authors = [b.text for b in soup.find_all(attrs={"class": "byline__name-link"})]
         category = soup.find(attrs={"class": "rubric"}).text
@@ -130,6 +130,10 @@ class WiredDailyNews(BasicNewsRecipe):
                 title = self.tag_to_string(a.parent.find("h3"))
                 dateloc = a.parent.find("time")
                 date = self.tag_to_string(dateloc)
+                description = None
+                summary = a.parent.find(attrs={"class": "summary-item__dek"})
+                if summary:
+                    description = self.tag_to_string(summary)
                 if title.lower() != "read more" and title and url not in seen:
                     seen.add(url)
                     self.log("Found article:", title)
@@ -137,6 +141,7 @@ class WiredDailyNews(BasicNewsRecipe):
                         "title": title,
                         "date": date,
                         "url": baseurl + url,
+                        "description": description,
                     }
 
     def parse_index(self):
