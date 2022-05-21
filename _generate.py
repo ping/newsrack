@@ -206,6 +206,7 @@ for recipe in recipes:
                                     "wb",
                                 ) as f:
                                     shutil.copyfileobj(ebook_res.raw, f)
+                                job_status = ":inbox_tray: Cached"
                                 break
                             except requests.exceptions.ReadTimeout as err:
                                 if attempt < max_retry_attempts:
