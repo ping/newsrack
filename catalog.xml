@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack</title>
-<updated>2022-05-21T11:13:42Z</updated>
+<updated>2022-05-21T15:13:02Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -11,8 +11,8 @@
 <id>The Washington Post</id>
 <title>Washington Post: 21 May, 2022</title>
 <summary>Washington Post: 21 May, 2022</summary>
-<content type="text/html">Washington Post: 21 May, 2022 published at 2022-05-21 11:03AM.</content>
-<updated>2022-05-21T11:03:36Z</updated>
+<content type="text/html">Washington Post: 21 May, 2022 published at 2022-05-21 15:04PM.</content>
+<updated>2022-05-21T15:04:17Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
@@ -23,8 +23,8 @@
 <id>NY Times Global</id>
 <title>NY Times: 21 May, 2022</title>
 <summary>NY Times: 21 May, 2022</summary>
-<content type="text/html">NY Times: 21 May, 2022 published at 2022-05-21 11:00AM.</content>
-<updated>2022-05-21T11:00:08Z</updated>
+<content type="text/html">NY Times: 21 May, 2022 published at 2022-05-21 15:03PM.</content>
+<updated>2022-05-21T15:03:43Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
@@ -35,8 +35,8 @@
 <id>The Guardian</id>
 <title>Guardian: 21 May, 2022</title>
 <summary>Guardian: 21 May, 2022</summary>
-<content type="text/html">Guardian: 21 May, 2022 published at 2022-05-21 10:57AM.</content>
-<updated>2022-05-21T10:57:18Z</updated>
+<content type="text/html">Guardian: 21 May, 2022 published at 2022-05-21 14:53PM.</content>
+<updated>2022-05-21T14:53:31Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
@@ -47,8 +47,8 @@
 <id>ChannelNewsAsia</id>
 <title>ChannelNewsAsia: 21 May, 2022</title>
 <summary>ChannelNewsAsia: 21 May, 2022</summary>
-<content type="text/html">ChannelNewsAsia: 21 May, 2022 published at 2022-05-21 10:49AM.</content>
-<updated>2022-05-21T10:49:04Z</updated>
+<content type="text/html">ChannelNewsAsia: 21 May, 2022 published at 2022-05-21 14:43PM.</content>
+<updated>2022-05-21T14:43:00Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
@@ -56,23 +56,11 @@
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="channelnewsasia-2022-05-21.mobi"/>
 </entry>
 <entry>
-<id>Japan Times</id>
-<title>Japan Times: 21 May, 2022</title>
-<summary>Japan Times: 21 May, 2022</summary>
-<content type="text/html">Japan Times: 21 May, 2022 published at 2022-05-21 10:36AM.</content>
-<updated>2022-05-21T10:36:45Z</updated>
-<category label="News"/>
-<author>
-<name>News</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="japan-times-2022-05-21.mobi"/>
-</entry>
-<entry>
 <id>South China Morning Post</id>
 <title>South China Morning Post: 21 May, 2022</title>
 <summary>South China Morning Post: 21 May, 2022</summary>
-<content type="text/html">South China Morning Post: 21 May, 2022 published at 2022-05-21 10:12AM.</content>
-<updated>2022-05-21T10:12:52Z</updated>
+<content type="text/html">South China Morning Post: 21 May, 2022 published at 2022-05-21 14:35PM.</content>
+<updated>2022-05-21T14:35:18Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
@@ -83,8 +71,8 @@
 <id>Financial Times</id>
 <title>Financial Times: 21 May, 2022</title>
 <summary>Financial Times: 21 May, 2022</summary>
-<content type="text/html">Financial Times: 21 May, 2022 published at 2022-05-21 10:00AM.</content>
-<updated>2022-05-21T10:00:16Z</updated>
+<content type="text/html">Financial Times: 21 May, 2022 published at 2022-05-21 13:23PM.</content>
+<updated>2022-05-21T13:23:13Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
@@ -92,11 +80,23 @@
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="ft-2022-05-21.mobi"/>
 </entry>
 <entry>
+<id>Japan Times</id>
+<title>Japan Times: 21 May, 2022</title>
+<summary>Japan Times: 21 May, 2022</summary>
+<content type="text/html">Japan Times: 21 May, 2022 published at 2022-05-21 13:20PM.</content>
+<updated>2022-05-21T13:20:31Z</updated>
+<category label="News"/>
+<author>
+<name>News</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="japan-times-2022-05-21.mobi"/>
+</entry>
+<entry>
 <id>Korea Herald</id>
 <title>Korea Herald: 21 May, 2022</title>
 <summary>Korea Herald: 21 May, 2022</summary>
-<content type="text/html">Korea Herald: 21 May, 2022 published at 2022-05-21 09:40AM.</content>
-<updated>2022-05-21T09:40:31Z</updated>
+<content type="text/html">Korea Herald: 21 May, 2022 published at 2022-05-21 12:09PM.</content>
+<updated>2022-05-21T12:09:01Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
@@ -107,13 +107,37 @@
 <id>Joongang Daily</id>
 <title>JoongAng Daily: 21 May, 2022</title>
 <summary>JoongAng Daily: 21 May, 2022</summary>
-<content type="text/html">JoongAng Daily: 21 May, 2022 published at 2022-05-21 03:36AM.</content>
-<updated>2022-05-21T03:36:05Z</updated>
+<content type="text/html">JoongAng Daily: 21 May, 2022 published at 2022-05-21 11:33AM.</content>
+<updated>2022-05-21T11:33:14Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="joongang-daily-2022-05-21.mobi"/>
+</entry>
+<entry>
+<id>Vox</id>
+<title>Vox: 21 May, 2022</title>
+<summary>Vox: 21 May, 2022</summary>
+<content type="text/html">Vox: 21 May, 2022 published at 2022-05-21 12:00PM.</content>
+<updated>2022-05-21T12:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-05-21.mobi"/>
+</entry>
+<entry>
+<id>The Atlantic</id>
+<title>The Atlantic: 21 May, 2022</title>
+<summary>The Atlantic: 21 May, 2022</summary>
+<content type="text/html">The Atlantic: 21 May, 2022 published at 2022-05-21 11:00AM.</content>
+<updated>2022-05-21T11:00:56Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-05-21.mobi"/>
 </entry>
 <entry>
 <id>POLITICO Magazine</id>
@@ -126,30 +150,6 @@
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-05-21.mobi"/>
-</entry>
-<entry>
-<id>Vox</id>
-<title>Vox: 21 May, 2022</title>
-<summary>Vox: 21 May, 2022</summary>
-<content type="text/html">Vox: 21 May, 2022 published at 2022-05-21 11:00AM.</content>
-<updated>2022-05-21T11:00:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-05-21.mobi"/>
-</entry>
-<entry>
-<id>The Atlantic</id>
-<title>The Atlantic: 21 May, 2022</title>
-<summary>The Atlantic: 21 May, 2022</summary>
-<content type="text/html">The Atlantic: 21 May, 2022 published at 2022-05-21 10:01AM.</content>
-<updated>2022-05-21T10:01:57Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-05-21.mobi"/>
 </entry>
 <entry>
 <id>The Economist</id>
