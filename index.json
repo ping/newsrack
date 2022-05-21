@@ -20,7 +20,7 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-05-21.mobi",
-"published": 1653099384.0
+"published": 1653099912.0
 }
 ],
 "The Diplomat": [
@@ -50,13 +50,13 @@
 "The Guardian": [
 {
 "filename": "guardian-2022-05-21.mobi",
-"published": 1653098991.0
+"published": 1653100518.0
 }
 ],
 "Japan Times": [
 {
 "filename": "japan-times-2022-05-21.mobi",
-"published": 1653098299.0
+"published": 1653099369.0
 }
 ],
 "Joongang Daily": [
@@ -92,7 +92,7 @@
 "NY Times Global": [
 {
 "filename": "nytimes-global-2022-05-21.mobi",
-"published": 1653099043.0
+"published": 1653100819.0
 }
 ],
 "New York Times Books": [
@@ -143,5 +143,5 @@
 "published": 1652349600.0
 }
 ],
-"_generated": 1653100585
+"_generated": 1653101860
 }
