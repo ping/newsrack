@@ -120,11 +120,25 @@ index = {}  # generate index.json
 cached = fetch_cache()
 cache_sess = requests.Session()
 
+# for github
+job_summary = """| Recipe | Status | Duration |
+| ------ | ------ | -------- |
+"""
+
+
+def _add_recipe_summary(rec, status, duration=None):
+    if duration:
+        duration = humanize.precisedelta(duration)
+    return f"| {rec.name} | {status} | {duration or 0} |\n"
+
+
 for recipe in recipes:
     recipe.job_log = job_log
+    job_status = ""
 
     if recipe.slug in skip_recipes_slugs:
         logger.info(f'[!] SKIPPED recipe: "{recipe.slug}"')
+        job_summary += _add_recipe_summary(recipe, ":arrow_right_hook: Skipped")
         continue
 
     logger.info(f'{"-" * 20} Executing "{recipe.name}" recipe... {"-" * 30}')
@@ -172,6 +186,7 @@ for recipe in recipes:
                 # use cache
                 logger.warning(f'Using cached copy for "{recipe.name}".')
                 if cached.get(recipe.name):
+                    abort_recipe = False
                     for cached_item in cached[recipe.name]:
                         _, ext = os.path.splitext(cached_item["filename"])
                         if ext != f".{recipe.src_ext}":
@@ -198,7 +213,20 @@ for recipe in recipes:
                                     timeout += 30
                                     time.sleep(2)
                                     continue
-                                raise
+                                logger.error(f"[!] ReadTimeout for {ebook_url}")
+                                abort_recipe = True
+
+                    if abort_recipe:
+                        recipe_elapsed_time = timedelta(
+                            seconds=timer() - recipe_start_time
+                        )
+                        logger.info(
+                            f'{"=" * 10} "{recipe.name}" recipe took {humanize.precisedelta(recipe_elapsed_time)} {"=" * 20}'
+                        )
+                        job_summary += _add_recipe_summary(
+                            recipe, ":x: Cache Timeout", recipe_elapsed_time
+                        )
+                        continue
                 else:
                     # not cached, so run it anyway to ensure that we try to have a copy
                     logger.warning(f'"{recipe.name}" is not cached.')
@@ -216,7 +244,12 @@ for recipe in recipes:
             logger.info(
                 f'{"=" * 10} "{recipe.name}" recipe took {humanize.precisedelta(recipe_elapsed_time)} {"=" * 20}'
             )
+            job_summary += _add_recipe_summary(
+                recipe, ":x: Convert Timeout", recipe_elapsed_time
+            )
             continue
+    else:
+        job_status = ":file_folder: Local cache"
 
     source_file_paths = sorted(
         glob.glob(publish_folder + f"/{recipe.slug}*.{recipe.src_ext}")
@@ -229,6 +262,7 @@ for recipe in recipes:
         logger.info(
             f'{"=" * 20} "{recipe.name}" recipe took {humanize.precisedelta(recipe_elapsed_time)} {"=" * 20}'
         )
+        job_summary += _add_recipe_summary(recipe, ":x: No output", recipe_elapsed_time)
         continue
 
     source_file_path = source_file_paths[-1]
@@ -338,6 +372,11 @@ for recipe in recipes:
         recipe_elapsed_time = timedelta(seconds=timer() - recipe_start_time)
         logger.info(
             f'{"=" * 20} "{recipe.name}" recipe took {humanize.precisedelta(recipe_elapsed_time)} {"=" * 20}'
+        )
+        job_summary += _add_recipe_summary(
+            recipe,
+            job_status or ":white_check_mark: Completed",
+            recipe_elapsed_time,
         )
 
 listing = ""
@@ -485,3 +524,6 @@ for category, publications in sorted(generated.items(), key=sort_category_key):
 opds_xml_path = os.path.join(publish_folder, catalog_path)
 with open(opds_xml_path, "wb") as f:
     f.write(main_doc.toprettyxml(encoding="utf-8", indent=""))
+
+with open("job_summary.md", "w", encoding="utf-8") as f:
+    f.write(job_summary)
