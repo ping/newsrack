@@ -144,7 +144,6 @@ class NewYorker(BasicNewsRecipe):
             article.utctime = pub_date_utc
             if not self.pub_date or pub_date_utc > self.pub_date:
                 self.pub_date = pub_date_utc
-                self.title = f"New Yorker: {pub_date:%-d %b, %Y}"
 
         mod_ele = soup.find(attrs={"datemodified": True})
         if mod_ele:
@@ -182,6 +181,9 @@ class NewYorker(BasicNewsRecipe):
         # Get content
 
         soup = self.index_to_soup("https://www.newyorker.com/magazine?intcid=magazine")
+        header_title = soup.select_one("header h2")
+        if header_title:
+            self.title = f"New Yorker: {self.tag_to_string(header_title)}"
 
         stories = OrderedDict()  # So we can list sections in order
 
