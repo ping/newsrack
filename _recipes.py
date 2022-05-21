@@ -165,7 +165,7 @@ recipes = [
         slug="economist",
         src_ext="mobi",
         overwrite_cover=False,
-        category="news",
+        category="magazines",
         timeout=240,
     ),
     Recipe(

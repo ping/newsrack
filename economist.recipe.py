@@ -203,6 +203,7 @@ class Economist(BasicNewsRecipe):
     masthead_url = "https://www.economist.com/assets/the-economist-logo.png"
     scale_news_images = (800, 800)
     scale_news_images_to_device = False  # force img to be resized to scale_news_images
+    timefmt = ""
     pub_date = None
 
     needs_subscription = False
@@ -292,7 +293,7 @@ class Economist(BasicNewsRecipe):
             ).replace(tzinfo=timezone.utc)
             if not self.pub_date or date_published > self.pub_date:
                 self.pub_date = date_published
-                self.title = f"Economist: {date_published:%-d %b, %Y}"
+                # self.title = f"Economist: {date_published:%-d %b, %Y}"
 
     def publication_date(self):
         # if edition_date:
@@ -303,7 +304,7 @@ class Economist(BasicNewsRecipe):
     def parse_index(self):
         if edition_date:
             url = "https://www.economist.com/weeklyedition/" + edition_date
-            self.timefmt = " [" + edition_date + "]"
+            # self.timefmt = " [" + edition_date + "]"
         else:
             url = "https://www.economist.com/printedition"
         raw = self.index_to_soup(url, raw=True)
