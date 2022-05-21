@@ -148,6 +148,7 @@ recipes = [
         name="ChannelNewsAsia",
         slug="channelnewsasia",
         src_ext="mobi",
+        timeout=180,
         category="news",
     ),
     Recipe(
@@ -242,6 +243,7 @@ recipes = [
         name="NY Times Global",
         slug="nytimes-global",
         src_ext="mobi",
+        timeout=180,
         category="news",
     ),
     Recipe(
@@ -304,7 +306,7 @@ recipes = [
         name="Wired Magazine",
         slug="wired",
         src_ext="mobi",
-        timeout=default_recipe_timeout,
+        timeout=180,
         overwrite_cover=True,
         category="magazines",
     ),
