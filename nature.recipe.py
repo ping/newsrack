@@ -1,5 +1,6 @@
 # Original at https://github.com/kovidgoyal/calibre/blob/29cd8d64ea71595da8afdaec9b44e7100bff829a/recipes/nature.recipe
 
+import re
 from collections import defaultdict
 from datetime import datetime, timezone
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -86,7 +87,7 @@ class Nature(BasicNewsRecipe):
             article.utctime = pub_date_utc
             if not self.pub_date or pub_date_utc > self.pub_date:
                 self.pub_date = pub_date_utc
-                self.title = f"Nature: {pub_date_utc:%-d %b, %Y}"
+                # self.title = f"Nature: {pub_date_utc:%-d %b, %Y}"
 
     def preprocess_html(self, soup):
         if soup.find(name="h2", id="access-options"):
@@ -142,6 +143,18 @@ class Nature(BasicNewsRecipe):
             failed, img src might have changed, use default width 200
             """
             pass
+
+        title_div = soup.find(attrs={"data-container-type": "title"})
+        if title_div:
+            mobj = re.search(
+                r"Volume \d+ Issue \d+, (?P<issue_date>\d+ [a-z]+ \d{4})",
+                self.tag_to_string(title_div),
+                re.IGNORECASE,
+            )
+            if mobj:
+                issue_date = datetime.strptime(mobj.group("issue_date"), "%d %B %Y")
+                self.title = f"Nature: {issue_date:%-d %b, %Y}"
+
         section_tags = soup.find(
             "div", {"data-container-type": check_words("issue-section-list")}
         )
