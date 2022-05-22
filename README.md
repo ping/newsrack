@@ -30,8 +30,9 @@ In alphabetical order:
 7. [Politico](https://www.politico.com/)
 8. [Scientific American](https://www.scientificamerican.com/)
 9. [The Third Pole](https://www.thethirdpole.net/)
-10. [Vox](https://www.vox.com/)
-11. [Wired](https://www.wired.com/magazine/)
+10. [Time Magazine](https://time.com/magazine/)
+11. [Vox](https://www.vox.com/)
+12. [Wired](https://www.wired.com/magazine/)
 
 ### Books
 1. [Asian Review of Books](https://asianreviewofbooks.com)

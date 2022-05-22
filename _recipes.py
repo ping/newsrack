@@ -287,6 +287,15 @@ recipes = [
         enable_on=onlyat_hours(list(range(5, 20)), 5.5),
     ),
     Recipe(
+        recipe="time-magazine",
+        name="Time",
+        slug="time-magazine",
+        src_ext="mobi",
+        overwrite_cover=False,
+        category="magazines",
+        enable_on=onlyon_weekdays([3, 4, 5, 6], -4),
+    ),
+    Recipe(
         recipe="vox",
         name="Vox",
         slug="vox",
