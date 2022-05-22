@@ -2,41 +2,17 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack</title>
-<updated>2022-05-22T01:28:47Z</updated>
+<updated>2022-05-22T03:43:03Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
-<id>The Washington Post</id>
-<title>Washington Post: 22 May, 2022</title>
-<summary>Washington Post: 22 May, 2022</summary>
-<content type="text/html">Washington Post: 22 May, 2022 published at 2022-05-22 01:16AM.</content>
-<updated>2022-05-22T01:16:23Z</updated>
-<category label="News"/>
-<author>
-<name>News</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="wapo-2022-05-22.mobi"/>
-</entry>
-<entry>
-<id>Japan Times</id>
-<title>Japan Times: 22 May, 2022</title>
-<summary>Japan Times: 22 May, 2022</summary>
-<content type="text/html">Japan Times: 22 May, 2022 published at 2022-05-22 01:13AM.</content>
-<updated>2022-05-22T01:13:07Z</updated>
-<category label="News"/>
-<author>
-<name>News</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="japan-times-2022-05-22.mobi"/>
-</entry>
-<entry>
 <id>NY Times Global</id>
 <title>NY Times: 22 May, 2022</title>
 <summary>NY Times: 22 May, 2022</summary>
-<content type="text/html">NY Times: 22 May, 2022 published at 2022-05-22 01:08AM.</content>
-<updated>2022-05-22T01:08:42Z</updated>
+<content type="text/html">NY Times: 22 May, 2022 published at 2022-05-22 03:22AM.</content>
+<updated>2022-05-22T03:22:47Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
@@ -44,11 +20,35 @@
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-global-2022-05-22.mobi"/>
 </entry>
 <entry>
+<id>ChannelNewsAsia</id>
+<title>ChannelNewsAsia: 22 May, 2022</title>
+<summary>ChannelNewsAsia: 22 May, 2022</summary>
+<content type="text/html">ChannelNewsAsia: 22 May, 2022 published at 2022-05-22 03:20AM.</content>
+<updated>2022-05-22T03:20:00Z</updated>
+<category label="News"/>
+<author>
+<name>News</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="channelnewsasia-2022-05-22.mobi"/>
+</entry>
+<entry>
+<id>Japan Times</id>
+<title>Japan Times: 22 May, 2022</title>
+<summary>Japan Times: 22 May, 2022</summary>
+<content type="text/html">Japan Times: 22 May, 2022 published at 2022-05-22 03:15AM.</content>
+<updated>2022-05-22T03:15:10Z</updated>
+<category label="News"/>
+<author>
+<name>News</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="japan-times-2022-05-22.mobi"/>
+</entry>
+<entry>
 <id>South China Morning Post</id>
 <title>South China Morning Post: 22 May, 2022</title>
 <summary>South China Morning Post: 22 May, 2022</summary>
-<content type="text/html">South China Morning Post: 22 May, 2022 published at 2022-05-22 01:00AM.</content>
-<updated>2022-05-22T01:00:27Z</updated>
+<content type="text/html">South China Morning Post: 22 May, 2022 published at 2022-05-22 02:39AM.</content>
+<updated>2022-05-22T02:39:41Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
@@ -56,11 +56,23 @@
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="scmp-2022-05-22.mobi"/>
 </entry>
 <entry>
+<id>The Washington Post</id>
+<title>Washington Post: 22 May, 2022</title>
+<summary>Washington Post: 22 May, 2022</summary>
+<content type="text/html">Washington Post: 22 May, 2022 published at 2022-05-22 02:10AM.</content>
+<updated>2022-05-22T02:10:07Z</updated>
+<category label="News"/>
+<author>
+<name>News</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="wapo-2022-05-22.mobi"/>
+</entry>
+<entry>
 <id>Korea Herald</id>
 <title>Korea Herald: 22 May, 2022</title>
 <summary>Korea Herald: 22 May, 2022</summary>
-<content type="text/html">Korea Herald: 22 May, 2022 published at 2022-05-22 00:48AM.</content>
-<updated>2022-05-22T00:48:21Z</updated>
+<content type="text/html">Korea Herald: 22 May, 2022 published at 2022-05-22 01:51AM.</content>
+<updated>2022-05-22T01:51:23Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
@@ -68,16 +80,16 @@
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="korea-herald-2022-05-22.mobi"/>
 </entry>
 <entry>
-<id>ChannelNewsAsia</id>
-<title>ChannelNewsAsia: 22 May, 2022</title>
-<summary>ChannelNewsAsia: 22 May, 2022</summary>
-<content type="text/html">ChannelNewsAsia: 22 May, 2022 published at 2022-05-22 00:46AM.</content>
-<updated>2022-05-22T00:46:10Z</updated>
+<id>The Guardian</id>
+<title>Guardian: 22 May, 2022</title>
+<summary>Guardian: 22 May, 2022</summary>
+<content type="text/html">Guardian: 22 May, 2022 published at 2022-05-22 01:44AM.</content>
+<updated>2022-05-22T01:44:07Z</updated>
 <category label="News"/>
 <author>
 <name>News</name>
 </author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="channelnewsasia-2022-05-22.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="guardian-2022-05-22.mobi"/>
 </entry>
 <entry>
 <id>Financial Times</id>
@@ -90,18 +102,6 @@
 <name>News</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="ft-2022-05-22.mobi"/>
-</entry>
-<entry>
-<id>The Guardian</id>
-<title>Guardian: 21 May, 2022</title>
-<summary>Guardian: 21 May, 2022</summary>
-<content type="text/html">Guardian: 21 May, 2022 published at 2022-05-21 23:52PM.</content>
-<updated>2022-05-21T23:52:57Z</updated>
-<category label="News"/>
-<author>
-<name>News</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="guardian-2022-05-21.mobi"/>
 </entry>
 <entry>
 <id>Joongang Daily</id>
