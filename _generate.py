@@ -56,7 +56,8 @@ source_url = f"https://{domain}.com/{username}{parsed_site.path}"
 
 
 RecipeOutput = namedtuple(
-    "RecipeOutput", ["title", "file", "rename_to", "published_dt", "category"]
+    "RecipeOutput",
+    ["title", "file", "rename_to", "published_dt", "category", "description"],
 )
 
 # default style
@@ -289,6 +290,21 @@ for recipe in recipes:
         if mobj:
             title = mobj.group("title")
         rename_file_name = f"{recipe.slug}-{pub_date:%Y-%m-%d}.{recipe.src_ext}"
+
+        comments = ""
+        mobj = re.search(r"Comments\s+:\s(?P<comments>.+)", meta_out, re.DOTALL)
+        if mobj:
+            try:
+                comments = [
+                    c.strip() for c in mobj.group("comments").split("\n") if c.strip()
+                ]
+                comments = f"""{comments[0]}
+                <ul><li>{"</li><li>".join(comments[1:-1])}</li></ul>
+                {comments[-1]}
+                """
+            except:  # noqa
+                pass
+
         generated[recipe.category][recipe.name].append(
             RecipeOutput(
                 title=title,
@@ -296,6 +312,7 @@ for recipe in recipes:
                 rename_to=rename_file_name,
                 published_dt=pub_date,
                 category=recipe.category,
+                description=comments,
             )
         )
 
@@ -361,6 +378,7 @@ for recipe in recipes:
                         rename_to=f"{recipe.slug}-{pub_date:%Y-%m-%d}.{ext}",
                         published_dt=pub_date,
                         category=recipe.category,
+                        description=comments,
                     )
                 )
                 index[recipe.name].append(
@@ -473,14 +491,14 @@ for category, publications in sorted(generated.items(), key=sort_category_key):
             simple_tag(
                 main_doc,
                 "summary",
-                books[0].title or recipe_name,
+                f"{books[0].title or recipe_name} published at {books[0].published_dt:%Y-%m-%d %H:%M%p}.",
             )
         )
         entry.appendChild(
             simple_tag(
                 main_doc,
                 "content",
-                f"{books[0].title or recipe_name} published at {books[0].published_dt:%Y-%m-%d %H:%M%p}.",
+                f"{books[0].description or recipe_name}",
                 attributes={"type": "text/html"},
             )
         )
