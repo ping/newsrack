@@ -1,16 +1,16 @@
-(function() {
+(function () {
     // in miliseconds
     var units = {
-      year  : 24 * 60 * 60 * 1000 * 365,
-      month : 24 * 60 * 60 * 1000 * 365/12,
-      day   : 24 * 60 * 60 * 1000,
-      hour  : 60 * 60 * 1000,
-      minute: 60 * 1000,
-      second: 1000
+        year: 24 * 60 * 60 * 1000 * 365,
+        month: 24 * 60 * 60 * 1000 * 365 / 12,
+        day: 24 * 60 * 60 * 1000,
+        hour: 60 * 60 * 1000,
+        minute: 60 * 1000,
+        second: 1000
     };
 
     var rtf = null;
-    if (typeof(Intl) !== "undefined") {
+    if (typeof (Intl) !== "undefined") {
         rtf = new Intl.RelativeTimeFormat("en", {numeric: "auto"});
     }
 
@@ -21,7 +21,7 @@
         for (var u in units) {
             if (Math.abs(elapsed) > units[u] || u === "second") {
                 var diff = Math.round(elapsed / units[u]);
-                if (typeof(Intl) !== "undefined") {
+                if (typeof (Intl) !== "undefined") {
                     return rtf.format(diff, u);
                 }
                 // manually construct format
@@ -50,15 +50,25 @@
         pubDateEle.title = publishedDate.toLocaleString();
         pubDateEle.innerHTML = "Published " + getRelativeTime(publishedDate);
 
-        pubDateEle.addEventListener("pointerenter", function( event ) {
+        pubDateEle.addEventListener("pointerenter", function (event) {
             var publishedDate = new Date(parseInt(event.target.attributes["data-pub-date"].value));
             event.target.innerHTML = "Published " + publishedDate.toLocaleString();
         }, false);
 
-        pubDateEle.addEventListener("pointerleave", function( event ) {
+        pubDateEle.addEventListener("pointerleave", function (event) {
             var publishedDate = new Date(parseInt(event.target.attributes["data-pub-date"].value));
             event.target.innerHTML = "Published " + getRelativeTime(publishedDate);
         }, false);
+    }
+
+    var accordionBtns = document.querySelectorAll(".pub-date");
+    for (var i = 0; i < accordionBtns.length; i++) {
+        var accordion = accordionBtns[i];
+        accordion.onclick = function () {
+            this.classList.toggle("is-open");
+            var content = this.nextElementSibling;
+            content.classList.toggle("hide");
+        };
     }
 
 })();

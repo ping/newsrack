@@ -42,6 +42,31 @@ h2.category {
             margin-top: 0.2rem;
             font-size: 0.8rem;
             color: #555555;
+
+            &:hover {
+                cursor: pointer;
+            }
+            &:before {
+                content: "+ ";
+                font-weight: bold;
+            }
+
+            &.is-open {
+                margin-bottom: 0.5rem;
+                &:before {
+                    content: "- ";
+                    font-weight: bold;
+                }
+            }
+        }
+        .contents {
+            margin-top: 0.5rem;
+            color: #222222;
+            font-size: 0.8rem;
+            ul {
+                margin: 0.4rem 0 0.4rem 0;
+                li { font-size: 0.8rem; margin-bottom: 0.2rem; }
+            }
         }
     }
 }
@@ -85,4 +110,8 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.hide {
+    display: none;
 }

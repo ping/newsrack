@@ -430,6 +430,7 @@ for category, publications in sorted(generated.items(), key=sort_category_key):
             <span class="pub-date" data-pub-date="{int(books[0].published_dt.timestamp() * 1000)}">
                 Published at {books[0].published_dt:%Y-%m-%d %-I:%M%p %z}
             </span>
+            <div class="contents hide">{books[0].description}</div>
             </li>"""
         )
     category_recipes = [r for r in recipes if r.category == category]
