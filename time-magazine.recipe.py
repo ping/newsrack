@@ -25,7 +25,7 @@ class TimeMagazine(BasicNewsRecipe):
     timefmt = ""  # suppress date output
     pub_date = None  # custom publication date
 
-    ctdir = None
+    temp_dir = None
 
     remove_attributes = ["style"]
     extra_css = """
@@ -95,6 +95,11 @@ class TimeMagazine(BasicNewsRecipe):
     def publication_date(self):
         return self.pub_date
 
+    def cleanup(self):
+        if self.temp_dir:
+            self.log("Deleting temp files...")
+            shutil.rmtree(self.temp_dir)
+
     def parse_index(self):
         br = self.get_browser()
         # Time also has WP endpoints, e.g. https://api.time.com/wp-json/ti-api/v1/posts
@@ -108,9 +113,9 @@ class TimeMagazine(BasicNewsRecipe):
         self.cover_url = issue.get("hero", {}).get("src", {}).get("large_2x")
         self.title = f'Time: {issue["title"]}'
         articles = []
-        self.ctdir = PersistentTemporaryDirectory()
+        self.temp_dir = PersistentTemporaryDirectory()
         for article in issue["articles"]:
-            with PersistentTemporaryFile(suffix=".json", dir=self.ctdir) as f:
+            with PersistentTemporaryFile(suffix=".json", dir=self.temp_dir) as f:
                 f.write(json.dumps(article).encode("utf-8"))
             description = article.get("excerpt") or ""
             section = article.get("section", {}).get("name", "")
@@ -124,8 +129,3 @@ class TimeMagazine(BasicNewsRecipe):
                 }
             )
         return [("Articles", articles)]
-
-    def cleanup(self):
-        if self.ctdir:
-            self.log("Deleting temp files...")
-            shutil.rmtree(self.ctdir)
