@@ -42,7 +42,11 @@ class TimeMagazine(BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         # formulate the api response into html
         article = json.loads(raw_html)
-        authors = [a["name"] for a in article.get("authors", [])]
+        try:
+            authors = [a["name"] for a in article.get("authors", [])]
+        except TypeError:
+            # sometimes authors = [[]]
+            authors = []
         date_published_loc = datetime.strptime(
             article["time"]["published"], "%Y-%m-%d %H:%M:%S"
         ).replace(tzinfo=timezone(timedelta(hours=-4)))
