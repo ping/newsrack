@@ -2,9 +2,11 @@ from datetime import datetime, timedelta, timezone
 import time
 from urllib.parse import urlencode
 import json
+import shutil
 
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
 
 
 class ThirdPole(BasicNewsRecipe):
@@ -29,6 +31,7 @@ class ThirdPole(BasicNewsRecipe):
     reverse_article_order = False
     timefmt = ""  # suppress date output
     pub_date = None  # custom publication date
+    temp_dir = None
 
     remove_tags = [
         dict(class_=["block--related-news"]),
@@ -141,10 +144,16 @@ class ThirdPole(BasicNewsRecipe):
     def publication_date(self):
         return self.pub_date
 
+    def cleanup(self):
+        if self.temp_dir:
+            self.log("Deleting temp files...")
+            shutil.rmtree(self.temp_dir)
+
     def parse_index(self):
         br = self.get_browser()
         per_page = 100
         articles = {}
+        self.temp_dir = PersistentTemporaryDirectory()
 
         for feed_name, feed_url in self.feeds:
             posts = []
@@ -200,17 +209,16 @@ class ThirdPole(BasicNewsRecipe):
                     section_name = f"{feed_name}: {post_date:%-d %B, %Y}"
                 if section_name not in articles:
                     articles[section_name] = []
-                params = {
-                    "rest_route": f'/wp/v2/posts/{p["id"]}',
-                    "_": int(time.time() * 1000),
-                }
-                endpoint = f"{feed_url}?{urlencode(params)}"
+
+                with PersistentTemporaryFile(suffix=".json", dir=self.temp_dir) as f:
+                    f.write(json.dumps(p).encode("utf-8"))
                 articles[section_name].append(
                     {
                         "title": p["title"]["rendered"] or "Untitled",
-                        "url": endpoint,
+                        "url": "file://" + f.name,
                         "date": f"{post_date:%-d %B, %Y}",
                         "description": p["excerpt"]["rendered"],
                     }
                 )
+
         return articles.items()
