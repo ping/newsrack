@@ -19,7 +19,7 @@ class NYTimesGlobal(BasicNewsRecipe):
     oldest_article = 1  # days
     max_articles_per_feed = 25
     use_embedded_content = False
-    timefmt = "%-d, %b %Y"
+    timefmt = ""
     pub_date = None  # custom publication date
 
     simultaneous_downloads = 1

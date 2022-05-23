@@ -27,6 +27,7 @@ class TimeMagazine(BasicNewsRecipe):
 
     ctdir = None
 
+    remove_attributes = ["style"]
     extra_css = """
     .issue { font-weight: bold; margin-bottom: 0.2rem; }
     .headline { font-size: 1.8rem; margin-bottom: 0.5rem; }
@@ -96,6 +97,7 @@ class TimeMagazine(BasicNewsRecipe):
 
     def parse_index(self):
         br = self.get_browser()
+        # Time also has WP endpoints, e.g. https://api.time.com/wp-json/ti-api/v1/posts
         # https://time.com/api/magazine/region/us/
         # https://time.com/api/magazine/region/europe/
         # https://time.com/api/magazine/region/asia/

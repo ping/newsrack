@@ -13,7 +13,7 @@ class Vox(BasicNewsRecipe):
 
     max_articles_per_feed = 25
     use_embedded_content = True
-    timefmt = "%-d, %b %Y"
+    timefmt = ""
     pub_date = None  # custom publication date
 
     remove_javascript = True

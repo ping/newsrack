@@ -26,7 +26,7 @@ class FinancialTimes(BasicNewsRecipe):
     auto_cleanup = False
     masthead_url = "https://www.ft.com/partnercontent/content-hub/static/media/ft-horiz-new-black.215c1169.png"
     timeout = 20
-    timefmt = "%-d, %b %Y"
+    timefmt = ""
     pub_date = None  # custom publication date
 
     extra_css = """

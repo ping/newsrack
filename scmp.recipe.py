@@ -33,7 +33,7 @@ class SCMP(BasicNewsRecipe):
     scale_news_images = (800, 800)
     scale_news_images_to_device = False  # force img to be resized to scale_news_images
     timeout = 30
-    timefmt = "%-d, %b %Y"
+    timefmt = ""
     pub_date = None  # custom publication date
 
     # used when unable to extract article from <script>, particularly in the Sports section

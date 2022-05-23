@@ -27,7 +27,7 @@ class KoreaHerald(BasicNewsRecipe):
     scale_news_images_to_device = False  # force img to be resized to scale_news_images
     auto_cleanup = False
     timeout = 20
-    timefmt = "%-d, %b %Y"
+    timefmt = ""
     pub_date = None  # custom publication date
 
     remove_attributes = ["style", "align"]
