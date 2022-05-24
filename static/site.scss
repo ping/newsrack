@@ -47,25 +47,36 @@ h2.category {
                 cursor: pointer;
             }
             &:before {
-                content: "+ ";
+                content: "+";
                 font-weight: bold;
+                margin-right: 0.2rem;
             }
 
             &.is-open {
                 margin-bottom: 0.5rem;
                 &:before {
-                    content: "- ";
+                    content: "-";
                     font-weight: bold;
+                    margin-right: 0.2rem;
                 }
             }
         }
         .contents {
-            margin-top: 0.5rem;
-            color: #222222;
+            margin: 0.5rem 0 1.5rem 0;
+            color: #000;
             font-size: 0.8rem;
             ul {
                 margin: 0.4rem 0 0.4rem 0;
-                li { font-size: 0.8rem; margin-bottom: 0.2rem; }
+                padding-left: 0.25rem;
+                list-style-position: inside;
+                li {
+                    font-size: 0.8rem;
+                    margin-bottom: 0.1rem;
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
         }
     }
