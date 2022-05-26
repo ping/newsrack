@@ -144,7 +144,6 @@ class Economist(BasicNewsRecipe):
         p span[data-caps="initial"], p small {
             font-size: 1rem;
             text-transform: uppercase;
-            font-weight: bold;
         }
         """
     oldest_article = 7.0
