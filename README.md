@@ -10,16 +10,17 @@ Uses [calibre](https://calibre-ebook.com/), [GitHub Actions](.github/workflows/b
 In alphabetical order:
 
 ### News
-1. [Channel News Asia](https://www.channelnewsasia.com/)
-2. [The Financial Times](https://www.ft.com/)
-3. [The Guardian](https://www.theguardian.com/international)
-4. [The Japan Times](https://www.japantimes.co.jp/)
+1. [Asahi Shimbun](https://www.asahi.com/ajw/)
+2. [Channel News Asia](https://www.channelnewsasia.com/)
+3. [The Financial Times](https://www.ft.com/)
+4. [The Guardian](https://www.theguardian.com/international)
 5. [The JoongAng Daily](https://koreajoongangdaily.joins.com/)
 6. [The Korea Herald](https://koreaherald.com/)
 7. [The New York Times](https://www.nytimes.com/)
-7. [The New York Times (Print)](https://www.nytimes.com/section/todayspaper)
-8. [South China Morning Post](https://www.scmp.com/)
-9. [The Washington Post](https://www.washingtonpost.com/)
+8. [The New York Times (Print)](https://www.nytimes.com/section/todayspaper)
+9. [South China Morning Post](https://www.scmp.com/)
+10. [The Washington Post](https://www.washingtonpost.com/)
+11. ~~[The Japan Times](https://www.japantimes.co.jp/)~~
 
 ### Magazines
 1. [The Atlantic](https://www.theatlantic.com/)

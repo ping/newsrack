@@ -119,6 +119,13 @@ def onlyat_hours(hours_of_the_day: List[int], offset: float = 0.0):
 #     for potential throttling and time/bandwidth taken
 recipes = [
     Recipe(
+        recipe="asahi-shimbun",
+        name="Asahi Shimbun",
+        slug="asahi-shimbun",
+        src_ext="mobi",
+        category="news",
+    ),
+    Recipe(
         recipe="asian-review",
         name="Asian Review of Books",
         slug="arb",
