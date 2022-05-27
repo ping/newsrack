@@ -84,6 +84,7 @@ class TheWashingtonPost(BasicNewsRecipe):
                 parent_element.append(para_ele)
             elif node_type == "image":
                 figure_ele = soup.new_tag("figure", attrs={"class": "figure"})
+                # this is mad slow -_-, better to just download the original img from s3
                 # img_url = f'https://www.washingtonpost.com/wp-apps/imrs.php?{urlencode({"src": c["url"], "w": 916})}'
                 img_ele = soup.new_tag("img", src=c["url"])
                 figure_ele.append(img_ele)
@@ -229,7 +230,6 @@ class TheWashingtonPost(BasicNewsRecipe):
                     <span class="author"></span>
                     <span class="published-dt">{post_date:%-I:%M%p %-d %B, %Y}</span>
                 </div>
-            </div>
             </article>
         </body></html>"""
         new_soup = BeautifulSoup(html)
