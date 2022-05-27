@@ -73,6 +73,7 @@ class Guardian(BasicNewsRecipe):
     img { width: 100%; height: auto; margin-bottom: 0.2rem; }
     [data-name="placeholder"] { color: #444; font-style: italic; }
     [data-name="placeholder"] a { color: #444; }
+    blockquote { font-size: 0.85rem; color: #222; }
     
     time { margin-right: 0.5rem; }
     .embed { color: #444; font-size: 0.8rem; }
@@ -134,6 +135,14 @@ class Guardian(BasicNewsRecipe):
                     break
             if is_social_media:
                 unordered_list.decompose()
+
+        # Patch Key Events ul in live articles
+        # The div forces a linebreak in the li > a looks bad in the Kindle
+        for unordered_list in soup.find_all("ul"):
+            for link_item in unordered_list.find_all("a"):
+                if link_item["href"].startswith("?filterKeyEvents"):
+                    link_text = self.tag_to_string(link_item)
+                    link_item.parent.string = link_text
 
         # embed YT blocks
         for yt in soup.find_all(

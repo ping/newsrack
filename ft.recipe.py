@@ -30,9 +30,9 @@ class FinancialTimes(BasicNewsRecipe):
     pub_date = None  # custom publication date
 
     extra_css = """
-    .headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
-    .sub-headline { color: #444; font-size: 1.2rem; margin-bottom: 2rem; }
-    .article-meta { padding-bottom: 0.2rem; border-bottom: 1px solid #aaa; }
+    .headline { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .sub-headline { margin-bottom: 0.4rem;  color: #444; font-size: 1.2rem; }
+    .article-meta { margin-top: 1rem; padding-bottom: 0.2rem; border-bottom: 1px solid #aaa; }
     .article-meta .author { font-weight: bold; color: #444; }
     .article-meta .published-dt { margin-left: 0.5rem; }
     .article-img { margin-bottom: 0.8rem; }
@@ -76,8 +76,11 @@ class FinancialTimes(BasicNewsRecipe):
             break
         if not (article and article.get("articleBody")):
             self.abort_article(f"Unable to find article: {url}")
+        try:
+            author = article.get("author", {}).get("name", "")
+        except AttributeError:
+            author = ", ".join([a["name"] for a in article.get("author", [])])
 
-        author = article.get("author", {}).get("name", "")
         date_published = article.get("datePublished", None)
         if date_published:
             # Example: 2022-03-29T04:00:05.154Z
@@ -118,7 +121,7 @@ class FinancialTimes(BasicNewsRecipe):
         <body>
             <article data-og-link="{url}">
             <h1 class="headline">{article["headline"]}</h1>
-            <div class="sub-headline">{article.get("description", "")}</div>
+            {"" if not article.get("description") else '<div class="sub-headline">' + article.get("description", "") + '</div>'}
             <div class="article-meta">
                 <span class="author">{author}</span>
                 <span class="published-dt">{date_published:%-d %B, %Y}</span>

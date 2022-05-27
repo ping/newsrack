@@ -51,7 +51,7 @@ class KoreaHerald(BasicNewsRecipe):
     extra_css = """
     h1.view_tit { font-size: 1.8rem; margin-bottom: 0.5rem; }
     h2.view_tit_sub { font-size: 1.4rem; font-weight: normal; margin-top: 0; margin-bottom: 0.5rem; }
-    .view_tit_byline { margin-bottom: 1rem; }
+    .view_tit_byline { margin-top: 1rem; margin-bottom: 1rem; }
     .view_tit_byline_l, .view_tit_byline_l a { font-weight: bold; color: #444; }
     .view_tit_byline_r span { margin-right: 0.6rem; }
     td img { max-width: 100%; height: auto; }
