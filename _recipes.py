@@ -190,13 +190,14 @@ recipes = [
         src_ext="mobi",
         category="news",
     ),
-    Recipe(
-        recipe="japan-times",
-        name="Japan Times",
-        slug="japan-times",
-        src_ext="mobi",
-        category="news",
-    ),
+    # Ad-blocked/Requires login
+    # Recipe(
+    #     recipe="japan-times",
+    #     name="Japan Times",
+    #     slug="japan-times",
+    #     src_ext="mobi",
+    #     category="news",
+    # ),
     Recipe(
         recipe="joongangdaily",
         name="Joongang Daily",

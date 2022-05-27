@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 
 # Original at https://github.com/kovidgoyal/calibre/blob/4a01a799f19c4d0711d826ec7c79821b4ea690b6/recipes/japan_times.recipe
+#
+# [!] Ad-blocked, requires login
+#
 
 __license__ = "GPL v3"
 __copyright__ = (
