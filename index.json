@@ -8,7 +8,7 @@
 "The Atlantic": [
 {
 "filename": "the-atlantic-2022-05-27.mobi",
-"published": 1653647516.0
+"published": 1653659060.0
 }
 ],
 "The Atlantic Magazine": [
@@ -20,43 +20,37 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-05-27.mobi",
-"published": 1653649113.0
+"published": 1653659566.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-05-27.mobi",
-"published": 1653645866.0
+"published": 1653658718.0
 }
 ],
 "The Economist": [
 {
 "filename": "economist-2022-05-27.mobi",
-"published": 1653645476.0
+"published": 1653655756.0
 }
 ],
 "Financial Times": [
 {
 "filename": "ft-2022-05-27.mobi",
-"published": 1653648264.0
+"published": 1653658560.0
 }
 ],
 "Five Books": [
 {
-"filename": "fivebooks-2022-05-25.mobi",
-"published": 1653480747.0
+"filename": "fivebooks-2022-05-27.mobi",
+"published": 1653609600.0
 }
 ],
 "The Guardian": [
 {
 "filename": "guardian-2022-05-27.mobi",
-"published": 1653648380.0
-}
-],
-"Japan Times": [
-{
-"filename": "japan-times-2022-05-27.mobi",
-"published": 1653643593.0
+"published": 1653659360.0
 }
 ],
 "Joongang Daily": [
@@ -68,7 +62,7 @@
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-05-27.mobi",
-"published": 1653643073.0
+"published": 1653658551.0
 }
 ],
 "London Review of Books": [
@@ -92,7 +86,7 @@
 "NY Times Global": [
 {
 "filename": "nytimes-global-2022-05-27.mobi",
-"published": 1653649397.0
+"published": 1653660203.0
 }
 ],
 "New York Times (Print)": [
@@ -104,13 +98,13 @@
 "New York Times Books": [
 {
 "filename": "nytimes-books-2022-05-27.mobi",
-"published": 1653642004.0
+"published": 1653656489.0
 }
 ],
 "POLITICO Magazine": [
 {
 "filename": "politico-magazine-2022-05-27.mobi",
-"published": 1653640200.0
+"published": 1653657265.0
 }
 ],
 "Scientific American": [
@@ -122,13 +116,13 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-05-27.mobi",
-"published": 1653649230.0
+"published": 1653658859.0
 }
 ],
 "The Third Pole": [
 {
 "filename": "thirdpole-2022-05-27.mobi",
-"published": 1653646508.0
+"published": 1653650197.0
 }
 ],
 "Time": [
@@ -140,13 +134,13 @@
 "Vox": [
 {
 "filename": "vox-2022-05-27.mobi",
-"published": 1653649200.0
+"published": 1653654600.0
 }
 ],
 "The Washington Post": [
 {
 "filename": "wapo-2022-05-27.mobi",
-"published": 1653649261.0
+"published": 1653660661.0
 }
 ],
 "Wired Magazine": [
@@ -155,5 +149,5 @@
 "published": 1653570000.0
 }
 ],
-"_generated": 1653650161
+"_generated": 1653660928
 }
