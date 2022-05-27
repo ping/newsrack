@@ -223,8 +223,8 @@ class TheWashingtonPost(BasicNewsRecipe):
         html = f"""<html>
         <head></head>
         <body>
-            <h1 class="headline"></h1>
             <article>
+                <h1 class="headline"></h1>
                 <div class="sub-headline"></div>
                 <div class="article-meta">
                     <span class="author"></span>
@@ -236,11 +236,13 @@ class TheWashingtonPost(BasicNewsRecipe):
         title_ele = new_soup.new_tag("title")
         title_ele.string = title
         new_soup.head.append(title_ele)
-        new_soup.body.h1.string = title
+        new_soup.body.article.h1.string = title
         if content.get("subheadlines", {}).get("basic", ""):
             new_soup.find("div", class_="sub-headline").string = content[
                 "subheadlines"
             ]["basic"]
+        else:
+            new_soup.find("div", class_="sub-headline").decompose()
         authors = [a["name"] for a in content.get("credits", {}).get("by", [])]
         new_soup.find("span", class_="author").string = ", ".join(authors)
         self._extract_child_nodes(
