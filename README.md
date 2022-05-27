@@ -17,6 +17,7 @@ In alphabetical order:
 5. [The JoongAng Daily](https://koreajoongangdaily.joins.com/)
 6. [The Korea Herald](https://koreaherald.com/)
 7. [The New York Times](https://www.nytimes.com/)
+7. [The New York Times (Print)](https://www.nytimes.com/section/todayspaper)
 8. [South China Morning Post](https://www.scmp.com/)
 9. [The Washington Post](https://www.washingtonpost.com/)
 

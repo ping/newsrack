@@ -274,6 +274,35 @@ class NYTimesBooks(BasicNewsRecipe):
                         span_ele.append(BeautifulSoup(image_block["legacyHtmlCaption"]))
                         container_ele.append(span_ele)
                     new_soup.body.article.append(container_ele)
+            elif content_type == "GridBlock":
+                # n-image block
+                grid_block = content_service[c["id"]]
+                image_block_ids = [
+                    m["id"]
+                    for m in grid_block.get("media", [])
+                    if m["typename"] == "Image"
+                ]
+                container_ele = new_soup.new_tag("div", attrs={"class": "article-img"})
+                for image_block_id in image_block_ids:
+                    image_block = content_service[image_block_id]
+                    for k, v in image_block.items():
+                        if not k.startswith("crops("):
+                            continue
+                        img_url = content_service[
+                            content_service[v[0]["id"]]["renditions"][0]["id"]
+                        ]["url"]
+                        img_ele = new_soup.new_tag("img")
+                        img_ele["src"] = img_url
+                        container_ele.append(img_ele)
+                        break
+                caption = (
+                    f'{grid_block.get("caption", "")} {grid_block.get("credit", "")}'
+                ).strip()
+                if caption:
+                    span_ele = new_soup.new_tag("span", attrs={"class": "caption"})
+                    span_ele.append(BeautifulSoup(caption))
+                    container_ele.append(span_ele)
+                new_soup.body.article.append(container_ele)
             elif content_type == "DetailBlock":
                 container_ele = new_soup.new_tag("div", attrs={"class": "detail"})
                 for x in content_service[c["id"]]["content"]:

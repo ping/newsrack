@@ -247,6 +247,15 @@ recipes = [
         category="news",
     ),
     Recipe(
+        recipe="nytimes-paper",
+        name="New York Times (Print)",
+        slug="nytimes-print",
+        src_ext="mobi",
+        overwrite_cover=False,
+        timeout=180,
+        category="news",
+    ),
+    Recipe(
         recipe="nytimes-books",
         name="New York Times Books",
         slug="nytimes-books",
