@@ -573,11 +573,11 @@ class NewYorkTimesPrint(BasicNewsRecipe):
         return self.get_browser()
 
     def open_novisit(self, *args, **kwargs):
-        from calibre import browser, random_user_agent
+        from calibre import browser
 
-        if not hasattr(self, "rua_stored"):
-            self.rua_stored = random_user_agent(allow_ie=False)
-        br = browser(user_agent=self.rua_stored)
+        br = browser(
+            user_agent="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+        )
         response = br.open_novisit(*args, **kwargs)
         return response
 
