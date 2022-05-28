@@ -6,9 +6,11 @@ koreaherald.com
 import re
 from calibre.web.feeds.news import BasicNewsRecipe
 
+_name = "Korea Herald"
+
 
 class KoreaHerald(BasicNewsRecipe):
-    title = "KoreaHerald"
+    title = _name
     language = "en"
     description = "Korea Herald News articles"
     __author__ = "Seongkyoun Yoo"
@@ -75,7 +77,7 @@ class KoreaHerald(BasicNewsRecipe):
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
-            self.title = f"Korea Herald: {article.utctime:%-d %b, %Y}"
+            self.title = f"{_name}: {article.utctime:%-d %b, %Y}"
 
     def preprocess_html(self, soup):
         byline_date = soup.find(attrs={"class": "view_tit_byline_r"})

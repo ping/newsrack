@@ -9,9 +9,11 @@ from datetime import datetime, timezone
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
+_name = "Financial Times"
+
 
 class FinancialTimes(BasicNewsRecipe):
-    title = "Financial Times"
+    title = _name
     __author__ = "ping"
     description = "Financial Times"
     publisher = "The Financial Times Ltd."
@@ -139,7 +141,7 @@ class FinancialTimes(BasicNewsRecipe):
             article.url = og_link[0]["data-og-link"]
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
-            self.title = f"Financial Times: {article.utctime:%-d %b, %Y}"
+            self.title = f"{_name}: {article.utctime:%-d %b, %Y}"
 
     def publication_date(self):
         return self.pub_date

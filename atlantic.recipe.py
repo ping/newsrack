@@ -121,9 +121,12 @@ def extract_html(soup):
     return json_to_html(raw)
 
 
+_name = "The Atlantic"
+
+
 class TheAtlantic(BasicNewsRecipe):
 
-    title = "TheAtlantic.com"
+    title = _name
     description = "News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine"
 
     __author__ = "Kovid Goyal"
@@ -251,7 +254,7 @@ class TheAtlantic(BasicNewsRecipe):
             ).replace(tzinfo=timezone.utc)
             if (not self.pub_date) or modified_date > self.pub_date:
                 self.pub_date = modified_date
-                self.title = f"The Atlantic: {modified_date:%-d %b, %Y}"
+                self.title = f"{_name}: {modified_date:%-d %b, %Y}"
 
         published = soup.find(attrs={"data-published": True})
         if published:
@@ -261,4 +264,4 @@ class TheAtlantic(BasicNewsRecipe):
             article.utctime = published_date
             if (not self.pub_date) or published_date > self.pub_date:
                 self.pub_date = published_date
-                self.title = f"The Atlantic: {published_date:%-d %b, %Y}"
+                self.title = f"{_name}: {published_date:%-d %b, %Y}"

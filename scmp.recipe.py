@@ -8,9 +8,11 @@ from datetime import datetime, timezone, timedelta
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
+_name = "South China Morning Post"
+
 
 class SCMP(BasicNewsRecipe):
-    title = "South China Morning Post"
+    title = _name
     __author__ = "llam"
     description = "SCMP.com, Hong Kong's premier online English daily provides exclusive up-to-date news, audio video news, podcasts, RSS Feeds, Blogs, breaking news, top stories, award winning news and analysis on Hong Kong and China."  # noqa
     publisher = "South China Morning Post Publishers Ltd."
@@ -215,7 +217,7 @@ class SCMP(BasicNewsRecipe):
     def populate_article_metadata(self, article, soup, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
-            self.title = f"South China Morning Post: {article.utctime:%-d %b, %Y}"
+            self.title = f"{_name}: {article.utctime:%-d %b, %Y}"
 
     def publication_date(self):
         return self.pub_date

@@ -8,9 +8,11 @@ from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
 
+_name = "The Third Pole"
+
 
 class ThirdPole(BasicNewsRecipe):
-    title = "The Third Pole"
+    title = _name
     __author__ = "ping"
     description = "The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there."
     language = "en"
@@ -59,7 +61,7 @@ class ThirdPole(BasicNewsRecipe):
     """
 
     feeds = [
-        ("The Third Pole", "https://www.thethirdpole.net/wp-json/wp/v2/posts"),
+        (_name, "https://www.thethirdpole.net/wp-json/wp/v2/posts"),
     ]
 
     def _extract_featured_media(self, post, soup):

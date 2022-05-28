@@ -9,9 +9,11 @@ from calibre import browser
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
+_name = "Wired Magazine"
 
-class WiredDailyNews(BasicNewsRecipe):
-    title = "Wired Magazine, Monthly Edition"
+
+class WiredMagazine(BasicNewsRecipe):
+    title = _name
     __author__ = (
         "Darko Miletic, update by Howard Cornett, Zach Lapidus, Michael Marotta"
     )
@@ -84,7 +86,7 @@ class WiredDailyNews(BasicNewsRecipe):
         post_date = datetime.strptime(pub_date_meta["content"], "%Y-%m-%dT%H:%M:%S.%fZ")
         if not self.pub_date or post_date > self.pub_date:
             self.pub_date = post_date
-            self.title = f"Wired Magazine: {post_date:%-d %b, %Y}"
+            self.title = f"{_name}: {post_date:%-d %b, %Y}"
 
         authors = [b.text for b in soup.find_all(attrs={"class": "byline__name-link"})]
         category = soup.find(attrs={"class": "rubric"}).text

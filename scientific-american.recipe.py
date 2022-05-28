@@ -29,9 +29,11 @@ keep_classes = {
 }
 remove_classes = {"aside-banner", "moreToExplore", "article-footer"}
 
+_name = "Scientific American"
+
 
 class ScientificAmerican(BasicNewsRecipe):
-    title = "Scientific American"
+    title = _name
     description = "Popular Science. Monthly magazine. Should be downloaded around the middle of each month."
     category = "science"
     __author__ = "Kovid Goyal"
@@ -133,7 +135,7 @@ class ScientificAmerican(BasicNewsRecipe):
         # Now parse the actual issue to get the list of articles
         select = Select(self.index_to_soup(url, as_tree=True))
         for x in select(".t_course-title"):
-            self.title = f"Scientific American: {x.text}"
+            self.title = f"{_name}: {x.text}"
             break
         # for x in select(".t_meta"):
         #     if not x.text:

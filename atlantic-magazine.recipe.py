@@ -121,9 +121,11 @@ def extract_html(soup):
     return json_to_html(raw)
 
 
-class TheAtlanticMagazine(BasicNewsRecipe):
+_name = "The Atlantic Magazine"
 
-    title = "The Atlantic Magazine"
+
+class TheAtlanticMagazine(BasicNewsRecipe):
+    title = _name
     description = "Current affairs and politics focussed on the US"
     INDEX = "https://www.theatlantic.com/magazine/"
 
@@ -221,7 +223,7 @@ class TheAtlanticMagazine(BasicNewsRecipe):
             if img:
                 self.cover_url = img["src"]
         issue_ele = soup.find("h1", attrs={"class": "c-section-header__title"})
-        self.title = f"The Atlantic Magazine: {issue_ele.text.title()}"
+        self.title = f"{_name}: {issue_ele.text.title()}"
         current_section, current_articles = "Cover Story", []
         feeds = []
         for div in soup.findAll(

@@ -17,9 +17,11 @@ japantimes.co.jp
 from datetime import datetime
 from calibre.web.feeds.news import BasicNewsRecipe
 
+_name = "Japan Times"
+
 
 class JapanTimes(BasicNewsRecipe):
-    title = "The Japan Times"
+    title = _name
     __author__ = "Albert Aparicio Isarn (original recipe by Darko Miletic)"
     description = "The latest news from Japan Times, Japan's leading English-language daily newspaper"
     language = "en_JP"
@@ -143,7 +145,7 @@ class JapanTimes(BasicNewsRecipe):
             meta.append(pub_date_ele)
             if (not self.pub_date) or pub_date > self.pub_date:
                 self.pub_date = pub_date
-                self.title = f"Japan Times: {pub_date:%-d %B, %Y}"
+                self.title = f"{_name}: {pub_date:%-d %B, %Y}"
         soup.body.h1.insert_after(meta)
         return soup
 

@@ -10,9 +10,11 @@ from html import unescape
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
+_name = "The Diplomat"
+
 
 class TheDiplomat(BasicNewsRecipe):
-    title = "The Diplomat"
+    title = _name
     description = "The Diplomat is a current-affairs magazine for the Asia-Pacific, with news and analysis on politics, security, business, technology and life across the region."
     language = "en"
     __author__ = "ping"
@@ -49,7 +51,7 @@ class TheDiplomat(BasicNewsRecipe):
     """
 
     feeds = [
-        ("The Diplomat", "https://thediplomat.com/"),
+        (_name, "https://thediplomat.com/"),
     ]
 
     def _extract_featured_media(self, post):

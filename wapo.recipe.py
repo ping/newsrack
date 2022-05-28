@@ -10,9 +10,11 @@ from urllib.parse import urljoin
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
+_name = "Washington Post"
+
 
 class TheWashingtonPost(BasicNewsRecipe):
-    title = "The Washington Post"
+    title = _name
     __author__ = "Darko Miletic"
     description = "Breaking news and analysis on politics, business, world national news, entertainment more. In-depth DC, Virginia, Maryland news coverage including traffic, weather, crime, education, restaurant reviews and more."  # noqa
     publisher = "The Washington Post Company"
@@ -218,7 +220,7 @@ class TheWashingtonPost(BasicNewsRecipe):
                 pass
         if not self.pub_date or post_date > self.pub_date:
             self.pub_date = post_date
-            self.title = f"Washington Post: {post_date:%-d %b, %Y}"
+            self.title = f"{_name}: {post_date:%-d %b, %Y}"
         title = content["headlines"]["basic"]
         html = f"""<html>
         <head></head>

@@ -6,9 +6,11 @@ from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.web.feeds import Feed
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
+_name = "NY Times Books"
+
 
 class NYTimesBooks(BasicNewsRecipe):
-    title = "NY Times Books"
+    title = _name
     language = "en"
     description = "The latest book reviews, best sellers, news and features from The NY TImes critics and reporters."
     __author__ = "ping"
@@ -76,7 +78,7 @@ class NYTimesBooks(BasicNewsRecipe):
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
-            self.title = f"NY Times Books: {article.utctime:%-d %b, %Y}"
+            self.title = f"{_name}: {article.utctime:%-d %b, %Y}"
 
     def publication_date(self):
         return self.pub_date

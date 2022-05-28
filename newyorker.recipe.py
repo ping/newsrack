@@ -20,9 +20,12 @@ def absurl(x):
     return x
 
 
+_name = "New Yorker"
+
+
 class NewYorker(BasicNewsRecipe):
 
-    title = "New Yorker Magazine"
+    title = _name
     description = "Articles of the week's New Yorker magazine"
 
     url_list = []
@@ -183,7 +186,7 @@ class NewYorker(BasicNewsRecipe):
         soup = self.index_to_soup("https://www.newyorker.com/magazine?intcid=magazine")
         header_title = soup.select_one("header h2")
         if header_title:
-            self.title = f"New Yorker: {self.tag_to_string(header_title)}"
+            self.title = f"{_name}: {self.tag_to_string(header_title)}"
 
         stories = OrderedDict()  # So we can list sections in order
 

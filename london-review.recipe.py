@@ -14,8 +14,11 @@ def absolutize(href):
     return href
 
 
+_name = "London Review of Books"
+
+
 class LondonReviewOfBooksPayed(BasicNewsRecipe):
-    title = "London Review of Books"
+    title = _name
     __author__ = "Kovid Goyal"
     description = "Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers"  # noqa
     category = "news, literature, UK"
@@ -86,7 +89,7 @@ class LondonReviewOfBooksPayed(BasicNewsRecipe):
             soup.body["data-og-date"] = f"{modified_date:%Y-%m-%d %H:%M:%S}"
             if not self.pub_date or modified_date > self.pub_date:
                 self.pub_date = modified_date
-                self.title = f"London Review of Books: {published_date:%-d %b, %Y}"
+                self.title = f"{_name}: {published_date:%-d %b, %Y}"
         else:
             letter_ele = soup.find(attrs={"class": "letters-titles--date"})
             if letter_ele:

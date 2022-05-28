@@ -3,9 +3,11 @@ channelnewsasia.com
 """
 from calibre.web.feeds.news import BasicNewsRecipe
 
+_name = "ChannelNewsAsia"
+
 
 class ChannelNewsAsia(BasicNewsRecipe):
-    title = "ChannelNewsAsia"
+    title = _name
     __author__ = "ping"
     description = "CNA: Breaking News, Singapore News, World and Asia"
     publisher = "Mediacorp"
@@ -82,7 +84,7 @@ class ChannelNewsAsia(BasicNewsRecipe):
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
-            self.title = f"ChannelNewsAsia: {article.utctime:%-d %b, %Y}"
+            self.title = f"{_name}: {article.utctime:%-d %b, %Y}"
 
     def publication_date(self):
         return self.pub_date

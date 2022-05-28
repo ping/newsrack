@@ -7,9 +7,11 @@ import json
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.web.feeds import Feed
 
+_name = "Guardian"
+
 
 class Guardian(BasicNewsRecipe):
-    title = "The Guardian"
+    title = _name
     description = "Latest international news, sport and comment from the Guardian"
     language = "en_GB"
     __author__ = "ping"
@@ -80,7 +82,7 @@ class Guardian(BasicNewsRecipe):
     """
 
     feeds = [
-        ("The Guardian", "https://www.theguardian.com/international/rss"),
+        (_name, "https://www.theguardian.com/international/rss"),
     ]
 
     def preprocess_html(self, soup):
@@ -168,7 +170,7 @@ class Guardian(BasicNewsRecipe):
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
-            self.title = f"Guardian: {article.utctime:%-d %b, %Y}"
+            self.title = f"{_name}: {article.utctime:%-d %b, %Y}"
 
     def publication_date(self):
         return self.pub_date

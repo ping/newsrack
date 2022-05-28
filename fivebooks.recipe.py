@@ -9,9 +9,11 @@ import json
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
+_name = "Five Books"
+
 
 class FiveBooks(BasicNewsRecipe):
-    title = "Five Books"
+    title = _name
     __author__ = "ping"
     description = "Expert book recommendations"
     language = "en"
@@ -91,7 +93,7 @@ class FiveBooks(BasicNewsRecipe):
         if post_date:
             if not self.pub_date or post_date > self.pub_date:
                 self.pub_date = post_date
-                self.title = f"Five Books: {post_date:%-d %b, %Y}"
+                self.title = f"{_name}: {post_date:%-d %b, %Y}"
             article.utctime = post_date
 
         description_tag = soup.find(attrs={"data-post-description": True})

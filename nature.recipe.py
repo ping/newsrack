@@ -24,8 +24,11 @@ def has_all_of(words):
     return lambda x: x and frozenset(words.split()).issubset(x.split())
 
 
+_name = "Nature"
+
+
 class Nature(BasicNewsRecipe):
-    title = "Nature"
+    title = _name
     __author__ = "Jose Ortiz"
     description = (
         "Nature is a weekly international multidisciplinary scientific journal"
@@ -87,7 +90,7 @@ class Nature(BasicNewsRecipe):
             article.utctime = pub_date_utc
             if not self.pub_date or pub_date_utc > self.pub_date:
                 self.pub_date = pub_date_utc
-                # self.title = f"Nature: {pub_date_utc:%-d %b, %Y}"
+                # self.title = f"{_name}: {pub_date_utc:%-d %b, %Y}"
 
     def preprocess_html(self, soup):
         if soup.find(name="h2", id="access-options"):
@@ -153,7 +156,7 @@ class Nature(BasicNewsRecipe):
             )
             if mobj:
                 issue_date = datetime.strptime(mobj.group("issue_date"), "%d %B %Y")
-                self.title = f"Nature: {issue_date:%-d %b, %Y}"
+                self.title = f"{_name}: {issue_date:%-d %b, %Y}"
 
         section_tags = soup.find(
             "div", {"data-container-type": check_words("issue-section-list")}

@@ -12,9 +12,11 @@ asianreviewofbooks.com
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
+_name = "Asian Review of Books"
+
 
 class AsianReviewOfBooks(BasicNewsRecipe):
-    title = "The Asian Review of Books"
+    title = _name
     __author__ = "Darko Miletic"
     description = "In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication."  # noqa
     publisher = "The Asian Review of Books"
@@ -64,7 +66,7 @@ class AsianReviewOfBooks(BasicNewsRecipe):
     def populate_article_metadata(self, article, soup, _):
         if not self.pub_date or self.pub_date < article.utctime:
             self.pub_date = article.utctime
-            self.title = f"Asian Review of Books: {self.pub_date:%-d %b, %Y}"
+            self.title = f"{_name}: {self.pub_date:%-d %b, %Y}"
 
     def preprocess_html(self, soup):
         # find empty <p>

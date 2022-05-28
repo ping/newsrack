@@ -14,9 +14,11 @@ from datetime import datetime, timezone, timedelta
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
+_name = "Asahi Shimbun"
+
 
 class AsahiShimbunEnglishNews(BasicNewsRecipe):
-    title = "The Asahi Shimbun"
+    title = _name
     __author__ = "Albert Aparicio Isarn"
 
     description = (
@@ -79,7 +81,7 @@ class AsahiShimbunEnglishNews(BasicNewsRecipe):
             post_date_utc = post_date.astimezone(timezone.utc)
             if not self.pub_date or post_date_utc > self.pub_date:
                 self.pub_date = post_date_utc
-                self.title = f"Asahi Shimbun: {post_date:%-d %b, %Y}"
+                self.title = f"{_name}: {post_date:%-d %b, %Y}"
 
     def preprocess_html(self, soup):
         gallery = soup.find(name="ul", attrs={"class": "Thum"})

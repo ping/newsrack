@@ -16,10 +16,11 @@ from calibre.utils.date import strptime
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
+_name = "NY Times -(Print)"
+
 
 class NewYorkTimesPrint(BasicNewsRecipe):
-
-    title = "The New York Times - Print"
+    title = _name
     description = "Today's New York Times"
     encoding = "utf-8"
     __author__ = "Kovid Goyal"
@@ -492,7 +493,7 @@ class NewYorkTimesPrint(BasicNewsRecipe):
         )
         # self.timefmt = strftime(" [%d %b, %Y]", date)
         self.pub_date = date
-        self.title = f"NY Times (Print): {date:%-d %b, %Y}"
+        self.title = f"{_name}: {date:%-d %b, %Y}"
         return soup
 
     def parse_todays_page(self):

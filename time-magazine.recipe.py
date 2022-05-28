@@ -7,9 +7,11 @@ from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
 
+_name = "TIME"
+
 
 class TimeMagazine(BasicNewsRecipe):
-    title = "TIME Magazine"
+    title = _name
     __author__ = "ping"
     description = "Weekly US magazine."
     language = "en"
@@ -115,7 +117,7 @@ class TimeMagazine(BasicNewsRecipe):
         issue_json_raw = res.read().decode("utf-8")
         issue = json.loads(issue_json_raw)[0]
         self.cover_url = issue.get("hero", {}).get("src", {}).get("large_2x")
-        self.title = f'Time: {issue["title"]}'
+        self.title = f'{_name}: {issue["title"]}'
         articles = []
         self.temp_dir = PersistentTemporaryDirectory()
         for article in issue["articles"]:

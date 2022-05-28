@@ -1,8 +1,10 @@
 from calibre.web.feeds.news import BasicNewsRecipe
 
+_name = "Vox"
+
 
 class Vox(BasicNewsRecipe):
-    title = "Vox"
+    title = _name
     language = "en"
     description = "General interest news site"
     __author__ = "ping"
@@ -36,4 +38,4 @@ class Vox(BasicNewsRecipe):
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
-            self.title = f"Vox: {article.utctime:%-d %b, %Y}"
+            self.title = f"{_name}: {article.utctime:%-d %b, %Y}"
