@@ -16,7 +16,7 @@ from calibre.utils.date import strptime
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
-_name = "NY Times -(Print)"
+_name = "NY Times (Print)"
 
 
 class NewYorkTimesPrint(BasicNewsRecipe):
