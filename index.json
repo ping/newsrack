@@ -1,8 +1,8 @@
 {
 "Asahi Shimbun": [
 {
-"filename": "asahi-shimbun-2022-05-28.mobi",
-"published": 1653779100.0
+"filename": "asahi-shimbun-2022-05-29.mobi",
+"published": 1653807180.0
 }
 ],
 "Asian Review of Books": [
@@ -13,8 +13,8 @@
 ],
 "The Atlantic": [
 {
-"filename": "the-atlantic-2022-05-28.mobi",
-"published": 1653756308.0
+"filename": "the-atlantic-2022-05-29.mobi",
+"published": 1653800850.0
 }
 ],
 "The Atlantic Magazine": [
@@ -26,7 +26,7 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-05-29.mobi",
-"published": 1653795720.0
+"published": 1653806428.0
 }
 ],
 "The Diplomat": [
@@ -44,7 +44,7 @@
 "Financial Times": [
 {
 "filename": "ft-2022-05-29.mobi",
-"published": 1653791687.0
+"published": 1653804008.0
 }
 ],
 "Five Books": [
@@ -56,19 +56,19 @@
 "The Guardian": [
 {
 "filename": "guardian-2022-05-29.mobi",
-"published": 1653795476.0
+"published": 1653806469.0
 }
 ],
 "Joongang Daily": [
 {
-"filename": "joongang-daily-2022-05-28.mobi",
-"published": 1653775200.0
+"filename": "joongang-daily-2022-05-29.mobi",
+"published": 1653807158.0
 }
 ],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-05-29.mobi",
-"published": 1653791764.0
+"published": 1653807687.0
 }
 ],
 "London Review of Books": [
@@ -92,13 +92,13 @@
 "NY Times Global": [
 {
 "filename": "nytimes-global-2022-05-29.mobi",
-"published": 1653795125.0
+"published": 1653807609.0
 }
 ],
 "New York Times (Print)": [
 {
-"filename": "nytimes-print-2022-05-28.mobi",
-"published": 1653696000.0
+"filename": "nytimes-print-2022-05-29.mobi",
+"published": 1653782400.0
 }
 ],
 "New York Times Books": [
@@ -122,7 +122,7 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-05-29.mobi",
-"published": 1653795022.0
+"published": 1653804737.0
 }
 ],
 "The Third Pole": [
@@ -146,7 +146,7 @@
 "The Washington Post": [
 {
 "filename": "wapo-2022-05-29.mobi",
-"published": 1653792533.0
+"published": 1653807920.0
 }
 ],
 "Wired Magazine": [
@@ -155,5 +155,5 @@
 "published": 1653570000.0
 }
 ],
-"_generated": 1653796497
+"_generated": 1653808414
 }
