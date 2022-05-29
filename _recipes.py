@@ -12,10 +12,10 @@ class Recipe:
     """A Calibre recipe definition"""
 
     recipe: str  # actual recipe name
-    name: str  # display name
     slug: str  # file name slug
     src_ext: str  # recipe output format
     category: str  # category, e.g. News
+    name: str = ""  # display name, taken from recipe source by default
     target_ext: List[str] = field(
         default_factory=list
     )  # alt formats that src_ext will be converted to
@@ -120,14 +120,12 @@ def onlyat_hours(hours_of_the_day: List[int], offset: float = 0.0):
 recipes = [
     Recipe(
         recipe="asahi-shimbun",
-        name="Asahi Shimbun",
         slug="asahi-shimbun",
         src_ext="mobi",
         category="news",
     ),
     Recipe(
         recipe="asian-review",
-        name="Asian Review of Books",
         slug="arb",
         src_ext="mobi",
         category="books",
@@ -135,7 +133,6 @@ recipes = [
     ),
     Recipe(
         recipe="atlantic",
-        name="The Atlantic",
         slug="the-atlantic",
         src_ext="mobi",
         timeout=180,
@@ -143,7 +140,6 @@ recipes = [
     ),
     Recipe(
         recipe="atlantic-magazine",
-        name="The Atlantic Magazine",
         slug="atlantic-magazine",
         src_ext="mobi",
         overwrite_cover=False,
@@ -152,7 +148,6 @@ recipes = [
     ),
     Recipe(
         recipe="channelnewsasia",
-        name="ChannelNewsAsia",
         slug="channelnewsasia",
         src_ext="mobi",
         timeout=180,
@@ -168,7 +163,6 @@ recipes = [
     ),
     Recipe(
         recipe="economist",
-        name="The Economist",
         slug="economist",
         src_ext="mobi",
         overwrite_cover=False,
@@ -177,14 +171,12 @@ recipes = [
     ),
     Recipe(
         recipe="ft",
-        name="Financial Times",
         slug="ft",
         src_ext="mobi",
         category="news",
     ),
     Recipe(
         recipe="fivebooks",
-        name="Five Books",
         slug="fivebooks",
         src_ext="mobi",
         category="books",
@@ -192,7 +184,6 @@ recipes = [
     ),
     Recipe(
         recipe="guardian",
-        name="The Guardian",
         slug="guardian",
         src_ext="mobi",
         category="news",
@@ -200,28 +191,24 @@ recipes = [
     # Ad-blocked/Requires login
     # Recipe(
     #     recipe="japan-times",
-    #     name="Japan Times",
     #     slug="japan-times",
     #     src_ext="mobi",
     #     category="news",
     # ),
     Recipe(
         recipe="joongangdaily",
-        name="Joongang Daily",
         slug="joongang-daily",
         src_ext="mobi",
         category="news",
     ),
     Recipe(
         recipe="korea-herald",
-        name="Korea Herald",
         slug="korea-herald",
         src_ext="mobi",
         category="news",
     ),
     Recipe(
         recipe="london-review",
-        name="London Review of Books",
         slug="lrb",
         src_ext="mobi",
         overwrite_cover=False,
@@ -230,7 +217,6 @@ recipes = [
     ),
     Recipe(
         recipe="nature",
-        name="Nature",
         slug="nature",
         src_ext="mobi",
         category="magazines",
@@ -239,7 +225,6 @@ recipes = [
     ),
     Recipe(
         recipe="newyorker",
-        name="The New Yorker",
         slug="newyorker",
         src_ext="mobi",
         category="magazines",
@@ -248,7 +233,6 @@ recipes = [
     ),
     Recipe(
         recipe="nytimes-global",
-        name="NY Times Global",
         slug="nytimes-global",
         src_ext="mobi",
         timeout=180,
@@ -256,7 +240,6 @@ recipes = [
     ),
     Recipe(
         recipe="nytimes-paper",
-        name="New York Times (Print)",
         slug="nytimes-print",
         src_ext="mobi",
         overwrite_cover=False,
@@ -265,7 +248,6 @@ recipes = [
     ),
     Recipe(
         recipe="nytimes-books",
-        name="New York Times Books",
         slug="nytimes-books",
         src_ext="mobi",
         category="books",
@@ -273,7 +255,6 @@ recipes = [
     ),
     Recipe(
         recipe="politico-magazine",
-        name="POLITICO Magazine",
         slug="politico-magazine",
         src_ext="mobi",
         category="magazines",
@@ -281,7 +262,6 @@ recipes = [
     ),
     Recipe(
         recipe="scientific-american",
-        name="Scientific American",
         slug="scientific-american",
         src_ext="mobi",
         category="magazines",
@@ -290,14 +270,12 @@ recipes = [
     ),
     Recipe(
         recipe="scmp",
-        name="South China Morning Post",
         slug="scmp",
         src_ext="mobi",
         category="news",
     ),
     Recipe(
         recipe="thirdpole",
-        name="The Third Pole",
         slug="thirdpole",
         src_ext="mobi",
         category="magazines",
@@ -305,7 +283,6 @@ recipes = [
     ),
     Recipe(
         recipe="time-magazine",
-        name="Time",
         slug="time-magazine",
         src_ext="mobi",
         overwrite_cover=False,
@@ -314,14 +291,12 @@ recipes = [
     ),
     Recipe(
         recipe="vox",
-        name="Vox",
         slug="vox",
         src_ext="mobi",
         category="magazines",
     ),
     Recipe(
         recipe="wapo",
-        name="The Washington Post",
         slug="wapo",
         src_ext="mobi",
         timeout=600,
@@ -329,7 +304,6 @@ recipes = [
     ),
     Recipe(
         recipe="wired",
-        name="Wired Magazine",
         slug="wired",
         src_ext="mobi",
         timeout=180,

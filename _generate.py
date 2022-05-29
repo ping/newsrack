@@ -142,6 +142,22 @@ def _add_recipe_summary(rec, status, duration=None):
 
 
 for recipe in recipes:
+    if not recipe.name:
+        try:
+            with open(f"{recipe.recipe}.recipe") as f:
+                recipe_source = f.read()
+                mobj = re.search(
+                    r"\n_name\s=\s['\"](?P<name>.+)['\"]\n", recipe_source
+                ) or re.search(r"\btitle\s=\s['\"](?P<name>.+)['\"]\n", recipe_source)
+                if mobj:
+                    recipe.name = mobj.group("name")
+                else:
+                    logger.warning(f"Unable to extract recipe name")
+        except Exception as err:
+            logger.error(f"Error getting recipe name: {err}")
+            logger.error("Please set a recipe name.")
+            continue
+
     recipe.job_log = job_log
     job_status = ""
 
@@ -324,6 +340,7 @@ for recipe in recipes:
             )
         )
 
+        pseudo_series_index = pub_date.year * 1000 + pub_date.timetuple().tm_yday
         # (rename_file_name != source_file_name) checks that it is a newly generated file
         # so that we don't regenerate the cover needlessly
         if recipe.overwrite_cover and title and rename_file_name != source_file_name:
@@ -336,11 +353,22 @@ for recipe in recipes:
                     "ebook-meta",
                     source_file_path,
                     f"--cover={cover_file_path}",
+                    f"--series={recipe.name}",
+                    f"--index={pseudo_series_index}",
                 ]
                 _ = subprocess.call(cover_cmd, stdout=subprocess.PIPE)
                 os.remove(cover_file_path)
             except Exception:  # noqa
                 logger.exception("Error generating cover")
+        elif rename_file_name != source_file_name:
+            # just set series name
+            series_cmd = [
+                "ebook-meta",
+                source_file_path,
+                f"--series={recipe.name}",
+                f"--index={pseudo_series_index}",
+            ]
+            _ = subprocess.call(series_cmd, stdout=subprocess.PIPE)
 
         index[recipe.name].append(
             {
@@ -359,6 +387,8 @@ for recipe in recipes:
                 source_file_path,
                 target_file_path,
                 "--output-profile=tablet",
+                f"--series={recipe.name}",
+                f"--series-index={pseudo_series_index}",
             ]
             customised_css_filename = os.path.join("static", f"{ext}.css")
             if os.path.exists(customised_css_filename):
