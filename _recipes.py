@@ -275,6 +275,12 @@ recipes = [
         category="news",
     ),
     Recipe(
+        recipe="taipei-times",
+        slug="taipei-times",
+        src_ext="mobi",
+        category="news",
+    ),
+    Recipe(
         recipe="thirdpole",
         slug="thirdpole",
         src_ext="mobi",

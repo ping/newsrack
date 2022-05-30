@@ -19,8 +19,9 @@ In alphabetical order:
 7. [The New York Times](https://www.nytimes.com/)
 8. [The New York Times (Print)](https://www.nytimes.com/section/todayspaper)
 9. [South China Morning Post](https://www.scmp.com/)
-10. [The Washington Post](https://www.washingtonpost.com/)
-11. ~~[The Japan Times](https://www.japantimes.co.jp/)~~
+10. [Taipei Times](https://www.taipeitimes.com/)
+11. [The Washington Post](https://www.washingtonpost.com/)
+12. ~~[The Japan Times](https://www.japantimes.co.jp/)~~
 
 ### Magazines
 1. [The Atlantic](https://www.theatlantic.com/)
