@@ -5,7 +5,7 @@ from calibre.ebooks.BeautifulSoup import BeautifulSoup
 _name = "Taipei Times"
 
 
-class NYTimesGlobal(BasicNewsRecipe):
+class TaipeiTimes(BasicNewsRecipe):
     title = _name
     language = "en"
     __author__ = "ping"
