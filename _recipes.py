@@ -117,6 +117,8 @@ def onlyat_hours(hours_of_the_day: List[int], offset: float = 0.0):
 #         but full toc is retained
 #   - Recipe can be defined twice with different src_ext, will work except
 #     for potential throttling and time/bandwidth taken
+
+# Keep this list in alphabetical order
 recipes = [
     Recipe(
         recipe="asahi-shimbun",
