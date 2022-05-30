@@ -2,7 +2,7 @@
 "Asahi Shimbun": [
 {
 "filename": "asahi-shimbun-2022-05-30.mobi",
-"published": 1653882300.0
+"published": 1653893760.0
 }
 ],
 "Asian Review of Books": [
@@ -13,8 +13,8 @@
 ],
 "The Atlantic": [
 {
-"filename": "the-atlantic-2022-05-29.mobi",
-"published": 1653832185.0
+"filename": "the-atlantic-2022-05-30.mobi",
+"published": 1653890860.0
 }
 ],
 "The Atlantic Magazine": [
@@ -26,13 +26,13 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-05-30.mobi",
-"published": 1653884793.0
+"published": 1653893904.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-05-30.mobi",
-"published": 1653884572.0
+"published": 1653892570.0
 }
 ],
 "Economist": [
@@ -44,7 +44,7 @@
 "Financial Times": [
 {
 "filename": "ft-2022-05-30.mobi",
-"published": 1653884738.0
+"published": 1653892262.0
 }
 ],
 "Five Books": [
@@ -56,19 +56,19 @@
 "Guardian": [
 {
 "filename": "guardian-2022-05-30.mobi",
-"published": 1653883219.0
+"published": 1653894022.0
 }
 ],
 "JoongAng Daily": [
 {
 "filename": "joongang-daily-2022-05-30.mobi",
-"published": 1653881858.0
+"published": 1653894616.0
 }
 ],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-05-30.mobi",
-"published": 1653876925.0
+"published": 1653894869.0
 }
 ],
 "London Review of Books": [
@@ -92,13 +92,13 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-05-30.mobi",
-"published": 1653884906.0
+"published": 1653894032.0
 }
 ],
 "NY Times (Print)": [
 {
-"filename": "nytimes-print-2022-05-29.mobi",
-"published": 1653782400.0
+"filename": "nytimes-print-2022-05-30.mobi",
+"published": 1653868800.0
 }
 ],
 "NY Times Books": [
@@ -122,7 +122,7 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-05-30.mobi",
-"published": 1653882908.0
+"published": 1653892114.0
 }
 ],
 "Taipei Times": [
@@ -133,8 +133,8 @@
 ],
 "The Third Pole": [
 {
-"filename": "thirdpole-2022-05-28.mobi",
-"published": 1653767519.0
+"filename": "thirdpole-2022-05-30.mobi",
+"published": 1653885847.0
 }
 ],
 "TIME": [
@@ -152,7 +152,7 @@
 "Washington Post": [
 {
 "filename": "wapo-2022-05-30.mobi",
-"published": 1653884831.0
+"published": 1653894963.0
 }
 ],
 "Wired Magazine": [
@@ -161,5 +161,5 @@
 "published": 1653570000.0
 }
 ],
-"_generated": 1653886232
+"_generated": 1653895530
 }
