@@ -27,7 +27,7 @@ class KoreaJoongAngDaily(BasicNewsRecipe):
     scale_news_images = (800, 800)
     scale_news_images_to_device = False  # force img to be resized to scale_news_images
     auto_cleanup = True
-    timeout = 20
+    timeout = 60
     timefmt = ""
     pub_date = None  # custom publication date
 
