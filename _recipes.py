@@ -207,6 +207,7 @@ recipes = [
         recipe="korea-herald",
         slug="korea-herald",
         src_ext="mobi",
+        timeout=180,
         category="news",
     ),
     Recipe(
@@ -280,6 +281,7 @@ recipes = [
         recipe="taipei-times",
         slug="taipei-times",
         src_ext="mobi",
+        timeout=180,
         category="news",
     ),
     Recipe(
