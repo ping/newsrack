@@ -2,7 +2,7 @@
 "Asahi Shimbun": [
 {
 "filename": "asahi-shimbun-2022-05-31.mobi",
-"published": 1653967200.0
+"published": 1653977640.0
 }
 ],
 "Asian Review of Books": [
@@ -26,13 +26,13 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-05-31.mobi",
-"published": 1653968550.0
+"published": 1653980330.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-05-31.mobi",
-"published": 1653966572.0
+"published": 1653979171.0
 }
 ],
 "Economist": [
@@ -44,7 +44,7 @@
 "Financial Times": [
 {
 "filename": "ft-2022-05-31.mobi",
-"published": 1653966000.0
+"published": 1653979335.0
 }
 ],
 "Five Books": [
@@ -56,19 +56,19 @@
 "Guardian": [
 {
 "filename": "guardian-2022-05-31.mobi",
-"published": 1653965159.0
+"published": 1653979705.0
 }
 ],
 "JoongAng Daily": [
 {
 "filename": "joongang-daily-2022-05-31.mobi",
-"published": 1653967404.0
+"published": 1653980301.0
 }
 ],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-05-31.mobi",
-"published": 1653965882.0
+"published": 1653980268.0
 }
 ],
 "London Review of Books": [
@@ -92,13 +92,13 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-05-31.mobi",
-"published": 1653968872.0
+"published": 1653980872.0
 }
 ],
 "NY Times (Print)": [
 {
-"filename": "nytimes-print-2022-05-30.mobi",
-"published": 1653868800.0
+"filename": "nytimes-print-2022-05-31.mobi",
+"published": 1653955200.0
 }
 ],
 "NY Times Books": [
@@ -122,7 +122,7 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-05-31.mobi",
-"published": 1653967714.0
+"published": 1653980889.0
 }
 ],
 "Taipei Times": [
@@ -133,8 +133,8 @@
 ],
 "The Third Pole": [
 {
-"filename": "thirdpole-2022-05-30.mobi",
-"published": 1653921181.0
+"filename": "thirdpole-2022-05-31.mobi",
+"published": 1653973024.0
 }
 ],
 "TIME": [
@@ -152,7 +152,7 @@
 "Washington Post": [
 {
 "filename": "wapo-2022-05-31.mobi",
-"published": 1653968556.0
+"published": 1653981168.0
 }
 ],
 "Wired Magazine": [
@@ -161,5 +161,5 @@
 "published": 1653570000.0
 }
 ],
-"_generated": 1653969612
+"_generated": 1653981533
 }
