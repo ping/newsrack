@@ -5,16 +5,11 @@
 "published": 1653991320.0
 }
 ],
-"Asian Review of Books": [
-{
-"filename": "arb-2022-05-31.mobi",
-"published": 1653983752.0
-}
-],
+"Asian Review of Books": [],
 "The Atlantic": [
 {
 "filename": "the-atlantic-2022-05-31.mobi",
-"published": 1653991257.0
+"published": 1654009318.0
 }
 ],
 "The Atlantic Magazine": [
@@ -26,13 +21,13 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-05-31.mobi",
-"published": 1653994323.0
+"published": 1654009029.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-05-31.mobi",
-"published": 1653991095.0
+"published": 1654002725.0
 }
 ],
 "Economist": [
@@ -44,7 +39,7 @@
 "Financial Times": [
 {
 "filename": "ft-2022-05-31.mobi",
-"published": 1653994477.0
+"published": 1654006679.0
 }
 ],
 "Five Books": [
@@ -56,19 +51,19 @@
 "Guardian": [
 {
 "filename": "guardian-2022-05-31.mobi",
-"published": 1653994185.0
+"published": 1654008610.0
 }
 ],
 "JoongAng Daily": [
 {
 "filename": "joongang-daily-2022-05-31.mobi",
-"published": 1653995132.0
+"published": 1653995898.0
 }
 ],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-05-31.mobi",
-"published": 1653991688.0
+"published": 1654001972.0
 }
 ],
 "London Review of Books": [
@@ -92,7 +87,7 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-05-31.mobi",
-"published": 1653993091.0
+"published": 1654009380.0
 }
 ],
 "NY Times (Print)": [
@@ -104,7 +99,7 @@
 "NY Times Books": [
 {
 "filename": "nytimes-books-2022-05-31.mobi",
-"published": 1653987610.0
+"published": 1654003733.0
 }
 ],
 "POLITICO Magazine": [
@@ -122,7 +117,7 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-05-31.mobi",
-"published": 1653992114.0
+"published": 1654007544.0
 }
 ],
 "Taipei Times": [
@@ -146,13 +141,13 @@
 "Vox": [
 {
 "filename": "vox-2022-05-31.mobi",
-"published": 1653994800.0
+"published": 1653999600.0
 }
 ],
 "Washington Post": [
 {
 "filename": "wapo-2022-05-31.mobi",
-"published": 1653995338.0
+"published": 1654009939.0
 }
 ],
 "Wired Magazine": [
@@ -161,5 +156,5 @@
 "published": 1653991200.0
 }
 ],
-"_generated": 1653995843
+"_generated": 1654010491
 }
