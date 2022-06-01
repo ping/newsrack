@@ -2,13 +2,13 @@
 "Asahi Shimbun": [
 {
 "filename": "asahi-shimbun-2022-06-01.mobi",
-"published": 1654054500.0
+"published": 1654066680.0
 }
 ],
 "Asian Review of Books": [
 {
-"filename": "arb-2022-06-01.mobi",
-"published": 1654045811.0
+"filename": "arb-2022-05-31.mobi",
+"published": 1654038878.0
 }
 ],
 "The Atlantic": [
@@ -26,13 +26,13 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-06-01.mobi",
-"published": 1654056660.0
+"published": 1654066884.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-06-01.mobi",
-"published": 1654052168.0
+"published": 1654063018.0
 }
 ],
 "Economist": [
@@ -44,7 +44,7 @@
 "Financial Times": [
 {
 "filename": "ft-2022-06-01.mobi",
-"published": 1654057275.0
+"published": 1654065410.0
 }
 ],
 "Five Books": [
@@ -56,19 +56,19 @@
 "Guardian": [
 {
 "filename": "guardian-2022-06-01.mobi",
-"published": 1654055884.0
+"published": 1654066253.0
 }
 ],
 "JoongAng Daily": [
 {
 "filename": "joongang-daily-2022-06-01.mobi",
-"published": 1654053954.0
+"published": 1654067046.0
 }
 ],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-06-01.mobi",
-"published": 1654051386.0
+"published": 1654067246.0
 }
 ],
 "London Review of Books": [
@@ -92,13 +92,13 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-06-01.mobi",
-"published": 1654057305.0
+"published": 1654066831.0
 }
 ],
 "NY Times (Print)": [
 {
-"filename": "nytimes-print-2022-05-31.mobi",
-"published": 1653955200.0
+"filename": "nytimes-print-2022-06-01.mobi",
+"published": 1654041600.0
 }
 ],
 "NY Times Books": [
@@ -122,7 +122,7 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-06-01.mobi",
-"published": 1654056019.0
+"published": 1654065852.0
 }
 ],
 "Taipei Times": [
@@ -152,7 +152,7 @@
 "Washington Post": [
 {
 "filename": "wapo-2022-06-01.mobi",
-"published": 1654057750.0
+"published": 1654068312.0
 }
 ],
 "Wired Magazine": [
@@ -161,5 +161,5 @@
 "published": 1653991200.0
 }
 ],
-"_generated": 1654058266
+"_generated": 1654068555
 }
