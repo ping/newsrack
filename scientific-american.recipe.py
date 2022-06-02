@@ -19,16 +19,6 @@ def absurl(url):
     return url
 
 
-keep_classes = {
-    "feature-article--header-title",
-    "article-header",
-    "article-content",
-    "article-media",
-    "article-author",
-    "article-text",
-}
-remove_classes = {"aside-banner", "moreToExplore", "article-footer"}
-
 _name = "Scientific American"
 
 
@@ -55,21 +45,27 @@ class ScientificAmerican(BasicNewsRecipe):
 
     keep_only_tags = [
         dict(
-            attrs={
-                "class": lambda x: x and bool(set(x.split()).intersection(keep_classes))
-            }
+            class_=[
+                "feature-article--header-title",
+                "article-header",
+                "article-content",
+                "article-media",
+                "article-author",
+                "article-text",
+            ]
         ),
     ]
     remove_tags = [
-        dict(
-            attrs={
-                "class": lambda x: x
-                and bool(set(x.split()).intersection(remove_classes))
-            }
-        ),
         dict(id=["seeAlsoLinks"]),
         dict(alt="author-avatar"),
-        dict(class_=["article-author__suggested"]),
+        dict(
+            class_=[
+                "article-author__suggested",
+                "aside-banner",
+                "moreToExplore",
+                "article-footer",
+            ]
+        ),
     ]
 
     extra_css = """
@@ -127,21 +123,17 @@ class ScientificAmerican(BasicNewsRecipe):
         select = Select(root)
         url = [x.get("href", "") for x in select("main .store-listing__img a")][0]
         url = absurl(url)
-        parsed_cover_url = urlparse(
-            [x.get("src", "") for x in select("main .store-listing__img img")][0]
-        )
-        self.cover_url = f"{parsed_cover_url.scheme}://{parsed_cover_url.netloc}{parsed_cover_url.path}?w=1200"
 
         # Now parse the actual issue to get the list of articles
         select = Select(self.index_to_soup(url, as_tree=True))
+        parsed_cover_url = urlparse(
+            [x.get("src", "") for x in select("main .product-detail__image img")][0]
+        )
+        self.cover_url = f"{parsed_cover_url.scheme}://{parsed_cover_url.netloc}{parsed_cover_url.path}?w=1200"
+
         for x in select(".t_course-title"):
             self.title = f"{_name}: {x.text}"
             break
-        # for x in select(".t_meta"):
-        #     if not x.text:
-        #         continue
-        #     self.title = f"{self.title} ({x.text})"
-        #     break
 
         feeds = []
         for i, section in enumerate(select("#sa_body .toc-articles")):
