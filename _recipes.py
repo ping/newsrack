@@ -283,6 +283,7 @@ recipes = [
         src_ext="mobi",
         timeout=180,
         category="news",
+        enable_on=onlyat_hours(list(range(6, 14)), 8),
     ),
     Recipe(
         recipe="thirdpole",
