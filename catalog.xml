@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack</title>
-<updated>2022-06-02T08:55:34Z</updated>
+<updated>2022-06-02T09:00:20Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -248,6 +248,21 @@
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-06-02.mobi"/>
 </entry>
 <entry>
+<id>Scientific American</id>
+<title>Scientific American: June 2022</title>
+<summary>Scientific American: June 2022 published at 2022-06-01 13:00PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;How Mammals Conquered the World after the Asteroid Apocalypse&lt;/li&gt;&lt;li&gt;How the Brain 'Constructs' the Outside World&lt;/li&gt;&lt;li&gt;Mysterious Fast Radio Bursts Are Finally Coming into Focus&lt;/li&gt;&lt;li&gt;U.S. Kids Are Falling behind Global Competition, but Brain Science Shows How to Catch Up&lt;/li&gt;&lt;li&gt;The Urgent Need to Improve Health Equity&lt;/li&gt;&lt;li&gt;Mental Health Care Should Be Available for All, Not a Luxury&lt;/li&gt;&lt;li&gt;HIV Care Has Improved Dramatically--But Not for Everyone&lt;/li&gt;&lt;li&gt;People Who Are Making Health Care More Fair&lt;/li&gt;&lt;li&gt;Science Still Doesn't Understand How Our Sex Affects Our Health&lt;/li&gt;&lt;li&gt;Tuberculosis Is the Oldest Pandemic, and Poverty Makes It Continue&lt;/li&gt;&lt;li&gt;Discrimination Is Breaking People's Hearts&lt;/li&gt;&lt;li&gt;Mammals' Perseverance, Fast Radio Bursts and Health Justice&lt;/li&gt;&lt;li&gt;Readers Respond to the February 2022 Issue&lt;/li&gt;&lt;li&gt;Researchers Made a New Message for Extraterrestrials&lt;/li&gt;&lt;li&gt;How Parachute Frogs Took to the Sky&lt;/li&gt;&lt;li&gt;Insights from Pregnancy Could Help Fight Cancer&lt;/li&gt;&lt;li&gt;Marine Microbe Lures Prey into Custom Slime Traps&lt;/li&gt;&lt;li&gt;Science News Briefs from around the World: June 2022&lt;/li&gt;&lt;li&gt;See Crystals Form a Mesmerizing World of Microscopic Landscapes&lt;/li&gt;&lt;li&gt;AI Can Predict Potential Nutrient Deficiencies from Space&lt;/li&gt;&lt;li&gt;Redwoods Grow Weird Leaves to Suck Water from Air&lt;/li&gt;&lt;li&gt;Common Drugs Pollute Rivers on Every Continent&lt;/li&gt;&lt;li&gt;New 'Ionogels' Are Tough, Stretchable and Easy to Make&lt;/li&gt;&lt;li&gt;Acne Inflammation Discovery Could Lead to New Treatments&lt;/li&gt;&lt;li&gt;There Is Nothing Normal about One Million People Dead from COVID&lt;/li&gt;&lt;li&gt;Your Body May Be Able to Repair Its Arthritic Joints with Help from Drugs or Surgery&lt;/li&gt;&lt;li&gt;To Prevent Nuclear Annihilation, Resume Negotiations Immediately&lt;/li&gt;&lt;li&gt;A Playbook for Science Denial, 'Scientific Phallocracy' in the Animal Kingdom, and More&lt;/li&gt;&lt;li&gt;50, 100 &amp; 150 Years Ago: June 2022&lt;/li&gt;&lt;li&gt;How Skin Cancer Rates Vary across the Globe&lt;/li&gt;&lt;li&gt;Poem: 'Vaulted Seeds,' after the Svalbard Global Seed Vault&lt;/li&gt;&lt;li&gt;Most of Us Combine Personality Traits from Different Genders&lt;/li&gt;&lt;li&gt;Predatory Journals That Publish Shoddy Research Put People's Lives at Risk&lt;/li&gt;&lt;/ul&gt;
+                Popular Science. Monthly magazine. Should be downloaded around the middle of each month.
+                </content>
+<updated>2022-06-01T13:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="scientific-american-2022-06-01.mobi"/>
+</entry>
+<entry>
 <id>Nature</id>
 <title>Nature: 2 Jun, 2022</title>
 <summary>Nature: 2 Jun, 2022 published at 2022-06-01 00:00AM.</summary>
@@ -336,21 +351,6 @@
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="atlantic-magazine-2022-05-17.mobi"/>
-</entry>
-<entry>
-<id>Scientific American</id>
-<title>Scientific American: June 2022</title>
-<summary>Scientific American: June 2022 published at 2022-05-16 13:00PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;U.S. Kids Are Falling behind Global Competition, but Brain Science Shows How to Catch Up&lt;/li&gt;&lt;li&gt;How the Brain 'Constructs' the Outside World&lt;/li&gt;&lt;li&gt;How Mammals Conquered the World after the Asteroid Apocalypse&lt;/li&gt;&lt;li&gt;Mysterious Fast Radio Bursts Are Finally Coming into Focus&lt;/li&gt;&lt;li&gt;Tuberculosis Is the Oldest Pandemic, and Poverty Makes It Continue&lt;/li&gt;&lt;li&gt;People Who Are Making Health Care More Fair&lt;/li&gt;&lt;li&gt;The Urgent Need to Improve Health Equity&lt;/li&gt;&lt;li&gt;Mental Health Care Should Be Available for All, Not a Luxury&lt;/li&gt;&lt;li&gt;Discrimination Is Breaking People's Hearts&lt;/li&gt;&lt;li&gt;HIV Care Has Improved Dramatically--But Not for Everyone&lt;/li&gt;&lt;li&gt;Science Still Doesn't Understand How Our Sex Affects Our Health&lt;/li&gt;&lt;li&gt;Mammals' Perseverance, Fast Radio Bursts and Health Justice&lt;/li&gt;&lt;li&gt;Acne Inflammation Discovery Could Lead to New Treatments&lt;/li&gt;&lt;li&gt;Marine Microbe Lures Prey into Custom Slime Traps&lt;/li&gt;&lt;li&gt;Science News Briefs from around the World: June 2022&lt;/li&gt;&lt;li&gt;How Parachute Frogs Took to the Sky&lt;/li&gt;&lt;li&gt;Insights from Pregnancy Could Help Fight Cancer&lt;/li&gt;&lt;li&gt;Common Drugs Pollute Rivers on Every Continent&lt;/li&gt;&lt;li&gt;Redwoods Grow Weird Leaves to Suck Water from Air&lt;/li&gt;&lt;li&gt;AI Can Predict Potential Nutrient Deficiencies from Space&lt;/li&gt;&lt;li&gt;Researchers Made a New Message for Extraterrestrials&lt;/li&gt;&lt;li&gt;See Crystals Form a Mesmerizing World of Microscopic Landscapes&lt;/li&gt;&lt;li&gt;New 'Ionogels' Are Tough, Stretchable and Easy to Make&lt;/li&gt;&lt;li&gt;There Is Nothing Normal about One Million People Dead from COVID&lt;/li&gt;&lt;li&gt;Your Body May Be Able to Repair Its Arthritic Joints with Help from Drugs or Surgery&lt;/li&gt;&lt;li&gt;To Prevent Nuclear Annihilation, Resume Negotiations Immediately&lt;/li&gt;&lt;li&gt;A Playbook for Science Denial, 'Scientific Phallocracy' in the Animal Kingdom, and More&lt;/li&gt;&lt;li&gt;50, 100 &amp; 150 Years Ago: June 2022&lt;/li&gt;&lt;li&gt;How Skin Cancer Rates Vary across the Globe&lt;/li&gt;&lt;li&gt;Poem: 'Vaulted Seeds,' after the Svalbard Global Seed Vault&lt;/li&gt;&lt;li&gt;Most of Us Combine Personality Traits from Different Genders&lt;/li&gt;&lt;li&gt;Predatory Journals That Publish Shoddy Research Put People's Lives at Risk&lt;/li&gt;&lt;/ul&gt;
-                Popular Science. Monthly magazine. Should be downloaded around the middle of each month.
-                </content>
-<updated>2022-05-16T13:00:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="scientific-american-2022-05-16.mobi"/>
 </entry>
 <entry>
 <id>Asian Review of Books</id>
