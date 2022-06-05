@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-06-05T19:15:22Z</updated>
+<updated>2022-06-05T23:16:45Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>Vox</id>
+<title>Vox: 5 Jun, 2022</title>
+<summary>Vox: 5 Jun, 2022 published at 2022-06-05 21:15PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;What does the Second Amendment mean in 2022?&lt;/li&gt;&lt;li&gt;What would it mean to treat guns the way we treat cars?&lt;/li&gt;&lt;li&gt;Cornel West’s pragmatic America&lt;/li&gt;&lt;li&gt;How Ukraine’s new weapons reflect a very different battlefield&lt;/li&gt;&lt;li&gt;New York’s attorney general calls out Verizon for spreading Legionnaires’ disease&lt;/li&gt;&lt;li&gt;Joe Biden’s new go-to tool to fight inflation? The deficit.&lt;/li&gt;&lt;li&gt;Business is booming for crypto scammers&lt;/li&gt;&lt;li&gt;100 days in, Russia’s war is now a brutal offensive in eastern Ukraine&lt;/li&gt;&lt;li&gt;Blue states are responding to Uvalde&lt;/li&gt;&lt;li&gt;The Supreme Court is about to rule on another scary voting rights case&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-06-05T21:15:49Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-06-05.mobi"/>
+</entry>
 <entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 5 Jun, 2022</title>
@@ -21,21 +36,6 @@
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-06-05.mobi"/>
-</entry>
-<entry>
-<id>Vox</id>
-<title>Vox: 5 Jun, 2022</title>
-<summary>Vox: 5 Jun, 2022 published at 2022-06-05 13:30PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;What would it mean to treat guns the way we treat cars?&lt;/li&gt;&lt;li&gt;Cornel West’s pragmatic America&lt;/li&gt;&lt;li&gt;How Ukraine’s new weapons reflect a very different battlefield&lt;/li&gt;&lt;li&gt;New York’s attorney general calls out Verizon for spreading Legionnaires’ disease&lt;/li&gt;&lt;li&gt;Joe Biden’s new go-to tool to fight inflation? The deficit.&lt;/li&gt;&lt;li&gt;Business is booming for crypto scammers&lt;/li&gt;&lt;li&gt;100 days in, Russia’s war is now a brutal offensive in eastern Ukraine&lt;/li&gt;&lt;li&gt;Blue states are responding to Uvalde&lt;/li&gt;&lt;li&gt;The Supreme Court is about to rule on another scary voting rights case&lt;/li&gt;&lt;li&gt;One Good Thing: 107 minutes of Wall Street traders behaving badly&lt;/li&gt;&lt;li&gt;Fire Island is a sharp look at queer desire, tucked into a sweet rom-com&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-06-05T13:30:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-06-05.mobi"/>
 </entry>
 <entry>
 <id>The Diplomat</id>
