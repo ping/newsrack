@@ -26,6 +26,12 @@ h2.category {
     font-size: 1.2rem;
     border-bottom: 1px solid #444;
     font-weight: 500;
+
+    .opds {
+        float: right;
+        font-size: 0.8rem;
+        margin-top: 0.3rem;
+    }
 }
 
 .books {

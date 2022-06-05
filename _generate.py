@@ -152,10 +152,15 @@ for recipe in recipes:
                 if mobj:
                     recipe.name = mobj.group("name")
                 else:
-                    logger.warning(f"Unable to extract recipe name")
-        except Exception as err:
-            logger.error(f"Error getting recipe name: {err}")
-            logger.error("Please set a recipe name.")
+                    logger.warning(f"Unable to extract recipe name for {recipe}.")
+        except FileNotFoundError:
+            logger.error(
+                f"Built-in recipes must be configured with a recipe name: {recipe.recipe}"
+            )
+            continue
+        except Exception as err:  # noqa
+            logger.exception("Error getting recipe name")
+            logger.error(f"Please set a recipe name for {recipe}.")
             continue
 
     recipe.job_log = job_log
@@ -465,6 +470,8 @@ for category, publications in sorted(generated.items(), key=sort_category_key):
         )
     category_recipes = [r for r in recipes if r.category == category]
     for r in category_recipes:
+        if not r.name:
+            continue
         success = False
         for recipe_name, _ in generated_items:
             if recipe_name == r.name:
@@ -476,7 +483,8 @@ for category, publications in sorted(generated.items(), key=sort_category_key):
                 <span class="pub-date">Not available</span></li>"""
             )
 
-    listing += f"""<h2 class="category">{category}</h2>
+    listing += f"""<h2 class="category">{category}
+    <a class="opds" title="OPDS for {category.title()}" href="{category}.xml">OPDS</a></h2>
     <ol class="books">{"".join(publication_listing)}</ol>"""
 
 with open(os.path.join(publish_folder, "index.json"), "w", encoding="utf-8") as f_in:
@@ -511,73 +519,85 @@ main_doc = minidom.Document()
 main_feed = init_feed(main_doc, publish_site, "kindle-newsrack", "Kindle News Rack")
 
 for category, publications in sorted(generated.items(), key=sort_category_key):
+
+    cat_doc = minidom.Document()
+    cat_feed = init_feed(
+        cat_doc, publish_site, "kindle-newsrack", f"Kindle News Rack - {category}"
+    )
+
     generated_items = [(k, v) for k, v in publications.items() if v]
     publication_listing = []
     for recipe_name, books in sorted(
         generated_items, key=lambda item: item[1][0].published_dt, reverse=True
     ):
         book_links = []
-        entry = main_doc.createElement("entry")
-        entry.appendChild(simple_tag(main_doc, "id", recipe_name))
-        entry.appendChild(
-            simple_tag(
-                main_doc,
-                "title",
-                f"{books[0].title or recipe_name}",
-            )
-        )
-        entry.appendChild(
-            simple_tag(
-                main_doc,
-                "summary",
-                f"{books[0].title or recipe_name} published at {books[0].published_dt:%Y-%m-%d %H:%M%p}.",
-            )
-        )
-        entry.appendChild(
-            simple_tag(
-                main_doc,
-                "content",
-                f"{books[0].description or recipe_name}",
-                attributes={"type": "text/html"},
-            )
-        )
-        entry.appendChild(
-            simple_tag(
-                main_doc,
-                "updated",
-                f"{books[0].published_dt:%Y-%m-%dT%H:%M:%SZ}",
-            )
-        )
-        entry.appendChild(
-            simple_tag(
-                main_doc,
-                "category",
-                attributes={"label": category.title()},
-            )
-        )
-        author_tag = simple_tag(main_doc, "author")
-        author_tag.appendChild(simple_tag(main_doc, "name", category.title()))
-        entry.appendChild(author_tag)
-
-        for book in books:
-            book_ext = os.path.splitext(book.file)[1]
-            link_type = (
-                extension_contenttype_map.get(book_ext) or "application/octet-stream"
-            )
-
+        for doc, feed in [(main_doc, main_feed), (cat_doc, cat_feed)]:
+            entry = doc.createElement("entry")
+            entry.appendChild(simple_tag(doc, "id", recipe_name))
             entry.appendChild(
                 simple_tag(
-                    main_doc,
-                    "link",
-                    attributes={
-                        "rel": "http://opds-spec.org/acquisition",
-                        "type": link_type,
-                        "href": f"{os.path.basename(book.rename_to)}",
-                    },
+                    doc,
+                    "title",
+                    f"{books[0].title or recipe_name}",
                 )
             )
+            entry.appendChild(
+                simple_tag(
+                    doc,
+                    "summary",
+                    f"{books[0].title or recipe_name} published at {books[0].published_dt:%Y-%m-%d %H:%M%p}.",
+                )
+            )
+            entry.appendChild(
+                simple_tag(
+                    doc,
+                    "content",
+                    f"{books[0].description or recipe_name}",
+                    attributes={"type": "text/html"},
+                )
+            )
+            entry.appendChild(
+                simple_tag(
+                    doc,
+                    "updated",
+                    f"{books[0].published_dt:%Y-%m-%dT%H:%M:%SZ}",
+                )
+            )
+            entry.appendChild(
+                simple_tag(
+                    doc,
+                    "category",
+                    attributes={"label": category.title()},
+                )
+            )
+            author_tag = simple_tag(doc, "author")
+            author_tag.appendChild(simple_tag(doc, "name", category.title()))
+            entry.appendChild(author_tag)
 
-        main_feed.appendChild(entry)
+            for book in books:
+                book_ext = os.path.splitext(book.file)[1]
+                link_type = (
+                    extension_contenttype_map.get(book_ext)
+                    or "application/octet-stream"
+                )
+
+                entry.appendChild(
+                    simple_tag(
+                        doc,
+                        "link",
+                        attributes={
+                            "rel": "http://opds-spec.org/acquisition",
+                            "type": link_type,
+                            "href": f"{os.path.basename(book.rename_to)}",
+                        },
+                    )
+                )
+
+            feed.appendChild(entry)
+
+    opds_xml_path = os.path.join(publish_folder, f"{category}.xml")
+    with open(opds_xml_path, "wb") as f:
+        f.write(cat_doc.toprettyxml(encoding="utf-8", indent=""))
 
 opds_xml_path = os.path.join(publish_folder, catalog_path)
 with open(opds_xml_path, "wb") as f:
