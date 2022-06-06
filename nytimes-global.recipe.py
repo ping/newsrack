@@ -16,6 +16,7 @@ class NYTimesGlobal(BasicNewsRecipe):
     language = "en"
     __author__ = "ping"
     publication_type = "newspaper"
+    description = "News from the New York Times"
     masthead_url = "https://mwcm.nyt.com/.resources/mkt-wcm/dist/libs/assets/img/logo-nyt-header.svg"
 
     oldest_article = 1  # days

@@ -10,6 +10,7 @@ class TaipeiTimes(BasicNewsRecipe):
     language = "en"
     __author__ = "ping"
     publication_type = "newspaper"
+    description = "News from the Taipei Times"
     masthead_url = "https://www.taipeitimes.com/assets/images/logo.gif"
 
     oldest_article = 1  # days
