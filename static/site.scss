@@ -110,9 +110,20 @@ footer {
     border-top: 1px solid #555555;
     font-size: 0.8rem;
     text-align: center;
-    .refreshed-info {
+
+    .meta {
         margin-top: 0.2rem;
         font-size: 0.7rem;
+
+        .refreshed-info {
+            display: inline-block;
+            margin-left: 0.2rem;
+        }
+
+        .git img {
+            width: 0.7rem;
+            height: 0.7rem;
+        }
     }
 }
 

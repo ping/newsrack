@@ -20,9 +20,12 @@
         {listing}
     </main>
     <footer>
-        Optimised for the Kindle browser. <a href="{catalog}">OPDS</a>. {source_link}
-        <div class="refreshed-info">
-            Generated <span id="refreshed_dt" data-refreshed-date="{refreshed_ts}">at {refreshed_dt:%-d %B, %Y %-I:%M%p %z}</span>, and took about {elapsed}.
+        Optimised for the Kindle browser. <a href="{catalog}">Combined OPDS</a>.
+        <div class="meta">
+            {source_link}
+            <div class="refreshed-info">
+                Generated <span id="refreshed_dt" data-refreshed-date="{refreshed_ts}">at {refreshed_dt:%-d %B, %Y %-I:%M%p %z}</span>, and took about {elapsed}.
+            </div>
         </div>
     </footer>
     <script type="application/javascript">{js}</script>
