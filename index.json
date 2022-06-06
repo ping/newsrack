@@ -2,7 +2,7 @@
 "Asahi Shimbun": [
 {
 "filename": "asahi-shimbun-2022-06-06.mobi",
-"published": 1654489560.0
+"published": 1654492800.0
 }
 ],
 "Asian Review of Books": [
@@ -26,13 +26,13 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-06-06.mobi",
-"published": 1654489907.0
+"published": 1654497260.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-06-06.mobi",
-"published": 1654490907.0
+"published": 1654496135.0
 }
 ],
 "Economist": [
@@ -44,7 +44,7 @@
 "Financial Times": [
 {
 "filename": "ft-2022-06-06.mobi",
-"published": 1654488816.0
+"published": 1654498325.0
 }
 ],
 "Five Books": [
@@ -56,14 +56,19 @@
 "Guardian": [
 {
 "filename": "guardian-2022-06-06.mobi",
-"published": 1654489057.0
+"published": 1654498436.0
 }
 ],
-"JoongAng Daily": [],
+"JoongAng Daily": [
+{
+"filename": "joongang-daily-2022-06-06.mobi",
+"published": 1654499115.0
+}
+],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-06-06.mobi",
-"published": 1654489694.0
+"published": 1654498304.0
 }
 ],
 "London Review of Books": [
@@ -87,25 +92,25 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-06-06.mobi",
-"published": 1654490628.0
+"published": 1654498810.0
 }
 ],
 "NY Times (Print)": [
 {
-"filename": "nytimes-print-2022-06-05.mobi",
-"published": 1654387200.0
+"filename": "nytimes-print-2022-06-06.mobi",
+"published": 1654473600.0
 }
 ],
 "NY Times Books": [
 {
-"filename": "nytimes-books-2022-06-03.mobi",
-"published": 1654295160.0
+"filename": "nytimes-books-2022-06-05.mobi",
+"published": 1654419617.0
 }
 ],
 "POLITICO Magazine": [
 {
-"filename": "politico-magazine-2022-06-03.mobi",
-"published": 1654284551.0
+"filename": "politico-magazine-2022-06-05.mobi",
+"published": 1654426800.0
 }
 ],
 "Scientific American": [
@@ -117,7 +122,7 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-06-06.mobi",
-"published": 1654491044.0
+"published": 1654498404.0
 }
 ],
 "Taipei Times": [
@@ -147,7 +152,7 @@
 "Washington Post": [
 {
 "filename": "wapo-2022-06-06.mobi",
-"published": 1654489720.0
+"published": 1654499062.0
 }
 ],
 "Wired Magazine": [
@@ -156,5 +161,5 @@
 "published": 1654164000.0
 }
 ],
-"_generated": 1654491891
+"_generated": 1654499728
 }
