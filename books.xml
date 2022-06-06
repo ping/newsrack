@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-06T11:15:24Z</updated>
+<updated>2022-06-06T15:16:49Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>London Review of Books</id>
+<title>London Review of Books: 9 Jun, 2022</title>
+<summary>London Review of Books: 9 Jun, 2022 published at 2022-06-06 15:05PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Madeleine Schwartz  - ‘You got up and you died’&lt;/li&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Miranda Carter  - My Castaway This Week&lt;/li&gt;&lt;li&gt;Robin Bunce and Paul Field  - Jubilee 1977&lt;/li&gt;&lt;li&gt;Jonathan Meades  - The Palace Papers&lt;/li&gt;&lt;li&gt;William Davies  - The Return of Inequality: Social Change and the Weight of the Past  / Colonialism and Modern Social Theory  / A Brief History of Equality&lt;/li&gt;&lt;li&gt;Frances Morgan  - At Serpentine North: ‘Radio Ballads’&lt;/li&gt;&lt;li&gt;Colin Burrow  - Here and There: Sites of Philosophy&lt;/li&gt;&lt;li&gt;Michael Ondaatje  - Poem: ‘The Leg Glance’&lt;/li&gt;&lt;li&gt;Peter Howarth  - How to Wash a Heart&lt;/li&gt;&lt;li&gt;Hugh Pennington  - Monkeypox&lt;/li&gt;&lt;li&gt;Jo Applin  - The Flowering: The Autobiography of Judy Chicago&lt;/li&gt;&lt;li&gt;Diarmaid MacCulloch  - Zwingli: God’s Armed Prophet&lt;/li&gt;&lt;li&gt;Alexander Clapp  - The Greek Revolution: 1821 and the Making of Modern Europe&lt;/li&gt;&lt;li&gt;Jen Stout  - Short Cuts: In Kharkiv&lt;/li&gt;&lt;li&gt;Dennis Duncan  - The Themerson Archive Catalogue&lt;/li&gt;&lt;li&gt;Sarah Resnick  - The Candy House&lt;/li&gt;&lt;li&gt;Rosina Buckland  - On Kyōsai&lt;/li&gt;&lt;li&gt;J. Robert Lennon  - A Carnival of Snackery: Diaries 2003-20&lt;/li&gt;&lt;li&gt;Ben Crair  - The Largest Avian Radiation: The Evolution of Perching Birds, or the Order Passeriformes&lt;/li&gt;&lt;li&gt;Tom Shippey  - The Dragon in the West: From Ancient Myth to Modern Legend&lt;/li&gt;&lt;li&gt;Stephanie Burt  - Diary: D&amp;D&lt;/li&gt;&lt;/ul&gt;
+                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
+                </content>
+<updated>2022-06-06T15:05:21Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-06-06.mobi"/>
+</entry>
 <entry>
 <id>Asian Review of Books</id>
 <title>Asian Review of Books: 5 Jun, 2022</title>
@@ -36,21 +51,6 @@
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-06-05.mobi"/>
-</entry>
-<entry>
-<id>London Review of Books</id>
-<title>London Review of Books: 9 Jun, 2022</title>
-<summary>London Review of Books: 9 Jun, 2022 published at 2022-06-01 13:41PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Madeleine Schwartz  - ‘You got up and you died’&lt;/li&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Miranda Carter  - My Castaway This Week&lt;/li&gt;&lt;li&gt;Robin Bunce and Paul Field  - Jubilee 1977&lt;/li&gt;&lt;li&gt;Jonathan Meades  - The Palace Papers&lt;/li&gt;&lt;li&gt;William Davies  - The Return of Inequality: Social Change and the Weight of the Past  / Colonialism and Modern Social Theory  / A Brief History of Equality&lt;/li&gt;&lt;li&gt;Frances Morgan  - At Serpentine North: ‘Radio Ballads’&lt;/li&gt;&lt;li&gt;Colin Burrow  - Here and There: Sites of Philosophy&lt;/li&gt;&lt;li&gt;Michael Ondaatje  - Poem: ‘The Leg Glance’&lt;/li&gt;&lt;li&gt;Peter Howarth  - How to Wash a Heart&lt;/li&gt;&lt;li&gt;Hugh Pennington  - Monkeypox&lt;/li&gt;&lt;li&gt;Jo Applin  - The Flowering: The Autobiography of Judy Chicago&lt;/li&gt;&lt;li&gt;Diarmaid MacCulloch  - Zwingli: God’s Armed Prophet&lt;/li&gt;&lt;li&gt;Alexander Clapp  - The Greek Revolution: 1821 and the Making of Modern Europe&lt;/li&gt;&lt;li&gt;Jen Stout  - Short Cuts: In Kharkiv&lt;/li&gt;&lt;li&gt;Dennis Duncan  - The Themerson Archive Catalogue&lt;/li&gt;&lt;li&gt;Sarah Resnick  - The Candy House&lt;/li&gt;&lt;li&gt;Rosina Buckland  - On Kyōsai&lt;/li&gt;&lt;li&gt;J. Robert Lennon  - A Carnival of Snackery: Diaries 2003-20&lt;/li&gt;&lt;li&gt;Ben Crair  - The Largest Avian Radiation: The Evolution of Perching Birds, or the Order Passeriformes&lt;/li&gt;&lt;li&gt;Tom Shippey  - The Dragon in the West: From Ancient Myth to Modern Legend&lt;/li&gt;&lt;li&gt;Stephanie Burt  - Diary: D&amp;D&lt;/li&gt;&lt;/ul&gt;
-                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
-                </content>
-<updated>2022-06-01T13:41:12Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-06-01.mobi"/>
 </entry>
 <entry>
 <id>Five Books</id>
