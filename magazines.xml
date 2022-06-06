@@ -2,40 +2,40 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-06-06T19:18:15Z</updated>
+<updated>2022-06-06T23:22:07Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
-<id>The Atlantic</id>
-<title>The Atlantic: 6 Jun, 2022</title>
-<summary>The Atlantic: 6 Jun, 2022 published at 2022-06-06 18:52PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Publishing Photos of Dead Children Could Backfire&lt;/li&gt;&lt;li&gt;America’s Duty to Help the World’s Vulnerable: 13 Reader Views&lt;/li&gt;&lt;li&gt;Meta Doesn’t Mean What You Think It Does&lt;/li&gt;&lt;li&gt;Cheese-Rolling Returns to Cooper’s Hill&lt;/li&gt;&lt;li&gt;The Teens Slipping Through the Cracks on Dating Apps&lt;/li&gt;&lt;li&gt;‘Parents Are Not All Good and All Bad’&lt;/li&gt;&lt;li&gt;Listening to America’s Kids After Uvalde&lt;/li&gt;&lt;li&gt;Why My Parents Chose Life&lt;/li&gt;&lt;li&gt;The Club That No One Wants to Join&lt;/li&gt;&lt;li&gt;American Rasputin&lt;/li&gt;&lt;li&gt;A Chilling Assassination in Wisconsin&lt;/li&gt;&lt;li&gt;The Past Still Needs Me&lt;/li&gt;&lt;li&gt;The Missing Part of America’s Pandemic Response&lt;/li&gt;&lt;li&gt;Trauma Is Everywhere. Write About It Anyway.&lt;/li&gt;&lt;li&gt;Sharon McMahon Has No Use for Rage-Baiting&lt;/li&gt;&lt;li&gt;Overturning Roe Would Be Just the Beginning&lt;/li&gt;&lt;li&gt;What Avril Lavigne Has Always Understood About Growing Up&lt;/li&gt;&lt;li&gt;I Helped Women Get Abortions in Pre-Roe America&lt;/li&gt;&lt;li&gt;The Uvalde Police Chose Dishonor&lt;/li&gt;&lt;li&gt;Pennsylvania Becomes the Land of Oz&lt;/li&gt;&lt;li&gt;Why This COVID Wave Feels Different&lt;/li&gt;&lt;li&gt;The Bittersweet Silliness of Hulu’s Fire Island&lt;/li&gt;&lt;li&gt;We Should Have Seen Monkeypox Coming&lt;/li&gt;&lt;li&gt;Learning How to Grieve in Public&lt;/li&gt;&lt;li&gt;The Death of Nonpartisan Presidential History&lt;/li&gt;&lt;li&gt;The Lessons of Newtown for the Future of Uvalde&lt;/li&gt;&lt;li&gt;No, Ann Coulter, I Am Not Responsible for the ‘Great Replacement’ Theory&lt;/li&gt;&lt;li&gt;The Revolt Against Homelessness&lt;/li&gt;&lt;li&gt;The Abortion-Rights Message That Some Activists Hate&lt;/li&gt;&lt;li&gt;Predictions for a Post-Roe America&lt;/li&gt;&lt;li&gt;America’s Blue-Red Divide Is About to Get Starker&lt;/li&gt;&lt;li&gt;The GOP’s Strange Turn Against Rape Exceptions&lt;/li&gt;&lt;li&gt;A Sci-fi Film With a Lighthearted, Apocalyptic Vision&lt;/li&gt;&lt;li&gt;Stranger Things Won’t Save Netflix&lt;/li&gt;&lt;li&gt;The Books That Taught a Debate Champion How to Argue&lt;/li&gt;&lt;li&gt;Standing Now Counts as Exercise&lt;/li&gt;&lt;li&gt;The Ideology of the Bicycle&lt;/li&gt;&lt;li&gt;Airlines’ Premium-Economy Trick&lt;/li&gt;&lt;li&gt;Photos of the Week: Sky Bridge, Spelling Bee, Squirrel Scuffle&lt;/li&gt;&lt;li&gt;Prince Louis at the Queen’s Jubilee Flyover: A Journey&lt;/li&gt;&lt;li&gt;What the Veneration of Gandhi’s Killer Says About India&lt;/li&gt;&lt;li&gt;The End of Shanghai’s Two-Month COVID Lockdown&lt;/li&gt;&lt;li&gt;‘It’s Extremely Important That We Don’t Forget the Brutality’&lt;/li&gt;&lt;li&gt;Photos of the Week: Firefighting Goats, Lake Chair, Saint Javelin&lt;/li&gt;&lt;li&gt;America’s Need for Speed Never Ends Well&lt;/li&gt;&lt;li&gt;Why Fangirls Scream&lt;/li&gt;&lt;li&gt;The Viral Online Challenge Is Never Coming Back&lt;/li&gt;&lt;li&gt;The Fight for &lt;em&gt;Roe&lt;/em&gt;&lt;/li&gt;&lt;li&gt;The Abortion Backup Plan No One Is Talking About&lt;/li&gt;&lt;li&gt;The Sit-Up Is Over&lt;/li&gt;&lt;li&gt;You Are Going to Get COVID Again … And Again … And Again&lt;/li&gt;&lt;li&gt;An ER Doctor’s ‘Third Way’ Approach to the Gun Crisis&lt;/li&gt;&lt;li&gt;Students Should Refuse to Go Back to School&lt;/li&gt;&lt;li&gt;What Really Happens When Mercury Is in Retrograde&lt;/li&gt;&lt;li&gt;Texas Is Alienating Abortion Moderates&lt;/li&gt;&lt;li&gt;The Potential of a ‘Hot War’ Between the U.S. and Russia&lt;/li&gt;&lt;li&gt;‘Everything Is Terrible, but I’m Fine’&lt;/li&gt;&lt;li&gt;14 Reader Views on Guns&lt;/li&gt;&lt;li&gt;‘I’m Very Conflicted’: Readers Share Complex Views on Abortion&lt;/li&gt;&lt;li&gt;20 Bold Takes on the Roe Draft Opinion&lt;/li&gt;&lt;/ul&gt;
-                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
-                </content>
-<updated>2022-06-06T18:52:57Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-06-06.mobi"/>
-</entry>
-<entry>
 <id>Vox</id>
 <title>Vox: 6 Jun, 2022</title>
-<summary>Vox: 6 Jun, 2022 published at 2022-06-06 18:00PM.</summary>
+<summary>Vox: 6 Jun, 2022 published at 2022-06-06 21:20PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The Supreme Court gives workers a backhanded victory&lt;/li&gt;&lt;li&gt;Guns do more than kill&lt;/li&gt;&lt;li&gt;What the deepfake controversy about this Chinese actor says about conspiratorial thinking&lt;/li&gt;&lt;li&gt;The end of history is history&lt;/li&gt;&lt;li&gt;The environmental limits of eating local&lt;/li&gt;&lt;li&gt;When hospitals value nurses as much as jello&lt;/li&gt;&lt;li&gt;Money is emotional — but personal finance advice rarely accounts for that&lt;/li&gt;&lt;li&gt;The case for fewer friends&lt;/li&gt;&lt;li&gt;How to help teens have a peaceful relationship with food&lt;/li&gt;&lt;li&gt;What does the Second Amendment mean in 2022?&lt;/li&gt;&lt;li&gt;Vox’s Sean Illing to Take the Helm as Host of Vox Conversations&lt;/li&gt;&lt;li&gt;Vox launches a new section, Even Better, focused on direct, actionable advice for living a better life&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Boris Johnson barely survives a challenge to his leadership&lt;/li&gt;&lt;li&gt;What Democrats can learn from Tuesday’s California primaries&lt;/li&gt;&lt;li&gt;The Supreme Court gives workers a backhanded victory&lt;/li&gt;&lt;li&gt;Guns do more than kill&lt;/li&gt;&lt;li&gt;What the deepfake controversy about this Chinese actor says about conspiratorial thinking&lt;/li&gt;&lt;li&gt;The end of history is history&lt;/li&gt;&lt;li&gt;The environmental limits of eating local&lt;/li&gt;&lt;li&gt;When hospitals value nurses as much as jello&lt;/li&gt;&lt;li&gt;Money is emotional — but personal finance advice rarely accounts for that&lt;/li&gt;&lt;li&gt;The case for fewer friends&lt;/li&gt;&lt;li&gt;Vox’s Sean Illing to Take the Helm as Host of Vox Conversations&lt;/li&gt;&lt;li&gt;Vox launches a new section, Even Better, focused on direct, actionable advice for living a better life&lt;/li&gt;&lt;/ul&gt;
                 General interest news site
                 </content>
-<updated>2022-06-06T18:00:00Z</updated>
+<updated>2022-06-06T21:20:00Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-06-06.mobi"/>
+</entry>
+<entry>
+<id>The Atlantic</id>
+<title>The Atlantic: 6 Jun, 2022</title>
+<summary>The Atlantic: 6 Jun, 2022 published at 2022-06-06 20:23PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Boris Johnson Has Only Delayed the Inevitable&lt;/li&gt;&lt;li&gt;Publishing Photos of Dead Children Could Backfire&lt;/li&gt;&lt;li&gt;America’s Duty to Help the World’s Vulnerable: 13 Reader Views&lt;/li&gt;&lt;li&gt;Meta Doesn’t Mean What You Think It Does&lt;/li&gt;&lt;li&gt;Cheese-Rolling Returns to Cooper’s Hill&lt;/li&gt;&lt;li&gt;The Teens Slipping Through the Cracks on Dating Apps&lt;/li&gt;&lt;li&gt;‘Parents Are Not All Good and All Bad’&lt;/li&gt;&lt;li&gt;Listening to America’s Kids After Uvalde&lt;/li&gt;&lt;li&gt;Why My Parents Chose Life&lt;/li&gt;&lt;li&gt;The Club That No One Wants to Join&lt;/li&gt;&lt;li&gt;American Rasputin&lt;/li&gt;&lt;li&gt;A Chilling Assassination in Wisconsin&lt;/li&gt;&lt;li&gt;The Past Still Needs Me&lt;/li&gt;&lt;li&gt;The Missing Part of America’s Pandemic Response&lt;/li&gt;&lt;li&gt;Trauma Is Everywhere. Write About It Anyway.&lt;/li&gt;&lt;li&gt;Sharon McMahon Has No Use for Rage-Baiting&lt;/li&gt;&lt;li&gt;Overturning Roe Would Be Just the Beginning&lt;/li&gt;&lt;li&gt;What Avril Lavigne Has Always Understood About Growing Up&lt;/li&gt;&lt;li&gt;I Helped Women Get Abortions in Pre-Roe America&lt;/li&gt;&lt;li&gt;The Uvalde Police Chose Dishonor&lt;/li&gt;&lt;li&gt;Pennsylvania Becomes the Land of Oz&lt;/li&gt;&lt;li&gt;Why This COVID Wave Feels Different&lt;/li&gt;&lt;li&gt;The Bittersweet Silliness of Hulu’s Fire Island&lt;/li&gt;&lt;li&gt;We Should Have Seen Monkeypox Coming&lt;/li&gt;&lt;li&gt;Learning How to Grieve in Public&lt;/li&gt;&lt;li&gt;The Lessons of Newtown for the Future of Uvalde&lt;/li&gt;&lt;li&gt;No, Ann Coulter, I Am Not Responsible for the ‘Great Replacement’ Theory&lt;/li&gt;&lt;li&gt;The Revolt Against Homelessness&lt;/li&gt;&lt;li&gt;The Abortion-Rights Message That Some Activists Hate&lt;/li&gt;&lt;li&gt;Predictions for a Post-Roe America&lt;/li&gt;&lt;li&gt;America’s Blue-Red Divide Is About to Get Starker&lt;/li&gt;&lt;li&gt;The GOP’s Strange Turn Against Rape Exceptions&lt;/li&gt;&lt;li&gt;A Sci-fi Film With a Lighthearted, Apocalyptic Vision&lt;/li&gt;&lt;li&gt;Stranger Things Won’t Save Netflix&lt;/li&gt;&lt;li&gt;The Books That Taught a Debate Champion How to Argue&lt;/li&gt;&lt;li&gt;Standing Now Counts as Exercise&lt;/li&gt;&lt;li&gt;The Ideology of the Bicycle&lt;/li&gt;&lt;li&gt;Airlines’ Premium-Economy Trick&lt;/li&gt;&lt;li&gt;Photos of the Week: Sky Bridge, Spelling Bee, Squirrel Scuffle&lt;/li&gt;&lt;li&gt;Prince Louis at the Queen’s Jubilee Flyover: A Journey&lt;/li&gt;&lt;li&gt;What the Veneration of Gandhi’s Killer Says About India&lt;/li&gt;&lt;li&gt;The End of Shanghai’s Two-Month COVID Lockdown&lt;/li&gt;&lt;li&gt;‘It’s Extremely Important That We Don’t Forget the Brutality’&lt;/li&gt;&lt;li&gt;Photos of the Week: Firefighting Goats, Lake Chair, Saint Javelin&lt;/li&gt;&lt;li&gt;America’s Need for Speed Never Ends Well&lt;/li&gt;&lt;li&gt;Why Fangirls Scream&lt;/li&gt;&lt;li&gt;The Viral Online Challenge Is Never Coming Back&lt;/li&gt;&lt;li&gt;The Fight for &lt;em&gt;Roe&lt;/em&gt;&lt;/li&gt;&lt;li&gt;The Abortion Backup Plan No One Is Talking About&lt;/li&gt;&lt;li&gt;The Sit-Up Is Over&lt;/li&gt;&lt;li&gt;You Are Going to Get COVID Again … And Again … And Again&lt;/li&gt;&lt;li&gt;An ER Doctor’s ‘Third Way’ Approach to the Gun Crisis&lt;/li&gt;&lt;li&gt;Students Should Refuse to Go Back to School&lt;/li&gt;&lt;li&gt;What Really Happens When Mercury Is in Retrograde&lt;/li&gt;&lt;li&gt;Texas Is Alienating Abortion Moderates&lt;/li&gt;&lt;li&gt;The Potential of a ‘Hot War’ Between the U.S. and Russia&lt;/li&gt;&lt;li&gt;‘Everything Is Terrible, but I’m Fine’&lt;/li&gt;&lt;li&gt;14 Reader Views on Guns&lt;/li&gt;&lt;li&gt;‘I’m Very Conflicted’: Readers Share Complex Views on Abortion&lt;/li&gt;&lt;li&gt;20 Bold Takes on the Roe Draft Opinion&lt;/li&gt;&lt;/ul&gt;
+                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
+                </content>
+<updated>2022-06-06T20:23:07Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-06-06.mobi"/>
 </entry>
 <entry>
 <id>The Diplomat</id>
