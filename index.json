@@ -1,8 +1,8 @@
 {
 "Asahi Shimbun": [
 {
-"filename": "asahi-shimbun-2022-06-06.mobi",
-"published": 1654559400.0
+"filename": "asahi-shimbun-2022-06-07.mobi",
+"published": 1654581720.0
 }
 ],
 "Asian Review of Books": [
@@ -26,13 +26,13 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-06-07.mobi",
-"published": 1654573233.0
+"published": 1654585064.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-06-07.mobi",
-"published": 1654571484.0
+"published": 1654585111.0
 }
 ],
 "Economist": [
@@ -44,7 +44,7 @@
 "Financial Times": [
 {
 "filename": "ft-2022-06-07.mobi",
-"published": 1654570801.0
+"published": 1654584310.0
 }
 ],
 "Five Books": [
@@ -56,19 +56,19 @@
 "Guardian": [
 {
 "filename": "guardian-2022-06-07.mobi",
-"published": 1654571421.0
+"published": 1654584441.0
 }
 ],
 "JoongAng Daily": [
 {
 "filename": "joongang-daily-2022-06-07.mobi",
-"published": 1654572140.0
+"published": 1654585830.0
 }
 ],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-06-07.mobi",
-"published": 1654569159.0
+"published": 1654585444.0
 }
 ],
 "London Review of Books": [
@@ -92,13 +92,13 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-06-07.mobi",
-"published": 1654572363.0
+"published": 1654585585.0
 }
 ],
 "NY Times (Print)": [
 {
-"filename": "nytimes-print-2022-06-06.mobi",
-"published": 1654473600.0
+"filename": "nytimes-print-2022-06-07.mobi",
+"published": 1654560000.0
 }
 ],
 "NY Times Books": [
@@ -122,7 +122,7 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-06-07.mobi",
-"published": 1654572572.0
+"published": 1654584837.0
 }
 ],
 "Taipei Times": [
@@ -134,7 +134,7 @@
 "The Third Pole": [
 {
 "filename": "thirdpole-2022-06-06.mobi",
-"published": 1654519442.0
+"published": 1654535461.0
 }
 ],
 "TIME": [
@@ -152,7 +152,7 @@
 "Washington Post": [
 {
 "filename": "wapo-2022-06-07.mobi",
-"published": 1654573188.0
+"published": 1654585925.0
 }
 ],
 "Wired Magazine": [
@@ -161,5 +161,5 @@
 "published": 1654164000.0
 }
 ],
-"_generated": 1654574436
+"_generated": 1654586566
 }
