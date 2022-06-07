@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-06-06T23:22:07Z</updated>
+<updated>2022-06-07T04:00:36Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>The Diplomat</id>
+<title>The Diplomat: 7 Jun, 2022</title>
+<summary>The Diplomat: 7 Jun, 2022 published at 2022-06-07 03:11AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Provisional Results Give Cambodian Ruling Party Victory in Local Elections&lt;/li&gt;&lt;li&gt;Arakan Army on Collision Course with the Military in Myanmar’s Rakhine State&lt;/li&gt;&lt;li&gt;China Rejects Canadian, Australian Charges of Unsafe Air Intercepts&lt;/li&gt;&lt;li&gt;Derek Chollet on Shangri-La Dialogue and Deepening Indo-Pacific Partnerships&lt;/li&gt;&lt;li&gt;Is China Hitting Back at India’s INSTC Plans?&lt;/li&gt;&lt;li&gt;North Korea Launches 8 Ballistic Missiles&lt;/li&gt;&lt;li&gt;Kazakhstan Leaves ‘Elbasy’ Behind, Approves Constitutional Referendum&lt;/li&gt;&lt;li&gt;India-Vietnam Ties Deepen in Dynamic Indo-Pacific&lt;/li&gt;&lt;li&gt;Depot Fire Latest to Spotlight Bangladesh Industrial Safety&lt;/li&gt;&lt;li&gt;Sri Lanka Holds its Breath as New PM Fights to Save Economy&lt;/li&gt;&lt;li&gt;Myanmar Junta to Carry out Death Sentences Against Activist, NLD Lawmaker&lt;/li&gt;&lt;li&gt;It’s Time for Australia to Take a Fresh Look at Indonesia&lt;/li&gt;&lt;li&gt;Myanmar’s Other Civilian Deaths&lt;/li&gt;&lt;li&gt;Timor-Leste Signs Four Cooperation Agreements With China&lt;/li&gt;&lt;li&gt;As Expected, Cambodia’s Ruling Party Claims ‘Sweeping’ Victory&lt;/li&gt;&lt;li&gt;The World Has Not Learnt the Lessons of the Tiananmen Square Massacre&lt;/li&gt;&lt;li&gt;Taliban Faces Threat From Islamic State, New Resistance&lt;/li&gt;&lt;li&gt;China and Australia’s Dueling Pacific Tours Make Final Stops&lt;/li&gt;&lt;li&gt;Uzbekistan’s Journalists: ‘Censorship in Our Minds and Hearts’&lt;/li&gt;&lt;li&gt;Why Are Rohingya Refugees Returning From India To Bangladesh?&lt;/li&gt;&lt;li&gt;What China Gets Wrong About Southeast Asia&lt;/li&gt;&lt;li&gt;Fuel Shortages Threatens Rural Crisis in Laos&lt;/li&gt;&lt;li&gt;Is Indonesia’s Grand Experiment with Democracy Coming to an End?&lt;/li&gt;&lt;li&gt;Why Japan Is Getting Tough on Russia Now&lt;/li&gt;&lt;li&gt;Myanmar’s Total Displaced Population Tops 1 Million, Says UN&lt;/li&gt;&lt;li&gt;Uzbekistan’s Soviet Legacy Lives on in Its Treatment of Journalists&lt;/li&gt;&lt;li&gt;How Sri Lanka’s Crisis Hurts 8,000 Miles Away&lt;/li&gt;&lt;li&gt;Japan Air Self-Defense Force Points to Vertigo in Fatal January Crash&lt;/li&gt;&lt;li&gt;Will Turkmenistan Join the World Trade Organization?&lt;/li&gt;&lt;li&gt;The Global Influence of K-pop: BTS at the White House&lt;/li&gt;&lt;li&gt;Afghan Taliban Launch Campaign to Eradicate Poppy Crop&lt;/li&gt;&lt;li&gt;Pakistan Sends Team to Kabul to Discuss Ceasefire With Tehrik-e-Taliban Pakistan&lt;/li&gt;&lt;li&gt;Accounting Act Changes Spark Brawl in Taiwan’s Legislature&lt;/li&gt;&lt;li&gt;Life Imprisonment for Kashmiri Separatist Yasin Malik&lt;/li&gt;&lt;li&gt;English Football League to Probe Alleged Cambodian Ownership Connection&lt;/li&gt;&lt;li&gt;India is the Key to Boosting Thailand’s Post-Pandemic Recovery&lt;/li&gt;&lt;li&gt;In Cambodia, Local Elections Hold Out a Glimmer of Progress&lt;/li&gt;&lt;li&gt;What Does ASEAN Centrality Mean to China?&lt;/li&gt;&lt;li&gt;Is Biden Bringing ‘Strategic Ambiguity’ on Taiwan to an End?&lt;/li&gt;&lt;li&gt;New Delhi to Exclude Myanmar Junta From Upcoming India-ASEAN Meeting&lt;/li&gt;&lt;li&gt;An Emerging Australia-Japan Hydrogen Supply Chain&lt;/li&gt;&lt;li&gt;What Is the Biden Administration’s Indo-Pacific Economic Framework About?&lt;/li&gt;&lt;li&gt;Shanghai Starts Coming Back to Life as COVID Lockdown Eases&lt;/li&gt;&lt;li&gt;Decades of Resistance: An Indian Community’s Struggle Against a Polluting Steel Plant&lt;/li&gt;&lt;li&gt;Rohingya Refugees Need Sustained Support from International Community&lt;/li&gt;&lt;li&gt;Myanmar Junta’s Reprisal Attacks Amount to War Crimes, Says Rights Group&lt;/li&gt;&lt;li&gt;Rising Soviet Nostalgia in Central Asia: Kyrgyzstan’s Young Pioneers&lt;/li&gt;&lt;li&gt;Blockchain in Southeast Asia: Striking a Balance Between Innovation and Protection&lt;/li&gt;&lt;li&gt;The Secrets of China’s Economic Statecraft in Africa&lt;/li&gt;&lt;li&gt;Biden’s China Strategy Needs an Economic Statecraft Component&lt;/li&gt;&lt;li&gt;Singapore Braces as Malaysian Chicken Export Ban Comes Into Effect&lt;/li&gt;&lt;li&gt;The US-Russia-Vietnam Triangle: Decoding Hanoi’s Strategic Balancing&lt;/li&gt;&lt;li&gt;Cambodia Needs Democracy, Not Another Electoral Charade&lt;/li&gt;&lt;li&gt;Can Thailand Replicate South Korean Soft Power?&lt;/li&gt;&lt;li&gt;The Quad: All About China, or a Bit of Something Else?&lt;/li&gt;&lt;li&gt;The Real Power of Preferential Voting in Australia&lt;/li&gt;&lt;li&gt;New Zealand Under Pressure as Pacific Contest Heats Up&lt;/li&gt;&lt;li&gt;What’s Causing the Currency Crisis in Laos?&lt;/li&gt;&lt;li&gt;Dancing on Bones: History and Power in China, Russia, and North Korea&lt;/li&gt;&lt;li&gt;Ethnic Armed Groups Eye Post-coup Myanmar&lt;/li&gt;&lt;li&gt;Australian Prime Minister Albanese Confirms Trip to Indonesia Next Week&lt;/li&gt;&lt;li&gt;Pakistani-American Defends Israel Visit Amid Criticism&lt;/li&gt;&lt;li&gt;The Problem With India’s Multiple Strategic Dalliances&lt;/li&gt;&lt;li&gt;Contrary to Hindutva Claims, India’s Muslim Fertility Rate is Declining Sharply&lt;/li&gt;&lt;li&gt;Export Body Casts Doubt on Thailand-Vietnam Rice Cartel Plan&lt;/li&gt;&lt;li&gt;The Somad Affair and Singapore’s Battle Against Religious Extremism&lt;/li&gt;&lt;/ul&gt;
+                The Diplomat is a current-affairs magazine for the Asia-Pacific, with news and analysis on politics, security, business, technology and life across the region.
+                </content>
+<updated>2022-06-07T03:11:24Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-diplomat-2022-06-07.mobi"/>
+</entry>
 <entry>
 <id>Vox</id>
 <title>Vox: 6 Jun, 2022</title>
@@ -38,21 +53,6 @@
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-06-06.mobi"/>
 </entry>
 <entry>
-<id>The Diplomat</id>
-<title>The Diplomat: 7 Jun, 2022</title>
-<summary>The Diplomat: 7 Jun, 2022 published at 2022-06-06 17:07PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;China Rejects Canadian, Australian Charges of Unsafe Air Intercepts&lt;/li&gt;&lt;li&gt;Derek Chollet on Shangri-La Dialogue and Deepening Indo-Pacific Partnerships&lt;/li&gt;&lt;li&gt;Is China Hitting Back at India’s INSTC Plans?&lt;/li&gt;&lt;li&gt;North Korea Launches 8 Ballistic Missiles&lt;/li&gt;&lt;li&gt;Kazakhstan Leaves ‘Elbasy’ Behind, Approves Constitutional Referendum&lt;/li&gt;&lt;li&gt;India-Vietnam Ties Deepen in Dynamic Indo-Pacific&lt;/li&gt;&lt;li&gt;Depot Fire Latest to Spotlight Bangladesh Industrial Safety&lt;/li&gt;&lt;li&gt;Sri Lanka Holds its Breath as New PM Fights to Save Economy&lt;/li&gt;&lt;li&gt;Myanmar Junta to Carry out Death Sentences Against Activist, NLD Lawmaker&lt;/li&gt;&lt;li&gt;It’s Time for Australia to Take a Fresh Look at Indonesia&lt;/li&gt;&lt;li&gt;Myanmar’s Other Civilian Deaths&lt;/li&gt;&lt;li&gt;Timor-Leste Signs Four Cooperation Agreements With China&lt;/li&gt;&lt;li&gt;As Expected, Cambodia’s Ruling Party Claims ‘Sweeping’ Victory&lt;/li&gt;&lt;li&gt;The World Has Not Learnt the Lessons of the Tiananmen Square Massacre&lt;/li&gt;&lt;li&gt;Taliban Faces Threat From Islamic State, New Resistance&lt;/li&gt;&lt;li&gt;China and Australia’s Dueling Pacific Tours Make Final Stops&lt;/li&gt;&lt;li&gt;Uzbekistan’s Journalists: ‘Censorship in Our Minds and Hearts’&lt;/li&gt;&lt;li&gt;Why Are Rohingya Refugees Returning From India To Bangladesh?&lt;/li&gt;&lt;li&gt;What China Gets Wrong About Southeast Asia&lt;/li&gt;&lt;li&gt;Fuel Shortages Threatens Rural Crisis in Laos&lt;/li&gt;&lt;li&gt;Is Indonesia’s Grand Experiment with Democracy Coming to an End?&lt;/li&gt;&lt;li&gt;Why Japan Is Getting Tough on Russia Now&lt;/li&gt;&lt;li&gt;Myanmar’s Total Displaced Population Tops 1 Million, Says UN&lt;/li&gt;&lt;li&gt;Uzbekistan’s Soviet Legacy Lives on in Its Treatment of Journalists&lt;/li&gt;&lt;li&gt;How Sri Lanka’s Crisis Hurts 8,000 Miles Away&lt;/li&gt;&lt;li&gt;Japan Air Self-Defense Force Points to Vertigo in Fatal January Crash&lt;/li&gt;&lt;li&gt;Will Turkmenistan Join the World Trade Organization?&lt;/li&gt;&lt;li&gt;The Global Influence of K-pop: BTS at the White House&lt;/li&gt;&lt;li&gt;Afghan Taliban Launch Campaign to Eradicate Poppy Crop&lt;/li&gt;&lt;li&gt;Pakistan Sends Team to Kabul to Discuss Ceasefire With Tehrik-e-Taliban Pakistan&lt;/li&gt;&lt;li&gt;Accounting Act Changes Spark Brawl in Taiwan’s Legislature&lt;/li&gt;&lt;li&gt;Life Imprisonment for Kashmiri Separatist Yasin Malik&lt;/li&gt;&lt;li&gt;English Football League to Probe Alleged Cambodian Ownership Connection&lt;/li&gt;&lt;li&gt;India is the Key to Boosting Thailand’s Post-Pandemic Recovery&lt;/li&gt;&lt;li&gt;In Cambodia, Local Elections Hold Out a Glimmer of Progress&lt;/li&gt;&lt;li&gt;What Does ASEAN Centrality Mean to China?&lt;/li&gt;&lt;li&gt;Is Biden Bringing ‘Strategic Ambiguity’ on Taiwan to an End?&lt;/li&gt;&lt;li&gt;New Delhi to Exclude Myanmar Junta From Upcoming India-ASEAN Meeting&lt;/li&gt;&lt;li&gt;An Emerging Australia-Japan Hydrogen Supply Chain&lt;/li&gt;&lt;li&gt;What Is the Biden Administration’s Indo-Pacific Economic Framework About?&lt;/li&gt;&lt;li&gt;Shanghai Starts Coming Back to Life as COVID Lockdown Eases&lt;/li&gt;&lt;li&gt;Decades of Resistance: An Indian Community’s Struggle Against a Polluting Steel Plant&lt;/li&gt;&lt;li&gt;Rohingya Refugees Need Sustained Support from International Community&lt;/li&gt;&lt;li&gt;Myanmar Junta’s Reprisal Attacks Amount to War Crimes, Says Rights Group&lt;/li&gt;&lt;li&gt;Rising Soviet Nostalgia in Central Asia: Kyrgyzstan’s Young Pioneers&lt;/li&gt;&lt;li&gt;Blockchain in Southeast Asia: Striking a Balance Between Innovation and Protection&lt;/li&gt;&lt;li&gt;The Secrets of China’s Economic Statecraft in Africa&lt;/li&gt;&lt;li&gt;Biden’s China Strategy Needs an Economic Statecraft Component&lt;/li&gt;&lt;li&gt;Singapore Braces as Malaysian Chicken Export Ban Comes Into Effect&lt;/li&gt;&lt;li&gt;The US-Russia-Vietnam Triangle: Decoding Hanoi’s Strategic Balancing&lt;/li&gt;&lt;li&gt;Cambodia Needs Democracy, Not Another Electoral Charade&lt;/li&gt;&lt;li&gt;Can Thailand Replicate South Korean Soft Power?&lt;/li&gt;&lt;li&gt;The Quad: All About China, or a Bit of Something Else?&lt;/li&gt;&lt;li&gt;The Real Power of Preferential Voting in Australia&lt;/li&gt;&lt;li&gt;New Zealand Under Pressure as Pacific Contest Heats Up&lt;/li&gt;&lt;li&gt;What’s Causing the Currency Crisis in Laos?&lt;/li&gt;&lt;li&gt;Dancing on Bones: History and Power in China, Russia, and North Korea&lt;/li&gt;&lt;li&gt;Ethnic Armed Groups Eye Post-coup Myanmar&lt;/li&gt;&lt;li&gt;Australian Prime Minister Albanese Confirms Trip to Indonesia Next Week&lt;/li&gt;&lt;li&gt;Pakistani-American Defends Israel Visit Amid Criticism&lt;/li&gt;&lt;li&gt;The Problem With India’s Multiple Strategic Dalliances&lt;/li&gt;&lt;li&gt;Contrary to Hindutva Claims, India’s Muslim Fertility Rate is Declining Sharply&lt;/li&gt;&lt;li&gt;Export Body Casts Doubt on Thailand-Vietnam Rice Cartel Plan&lt;/li&gt;&lt;li&gt;The Somad Affair and Singapore’s Battle Against Religious Extremism&lt;/li&gt;&lt;li&gt;Michael Kugelman on South Asia’s Overlapping Crises&lt;/li&gt;&lt;li&gt;Japan’s Tangled Territorial Dispute With Russia&lt;/li&gt;&lt;li&gt;Carrie Lam’s Legacy&lt;/li&gt;&lt;li&gt;The New Face of the Islamic State in Southeast Asia&lt;/li&gt;&lt;li&gt;The Pamir Powderkeg&lt;/li&gt;&lt;li&gt;Sri Lanka PM Invites Protesting Youth to Join Governance&lt;/li&gt;&lt;li&gt;Indonesian Governor in Papua Casts Doubt on Plan for New Provinces: Report&lt;/li&gt;&lt;li&gt;1B Meth Pills: East, Southeast Asia Drug Industry Hits Ominous Peak&lt;/li&gt;&lt;li&gt;Vietnam’s Growing Strategic Partnerships with European Countries&lt;/li&gt;&lt;li&gt;China, Russia Again Veto UN Statement on Myanmar Conflict&lt;/li&gt;&lt;li&gt;‘Delikado’: Saving Palawan from the Chainsaws&lt;/li&gt;&lt;li&gt;How India Influences the Quad&lt;/li&gt;&lt;/ul&gt;
-                The Diplomat is a current-affairs magazine for the Asia-Pacific, with news and analysis on politics, security, business, technology and life across the region.
-                </content>
-<updated>2022-06-06T17:07:25Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-diplomat-2022-06-06.mobi"/>
-</entry>
-<entry>
 <id>Economist</id>
 <title>Economist: 4 Jun, 2022</title>
 <summary>Economist: 4 Jun, 2022 published at 2022-06-06 15:15PM.</summary>
@@ -66,6 +66,21 @@
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-06-06.mobi"/>
+</entry>
+<entry>
+<id>The Third Pole</id>
+<title>The Third Pole: 2 Jun, 2022</title>
+<summary>The Third Pole: 2 Jun, 2022 published at 2022-06-06 12:44PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Walking in the shadow of Madhya Pradesh’s devastating floods&lt;/li&gt;&lt;li&gt;Poor urban planning blocks dreams of women and girls in Karachi&lt;/li&gt;&lt;li&gt;Monsoon rainfall increases in Kashmir, raising flood fears&lt;/li&gt;&lt;li&gt;What is happening to Pakistan’s Green Stimulus?&lt;/li&gt;&lt;li&gt;How a seed encapsulates Nepal’s trade imbalance with China&lt;/li&gt;&lt;/ul&gt;
+                The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there.
+                </content>
+<updated>2022-06-06T12:44:02Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-06-06.mobi"/>
 </entry>
 <entry>
 <id>New Yorker</id>
@@ -96,21 +111,6 @@
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-06-05.mobi"/>
-</entry>
-<entry>
-<id>The Third Pole</id>
-<title>The Third Pole: 2 Jun, 2022</title>
-<summary>The Third Pole: 2 Jun, 2022 published at 2022-06-03 10:10AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Walking in the shadow of Madhya Pradesh’s devastating floods&lt;/li&gt;&lt;li&gt;Poor urban planning blocks dreams of women and girls in Karachi&lt;/li&gt;&lt;li&gt;Monsoon rainfall increases in Kashmir, raising flood fears&lt;/li&gt;&lt;li&gt;What is happening to Pakistan’s Green Stimulus?&lt;/li&gt;&lt;li&gt;How a seed encapsulates Nepal’s trade imbalance with China&lt;/li&gt;&lt;/ul&gt;
-                The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there.
-                </content>
-<updated>2022-06-03T10:10:44Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-06-03.mobi"/>
 </entry>
 <entry>
 <id>Wired Magazine</id>

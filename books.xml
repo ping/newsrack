@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-06T23:22:07Z</updated>
+<updated>2022-06-07T04:00:36Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>Asian Review of Books</id>
+<title>Asian Review of Books: 7 Jun, 2022</title>
+<summary>Asian Review of Books: 7 Jun, 2022 published at 2022-06-07 01:12AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;“Moro Warrior: A Philippine Chieftain, an American Schoolmaster, and The Untold Story of the Most Remarkable Resistance Fighters of World War II in the Pacific” by Thomas McKenna&lt;/li&gt;&lt;li&gt;“Bitter Orange Tree” by Jokha Alharthi&lt;/li&gt;&lt;li&gt;“The Mushroom At The End Of The World” &amp; “What A Mushroom Lives For”&lt;/li&gt;&lt;li&gt;“The Dragon Daughter and Other Lin Lan Fairy Tales”, edited and translated by Juwen Zhang&lt;/li&gt;&lt;li&gt;“Thank You, Mr Nixon” by Gish Jen&lt;/li&gt;&lt;li&gt;Podcast with Erin Murphy, author of “Burmese Haze: US Policy and Myanmar’s Opening—and Closing”&lt;/li&gt;&lt;li&gt;New Book Announcement: “Water Thicker Than Blood: A Memoir of a Post-Internment Childhood” by George Uba&lt;/li&gt;&lt;li&gt;“Picking Off New Shoots Will Not Stop the Spring”, edited by Ko Ko Thett and Brian Haman&lt;/li&gt;&lt;li&gt;Opera in brief: Musica Viva’s abridged Giulio Cesare&lt;/li&gt;&lt;li&gt;New Book Announcement: “The Substance of Fiction: Literary Objects in China, 1550–1775” by Sophie Volpp&lt;/li&gt;&lt;/ul&gt;
+                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
+                </content>
+<updated>2022-06-07T01:12:02Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-07.mobi"/>
+</entry>
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 6 Jun, 2022</title>
@@ -51,20 +66,5 @@
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-06-06.mobi"/>
-</entry>
-<entry>
-<id>Asian Review of Books</id>
-<title>Asian Review of Books: 5 Jun, 2022</title>
-<summary>Asian Review of Books: 5 Jun, 2022 published at 2022-06-05 22:41PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;“Bitter Orange Tree” by Jokha Alharthi&lt;/li&gt;&lt;li&gt;“The Mushroom At The End Of The World” &amp; “What A Mushroom Lives For”&lt;/li&gt;&lt;li&gt;“The Dragon Daughter and Other Lin Lan Fairy Tales”, edited and translated by Juwen Zhang&lt;/li&gt;&lt;li&gt;“Thank You, Mr Nixon” by Gish Jen&lt;/li&gt;&lt;li&gt;Podcast with Erin Murphy, author of “Burmese Haze: US Policy and Myanmar’s Opening—and Closing”&lt;/li&gt;&lt;li&gt;New Book Announcement: “Water Thicker Than Blood: A Memoir of a Post-Internment Childhood” by George Uba&lt;/li&gt;&lt;li&gt;“Picking Off New Shoots Will Not Stop the Spring”, edited by Ko Ko Thett and Brian Haman&lt;/li&gt;&lt;li&gt;Opera in brief: Musica Viva’s abridged Giulio Cesare&lt;/li&gt;&lt;li&gt;New Book Announcement: “The Substance of Fiction: Literary Objects in China, 1550–1775” by Sophie Volpp&lt;/li&gt;&lt;li&gt;“I Was the President Mistress!!” by Miguel Syjuco&lt;/li&gt;&lt;/ul&gt;
-                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
-                </content>
-<updated>2022-06-05T22:41:39Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-05.mobi"/>
 </entry>
 </feed>
