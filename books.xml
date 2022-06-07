@@ -2,40 +2,40 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-07T11:17:19Z</updated>
+<updated>2022-06-07T15:17:57Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
-<id>NY Times Books</id>
-<title>NY Times Books: 7 Jun, 2022</title>
-<summary>NY Times Books: 7 Jun, 2022 published at 2022-06-07 10:56AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The Problem With Surviving? The Next 30 Years. In Florida.&lt;/li&gt;&lt;li&gt;How to Navigate the Proust-Industrial Complex&lt;/li&gt;&lt;li&gt;Geraldine Brooks, on Martha’s Vineyard&lt;/li&gt;&lt;li&gt;Review: ‘Boys and Oil,’ by Taylor Brorby&lt;/li&gt;&lt;li&gt;Paradise by the Patchogue Ferry: A Hundred Years on Fire Island&lt;/li&gt;&lt;li&gt;A New Way to Choose Your Next Book&lt;/li&gt;&lt;li&gt;A Harrowing Journey From Cornell to Addiction to Prison&lt;/li&gt;&lt;li&gt;A Gender as Fluid as Water, and a Body in Crisis&lt;/li&gt;&lt;li&gt;Review: “The Visitors,” by Jessi Jezewska Stevens&lt;/li&gt;&lt;li&gt;What Are You Wearing? History, Complexity and a Lot of Art.&lt;/li&gt;&lt;li&gt;Review: “Nuclear Family,” by Joseph Han&lt;/li&gt;&lt;li&gt;Review: ‘Nightcrawling,’ by Leila Mottley&lt;/li&gt;&lt;li&gt;Book Review: ‘Counterfeit’ by Kirstin Chen&lt;/li&gt;&lt;li&gt;In Patrice Nganang’s Trilogy, Cameroon’s Past Is Still Very Present&lt;/li&gt;&lt;li&gt;‘Raising Raffi,’ a Father’s Lucid Book About a Chaotic Scene&lt;/li&gt;&lt;li&gt;Andrew Holleran’s Work Has Traced the Arc of Life. Now, He Takes on Death.&lt;/li&gt;&lt;li&gt;Oxford Quartet: The Women Who Took On the Philosophical Establishment&lt;/li&gt;&lt;li&gt;DeLillo, Psychiatry and a Novella&lt;/li&gt;&lt;li&gt;Book Review: ‘Cult Classic,’ by Sloane Crosley&lt;/li&gt;&lt;li&gt;In Small-Town Maine, Things Are More Sinister Than They Seem&lt;/li&gt;&lt;li&gt;A Memoir of Friendship and Death in a Vacation Idyll&lt;/li&gt;&lt;li&gt;One Island, Two Men and Lots of Big Questions&lt;/li&gt;&lt;li&gt;Review: ‘Hurricane Girl,’ by Marcy Dermansky; ‘Mother Country,’ by Jacinda Townsend; ‘The Cherry Robbers,’ by Sarai Walker&lt;/li&gt;&lt;li&gt;New in Paperback: ‘Gay Bar’ and ‘Afterparties’&lt;/li&gt;&lt;li&gt;Review: ‘The Foundling,’ by Ann Leary&lt;/li&gt;&lt;/ul&gt;
-                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
-                </content>
-<updated>2022-06-07T10:56:15Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-06-07.mobi"/>
-</entry>
-<entry>
 <id>Five Books</id>
 <title>Five Books: 7 Jun, 2022</title>
-<summary>Five Books: 7 Jun, 2022 published at 2022-06-07 09:04AM.</summary>
+<summary>Five Books: 7 Jun, 2022 published at 2022-06-07 14:43PM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Jan Loeys on Market Concentration Books&lt;/li&gt;&lt;li&gt;Rosa Rankin-Gee on The Best Near-Future Dystopias&lt;/li&gt;&lt;li&gt;Cal Flyn on The Notable Novels of Summer 2022&lt;/li&gt;&lt;li&gt;Benno Gammerl on Queer History Books&lt;/li&gt;&lt;li&gt;Matthew Brookes &amp; Zack Raffin on Wanderlust Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Spring 2022&lt;/li&gt;&lt;li&gt;Alison King on Best Verse Novels for 8-12 Year Olds&lt;/li&gt;&lt;li&gt;Sue Rainsford on Literary Horror Books&lt;/li&gt;&lt;li&gt;Howard Smith on Antitrust Books&lt;/li&gt;&lt;li&gt;Carole Hillenbrand on The Best History Books: the 2022 Wolfson Prize Shortlist&lt;/li&gt;&lt;li&gt;Velma Šarić on Bosnia Books&lt;/li&gt;&lt;li&gt;Mark Webber on NATO Books&lt;/li&gt;&lt;li&gt;Wajahat Ali on The Best South Asian American Novels&lt;/li&gt;&lt;li&gt;Breege O'Brien on Great Teen Reads from Ireland’s Great Reads Awards Books&lt;/li&gt;&lt;li&gt;Judy Golding on The Best William Golding Books&lt;/li&gt;&lt;li&gt;Chris Power on The Best Literary Thrillers&lt;/li&gt;&lt;li&gt;Michele Cobb on The Best Audiobooks: the 2022 Audie Awards&lt;/li&gt;&lt;li&gt;Serhii Plokhy on Ukraine and Russia Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Early 2022&lt;/li&gt;&lt;li&gt;Cal Flyn on Notable Novels of Spring 2022&lt;/li&gt;&lt;li&gt;Nigel Warburton on The Best Philosophy Books of 2021&lt;/li&gt;&lt;li&gt;Jeffrey Archer on The Best Detective Fiction&lt;/li&gt;&lt;li&gt;Marion Turner on Best Medieval Historical Fiction&lt;/li&gt;&lt;li&gt;Tanya Selvaratnam on Domestic Violence Books&lt;/li&gt;&lt;/ul&gt;
                 Expert book recommendations
                 </content>
-<updated>2022-06-07T09:04:44Z</updated>
+<updated>2022-06-07T14:43:22Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-06-07.mobi"/>
+</entry>
+<entry>
+<id>NY Times Books</id>
+<title>NY Times Books: 7 Jun, 2022</title>
+<summary>NY Times Books: 7 Jun, 2022 published at 2022-06-07 13:08PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;A New Way to Choose Your Next Book&lt;/li&gt;&lt;li&gt;The Problem With Surviving? The Next 30 Years. In Florida.&lt;/li&gt;&lt;li&gt;How to Navigate the Proust-Industrial Complex&lt;/li&gt;&lt;li&gt;Geraldine Brooks, on Martha’s Vineyard&lt;/li&gt;&lt;li&gt;Review: ‘Boys and Oil,’ by Taylor Brorby&lt;/li&gt;&lt;li&gt;Paradise by the Patchogue Ferry: A Hundred Years on Fire Island&lt;/li&gt;&lt;li&gt;A Harrowing Journey From Cornell to Addiction to Prison&lt;/li&gt;&lt;li&gt;A Gender as Fluid as Water, and a Body in Crisis&lt;/li&gt;&lt;li&gt;Review: “The Visitors,” by Jessi Jezewska Stevens&lt;/li&gt;&lt;li&gt;Review: “Nuclear Family,” by Joseph Han&lt;/li&gt;&lt;li&gt;What Are You Wearing? History, Complexity and a Lot of Art.&lt;/li&gt;&lt;li&gt;Review: ‘Nightcrawling,’ by Leila Mottley&lt;/li&gt;&lt;li&gt;Book Review: ‘Counterfeit’ by Kirstin Chen&lt;/li&gt;&lt;li&gt;In Patrice Nganang’s Trilogy, Cameroon’s Past Is Still Very Present&lt;/li&gt;&lt;li&gt;‘Raising Raffi,’ a Father’s Lucid Book About a Chaotic Scene&lt;/li&gt;&lt;li&gt;Andrew Holleran’s Work Has Traced the Arc of Life. Now, He Takes on Death.&lt;/li&gt;&lt;li&gt;Oxford Quartet: The Women Who Took On the Philosophical Establishment&lt;/li&gt;&lt;li&gt;DeLillo, Psychiatry and a Novella&lt;/li&gt;&lt;li&gt;Book Review: ‘Cult Classic,’ by Sloane Crosley&lt;/li&gt;&lt;li&gt;In Small-Town Maine, Things Are More Sinister Than They Seem&lt;/li&gt;&lt;li&gt;A Memoir of Friendship and Death in a Vacation Idyll&lt;/li&gt;&lt;li&gt;One Island, Two Men and Lots of Big Questions&lt;/li&gt;&lt;li&gt;Review: ‘Hurricane Girl,’ by Marcy Dermansky; ‘Mother Country,’ by Jacinda Townsend; ‘The Cherry Robbers,’ by Sarai Walker&lt;/li&gt;&lt;li&gt;New in Paperback: ‘Gay Bar’ and ‘Afterparties’&lt;/li&gt;&lt;li&gt;Review: ‘The Foundling,’ by Ann Leary&lt;/li&gt;&lt;/ul&gt;
+                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
+                </content>
+<updated>2022-06-07T13:08:15Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-06-07.mobi"/>
 </entry>
 <entry>
 <id>Asian Review of Books</id>
