@@ -2,19 +2,19 @@
 "Asahi Shimbun": [
 {
 "filename": "asahi-shimbun-2022-06-07.mobi",
-"published": 1654596720.0
+"published": 1654642800.0
 }
 ],
 "Asian Review of Books": [
 {
 "filename": "arb-2022-06-07.mobi",
-"published": 1654564322.0
+"published": 1654639993.0
 }
 ],
 "The Atlantic": [
 {
 "filename": "the-atlantic-2022-06-07.mobi",
-"published": 1654625889.0
+"published": 1654641610.0
 }
 ],
 "The Atlantic Magazine": [
@@ -26,7 +26,7 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-06-07.mobi",
-"published": 1654628098.0
+"published": 1654642333.0
 }
 ],
 "The Diplomat": [
@@ -44,7 +44,7 @@
 "Financial Times": [
 {
 "filename": "ft-2022-06-07.mobi",
-"published": 1654627556.0
+"published": 1654639755.0
 }
 ],
 "Five Books": [
@@ -56,7 +56,7 @@
 "Guardian": [
 {
 "filename": "guardian-2022-06-07.mobi",
-"published": 1654628162.0
+"published": 1654642134.0
 }
 ],
 "JoongAng Daily": [
@@ -68,7 +68,7 @@
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-06-07.mobi",
-"published": 1654615538.0
+"published": 1654633843.0
 }
 ],
 "London Review of Books": [
@@ -92,7 +92,7 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-06-07.mobi",
-"published": 1654628737.0
+"published": 1654643336.0
 }
 ],
 "NY Times (Print)": [
@@ -104,7 +104,7 @@
 "NY Times Books": [
 {
 "filename": "nytimes-books-2022-06-07.mobi",
-"published": 1654626287.0
+"published": 1654633807.0
 }
 ],
 "POLITICO Magazine": [
@@ -122,13 +122,13 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-06-07.mobi",
-"published": 1654621224.0
+"published": 1654641918.0
 }
 ],
 "Taipei Times": [
 {
-"filename": "taipei-times-2022-06-07.mobi",
-"published": 1654560000.0
+"filename": "taipei-times-2022-06-08.mobi",
+"published": 1654646400.0
 }
 ],
 "The Third Pole": [
@@ -146,13 +146,13 @@
 "Vox": [
 {
 "filename": "vox-2022-06-07.mobi",
-"published": 1654626600.0
+"published": 1654633800.0
 }
 ],
 "Washington Post": [
 {
 "filename": "wapo-2022-06-07.mobi",
-"published": 1654629131.0
+"published": 1654643368.0
 }
 ],
 "Wired Magazine": [
@@ -161,5 +161,5 @@
 "published": 1654596000.0
 }
 ],
-"_generated": 1654629530
+"_generated": 1654643961
 }
