@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-08T15:18:44Z</updated>
+<updated>2022-06-08T19:20:09Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 8 Jun, 2022</title>
-<summary>NY Times Books: 8 Jun, 2022 published at 2022-06-08 14:00PM.</summary>
+<summary>NY Times Books: 8 Jun, 2022 published at 2022-06-08 18:37PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Werner Herzog’s Fever Dreams&lt;/li&gt;&lt;li&gt;A New Way to Choose Your Next Book&lt;/li&gt;&lt;li&gt;‘Look What You’ve Turned Us Into’: The Roots of Women’s Shame&lt;/li&gt;&lt;li&gt;Review: ‘Everything I Need I Get From You,’ by Kaitlyn Tiffany&lt;/li&gt;&lt;li&gt;Book Review: “More Than You’ll Ever Know,” by Katie Gutierrez&lt;/li&gt;&lt;li&gt;‘The Facemaker,’ a Grisly but Inspiring Story of Surgery During World War I&lt;/li&gt;&lt;li&gt;Newly Published, From Quarantine Love to Hemingway&lt;/li&gt;&lt;li&gt;Review: Sarah Silverman’s ‘Bedwetter’ Musical Has Sprung a Leak&lt;/li&gt;&lt;li&gt;Barbara Pym: An Excellent Woman? Most of the Time.&lt;/li&gt;&lt;li&gt;A Gender as Fluid as Water, and a Body in Crisis&lt;/li&gt;&lt;li&gt;Book Review: ‘Wastelands,’ by Corban Addison&lt;/li&gt;&lt;li&gt;In ‘Horse,’ Geraldine Brooks Sets a Consideration of Race at the Track&lt;/li&gt;&lt;li&gt;Geraldine Brooks, on Martha’s Vineyard&lt;/li&gt;&lt;li&gt;Paradise by the Patchogue Ferry: A Hundred Years on Fire Island&lt;/li&gt;&lt;li&gt;What Are You Wearing? History, Complexity and a Lot of Art.&lt;/li&gt;&lt;li&gt;The Problem With Surviving? The Next 30 Years. In Florida.&lt;/li&gt;&lt;li&gt;How to Navigate the Proust-Industrial Complex&lt;/li&gt;&lt;li&gt;Review: ‘Boys and Oil,’ by Taylor Brorby&lt;/li&gt;&lt;li&gt;A Harrowing Journey From Cornell to Addiction to Prison&lt;/li&gt;&lt;li&gt;Review: “The Visitors,” by Jessi Jezewska Stevens&lt;/li&gt;&lt;li&gt;Review: “Nuclear Family,” by Joseph Han&lt;/li&gt;&lt;li&gt;Review: ‘Nightcrawling,’ by Leila Mottley&lt;/li&gt;&lt;li&gt;Book Review: ‘Counterfeit’ by Kirstin Chen&lt;/li&gt;&lt;li&gt;‘Raising Raffi,’ a Father’s Lucid Book About a Chaotic Scene&lt;/li&gt;&lt;li&gt;One Island, Two Men and Lots of Big Questions&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Review: ‘Under the Skin,’ by Linda Villarosa&lt;/li&gt;&lt;li&gt;Book Review: “Virology,” by Joseph Osmundson&lt;/li&gt;&lt;li&gt;Werner Herzog’s Fever Dreams&lt;/li&gt;&lt;li&gt;A New Way to Choose Your Next Book&lt;/li&gt;&lt;li&gt;‘Look What You’ve Turned Us Into’: The Roots of Women’s Shame&lt;/li&gt;&lt;li&gt;Review: ‘Everything I Need I Get From You,’ by Kaitlyn Tiffany&lt;/li&gt;&lt;li&gt;Book Review: “More Than You’ll Ever Know,” by Katie Gutierrez&lt;/li&gt;&lt;li&gt;‘The Facemaker,’ a Grisly but Inspiring Story of Surgery During World War I&lt;/li&gt;&lt;li&gt;Newly Published, From Quarantine Love to Hemingway&lt;/li&gt;&lt;li&gt;Review: Sarah Silverman’s ‘Bedwetter’ Musical Has Sprung a Leak&lt;/li&gt;&lt;li&gt;Barbara Pym: An Excellent Woman? Most of the Time.&lt;/li&gt;&lt;li&gt;A Gender as Fluid as Water, and a Body in Crisis&lt;/li&gt;&lt;li&gt;Book Review: ‘Wastelands,’ by Corban Addison&lt;/li&gt;&lt;li&gt;In ‘Horse,’ Geraldine Brooks Sets a Consideration of Race at the Track&lt;/li&gt;&lt;li&gt;Geraldine Brooks, on Martha’s Vineyard&lt;/li&gt;&lt;li&gt;Paradise by the Patchogue Ferry: A Hundred Years on Fire Island&lt;/li&gt;&lt;li&gt;What Are You Wearing? History, Complexity and a Lot of Art.&lt;/li&gt;&lt;li&gt;How to Navigate the Proust-Industrial Complex&lt;/li&gt;&lt;li&gt;Review: ‘Boys and Oil,’ by Taylor Brorby&lt;/li&gt;&lt;li&gt;A Harrowing Journey From Cornell to Addiction to Prison&lt;/li&gt;&lt;li&gt;Review: “The Visitors,” by Jessi Jezewska Stevens&lt;/li&gt;&lt;li&gt;Review: “Nuclear Family,” by Joseph Han&lt;/li&gt;&lt;li&gt;Review: ‘Nightcrawling,’ by Leila Mottley&lt;/li&gt;&lt;li&gt;Book Review: ‘Counterfeit’ by Kirstin Chen&lt;/li&gt;&lt;li&gt;One Island, Two Men and Lots of Big Questions&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-06-08T14:00:10Z</updated>
+<updated>2022-06-08T18:37:33Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
@@ -25,12 +25,12 @@
 <entry>
 <id>London Review of Books</id>
 <title>London Review of Books: 9 Jun, 2022</title>
-<summary>London Review of Books: 9 Jun, 2022 published at 2022-06-08 11:41AM.</summary>
+<summary>London Review of Books: 9 Jun, 2022 published at 2022-06-08 15:06PM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Madeleine Schwartz  - ‘You got up and you died’&lt;/li&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Miranda Carter  - My Castaway This Week&lt;/li&gt;&lt;li&gt;Robin Bunce and Paul Field  - Jubilee 1977&lt;/li&gt;&lt;li&gt;Jonathan Meades  - The Palace Papers&lt;/li&gt;&lt;li&gt;William Davies  - The Return of Inequality: Social Change and the Weight of the Past  / Colonialism and Modern Social Theory  / A Brief History of Equality&lt;/li&gt;&lt;li&gt;Frances Morgan  - At Serpentine North: ‘Radio Ballads’&lt;/li&gt;&lt;li&gt;Colin Burrow  - Here and There: Sites of Philosophy&lt;/li&gt;&lt;li&gt;Michael Ondaatje  - Poem: ‘The Leg Glance’&lt;/li&gt;&lt;li&gt;Peter Howarth  - How to Wash a Heart&lt;/li&gt;&lt;li&gt;Hugh Pennington  - Monkeypox&lt;/li&gt;&lt;li&gt;Jo Applin  - The Flowering: The Autobiography of Judy Chicago&lt;/li&gt;&lt;li&gt;Diarmaid MacCulloch  - Zwingli: God’s Armed Prophet&lt;/li&gt;&lt;li&gt;Alexander Clapp  - The Greek Revolution: 1821 and the Making of Modern Europe&lt;/li&gt;&lt;li&gt;Jen Stout  - Short Cuts: In Kharkiv&lt;/li&gt;&lt;li&gt;Dennis Duncan  - The Themerson Archive Catalogue&lt;/li&gt;&lt;li&gt;Sarah Resnick  - The Candy House&lt;/li&gt;&lt;li&gt;Rosina Buckland  - On Kyōsai&lt;/li&gt;&lt;li&gt;J. Robert Lennon  - A Carnival of Snackery: Diaries 2003-20&lt;/li&gt;&lt;li&gt;Ben Crair  - The Largest Avian Radiation: The Evolution of Perching Birds, or the Order Passeriformes&lt;/li&gt;&lt;li&gt;Tom Shippey  - The Dragon in the West: From Ancient Myth to Modern Legend&lt;/li&gt;&lt;li&gt;Stephanie Burt  - Diary: D&amp;D&lt;/li&gt;&lt;/ul&gt;
                 Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
                 </content>
-<updated>2022-06-08T11:41:25Z</updated>
+<updated>2022-06-08T15:06:28Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
