@@ -1,7 +1,7 @@
 # Original at https://github.com/kovidgoyal/calibre/blob/29cd8d64ea71595da8afdaec9b44e7100bff829a/recipes/nature.recipe
 
 import re
-from collections import defaultdict
+from collections import OrderedDict
 from datetime import datetime, timezone
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -18,10 +18,6 @@ def absurl(url):
 
 def check_words(words):
     return lambda x: x and frozenset(words.split()).intersection(x.split())
-
-
-def has_all_of(words):
-    return lambda x: x and frozenset(words.split()).issubset(x.split())
 
 
 _name = "Nature"
@@ -55,7 +51,18 @@ class Nature(BasicNewsRecipe):
     keep_only_tags = [dict(name="article")]
 
     remove_tags = [
-        dict(attrs={"class": ["u-hide-print", "hide-print", "c-latest-content__item"]}),
+        dict(
+            attrs={
+                "class": [
+                    "u-hide-print",
+                    "hide-print",
+                    "c-latest-content__item",
+                    "c-context-bar",
+                    "c-pdf-button__container",
+                    "u-js-hide",
+                ]
+            }
+        ),
         dict(
             name="img",
             attrs={"class": ["visually-hidden"]},
@@ -158,59 +165,35 @@ class Nature(BasicNewsRecipe):
                 issue_date = datetime.strptime(mobj.group("issue_date"), "%d %B %Y")
                 self.title = f"{_name}: {issue_date:%-d %b, %Y}"
 
-        section_tags = soup.find(
-            "div", {"data-container-type": check_words("issue-section-list")}
+        sectioned_feeds = OrderedDict()
+        section_tags = soup.find_all(
+            "section", attrs={"data-container-type": "issue-section-list"}
         )
-        section_tags = section_tags.findAll(
-            "div", {"class": check_words("article-section")}
-        )
+        for section in section_tags:
+            section_title = self.tag_to_string(section.find("h2"))
+            if section_title not in sectioned_feeds:
+                sectioned_feeds[section_title] = []
 
-        sections = defaultdict(list)
-        ordered_sec_titles = []
-        index = []
-
-        for sec in section_tags:
-            sec_title = self.tag_to_string(sec.find("h2"))
-            ordered_sec_titles.append(sec_title)
-            for article in sec.findAll("article"):
-                try:
-                    url = absurl(
-                        article.find("a", {"itemprop": check_words("url")})["href"]
-                    )
-                except TypeError:
-                    continue
-                title = self.tag_to_string(
-                    article.find("h3", {"itemprop": has_all_of("name headline")})
+            article_list_tag = section.find(
+                "ul", attrs={"class": "app-article-list-row"}
+            )
+            article_tags = article_list_tag.find_all("article")
+            for article_tag in article_tags:
+                subsection_title = self.tag_to_string(
+                    article_tag.find("span", attrs={"class": "c-meta__type"})
                 )
-                date = (
-                    " ["
-                    + self.tag_to_string(
-                        article.find("time", {"itemprop": check_words("datePublished")})
-                    )
-                    + "]"
-                )
-                author = self.tag_to_string(
-                    article.find("li", {"itemprop": check_words("creator")})
-                )
-                description = (
-                    self.tag_to_string(
-                        article.find(attrs={"data-test": check_words("article.type")})
-                    )
-                    + " • "
-                )
-                description += self.tag_to_string(
-                    article.find("div", attrs={"itemprop": check_words("description")})
-                )
-                sections[sec_title].append(
+                a_tag = article_tag.find("a", attrs={"itemprop": "url"})
+                sectioned_feeds[section_title].append(
                     {
-                        "title": title,
-                        "url": url,
-                        "description": description,
-                        "date": date,
-                        "author": author,
+                        "title": self.tag_to_string(a_tag),
+                        "url": absurl(a_tag["href"]),
+                        "description": f'{subsection_title} • {self.tag_to_string(article_tag.find("div", attrs={"itemprop": "description"}))}',
+                        "date": article_tag.find("time", attrs={"datetime": True})[
+                            "datetime"
+                        ],
+                        "autor": self.tag_to_string(
+                            article_tag.find("li", {"itemprop": check_words("creator")})
+                        ),
                     }
                 )
-
-        for k in ordered_sec_titles:
-            index.append((k, sections[k]))
-        return index
+        return sectioned_feeds.items()
