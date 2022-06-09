@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-09T11:17:58Z</updated>
+<updated>2022-06-09T15:17:54Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>NY Times Books</id>
+<title>NY Times Books: 9 Jun, 2022</title>
+<summary>NY Times Books: 9 Jun, 2022 published at 2022-06-09 15:05PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Poem: The Many Deaths of Inocencio Rodriguez&lt;/li&gt;&lt;li&gt;Viewing the Civil Rights Movement Through Children’s Books&lt;/li&gt;&lt;li&gt;Paradise by the Patchogue Ferry: A Hundred Years on Fire Island&lt;/li&gt;&lt;li&gt;Island Records’ Chris Blackwell Finally Tells His Story&lt;/li&gt;&lt;li&gt;A Daughter, Her Father and the Long-Gone Poet Who Brought Them Together&lt;/li&gt;&lt;li&gt;Once a Literary Snob, Chris Pavone Learned From the Experts&lt;/li&gt;&lt;li&gt;Jim Murphy, Who Wrote Vivid Histories for the Young, Dies at 74&lt;/li&gt;&lt;li&gt;Review: ‘Everything I Need I Get From You,’ by Kaitlyn Tiffany&lt;/li&gt;&lt;li&gt;Review: ‘Under the Skin,’ by Linda Villarosa&lt;/li&gt;&lt;li&gt;Book Review: “Virology,” by Joseph Osmundson&lt;/li&gt;&lt;li&gt;Werner Herzog’s Fever Dreams&lt;/li&gt;&lt;li&gt;A New Way to Choose Your Next Book&lt;/li&gt;&lt;li&gt;‘Look What You’ve Turned Us Into’: The Roots of Women’s Shame&lt;/li&gt;&lt;li&gt;Book Review: “More Than You’ll Ever Know,” by Katie Gutierrez&lt;/li&gt;&lt;li&gt;‘The Facemaker,’ a Grisly but Inspiring Story of Surgery During World War I&lt;/li&gt;&lt;li&gt;Newly Published, From Quarantine Love to Hemingway&lt;/li&gt;&lt;li&gt;Review: Sarah Silverman’s ‘Bedwetter’ Musical Has Sprung a Leak&lt;/li&gt;&lt;li&gt;Barbara Pym: An Excellent Woman? Most of the Time.&lt;/li&gt;&lt;li&gt;A Gender as Fluid as Water, and a Body in Crisis&lt;/li&gt;&lt;li&gt;Book Review: ‘Wastelands,’ by Corban Addison&lt;/li&gt;&lt;li&gt;In ‘Horse,’ Geraldine Brooks Sets a Consideration of Race at the Track&lt;/li&gt;&lt;li&gt;Geraldine Brooks, on Martha’s Vineyard&lt;/li&gt;&lt;li&gt;Review: ‘Boys and Oil,’ by Taylor Brorby&lt;/li&gt;&lt;li&gt;A Harrowing Journey From Cornell to Addiction to Prison&lt;/li&gt;&lt;li&gt;One Island, Two Men and Lots of Big Questions&lt;/li&gt;&lt;/ul&gt;
+                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
+                </content>
+<updated>2022-06-09T15:05:40Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-06-09.mobi"/>
+</entry>
 <entry>
 <id>Asian Review of Books</id>
 <title>Asian Review of Books: 9 Jun, 2022</title>
@@ -21,21 +36,6 @@
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-09.mobi"/>
-</entry>
-<entry>
-<id>NY Times Books</id>
-<title>NY Times Books: 9 Jun, 2022</title>
-<summary>NY Times Books: 9 Jun, 2022 published at 2022-06-09 09:00AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Island Records’ Chris Blackwell Finally Tells His Story&lt;/li&gt;&lt;li&gt;A Daughter, Her Father and the Long-Gone Poet Who Brought Them Together&lt;/li&gt;&lt;li&gt;Once a Literary Snob, Chris Pavone Learned From the Experts&lt;/li&gt;&lt;li&gt;Poem: The Many Deaths of Inocencio Rodrigues&lt;/li&gt;&lt;li&gt;Jim Murphy, Who Wrote Vivid Histories for the Young, Dies at 74&lt;/li&gt;&lt;li&gt;Review: ‘Everything I Need I Get From You,’ by Kaitlyn Tiffany&lt;/li&gt;&lt;li&gt;Review: ‘Under the Skin,’ by Linda Villarosa&lt;/li&gt;&lt;li&gt;Book Review: “Virology,” by Joseph Osmundson&lt;/li&gt;&lt;li&gt;Werner Herzog’s Fever Dreams&lt;/li&gt;&lt;li&gt;A New Way to Choose Your Next Book&lt;/li&gt;&lt;li&gt;‘Look What You’ve Turned Us Into’: The Roots of Women’s Shame&lt;/li&gt;&lt;li&gt;Book Review: “More Than You’ll Ever Know,” by Katie Gutierrez&lt;/li&gt;&lt;li&gt;‘The Facemaker,’ a Grisly but Inspiring Story of Surgery During World War I&lt;/li&gt;&lt;li&gt;Newly Published, From Quarantine Love to Hemingway&lt;/li&gt;&lt;li&gt;Review: Sarah Silverman’s ‘Bedwetter’ Musical Has Sprung a Leak&lt;/li&gt;&lt;li&gt;Barbara Pym: An Excellent Woman? Most of the Time.&lt;/li&gt;&lt;li&gt;A Gender as Fluid as Water, and a Body in Crisis&lt;/li&gt;&lt;li&gt;Book Review: ‘Wastelands,’ by Corban Addison&lt;/li&gt;&lt;li&gt;In ‘Horse,’ Geraldine Brooks Sets a Consideration of Race at the Track&lt;/li&gt;&lt;li&gt;Geraldine Brooks, on Martha’s Vineyard&lt;/li&gt;&lt;li&gt;Paradise by the Patchogue Ferry: A Hundred Years on Fire Island&lt;/li&gt;&lt;li&gt;Review: ‘Boys and Oil,’ by Taylor Brorby&lt;/li&gt;&lt;li&gt;A Harrowing Journey From Cornell to Addiction to Prison&lt;/li&gt;&lt;li&gt;Review: “The Visitors,” by Jessi Jezewska Stevens&lt;/li&gt;&lt;li&gt;One Island, Two Men and Lots of Big Questions&lt;/li&gt;&lt;/ul&gt;
-                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
-                </content>
-<updated>2022-06-09T09:00:29Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-06-09.mobi"/>
 </entry>
 <entry>
 <id>London Review of Books</id>
