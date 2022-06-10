@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-10T15:18:57Z</updated>
+<updated>2022-06-10T19:19:59Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,17 +10,32 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 10 Jun, 2022</title>
-<summary>NY Times Books: 10 Jun, 2022 published at 2022-06-10 14:04PM.</summary>
+<summary>NY Times Books: 10 Jun, 2022 published at 2022-06-10 18:20PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;“Red Scare” by Liam Francis Walsh&lt;/li&gt;&lt;li&gt;“The Golden Twine” (Cat’s Cradle, Volume 1) by Jo Rioux&lt;/li&gt;&lt;li&gt;The Best Books to Read on Disinformation: Its History, Techniques and Effects&lt;/li&gt;&lt;li&gt;Island Records’ Chris Blackwell Finally Tells His Story&lt;/li&gt;&lt;li&gt;Book Review: ‘The Twilight World,’ by Werner Herzog&lt;/li&gt;&lt;li&gt;Review: ‘How You Get Famous,’ by Nicole Pasulka&lt;/li&gt;&lt;li&gt;New Crime and Mystery Novels&lt;/li&gt;&lt;li&gt;Spring Awakening&lt;/li&gt;&lt;li&gt;New in Paperback: ‘Sexual Justice’ and ‘Last Call’&lt;/li&gt;&lt;li&gt;Ranan Lurie, Political Cartoonist With a Global Pen, Dies at 90&lt;/li&gt;&lt;li&gt;Viewing the Civil Rights Movement Through Children’s Books&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Poem: The Many Deaths of Inocencio Rodriguez&lt;/li&gt;&lt;li&gt;A Daughter, Her Father and the Long-Gone Poet Who Brought Them Together&lt;/li&gt;&lt;li&gt;Once a Literary Snob, Chris Pavone Learned From the Experts&lt;/li&gt;&lt;li&gt;Jim Murphy, Who Wrote Vivid Histories for the Young, Dies at 74&lt;/li&gt;&lt;li&gt;Review: ‘Everything I Need I Get From You,’ by Kaitlyn Tiffany&lt;/li&gt;&lt;li&gt;Review: ‘Under the Skin,’ by Linda Villarosa&lt;/li&gt;&lt;li&gt;Book Review: “Virology,” by Joseph Osmundson&lt;/li&gt;&lt;li&gt;Werner Herzog’s Fever Dreams&lt;/li&gt;&lt;li&gt;‘Look What You’ve Turned Us Into’: The Roots of Women’s Shame&lt;/li&gt;&lt;li&gt;Book Review: “More Than You’ll Ever Know,” by Katie Gutierrez&lt;/li&gt;&lt;li&gt;‘The Facemaker,’ a Grisly but Inspiring Story of Surgery During World War I&lt;/li&gt;&lt;li&gt;Newly Published, From Quarantine Love to Hemingway&lt;/li&gt;&lt;li&gt;One Island, Two Men and Lots of Big Questions&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Ranan Lurie, Political Cartoonist With a Global Pen, Dies at 90&lt;/li&gt;&lt;li&gt;Swapping Books Brings Katy Tur Closer to Her Mother&lt;/li&gt;&lt;li&gt;New Crime and Mystery Novels&lt;/li&gt;&lt;li&gt;“Red Scare” by Liam Francis Walsh&lt;/li&gt;&lt;li&gt;“The Golden Twine” (Cat’s Cradle, Volume 1) by Jo Rioux&lt;/li&gt;&lt;li&gt;The Best Books to Read on Disinformation: Its History, Techniques and Effects&lt;/li&gt;&lt;li&gt;Island Records’ Chris Blackwell Finally Tells His Story&lt;/li&gt;&lt;li&gt;Book Review: ‘The Twilight World,’ by Werner Herzog&lt;/li&gt;&lt;li&gt;Review: ‘How You Get Famous,’ by Nicole Pasulka&lt;/li&gt;&lt;li&gt;Spring Awakening&lt;/li&gt;&lt;li&gt;New in Paperback: ‘Sexual Justice’ and ‘Last Call’&lt;/li&gt;&lt;li&gt;Viewing the Civil Rights Movement Through Children’s Books&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Poem: The Many Deaths of Inocencio Rodriguez&lt;/li&gt;&lt;li&gt;A Daughter, Her Father and the Long-Gone Poet Who Brought Them Together&lt;/li&gt;&lt;li&gt;Once a Literary Snob, Chris Pavone Learned From the Experts&lt;/li&gt;&lt;li&gt;Jim Murphy, Who Wrote Vivid Histories for the Young, Dies at 74&lt;/li&gt;&lt;li&gt;Review: ‘Everything I Need I Get From You,’ by Kaitlyn Tiffany&lt;/li&gt;&lt;li&gt;Review: ‘Under the Skin,’ by Linda Villarosa&lt;/li&gt;&lt;li&gt;Book Review: “Virology,” by Joseph Osmundson&lt;/li&gt;&lt;li&gt;Werner Herzog’s Fever Dreams&lt;/li&gt;&lt;li&gt;‘Look What You’ve Turned Us Into’: The Roots of Women’s Shame&lt;/li&gt;&lt;li&gt;Book Review: “More Than You’ll Ever Know,” by Katie Gutierrez&lt;/li&gt;&lt;li&gt;‘The Facemaker,’ a Grisly but Inspiring Story of Surgery During World War I&lt;/li&gt;&lt;li&gt;One Island, Two Men and Lots of Big Questions&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-06-10T14:04:58Z</updated>
+<updated>2022-06-10T18:20:42Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-06-10.mobi"/>
+</entry>
+<entry>
+<id>London Review of Books</id>
+<title>London Review of Books: 9 Jun, 2022</title>
+<summary>London Review of Books: 9 Jun, 2022 published at 2022-06-10 15:48PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Madeleine Schwartz  - ‘You got up and you died’&lt;/li&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Miranda Carter  - My Castaway This Week&lt;/li&gt;&lt;li&gt;Robin Bunce and Paul Field  - Jubilee 1977&lt;/li&gt;&lt;li&gt;Jonathan Meades  - The Palace Papers&lt;/li&gt;&lt;li&gt;William Davies  - The Return of Inequality: Social Change and the Weight of the Past  / Colonialism and Modern Social Theory  / A Brief History of Equality&lt;/li&gt;&lt;li&gt;Frances Morgan  - At Serpentine North: ‘Radio Ballads’&lt;/li&gt;&lt;li&gt;Colin Burrow  - Here and There: Sites of Philosophy&lt;/li&gt;&lt;li&gt;Michael Ondaatje  - Poem: ‘The Leg Glance’&lt;/li&gt;&lt;li&gt;Peter Howarth  - How to Wash a Heart&lt;/li&gt;&lt;li&gt;Hugh Pennington  - Monkeypox&lt;/li&gt;&lt;li&gt;Jo Applin  - The Flowering: The Autobiography of Judy Chicago&lt;/li&gt;&lt;li&gt;Diarmaid MacCulloch  - Zwingli: God’s Armed Prophet&lt;/li&gt;&lt;li&gt;Alexander Clapp  - The Greek Revolution: 1821 and the Making of Modern Europe&lt;/li&gt;&lt;li&gt;Jen Stout  - Short Cuts: In Kharkiv&lt;/li&gt;&lt;li&gt;Dennis Duncan  - The Themerson Archive Catalogue&lt;/li&gt;&lt;li&gt;Sarah Resnick  - The Candy House&lt;/li&gt;&lt;li&gt;Rosina Buckland  - On Kyōsai&lt;/li&gt;&lt;li&gt;J. Robert Lennon  - A Carnival of Snackery: Diaries 2003-20&lt;/li&gt;&lt;li&gt;Ben Crair  - The Largest Avian Radiation: The Evolution of Perching Birds, or the Order Passeriformes&lt;/li&gt;&lt;li&gt;Tom Shippey  - The Dragon in the West: From Ancient Myth to Modern Legend&lt;/li&gt;&lt;li&gt;Stephanie Burt  - Diary: D&amp;D&lt;/li&gt;&lt;/ul&gt;
+                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
+                </content>
+<updated>2022-06-10T15:48:16Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-06-10.mobi"/>
 </entry>
 <entry>
 <id>Asian Review of Books</id>
@@ -51,20 +66,5 @@
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-06-09.mobi"/>
-</entry>
-<entry>
-<id>London Review of Books</id>
-<title>London Review of Books: 9 Jun, 2022</title>
-<summary>London Review of Books: 9 Jun, 2022 published at 2022-06-08 15:06PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Madeleine Schwartz  - ‘You got up and you died’&lt;/li&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Miranda Carter  - My Castaway This Week&lt;/li&gt;&lt;li&gt;Robin Bunce and Paul Field  - Jubilee 1977&lt;/li&gt;&lt;li&gt;Jonathan Meades  - The Palace Papers&lt;/li&gt;&lt;li&gt;William Davies  - The Return of Inequality: Social Change and the Weight of the Past  / Colonialism and Modern Social Theory  / A Brief History of Equality&lt;/li&gt;&lt;li&gt;Frances Morgan  - At Serpentine North: ‘Radio Ballads’&lt;/li&gt;&lt;li&gt;Colin Burrow  - Here and There: Sites of Philosophy&lt;/li&gt;&lt;li&gt;Michael Ondaatje  - Poem: ‘The Leg Glance’&lt;/li&gt;&lt;li&gt;Peter Howarth  - How to Wash a Heart&lt;/li&gt;&lt;li&gt;Hugh Pennington  - Monkeypox&lt;/li&gt;&lt;li&gt;Jo Applin  - The Flowering: The Autobiography of Judy Chicago&lt;/li&gt;&lt;li&gt;Diarmaid MacCulloch  - Zwingli: God’s Armed Prophet&lt;/li&gt;&lt;li&gt;Alexander Clapp  - The Greek Revolution: 1821 and the Making of Modern Europe&lt;/li&gt;&lt;li&gt;Jen Stout  - Short Cuts: In Kharkiv&lt;/li&gt;&lt;li&gt;Dennis Duncan  - The Themerson Archive Catalogue&lt;/li&gt;&lt;li&gt;Sarah Resnick  - The Candy House&lt;/li&gt;&lt;li&gt;Rosina Buckland  - On Kyōsai&lt;/li&gt;&lt;li&gt;J. Robert Lennon  - A Carnival of Snackery: Diaries 2003-20&lt;/li&gt;&lt;li&gt;Ben Crair  - The Largest Avian Radiation: The Evolution of Perching Birds, or the Order Passeriformes&lt;/li&gt;&lt;li&gt;Tom Shippey  - The Dragon in the West: From Ancient Myth to Modern Legend&lt;/li&gt;&lt;li&gt;Stephanie Burt  - Diary: D&amp;D&lt;/li&gt;&lt;/ul&gt;
-                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
-                </content>
-<updated>2022-06-08T15:06:28Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-06-08.mobi"/>
 </entry>
 </feed>
