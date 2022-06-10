@@ -227,6 +227,12 @@ recipes = [
         enable_on=onlyon_weekdays([2, 3, 4], 0),
     ),
     Recipe(
+        recipe="nautilus",
+        slug="nautilus",
+        src_ext="mobi",
+        category="magazines",
+    ),
+    Recipe(
         recipe="newyorker",
         slug="newyorker",
         src_ext="mobi",
