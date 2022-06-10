@@ -88,7 +88,7 @@ class NewYorkTimesPrint(BasicNewsRecipe):
      }
 
     .headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
-    .sub-headline { font-size: 1rem; margin-bottom: 1rem; }
+    .sub-headline { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; }
     .article-meta { margin-bottom: 1rem; }
     .article-meta .author { font-weight: bold; color: #444; }
     .article-meta .published-dt { margin-left: 0.5rem; }
