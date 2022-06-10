@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-10T11:58:04Z</updated>
+<updated>2022-06-10T15:18:57Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 10 Jun, 2022</title>
-<summary>NY Times Books: 10 Jun, 2022 published at 2022-06-10 09:00AM.</summary>
+<summary>NY Times Books: 10 Jun, 2022 published at 2022-06-10 14:04PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Book Review: ‘The Twilight World,’ by Werner Herzog&lt;/li&gt;&lt;li&gt;Review: ‘How You Get Famous,’ by Nicole Pasulka&lt;/li&gt;&lt;li&gt;New Crime and Mystery Novels&lt;/li&gt;&lt;li&gt;The author pays tribute to the power of Rachel Carson’s work&lt;/li&gt;&lt;li&gt;New in Paperback: ‘Sexual Justice’ and ‘Last Call’&lt;/li&gt;&lt;li&gt;Ranan Lurie, Political Cartoonist With a Global Pen, Dies at 90&lt;/li&gt;&lt;li&gt;Viewing the Civil Rights Movement Through Children’s Books&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;The Best Books to Read on Disinformation: Its History, Techniques and Effects&lt;/li&gt;&lt;li&gt;Island Records’ Chris Blackwell Finally Tells His Story&lt;/li&gt;&lt;li&gt;Poem: The Many Deaths of Inocencio Rodriguez&lt;/li&gt;&lt;li&gt;A Daughter, Her Father and the Long-Gone Poet Who Brought Them Together&lt;/li&gt;&lt;li&gt;Once a Literary Snob, Chris Pavone Learned From the Experts&lt;/li&gt;&lt;li&gt;Jim Murphy, Who Wrote Vivid Histories for the Young, Dies at 74&lt;/li&gt;&lt;li&gt;Review: ‘Everything I Need I Get From You,’ by Kaitlyn Tiffany&lt;/li&gt;&lt;li&gt;Review: ‘Under the Skin,’ by Linda Villarosa&lt;/li&gt;&lt;li&gt;Book Review: “Virology,” by Joseph Osmundson&lt;/li&gt;&lt;li&gt;Werner Herzog’s Fever Dreams&lt;/li&gt;&lt;li&gt;‘Look What You’ve Turned Us Into’: The Roots of Women’s Shame&lt;/li&gt;&lt;li&gt;Book Review: “More Than You’ll Ever Know,” by Katie Gutierrez&lt;/li&gt;&lt;li&gt;‘The Facemaker,’ a Grisly but Inspiring Story of Surgery During World War I&lt;/li&gt;&lt;li&gt;Newly Published, From Quarantine Love to Hemingway&lt;/li&gt;&lt;li&gt;Review: Sarah Silverman’s ‘Bedwetter’ Musical Has Sprung a Leak&lt;/li&gt;&lt;li&gt;Barbara Pym: An Excellent Woman? Most of the Time.&lt;/li&gt;&lt;li&gt;One Island, Two Men and Lots of Big Questions&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;“Red Scare” by Liam Francis Walsh&lt;/li&gt;&lt;li&gt;“The Golden Twine” (Cat’s Cradle, Volume 1) by Jo Rioux&lt;/li&gt;&lt;li&gt;The Best Books to Read on Disinformation: Its History, Techniques and Effects&lt;/li&gt;&lt;li&gt;Island Records’ Chris Blackwell Finally Tells His Story&lt;/li&gt;&lt;li&gt;Book Review: ‘The Twilight World,’ by Werner Herzog&lt;/li&gt;&lt;li&gt;Review: ‘How You Get Famous,’ by Nicole Pasulka&lt;/li&gt;&lt;li&gt;New Crime and Mystery Novels&lt;/li&gt;&lt;li&gt;Spring Awakening&lt;/li&gt;&lt;li&gt;New in Paperback: ‘Sexual Justice’ and ‘Last Call’&lt;/li&gt;&lt;li&gt;Ranan Lurie, Political Cartoonist With a Global Pen, Dies at 90&lt;/li&gt;&lt;li&gt;Viewing the Civil Rights Movement Through Children’s Books&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Poem: The Many Deaths of Inocencio Rodriguez&lt;/li&gt;&lt;li&gt;A Daughter, Her Father and the Long-Gone Poet Who Brought Them Together&lt;/li&gt;&lt;li&gt;Once a Literary Snob, Chris Pavone Learned From the Experts&lt;/li&gt;&lt;li&gt;Jim Murphy, Who Wrote Vivid Histories for the Young, Dies at 74&lt;/li&gt;&lt;li&gt;Review: ‘Everything I Need I Get From You,’ by Kaitlyn Tiffany&lt;/li&gt;&lt;li&gt;Review: ‘Under the Skin,’ by Linda Villarosa&lt;/li&gt;&lt;li&gt;Book Review: “Virology,” by Joseph Osmundson&lt;/li&gt;&lt;li&gt;Werner Herzog’s Fever Dreams&lt;/li&gt;&lt;li&gt;‘Look What You’ve Turned Us Into’: The Roots of Women’s Shame&lt;/li&gt;&lt;li&gt;Book Review: “More Than You’ll Ever Know,” by Katie Gutierrez&lt;/li&gt;&lt;li&gt;‘The Facemaker,’ a Grisly but Inspiring Story of Surgery During World War I&lt;/li&gt;&lt;li&gt;Newly Published, From Quarantine Love to Hemingway&lt;/li&gt;&lt;li&gt;One Island, Two Men and Lots of Big Questions&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-06-10T09:00:12Z</updated>
+<updated>2022-06-10T14:04:58Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
@@ -38,6 +38,21 @@
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-10.mobi"/>
 </entry>
 <entry>
+<id>Five Books</id>
+<title>Five Books: 9 Jun, 2022</title>
+<summary>Five Books: 9 Jun, 2022 published at 2022-06-09 00:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Gary Gerstle on Neoliberalism Books&lt;/li&gt;&lt;li&gt;Helen Scales on The Best Ocean Novels for 10-14 Year Olds&lt;/li&gt;&lt;li&gt;Jan Loeys on Market Concentration Books&lt;/li&gt;&lt;li&gt;Rosa Rankin-Gee on The Best Near-Future Dystopias&lt;/li&gt;&lt;li&gt;Cal Flyn on The Notable Novels of Summer 2022&lt;/li&gt;&lt;li&gt;Benno Gammerl on Queer History Books&lt;/li&gt;&lt;li&gt;Matthew Brookes &amp; Zack Raffin on Wanderlust Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Spring 2022&lt;/li&gt;&lt;li&gt;Alison King on Best Verse Novels for 8-12 Year Olds&lt;/li&gt;&lt;li&gt;Sue Rainsford on Literary Horror Books&lt;/li&gt;&lt;li&gt;Howard Smith on Antitrust Books&lt;/li&gt;&lt;li&gt;Carole Hillenbrand on The Best History Books: the 2022 Wolfson Prize Shortlist&lt;/li&gt;&lt;li&gt;Velma Šarić on Bosnia Books&lt;/li&gt;&lt;li&gt;Mark Webber on NATO Books&lt;/li&gt;&lt;li&gt;Wajahat Ali on The Best South Asian American Novels&lt;/li&gt;&lt;li&gt;Chris Power on The Best Literary Thrillers&lt;/li&gt;&lt;li&gt;Michele Cobb on The Best Audiobooks: the 2022 Audie Awards&lt;/li&gt;&lt;li&gt;Serhii Plokhy on Ukraine and Russia Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Early 2022&lt;/li&gt;&lt;li&gt;Cal Flyn on Notable Novels of Spring 2022&lt;/li&gt;&lt;li&gt;Nigel Warburton on The Best Philosophy Books of 2021&lt;/li&gt;&lt;li&gt;Jeffrey Archer on The Best Detective Fiction&lt;/li&gt;&lt;li&gt;Marion Turner on Best Medieval Historical Fiction&lt;/li&gt;&lt;li&gt;Tanya Selvaratnam on Domestic Violence Books&lt;/li&gt;&lt;/ul&gt;
+                Expert book recommendations
+                </content>
+<updated>2022-06-09T00:00:00Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-06-09.mobi"/>
+</entry>
+<entry>
 <id>London Review of Books</id>
 <title>London Review of Books: 9 Jun, 2022</title>
 <summary>London Review of Books: 9 Jun, 2022 published at 2022-06-08 15:06PM.</summary>
@@ -51,20 +66,5 @@
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-06-08.mobi"/>
-</entry>
-<entry>
-<id>Five Books</id>
-<title>Five Books: 8 Jun, 2022</title>
-<summary>Five Books: 8 Jun, 2022 published at 2022-06-08 00:00AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Helen Scales on The Best Ocean Novels for 10-14 Year Olds&lt;/li&gt;&lt;li&gt;Jan Loeys on Market Concentration Books&lt;/li&gt;&lt;li&gt;Rosa Rankin-Gee on The Best Near-Future Dystopias&lt;/li&gt;&lt;li&gt;Cal Flyn on The Notable Novels of Summer 2022&lt;/li&gt;&lt;li&gt;Benno Gammerl on Queer History Books&lt;/li&gt;&lt;li&gt;Matthew Brookes &amp; Zack Raffin on Wanderlust Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Spring 2022&lt;/li&gt;&lt;li&gt;Alison King on Best Verse Novels for 8-12 Year Olds&lt;/li&gt;&lt;li&gt;Sue Rainsford on Literary Horror Books&lt;/li&gt;&lt;li&gt;Howard Smith on Antitrust Books&lt;/li&gt;&lt;li&gt;Carole Hillenbrand on The Best History Books: the 2022 Wolfson Prize Shortlist&lt;/li&gt;&lt;li&gt;Velma Šarić on Bosnia Books&lt;/li&gt;&lt;li&gt;Mark Webber on NATO Books&lt;/li&gt;&lt;li&gt;Wajahat Ali on The Best South Asian American Novels&lt;/li&gt;&lt;li&gt;Breege O'Brien on Great Teen Reads from Ireland’s Great Reads Awards Books&lt;/li&gt;&lt;li&gt;Chris Power on The Best Literary Thrillers&lt;/li&gt;&lt;li&gt;Michele Cobb on The Best Audiobooks: the 2022 Audie Awards&lt;/li&gt;&lt;li&gt;Serhii Plokhy on Ukraine and Russia Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Early 2022&lt;/li&gt;&lt;li&gt;Cal Flyn on Notable Novels of Spring 2022&lt;/li&gt;&lt;li&gt;Nigel Warburton on The Best Philosophy Books of 2021&lt;/li&gt;&lt;li&gt;Jeffrey Archer on The Best Detective Fiction&lt;/li&gt;&lt;li&gt;Marion Turner on Best Medieval Historical Fiction&lt;/li&gt;&lt;li&gt;Tanya Selvaratnam on Domestic Violence Books&lt;/li&gt;&lt;/ul&gt;
-                Expert book recommendations
-                </content>
-<updated>2022-06-08T00:00:00Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-06-08.mobi"/>
 </entry>
 </feed>
