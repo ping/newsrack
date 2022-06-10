@@ -1,6 +1,7 @@
 """
 nautil.us
 """
+# Original from https://github.com/kovidgoyal/calibre/blob/946ae082e1291f61d88638ff3f3723df591da835/recipes/nautilus.recipe
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 _name = "Nautilus"
