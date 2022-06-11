@@ -14,7 +14,7 @@
 "The Atlantic": [
 {
 "filename": "the-atlantic-2022-06-11.mobi",
-"published": 1654943516.0
+"published": 1654945256.0
 }
 ],
 "The Atlantic Magazine": [
@@ -26,7 +26,7 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-06-11.mobi",
-"published": 1654944480.0
+"published": 1654949880.0
 }
 ],
 "The Diplomat": [
@@ -56,7 +56,7 @@
 "Guardian": [
 {
 "filename": "guardian-2022-06-11.mobi",
-"published": 1654944285.0
+"published": 1654949665.0
 }
 ],
 "JoongAng Daily": [
@@ -98,7 +98,7 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-06-11.mobi",
-"published": 1654943558.0
+"published": 1654949335.0
 }
 ],
 "NY Times (Print)": [
@@ -128,7 +128,7 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-06-11.mobi",
-"published": 1654943921.0
+"published": 1654950462.0
 }
 ],
 "Taipei Times": [
@@ -151,14 +151,14 @@
 ],
 "Vox": [
 {
-"filename": "vox-2022-06-10.mobi",
-"published": 1654891200.0
+"filename": "vox-2022-06-11.mobi",
+"published": 1654950600.0
 }
 ],
 "Washington Post": [
 {
 "filename": "wapo-2022-06-11.mobi",
-"published": 1654945256.0
+"published": 1654950642.0
 }
 ],
 "Wired Magazine": [
@@ -167,5 +167,5 @@
 "published": 1654862400.0
 }
 ],
-"_generated": 1654946101
+"_generated": 1654951460
 }
