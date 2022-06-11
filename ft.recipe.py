@@ -27,6 +27,8 @@ class FinancialTimes(BasicNewsRecipe):
     no_stylesheets = True
     auto_cleanup = False
     masthead_url = "https://www.ft.com/partnercontent/content-hub/static/media/ft-horiz-new-black.215c1169.png"
+    ignore_duplicate_articles = {"url"}
+
     timeout = 20
     timefmt = ""
     pub_date = None  # custom publication date
@@ -44,12 +46,12 @@ class FinancialTimes(BasicNewsRecipe):
 
     feeds = [
         ("Home", "https://www.ft.com/rss/home"),
-        # ("Home (International)", "https://www.ft.com/rss/home/international"),
+        ("Home (International)", "https://www.ft.com/rss/home/international"),
         ("World", "https://www.ft.com/world?format=rss"),
         ("US", "https://www.ft.com/world/us?format=rss"),
         ("Technology", "https://www.ft.com/technology?format=rss"),
-        # ("Markets", "https://www.ft.com/markets?format=rss"),
-        # ("Climate", "https://www.ft.com/climate-capital?format=rss"),
+        ("Markets", "https://www.ft.com/markets?format=rss"),
+        ("Climate", "https://www.ft.com/climate-capital?format=rss"),
         ("Opinion", "https://www.ft.com/opinion?format=rss"),
         # ("Work & Careers", "https://www.ft.com/work-careers?format=rss"),
         # ("Life & Arts", "https://www.ft.com/life-arts?format=rss"),
