@@ -71,4 +71,13 @@
         };
     }
 
+    // stupid workaround instead of relying on screen size
+    // to increase font size for non-kindle devices
+    if (navigator.userAgent.indexOf("Mozilla/5.0 (X11") < 0) {
+        var cssEle = document.createElement("link");
+        cssEle["rel"] = "stylesheet"
+        cssEle["href"] = "nonkindle.css"
+        document.head.appendChild(cssEle);
+    }
+
 })();
