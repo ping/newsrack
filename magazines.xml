@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-06-12T19:15:56Z</updated>
+<updated>2022-06-12T23:15:46Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>Vox</id>
+<title>Vox: 12 Jun, 2022</title>
+<summary>Vox: 12 Jun, 2022 published at 2022-06-12 21:51PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;What’s in the bipartisan plan for gun control&lt;/li&gt;&lt;li&gt;The best $2,618 I ever spent: A second wedding ceremony&lt;/li&gt;&lt;li&gt;“We’re expected to be human shields”: Teachers are unprotected — and scared&lt;/li&gt;&lt;li&gt;The power and limits of using executive orders to protect abortion rights&lt;/li&gt;&lt;li&gt;Trying the case at the scene of the crime&lt;/li&gt;&lt;li&gt;Can blaming corporate greed save Democrats on inflation?&lt;/li&gt;&lt;li&gt;We just got the most comprehensive study of pandemic learning loss&lt;/li&gt;&lt;li&gt;The January 6 hearings showed why it’s reasonable to call Trump a fascist&lt;/li&gt;&lt;li&gt;How Democrats plan to win big in Georgia again&lt;/li&gt;&lt;li&gt;What happens if you clone Jurassic Park&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-06-12T21:51:56Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-06-12.mobi"/>
+</entry>
 <entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 12 Jun, 2022</title>
@@ -21,21 +36,6 @@
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-06-12.mobi"/>
-</entry>
-<entry>
-<id>Vox</id>
-<title>Vox: 12 Jun, 2022</title>
-<summary>Vox: 12 Jun, 2022 published at 2022-06-12 12:30PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The best $2,618 I ever spent: A second wedding ceremony&lt;/li&gt;&lt;li&gt;“We’re expected to be human shields”: Teachers are unprotected — and scared&lt;/li&gt;&lt;li&gt;The power and limits of using executive orders to protect abortion rights&lt;/li&gt;&lt;li&gt;Trying the case at the scene of the crime&lt;/li&gt;&lt;li&gt;Can blaming corporate greed save Democrats on inflation?&lt;/li&gt;&lt;li&gt;We just got the most comprehensive study of pandemic learning loss&lt;/li&gt;&lt;li&gt;The January 6 hearings showed why it’s reasonable to call Trump a fascist&lt;/li&gt;&lt;li&gt;How Democrats plan to win big in Georgia again&lt;/li&gt;&lt;li&gt;What happens if you clone Jurassic Park&lt;/li&gt;&lt;li&gt;“Miracles sometimes happen”: The Senate hasn’t given up on gun control — yet&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-06-12T12:30:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-06-12.mobi"/>
 </entry>
 <entry>
 <id>Wired Magazine</id>
