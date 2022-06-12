@@ -1,4 +1,5 @@
 import textwrap
+
 from PIL import Image, ImageDraw, ImageFont
 
 # for cover generation

@@ -1,7 +1,7 @@
 
 # newsrack
 
-Generate a "newsrack" of `.mobi` periodicals for your ereader.
+Generate a "newsrack" of periodicals for your ereader.
 
 Uses [calibre](https://calibre-ebook.com/), [GitHub Actions](.github/workflows/build.yml) and hosted on [GitHub Pages](https://pages.github.com/).
 
