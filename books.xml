@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-13T04:09:32Z</updated>
+<updated>2022-06-13T07:15:21Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -24,18 +24,18 @@
 </entry>
 <entry>
 <id>NY Times Books</id>
-<title>NY Times Books: 10 Jun, 2022</title>
-<summary>NY Times Books: 10 Jun, 2022 published at 2022-06-10 20:52PM.</summary>
+<title>NY Times Books: 12 Jun, 2022</title>
+<summary>NY Times Books: 12 Jun, 2022 published at 2022-06-12 13:06PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Review: ‘How You Get Famous,’ by Nicole Pasulka&lt;/li&gt;&lt;li&gt;Tom Perrotta on the Return of Tracy Flick&lt;/li&gt;&lt;li&gt;Ranan Lurie, Political Cartoonist With a Global Pen, Dies at 90&lt;/li&gt;&lt;li&gt;Swapping Books Brings Katy Tur Closer to Her Mother&lt;/li&gt;&lt;li&gt;New Crime and Mystery Novels&lt;/li&gt;&lt;li&gt;“Red Scare” by Liam Francis Walsh&lt;/li&gt;&lt;li&gt;“The Golden Twine” (Cat’s Cradle, Volume 1) by Jo Rioux&lt;/li&gt;&lt;li&gt;The Best Books to Read on Disinformation: Its History, Techniques and Effects&lt;/li&gt;&lt;li&gt;Island Records’ Chris Blackwell Finally Tells His Story&lt;/li&gt;&lt;li&gt;Book Review: ‘The Twilight World,’ by Werner Herzog&lt;/li&gt;&lt;li&gt;Spring Awakening&lt;/li&gt;&lt;li&gt;New in Paperback: ‘Sexual Justice’ and ‘Last Call’&lt;/li&gt;&lt;li&gt;Viewing the Civil Rights Movement Through Children’s Books&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Poem: The Many Deaths of Inocencio Rodriguez&lt;/li&gt;&lt;li&gt;A Daughter, Her Father and the Long-Gone Poet Who Brought Them Together&lt;/li&gt;&lt;li&gt;Once a Literary Snob, Chris Pavone Learned From the Experts&lt;/li&gt;&lt;li&gt;Jim Murphy, Who Wrote Vivid Histories for the Young, Dies at 74&lt;/li&gt;&lt;li&gt;Review: ‘Everything I Need I Get From You,’ by Kaitlyn Tiffany&lt;/li&gt;&lt;li&gt;Review: ‘Under the Skin,’ by Linda Villarosa&lt;/li&gt;&lt;li&gt;Book Review: “Virology,” by Joseph Osmundson&lt;/li&gt;&lt;li&gt;Werner Herzog’s Fever Dreams&lt;/li&gt;&lt;li&gt;‘Look What You’ve Turned Us Into’: The Roots of Women’s Shame&lt;/li&gt;&lt;li&gt;Book Review: “More Than You’ll Ever Know,” by Katie Gutierrez&lt;/li&gt;&lt;li&gt;‘The Facemaker,’ a Grisly but Inspiring Story of Surgery During World War I&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;John Merriman, Eminent Historian of France, Is Dead at 75&lt;/li&gt;&lt;li&gt;Review: ‘The Men,’ by Sandra Newman; and ‘When Women Were Dragons,’ by Kelly Barnhill&lt;/li&gt;&lt;li&gt;Abortion Politics, Money and the Reshaping of the G.O.P.&lt;/li&gt;&lt;li&gt;Peter Lamborn Wilson, Advocate of ‘Poetic Terrorism,’ Dies at 76&lt;/li&gt;&lt;li&gt;The Very Human Pleasure of Being Read To&lt;/li&gt;&lt;li&gt;Review: ‘How You Get Famous,’ by Nicole Pasulka&lt;/li&gt;&lt;li&gt;Tom Perrotta on the Return of Tracy Flick&lt;/li&gt;&lt;li&gt;Ranan Lurie, Political Cartoonist With a Global Pen, Dies at 90&lt;/li&gt;&lt;li&gt;Swapping Books Brings Katy Tur Closer to Her Mother&lt;/li&gt;&lt;li&gt;New Crime and Mystery Novels&lt;/li&gt;&lt;li&gt;“Red Scare” by Liam Francis Walsh&lt;/li&gt;&lt;li&gt;“The Golden Twine” (Cat’s Cradle, Volume 1) by Jo Rioux&lt;/li&gt;&lt;li&gt;The Best Books to Read on Disinformation: Its History, Techniques and Effects&lt;/li&gt;&lt;li&gt;Island Records’ Chris Blackwell Finally Tells His Story&lt;/li&gt;&lt;li&gt;Book Review: ‘The Twilight World,’ by Werner Herzog&lt;/li&gt;&lt;li&gt;Spring Awakening&lt;/li&gt;&lt;li&gt;New in Paperback: ‘Sexual Justice’ and ‘Last Call’&lt;/li&gt;&lt;li&gt;Viewing the Civil Rights Movement Through Children’s Books&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Poem: The Many Deaths of Inocencio Rodriguez&lt;/li&gt;&lt;li&gt;A Daughter, Her Father and the Long-Gone Poet Who Brought Them Together&lt;/li&gt;&lt;li&gt;Once a Literary Snob, Chris Pavone Learned From the Experts&lt;/li&gt;&lt;li&gt;Jim Murphy, Who Wrote Vivid Histories for the Young, Dies at 74&lt;/li&gt;&lt;li&gt;Review: ‘Under the Skin,’ by Linda Villarosa&lt;/li&gt;&lt;li&gt;Werner Herzog’s Fever Dreams&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-06-10T20:52:21Z</updated>
+<updated>2022-06-12T13:06:37Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-06-10.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-06-12.mobi"/>
 </entry>
 <entry>
 <id>London Review of Books</id>
