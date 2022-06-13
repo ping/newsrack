@@ -2,7 +2,7 @@
 "Asahi Shimbun": [
 {
 "filename": "asahi-shimbun-2022-06-13.mobi",
-"published": 1655103000.0
+"published": 1655112720.0
 }
 ],
 "Asian Review of Books": [
@@ -13,8 +13,8 @@
 ],
 "The Atlantic": [
 {
-"filename": "the-atlantic-2022-06-12.mobi",
-"published": 1655059637.0
+"filename": "the-atlantic-2022-06-13.mobi",
+"published": 1655116316.0
 }
 ],
 "The Atlantic Magazine": [
@@ -26,7 +26,7 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-06-13.mobi",
-"published": 1655103501.0
+"published": 1655117137.0
 }
 ],
 "The Diplomat": [
@@ -37,14 +37,14 @@
 ],
 "Economist": [
 {
-"filename": "economist-2022-06-11.mobi",
-"published": 1654941458.0
+"filename": "economist-2022-06-13.mobi",
+"published": 1655113232.0
 }
 ],
 "Financial Times": [
 {
 "filename": "ft-2022-06-13.mobi",
-"published": 1655102680.0
+"published": 1655118040.0
 }
 ],
 "Five Books": [
@@ -56,19 +56,19 @@
 "Guardian": [
 {
 "filename": "guardian-2022-06-13.mobi",
-"published": 1655102112.0
+"published": 1655117862.0
 }
 ],
 "JoongAng Daily": [
 {
 "filename": "joongang-daily-2022-06-13.mobi",
-"published": 1655103874.0
+"published": 1655118327.0
 }
 ],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-06-13.mobi",
-"published": 1655103530.0
+"published": 1655115567.0
 }
 ],
 "London Review of Books": [
@@ -91,14 +91,14 @@
 ],
 "New Yorker": [
 {
-"filename": "newyorker-2022-06-06.mobi",
-"published": 1654509600.0
+"filename": "newyorker-2022-06-13.mobi",
+"published": 1655114400.0
 }
 ],
 "NY Times": [
 {
 "filename": "nytimes-global-2022-06-13.mobi",
-"published": 1655103611.0
+"published": 1655118006.0
 }
 ],
 "NY Times (Print)": [
@@ -109,8 +109,8 @@
 ],
 "NY Times Books": [
 {
-"filename": "nytimes-books-2022-06-12.mobi",
-"published": 1655039197.0
+"filename": "nytimes-books-2022-06-13.mobi",
+"published": 1655109206.0
 }
 ],
 "POLITICO Magazine": [
@@ -128,7 +128,7 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-06-13.mobi",
-"published": 1655101972.0
+"published": 1655115315.0
 }
 ],
 "Taipei Times": [
@@ -158,9 +158,14 @@
 "Washington Post": [
 {
 "filename": "wapo-2022-06-13.mobi",
-"published": 1655103991.0
+"published": 1655118594.0
 }
 ],
-"Wired Magazine": [],
-"_generated": 1655104521
+"Wired Magazine": [
+{
+"filename": "wired-2022-06-12.mobi",
+"published": 1655031600.0
+}
+],
+"_generated": 1655118994
 }
