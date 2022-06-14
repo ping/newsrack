@@ -15,6 +15,7 @@ class Vox(BasicNewsRecipe):
 
     max_articles_per_feed = 25
     use_embedded_content = True
+    timeout = 20
     timefmt = ""
     pub_date = None  # custom publication date
 

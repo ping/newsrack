@@ -16,6 +16,7 @@ class TaipeiTimes(BasicNewsRecipe):
     oldest_article = 1  # days
     max_articles_per_feed = 50
     use_embedded_content = False
+    timeout = 20
     timefmt = ""
     pub_date = None  # custom publication date
 

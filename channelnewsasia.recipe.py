@@ -26,6 +26,7 @@ class ChannelNewsAsia(BasicNewsRecipe):
     compress_news_images = True
     scale_news_images = (800, 800)
     scale_news_images_to_device = False  # force img to be resized to scale_news_images
+    timeout = 20
     pub_date = None  # custom publication date
 
     remove_tags_before = [dict(class_=["h1--page-title"])]

@@ -18,6 +18,7 @@ class NYTimesBooks(BasicNewsRecipe):
     oldest_article = 7  # days
     max_articles_per_feed = 25
     use_embedded_content = False
+    timeout = 20
     timefmt = ""
     pub_date = None  # custom publication date
 
