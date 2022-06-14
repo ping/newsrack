@@ -1,8 +1,11 @@
+import re
 from collections import OrderedDict
 from datetime import datetime, timezone
+from urllib.parse import urlparse
+
 from calibre.web.feeds.news import BasicNewsRecipe
 
-
+_issue_url = ""
 _name = "Poetry"
 
 
@@ -58,21 +61,38 @@ class Nature(BasicNewsRecipe):
         return soup
 
     def parse_index(self):
-        soup = self.index_to_soup("https://www.poetryfoundation.org/poetrymagazine")
-        current_issue = soup.select("div.c-cover-media a")
-        if not current_issue:
-            self.abort_recipe_processing("Unable to find latest issue")
+        if _issue_url:
+            soup = self.index_to_soup(_issue_url)
+        else:
+            soup = self.index_to_soup("https://www.poetryfoundation.org/poetrymagazine")
+            current_issue = soup.select("div.c-cover-media a")
+            if not current_issue:
+                self.abort_recipe_processing("Unable to find latest issue")
+            current_issue = current_issue[0]
+            soup = self.index_to_soup(current_issue["href"])
 
-        current_issue = current_issue[0]
-        cover_image = current_issue.find("img")
-        self.cover_url = cover_image["srcset"].split(",")[-1].strip().split(" ")[0]
-
-        soup = self.index_to_soup(current_issue["href"])
         issue_edition = self.tag_to_string(soup.find("h1"))
-        self.pub_date = datetime.strptime(issue_edition, "%B %Y").replace(
-            tzinfo=timezone.utc
-        )
         self.title = f"{_name}: {issue_edition}"
+        try:
+            self.pub_date = datetime.strptime(issue_edition, "%B %Y").replace(
+                tzinfo=timezone.utc
+            )
+        except ValueError:
+            # 2-month issue e.g. "July/August 2021"
+            mobj = re.match(
+                r"(?P<mth>\w+)/\w+ (?P<yr>\d{4})", issue_edition, re.IGNORECASE
+            )
+            if not mobj:
+                self.abort_recipe_processing("Unable to parse issue date")
+            self.pub_date = datetime.strptime(
+                f'{mobj.group("mth")} {mobj.group("yr")}', "%B %Y"
+            ).replace(tzinfo=timezone.utc)
+
+        cover_image = soup.select("div.c-issueBillboard-cover-media img")[0]
+        parsed_cover_url = urlparse(
+            cover_image["srcset"].split(",")[-1].strip().split(" ")[0]
+        )
+        self.cover_url = f"{parsed_cover_url.scheme}://{parsed_cover_url.netloc}{parsed_cover_url.path}"
 
         sectioned_feeds = OrderedDict()
 
