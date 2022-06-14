@@ -3,7 +3,9 @@ __copyright__ = "2010-2011, Darko Miletic <darko.miletic at gmail.com>"
 """
 smh.com.au
 """
+# Original at https://github.com/kovidgoyal/calibre/blob/8bc3d757f4bb78ee002caf2766d7285497349097/recipes/smh.recipe
 from calibre.web.feeds.news import BasicNewsRecipe
+from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
 _name = "The Sydney Morning Herald"
 
@@ -28,6 +30,7 @@ class SydneyMorningHerald(BasicNewsRecipe):
     no_stylesheets = True
     no_javascript = True
     compress_news_images = True
+    compress_news_images_auto_size = 10
     scale_news_images = (800, 800)
     timeout = 20
     timefmt = ""
@@ -76,7 +79,14 @@ class SydneyMorningHerald(BasicNewsRecipe):
             self.pub_date = article.utctime
             self.title = f"{_name}: {self.pub_date:%-d %b, %Y}"
 
-    def preprocess_html(self, soup):
+    def preprocess_raw_html(self, raw_html, url):
+        soup = BeautifulSoup(raw_html)
+        vid_player = soup.find(
+            "div", attrs={"data-testid": "video-player", "class": "noPrint"}
+        )
+        if vid_player:
+            self.abort_article("Video article")
+
         ul_eles = soup.find_all("ul") or []
         for ul in ul_eles:
             if not ul.find_all("li", attrs={"data-testid": ["category", "tag-name"]}):
@@ -102,4 +112,11 @@ class SydneyMorningHerald(BasicNewsRecipe):
             h5["class"] = "bylines"
             break
 
-        return soup
+        for picture in soup.find_all("picture"):
+            sources = picture.find_all("source", attrs={"srcset": True})
+            if not sources:
+                continue
+            picture.img["src"] = sources[0]["srcset"].split(",")[0].split(" ")[0]
+            for s in sources:
+                s.decompose()
+        return str(soup)
