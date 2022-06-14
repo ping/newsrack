@@ -185,7 +185,6 @@ for recipe in recipes:
         "ebook-convert",
         f"{recipe.recipe}.recipe",
         source_file_path,
-        "--dont-download-recipe",
     ]
     if recipe.src_ext == "mobi":
         cmd.extend(["--output-profile=kindle_oasis", "--mobi-file-type=both"])
