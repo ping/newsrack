@@ -263,6 +263,13 @@ recipes = [
         enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -5),
     ),
     Recipe(
+        recipe="poetry",
+        slug="poetry-magazine",
+        src_ext="mobi",
+        overwrite_cover=False,
+        category="magazines",
+    ),
+    Recipe(
         recipe="politico-magazine",
         slug="politico-magazine",
         src_ext="mobi",
