@@ -284,6 +284,12 @@ recipes = [
         category="news",
     ),
     Recipe(
+        recipe="sydney-morning-herald",
+        slug="sydney-morning-herald",
+        src_ext="mobi",
+        category="news",
+    ),
+    Recipe(
         recipe="taipei-times",
         slug="taipei-times",
         src_ext="mobi",

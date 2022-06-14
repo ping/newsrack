@@ -1,0 +1,105 @@
+__license__ = "GPL v3"
+__copyright__ = "2010-2011, Darko Miletic <darko.miletic at gmail.com>"
+"""
+smh.com.au
+"""
+from calibre.web.feeds.news import BasicNewsRecipe
+
+_name = "The Sydney Morning Herald"
+
+
+class SydneyMorningHerald(BasicNewsRecipe):
+    title = _name
+    __author__ = "Darko Miletic"
+    description = "Breaking news from Sydney, Australia and the world. Features the latest business, sport, entertainment, travel, lifestyle, and technology news."  # noqa
+    publisher = "Fairfax Digital"
+    category = "news, politics, Australia, Sydney"
+    oldest_article = 1
+    max_articles_per_feed = 50
+    ignore_duplicate_articles = {"title", "url"}
+    use_embedded_content = False
+    encoding = "utf-8"
+
+    language = "en_AU"
+    remove_empty_feeds = True
+    masthead_url = "http://images.smh.com.au/2010/02/02/1087188/smh-620.jpg"
+    publication_type = "newspaper"
+
+    no_stylesheets = True
+    no_javascript = True
+    compress_news_images = True
+    scale_news_images = (800, 800)
+    timeout = 20
+    timefmt = ""
+    pub_date = None  # custom publication date
+
+    remove_attributes = ["style", "font", "width", "height"]
+    keep_only_tags = [dict(name="article")]
+    remove_tags = [
+        dict(name=["button"]),
+        dict(id=["saveTooltip"]),
+        dict(attrs={"class": "noPrint"}),
+    ]
+
+    extra_css = """
+    h1[itemprop="headline"] { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .bylines, span[data-testid="byline"] a { font-weight: bold; color: #444; }
+    div[data-testid="category"], div[data-testid="tag-name"] { display: inline-block; margin-right: 0.2rem; }
+    div[data-testid="image"] p { font-size: 0.8rem; margin-top: 0.2rem; }
+    div[data-testid="image"] img { max-width: 100%; height: auto; }
+    cite, cite span { margin-left: 0.2rem; }
+    """
+
+    # https://www.smh.com.au/rssheadlines
+    feeds = [
+        ("Latest News", "https://www.smh.com.au/rss/feed.xml"),
+        ("Federal Politics", "https://www.smh.com.au/rss/politics/federal.xml"),
+        ("NSW News", "https://www.smh.com.au/rss/national/nsw.xml"),
+        ("World", "https://www.smh.com.au/rss/world.xml"),
+        ("National", "https://www.smh.com.au/rss/national.xml"),
+        ("Business", "https://www.smh.com.au/rss/business.xml"),
+        ("Culture", "https://www.smh.com.au/rss/culture.xml"),
+        ("Technology", "https://www.smh.com.au/rss/technology.xml"),
+        ("Environment", "https://www.smh.com.au/rss/environment.xml"),
+        # ("Lifestyle", "https://www.smh.com.au/rss/lifestyle.xml"),
+        # ("Property", "https://www.smh.com.au/rss/property.xml"),
+        # ("Sport", "https://www.smh.com.au/rss/sport.xml"),
+        # ("Ruby League", "https://www.smh.com.au/rss/sport/nrl.xml"),
+        # ("AFL", "https://www.smh.com.au/rss/sport/afl.xml"),
+    ]
+
+    def publication_date(self):
+        return self.pub_date
+
+    def populate_article_metadata(self, article, _, __):
+        if not self.pub_date or article.utctime > self.pub_date:
+            self.pub_date = article.utctime
+            self.title = f"{_name}: {self.pub_date:%-d %b, %Y}"
+
+    def preprocess_html(self, soup):
+        ul_eles = soup.find_all("ul") or []
+        for ul in ul_eles:
+            if not ul.find_all("li", attrs={"data-testid": ["category", "tag-name"]}):
+                continue
+            for i, li in enumerate(ul.find_all("li")):
+                live_ticker = li.find("h5")
+                if live_ticker:
+                    live_ticker.name = "span"
+                a_link = li.find("a")
+                if a_link:
+                    li.string = self.tag_to_string(a_link)
+                    if i > 0:
+                        li.string = " • " + li.string
+                li.name = "div"
+            ul.name = "div"
+            break
+
+        h5_eles = soup.find_all("h5") or []
+        for h5 in h5_eles:
+            if not h5.find_all("span", attrs={"data-testid": ["byline"]}):
+                continue
+            h5.name = "div"
+            h5["class"] = "bylines"
+            break
+
+        return soup
