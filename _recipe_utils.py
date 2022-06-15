@@ -1,0 +1,106 @@
+import time
+from dataclasses import dataclass, field
+from datetime import datetime, timezone, timedelta
+from functools import cmp_to_key
+from typing import List, Union, Callable
+
+
+default_recipe_timeout = 180
+
+
+@dataclass
+class Recipe:
+    """A Calibre recipe definition"""
+
+    recipe: str  # actual recipe name
+    slug: str  # file name slug
+    src_ext: str  # recipe output format
+    category: str  # category, e.g. News
+    name: str = ""  # display name, taken from recipe source by default
+    target_ext: List[str] = field(
+        default_factory=list
+    )  # alt formats that src_ext will be converted to
+    timeout: int = default_recipe_timeout  # max time allowed for executing the recipe
+    overwrite_cover: bool = True  # generate a plain cover to overwrite Calibre's
+    enable_on: Union[
+        bool, Callable[[], bool]
+    ] = True  # determines when to run the recipe
+    run_interval_in_days: float = 0  # kinda like Calibre's every X days
+    drift_in_hours: float = (
+        1  # allowance for schedule drift since scheduler is not precise
+    )
+    job_log: dict = field(default_factory=dict, init=False)
+
+    def is_enabled(self) -> bool:
+        is_due = self.job_log.get(self.name, 0) < (
+            time.time()
+            - (24 * self.run_interval_in_days - self.drift_in_hours) * 60 * 60
+        )
+        if callable(self.enable_on):
+            return is_due and self.enable_on()
+        return is_due and self.enable_on
+
+
+sorted_categories = ["news", "magazines", "books"]
+
+
+def sort_category(a, b):
+    try:
+        a_index = sorted_categories.index(a[0])
+    except ValueError:
+        a_index = 999
+    try:
+        b_index = sorted_categories.index(b[0])
+    except ValueError:
+        b_index = 999
+
+    if a_index < b_index:
+        return -1
+    if a_index > b_index:
+        return 1
+    if a_index == b_index:
+        return -1 if a[0] < b[0] else 1
+
+
+sort_category_key = cmp_to_key(sort_category)
+
+
+def get_local_now(offset: float = 0.0):
+    return (
+        datetime.utcnow()
+        .replace(tzinfo=timezone.utc)
+        .astimezone(timezone(offset=timedelta(hours=offset)))
+    )
+
+
+def onlyon_weekdays(days_of_the_week: List[int], offset: float = 0.0):
+    """
+    Enable recipe only on the specified days_of_the_week
+
+    :param days_of_the_week: Starts with 0 = Monday
+    :param offset: timezone offset hours
+    :return:
+    """
+    return get_local_now(offset).weekday() in days_of_the_week
+
+
+def onlyon_days(days_of_the_month: List[int], offset: float = 0.0):
+    """
+    Enable recipe only on the specified days_of_the_month
+
+    :param days_of_the_month:
+    :param offset: timezone offset hours
+    :return:
+    """
+    return get_local_now(offset).day in days_of_the_month
+
+
+def onlyat_hours(hours_of_the_day: List[int], offset: float = 0.0):
+    """
+    Enable recipe only at the specified hours_of_the_day
+
+    :param hours_of_the_day:
+    :param offset: timezone offset hours
+    :return:
+    """
+    return get_local_now(offset).hour in hours_of_the_day

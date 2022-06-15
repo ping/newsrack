@@ -18,7 +18,8 @@ import humanize
 import requests
 
 from _opds import init_feed, simple_tag, extension_contenttype_map
-from _recipes import recipes, sort_category_key
+from _recipe_utils import sort_category_key
+from _recipes import recipes
 from _utils import generate_cover
 
 logger = logging.getLogger(__file__)
