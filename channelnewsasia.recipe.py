@@ -47,7 +47,7 @@ class ChannelNewsAsia(BasicNewsRecipe):
         ),
         dict(name="div", attrs={"data-ad-entity": True}),
         dict(name="div", attrs={"data-js-options": True}),
-        dict(name=["script", "noscript", "style"]),
+        dict(name=["script", "noscript", "style", "svg"]),
     ]
 
     extra_css = """
