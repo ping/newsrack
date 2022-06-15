@@ -2,6 +2,7 @@
 # License: GPLv3 Copyright: 2008, Kovid Goyal <kovid at kovidgoyal.net>
 
 # Modified from https://github.com/kovidgoyal/calibre/blob/a0cc6d6c68efe1e9e7479451aa9bfc4df0812bac/recipes/economist.recipe
+# Incorporated https://github.com/kovidgoyal/calibre/commit/23e52f2cba0a714ce8a4a4baca9b21ae8250fa2a
 
 try:
     from http.cookiejar import Cookie
@@ -16,7 +17,7 @@ from lxml import etree
 from calibre import replace_entities
 from calibre.ebooks.BeautifulSoup import NavigableString, Tag
 from calibre.utils.cleantext import clean_ascii_chars
-from calibre.web.feeds.news import BasicNewsRecipe, classes
+from calibre.web.feeds.news import BasicNewsRecipe, classes, prefixed_classes
 
 # For past editions, set date to, for example, '2020-11-28'
 edition_date = None
@@ -27,6 +28,10 @@ def E(parent, name, text="", **attrs):
     ans.text = text
     parent.append(ans)
     return ans
+
+
+class JSONHasNoContent(ValueError):
+    pass
 
 
 def process_node(node, html_parent):
@@ -49,7 +54,10 @@ def process_node(node, html_parent):
 
 
 def load_article_from_json(raw, root):
-    data = json.loads(raw)["props"]["pageProps"]["content"]
+    try:
+        data = json.loads(raw)["props"]["pageProps"]["content"]
+    except KeyError as e:
+        raise JSONHasNoContent(e)
 
     # open('/t/raw.json', 'w').write(json.dumps(data, indent=2, sort_keys=True))
     if isinstance(data, list):
@@ -78,7 +86,7 @@ def load_article_from_json(raw, root):
         datecreated=data["dateModified"],
     )
     main_image_url = (
-        data.get("image", {}).get("main", {}).get("url", {}).get("canonical")
+        (data.get("image", {}).get("main", {}) or {}).get("url", {}).get("canonical")
     )
     if main_image_url:
         div = E(article, "div")
@@ -88,6 +96,20 @@ def load_article_from_json(raw, root):
             pass
     for node in data["text"]:
         process_node(node, article)
+
+
+def cleanup_html_article(root):
+    main = root.xpath("//main")[0]
+    body = root.xpath("//body")[0]
+    for child in tuple(body):
+        body.remove(child)
+    body.append(main)
+    main.set("id", "")
+    main.tag = "article"
+    for x in root.xpath("//*[@style]"):
+        x.set("style", "")
+    for x in root.xpath("//button"):
+        x.getparent().remove(x)
 
 
 def new_tag(soup, name, attrs=()):
@@ -114,6 +136,7 @@ class Economist(BasicNewsRecipe):
 
     title = _name
     language = "en"
+    encoding = "utf-8"
 
     __author__ = "Kovid Goyal"
     description = (
@@ -210,7 +233,7 @@ class Economist(BasicNewsRecipe):
     masthead_url = "https://www.economist.com/assets/the-economist-logo.png"
     scale_news_images = (800, 800)
     scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 60
+    timeout = 20
     timefmt = ""
     pub_date = None
 
@@ -258,7 +281,11 @@ class Economist(BasicNewsRecipe):
         root = parse(raw)
         script = root.xpath('//script[@id="__NEXT_DATA__"]')
         if script:
-            load_article_from_json(script[0].text, root)
+            if script:
+                try:
+                    load_article_from_json(script[0].text, root)
+                except JSONHasNoContent:
+                    cleanup_html_article(root)
         for div in root.xpath('//div[@class="lazy-image"]'):
             noscript = list(div.iter("noscript"))
             if noscript and noscript[0].text:
@@ -357,6 +384,8 @@ class Economist(BasicNewsRecipe):
             secname = self.tag_to_string(h2)
             self.log(secname)
             articles = []
+
+            # The world this week
             for a in section.findAll(
                 "a", href=True, **classes("headline-link weekly-edition-wtw__link")
             ):
@@ -375,6 +404,25 @@ class Economist(BasicNewsRecipe):
                     {"title": title, "url": process_url(a["href"]), "description": desc}
                 )
                 self.log(" ", title, articles[-1]["url"], "\n   ", desc)
+
+            # Other Sections
+            for div in section.find_all(
+                "div", **prefixed_classes("teaser-weekly-edition--")
+            ):
+                a = div.select("h3 a")[0]
+                p_tags = div.find_all("p")
+                desc = None
+                title = self.tag_to_string(a)
+                if len(p_tags) == 2:
+                    title = f"{self.tag_to_string(p_tags[0])}: {title}"
+                    desc = self.tag_to_string(p_tags[1])
+                elif len(p_tags) == 1:
+                    title = f"{self.tag_to_string(p_tags[0])}: {title}"
+                articles.append(
+                    {"title": title, "url": process_url(a["href"]), "description": desc}
+                )
+                self.log(" ", title, articles[-1]["url"], "\n   ", desc)
+
             if articles:
                 feeds.append((secname, articles))
         return feeds
