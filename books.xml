@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-15T07:20:19Z</updated>
+<updated>2022-06-15T11:19:06Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 15 Jun, 2022</title>
-<summary>NY Times Books: 15 Jun, 2022 published at 2022-06-15 02:06AM.</summary>
+<summary>NY Times Books: 15 Jun, 2022 published at 2022-06-15 09:00AM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;In ‘Also a Poet,’ a Search for Frank O’Hara and for Peace With Dad&lt;/li&gt;&lt;li&gt;James Patterson Apologizes for Saying White Writers Face a ‘Form of Racism’&lt;/li&gt;&lt;li&gt;A.B. Yehoshua, Israeli Writer, Dies at 85&lt;/li&gt;&lt;li&gt;Book Review: ‘The British Surrealists,’ by Desmond Morris&lt;/li&gt;&lt;li&gt;Book Review: “O Say Can You Hear? A Cultural Biography of ‘The Star-Spangled Banner,’” by Mark Clague&lt;/li&gt;&lt;li&gt;Book Review: “Esmond and Ilia,” by Marina Warner&lt;/li&gt;&lt;li&gt;Book Review: ‘Rough Draft,’ by Katy Tur&lt;/li&gt;&lt;li&gt;Review: “Elusive: How Peter Higgs Solved the Mystery of Mass,” by Frank Close&lt;/li&gt;&lt;li&gt;Review: “We Carry Their Bones,” Erin Kimmerle&lt;/li&gt;&lt;li&gt;Review: “Grand Hotel Europa,” by Ilja Leonard Pfeijffer&lt;/li&gt;&lt;li&gt;Review: “Diary of a Film,” by Niven Govinden&lt;/li&gt;&lt;li&gt;Book Review: “Moonlight and the Pearler’s Daughter” by Lizzie Pook&lt;/li&gt;&lt;li&gt;Review: “Jackie &amp; Me,” by Louis Bayard&lt;/li&gt;&lt;li&gt;Book Review: “Pig Years” by Ellen Gaydos&lt;/li&gt;&lt;li&gt;Tom Perrotta on the Return of Tracy Flick&lt;/li&gt;&lt;li&gt;Peter Lamborn Wilson, Advocate of ‘Poetic Terrorism,’ Dies at 76&lt;/li&gt;&lt;li&gt;Ottessa Moshfegh’s ‘Lapvona’ Is Gloomy Folk Horror Set Long Ago&lt;/li&gt;&lt;li&gt;Swapping Books Brings Katy Tur Closer to Her Mother&lt;/li&gt;&lt;li&gt;John Merriman, Eminent Historian of France, Is Dead at 75&lt;/li&gt;&lt;li&gt;Review: ‘The Men,’ by Sandra Newman; and ‘When Women Were Dragons,’ by Kelly Barnhill&lt;/li&gt;&lt;li&gt;Abortion Politics, Money and the Reshaping of the G.O.P.&lt;/li&gt;&lt;li&gt;The Very Human Pleasure of Being Read To&lt;/li&gt;&lt;li&gt;“Red Scare” by Liam Francis Walsh&lt;/li&gt;&lt;li&gt;“The Golden Twine” (Cat’s Cradle, Volume 1) by Jo Rioux&lt;/li&gt;&lt;li&gt;Book Review: ‘The Twilight World,’ by Werner Herzog&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;‘Meet Me by the Fountain’ Takes a Tour of the Mall&lt;/li&gt;&lt;li&gt;Leïla Slimani on How to Read Your Way Through Paris&lt;/li&gt;&lt;li&gt;Newly Published, From Teenage D.J.s to the Pope&lt;/li&gt;&lt;li&gt;In ‘Also a Poet,’ a Search for Frank O’Hara and for Peace With Dad&lt;/li&gt;&lt;li&gt;James Patterson Apologizes for Saying White Writers Face a ‘Form of Racism’&lt;/li&gt;&lt;li&gt;A.B. Yehoshua, Israeli Writer, Dies at 85&lt;/li&gt;&lt;li&gt;Book Review: ‘The British Surrealists,’ by Desmond Morris&lt;/li&gt;&lt;li&gt;Book Review: “O Say Can You Hear? A Cultural Biography of ‘The Star-Spangled Banner,’” by Mark Clague&lt;/li&gt;&lt;li&gt;Book Review: “Esmond and Ilia,” by Marina Warner&lt;/li&gt;&lt;li&gt;Book Review: ‘Rough Draft,’ by Katy Tur&lt;/li&gt;&lt;li&gt;Review: “Elusive: How Peter Higgs Solved the Mystery of Mass,” by Frank Close&lt;/li&gt;&lt;li&gt;Review: “We Carry Their Bones,” Erin Kimmerle&lt;/li&gt;&lt;li&gt;Review: “Grand Hotel Europa,” by Ilja Leonard Pfeijffer&lt;/li&gt;&lt;li&gt;Review: “Diary of a Film,” by Niven Govinden&lt;/li&gt;&lt;li&gt;Book Review: “Moonlight and the Pearler’s Daughter” by Lizzie Pook&lt;/li&gt;&lt;li&gt;Review: “Jackie &amp; Me,” by Louis Bayard&lt;/li&gt;&lt;li&gt;Book Review: “Pig Years” by Ellen Gaydos&lt;/li&gt;&lt;li&gt;Tom Perrotta on the Return of Tracy Flick&lt;/li&gt;&lt;li&gt;Peter Lamborn Wilson, Advocate of ‘Poetic Terrorism,’ Dies at 76&lt;/li&gt;&lt;li&gt;Ottessa Moshfegh’s ‘Lapvona’ Is Gloomy Folk Horror Set Long Ago&lt;/li&gt;&lt;li&gt;Swapping Books Brings Katy Tur Closer to Her Mother&lt;/li&gt;&lt;li&gt;John Merriman, Eminent Historian of France, Is Dead at 75&lt;/li&gt;&lt;li&gt;Review: ‘The Men,’ by Sandra Newman; and ‘When Women Were Dragons,’ by Kelly Barnhill&lt;/li&gt;&lt;li&gt;Abortion Politics, Money and the Reshaping of the G.O.P.&lt;/li&gt;&lt;li&gt;The Very Human Pleasure of Being Read To&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-06-15T02:06:52Z</updated>
+<updated>2022-06-15T09:00:10Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
