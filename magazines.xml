@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-06-16T04:06:35Z</updated>
+<updated>2022-06-16T04:47:03Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>The Third Pole</id>
+<title>The Third Pole: 14 Jun, 2022</title>
+<summary>The Third Pole: 14 Jun, 2022 published at 2022-06-16 04:13AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Bhutan ramps up its solar ambitions&lt;/li&gt;&lt;li&gt;Floods disrupt monsoon weddings in Bihar&lt;/li&gt;&lt;li&gt;Timely warnings avert loss of life from surging glacier in Pakistan&lt;/li&gt;&lt;li&gt;Elusive Himalayan wolves emerge on the slopes of Everest&lt;/li&gt;&lt;li&gt;China’s no overseas coal pledge: 15 projects cancelled so far, but grey areas remain&lt;/li&gt;&lt;li&gt;Walking in the shadow of Madhya Pradesh’s devastating floods&lt;/li&gt;&lt;/ul&gt;
+                The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there.
+                </content>
+<updated>2022-06-16T04:13:27Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-06-16.mobi"/>
+</entry>
 <entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 15 Jun, 2022</title>
@@ -96,21 +111,6 @@
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-06-15.mobi"/>
-</entry>
-<entry>
-<id>The Third Pole</id>
-<title>The Third Pole: 14 Jun, 2022</title>
-<summary>The Third Pole: 14 Jun, 2022 published at 2022-06-15 14:21PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Bhutan ramps up its solar ambitions&lt;/li&gt;&lt;li&gt;Floods disrupt monsoon weddings in Bihar&lt;/li&gt;&lt;li&gt;Timely warnings avert loss of life from surging glacier in Pakistan&lt;/li&gt;&lt;li&gt;Elusive Himalayan wolves emerge on the slopes of Everest&lt;/li&gt;&lt;li&gt;China’s no overseas coal pledge: 15 projects cancelled so far, but grey areas remain&lt;/li&gt;&lt;li&gt;Walking in the shadow of Madhya Pradesh’s devastating floods&lt;/li&gt;&lt;/ul&gt;
-                The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there.
-                </content>
-<updated>2022-06-15T14:21:16Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-06-15.mobi"/>
 </entry>
 <entry>
 <id>Nature</id>
