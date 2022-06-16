@@ -14,7 +14,7 @@
 "The Atlantic": [
 {
 "filename": "the-atlantic-2022-06-16.mobi",
-"published": 1655390678.0
+"published": 1655402457.0
 }
 ],
 "The Atlantic Magazine": [
@@ -26,25 +26,25 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-06-16.mobi",
-"published": 1655390160.0
+"published": 1655405026.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-06-16.mobi",
-"published": 1655388615.0
+"published": 1655404774.0
 }
 ],
 "Economist": [
 {
 "filename": "economist-2022-06-16.mobi",
-"published": 1655391672.0
+"published": 1655404742.0
 }
 ],
 "Financial Times": [
 {
 "filename": "ft-2022-06-16.mobi",
-"published": 1655390706.0
+"published": 1655403942.0
 }
 ],
 "Five Books": [
@@ -56,7 +56,7 @@
 "Guardian": [
 {
 "filename": "guardian-2022-06-16.mobi",
-"published": 1655391603.0
+"published": 1655405680.0
 }
 ],
 "JoongAng Daily": [
@@ -98,7 +98,7 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-06-16.mobi",
-"published": 1655391927.0
+"published": 1655406346.0
 }
 ],
 "NY Times (Print)": [
@@ -110,7 +110,7 @@
 "NY Times Books": [
 {
 "filename": "nytimes-books-2022-06-16.mobi",
-"published": 1655370027.0
+"published": 1655405220.0
 }
 ],
 "Poetry": [
@@ -122,7 +122,7 @@
 "POLITICO Magazine": [
 {
 "filename": "politico-magazine-2022-06-16.mobi",
-"published": 1655368200.0
+"published": 1655400122.0
 }
 ],
 "Scientific American": [
@@ -134,13 +134,13 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-06-16.mobi",
-"published": 1655389093.0
+"published": 1655404681.0
 }
 ],
 "The Sydney Morning Herald": [
 {
 "filename": "sydney-morning-herald-2022-06-16.mobi",
-"published": 1655390032.0
+"published": 1655406000.0
 }
 ],
 "Taipei Times": [
@@ -164,13 +164,13 @@
 "Vox": [
 {
 "filename": "vox-2022-06-16.mobi",
-"published": 1655380800.0
+"published": 1655402400.0
 }
 ],
 "Washington Post": [
 {
 "filename": "wapo-2022-06-16.mobi",
-"published": 1655392531.0
+"published": 1655406446.0
 }
 ],
 "Wired Magazine": [
@@ -179,5 +179,5 @@
 "published": 1655200800.0
 }
 ],
-"_generated": 1655392838
+"_generated": 1655407227
 }
