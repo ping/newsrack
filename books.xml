@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-15T23:21:48Z</updated>
+<updated>2022-06-16T04:06:35Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>Asian Review of Books</id>
+<title>Asian Review of Books: 15 Jun, 2022</title>
+<summary>Asian Review of Books: 15 Jun, 2022 published at 2022-06-15 23:08PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;“The Cabinet” by Kim Un-su&lt;/li&gt;&lt;li&gt;“The History and Culture of Iran and Central Asia: From the Pre-Islamic to the Islamic Period”, edited by DG Tor and Minoru Inaba&lt;/li&gt;&lt;li&gt;“Fish Swimming in Dappled Sunlight” by Riku Onda&lt;/li&gt;&lt;li&gt;New Book Announcement: “A Flutter in the Colony” by Sandeep Ray&lt;/li&gt;&lt;li&gt;“Science on the Roof of the World: Empire and the remaking of the Himalaya” by Lachlan Fleetwood&lt;/li&gt;&lt;li&gt;“Death on Gokumon Island” by Seishi Yokomizo&lt;/li&gt;&lt;li&gt;“The Immortal King Rao” by Vauhini Vara&lt;/li&gt;&lt;li&gt;Podcast with Shiv Kunal Verma, author of “1965: A Western Sunrise”&lt;/li&gt;&lt;li&gt;New Book Announcement: “Self-Portrait With Ghost” by Meng Jin&lt;/li&gt;&lt;li&gt;“We Measure the Earth With Our Bodies” by Tsering Yangzom Lama&lt;/li&gt;&lt;/ul&gt;
+                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
+                </content>
+<updated>2022-06-15T23:08:37Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-15.mobi"/>
+</entry>
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 15 Jun, 2022</title>
@@ -51,20 +66,5 @@
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-06-15.mobi"/>
-</entry>
-<entry>
-<id>Asian Review of Books</id>
-<title>Asian Review of Books: 14 Jun, 2022</title>
-<summary>Asian Review of Books: 14 Jun, 2022 published at 2022-06-14 23:00PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;“The History and Culture of Iran and Central Asia: From the Pre-Islamic to the Islamic Period”, edited by DG Tor and Minoru Inaba&lt;/li&gt;&lt;li&gt;“Fish Swimming in Dappled Sunlight” by Riku Onda&lt;/li&gt;&lt;li&gt;New Book Announcement: “A Flutter in the Colony” by Sandeep Ray&lt;/li&gt;&lt;li&gt;“Science on the Roof of the World: Empire and the remaking of the Himalaya” by Lachlan Fleetwood&lt;/li&gt;&lt;li&gt;“Death on Gokumon Island” by Seishi Yokomizo&lt;/li&gt;&lt;li&gt;“The Immortal King Rao” by Vauhini Vara&lt;/li&gt;&lt;li&gt;Podcast with Shiv Kunal Verma, author of “1965: A Western Sunrise”&lt;/li&gt;&lt;li&gt;New Book Announcement: “Self-Portrait With Ghost” by Meng Jin&lt;/li&gt;&lt;li&gt;“We Measure the Earth With Our Bodies” by Tsering Yangzom Lama&lt;/li&gt;&lt;li&gt;“Moro Warrior: A Philippine Chieftain, an American Schoolmaster, and The Untold Story of the Most Remarkable Resistance Fighters of World War II in the Pacific” by Thomas McKenna&lt;/li&gt;&lt;/ul&gt;
-                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
-                </content>
-<updated>2022-06-14T23:00:28Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-14.mobi"/>
 </entry>
 </feed>
