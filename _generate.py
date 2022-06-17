@@ -71,7 +71,7 @@ with open("static/nonkindle.css", "r", encoding="utf-8") as f:
 
 # default js
 with open("static/site.js", "r", encoding="utf-8") as f:
-    site_js = f.read().replace("{nonkindle}", nonkindle_css.strip())
+    site_js = f.read().replace('"{nonkindle}"', json.dumps(nonkindle_css.strip()))
 
 
 # use environment variables to skip specified recipes in CI
