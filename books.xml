@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-17T00:45:47Z</updated>
+<updated>2022-06-17T02:58:04Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books</title>
-<summary>NY Times Books published at 2022-06-17 00:35AM.</summary>
+<summary>NY Times Books published at 2022-06-17 02:47AM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Brontez Purnell Brings His Disparate Parts Back to the Dance Stage&lt;/li&gt;&lt;li&gt;Dorothy E. Smith, Groundbreaker in Feminist Sociology, Dies at 95&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Navigating Fatherhood as a Black Man&lt;/li&gt;&lt;li&gt;A Book Has Women in Africa Talking About Sex&lt;/li&gt;&lt;li&gt;8 Audiobooks to Listen to Now&lt;/li&gt;&lt;li&gt;Geraldine Brooks Had an Unpleasant Surprise When She Taught at Harvard&lt;/li&gt;&lt;li&gt;David Sedaris Is Bullish on Thank-You Notes&lt;/li&gt;&lt;li&gt;Review: A Partial Manuscript of ‘Paradise Lost,’ by John Milton&lt;/li&gt;&lt;li&gt;Poem: Monticello House Tour&lt;/li&gt;&lt;li&gt;‘Meet Me by the Fountain’ Takes a Tour of the Mall&lt;/li&gt;&lt;li&gt;Leïla Slimani on How to Read Your Way Through Paris&lt;/li&gt;&lt;li&gt;Newly Published, From Teenage D.J.s to the Pope&lt;/li&gt;&lt;li&gt;In ‘Also a Poet,’ a Search for Frank O’Hara and for Peace With Dad&lt;/li&gt;&lt;li&gt;James Patterson Apologizes for Saying White Writers Face a ‘Form of Racism’&lt;/li&gt;&lt;li&gt;Book Review: ‘The British Surrealists,’ by Desmond Morris&lt;/li&gt;&lt;li&gt;Book Review: “O Say Can You Hear? A Cultural Biography of ‘The Star-Spangled Banner,’” by Mark Clague&lt;/li&gt;&lt;li&gt;Book Review: “Esmond and Ilia,” by Marina Warner&lt;/li&gt;&lt;li&gt;Book Review: ‘Rough Draft,’ by Katy Tur&lt;/li&gt;&lt;li&gt;Review: “Elusive: How Peter Higgs Solved the Mystery of Mass,” by Frank Close&lt;/li&gt;&lt;li&gt;Review: “We Carry Their Bones,” Erin Kimmerle&lt;/li&gt;&lt;li&gt;Review: “Grand Hotel Europa,” by Ilja Leonard Pfeijffer&lt;/li&gt;&lt;li&gt;Review: “Diary of a Film,” by Niven Govinden&lt;/li&gt;&lt;li&gt;Book Review: “Moonlight and the Pearler’s Daughter” by Lizzie Pook&lt;/li&gt;&lt;li&gt;Tom Perrotta on the Return of Tracy Flick&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-06-17T00:35:25Z</updated>
+<updated>2022-06-17T02:47:37Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
@@ -24,18 +24,18 @@
 </entry>
 <entry>
 <id>Asian Review of Books</id>
-<title>Asian Review of Books: 16 Jun, 2022</title>
-<summary>Asian Review of Books: 16 Jun, 2022 published at 2022-06-16 13:57PM.</summary>
+<title>Asian Review of Books: 17 Jun, 2022</title>
+<summary>Asian Review of Books: 17 Jun, 2022 published at 2022-06-17 00:36AM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Podcast with James Uden and Daniel Majchrowicz about “Worlds of Knowledge in Women’s Travel Writing”&lt;/li&gt;&lt;li&gt;“The Cabinet” by Kim Un-su&lt;/li&gt;&lt;li&gt;“The History and Culture of Iran and Central Asia: From the Pre-Islamic to the Islamic Period”, edited by DG Tor and Minoru Inaba&lt;/li&gt;&lt;li&gt;“Fish Swimming in Dappled Sunlight” by Riku Onda&lt;/li&gt;&lt;li&gt;New Book Announcement: “A Flutter in the Colony” by Sandeep Ray&lt;/li&gt;&lt;li&gt;“Science on the Roof of the World: Empire and the remaking of the Himalaya” by Lachlan Fleetwood&lt;/li&gt;&lt;li&gt;“Death on Gokumon Island” by Seishi Yokomizo&lt;/li&gt;&lt;li&gt;“The Immortal King Rao” by Vauhini Vara&lt;/li&gt;&lt;li&gt;Podcast with Shiv Kunal Verma, author of “1965: A Western Sunrise”&lt;/li&gt;&lt;li&gt;New Book Announcement: “Self-Portrait With Ghost” by Meng Jin&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;New Book Announcement: “Akira Kurosawa and Modern Japan” by David A Conrad&lt;/li&gt;&lt;li&gt;Podcast with James Uden and Daniel Majchrowicz about “Worlds of Knowledge in Women’s Travel Writing”&lt;/li&gt;&lt;li&gt;“The Cabinet” by Kim Un-su&lt;/li&gt;&lt;li&gt;“The History and Culture of Iran and Central Asia: From the Pre-Islamic to the Islamic Period”, edited by DG Tor and Minoru Inaba&lt;/li&gt;&lt;li&gt;“Fish Swimming in Dappled Sunlight” by Riku Onda&lt;/li&gt;&lt;li&gt;New Book Announcement: “A Flutter in the Colony” by Sandeep Ray&lt;/li&gt;&lt;li&gt;“Science on the Roof of the World: Empire and the remaking of the Himalaya” by Lachlan Fleetwood&lt;/li&gt;&lt;li&gt;“Death on Gokumon Island” by Seishi Yokomizo&lt;/li&gt;&lt;li&gt;“The Immortal King Rao” by Vauhini Vara&lt;/li&gt;&lt;li&gt;Podcast with Shiv Kunal Verma, author of “1965: A Western Sunrise”&lt;/li&gt;&lt;/ul&gt;
                 In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
                 </content>
-<updated>2022-06-16T13:57:52Z</updated>
+<updated>2022-06-17T00:36:07Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-16.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-17.mobi"/>
 </entry>
 <entry>
 <id>London Review of Books</id>
