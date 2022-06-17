@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-17T04:04:49Z</updated>
+<updated>2022-06-17T04:28:35Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books</title>
-<summary>NY Times Books published at 2022-06-17 03:54AM.</summary>
+<summary>NY Times Books published at 2022-06-17 04:18AM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Brontez Purnell Brings His Disparate Parts Back to the Dance Stage&lt;/li&gt;&lt;li&gt;Dorothy E. Smith, Groundbreaker in Feminist Sociology, Dies at 95&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Navigating Fatherhood as a Black Man&lt;/li&gt;&lt;li&gt;A Book Has Women in Africa Talking About Sex&lt;/li&gt;&lt;li&gt;8 Audiobooks to Listen to Now&lt;/li&gt;&lt;li&gt;Geraldine Brooks Had an Unpleasant Surprise When She Taught at Harvard&lt;/li&gt;&lt;li&gt;David Sedaris Is Bullish on Thank-You Notes&lt;/li&gt;&lt;li&gt;Review: A Partial Manuscript of ‘Paradise Lost,’ by John Milton&lt;/li&gt;&lt;li&gt;Poem: Monticello House Tour&lt;/li&gt;&lt;li&gt;‘Meet Me by the Fountain’ Takes a Tour of the Mall&lt;/li&gt;&lt;li&gt;Leïla Slimani on How to Read Your Way Through Paris&lt;/li&gt;&lt;li&gt;Newly Published, From Teenage D.J.s to the Pope&lt;/li&gt;&lt;li&gt;In ‘Also a Poet,’ a Search for Frank O’Hara and for Peace With Dad&lt;/li&gt;&lt;li&gt;James Patterson Apologizes for Saying White Writers Face a ‘Form of Racism’&lt;/li&gt;&lt;li&gt;Book Review: ‘The British Surrealists,’ by Desmond Morris&lt;/li&gt;&lt;li&gt;Book Review: “O Say Can You Hear? A Cultural Biography of ‘The Star-Spangled Banner,’” by Mark Clague&lt;/li&gt;&lt;li&gt;Book Review: “Esmond and Ilia,” by Marina Warner&lt;/li&gt;&lt;li&gt;Book Review: ‘Rough Draft,’ by Katy Tur&lt;/li&gt;&lt;li&gt;Review: “Elusive: How Peter Higgs Solved the Mystery of Mass,” by Frank Close&lt;/li&gt;&lt;li&gt;Review: “We Carry Their Bones,” Erin Kimmerle&lt;/li&gt;&lt;li&gt;Review: “Grand Hotel Europa,” by Ilja Leonard Pfeijffer&lt;/li&gt;&lt;li&gt;Review: “Diary of a Film,” by Niven Govinden&lt;/li&gt;&lt;li&gt;Book Review: “Moonlight and the Pearler’s Daughter” by Lizzie Pook&lt;/li&gt;&lt;li&gt;Tom Perrotta on the Return of Tracy Flick&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-06-17T03:54:03Z</updated>
+<updated>2022-06-17T04:18:07Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
