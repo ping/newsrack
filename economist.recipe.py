@@ -1,9 +1,7 @@
 #!/usr/bin/env  python
 # License: GPLv3 Copyright: 2008, Kovid Goyal <kovid at kovidgoyal.net>
 
-# Modified from https://github.com/kovidgoyal/calibre/blob/a0cc6d6c68efe1e9e7479451aa9bfc4df0812bac/recipes/economist.recipe
-# Incorporated https://github.com/kovidgoyal/calibre/commit/23e52f2cba0a714ce8a4a4baca9b21ae8250fa2a
-
+# Modified from https://github.com/kovidgoyal/calibre/blob/1f9c67ce02acfd69b5934bba3d74ce6875b9809e/recipes/economist.recipe
 try:
     from http.cookiejar import Cookie
 except ImportError:
@@ -13,6 +11,7 @@ from datetime import datetime, timezone
 import json
 from html5_parser import parse
 from lxml import etree
+from collections import defaultdict
 
 from calibre import replace_entities
 from calibre.ebooks.BeautifulSoup import NavigableString, Tag
@@ -28,10 +27,6 @@ def E(parent, name, text="", **attrs):
     ans.text = text
     parent.append(ans)
     return ans
-
-
-class JSONHasNoContent(ValueError):
-    pass
 
 
 def process_node(node, html_parent):
@@ -51,6 +46,17 @@ def process_node(node, html_parent):
                 t.tail = (t.tail or "") + text
             else:
                 html_parent.text = (html_parent.text or "") + text
+
+
+def safe_dict(data, *names):
+    ans = data
+    for x in names:
+        ans = ans.get(x) or {}
+    return ans
+
+
+class JSONHasNoContent(ValueError):
+    pass
 
 
 def load_article_from_json(raw, root):
@@ -85,9 +91,7 @@ def load_article_from_json(raw, root):
         style="margin-bottom: 1rem; ",
         datecreated=data["dateModified"],
     )
-    main_image_url = (
-        (data.get("image", {}).get("main", {}) or {}).get("url", {}).get("canonical")
-    )
+    main_image_url = safe_dict(data, "image", "main", "url").get("canonical")
     if main_image_url:
         div = E(article, "div")
         try:
@@ -343,8 +347,6 @@ class Economist(BasicNewsRecipe):
         else:
             url = "https://www.economist.com/printedition"
         raw = self.index_to_soup(url, raw=True)
-        # with open('/t/raw.html', 'wb') as f:
-        #     f.write(raw)
         soup = self.index_to_soup(raw)
         # nav = soup.find(attrs={'class':'navigation__wrapper'})
         # if nav is not None:
@@ -366,9 +368,16 @@ class Economist(BasicNewsRecipe):
         script_tag = soup.find("script", id="__NEXT_DATA__")
         if script_tag is not None:
             data = json.loads(script_tag.string)
-            self.cover_url = data["props"]["pageProps"]["content"]["image"]["main"][
-                "url"
-            ]["canonical"]
+            self.cover_url = safe_dict(
+                data,
+                "props",
+                "pageProps",
+                "content",
+                "image",
+                "main",
+                "url",
+                "canonical",
+            )
             self.log("Got cover:", self.cover_url)
 
             # Example 2022-04-16T00:00:00Z
@@ -377,55 +386,23 @@ class Economist(BasicNewsRecipe):
                 "%Y-%m-%dT%H:%M:%SZ",
             ).replace(tzinfo=timezone.utc)
             self.title = f"{_name}: {date_published:%-d %b, %Y}"
-
-        feeds = []
-        for section in soup.findAll(**classes("layout-weekly-edition-section")):
-            h2 = section.find("h2")
-            secname = self.tag_to_string(h2)
-            self.log(secname)
-            articles = []
-
-            # The world this week
-            for a in section.findAll(
-                "a", href=True, **classes("headline-link weekly-edition-wtw__link")
+            feeds_dict = defaultdict(list)
+            for part in safe_dict(
+                data, "props", "pageProps", "content", "hasPart", "parts"
             ):
-                spans = a.findAll("span")
-                if len(spans) == 2:
-                    title = "{}: {}".format(*map(self.tag_to_string, spans))
-                else:
-                    title = self.tag_to_string(a)
-                desc = ""
-                desc_parent = a.findParent("div")
-                if desc_parent is not None:
-                    p = desc_parent.find(itemprop="description")
-                    if p is not None:
-                        desc = self.tag_to_string(p)
-                articles.append(
-                    {"title": title, "url": process_url(a["href"]), "description": desc}
+                section = safe_dict(part, "print", "section", "headline") or ""
+                title = safe_dict(part, "print", "headline") or ""
+                url = safe_dict(part, "url", "canonical") or ""
+                if not section or not title or not url:
+                    continue
+                desc = safe_dict(part, "print", "description") or ""
+                feeds_dict[section].append(
+                    {"title": title, "url": url, "description": desc}
                 )
-                self.log(" ", title, articles[-1]["url"], "\n   ", desc)
+                self.log(" ", title, url, "\n   ", desc)
+            return [(section, articles) for section, articles in feeds_dict.items()]
 
-            # Other Sections
-            for div in section.find_all(
-                "div", **prefixed_classes("teaser-weekly-edition--")
-            ):
-                a = div.select("h3 a")[0]
-                p_tags = div.find_all("p")
-                desc = None
-                title = self.tag_to_string(a)
-                if len(p_tags) == 2:
-                    title = f"{self.tag_to_string(p_tags[0])}: {title}"
-                    desc = self.tag_to_string(p_tags[1])
-                elif len(p_tags) == 1:
-                    title = f"{self.tag_to_string(p_tags[0])}: {title}"
-                articles.append(
-                    {"title": title, "url": process_url(a["href"]), "description": desc}
-                )
-                self.log(" ", title, articles[-1]["url"], "\n   ", desc)
-
-            if articles:
-                feeds.append((secname, articles))
-        return feeds
+        return []
 
     def eco_find_image_tables(self, soup):
         for x in soup.findAll("table", align=["right", "center"]):
