@@ -38,7 +38,15 @@ parser.add_argument(
     help="Enable more verbose messages for debugging",
 )
 args = parser.parse_args()
-if args.verbose:
+
+verbose_mode = False
+try:
+    verbose_mode = str(os.environ["verbose"]).strip().lower() == "true"
+except (KeyError, ValueError):
+    pass
+
+verbose_mode = verbose_mode or args.verbose
+if verbose_mode:
     logger.setLevel(logging.DEBUG)
 
 start_time = timer()
@@ -91,14 +99,6 @@ try:
     ]
 except (KeyError, ValueError):
     pass
-
-verbose_mode = False
-try:
-    verbose_mode = str(os.environ["verbose"]).strip().lower() == "true"
-except (KeyError, ValueError):
-    pass
-if verbose_mode:
-    logger.setLevel(logging.DEBUG)
 
 commit_hash = None
 for k in ["CI_COMMIT_SHA", "GITHUB_SHA"]:
