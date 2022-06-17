@@ -2,17 +2,32 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-06-17T04:28:35Z</updated>
+<updated>2022-06-17T07:21:36Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
+<id>The Third Pole</id>
+<title>The Third Pole: 14 Jun, 2022</title>
+<summary>The Third Pole: 14 Jun, 2022 published at 2022-06-17 06:38AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Bhutan ramps up its solar ambitions&lt;/li&gt;&lt;li&gt;Floods disrupt monsoon weddings in Bihar&lt;/li&gt;&lt;li&gt;Timely warnings avert loss of life from surging glacier in Pakistan&lt;/li&gt;&lt;li&gt;Elusive Himalayan wolves emerge on the slopes of Everest&lt;/li&gt;&lt;li&gt;China’s no overseas coal pledge: 15 projects cancelled so far, but grey areas remain&lt;/li&gt;&lt;/ul&gt;
+                The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there.
+                </content>
+<updated>2022-06-17T06:38:17Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-06-17.mobi"/>
+</entry>
+<entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 17 Jun, 2022</title>
 <summary>The Atlantic: 17 Jun, 2022 published at 2022-06-17 00:28AM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The January 6 Committee's Most Damning Revelation Yet&lt;/li&gt;&lt;li&gt;Trump’s Dangerous Wannabes&lt;/li&gt;&lt;li&gt;Will These Be the Last Polar Bears on Earth?&lt;/li&gt;&lt;li&gt;Photos: Devastating Floods Hit the Yellowstone Region&lt;/li&gt;&lt;li&gt;What If All Men Disappeared and the World Was Just Boring?&lt;/li&gt;&lt;li&gt;It’s Time for Pixar to Move on From Toy Story&lt;/li&gt;&lt;li&gt;The Real Chill on Campus&lt;/li&gt;&lt;li&gt;The Book That Never Stops Changing&lt;/li&gt;&lt;li&gt;Why Biden Shouldn’t Run in 2024&lt;/li&gt;&lt;li&gt;The Real Villain in the Gentrification Story&lt;/li&gt;&lt;li&gt;How to Make the Baggage of Your Past Easier to Carry&lt;/li&gt;&lt;li&gt;Two Battles for Democracy&lt;/li&gt;&lt;li&gt;Barry Isn’t a Comedy Anymore. But It’s Become an Even Better Show.&lt;/li&gt;&lt;li&gt;There May Be a Blunt-Force Fix for Inflation&lt;/li&gt;&lt;li&gt;A Hotter, Poorer, and Less Free America&lt;/li&gt;&lt;li&gt;The Triumph of a Sometimes-Trump Republican&lt;/li&gt;&lt;li&gt;Views of the Strawberry Supermoon&lt;/li&gt;&lt;li&gt;A Frog So Small, It Could Not Frog&lt;/li&gt;&lt;li&gt;The Books Swallowed by the Black Hole of the Coronavirus&lt;/li&gt;&lt;li&gt;Long COVID Could Be a ‘Mass Deterioration Event’&lt;/li&gt;&lt;li&gt;TikTok Killed the Video Star&lt;/li&gt;&lt;li&gt;Under the Banner of Hulu&lt;/li&gt;&lt;li&gt;The U.S. Leaves Parents On Their Own for a Reason&lt;/li&gt;&lt;li&gt;The Brexit Revolution That Wasn’t&lt;/li&gt;&lt;li&gt;The Rifle That Ruined America&lt;/li&gt;&lt;li&gt;When Partnership Is Not the Destination&lt;/li&gt;&lt;li&gt;How Bipartisan Gun-Control Talks Actually Succeeded&lt;/li&gt;&lt;li&gt;‘I’m, Like, This Close to Snapping’&lt;/li&gt;&lt;li&gt;Trump Gets the January 6 Trial He Long Dodged&lt;/li&gt;&lt;li&gt;The Problem of English Identity&lt;/li&gt;&lt;li&gt;Minority Report Tried to Warn Us About Technology&lt;/li&gt;&lt;li&gt;Make America Remember Again&lt;/li&gt;&lt;li&gt;Life, Literature, This Moment of June&lt;/li&gt;&lt;li&gt;An Ode to My Thesaurus&lt;/li&gt;&lt;li&gt;White Author, Black Paragons&lt;/li&gt;&lt;li&gt;The Vindication of Jack White&lt;/li&gt;&lt;li&gt;The Thin Line Between Sickness and Health&lt;/li&gt;&lt;li&gt;Invitation&lt;/li&gt;&lt;li&gt;Why Is Dad So Mad?&lt;/li&gt;&lt;li&gt;They Bent to Their Knees and Kissed the Sand&lt;/li&gt;&lt;li&gt;What Returning to China Taught Me About China&lt;/li&gt;&lt;li&gt;Winners of the 2022 BigPicture Natural World Photography Competition&lt;/li&gt;&lt;li&gt;What’s Behind American Decline: Domestic Dysfunction&lt;/li&gt;&lt;li&gt;In Ukraine, Youth Has Ended&lt;/li&gt;&lt;li&gt;Photos of the Week: Office Bear, Market Train, Pizza Championship&lt;/li&gt;&lt;li&gt;Google’s ‘Sentient’ Chatbot Is Our Self-Deceiving Future&lt;/li&gt;&lt;li&gt;Are We Doomed?&lt;/li&gt;&lt;li&gt;Monkeypox Vaccines Are Too Gnarly for the Masses&lt;/li&gt;&lt;li&gt;A Negative COVID Test Has Never Been So Meaningless&lt;/li&gt;&lt;li&gt;The State Finally Letting Teens Sleep In&lt;/li&gt;&lt;li&gt;Our Powerful, Shiny New Space Telescope Got Its First Upsetting Ding&lt;/li&gt;&lt;li&gt;How Animals Perceive the World&lt;/li&gt;&lt;li&gt;Now Even NASA Wants to Talk About UFOs&lt;/li&gt;&lt;li&gt;Leave Joe Biden Alone&lt;/li&gt;&lt;li&gt;The Atlantic Daily: Can the Hearings Overcome American Indifference?&lt;/li&gt;&lt;li&gt;10 Reader Views on Crime in Their Neighborhoods&lt;/li&gt;&lt;li&gt;The End of the Millennial Lifestyle Subsidy&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Photos of the Week: Paddle Steamer, Floating Restaurant, Glass Bridge&lt;/li&gt;&lt;li&gt;The January 6 Committee's Most Damning Revelation Yet&lt;/li&gt;&lt;li&gt;Trump’s Dangerous Wannabes&lt;/li&gt;&lt;li&gt;Will These Be the Last Polar Bears on Earth?&lt;/li&gt;&lt;li&gt;Photos: Devastating Floods Hit the Yellowstone Region&lt;/li&gt;&lt;li&gt;What If All Men Disappeared and the World Was Just Boring?&lt;/li&gt;&lt;li&gt;It’s Time for Pixar to Move on From Toy Story&lt;/li&gt;&lt;li&gt;The Real Chill on Campus&lt;/li&gt;&lt;li&gt;The Book That Never Stops Changing&lt;/li&gt;&lt;li&gt;Why Biden Shouldn’t Run in 2024&lt;/li&gt;&lt;li&gt;The Real Villain in the Gentrification Story&lt;/li&gt;&lt;li&gt;How to Make the Baggage of Your Past Easier to Carry&lt;/li&gt;&lt;li&gt;Two Battles for Democracy&lt;/li&gt;&lt;li&gt;Barry Isn’t a Comedy Anymore. But It’s Become an Even Better Show.&lt;/li&gt;&lt;li&gt;There May Be a Blunt-Force Fix for Inflation&lt;/li&gt;&lt;li&gt;A Hotter, Poorer, and Less Free America&lt;/li&gt;&lt;li&gt;The Triumph of a Sometimes-Trump Republican&lt;/li&gt;&lt;li&gt;Views of the Strawberry Supermoon&lt;/li&gt;&lt;li&gt;A Frog So Small, It Could Not Frog&lt;/li&gt;&lt;li&gt;The Books Swallowed by the Black Hole of the Coronavirus&lt;/li&gt;&lt;li&gt;Long COVID Could Be a ‘Mass Deterioration Event’&lt;/li&gt;&lt;li&gt;TikTok Killed the Video Star&lt;/li&gt;&lt;li&gt;Under the Banner of Hulu&lt;/li&gt;&lt;li&gt;The U.S. Leaves Parents On Their Own for a Reason&lt;/li&gt;&lt;li&gt;The Brexit Revolution That Wasn’t&lt;/li&gt;&lt;li&gt;When Partnership Is Not the Destination&lt;/li&gt;&lt;li&gt;How Bipartisan Gun-Control Talks Actually Succeeded&lt;/li&gt;&lt;li&gt;‘I’m, Like, This Close to Snapping’&lt;/li&gt;&lt;li&gt;Trump Gets the January 6 Trial He Long Dodged&lt;/li&gt;&lt;li&gt;The Problem of English Identity&lt;/li&gt;&lt;li&gt;Minority Report Tried to Warn Us About Technology&lt;/li&gt;&lt;li&gt;Make America Remember Again&lt;/li&gt;&lt;li&gt;Life, Literature, This Moment of June&lt;/li&gt;&lt;li&gt;An Ode to My Thesaurus&lt;/li&gt;&lt;li&gt;White Author, Black Paragons&lt;/li&gt;&lt;li&gt;The Vindication of Jack White&lt;/li&gt;&lt;li&gt;The Thin Line Between Sickness and Health&lt;/li&gt;&lt;li&gt;Invitation&lt;/li&gt;&lt;li&gt;Why Is Dad So Mad?&lt;/li&gt;&lt;li&gt;They Bent to Their Knees and Kissed the Sand&lt;/li&gt;&lt;li&gt;What Returning to China Taught Me About China&lt;/li&gt;&lt;li&gt;Winners of the 2022 BigPicture Natural World Photography Competition&lt;/li&gt;&lt;li&gt;What’s Behind American Decline: Domestic Dysfunction&lt;/li&gt;&lt;li&gt;In Ukraine, Youth Has Ended&lt;/li&gt;&lt;li&gt;Photos of the Week: Office Bear, Market Train, Pizza Championship&lt;/li&gt;&lt;li&gt;Google’s ‘Sentient’ Chatbot Is Our Self-Deceiving Future&lt;/li&gt;&lt;li&gt;Are We Doomed?&lt;/li&gt;&lt;li&gt;Monkeypox Vaccines Are Too Gnarly for the Masses&lt;/li&gt;&lt;li&gt;A Negative COVID Test Has Never Been So Meaningless&lt;/li&gt;&lt;li&gt;The State Finally Letting Teens Sleep In&lt;/li&gt;&lt;li&gt;Our Powerful, Shiny New Space Telescope Got Its First Upsetting Ding&lt;/li&gt;&lt;li&gt;How Animals Perceive the World&lt;/li&gt;&lt;li&gt;Now Even NASA Wants to Talk About UFOs&lt;/li&gt;&lt;li&gt;Leave Joe Biden Alone&lt;/li&gt;&lt;li&gt;The Atlantic Daily: Can the Hearings Overcome American Indifference?&lt;/li&gt;&lt;li&gt;10 Reader Views on Crime in Their Neighborhoods&lt;/li&gt;&lt;li&gt;The End of the Millennial Lifestyle Subsidy&lt;/li&gt;&lt;/ul&gt;
                 News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
                 </content>
 <updated>2022-06-17T00:28:02Z</updated>
@@ -96,21 +111,6 @@
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="scientific-american-2022-06-16.mobi"/>
-</entry>
-<entry>
-<id>The Third Pole</id>
-<title>The Third Pole: 14 Jun, 2022</title>
-<summary>The Third Pole: 14 Jun, 2022 published at 2022-06-16 08:47AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Bhutan ramps up its solar ambitions&lt;/li&gt;&lt;li&gt;Floods disrupt monsoon weddings in Bihar&lt;/li&gt;&lt;li&gt;Timely warnings avert loss of life from surging glacier in Pakistan&lt;/li&gt;&lt;li&gt;Elusive Himalayan wolves emerge on the slopes of Everest&lt;/li&gt;&lt;li&gt;China’s no overseas coal pledge: 15 projects cancelled so far, but grey areas remain&lt;/li&gt;&lt;/ul&gt;
-                The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there.
-                </content>
-<updated>2022-06-16T08:47:41Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-06-16.mobi"/>
 </entry>
 <entry>
 <id>Nautilus</id>
