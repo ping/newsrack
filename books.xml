@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-19T15:15:32Z</updated>
+<updated>2022-06-19T19:15:05Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>Asian Review of Books</id>
+<title>Asian Review of Books: 18 Jun, 2022</title>
+<summary>Asian Review of Books: 18 Jun, 2022 published at 2022-06-18 23:54PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Jacques Offenbach’s “Pomme d’Api” at the French May: a Gallery&lt;/li&gt;&lt;li&gt;“Beethoven in Beijing: Stories from the Philadelphia Orchestra’s Historic Journey to China” by Jennifer Lin&lt;/li&gt;&lt;li&gt;New Book Announcement: “Akira Kurosawa and Modern Japan” by David A Conrad&lt;/li&gt;&lt;li&gt;Podcast with James Uden and Daniel Majchrowicz about “Worlds of Knowledge in Women’s Travel Writing”&lt;/li&gt;&lt;li&gt;“The Cabinet” by Kim Un-su&lt;/li&gt;&lt;li&gt;“The History and Culture of Iran and Central Asia: From the Pre-Islamic to the Islamic Period”, edited by DG Tor and Minoru Inaba&lt;/li&gt;&lt;li&gt;“Fish Swimming in Dappled Sunlight” by Riku Onda&lt;/li&gt;&lt;li&gt;New Book Announcement: “A Flutter in the Colony” by Sandeep Ray&lt;/li&gt;&lt;li&gt;“Science on the Roof of the World: Empire and the remaking of the Himalaya” by Lachlan Fleetwood&lt;/li&gt;&lt;li&gt;“Death on Gokumon Island” by Seishi Yokomizo&lt;/li&gt;&lt;/ul&gt;
+                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
+                </content>
+<updated>2022-06-18T23:54:01Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-18.mobi"/>
+</entry>
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 18 Jun, 2022</title>
@@ -21,21 +36,6 @@
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-06-18.mobi"/>
-</entry>
-<entry>
-<id>Asian Review of Books</id>
-<title>Asian Review of Books: 17 Jun, 2022</title>
-<summary>Asian Review of Books: 17 Jun, 2022 published at 2022-06-17 00:36AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;New Book Announcement: “Akira Kurosawa and Modern Japan” by David A Conrad&lt;/li&gt;&lt;li&gt;Podcast with James Uden and Daniel Majchrowicz about “Worlds of Knowledge in Women’s Travel Writing”&lt;/li&gt;&lt;li&gt;“The Cabinet” by Kim Un-su&lt;/li&gt;&lt;li&gt;“The History and Culture of Iran and Central Asia: From the Pre-Islamic to the Islamic Period”, edited by DG Tor and Minoru Inaba&lt;/li&gt;&lt;li&gt;“Fish Swimming in Dappled Sunlight” by Riku Onda&lt;/li&gt;&lt;li&gt;New Book Announcement: “A Flutter in the Colony” by Sandeep Ray&lt;/li&gt;&lt;li&gt;“Science on the Roof of the World: Empire and the remaking of the Himalaya” by Lachlan Fleetwood&lt;/li&gt;&lt;li&gt;“Death on Gokumon Island” by Seishi Yokomizo&lt;/li&gt;&lt;li&gt;“The Immortal King Rao” by Vauhini Vara&lt;/li&gt;&lt;li&gt;Podcast with Shiv Kunal Verma, author of “1965: A Western Sunrise”&lt;/li&gt;&lt;/ul&gt;
-                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
-                </content>
-<updated>2022-06-17T00:36:07Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-17.mobi"/>
 </entry>
 <entry>
 <id>London Review of Books</id>
