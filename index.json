@@ -2,13 +2,13 @@
 "Asahi Shimbun": [
 {
 "filename": "asahi-shimbun-2022-06-19.mobi",
-"published": 1655630880.0
+"published": 1655677800.0
 }
 ],
 "Asian Review of Books": [
 {
-"filename": "arb-2022-06-18.mobi",
-"published": 1655596441.0
+"filename": "arb-2022-06-19.mobi",
+"published": 1655679518.0
 }
 ],
 "The Atlantic": [
@@ -26,7 +26,7 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-06-19.mobi",
-"published": 1655662787.0
+"published": 1655679435.0
 }
 ],
 "The Diplomat": [
@@ -44,7 +44,7 @@
 "Financial Times": [
 {
 "filename": "ft-2022-06-19.mobi",
-"published": 1655663683.0
+"published": 1655677320.0
 }
 ],
 "Five Books": [
@@ -56,7 +56,7 @@
 "Guardian": [
 {
 "filename": "guardian-2022-06-19.mobi",
-"published": 1655664914.0
+"published": 1655679102.0
 }
 ],
 "JoongAng Daily": [
@@ -68,7 +68,7 @@
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-06-19.mobi",
-"published": 1655639653.0
+"published": 1655670683.0
 }
 ],
 "London Review of Books": [
@@ -98,7 +98,7 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-06-19.mobi",
-"published": 1655665194.0
+"published": 1655679888.0
 }
 ],
 "NY Times (Print)": [
@@ -134,21 +134,16 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-06-19.mobi",
-"published": 1655662533.0
+"published": 1655679617.0
 }
 ],
 "The Sydney Morning Herald": [
 {
 "filename": "sydney-morning-herald-2022-06-19.mobi",
-"published": 1655665224.0
+"published": 1655679904.0
 }
 ],
-"Taipei Times": [
-{
-"filename": "taipei-times-2022-06-19.mobi",
-"published": 1655596800.0
-}
-],
+"Taipei Times": [],
 "The Third Pole": [
 {
 "filename": "thirdpole-2022-06-18.mobi",
@@ -170,7 +165,7 @@
 "Washington Post": [
 {
 "filename": "wapo-2022-06-19.mobi",
-"published": 1655665790.0
+"published": 1655679760.0
 }
 ],
 "Wired Magazine": [
@@ -179,5 +174,5 @@
 "published": 1655200800.0
 }
 ],
-"_generated": 1655666105
+"_generated": 1655680706
 }
