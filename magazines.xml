@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-06-22T19:20:29Z</updated>
+<updated>2022-06-22T23:21:13Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,17 +10,32 @@
 <entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 22 Jun, 2022</title>
-<summary>The Atlantic: 22 Jun, 2022 published at 2022-06-22 18:46PM.</summary>
+<summary>The Atlantic: 22 Jun, 2022 published at 2022-06-22 22:05PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The Story of Fred, a Mastodon&lt;/li&gt;&lt;li&gt;How to Be a Good Person Without Annoying Everyone&lt;/li&gt;&lt;li&gt;Side Effects May Include … A Completely New Hair Color?&lt;/li&gt;&lt;li&gt;Black Flamingo&lt;/li&gt;&lt;li&gt;What My Mom Told Me About America Before Roe&lt;/li&gt;&lt;li&gt;Welcome to the Summer of Dancing and Darkness&lt;/li&gt;&lt;li&gt;Farewell to Hong Kong and Its Big Lie&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;li&gt;Inflation vs. Recession: Eight Readers Choose&lt;/li&gt;&lt;li&gt;The Most American Form of Architecture Isn’t Going Anywhere&lt;/li&gt;&lt;li&gt;Squirrels Could Make Monkeypox a Forever Problem&lt;/li&gt;&lt;li&gt;Dave Chappelle’s Not Kidding&lt;/li&gt;&lt;li&gt;A Substitution&lt;/li&gt;&lt;li&gt;Saïd Sayrafiezadeh on the Performance of Fiction&lt;/li&gt;&lt;li&gt;Cancel Zoning&lt;/li&gt;&lt;li&gt;The Liberals Who Won’t Acknowledge the Crime Problem&lt;/li&gt;&lt;li&gt;How a Google Employee Fell for the Eliza Effect&lt;/li&gt;&lt;li&gt;The Insurrectionist in the Flower Shop&lt;/li&gt;&lt;li&gt;China’s ‘Very Dangerous Trajectory’&lt;/li&gt;&lt;li&gt;Beware the Luxury Beach Resort&lt;/li&gt;&lt;li&gt;Should We Blame Social Media for Society’s Divisions?&lt;/li&gt;&lt;li&gt;What the Yellowstone Floods Teach Us&lt;/li&gt;&lt;li&gt;The President Who Did Everything Right and Got No Thanks&lt;/li&gt;&lt;li&gt;When Can a Marriage Be Saved?&lt;/li&gt;&lt;li&gt;Beach Currents Don’t Have to Be This Deadly&lt;/li&gt;&lt;li&gt;The Open Secret of Google Search&lt;/li&gt;&lt;li&gt;Does the Jason Kander Story Have a Third Act?&lt;/li&gt;&lt;li&gt;The Democrats’ New Spokesman in the Culture Wars&lt;/li&gt;&lt;li&gt;The January 6 Committee’s Most Damning Revelation Yet&lt;/li&gt;&lt;li&gt;Why Biden Shouldn’t Run in 2024&lt;/li&gt;&lt;li&gt;The Triumph of a Sometimes-Trump Republican&lt;/li&gt;&lt;li&gt;Chris Hemsworth Finds His Villainous Niche&lt;/li&gt;&lt;li&gt;The Organization of Your Bookshelves Tells Its Own Story&lt;/li&gt;&lt;li&gt;Perfume Genius Sings the Body Electric&lt;/li&gt;&lt;li&gt;The Book That Captures My Life as a Dad&lt;/li&gt;&lt;li&gt;A Lost Trove of Civil War Gold, an FBI Excavation, and Some Very Angry Treasure Hunters&lt;/li&gt;&lt;li&gt;The Book That Never Stops Changing&lt;/li&gt;&lt;li&gt;It’s Time for Pixar to Move on From Toy Story&lt;/li&gt;&lt;li&gt;Barry Isn’t a Comedy Anymore. But It’s Become an Even Better Show.&lt;/li&gt;&lt;li&gt;Britain’s Unbridgeable Divide&lt;/li&gt;&lt;li&gt;Where Russia’s Declinist Rage Isn’t Enough&lt;/li&gt;&lt;li&gt;Photos of the Week: Paddle Steamer, Floating Restaurant, Glass Bridge&lt;/li&gt;&lt;li&gt;Google’s AI Is Something Even Stranger Than Conscious&lt;/li&gt;&lt;li&gt;The Personal Brand Is Dead&lt;/li&gt;&lt;li&gt;Photos: Devastating Floods Hit the Yellowstone Region&lt;/li&gt;&lt;li&gt;Will These Be the Last Polar Bears on Earth?&lt;/li&gt;&lt;li&gt;A Hotter, Poorer, and Less Free America&lt;/li&gt;&lt;li&gt;A Frog So Small, It Could Not Frog&lt;/li&gt;&lt;li&gt;An Unusual Movie Pick for Father’s Day&lt;/li&gt;&lt;li&gt;10 Hours, Two Theme Parties&lt;/li&gt;&lt;li&gt;The Awkward Intimacy of Therapy&lt;/li&gt;&lt;li&gt;Trump’s Dangerous Wannabes&lt;/li&gt;&lt;li&gt;Two Battles for Democracy&lt;/li&gt;&lt;li&gt;There May Be a Blunt-Force Fix for Inflation&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;What Trump Has Taken From Us&lt;/li&gt;&lt;li&gt;Want Closer Friendships? Move Away From Your Friends.&lt;/li&gt;&lt;li&gt;When the Punishment Doesn’t Fit the Joke&lt;/li&gt;&lt;li&gt;The Comment That Reveals the Depths of the Republican Party’s Moral Collapse&lt;/li&gt;&lt;li&gt;A Mystery That Took 13,200 Years to Crack&lt;/li&gt;&lt;li&gt;How to Be a Good Person Without Annoying Everyone&lt;/li&gt;&lt;li&gt;Side Effects May Include … A Completely New Hair Color?&lt;/li&gt;&lt;li&gt;Black Flamingo&lt;/li&gt;&lt;li&gt;What My Mom Told Me About America Before Roe&lt;/li&gt;&lt;li&gt;Welcome to the Summer of Dancing and Darkness&lt;/li&gt;&lt;li&gt;Farewell to Hong Kong and Its Big Lie&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;li&gt;Inflation vs. Recession: Eight Readers Choose&lt;/li&gt;&lt;li&gt;The Most American Form of Architecture Isn’t Going Anywhere&lt;/li&gt;&lt;li&gt;Squirrels Could Make Monkeypox a Forever Problem&lt;/li&gt;&lt;li&gt;Dave Chappelle’s Not Kidding&lt;/li&gt;&lt;li&gt;A Substitution&lt;/li&gt;&lt;li&gt;Saïd Sayrafiezadeh on the Performance of Fiction&lt;/li&gt;&lt;li&gt;Cancel Zoning&lt;/li&gt;&lt;li&gt;The Liberals Who Won’t Acknowledge the Crime Problem&lt;/li&gt;&lt;li&gt;How a Google Employee Fell for the Eliza Effect&lt;/li&gt;&lt;li&gt;The Insurrectionist in the Flower Shop&lt;/li&gt;&lt;li&gt;China’s ‘Very Dangerous Trajectory’&lt;/li&gt;&lt;li&gt;Beware the Luxury Beach Resort&lt;/li&gt;&lt;li&gt;Should We Blame Social Media for Society’s Divisions?&lt;/li&gt;&lt;li&gt;Does the Jason Kander Story Have a Third Act?&lt;/li&gt;&lt;li&gt;The Democrats’ New Spokesman in the Culture Wars&lt;/li&gt;&lt;li&gt;The January 6 Committee’s Most Damning Revelation Yet&lt;/li&gt;&lt;li&gt;Why Biden Shouldn’t Run in 2024&lt;/li&gt;&lt;li&gt;The Triumph of a Sometimes-Trump Republican&lt;/li&gt;&lt;li&gt;Chris Hemsworth Finds His Villainous Niche&lt;/li&gt;&lt;li&gt;The Organization of Your Bookshelves Tells Its Own Story&lt;/li&gt;&lt;li&gt;Perfume Genius Sings the Body Electric&lt;/li&gt;&lt;li&gt;The Book That Captures My Life as a Dad&lt;/li&gt;&lt;li&gt;A Lost Trove of Civil War Gold, an FBI Excavation, and Some Very Angry Treasure Hunters&lt;/li&gt;&lt;li&gt;The Book That Never Stops Changing&lt;/li&gt;&lt;li&gt;It’s Time for Pixar to Move on From Toy Story&lt;/li&gt;&lt;li&gt;Barry Isn’t a Comedy Anymore. But It’s Become an Even Better Show.&lt;/li&gt;&lt;li&gt;Britain’s Unbridgeable Divide&lt;/li&gt;&lt;li&gt;Where Russia’s Declinist Rage Isn’t Enough&lt;/li&gt;&lt;li&gt;Photos of the Week: Paddle Steamer, Floating Restaurant, Glass Bridge&lt;/li&gt;&lt;li&gt;Google’s AI Is Something Even Stranger Than Conscious&lt;/li&gt;&lt;li&gt;The Personal Brand Is Dead&lt;/li&gt;&lt;li&gt;Photos: Devastating Floods Hit the Yellowstone Region&lt;/li&gt;&lt;li&gt;Beach Currents Don’t Have to Be This Deadly&lt;/li&gt;&lt;li&gt;Will These Be the Last Polar Bears on Earth?&lt;/li&gt;&lt;li&gt;An Unusual Movie Pick for Father’s Day&lt;/li&gt;&lt;li&gt;10 Hours, Two Theme Parties&lt;/li&gt;&lt;li&gt;The Awkward Intimacy of Therapy&lt;/li&gt;&lt;li&gt;Trump’s Dangerous Wannabes&lt;/li&gt;&lt;li&gt;Two Battles for Democracy&lt;/li&gt;&lt;/ul&gt;
                 News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
                 </content>
-<updated>2022-06-22T18:46:02Z</updated>
+<updated>2022-06-22T22:05:10Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-06-22.mobi"/>
+</entry>
+<entry>
+<id>Nautilus</id>
+<title>Nautilus: 22 Jun, 2022</title>
+<summary>Nautilus: 22 Jun, 2022 published at 2022-06-22 22:02PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;This Planetary Scientist Is Always Reaching for Something Big&lt;/li&gt;&lt;li&gt;Gravitational Waves Continue to Astound&lt;/li&gt;&lt;li&gt;Were It Not for Cosmic Good Fortune, We Wouldn’t Be Here&lt;/li&gt;&lt;li&gt;How Do We Get People Who Believe in Pseudoscience to Trust Science?&lt;/li&gt;&lt;li&gt;Mysteries Are to Be Embraced, But Also to Be Solved&lt;/li&gt;&lt;li&gt;How Much Is the Ocean Worth?&lt;/li&gt;&lt;li&gt;Reshuffled Rivers Bolster the Amazon’s Hyper-Biodiversity&lt;/li&gt;&lt;li&gt;Who Are the Scientists Here?&lt;/li&gt;&lt;li&gt;The Race to Explore the Ocean’s Twilight Zone&lt;/li&gt;&lt;li&gt;The Oceans Are Teeming with Unknown Species&lt;/li&gt;&lt;li&gt;The Giraffe Neck Evolved for Sexual Combat&lt;/li&gt;&lt;li&gt;Life’s First Peptides May Have Grown on RNA Strands&lt;/li&gt;&lt;li&gt;You Eat a Credit Card’s Worth of Plastic Every Week&lt;/li&gt;&lt;li&gt;Unlocking Mom’s Brain&lt;/li&gt;&lt;li&gt;No Two Human Brains Are Alike&lt;/li&gt;&lt;li&gt;Portrait of the Human as a Young Hominin&lt;/li&gt;&lt;li&gt;Thinking Like a Scientist Will Make You Happier&lt;/li&gt;&lt;li&gt;What Is Time?&lt;/li&gt;&lt;li&gt;Doctor Strange and the Multiverse in Science&lt;/li&gt;&lt;li&gt;Don’t Give Up on Facts&lt;/li&gt;&lt;li&gt;Are You a Naïve Realist?&lt;/li&gt;&lt;li&gt;What Oceanographers Can Learn From Their Animal Colleagues&lt;/li&gt;&lt;li&gt;The Secrets of the Blind Salamander&lt;/li&gt;&lt;/ul&gt;
+                Nautilus is a different kind of science magazine. Our stories take you into the depths of science and spotlight its ripples in our lives and cultures. We believe any subject in science, no matter how complex, can be explained with clarity and vitality.
+                </content>
+<updated>2022-06-22T22:02:26Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nautilus-2022-06-22.mobi"/>
 </entry>
 <entry>
 <id>POLITICO Magazine</id>
@@ -156,21 +171,6 @@
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="scientific-american-2022-06-16.mobi"/>
-</entry>
-<entry>
-<id>Nautilus</id>
-<title>Nautilus: 15 Jun, 2022</title>
-<summary>Nautilus: 15 Jun, 2022 published at 2022-06-15 20:43PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;This Planetary Scientist Is Always Reaching for Something Big&lt;/li&gt;&lt;li&gt;Gravitational Waves Continue to Astound&lt;/li&gt;&lt;li&gt;Were It Not for Cosmic Good Fortune, We Wouldn’t Be Here&lt;/li&gt;&lt;li&gt;Mysteries Are to Be Embraced, But Also to Be Solved&lt;/li&gt;&lt;li&gt;How Much Is the Ocean Worth?&lt;/li&gt;&lt;li&gt;Reshuffled Rivers Bolster the Amazon’s Hyper-Biodiversity&lt;/li&gt;&lt;li&gt;Who Are the Scientists Here?&lt;/li&gt;&lt;li&gt;The Race to Explore the Ocean’s Twilight Zone&lt;/li&gt;&lt;li&gt;The Oceans Are Teeming with Unknown Species&lt;/li&gt;&lt;li&gt;The Giraffe Neck Evolved for Sexual Combat&lt;/li&gt;&lt;li&gt;Life’s First Peptides May Have Grown on RNA Strands&lt;/li&gt;&lt;li&gt;You Eat a Credit Card’s Worth of Plastic Every Week&lt;/li&gt;&lt;li&gt;Unlocking Mom’s Brain&lt;/li&gt;&lt;li&gt;No Two Human Brains Are Alike&lt;/li&gt;&lt;li&gt;Portrait of the Human as a Young Hominin&lt;/li&gt;&lt;li&gt;Thinking Like a Scientist Will Make You Happier&lt;/li&gt;&lt;li&gt;What Is Time?&lt;/li&gt;&lt;li&gt;Doctor Strange and the Multiverse in Science&lt;/li&gt;&lt;li&gt;The Secrets of the Blind Salamander&lt;/li&gt;&lt;/ul&gt;
-                Nautilus is a different kind of science magazine. Our stories take you into the depths of science and spotlight its ripples in our lives and cultures. We believe any subject in science, no matter how complex, can be explained with clarity and vitality.
-                </content>
-<updated>2022-06-15T20:43:12Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nautilus-2022-06-15.mobi"/>
 </entry>
 <entry>
 <id>The Third Pole</id>
