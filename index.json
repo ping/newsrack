@@ -1,8 +1,8 @@
 {
 "Asahi Shimbun": [
 {
-"filename": "asahi-shimbun-2022-06-23.mobi",
-"published": 1656025500.0
+"filename": "asahi-shimbun-2022-06-24.mobi",
+"published": 1656050760.0
 }
 ],
 "Asian Review of Books": [
@@ -26,13 +26,13 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-06-24.mobi",
-"published": 1656042346.0
+"published": 1656053844.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-06-24.mobi",
-"published": 1656036594.0
+"published": 1656043507.0
 }
 ],
 "Economist": [
@@ -44,7 +44,7 @@
 "Financial Times": [
 {
 "filename": "ft-2022-06-24.mobi",
-"published": 1656039614.0
+"published": 1656054010.0
 }
 ],
 "Five Books": [
@@ -56,19 +56,19 @@
 "Guardian": [
 {
 "filename": "guardian-2022-06-24.mobi",
-"published": 1656041223.0
+"published": 1656053109.0
 }
 ],
 "JoongAng Daily": [
 {
 "filename": "joongang-daily-2022-06-24.mobi",
-"published": 1656041902.0
+"published": 1656053631.0
 }
 ],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-06-24.mobi",
-"published": 1656040063.0
+"published": 1656054347.0
 }
 ],
 "London Review of Books": [
@@ -98,13 +98,13 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-06-24.mobi",
-"published": 1656043101.0
+"published": 1656054010.0
 }
 ],
 "NY Times (Print)": [
 {
-"filename": "nytimes-print-2022-06-23.mobi",
-"published": 1655942400.0
+"filename": "nytimes-print-2022-06-24.mobi",
+"published": 1656028800.0
 }
 ],
 "NY Times Books": [
@@ -134,13 +134,13 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-06-24.mobi",
-"published": 1656043220.0
+"published": 1656054023.0
 }
 ],
 "The Sydney Morning Herald": [
 {
 "filename": "sydney-morning-herald-2022-06-24.mobi",
-"published": 1656043260.0
+"published": 1656054392.0
 }
 ],
 "Taipei Times": [
@@ -151,8 +151,8 @@
 ],
 "The Third Pole": [
 {
-"filename": "thirdpole-2022-06-15.mobi",
-"published": 1655287187.0
+"filename": "thirdpole-2022-06-23.mobi",
+"published": 1656005214.0
 }
 ],
 "TIME": [
@@ -170,9 +170,14 @@
 "Washington Post": [
 {
 "filename": "wapo-2022-06-24.mobi",
-"published": 1656043679.0
+"published": 1656054223.0
 }
 ],
-"Wired Magazine": [],
-"_generated": 1656044065
+"Wired Magazine": [
+{
+"filename": "wired-2022-06-23.mobi",
+"published": 1655978400.0
+}
+],
+"_generated": 1656055263
 }
