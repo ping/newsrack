@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-24T07:21:03Z</updated>
+<updated>2022-06-24T11:21:27Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 24 Jun, 2022</title>
-<summary>NY Times Books: 24 Jun, 2022 published at 2022-06-24 04:01AM.</summary>
+<summary>NY Times Books: 24 Jun, 2022 published at 2022-06-24 09:00AM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;“Two Dogs” by Ian Falconer&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;‘Lessons in Survival: 1971’ Review: The Past Echoes in the Present&lt;/li&gt;&lt;li&gt;Newly Published, From Cookie Stores to Jean Rhys&lt;/li&gt;&lt;li&gt;Inside the Push to Diversify the Book Business&lt;/li&gt;&lt;li&gt;Book Review: “The Long Answer,” by Anna Hogeland&lt;/li&gt;&lt;li&gt;Patrick Radden Keefe Has One Big Rule for His Reading Time&lt;/li&gt;&lt;li&gt;Lidia Yuknavitch Writes to Break With the ‘Tyranny’ of the Past&lt;/li&gt;&lt;li&gt;At 10, ‘Dragons Love Tacos’ is Still Flying Off Shelves&lt;/li&gt;&lt;li&gt;Poem: ‘love &amp; the memory of it’&lt;/li&gt;&lt;li&gt;Book Review: “The Brain in Search of Itself,” by Benjamin Ehrlich&lt;/li&gt;&lt;li&gt;The 25 Most Significant New York City Novels From the Last 100 Years&lt;/li&gt;&lt;li&gt;‘An Immense World’ Is a Thrilling Tour of Nonhuman Perception&lt;/li&gt;&lt;li&gt;Review: “Resistance: The Underground War Against Hitler, 1939-1945,” by Halik Kochanski&lt;/li&gt;&lt;li&gt;Read Your Way Through Stockholm&lt;/li&gt;&lt;li&gt;The Poet Who Taught Me to Be in Love With the World&lt;/li&gt;&lt;li&gt;Finding Traces of Harriet Tubman on Maryland’s Eastern Shore&lt;/li&gt;&lt;li&gt;Review: ‘Alindarka’s Children,’ by Alhierd Bacharevic&lt;/li&gt;&lt;li&gt;Book Review: “Learning to Talk,” by Hilary Mantel&lt;/li&gt;&lt;li&gt;‘The Last Resort’ Interrogates the Beach While Enjoying It&lt;/li&gt;&lt;li&gt;Boston Revisits ‘Common Ground’ and Busing, Onstage&lt;/li&gt;&lt;li&gt;Book Review: “Daddy Issues: Love and Hate in the Time of Patriarchy,” by Katherine Angel&lt;/li&gt;&lt;li&gt;Review: ‘Even the Darkest Night,’ by Javier Cercas&lt;/li&gt;&lt;li&gt;Book Review: “The Catch” by Alison Fairbrother&lt;/li&gt;&lt;li&gt;Jackie, Before Marrying Jack&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Review: ‘Flint Is Family in Three Acts,’ by LaToya Ruby Frazier&lt;/li&gt;&lt;li&gt;Review: ‘Droll Tales,’ by Iris Smyles; ‘A Blind Corner,’ by Caitlin Macy; ‘Sleeping Alone,’ by Ru Freeman; ‘Fruiting Bodies,’ by Kathryn Harlan&lt;/li&gt;&lt;li&gt;New in Paperback: ‘Let the Record Show’ and ‘Hell of a Book’&lt;/li&gt;&lt;li&gt;“Two Dogs” by Ian Falconer&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;‘Lessons in Survival: 1971’ Review: The Past Echoes in the Present&lt;/li&gt;&lt;li&gt;Newly Published, From Cookie Stores to Jean Rhys&lt;/li&gt;&lt;li&gt;Inside the Push to Diversify the Book Business&lt;/li&gt;&lt;li&gt;Book Review: “The Long Answer,” by Anna Hogeland&lt;/li&gt;&lt;li&gt;Patrick Radden Keefe Has One Big Rule for His Reading Time&lt;/li&gt;&lt;li&gt;Lidia Yuknavitch Writes to Break With the ‘Tyranny’ of the Past&lt;/li&gt;&lt;li&gt;At 10, ‘Dragons Love Tacos’ is Still Flying Off Shelves&lt;/li&gt;&lt;li&gt;Poem: ‘love &amp; the memory of it’&lt;/li&gt;&lt;li&gt;Book Review: “The Brain in Search of Itself,” by Benjamin Ehrlich&lt;/li&gt;&lt;li&gt;The 25 Most Significant New York City Novels From the Last 100 Years&lt;/li&gt;&lt;li&gt;‘An Immense World’ Is a Thrilling Tour of Nonhuman Perception&lt;/li&gt;&lt;li&gt;Review: “Resistance: The Underground War Against Hitler, 1939-1945,” by Halik Kochanski&lt;/li&gt;&lt;li&gt;Read Your Way Through Stockholm&lt;/li&gt;&lt;li&gt;The Poet Who Taught Me to Be in Love With the World&lt;/li&gt;&lt;li&gt;Book Review: “Learning to Talk,” by Hilary Mantel&lt;/li&gt;&lt;li&gt;‘The Last Resort’ Interrogates the Beach While Enjoying It&lt;/li&gt;&lt;li&gt;Boston Revisits ‘Common Ground’ and Busing, Onstage&lt;/li&gt;&lt;li&gt;Book Review: “Daddy Issues: Love and Hate in the Time of Patriarchy,” by Katherine Angel&lt;/li&gt;&lt;li&gt;Book Review: “The Catch” by Alison Fairbrother&lt;/li&gt;&lt;li&gt;Jackie, Before Marrying Jack&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-06-24T04:01:18Z</updated>
+<updated>2022-06-24T09:00:41Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
