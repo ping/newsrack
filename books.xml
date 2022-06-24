@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-24T15:22:08Z</updated>
+<updated>2022-06-24T19:21:45Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,17 +10,47 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 24 Jun, 2022</title>
-<summary>NY Times Books: 24 Jun, 2022 published at 2022-06-24 14:40PM.</summary>
+<summary>NY Times Books: 24 Jun, 2022 published at 2022-06-24 18:15PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Review: ‘Droll Tales,’ by Iris Smyles; ‘A Blind Corner,’ by Caitlin Macy; ‘Sleeping Alone,’ by Ru Freeman; ‘Fruiting Bodies,’ by Kathryn Harlan&lt;/li&gt;&lt;li&gt;Review: ‘Flint Is Family in Three Acts,’ by LaToya Ruby Frazier&lt;/li&gt;&lt;li&gt;New in Paperback: ‘Let the Record Show’ and ‘Hell of a Book’&lt;/li&gt;&lt;li&gt;“Two Dogs” by Ian Falconer&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;‘Lessons in Survival: 1971’ Review: The Past Echoes in the Present&lt;/li&gt;&lt;li&gt;Newly Published, From Cookie Stores to Jean Rhys&lt;/li&gt;&lt;li&gt;Inside the Push to Diversify the Book Business&lt;/li&gt;&lt;li&gt;Book Review: “The Long Answer,” by Anna Hogeland&lt;/li&gt;&lt;li&gt;Patrick Radden Keefe Has One Big Rule for His Reading Time&lt;/li&gt;&lt;li&gt;Lidia Yuknavitch Writes to Break With the ‘Tyranny’ of the Past&lt;/li&gt;&lt;li&gt;At 10, ‘Dragons Love Tacos’ is Still Flying Off Shelves&lt;/li&gt;&lt;li&gt;Poem: ‘love &amp; the memory of it’&lt;/li&gt;&lt;li&gt;Book Review: “The Brain in Search of Itself,” by Benjamin Ehrlich&lt;/li&gt;&lt;li&gt;The 25 Most Significant New York City Novels From the Last 100 Years&lt;/li&gt;&lt;li&gt;‘An Immense World’ Is a Thrilling Tour of Nonhuman Perception&lt;/li&gt;&lt;li&gt;Review: “Resistance: The Underground War Against Hitler, 1939-1945,” by Halik Kochanski&lt;/li&gt;&lt;li&gt;Read Your Way Through Stockholm&lt;/li&gt;&lt;li&gt;The Poet Who Taught Me to Be in Love With the World&lt;/li&gt;&lt;li&gt;Book Review: “Learning to Talk,” by Hilary Mantel&lt;/li&gt;&lt;li&gt;‘The Last Resort’ Interrogates the Beach While Enjoying It&lt;/li&gt;&lt;li&gt;Boston Revisits ‘Common Ground’ and Busing, Onstage&lt;/li&gt;&lt;li&gt;Book Review: “Daddy Issues: Love and Hate in the Time of Patriarchy,” by Katherine Angel&lt;/li&gt;&lt;li&gt;Book Review: “The Catch” by Alison Fairbrother&lt;/li&gt;&lt;li&gt;Jackie, Before Marrying Jack&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Baxter Black, Who Elevated Cowboy Poetry to Folk Art, Dies at 77&lt;/li&gt;&lt;li&gt;Book Review: “The Long Answer,” by Anna Hogeland&lt;/li&gt;&lt;li&gt;New Crime Fiction&lt;/li&gt;&lt;li&gt;Review: ‘Flint Is Family in Three Acts,’ by LaToya Ruby Frazier&lt;/li&gt;&lt;li&gt;10 Books on Abortion to Understand the Roe v. Wade Debate&lt;/li&gt;&lt;li&gt;Review: ‘Droll Tales,’ by Iris Smyles; ‘A Blind Corner,’ by Caitlin Macy; ‘Sleeping Alone,’ by Ru Freeman; ‘Fruiting Bodies,’ by Kathryn Harlan&lt;/li&gt;&lt;li&gt;New in Paperback: ‘Let the Record Show’ and ‘Hell of a Book’&lt;/li&gt;&lt;li&gt;“Two Dogs” by Ian Falconer&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;‘Lessons in Survival: 1971’ Review: The Past Echoes in the Present&lt;/li&gt;&lt;li&gt;Newly Published, From Cookie Stores to Jean Rhys&lt;/li&gt;&lt;li&gt;Inside the Push to Diversify the Book Business&lt;/li&gt;&lt;li&gt;Patrick Radden Keefe Has One Big Rule for His Reading Time&lt;/li&gt;&lt;li&gt;Lidia Yuknavitch Writes to Break With the ‘Tyranny’ of the Past&lt;/li&gt;&lt;li&gt;At 10, ‘Dragons Love Tacos’ is Still Flying Off Shelves&lt;/li&gt;&lt;li&gt;Poem: ‘love &amp; the memory of it’&lt;/li&gt;&lt;li&gt;Book Review: “The Brain in Search of Itself,” by Benjamin Ehrlich&lt;/li&gt;&lt;li&gt;The 25 Most Significant New York City Novels From the Last 100 Years&lt;/li&gt;&lt;li&gt;‘An Immense World’ Is a Thrilling Tour of Nonhuman Perception&lt;/li&gt;&lt;li&gt;Review: “Resistance: The Underground War Against Hitler, 1939-1945,” by Halik Kochanski&lt;/li&gt;&lt;li&gt;Read Your Way Through Stockholm&lt;/li&gt;&lt;li&gt;The Poet Who Taught Me to Be in Love With the World&lt;/li&gt;&lt;li&gt;‘The Last Resort’ Interrogates the Beach While Enjoying It&lt;/li&gt;&lt;li&gt;Boston Revisits ‘Common Ground’ and Busing, Onstage&lt;/li&gt;&lt;li&gt;Book Review: “The Catch” by Alison Fairbrother&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-06-24T14:40:20Z</updated>
+<updated>2022-06-24T18:15:56Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-06-24.mobi"/>
+</entry>
+<entry>
+<id>London Review of Books</id>
+<title>London Review of Books: 23 Jun, 2022</title>
+<summary>London Review of Books: 23 Jun, 2022 published at 2022-06-24 15:16PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;David Trotter  - Lolly Willowes  / Valentine Ackland: A Transgressive Life&lt;/li&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Jacqueline Rose and Sam Frears  - You haven’t got your sister pregnant, have you?&lt;/li&gt;&lt;li&gt;Julian Bell  - At the British Museum: ‘The World of Stonehenge’&lt;/li&gt;&lt;li&gt;Deborah Friedell  - The Family Roe: An American Story&lt;/li&gt;&lt;li&gt;Mike Jay  - Driving with Strangers: What Hitchhiking Tells Us about Humanity&lt;/li&gt;&lt;li&gt;Thomas Meaney  - Free: Coming of Age at the End of History&lt;/li&gt;&lt;li&gt;Rachel Nolan  - Operation Car Wash: Brazil’s Institutionalised Crime and the Inside Story of the Biggest Corruption Scandal in History&lt;/li&gt;&lt;li&gt;John-Paul Stonard  - At the Barbican: ‘Postwar Modern’&lt;/li&gt;&lt;li&gt;Clare Bucknell  - Trespasses&lt;/li&gt;&lt;li&gt;Michael Wood  - At the Movies: ‘Top Gun: Maverick’&lt;/li&gt;&lt;li&gt;Bee Wilson  - Planet Palm: How Palm Oil Ended Up in Everything – and Endangered the World  / Oil Palm: A Global History&lt;/li&gt;&lt;li&gt;James Butler  - Short Cuts: Love of the Gardenesque&lt;/li&gt;&lt;li&gt;Fara Dabhoiwala  - Freedom Seekers: Escaping from Slavery in Restoration London&lt;/li&gt;&lt;li&gt;Jorie Graham  - Poem: ‘Fog’&lt;/li&gt;&lt;li&gt;Gavin Francis  - The Sleeping Beauties and Other Stories of Mystery Illness&lt;/li&gt;&lt;li&gt;Richard Shone  - Diary: Lydia Lopokova’s Portraits&lt;/li&gt;&lt;/ul&gt;
+                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
+                </content>
+<updated>2022-06-24T15:16:24Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-06-24.mobi"/>
+</entry>
+<entry>
+<id>Five Books</id>
+<title>Five Books: 24 Jun, 2022</title>
+<summary>Five Books: 24 Jun, 2022 published at 2022-06-24 00:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Frank Wynne on The Best of World Literature: The 2022 International Booker Prize Shortlist&lt;/li&gt;&lt;li&gt;Myisha Cherry on Anger at Racial Injustice Books&lt;/li&gt;&lt;li&gt;Darren Collins on The Best Finance Books for Teens and Young Adults&lt;/li&gt;&lt;li&gt;Elizabeth Laird on The Best Historical Fiction: The 2022 Walter Scott Prize Shortlist&lt;/li&gt;&lt;li&gt;David George Haskell on Natural History Books&lt;/li&gt;&lt;li&gt;Gary Gerstle on Neoliberalism Books&lt;/li&gt;&lt;li&gt;Helen Scales on The Best Ocean Novels for 10-14 Year Olds&lt;/li&gt;&lt;li&gt;Jan Loeys on Market Concentration Books&lt;/li&gt;&lt;li&gt;Rosa Rankin-Gee on The Best Near-Future Dystopias&lt;/li&gt;&lt;li&gt;Cal Flyn on The Notable Novels of Summer 2022&lt;/li&gt;&lt;li&gt;Benno Gammerl on Queer History Books&lt;/li&gt;&lt;li&gt;Matthew Brookes &amp; Zack Raffin on Wanderlust Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Spring 2022&lt;/li&gt;&lt;li&gt;Alison King on Best Verse Novels for 8-12 Year Olds&lt;/li&gt;&lt;li&gt;Sue Rainsford on Literary Horror Books&lt;/li&gt;&lt;li&gt;Carole Hillenbrand on The Best History Books: the 2022 Wolfson Prize Shortlist&lt;/li&gt;&lt;li&gt;Mark Webber on NATO Books&lt;/li&gt;&lt;li&gt;Wajahat Ali on The Best South Asian American Novels&lt;/li&gt;&lt;li&gt;Chris Power on The Best Literary Thrillers&lt;/li&gt;&lt;li&gt;Michele Cobb on The Best Audiobooks: the 2022 Audie Awards&lt;/li&gt;&lt;li&gt;Serhii Plokhy on Ukraine and Russia Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Early 2022&lt;/li&gt;&lt;li&gt;Cal Flyn on Notable Novels of Spring 2022&lt;/li&gt;&lt;li&gt;Nigel Warburton on The Best Philosophy Books of 2021&lt;/li&gt;&lt;li&gt;Jeffrey Archer on The Best Detective Fiction&lt;/li&gt;&lt;li&gt;Marion Turner on Best Medieval Historical Fiction&lt;/li&gt;&lt;li&gt;Tanya Selvaratnam on Domestic Violence Books&lt;/li&gt;&lt;/ul&gt;
+                Expert book recommendations
+                </content>
+<updated>2022-06-24T00:00:00Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-06-24.mobi"/>
 </entry>
 <entry>
 <id>Asian Review of Books</id>
@@ -36,35 +66,5 @@
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-23.mobi"/>
-</entry>
-<entry>
-<id>London Review of Books</id>
-<title>London Review of Books: 23 Jun, 2022</title>
-<summary>London Review of Books: 23 Jun, 2022 published at 2022-06-23 11:32AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;David Trotter  - Lolly Willowes  / Valentine Ackland: A Transgressive Life&lt;/li&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Jacqueline Rose and Sam Frears  - You haven’t got your sister pregnant, have you?&lt;/li&gt;&lt;li&gt;Julian Bell  - At the British Museum: ‘The World of Stonehenge’&lt;/li&gt;&lt;li&gt;Deborah Friedell  - The Family Roe: An American Story&lt;/li&gt;&lt;li&gt;Mike Jay  - Driving with Strangers: What Hitchhiking Tells Us about Humanity&lt;/li&gt;&lt;li&gt;Thomas Meaney  - Free: Coming of Age at the End of History&lt;/li&gt;&lt;li&gt;Rachel Nolan  - Operation Car Wash: Brazil’s Institutionalised Crime and the Inside Story of the Biggest Corruption Scandal in History&lt;/li&gt;&lt;li&gt;John-Paul Stonard  - At the Barbican: ‘Postwar Modern’&lt;/li&gt;&lt;li&gt;Clare Bucknell  - Trespasses&lt;/li&gt;&lt;li&gt;Michael Wood  - At the Movies: ‘Top Gun: Maverick’&lt;/li&gt;&lt;li&gt;Bee Wilson  - Planet Palm: How Palm Oil Ended Up in Everything – and Endangered the World  / Oil Palm: A Global History&lt;/li&gt;&lt;li&gt;James Butler  - Short Cuts: Love of the Gardenesque&lt;/li&gt;&lt;li&gt;Fara Dabhoiwala  - Freedom Seekers: Escaping from Slavery in Restoration London&lt;/li&gt;&lt;li&gt;Jorie Graham  - Poem: ‘Fog’&lt;/li&gt;&lt;li&gt;Gavin Francis  - The Sleeping Beauties and Other Stories of Mystery Illness&lt;/li&gt;&lt;li&gt;Richard Shone  - Diary: Lydia Lopokova’s Portraits&lt;/li&gt;&lt;/ul&gt;
-                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
-                </content>
-<updated>2022-06-23T11:32:02Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-06-23.mobi"/>
-</entry>
-<entry>
-<id>Five Books</id>
-<title>Five Books: 22 Jun, 2022</title>
-<summary>Five Books: 22 Jun, 2022 published at 2022-06-22 18:51PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Myisha Cherry on Anger at Racial Injustice Books&lt;/li&gt;&lt;li&gt;Darren Collins on The Best Finance Books for Teens and Young Adults&lt;/li&gt;&lt;li&gt;Elizabeth Laird on The Best Historical Fiction: The 2022 Walter Scott Prize Shortlist&lt;/li&gt;&lt;li&gt;David George Haskell on Natural History Books&lt;/li&gt;&lt;li&gt;Gary Gerstle on Neoliberalism Books&lt;/li&gt;&lt;li&gt;Helen Scales on The Best Ocean Novels for 10-14 Year Olds&lt;/li&gt;&lt;li&gt;Jan Loeys on Market Concentration Books&lt;/li&gt;&lt;li&gt;Rosa Rankin-Gee on The Best Near-Future Dystopias&lt;/li&gt;&lt;li&gt;Cal Flyn on The Notable Novels of Summer 2022&lt;/li&gt;&lt;li&gt;Benno Gammerl on Queer History Books&lt;/li&gt;&lt;li&gt;Matthew Brookes &amp; Zack Raffin on Wanderlust Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Spring 2022&lt;/li&gt;&lt;li&gt;Alison King on Best Verse Novels for 8-12 Year Olds&lt;/li&gt;&lt;li&gt;Sue Rainsford on Literary Horror Books&lt;/li&gt;&lt;li&gt;Howard Smith on Antitrust Books&lt;/li&gt;&lt;li&gt;Carole Hillenbrand on The Best History Books: the 2022 Wolfson Prize Shortlist&lt;/li&gt;&lt;li&gt;Mark Webber on NATO Books&lt;/li&gt;&lt;li&gt;Wajahat Ali on The Best South Asian American Novels&lt;/li&gt;&lt;li&gt;Chris Power on The Best Literary Thrillers&lt;/li&gt;&lt;li&gt;Michele Cobb on The Best Audiobooks: the 2022 Audie Awards&lt;/li&gt;&lt;li&gt;Serhii Plokhy on Ukraine and Russia Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Early 2022&lt;/li&gt;&lt;li&gt;Cal Flyn on Notable Novels of Spring 2022&lt;/li&gt;&lt;li&gt;Nigel Warburton on The Best Philosophy Books of 2021&lt;/li&gt;&lt;li&gt;Jeffrey Archer on The Best Detective Fiction&lt;/li&gt;&lt;li&gt;Marion Turner on Best Medieval Historical Fiction&lt;/li&gt;&lt;li&gt;Tanya Selvaratnam on Domestic Violence Books&lt;/li&gt;&lt;/ul&gt;
-                Expert book recommendations
-                </content>
-<updated>2022-06-22T18:51:51Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-06-22.mobi"/>
 </entry>
 </feed>
