@@ -2,17 +2,47 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-06-25T11:18:20Z</updated>
+<updated>2022-06-25T15:16:43Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
+<id>The Atlantic</id>
+<title>The Atlantic: 25 Jun, 2022</title>
+<summary>The Atlantic: 25 Jun, 2022 published at 2022-06-25 14:38PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Considering Roe v. Wade, Letters to the Black Body&lt;/li&gt;&lt;li&gt;It Feels Like 1979 Again&lt;/li&gt;&lt;li&gt;The Constitution Is Whatever the Right Wing Says It Is&lt;/li&gt;&lt;li&gt;They Really Did It&lt;/li&gt;&lt;li&gt;The Pro-Life Movement’s Work Is Just Beginning&lt;/li&gt;&lt;li&gt;Elvis Is Utterly Disorienting. That’s the Point.&lt;/li&gt;&lt;li&gt;If the Supreme Court Can Reverse Roe, It Can Reverse Anything&lt;/li&gt;&lt;li&gt;Without Choice&lt;/li&gt;&lt;li&gt;Empathy Isn’t Enough&lt;/li&gt;&lt;li&gt;Adopting My Son Changed My Understanding of Family&lt;/li&gt;&lt;li&gt;J. Lo’s Tragic Fame Cycle&lt;/li&gt;&lt;li&gt;The U.S. Is Underreacting to Monkeypox&lt;/li&gt;&lt;li&gt;America Is Growing Apart, Possibly for Good&lt;/li&gt;&lt;li&gt;The Surprising Voice Missing From Gun-Control Talks&lt;/li&gt;&lt;li&gt;Photos of the Week: Stonehenge Solstice, Boxing Record, Torch Battle&lt;/li&gt;&lt;li&gt;The Problem Is Gun Culture, Not SCOTUS&lt;/li&gt;&lt;li&gt;What a Gas-Tax Holiday Won’t Do&lt;/li&gt;&lt;li&gt;I Was a Police Officer for 20 Years. I Know What It Means to Put More Guns on the Street.&lt;/li&gt;&lt;li&gt;Fashion Has Abandoned Human Taste&lt;/li&gt;&lt;li&gt;The Next Fight Over Guns in America&lt;/li&gt;&lt;li&gt;What This Is Going to Hurt Leaves Out&lt;/li&gt;&lt;li&gt;Five COVID Numbers That Don’t Make Sense Anymore&lt;/li&gt;&lt;li&gt;Photos From the 2022 Westminster Dog Show&lt;/li&gt;&lt;li&gt;The Battle for Latino Voters in the Rust Belt&lt;/li&gt;&lt;li&gt;‘I’ve Seen Several Giants Die on My Land’&lt;/li&gt;&lt;li&gt;How to Win the Abortion Argument&lt;/li&gt;&lt;li&gt;Why My Parents Chose Life&lt;/li&gt;&lt;li&gt;What My Mom Told Me About America Before Roe&lt;/li&gt;&lt;li&gt;How Reality Dating Shows Stoke Racial Tensions&lt;/li&gt;&lt;li&gt;The Insurrectionist in the Flower Shop&lt;/li&gt;&lt;li&gt;Does the Jason Kander Story Have a Third Act?&lt;/li&gt;&lt;li&gt;Want Closer Friendships? Move Away From Your Friends.&lt;/li&gt;&lt;li&gt;Welcome to the Summer of Dancing and Darkness&lt;/li&gt;&lt;li&gt;The Most American Form of Architecture Isn’t Going Anywhere&lt;/li&gt;&lt;li&gt;Saïd Sayrafiezadeh on the Performance of Fiction&lt;/li&gt;&lt;li&gt;A Substitution&lt;/li&gt;&lt;li&gt;Beware the Luxury Beach Resort&lt;/li&gt;&lt;li&gt;Chris Hemsworth Finds His Villainous Niche&lt;/li&gt;&lt;li&gt;The Organization of Your Bookshelves Tells Its Own Story&lt;/li&gt;&lt;li&gt;Farewell to Hong Kong and Its Big Lie&lt;/li&gt;&lt;li&gt;China’s ‘Very Dangerous Trajectory’&lt;/li&gt;&lt;li&gt;Britain’s Unbridgeable Divide&lt;/li&gt;&lt;li&gt;Where Russia’s Declinist Rage Isn’t Enough&lt;/li&gt;&lt;li&gt;Google’s AI Is Something Even Stranger Than Conscious&lt;/li&gt;&lt;li&gt;Squirrels Could Make Monkeypox a Forever Problem&lt;/li&gt;&lt;li&gt;How the End of Roe Would Change Prenatal Care&lt;/li&gt;&lt;li&gt;A Mystery That Took 13,200 Years to Crack&lt;/li&gt;&lt;li&gt;How to Be a Good Person Without Annoying Everyone&lt;/li&gt;&lt;li&gt;Side Effects May Include … A Completely New Hair Color?&lt;/li&gt;&lt;li&gt;Beach Currents Don’t Have to Be This Deadly&lt;/li&gt;&lt;li&gt;How a Recession Could Weaken the Work-From-Home Revolution&lt;/li&gt;&lt;li&gt;What Trump Has Taken From Us&lt;/li&gt;&lt;li&gt;When the Punishment Doesn’t Fit the Joke&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;li&gt;Inflation vs. Recession: Eight Readers Choose&lt;/li&gt;&lt;/ul&gt;
+                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
+                </content>
+<updated>2022-06-25T14:38:23Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-06-25.mobi"/>
+</entry>
+<entry>
+<id>Vox</id>
+<title>Vox: 25 Jun, 2022</title>
+<summary>Vox: 25 Jun, 2022 published at 2022-06-25 12:30PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;The economic case for abortion rights&lt;/li&gt;&lt;li&gt;The case against the Supreme Court of the United States&lt;/li&gt;&lt;li&gt;The end of Roe is only the beginning for Republicans&lt;/li&gt;&lt;li&gt;5 ways abortion bans could hurt women in the workforce&lt;/li&gt;&lt;li&gt;Roe is gone. What do Democrats do now?&lt;/li&gt;&lt;li&gt;How the Uvalde police failed&lt;/li&gt;&lt;li&gt;At least Clarence Thomas’s odious Dobbs concurrence was honest&lt;/li&gt;&lt;li&gt;Congress passes a landmark gun control package&lt;/li&gt;&lt;li&gt;The end of Roe v. Wade, explained&lt;/li&gt;&lt;li&gt;The Supreme Court overturned Roe. What happens next?&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-06-25T12:30:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-06-25.mobi"/>
+</entry>
+<entry>
 <id>POLITICO Magazine</id>
 <title>POLITICO Magazine: 25 Jun, 2022</title>
 <summary>POLITICO Magazine: 25 Jun, 2022 published at 2022-06-25 11:00AM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;17 Ways the Supreme Court Just Changed America&lt;/li&gt;&lt;li&gt;A Radical Ruling for Radical Times&lt;/li&gt;&lt;li&gt;Opinion | Trump’s Legal Advisers Could Be the First Major Jan. 6 Defendants&lt;/li&gt;&lt;li&gt;D.C. Power Players Are Paying Thousands of Dollars to Find Dates&lt;/li&gt;&lt;li&gt;Is the State Department Trolling Henry Kissinger?&lt;/li&gt;&lt;li&gt;Opinion | What Happens if the GOP Tries to Leave Trump Behind&lt;/li&gt;&lt;li&gt;There Is a Major Rift Dividing the White Working Class — And Democrats Are Clueless&lt;/li&gt;&lt;li&gt;Opinion | Memo to the New York Times: Enough with the Semafor Coverage&lt;/li&gt;&lt;li&gt;An Actual Therapist’s Advice for Kellyanne and George Conway, and All of Us&lt;/li&gt;&lt;li&gt;Robots, Marines and the Ultimate Battle with Bureaucracy&lt;/li&gt;&lt;li&gt;Opinion | Don’t Indict Trump&lt;/li&gt;&lt;li&gt;Opinion | John Eastman’s Criminal Exposure Is Real&lt;/li&gt;&lt;li&gt;The Biggest Change in Media Since Cable Is Happening Right Now&lt;/li&gt;&lt;li&gt;The Left Goes to War with Itself&lt;/li&gt;&lt;li&gt;Opinion | Trump’s Pardon Abuses Expose the Myth of Unlimited Presidential Power&lt;/li&gt;&lt;li&gt;Opinion | The Tragedy of Mike Pence&lt;/li&gt;&lt;li&gt;Opinion | Why Is the Justice Department Fighting With the Jan. 6 Committee?&lt;/li&gt;&lt;li&gt;Washington Post’s New Leader, One Year In: Mean Tweets, Internal Battles, Finding Direction&lt;/li&gt;&lt;li&gt;Why We’re Still Obsessed With Watergate&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;17 Ways the Supreme Court Just Changed America&lt;/li&gt;&lt;li&gt;A Radical Ruling for Radical Times&lt;/li&gt;&lt;li&gt;Opinion | Trump’s Legal Advisers Could Be the First Major Jan. 6 Defendants&lt;/li&gt;&lt;li&gt;D.C. Power Players Are Paying Thousands of Dollars to Find Dates&lt;/li&gt;&lt;li&gt;Is the State Department Trolling Henry Kissinger?&lt;/li&gt;&lt;li&gt;Opinion | What Happens if the GOP Tries to Leave Trump Behind&lt;/li&gt;&lt;li&gt;There Is a Major Rift Dividing the White Working Class — And Democrats Are Clueless&lt;/li&gt;&lt;li&gt;Are You Married to Kellyanne Conway? A Real Therapist Has Some Advice.&lt;/li&gt;&lt;li&gt;Opinion | Memo to the New York Times: Enough with the Semafor Coverage&lt;/li&gt;&lt;li&gt;Robots, Marines and the Ultimate Battle with Bureaucracy&lt;/li&gt;&lt;li&gt;Opinion | Don’t Indict Trump&lt;/li&gt;&lt;li&gt;Opinion | John Eastman’s Criminal Exposure Is Real&lt;/li&gt;&lt;li&gt;The Biggest Change in Media Since Cable Is Happening Right Now&lt;/li&gt;&lt;li&gt;The Left Goes to War with Itself&lt;/li&gt;&lt;li&gt;Opinion | Trump’s Pardon Abuses Expose the Myth of Unlimited Presidential Power&lt;/li&gt;&lt;li&gt;Opinion | The Tragedy of Mike Pence&lt;/li&gt;&lt;li&gt;Opinion | Why Is the Justice Department Fighting With the Jan. 6 Committee?&lt;/li&gt;&lt;li&gt;Washington Post’s New Leader, One Year In: Mean Tweets, Internal Battles, Finding Direction&lt;/li&gt;&lt;li&gt;Why We’re Still Obsessed With Watergate&lt;/li&gt;&lt;/ul&gt;
                 News, Analysis and Opinion from POLITICO
                 </content>
 <updated>2022-06-25T11:00:00Z</updated>
@@ -21,36 +51,6 @@
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-06-25.mobi"/>
-</entry>
-<entry>
-<id>The Atlantic</id>
-<title>The Atlantic: 24 Jun, 2022</title>
-<summary>The Atlantic: 24 Jun, 2022 published at 2022-06-24 23:04PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;They Really Did It&lt;/li&gt;&lt;li&gt;The Pro-Life Movement’s Work Is Just Beginning&lt;/li&gt;&lt;li&gt;Elvis Is Utterly Disorienting. That’s the Point.&lt;/li&gt;&lt;li&gt;If the Supreme Court Can Reverse Roe, It Can Reverse Anything&lt;/li&gt;&lt;li&gt;Without Choice&lt;/li&gt;&lt;li&gt;Empathy Isn’t Enough&lt;/li&gt;&lt;li&gt;Adopting My Son Changed My Understanding of Family&lt;/li&gt;&lt;li&gt;J. Lo’s Tragic Fame Cycle&lt;/li&gt;&lt;li&gt;The U.S. Is Underreacting to Monkeypox&lt;/li&gt;&lt;li&gt;America Is Growing Apart, Possibly for Good&lt;/li&gt;&lt;li&gt;The Surprising Voice Missing From Gun-Control Talks&lt;/li&gt;&lt;li&gt;Photos of the Week: Stonehenge Solstice, Boxing Record, Torch Battle&lt;/li&gt;&lt;li&gt;The Problem Is Gun Culture, Not SCOTUS&lt;/li&gt;&lt;li&gt;What a Gas-Tax Holiday Won’t Do&lt;/li&gt;&lt;li&gt;I Was a Police Officer for 20 Years. I Know What It Means to Put More Guns on the Street.&lt;/li&gt;&lt;li&gt;Fashion Has Abandoned Human Taste&lt;/li&gt;&lt;li&gt;The Next Fight Over Guns in America&lt;/li&gt;&lt;li&gt;What This Is Going to Hurt Leaves Out&lt;/li&gt;&lt;li&gt;Five COVID Numbers That Don’t Make Sense Anymore&lt;/li&gt;&lt;li&gt;Photos From the 2022 Westminster Dog Show&lt;/li&gt;&lt;li&gt;The Battle for Latino Voters in the Rust Belt&lt;/li&gt;&lt;li&gt;‘I’ve Seen Several Giants Die on My Land’&lt;/li&gt;&lt;li&gt;How Reality Dating Shows Stoke Racial Tensions&lt;/li&gt;&lt;li&gt;How a Recession Could Weaken the Work-From-Home Revolution&lt;/li&gt;&lt;li&gt;What a 1904 War Can Teach Vladimir Putin&lt;/li&gt;&lt;li&gt;Why My Parents Chose Life&lt;/li&gt;&lt;li&gt;What My Mom Told Me About America Before Roe&lt;/li&gt;&lt;li&gt;Want Closer Friendships? Move Away From Your Friends.&lt;/li&gt;&lt;li&gt;The Insurrectionist in the Flower Shop&lt;/li&gt;&lt;li&gt;Does the Jason Kander Story Have a Third Act?&lt;/li&gt;&lt;li&gt;Welcome to the Summer of Dancing and Darkness&lt;/li&gt;&lt;li&gt;The Most American Form of Architecture Isn’t Going Anywhere&lt;/li&gt;&lt;li&gt;Saïd Sayrafiezadeh on the Performance of Fiction&lt;/li&gt;&lt;li&gt;A Substitution&lt;/li&gt;&lt;li&gt;Beware the Luxury Beach Resort&lt;/li&gt;&lt;li&gt;Chris Hemsworth Finds His Villainous Niche&lt;/li&gt;&lt;li&gt;The Organization of Your Bookshelves Tells Its Own Story&lt;/li&gt;&lt;li&gt;Farewell to Hong Kong and Its Big Lie&lt;/li&gt;&lt;li&gt;China’s ‘Very Dangerous Trajectory’&lt;/li&gt;&lt;li&gt;Britain’s Unbridgeable Divide&lt;/li&gt;&lt;li&gt;Where Russia’s Declinist Rage Isn’t Enough&lt;/li&gt;&lt;li&gt;Google’s AI Is Something Even Stranger Than Conscious&lt;/li&gt;&lt;li&gt;Squirrels Could Make Monkeypox a Forever Problem&lt;/li&gt;&lt;li&gt;How the End of Roe Would Change Prenatal Care&lt;/li&gt;&lt;li&gt;A Mystery That Took 13,200 Years to Crack&lt;/li&gt;&lt;li&gt;How to Be a Good Person Without Annoying Everyone&lt;/li&gt;&lt;li&gt;Side Effects May Include … A Completely New Hair Color?&lt;/li&gt;&lt;li&gt;Beach Currents Don’t Have to Be This Deadly&lt;/li&gt;&lt;li&gt;What Trump Has Taken From Us&lt;/li&gt;&lt;li&gt;When the Punishment Doesn’t Fit the Joke&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;li&gt;Inflation vs. Recession: Eight Readers Choose&lt;/li&gt;&lt;/ul&gt;
-                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
-                </content>
-<updated>2022-06-24T23:04:33Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-06-24.mobi"/>
-</entry>
-<entry>
-<id>Vox</id>
-<title>Vox: 24 Jun, 2022</title>
-<summary>Vox: 24 Jun, 2022 published at 2022-06-24 21:50PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The end of Roe is only the beginning for Republicans&lt;/li&gt;&lt;li&gt;5 ways abortion bans could hurt women in the workforce&lt;/li&gt;&lt;li&gt;Roe is gone. What do Democrats do now?&lt;/li&gt;&lt;li&gt;How the Uvalde police failed&lt;/li&gt;&lt;li&gt;At least Clarence Thomas’s odious Dobbs concurrence was honest&lt;/li&gt;&lt;li&gt;Congress passes a landmark gun control package&lt;/li&gt;&lt;li&gt;The end of Roe v. Wade, explained&lt;/li&gt;&lt;li&gt;The Supreme Court overturned Roe. What happens next?&lt;/li&gt;&lt;li&gt;Blue states have been preparing to become abortion safe havens&lt;/li&gt;&lt;li&gt;What police could find out about your illegal abortion&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-06-24T21:50:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-06-24.mobi"/>
 </entry>
 <entry>
 <id>Economist</id>
