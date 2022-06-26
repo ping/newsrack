@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-06-26T19:13:58Z</updated>
+<updated>2022-06-26T23:16:32Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>Vox</id>
+<title>Vox: 26 Jun, 2022</title>
+<summary>Vox: 26 Jun, 2022 published at 2022-06-26 20:00PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;In 48 hours of protest, thousands of Americans cry out for abortion rights&lt;/li&gt;&lt;li&gt;What happens when the public loses faith in the Supreme Court?&lt;/li&gt;&lt;li&gt;It’s not just about abortion&lt;/li&gt;&lt;li&gt;Elvis and the trouble with musician biopics&lt;/li&gt;&lt;li&gt;6 things sex educators want you to know about a post-Roe America&lt;/li&gt;&lt;li&gt;Trigger laws and abortion restrictions, explained&lt;/li&gt;&lt;li&gt;District attorneys could be a last defense against abortion bans&lt;/li&gt;&lt;li&gt;Republicans are eyeing a nationwide abortion ban. Can they pull it off?&lt;/li&gt;&lt;li&gt;The economic case for abortion rights&lt;/li&gt;&lt;li&gt;The case against the Supreme Court of the United States&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-06-26T20:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-06-26.mobi"/>
+</entry>
 <entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 26 Jun, 2022</title>
@@ -21,21 +36,6 @@
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-06-26.mobi"/>
-</entry>
-<entry>
-<id>Vox</id>
-<title>Vox: 26 Jun, 2022</title>
-<summary>Vox: 26 Jun, 2022 published at 2022-06-26 15:01PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;What happens when the public loses faith in the Supreme Court?&lt;/li&gt;&lt;li&gt;It’s not just about abortion&lt;/li&gt;&lt;li&gt;Elvis and the trouble with musician biopics&lt;/li&gt;&lt;li&gt;6 things sex educators want you to know about a post-Roe America&lt;/li&gt;&lt;li&gt;Trigger laws and abortion restrictions, explained&lt;/li&gt;&lt;li&gt;District attorneys could be a last defense against abortion bans&lt;/li&gt;&lt;li&gt;Republicans are eyeing a nationwide abortion ban. Can they pull it off?&lt;/li&gt;&lt;li&gt;The economic case for abortion rights&lt;/li&gt;&lt;li&gt;The case against the Supreme Court of the United States&lt;/li&gt;&lt;li&gt;The end of Roe is only the beginning for Republicans&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-06-26T15:01:27Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-06-26.mobi"/>
 </entry>
 <entry>
 <id>Economist</id>
@@ -132,7 +132,7 @@
 <title>Nautilus: 22 Jun, 2022</title>
 <summary>Nautilus: 22 Jun, 2022 published at 2022-06-22 22:02PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;This Planetary Scientist Is Always Reaching for Something Big&lt;/li&gt;&lt;li&gt;Gravitational Waves Continue to Astound&lt;/li&gt;&lt;li&gt;Were It Not for Cosmic Good Fortune, We Wouldn’t Be Here&lt;/li&gt;&lt;li&gt;How Do We Get People Who Believe in Pseudoscience to Trust Science?&lt;/li&gt;&lt;li&gt;Mysteries Are to Be Embraced, But Also to Be Solved&lt;/li&gt;&lt;li&gt;Reshuffled Rivers Bolster the Amazon’s Hyper-Biodiversity&lt;/li&gt;&lt;li&gt;Who Are the Scientists Here?&lt;/li&gt;&lt;li&gt;The Race to Explore the Ocean’s Twilight Zone&lt;/li&gt;&lt;li&gt;The Oceans Are Teeming with Unknown Species&lt;/li&gt;&lt;li&gt;The Giraffe Neck Evolved for Sexual Combat&lt;/li&gt;&lt;li&gt;Life’s First Peptides May Have Grown on RNA Strands&lt;/li&gt;&lt;li&gt;You Eat a Credit Card’s Worth of Plastic Every Week&lt;/li&gt;&lt;li&gt;Unlocking Mom’s Brain&lt;/li&gt;&lt;li&gt;No Two Human Brains Are Alike&lt;/li&gt;&lt;li&gt;Portrait of the Human as a Young Hominin&lt;/li&gt;&lt;li&gt;Thinking Like a Scientist Will Make You Happier&lt;/li&gt;&lt;li&gt;What Is Time?&lt;/li&gt;&lt;li&gt;Don’t Give Up on Facts&lt;/li&gt;&lt;li&gt;Are You a Naïve Realist?&lt;/li&gt;&lt;li&gt;What Oceanographers Can Learn From Their Animal Colleagues&lt;/li&gt;&lt;li&gt;The Secrets of the Blind Salamander&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;This Planetary Scientist Is Always Reaching for Something Big&lt;/li&gt;&lt;li&gt;Gravitational Waves Continue to Astound&lt;/li&gt;&lt;li&gt;Were It Not for Cosmic Good Fortune, We Wouldn’t Be Here&lt;/li&gt;&lt;li&gt;How Do We Get People Who Believe in Pseudoscience to Trust Science?&lt;/li&gt;&lt;li&gt;Mysteries Are to Be Embraced, But Also to Be Solved&lt;/li&gt;&lt;li&gt;Reshuffled Rivers Bolster the Amazon’s Hyper-Biodiversity&lt;/li&gt;&lt;li&gt;Who Are the Scientists Here?&lt;/li&gt;&lt;li&gt;The Race to Explore the Ocean’s Twilight Zone&lt;/li&gt;&lt;li&gt;The Oceans Are Teeming with Unknown Species&lt;/li&gt;&lt;li&gt;The Giraffe Neck Evolved for Sexual Combat&lt;/li&gt;&lt;li&gt;Life’s First Peptides May Have Grown on RNA Strands&lt;/li&gt;&lt;li&gt;You Eat a Credit Card’s Worth of Plastic Every Week&lt;/li&gt;&lt;li&gt;Unlocking Mom’s Brain&lt;/li&gt;&lt;li&gt;No Two Human Brains Are Alike&lt;/li&gt;&lt;li&gt;Portrait of the Human as a Young Hominin&lt;/li&gt;&lt;li&gt;Thinking Like a Scientist Will Make You Happier&lt;/li&gt;&lt;li&gt;Don’t Give Up on Facts&lt;/li&gt;&lt;li&gt;Are You a Naïve Realist?&lt;/li&gt;&lt;li&gt;What Oceanographers Can Learn From Their Animal Colleagues&lt;/li&gt;&lt;li&gt;The Secrets of the Blind Salamander&lt;/li&gt;&lt;/ul&gt;
                 Nautilus is a different kind of science magazine. Our stories take you into the depths of science and spotlight its ripples in our lives and cultures. We believe any subject in science, no matter how complex, can be explained with clarity and vitality.
                 </content>
 <updated>2022-06-22T22:02:26Z</updated>
