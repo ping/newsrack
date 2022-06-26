@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-26T15:13:54Z</updated>
+<updated>2022-06-26T19:13:58Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>Asian Review of Books</id>
+<title>Asian Review of Books: 25 Jun, 2022</title>
+<summary>Asian Review of Books: 25 Jun, 2022 published at 2022-06-25 22:29PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;“The First World War Adventures of Nariman Karkaria”, translated Murali Ranganathan&lt;/li&gt;&lt;li&gt;“The King and the Consul: A British Tragedy in Old Siam” by Simon Landy&lt;/li&gt;&lt;li&gt;“Imagine a City: A Pilot Sees the World” by Mark Vanhoenacker&lt;/li&gt;&lt;li&gt;Podcast with Mick Conefrey, author of “Everest 1922: The Epic Story of the First Attempt on the World’s Highest Mountain”&lt;/li&gt;&lt;li&gt;New Book Announcement: “Kyoto Stories” by Steve Alpert&lt;/li&gt;&lt;li&gt;“The Kushnameh: The Persian Epic of Kush the Tusked” by Iranshah ibn Abu’l-Khayr&lt;/li&gt;&lt;li&gt;“Celia, Misoka, I” by Xue Yiwei&lt;/li&gt;&lt;li&gt;New Book Announcement: “China’s Millennial Digital Generation: Conversations with Balinghou (Post-1980s) Indie Filmmakers” by Karen Ma&lt;/li&gt;&lt;li&gt;Jacques Offenbach’s “Pomme d’Api” at the French May: a Gallery&lt;/li&gt;&lt;li&gt;“Beethoven in Beijing: Stories from the Philadelphia Orchestra’s Historic Journey to China” by Jennifer Lin&lt;/li&gt;&lt;/ul&gt;
+                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
+                </content>
+<updated>2022-06-25T22:29:33Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-25.mobi"/>
+</entry>
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 25 Jun, 2022</title>
@@ -51,20 +66,5 @@
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-06-24.mobi"/>
-</entry>
-<entry>
-<id>Asian Review of Books</id>
-<title>Asian Review of Books: 23 Jun, 2022</title>
-<summary>Asian Review of Books: 23 Jun, 2022 published at 2022-06-23 22:45PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;“Imagine a City: A Pilot Sees the World” by Mark Vanhoenacker&lt;/li&gt;&lt;li&gt;Podcast with Mick Conefrey, author of “Everest 1922: The Epic Story of the First Attempt on the World’s Highest Mountain”&lt;/li&gt;&lt;li&gt;New Book Announcement: “Kyoto Stories” by Steve Alpert&lt;/li&gt;&lt;li&gt;“The Kushnameh: The Persian Epic of Kush the Tusked” by Iranshah ibn Abu’l-Khayr&lt;/li&gt;&lt;li&gt;“Celia, Misoka, I” by Xue Yiwei&lt;/li&gt;&lt;li&gt;New Book Announcement: “China’s Millennial Digital Generation: Conversations with Balinghou (Post-1980s) Indie Filmmakers” by Karen Ma&lt;/li&gt;&lt;li&gt;Jacques Offenbach’s “Pomme d’Api” at the French May: a Gallery&lt;/li&gt;&lt;li&gt;“Beethoven in Beijing: Stories from the Philadelphia Orchestra’s Historic Journey to China” by Jennifer Lin&lt;/li&gt;&lt;li&gt;New Book Announcement: “Akira Kurosawa and Modern Japan” by David A Conrad&lt;/li&gt;&lt;li&gt;Podcast with James Uden and Daniel Majchrowicz about “Worlds of Knowledge in Women’s Travel Writing”&lt;/li&gt;&lt;/ul&gt;
-                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
-                </content>
-<updated>2022-06-23T22:45:47Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-23.mobi"/>
 </entry>
 </feed>
