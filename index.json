@@ -2,7 +2,7 @@
 "Asahi Shimbun": [
 {
 "filename": "asahi-shimbun-2022-06-27.mobi",
-"published": 1656300900.0
+"published": 1656312300.0
 }
 ],
 "Asian Review of Books": [
@@ -26,13 +26,13 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-06-27.mobi",
-"published": 1656302222.0
+"published": 1656312604.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-06-27.mobi",
-"published": 1656301689.0
+"published": 1656307865.0
 }
 ],
 "Economist": [
@@ -44,7 +44,7 @@
 "Financial Times": [
 {
 "filename": "ft-2022-06-27.mobi",
-"published": 1656302457.0
+"published": 1656308608.0
 }
 ],
 "Five Books": [
@@ -56,19 +56,19 @@
 "Guardian": [
 {
 "filename": "guardian-2022-06-27.mobi",
-"published": 1656301331.0
+"published": 1656312305.0
 }
 ],
 "JoongAng Daily": [
 {
 "filename": "joongang-daily-2022-06-27.mobi",
-"published": 1656298664.0
+"published": 1656312028.0
 }
 ],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-06-27.mobi",
-"published": 1656300671.0
+"published": 1656313703.0
 }
 ],
 "London Review of Books": [
@@ -98,19 +98,19 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-06-27.mobi",
-"published": 1656300650.0
+"published": 1656313788.0
 }
 ],
 "NY Times (Print)": [
 {
-"filename": "nytimes-print-2022-06-26.mobi",
-"published": 1656201600.0
+"filename": "nytimes-print-2022-06-27.mobi",
+"published": 1656288000.0
 }
 ],
 "NY Times Books": [
 {
-"filename": "nytimes-books-2022-06-25.mobi",
-"published": 1656119676.0
+"filename": "nytimes-books-2022-06-26.mobi",
+"published": 1656234011.0
 }
 ],
 "Poetry": [
@@ -121,8 +121,8 @@
 ],
 "POLITICO Magazine": [
 {
-"filename": "politico-magazine-2022-06-25.mobi",
-"published": 1656181398.0
+"filename": "politico-magazine-2022-06-26.mobi",
+"published": 1656241200.0
 }
 ],
 "Scientific American": [
@@ -134,13 +134,13 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-06-27.mobi",
-"published": 1656300287.0
+"published": 1656310977.0
 }
 ],
 "The Sydney Morning Herald": [
 {
 "filename": "sydney-morning-herald-2022-06-27.mobi",
-"published": 1656303102.0
+"published": 1656314079.0
 }
 ],
 "Taipei Times": [
@@ -170,7 +170,7 @@
 "Washington Post": [
 {
 "filename": "wapo-2022-06-27.mobi",
-"published": 1656302722.0
+"published": 1656314380.0
 }
 ],
 "Wired Magazine": [
@@ -179,5 +179,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1656303519
+"_generated": 1656314570
 }
