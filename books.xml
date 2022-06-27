@@ -2,35 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-27T19:21:53Z</updated>
+<updated>2022-06-27T23:19:27Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
-<id>NY Times Books</id>
-<title>NY Times Books: 27 Jun, 2022</title>
-<summary>NY Times Books: 27 Jun, 2022 published at 2022-06-27 16:34PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;10 Books on Abortion to Understand the Roe v. Wade Ruling&lt;/li&gt;&lt;li&gt;Review: ‘Life Ceremony,’ by Sayaka Murata&lt;/li&gt;&lt;li&gt;Blitz Bazawule Is Building Bridges Between Worlds&lt;/li&gt;&lt;li&gt;Review: “Girls They Write Songs About,” by Carlene Bauer&lt;/li&gt;&lt;li&gt;Review: ‘In the Houses of Their Dead,’ by Terry Alford&lt;/li&gt;&lt;li&gt;Three New Romance Novels to Read&lt;/li&gt;&lt;li&gt;Review: ‘Angel of Rome: And Other Stories,’ by Jess Walter&lt;/li&gt;&lt;li&gt;Sensing the World Anew Through Other Species&lt;/li&gt;&lt;li&gt;Baxter Black, Who Elevated Cowboy Poetry to Folk Art, Dies at 77&lt;/li&gt;&lt;li&gt;Review: ‘Little Rabbit,’ by Alyssa Songsiridej; ‘One’s Company,’ by Ashley Hutson; ‘Last Summer on State Street,’ by Toya Wolfe&lt;/li&gt;&lt;li&gt;New Crime Fiction&lt;/li&gt;&lt;li&gt;Review: ‘Flint Is Family in Three Acts,’ by LaToya Ruby Frazier&lt;/li&gt;&lt;li&gt;Review: ‘Droll Tales,’ by Iris Smyles; ‘A Blind Corner,’ by Caitlin Macy; ‘Sleeping Alone,’ by Ru Freeman; ‘Fruiting Bodies,’ by Kathryn Harlan&lt;/li&gt;&lt;li&gt;New in Paperback: ‘Let the Record Show’ and ‘Hell of a Book’&lt;/li&gt;&lt;li&gt;“Two Dogs” by Ian Falconer&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;‘Lessons in Survival: 1971’ Review: The Past Echoes in the Present&lt;/li&gt;&lt;li&gt;Inside the Push to Diversify the Book Business&lt;/li&gt;&lt;li&gt;Patrick Radden Keefe Has One Big Rule for His Reading Time&lt;/li&gt;&lt;li&gt;Lidia Yuknavitch Writes to Break With the ‘Tyranny’ of the Past&lt;/li&gt;&lt;li&gt;At 10, ‘Dragons Love Tacos’ is Still Flying Off Shelves&lt;/li&gt;&lt;li&gt;Poem: ‘love &amp; the memory of it’&lt;/li&gt;&lt;li&gt;Book Review: “The Brain in Search of Itself,” by Benjamin Ehrlich&lt;/li&gt;&lt;li&gt;The 25 Most Significant New York City Novels From the Last 100 Years&lt;/li&gt;&lt;li&gt;Review: “Resistance: The Underground War Against Hitler, 1939-1945,” by Halik Kochanski&lt;/li&gt;&lt;/ul&gt;
-                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
-                </content>
-<updated>2022-06-27T16:34:15Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-06-27.mobi"/>
-</entry>
-<entry>
 <id>Asian Review of Books</id>
 <title>Asian Review of Books: 27 Jun, 2022</title>
-<summary>Asian Review of Books: 27 Jun, 2022 published at 2022-06-27 00:36AM.</summary>
+<summary>Asian Review of Books: 27 Jun, 2022 published at 2022-06-27 22:32PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;New Book Announcement: “La plata y el Pacífico: China, Hispanoamérica y el nacimiento de la globalización, 1565-1815” by Peter Gordon and Juan José Morales&lt;/li&gt;&lt;li&gt;“The First World War Adventures of Nariman Karkaria”, translated Murali Ranganathan&lt;/li&gt;&lt;li&gt;“The King and the Consul: A British Tragedy in Old Siam” by Simon Landy&lt;/li&gt;&lt;li&gt;“Imagine a City: A Pilot Sees the World” by Mark Vanhoenacker&lt;/li&gt;&lt;li&gt;Podcast with Mick Conefrey, author of “Everest 1922: The Epic Story of the First Attempt on the World’s Highest Mountain”&lt;/li&gt;&lt;li&gt;New Book Announcement: “Kyoto Stories” by Steve Alpert&lt;/li&gt;&lt;li&gt;“The Kushnameh: The Persian Epic of Kush the Tusked” by Iranshah ibn Abu’l-Khayr&lt;/li&gt;&lt;li&gt;“Celia, Misoka, I” by Xue Yiwei&lt;/li&gt;&lt;li&gt;New Book Announcement: “China’s Millennial Digital Generation: Conversations with Balinghou (Post-1980s) Indie Filmmakers” by Karen Ma&lt;/li&gt;&lt;li&gt;Jacques Offenbach’s “Pomme d’Api” at the French May: a Gallery&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;“Nomads: The Wanderers Who Shaped Our World” by Anthony Sattin&lt;/li&gt;&lt;li&gt;New Book Announcement: “La plata y el Pacífico: China, Hispanoamérica y el nacimiento de la globalización, 1565-1815” by Peter Gordon and Juan José Morales&lt;/li&gt;&lt;li&gt;“The First World War Adventures of Nariman Karkaria”, translated Murali Ranganathan&lt;/li&gt;&lt;li&gt;“The King and the Consul: A British Tragedy in Old Siam” by Simon Landy&lt;/li&gt;&lt;li&gt;“Imagine a City: A Pilot Sees the World” by Mark Vanhoenacker&lt;/li&gt;&lt;li&gt;Podcast with Mick Conefrey, author of “Everest 1922: The Epic Story of the First Attempt on the World’s Highest Mountain”&lt;/li&gt;&lt;li&gt;New Book Announcement: “Kyoto Stories” by Steve Alpert&lt;/li&gt;&lt;li&gt;“The Kushnameh: The Persian Epic of Kush the Tusked” by Iranshah ibn Abu’l-Khayr&lt;/li&gt;&lt;li&gt;“Celia, Misoka, I” by Xue Yiwei&lt;/li&gt;&lt;li&gt;New Book Announcement: “China’s Millennial Digital Generation: Conversations with Balinghou (Post-1980s) Indie Filmmakers” by Karen Ma&lt;/li&gt;&lt;/ul&gt;
                 In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
                 </content>
-<updated>2022-06-27T00:36:44Z</updated>
+<updated>2022-06-27T22:32:17Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
@@ -40,17 +25,32 @@
 <entry>
 <id>Five Books</id>
 <title>Five Books: 27 Jun, 2022</title>
-<summary>Five Books: 27 Jun, 2022 published at 2022-06-27 00:00AM.</summary>
+<summary>Five Books: 27 Jun, 2022 published at 2022-06-27 21:31PM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Evan Lieberman on African Politics Books&lt;/li&gt;&lt;li&gt;Frank Wynne on The Best of World Literature: The 2022 International Booker Prize Shortlist&lt;/li&gt;&lt;li&gt;Myisha Cherry on Anger at Racial Injustice Books&lt;/li&gt;&lt;li&gt;Darren Collins on The Best Finance Books for Teens and Young Adults&lt;/li&gt;&lt;li&gt;Elizabeth Laird on The Best Historical Fiction: The 2022 Walter Scott Prize Shortlist&lt;/li&gt;&lt;li&gt;David George Haskell on Natural History Books&lt;/li&gt;&lt;li&gt;Gary Gerstle on Neoliberalism Books&lt;/li&gt;&lt;li&gt;Helen Scales on The Best Ocean Novels for 10-14 Year Olds&lt;/li&gt;&lt;li&gt;Jan Loeys on Market Concentration Books&lt;/li&gt;&lt;li&gt;Rosa Rankin-Gee on The Best Near-Future Dystopias&lt;/li&gt;&lt;li&gt;Cal Flyn on The Notable Novels of Summer 2022&lt;/li&gt;&lt;li&gt;Benno Gammerl on Queer History Books&lt;/li&gt;&lt;li&gt;Matthew Brookes &amp; Zack Raffin on Wanderlust Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Spring 2022&lt;/li&gt;&lt;li&gt;Alison King on Best Verse Novels for 8-12 Year Olds&lt;/li&gt;&lt;li&gt;Sue Rainsford on Literary Horror Books&lt;/li&gt;&lt;li&gt;Carole Hillenbrand on The Best History Books: the 2022 Wolfson Prize Shortlist&lt;/li&gt;&lt;li&gt;Mark Webber on NATO Books&lt;/li&gt;&lt;li&gt;Wajahat Ali on The Best South Asian American Novels&lt;/li&gt;&lt;li&gt;Chris Power on The Best Literary Thrillers&lt;/li&gt;&lt;li&gt;Michele Cobb on The Best Audiobooks: the 2022 Audie Awards&lt;/li&gt;&lt;li&gt;Serhii Plokhy on Ukraine and Russia Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Early 2022&lt;/li&gt;&lt;li&gt;Cal Flyn on Notable Novels of Spring 2022&lt;/li&gt;&lt;li&gt;Nigel Warburton on The Best Philosophy Books of 2021&lt;/li&gt;&lt;li&gt;Jeffrey Archer on The Best Detective Fiction&lt;/li&gt;&lt;li&gt;Marion Turner on Best Medieval Historical Fiction&lt;/li&gt;&lt;li&gt;Tanya Selvaratnam on Domestic Violence Books&lt;/li&gt;&lt;/ul&gt;
                 Expert book recommendations
                 </content>
-<updated>2022-06-27T00:00:00Z</updated>
+<updated>2022-06-27T21:31:14Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-06-27.mobi"/>
+</entry>
+<entry>
+<id>NY Times Books</id>
+<title>NY Times Books: 27 Jun, 2022</title>
+<summary>NY Times Books: 27 Jun, 2022 published at 2022-06-27 21:24PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;At 10, ‘Dragons Love Tacos’ is Still Flying Off Shelves&lt;/li&gt;&lt;li&gt;10 Books on Abortion to Understand the Roe v. Wade Ruling&lt;/li&gt;&lt;li&gt;Review: ‘Life Ceremony,’ by Sayaka Murata&lt;/li&gt;&lt;li&gt;Blitz Bazawule Is Building Bridges Between Worlds&lt;/li&gt;&lt;li&gt;Review: “Girls They Write Songs About,” by Carlene Bauer&lt;/li&gt;&lt;li&gt;Review: ‘In the Houses of Their Dead,’ by Terry Alford&lt;/li&gt;&lt;li&gt;Three New Romance Novels to Read&lt;/li&gt;&lt;li&gt;Review: ‘Angel of Rome: And Other Stories,’ by Jess Walter&lt;/li&gt;&lt;li&gt;Sensing the World Anew Through Other Species&lt;/li&gt;&lt;li&gt;Baxter Black, Who Elevated Cowboy Poetry to Folk Art, Dies at 77&lt;/li&gt;&lt;li&gt;Review: ‘Little Rabbit,’ by Alyssa Songsiridej; ‘One’s Company,’ by Ashley Hutson; ‘Last Summer on State Street,’ by Toya Wolfe&lt;/li&gt;&lt;li&gt;New Crime Fiction&lt;/li&gt;&lt;li&gt;Review: ‘Flint Is Family in Three Acts,’ by LaToya Ruby Frazier&lt;/li&gt;&lt;li&gt;Review: ‘Droll Tales,’ by Iris Smyles; ‘A Blind Corner,’ by Caitlin Macy; ‘Sleeping Alone,’ by Ru Freeman; ‘Fruiting Bodies,’ by Kathryn Harlan&lt;/li&gt;&lt;li&gt;New in Paperback: ‘Let the Record Show’ and ‘Hell of a Book’&lt;/li&gt;&lt;li&gt;“Two Dogs” by Ian Falconer&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;‘Lessons in Survival: 1971’ Review: The Past Echoes in the Present&lt;/li&gt;&lt;li&gt;Inside the Push to Diversify the Book Business&lt;/li&gt;&lt;li&gt;Patrick Radden Keefe Has One Big Rule for His Reading Time&lt;/li&gt;&lt;li&gt;Lidia Yuknavitch Writes to Break With the ‘Tyranny’ of the Past&lt;/li&gt;&lt;li&gt;Poem: ‘love &amp; the memory of it’&lt;/li&gt;&lt;li&gt;Book Review: “The Brain in Search of Itself,” by Benjamin Ehrlich&lt;/li&gt;&lt;li&gt;The 25 Most Significant New York City Novels From the Last 100 Years&lt;/li&gt;&lt;li&gt;Review: “Resistance: The Underground War Against Hitler, 1939-1945,” by Halik Kochanski&lt;/li&gt;&lt;/ul&gt;
+                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
+                </content>
+<updated>2022-06-27T21:24:38Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-06-27.mobi"/>
 </entry>
 <entry>
 <id>London Review of Books</id>
