@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-27T23:19:27Z</updated>
+<updated>2022-06-28T02:26:42Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -21,6 +21,7 @@
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-27.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-06-27.epub"/>
 </entry>
 <entry>
 <id>Five Books</id>
@@ -36,6 +37,7 @@
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-06-27.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="fivebooks-2022-06-27.epub"/>
 </entry>
 <entry>
 <id>NY Times Books</id>
@@ -51,6 +53,7 @@
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-06-27.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-06-27.epub"/>
 </entry>
 <entry>
 <id>London Review of Books</id>
@@ -66,5 +69,6 @@
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-06-24.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-06-24.epub"/>
 </entry>
 </feed>
