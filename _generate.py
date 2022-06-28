@@ -468,7 +468,7 @@ for category, publications in sorted(generated.items(), key=sort_category_key):
                 f'<div class="book"><a href="{book.rename_to}">{os.path.splitext(book.file)[1]}<span class="file-size">{humanize.naturalsize(file_size).replace(" ", "")}</span></a></div>'
             )
         publication_listing.append(
-            f"""<li>{books[0].title or recipe_name}{" ".join(book_links)}
+            f"""<li><span class="title">{books[0].title or recipe_name}</span>{" ".join(book_links)}
             <span class="pub-date" data-pub-date="{int(books[0].published_dt.timestamp() * 1000)}">
                 Published at {books[0].published_dt:%Y-%m-%d %-I:%M%p %z}
             </span>
