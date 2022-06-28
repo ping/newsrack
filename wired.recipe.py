@@ -63,7 +63,7 @@ class WiredMagazine(BasicNewsRecipe):
     """
 
     keep_only_tags = [
-        classes("content-header lead-asset article__body"),
+        classes("article__content-header content-header lead-asset article__body"),
     ]
     remove_tags = [
         classes(

@@ -54,7 +54,7 @@ class NewYorkTimesPrint(BasicNewsRecipe):
             ]
         ),
         dict(role=["toolbar", "navigation", "contentinfo"]),
-        dict(name=["script", "noscript", "style", "button"]),
+        dict(name=["script", "noscript", "style", "button", "svg"]),
     ]
 
     extra_css = """
