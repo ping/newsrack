@@ -15,3 +15,9 @@ body {
       margin-right: 1rem;
   }
 }
+
+@media (max-width: 576px) {
+  ol.books li span.title {
+    display: block;
+  }
+}
