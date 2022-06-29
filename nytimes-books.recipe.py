@@ -179,52 +179,12 @@ class NYTimesBooks(BasicNewsRecipe):
                             authors.append(creator["displayName"])
                     pub_dt_ele = new_soup.find("span", class_="author")
                     pub_dt_ele.string = ", ".join(authors)
-            elif content_type in ["Heading1Block", "Heading2Block", "Heading3Block"]:
-                if content_type == "Heading1Block":
-                    container_tag = "h1"
-                elif content_type == "Heading2Block":
-                    container_tag = "h2"
-                else:
-                    container_tag = "h3"
-                container_ele = new_soup.new_tag(container_tag)
-                for x in c["content"]:
-                    if x["__typename"] == "TextInline":
-                        container_ele.append(
-                            x.get("text", "") or x.get("text@stripHtml", "")
-                        )
-                new_soup.body.article.append(container_ele)
-            elif content_type == "ListBlock":
-
-                if c["style"] == "UNORDERED":
-                    container_ele = new_soup.new_tag("ul")
-                else:
-                    container_ele = new_soup.new_tag("ol")
-                for x in c["content"]:
-                    li_ele = new_soup.new_tag("li")
-                    for y in x["content"]:
-                        if y["__typename"] == "ParagraphBlock":
-                            para_ele = new_soup.new_tag("p")
-                            for z in y.get("content", []):
-                                para_ele.append(z.get("text", ""))
-                            li_ele.append(para_ele)
-                    container_ele.append(li_ele)
-                new_soup.body.article.append(container_ele)
             elif content_type in ["ParagraphBlock", "DetailBlock"]:
                 para_ele = new_soup.new_tag("p")
                 para_ele.string = ""
                 for cc in c.get("content", []):
                     para_ele.string += cc.get("text", "")
                 new_soup.body.article.append(para_ele)
-            elif content_type == "BlockquoteBlock":
-                container_ele = new_soup.new_tag("blockquote")
-                for x in c["content"]:
-                    if x["__typename"] == "ParagraphBlock":
-                        para_ele = new_soup.new_tag("p")
-                        para_ele.string = ""
-                        for xx in x.get("content", []):
-                            para_ele.string += xx.get("text", "")
-                        container_ele.append(para_ele)
-                new_soup.body.article.append(container_ele)
             elif content_type == "ImageBlock":
                 image_block = c["media"]
                 container_ele = new_soup.new_tag("div", attrs={"class": "article-img"})
@@ -271,6 +231,72 @@ class NYTimesBooks(BasicNewsRecipe):
                     span_ele.append(BeautifulSoup(caption))
                     container_ele.append(span_ele)
                 new_soup.body.article.append(container_ele)
+            elif content_type == "DetailBlock":
+                container_ele = new_soup.new_tag("div", attrs={"class": "detail"})
+                for d in c["content"]:
+                    if d["__typename"] == "LineBreakInline":
+                        container_ele.append(new_soup.new_tag("br"))
+                    elif d["__typename"] == "TextInline":
+                        container_ele.append(d["text"])
+                new_soup.body.article.append(container_ele)
+            elif content_type == "BlockquoteBlock":
+                container_ele = new_soup.new_tag("blockquote")
+                for x in c["content"]:
+                    if x["__typename"] == "ParagraphBlock":
+                        para_ele = new_soup.new_tag("p")
+                        para_ele.string = ""
+                        for xx in x.get("content", []):
+                            para_ele.string += xx.get("text", "")
+                        container_ele.append(para_ele)
+                new_soup.body.article.append(container_ele)
+            elif content_type in ["Heading1Block", "Heading2Block", "Heading3Block"]:
+                if content_type == "Heading1Block":
+                    container_tag = "h1"
+                elif content_type == "Heading2Block":
+                    container_tag = "h2"
+                else:
+                    container_tag = "h3"
+                container_ele = new_soup.new_tag(container_tag)
+                for x in c["content"]:
+                    if x["__typename"] == "TextInline":
+                        container_ele.append(
+                            x.get("text", "") or x.get("text@stripHtml", "")
+                        )
+                new_soup.body.article.append(container_ele)
+            elif content_type == "ListBlock":
+                if c["style"] == "UNORDERED":
+                    container_ele = new_soup.new_tag("ul")
+                else:
+                    container_ele = new_soup.new_tag("ol")
+                for x in c["content"]:
+                    li_ele = new_soup.new_tag("li")
+                    for y in x["content"]:
+                        if y["__typename"] == "ParagraphBlock":
+                            para_ele = new_soup.new_tag("p")
+                            for z in y.get("content", []):
+                                para_ele.append(z.get("text", ""))
+                            li_ele.append(para_ele)
+                    container_ele.append(li_ele)
+                new_soup.body.article.append(container_ele)
+            elif content_type == "PullquoteBlock":
+                container_ele = new_soup.new_tag("blockquote")
+                for x in c["quote"]:
+                    if x["__typename"] == "TextInline":
+                        container_ele.append(x["text"])
+                    if x["__typename"] == "ParagraphBlock":
+                        para_ele = new_soup.new_tag("p")
+                        for z in x.get("content", []):
+                            para_ele.append(z.get("text", ""))
+                        container_ele.append(para_ele)
+                new_soup.body.article.append(container_ele)
+            elif content_type == "VideoBlock":
+                container_ele = new_soup.new_tag("div", attrs={"class": "embed"})
+                container_ele.string = "[Embedded video available]"
+                new_soup.body.article.append(container_ele)
+            elif content_type == "AudioBlock":
+                container_ele = new_soup.new_tag("div", attrs={"class": "embed"})
+                container_ele.string = "[Embedded audio available]"
+                new_soup.body.article.append(container_ele)
             elif content_type == "BylineBlock":
                 # For podcasts? - TBD
                 pass
@@ -309,14 +335,6 @@ class NYTimesBooks(BasicNewsRecipe):
                     "time", attrs={"data-timestamp": timestamp_val}
                 )
                 container_ele.append(timestamp_val)
-                new_soup.body.article.append(container_ele)
-            elif content_type == "VideoBlock":
-                container_ele = new_soup.new_tag("div", attrs={"class": "embed"})
-                container_ele.string = "[Embedded video available]"
-                new_soup.body.article.append(container_ele)
-            elif content_type == "AudioBlock":
-                container_ele = new_soup.new_tag("div", attrs={"class": "embed"})
-                container_ele.string = "[Embedded audio available]"
                 new_soup.body.article.append(container_ele)
             elif content_type == "RuleBlock":
                 new_soup.body.article.append(new_soup.new_tag("hr"))
