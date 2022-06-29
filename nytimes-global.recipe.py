@@ -1,7 +1,7 @@
 """
 nytimes.com
 """
-from datetime import datetime
+import datetime
 import re
 import json
 
@@ -129,21 +129,249 @@ class NYTimesGlobal(BasicNewsRecipe):
     def publication_date(self):
         return self.pub_date
 
-    def preprocess_raw_html(self, raw_html, url):
-        info = None
-        soup = BeautifulSoup(raw_html)
+    def preprocess_initial_data(self, info, raw_html, url):
 
-        for script in soup.find_all("script"):
-            if not script.text.strip().startswith("window.__preloadedData"):
+        article = (info.get("initialData", {}) or {}).get("data", {}).get("article")
+
+        if not (info and article):
+            # Sometimes the page does not have article content in the <script>
+            # particularly in the Sports section, so we fallback to
+            # raw_html and rely on remove_tags to clean it up
+            self.log.warning(f"Unable to find article from script in {url}")
+            return raw_html
+
+        body = article.get("sprinkledBody") or article.get("body")
+        html_output = f"""<html><head><title></title></head>
+        <body>
+            <article>
+            <h1 class="headline"></h1>
+            <div class="sub-headline"></div>
+            <div class="article-meta">
+                <span class="author"></span>
+                <span class="published-dt"></span>
+            </div>
+            </article>
+        </body></html>
+        """
+        new_soup = BeautifulSoup(html_output, "html.parser")
+        for c in body.get("content", []):
+            content_type = c["__typename"]
+            if content_type in [
+                "Dropzone",
+                "RelatedLinksBlock",
+                "EmailSignupBlock",
+                "CapsuleBlock",  # ???
+                "InteractiveBlock",
+                "RelatedLinksBlock",
+                "UnstructuredBlock",
+            ]:
                 continue
-            article_js = re.sub(
-                r"window.__preloadedData\s*=\s*", "", script.text.strip()
-            )
-            if article_js.endswith(";"):
-                article_js = article_js[:-1]
-            article_js = article_js.replace(":undefined", ":null")
-            info = json.loads(article_js)
-            break
+            if content_type in [
+                "HeaderBasicBlock",
+                "HeaderFullBleedVerticalBlock",
+                "HeaderFullBleedHorizontalBlock",
+                "HeaderMultimediaBlock",
+                "HeaderLegacyBlock",
+            ]:
+                # Article Header / Meta
+                if c.get("headline"):
+                    headline = c["headline"]
+                    heading_text = ""
+                    if headline.get("default@stripHtml"):
+                        heading_text += headline["default@stripHtml"]
+                    else:
+                        for x in headline.get("content", []):
+                            heading_text += x.get("text@stripHtml", "") or x.get(
+                                "text", ""
+                            )
+                    new_soup.head.title.string = heading_text
+                    new_soup.body.article.h1.string = heading_text
+                if c.get("summary"):
+                    summary_text = ""
+                    for x in c["summary"].get("content", []):
+                        summary_text += x.get("text", "") or x.get("", "text@stripHtml")
+                    subheadline = new_soup.find("div", class_="sub-headline")
+                    subheadline.string = summary_text
+                if c.get("timestampBlock"):
+                    # Example 2022-04-12T09:00:05.000Z
+                    post_date = datetime.datetime.strptime(
+                        c["timestampBlock"]["timestamp"],
+                        "%Y-%m-%dT%H:%M:%S.%fZ",
+                    )
+                    pub_dt_ele = new_soup.find("span", class_="published-dt")
+                    pub_dt_ele.string = f"{post_date:%-d %B, %Y}"
+                if c.get("ledeMedia"):
+                    image_block = c["ledeMedia"]["media"]
+                    container_ele = new_soup.new_tag(
+                        "div", attrs={"class": "article-img"}
+                    )
+                    if "crops" not in image_block:
+                        # not an image leded
+                        continue
+                    img_url = image_block["crops"][0]["renditions"][0]["url"]
+                    img_ele = new_soup.new_tag("img")
+                    img_ele["src"] = img_url
+                    container_ele.append(img_ele)
+                    if image_block.get("legacyHtmlCaption"):
+                        span_ele = new_soup.new_tag("span", attrs={"class": "caption"})
+                        span_ele.append(BeautifulSoup(image_block["legacyHtmlCaption"]))
+                        container_ele.append(span_ele)
+                    new_soup.body.article.append(container_ele)
+                if c.get("byline"):
+                    authors = []
+                    for b in c["byline"]["bylines"]:
+                        for creator in b["creators"]:
+                            authors.append(creator["displayName"])
+                    pub_dt_ele = new_soup.find("span", class_="author")
+                    pub_dt_ele.string = ", ".join(authors)
+            elif content_type in ["Heading1Block", "Heading2Block", "Heading3Block"]:
+                if content_type == "Heading1Block":
+                    container_tag = "h1"
+                elif content_type == "Heading2Block":
+                    container_tag = "h2"
+                else:
+                    container_tag = "h3"
+                container_ele = new_soup.new_tag(container_tag)
+                for x in c["content"]:
+                    if x["__typename"] == "TextInline":
+                        container_ele.append(
+                            x.get("text", "") or x.get("text@stripHtml", "")
+                        )
+                new_soup.body.article.append(container_ele)
+            elif content_type == "ListBlock":
+
+                if c["style"] == "UNORDERED":
+                    container_ele = new_soup.new_tag("ul")
+                else:
+                    container_ele = new_soup.new_tag("ol")
+                for x in c["content"]:
+                    li_ele = new_soup.new_tag("li")
+                    for y in x["content"]:
+                        if y["__typename"] == "ParagraphBlock":
+                            para_ele = new_soup.new_tag("p")
+                            for z in y.get("content", []):
+                                para_ele.append(z.get("text", ""))
+                            li_ele.append(para_ele)
+                    container_ele.append(li_ele)
+                new_soup.body.article.append(container_ele)
+            elif content_type in ["ParagraphBlock", "DetailBlock"]:
+                para_ele = new_soup.new_tag("p")
+                para_ele.string = ""
+                for cc in c.get("content", []):
+                    para_ele.string += cc.get("text", "")
+                new_soup.body.article.append(para_ele)
+            elif content_type == "BlockquoteBlock":
+                container_ele = new_soup.new_tag("blockquote")
+                for x in c["content"]:
+                    if x["__typename"] == "ParagraphBlock":
+                        para_ele = new_soup.new_tag("p")
+                        para_ele.string = ""
+                        for xx in x.get("content", []):
+                            para_ele.string += xx.get("text", "")
+                        container_ele.append(para_ele)
+                new_soup.body.article.append(container_ele)
+            elif content_type == "ImageBlock":
+                image_block = c["media"]
+                container_ele = new_soup.new_tag("div", attrs={"class": "article-img"})
+                img_url = image_block["crops"][0]["renditions"][0]["url"]
+                img_ele = new_soup.new_tag("img")
+                img_ele["src"] = img_url
+                container_ele.append(img_ele)
+                if image_block.get("legacyHtmlCaption"):
+                    span_ele = new_soup.new_tag("span", attrs={"class": "caption"})
+                    span_ele.append(BeautifulSoup(image_block["legacyHtmlCaption"]))
+                    container_ele.append(span_ele)
+                new_soup.body.article.append(container_ele)
+            elif content_type == "DiptychBlock":
+                # 2-image block
+                image_blocks = [c["imageOne"], c["imageTwo"]]
+                for image_block in image_blocks:
+                    container_ele = new_soup.new_tag(
+                        "div", attrs={"class": "article-img"}
+                    )
+                    for v in image_block.get("crops", []):
+                        img_url = v["renditions"][0]["url"]
+                        img_ele = new_soup.new_tag("img")
+                        img_ele["src"] = img_url
+                        container_ele.append(img_ele)
+                        break
+                    if image_block.get("legacyHtmlCaption"):
+                        span_ele = new_soup.new_tag("span", attrs={"class": "caption"})
+                        span_ele.append(BeautifulSoup(image_block["legacyHtmlCaption"]))
+                        container_ele.append(span_ele)
+                    new_soup.body.article.append(container_ele)
+            elif content_type == "GridBlock":
+                # n-image block
+                container_ele = new_soup.new_tag("div", attrs={"class": "article-img"})
+                for image_block in c.get("gridMedia", []):
+                    for v in image_block.get("crops", []):
+                        img_url = v["renditions"][0]["url"]
+                        img_ele = new_soup.new_tag("img")
+                        img_ele["src"] = img_url
+                        container_ele.append(img_ele)
+                        break
+                caption = f'{c.get("caption", "")} {c.get("credit", "")}'.strip()
+                if caption:
+                    span_ele = new_soup.new_tag("span", attrs={"class": "caption"})
+                    span_ele.append(BeautifulSoup(caption))
+                    container_ele.append(span_ele)
+                new_soup.body.article.append(container_ele)
+            elif content_type == "BylineBlock":
+                # For podcasts? - TBD
+                pass
+            elif content_type == "YouTubeEmbedBlock":
+                container_ele = new_soup.new_tag("div", attrs={"class": "embed"})
+                yt_link = f'https://www.youtube.com/watch?v={c["youTubeId"]}'
+                a_ele = new_soup.new_tag("a", href=yt_link)
+                a_ele.string = yt_link
+                container_ele.append(a_ele)
+                new_soup.body.article.append(container_ele)
+            elif content_type == "TwitterEmbedBlock":
+                container_ele = new_soup.new_tag("div", attrs={"class": "embed"})
+                container_ele.append(BeautifulSoup(c["html"]))
+                new_soup.body.article.append(container_ele)
+            elif content_type == "InstagramEmbedBlock":
+                container_ele = new_soup.new_tag("div", attrs={"class": "embed"})
+                a_ele = new_soup.new_tag("a", href=c["instagramUrl"])
+                a_ele.string = c["instagramUrl"]
+                container_ele.append(a_ele)
+                new_soup.body.article.append(container_ele)
+            elif content_type == "LabelBlock":
+                container_ele = new_soup.new_tag("h4", attrs={"class": "label"})
+                for x in c["content"]:
+                    if x["__typename"] == "TextInline":
+                        container_ele.append(x["text"])
+                new_soup.body.article.append(container_ele)
+            elif content_type == "SummaryBlock":
+                container_ele = new_soup.new_tag("div", attrs={"class": "summary"})
+                for x in c["content"]:
+                    if x["__typename"] == "TextInline":
+                        container_ele.append(x["text"])
+                new_soup.body.article.append(container_ele)
+            elif content_type == "TimestampBlock":
+                timestamp_val = c["timestamp"]
+                container_ele = new_soup.new_tag(
+                    "time", attrs={"data-timestamp": timestamp_val}
+                )
+                container_ele.append(timestamp_val)
+                new_soup.body.article.append(container_ele)
+            elif content_type == "VideoBlock":
+                container_ele = new_soup.new_tag("div", attrs={"class": "embed"})
+                container_ele.string = "[Embedded video available]"
+                new_soup.body.article.append(container_ele)
+            elif content_type == "AudioBlock":
+                container_ele = new_soup.new_tag("div", attrs={"class": "embed"})
+                container_ele.string = "[Embedded audio available]"
+                new_soup.body.article.append(container_ele)
+            elif content_type == "RuleBlock":
+                new_soup.body.article.append(new_soup.new_tag("hr"))
+            else:
+                self.log.warning(f"{url} has unexpected element: {content_type}")
+                self.log.debug(json.dumps(c))
+
+        return str(new_soup)
+
+    def preprocess_initial_state(self, info, raw_html, url):
 
         if not (info and info.get("initialState")):
             # Sometimes the page does not have article content in the <script>
@@ -242,7 +470,7 @@ class NYTimesGlobal(BasicNewsRecipe):
                     subheadline.string = summary_text
                 if header_block.get("timestampBlock"):
                     # Example 2022-04-12T09:00:05.000Z
-                    post_date = datetime.strptime(
+                    post_date = datetime.datetime.strptime(
                         content_service[header_block["timestampBlock"]["id"]][
                             "timestamp"
                         ],
@@ -481,3 +709,29 @@ class NYTimesGlobal(BasicNewsRecipe):
                 self.log.debug(json.dumps(content_service[c["id"]]))
 
         return str(new_soup)
+
+    def preprocess_raw_html(self, raw_html, url):
+        info = None
+        soup = BeautifulSoup(raw_html)
+
+        for script in soup.find_all("script"):
+            if not script.text.strip().startswith("window.__preloadedData"):
+                continue
+            article_js = re.sub(
+                r"window.__preloadedData\s*=\s*", "", script.text.strip()
+            )
+            if article_js.endswith(";"):
+                article_js = article_js[:-1]
+            article_js = article_js.replace(":undefined", ":null")
+            info = json.loads(article_js)
+            break
+
+        if info and info.get("initialState"):
+            return self.preprocess_initial_state(info, raw_html, url)
+
+        article = (info.get("initialData", {}) or {}).get("data", {}).get("article")
+        if info and article:
+            return self.preprocess_initial_data(info, raw_html, url)
+
+        self.log(f"Unable to find article from script in {url}")
+        return raw_html
