@@ -7,7 +7,7 @@ smh.com.au
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
-_name = "The Sydney Morning Herald"
+_name = "Sydney Morning Herald"
 
 
 class SydneyMorningHerald(BasicNewsRecipe):
