@@ -27,6 +27,7 @@ class TheWashingtonPost(BasicNewsRecipe):
     auto_cleanup = False
     encoding = "utf-8"
     language = "en"
+    simultaneous_downloads = 8
 
     oldest_article = 1
     max_articles_per_feed = 25
