@@ -2,20 +2,36 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-06-30T07:47:16Z</updated>
+<updated>2022-06-30T11:20:55Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
+<id>Asian Review of Books</id>
+<title>Asian Review of Books: 30 Jun, 2022</title>
+<summary>Asian Review of Books: 30 Jun, 2022 published at 2022-06-30 09:02AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Podcast with Vauhini Vara, author of “The Immortal King Rao”&lt;/li&gt;&lt;li&gt;“Rosewood: Endangered Species Conservation and The Rise of Global China” by Annah Lake Zhu&lt;/li&gt;&lt;li&gt;“Nomads: The Wanderers Who Shaped Our World” by Anthony Sattin&lt;/li&gt;&lt;li&gt;New Book Announcement: “La plata y el Pacífico: China, Hispanoamérica y el nacimiento de la globalización, 1565-1815” by Peter Gordon and Juan José Morales&lt;/li&gt;&lt;li&gt;“The First World War Adventures of Nariman Karkaria”, translated Murali Ranganathan&lt;/li&gt;&lt;li&gt;“The King and the Consul: A British Tragedy in Old Siam” by Simon Landy&lt;/li&gt;&lt;li&gt;“Imagine a City: A Pilot Sees the World” by Mark Vanhoenacker&lt;/li&gt;&lt;li&gt;Podcast with Mick Conefrey, author of “Everest 1922: The Epic Story of the First Attempt on the World’s Highest Mountain”&lt;/li&gt;&lt;li&gt;New Book Announcement: “Kyoto Stories” by Steve Alpert&lt;/li&gt;&lt;li&gt;“The Kushnameh: The Persian Epic of Kush the Tusked” by Iranshah ibn Abu’l-Khayr&lt;/li&gt;&lt;/ul&gt;
+                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
+                </content>
+<updated>2022-06-30T09:02:39Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-30.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-06-30.epub"/>
+</entry>
+<entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 30 Jun, 2022</title>
-<summary>NY Times Books: 30 Jun, 2022 published at 2022-06-30 01:17AM.</summary>
+<summary>NY Times Books: 30 Jun, 2022 published at 2022-06-30 09:00AM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;‘Why We Did It’ Is a Dark Ride on the ‘Republican Road to Hell’&lt;/li&gt;&lt;li&gt;Revisiting Justice Stephen Breyer’s Curious (and Strangely Timed) Defense of the Court&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Lisbon, Portugal&lt;/li&gt;&lt;li&gt;Naked No More: A TV Rodent Teaches Families About Tolerance&lt;/li&gt;&lt;li&gt;Book Review: “The Measure” by Nikki Erlick&lt;/li&gt;&lt;li&gt;Newly Published, From Yan Lianke to Hurricane Maria&lt;/li&gt;&lt;li&gt;The Books About Sex That Every Family Should Read&lt;/li&gt;&lt;li&gt;In ‘Thrust,’ Talking Animals and Others Take Aim at Humanity’s Cruelty&lt;/li&gt;&lt;li&gt;Review: ‘Elsewhere,’ by Alexis Schaitkin&lt;/li&gt;&lt;li&gt;Book Review: Ways of Being by James Bridle&lt;/li&gt;&lt;li&gt;Book Review: “The Colony” by Sally Denton&lt;/li&gt;&lt;li&gt;Review: “X,” by Davey Davis&lt;/li&gt;&lt;li&gt;Book Review: “Dele Weds Destiny,” by Tomi Obaro&lt;/li&gt;&lt;li&gt;Review: ‘Life Ceremony,’ by Sayaka Murata&lt;/li&gt;&lt;li&gt;Blitz Bazawule Is Building Bridges Between Worlds&lt;/li&gt;&lt;li&gt;Review: “Girls They Write Songs About,” by Carlene Bauer&lt;/li&gt;&lt;li&gt;Review: ‘In the Houses of Their Dead,’ by Terry Alford&lt;/li&gt;&lt;li&gt;Three New Romance Novels to Read&lt;/li&gt;&lt;li&gt;Review: ‘Angel of Rome: And Other Stories,’ by Jess Walter&lt;/li&gt;&lt;li&gt;Sensing the World Anew Through Other Species&lt;/li&gt;&lt;li&gt;Baxter Black, Who Elevated Cowboy Poetry to Folk Art, Dies at 77&lt;/li&gt;&lt;li&gt;Review: ‘Little Rabbit,’ by Alyssa Songsiridej; ‘One’s Company,’ by Ashley Hutson; ‘Last Summer on State Street,’ by Toya Wolfe&lt;/li&gt;&lt;li&gt;New Crime Fiction&lt;/li&gt;&lt;li&gt;Review: ‘Flint Is Family in Three Acts,’ by LaToya Ruby Frazier&lt;/li&gt;&lt;li&gt;Review: ‘Droll Tales,’ by Iris Smyles; ‘A Blind Corner,’ by Caitlin Macy; ‘Sleeping Alone,’ by Ru Freeman; ‘Fruiting Bodies,’ by Kathryn Harlan&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;New Books to Read in July&lt;/li&gt;&lt;li&gt;Leila Mottley Graduated From High School and Wrote a Novel&lt;/li&gt;&lt;li&gt;Poem: Beyond Theity, Ity Idiom/Dear Faith&lt;/li&gt;&lt;li&gt;‘Why We Did It’ Is a Dark Ride on the ‘Republican Road to Hell’&lt;/li&gt;&lt;li&gt;Revisiting Justice Stephen Breyer’s Curious (and Strangely Timed) Defense of the Court&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Lisbon, Portugal&lt;/li&gt;&lt;li&gt;Naked No More: A TV Rodent Teaches Families About Tolerance&lt;/li&gt;&lt;li&gt;Book Review: “The Measure” by Nikki Erlick&lt;/li&gt;&lt;li&gt;Newly Published, From Yan Lianke to Hurricane Maria&lt;/li&gt;&lt;li&gt;The Books About Sex That Every Family Should Read&lt;/li&gt;&lt;li&gt;In ‘Thrust,’ Talking Animals and Others Take Aim at Humanity’s Cruelty&lt;/li&gt;&lt;li&gt;Review: ‘Elsewhere,’ by Alexis Schaitkin&lt;/li&gt;&lt;li&gt;Book Review: Ways of Being by James Bridle&lt;/li&gt;&lt;li&gt;Book Review: “The Colony” by Sally Denton&lt;/li&gt;&lt;li&gt;Review: “X,” by Davey Davis&lt;/li&gt;&lt;li&gt;Book Review: “Dele Weds Destiny,” by Tomi Obaro&lt;/li&gt;&lt;li&gt;Review: ‘Life Ceremony,’ by Sayaka Murata&lt;/li&gt;&lt;li&gt;Blitz Bazawule Is Building Bridges Between Worlds&lt;/li&gt;&lt;li&gt;Review: “Girls They Write Songs About,” by Carlene Bauer&lt;/li&gt;&lt;li&gt;Review: ‘In the Houses of Their Dead,’ by Terry Alford&lt;/li&gt;&lt;li&gt;Three New Romance Novels to Read&lt;/li&gt;&lt;li&gt;Review: ‘Angel of Rome: And Other Stories,’ by Jess Walter&lt;/li&gt;&lt;li&gt;Sensing the World Anew Through Other Species&lt;/li&gt;&lt;li&gt;Baxter Black, Who Elevated Cowboy Poetry to Folk Art, Dies at 77&lt;/li&gt;&lt;li&gt;Review: ‘Little Rabbit,’ by Alyssa Songsiridej; ‘One’s Company,’ by Ashley Hutson; ‘Last Summer on State Street,’ by Toya Wolfe&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-06-30T01:17:39Z</updated>
+<updated>2022-06-30T09:00:24Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
@@ -54,21 +70,5 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-06-29.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="fivebooks-2022-06-29.epub"/>
-</entry>
-<entry>
-<id>Asian Review of Books</id>
-<title>Asian Review of Books: 28 Jun, 2022</title>
-<summary>Asian Review of Books: 28 Jun, 2022 published at 2022-06-28 22:56PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;“Rosewood: Endangered Species Conservation and The Rise of Global China” by Annah Lake Zhu&lt;/li&gt;&lt;li&gt;“Nomads: The Wanderers Who Shaped Our World” by Anthony Sattin&lt;/li&gt;&lt;li&gt;New Book Announcement: “La plata y el Pacífico: China, Hispanoamérica y el nacimiento de la globalización, 1565-1815” by Peter Gordon and Juan José Morales&lt;/li&gt;&lt;li&gt;“The First World War Adventures of Nariman Karkaria”, translated Murali Ranganathan&lt;/li&gt;&lt;li&gt;“The King and the Consul: A British Tragedy in Old Siam” by Simon Landy&lt;/li&gt;&lt;li&gt;“Imagine a City: A Pilot Sees the World” by Mark Vanhoenacker&lt;/li&gt;&lt;li&gt;Podcast with Mick Conefrey, author of “Everest 1922: The Epic Story of the First Attempt on the World’s Highest Mountain”&lt;/li&gt;&lt;li&gt;New Book Announcement: “Kyoto Stories” by Steve Alpert&lt;/li&gt;&lt;li&gt;“The Kushnameh: The Persian Epic of Kush the Tusked” by Iranshah ibn Abu’l-Khayr&lt;/li&gt;&lt;li&gt;“Celia, Misoka, I” by Xue Yiwei&lt;/li&gt;&lt;/ul&gt;
-                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
-                </content>
-<updated>2022-06-28T22:56:00Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-06-28.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-06-28.epub"/>
 </entry>
 </feed>

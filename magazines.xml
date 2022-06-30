@@ -2,11 +2,59 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-06-30T07:47:16Z</updated>
+<updated>2022-06-30T11:20:55Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>Vox</id>
+<title>Vox: 30 Jun, 2022</title>
+<summary>Vox: 30 Jun, 2022 published at 2022-06-30 11:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Why brands are obsessed with building community&lt;/li&gt;&lt;li&gt;Why Silicon Valley is fertile ground for obscure religious beliefs&lt;/li&gt;&lt;li&gt;Was Tuesday’s testimony a political breaking point for Trump?&lt;/li&gt;&lt;li&gt;How blue cities in red states are resisting abortion bans&lt;/li&gt;&lt;li&gt;R. Kelly has been sentenced to 30 years. Here are all the sexual misconduct allegations against him, in one timeline.&lt;/li&gt;&lt;li&gt;Why roller coaster loops aren’t circular anymore&lt;/li&gt;&lt;li&gt;Black women will suffer the most without Roe&lt;/li&gt;&lt;li&gt;Why scientists really, really want to know if there was ever life on Mars&lt;/li&gt;&lt;li&gt;What a lawsuit in Mississippi tells us about the future of abortion pills&lt;/li&gt;&lt;li&gt;What people are Googling in states where abortion is now illegal&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-06-30T11:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-06-30.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-06-30.epub"/>
+</entry>
+<entry>
+<id>The Atlantic</id>
+<title>The Atlantic: 30 Jun, 2022</title>
+<summary>The Atlantic: 30 Jun, 2022 published at 2022-06-30 10:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Why You Should Befriend the People You Admire&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-Abortion Laws&lt;/li&gt;&lt;li&gt;We Now Know&lt;/li&gt;&lt;li&gt;The Abortion Pill Can Be Used Later Than the FDA Says&lt;/li&gt;&lt;li&gt;Don’t Forget That 43 Senate Republicans Let Trump Get Away With It&lt;/li&gt;&lt;li&gt;The Kate Bush Resurgence Is a Reminder That We Can Have Nice Things&lt;/li&gt;&lt;li&gt;The People v. Donald Trump&lt;/li&gt;&lt;li&gt;The Dust Devils of Mars&lt;/li&gt;&lt;li&gt;The Reason Liz Cheney Is Narrating the January 6 Story&lt;/li&gt;&lt;li&gt;The New First Date&lt;/li&gt;&lt;li&gt;The Religion That’s Been Maligned for Centuries&lt;/li&gt;&lt;li&gt;The Dumbest Coup Attempt&lt;/li&gt;&lt;li&gt;‘Greenwashing’ Isn’t About Consumers&lt;/li&gt;&lt;li&gt;National Portrait Gallery and The Atlantic Announce “Perspectives: The Atlantic’s Writers at the National Portrait Gallery”&lt;/li&gt;&lt;li&gt;A Withering Indictment of the Entire GOP&lt;/li&gt;&lt;li&gt;A Gross Sense of Entitlement&lt;/li&gt;&lt;li&gt;How the Rest of the World Is Doing RTO&lt;/li&gt;&lt;li&gt;Twice a Year, Reindeer Eyes Pull Off a Wonderful Magic Trick&lt;/li&gt;&lt;li&gt;This Fall Will Be a Vaccination Reboot&lt;/li&gt;&lt;li&gt;Kevin McCarthy, Have You No Sense of Decency?&lt;/li&gt;&lt;li&gt;Today: January 6 Chaos, Russia’s War Against Civilians&lt;/li&gt;&lt;li&gt;‘How You React Is the Only Thing You Can Control’&lt;/li&gt;&lt;li&gt;The Most Damning January 6 Testimony Yet&lt;/li&gt;&lt;li&gt;The Conservative Women Radicalizing Amish Literature&lt;/li&gt;&lt;li&gt;Why I’m Talking About My Abortion&lt;/li&gt;&lt;li&gt;Lessons From 40 Men in Egalitarian Relationships&lt;/li&gt;&lt;li&gt;America Is Growing Apart, Possibly for Good&lt;/li&gt;&lt;li&gt;America Is About to See Just How Pro-life Republicans Actually Are&lt;/li&gt;&lt;li&gt;The Surprising Voice Missing From Gun-Control Talks&lt;/li&gt;&lt;li&gt;The January 6 Committee’s Most Damning Revelation Yet&lt;/li&gt;&lt;li&gt;Where to Turn When You Feel ‘at Odds With Being Human’&lt;/li&gt;&lt;li&gt;History Is Never Only One Person’s Story&lt;/li&gt;&lt;li&gt;Elvis Is Utterly Disorienting. That’s the Point.&lt;/li&gt;&lt;li&gt;Empathy Isn’t Enough&lt;/li&gt;&lt;li&gt;J. Lo’s Tragic Fame Cycle&lt;/li&gt;&lt;li&gt;What This Is Going to Hurt Leaves Out&lt;/li&gt;&lt;li&gt;‘I’ve Seen Several Giants Die on My Land’&lt;/li&gt;&lt;li&gt;How Reality Dating Shows Stoke Racial Tensions&lt;/li&gt;&lt;li&gt;Want Closer Friendships? Move Away From Your Friends.&lt;/li&gt;&lt;li&gt;Welcome to the Summer of Dancing and Darkness&lt;/li&gt;&lt;li&gt;The Most American Form of Architecture Isn’t Going Anywhere&lt;/li&gt;&lt;li&gt;Scenes From Glastonbury 2022&lt;/li&gt;&lt;li&gt;Photos of the Week: Stonehenge Solstice, Boxing Record, Torch Battle&lt;/li&gt;&lt;li&gt;Photos From the 2022 Westminster Dog Show&lt;/li&gt;&lt;li&gt;Where Russia’s Declinist Rage Isn’t Enough&lt;/li&gt;&lt;li&gt;The 10-Year-Old Tweet That Still Defines the Internet&lt;/li&gt;&lt;li&gt;Have the Crypto Bosses Learned Anything At All?&lt;/li&gt;&lt;li&gt;Fashion Has Abandoned Human Taste&lt;/li&gt;&lt;li&gt;Google’s AI Is Something Even Stranger Than Conscious&lt;/li&gt;&lt;li&gt;Photos: Protests Against the Overturning of &lt;em&gt;Roe&lt;/em&gt;&lt;/li&gt;&lt;li&gt;America Is Sliding Into the Long Pandemic Defeat&lt;/li&gt;&lt;li&gt;Five COVID Numbers That Don’t Make Sense Anymore&lt;/li&gt;&lt;li&gt;How the End of Roe Would Change Prenatal Care&lt;/li&gt;&lt;li&gt;How to Be a Good Person Without Annoying Everyone&lt;/li&gt;&lt;li&gt;Roe Was Flawed. Dobbs Is Worse.&lt;/li&gt;&lt;li&gt;The Strawberry Festival at the End of the World&lt;/li&gt;&lt;li&gt;Air Travel Is a Disaster Right Now. Here’s Why.&lt;/li&gt;&lt;li&gt;They Really Did It&lt;/li&gt;&lt;li&gt;The Problem Is Gun Culture, Not SCOTUS&lt;/li&gt;&lt;li&gt;How a Recession Could Weaken the Work-From-Home Revolution&lt;/li&gt;&lt;li&gt;What Trump Has Taken From Us&lt;/li&gt;&lt;li&gt;When the Punishment Doesn’t Fit the Joke&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;/ul&gt;
+                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
+                </content>
+<updated>2022-06-30T10:00:56Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-06-30.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-06-30.epub"/>
+</entry>
+<entry>
+<id>POLITICO Magazine</id>
+<title>POLITICO Magazine: 30 Jun, 2022</title>
+<summary>POLITICO Magazine: 30 Jun, 2022 published at 2022-06-30 08:30AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Opinion | A Grand Compromise on Abortion&lt;/li&gt;&lt;li&gt;Trump is in Trouble and He Knows It&lt;/li&gt;&lt;li&gt;Opinion | Why Are Democrats Letting Republicans Steamroll Them?&lt;/li&gt;&lt;li&gt;Opinion | The Supreme Court is Retrenching. States Don’t Have To.&lt;/li&gt;&lt;li&gt;Opinion | How Democrats Can Win on a Culture-War Issue&lt;/li&gt;&lt;li&gt;When the Supreme Court Makes a Mistake&lt;/li&gt;&lt;li&gt;Opinion | The Effing President Gets His Comeuppance&lt;/li&gt;&lt;li&gt;Opinion | What Cassidy Hutchinson Said that Could Prove Trump’s Criminal Undoing&lt;/li&gt;&lt;li&gt;The Supreme Court’s Unusual Move on the Death Penalty&lt;/li&gt;&lt;li&gt;Republicans Are Sending Abortion Back to the States. But D.C. Isn’t a State.&lt;/li&gt;&lt;li&gt;Opinion | Roe Was Overturned Because of Politics, Not the Constitution&lt;/li&gt;&lt;li&gt;Opinion | The Future of the West Is in Question&lt;/li&gt;&lt;li&gt;The Supreme Court’s Faux ‘Originalism’&lt;/li&gt;&lt;li&gt;The Twilight of Pope Francis&lt;/li&gt;&lt;li&gt;20 Ways the Supreme Court Just Changed America&lt;/li&gt;&lt;li&gt;A Radical Ruling for Radical Times&lt;/li&gt;&lt;li&gt;Opinion | Trump’s Legal Advisers Could Be the First Major Jan. 6 Defendants&lt;/li&gt;&lt;li&gt;D.C. Power Players Are Paying Thousands of Dollars to Find Dates&lt;/li&gt;&lt;li&gt;Is the State Department Trolling Henry Kissinger?&lt;/li&gt;&lt;li&gt;Opinion | What Happens if the GOP Tries to Leave Trump Behind&lt;/li&gt;&lt;li&gt;What Republicans Know (and Democrats Don’t) About the White Working Class&lt;/li&gt;&lt;li&gt;Are You Married to Kellyanne Conway? A Real Therapist Has Some Advice.&lt;/li&gt;&lt;li&gt;Opinion | Memo to the New York Times: Enough with the Semafor Coverage&lt;/li&gt;&lt;li&gt;Opinion | Don’t Indict Trump&lt;/li&gt;&lt;li&gt;Opinion | John Eastman’s Criminal Exposure Is Real&lt;/li&gt;&lt;/ul&gt;
+                News, Analysis and Opinion from POLITICO
+                </content>
+<updated>2022-06-30T08:30:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-06-30.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-06-30.epub"/>
+</entry>
 <entry>
 <id>The Diplomat</id>
 <title>The Diplomat: 30 Jun, 2022</title>
@@ -24,22 +72,6 @@
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-diplomat-2022-06-30.epub"/>
 </entry>
 <entry>
-<id>Vox</id>
-<title>Vox: 29 Jun, 2022</title>
-<summary>Vox: 29 Jun, 2022 published at 2022-06-29 22:20PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Was Tuesday’s testimony a political breaking point for Trump?&lt;/li&gt;&lt;li&gt;How blue cities in red states are resisting abortion bans&lt;/li&gt;&lt;li&gt;R. Kelly has been sentenced to 30 years. Here are all the sexual misconduct allegations against him, in one timeline.&lt;/li&gt;&lt;li&gt;Why roller coaster loops aren’t circular anymore&lt;/li&gt;&lt;li&gt;Black women will suffer the most without Roe&lt;/li&gt;&lt;li&gt;Why scientists really, really want to know if there was ever life on Mars&lt;/li&gt;&lt;li&gt;What a lawsuit in Mississippi tells us about the future of abortion pills&lt;/li&gt;&lt;li&gt;What people are Googling in states where abortion is now illegal&lt;/li&gt;&lt;li&gt;The nontoxic social media app that tells you your toxic traits&lt;/li&gt;&lt;li&gt;Anyone can fall for online scams — even you. Here’s how to avoid them.&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-06-29T22:20:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-06-29.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-06-29.epub"/>
-</entry>
-<entry>
 <id>Nautilus</id>
 <title>Nautilus: 29 Jun, 2022</title>
 <summary>Nautilus: 29 Jun, 2022 published at 2022-06-29 22:18PM.</summary>
@@ -53,38 +85,6 @@
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nautilus-2022-06-29.mobi"/>
-</entry>
-<entry>
-<id>The Atlantic</id>
-<title>The Atlantic: 29 Jun, 2022</title>
-<summary>The Atlantic: 29 Jun, 2022 published at 2022-06-29 21:53PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The Domino Effects of New Anti-Abortion Laws&lt;/li&gt;&lt;li&gt;We Now Know&lt;/li&gt;&lt;li&gt;The Abortion Pill Can Be Used Later Than the FDA Says&lt;/li&gt;&lt;li&gt;Don’t Forget That 43 Senate Republicans Let Trump Get Away With It&lt;/li&gt;&lt;li&gt;The Kate Bush Resurgence Is a Reminder That We Can Have Nice Things&lt;/li&gt;&lt;li&gt;The People v. Donald Trump&lt;/li&gt;&lt;li&gt;The Dust Devils of Mars&lt;/li&gt;&lt;li&gt;The Reason Liz Cheney Is Narrating the January 6 Story&lt;/li&gt;&lt;li&gt;The New First Date&lt;/li&gt;&lt;li&gt;The Religion That’s Been Maligned for Centuries&lt;/li&gt;&lt;li&gt;The Dumbest Coup Attempt&lt;/li&gt;&lt;li&gt;‘Greenwashing’ Isn’t About Consumers&lt;/li&gt;&lt;li&gt;National Portrait Gallery and The Atlantic Announce “Perspectives: The Atlantic’s Writers at the National Portrait Gallery”&lt;/li&gt;&lt;li&gt;A Withering Indictment of the Entire GOP&lt;/li&gt;&lt;li&gt;A Gross Sense of Entitlement&lt;/li&gt;&lt;li&gt;How the Rest of the World Is Doing RTO&lt;/li&gt;&lt;li&gt;Twice a Year, Reindeer Eyes Pull Off a Wonderful Magic Trick&lt;/li&gt;&lt;li&gt;This Fall Will Be a Vaccination Reboot&lt;/li&gt;&lt;li&gt;Kevin McCarthy, Have You No Sense of Decency?&lt;/li&gt;&lt;li&gt;Today: January 6 Chaos, Russia’s War Against Civilians&lt;/li&gt;&lt;li&gt;‘How You React Is the Only Thing You Can Control’&lt;/li&gt;&lt;li&gt;The Most Damning January 6 Testimony Yet&lt;/li&gt;&lt;li&gt;The Conservative Women Radicalizing Amish Literature&lt;/li&gt;&lt;li&gt;Why I’m Talking About My Abortion&lt;/li&gt;&lt;li&gt;The 10-Year-Old Tweet That Still Defines the Internet&lt;/li&gt;&lt;li&gt;Lessons From 40 Men in Egalitarian Relationships&lt;/li&gt;&lt;li&gt;America Is Growing Apart, Possibly for Good&lt;/li&gt;&lt;li&gt;America Is About to See Just How Pro-life Republicans Actually Are&lt;/li&gt;&lt;li&gt;The Surprising Voice Missing From Gun-Control Talks&lt;/li&gt;&lt;li&gt;The January 6 Committee’s Most Damning Revelation Yet&lt;/li&gt;&lt;li&gt;Where to Turn When You Feel ‘at Odds With Being Human’&lt;/li&gt;&lt;li&gt;History Is Never Only One Person’s Story&lt;/li&gt;&lt;li&gt;Elvis Is Utterly Disorienting. That’s the Point.&lt;/li&gt;&lt;li&gt;Empathy Isn’t Enough&lt;/li&gt;&lt;li&gt;J. Lo’s Tragic Fame Cycle&lt;/li&gt;&lt;li&gt;What This Is Going to Hurt Leaves Out&lt;/li&gt;&lt;li&gt;‘I’ve Seen Several Giants Die on My Land’&lt;/li&gt;&lt;li&gt;How Reality Dating Shows Stoke Racial Tensions&lt;/li&gt;&lt;li&gt;Want Closer Friendships? Move Away From Your Friends.&lt;/li&gt;&lt;li&gt;Welcome to the Summer of Dancing and Darkness&lt;/li&gt;&lt;li&gt;The Most American Form of Architecture Isn’t Going Anywhere&lt;/li&gt;&lt;li&gt;Scenes From Glastonbury 2022&lt;/li&gt;&lt;li&gt;Photos of the Week: Stonehenge Solstice, Boxing Record, Torch Battle&lt;/li&gt;&lt;li&gt;Photos From the 2022 Westminster Dog Show&lt;/li&gt;&lt;li&gt;Where Russia’s Declinist Rage Isn’t Enough&lt;/li&gt;&lt;li&gt;Have the Crypto Bosses Learned Anything At All?&lt;/li&gt;&lt;li&gt;Fashion Has Abandoned Human Taste&lt;/li&gt;&lt;li&gt;Google’s AI Is Something Even Stranger Than Conscious&lt;/li&gt;&lt;li&gt;Photos: Protests Against the Overturning of &lt;em&gt;Roe&lt;/em&gt;&lt;/li&gt;&lt;li&gt;America Is Sliding Into the Long Pandemic Defeat&lt;/li&gt;&lt;li&gt;Five COVID Numbers That Don’t Make Sense Anymore&lt;/li&gt;&lt;li&gt;How the End of Roe Would Change Prenatal Care&lt;/li&gt;&lt;li&gt;How to Be a Good Person Without Annoying Everyone&lt;/li&gt;&lt;li&gt;Roe Was Flawed. Dobbs Is Worse.&lt;/li&gt;&lt;li&gt;The Strawberry Festival at the End of the World&lt;/li&gt;&lt;li&gt;Air Travel Is a Disaster Right Now. Here’s Why.&lt;/li&gt;&lt;li&gt;They Really Did It&lt;/li&gt;&lt;li&gt;The Problem Is Gun Culture, Not SCOTUS&lt;/li&gt;&lt;li&gt;How a Recession Could Weaken the Work-From-Home Revolution&lt;/li&gt;&lt;li&gt;What Trump Has Taken From Us&lt;/li&gt;&lt;li&gt;When the Punishment Doesn’t Fit the Joke&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;/ul&gt;
-                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
-                </content>
-<updated>2022-06-29T21:53:12Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-06-29.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-06-29.epub"/>
-</entry>
-<entry>
-<id>POLITICO Magazine</id>
-<title>POLITICO Magazine: 29 Jun, 2022</title>
-<summary>POLITICO Magazine: 29 Jun, 2022 published at 2022-06-29 16:19PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Opinion | Why Are Democrats Letting Republicans Steamroll Them?&lt;/li&gt;&lt;li&gt;Opinion | The Supreme Court is Retrenching. States Don’t Have To.&lt;/li&gt;&lt;li&gt;Opinion | How Democrats Can Win on a Culture-War Issue&lt;/li&gt;&lt;li&gt;When the Supreme Court Makes a Mistake&lt;/li&gt;&lt;li&gt;Opinion | The Effing President Gets His Comeuppance&lt;/li&gt;&lt;li&gt;Opinion | What Cassidy Hutchinson Said that Could Prove Trump’s Criminal Undoing&lt;/li&gt;&lt;li&gt;The Supreme Court’s Unusual Move on the Death Penalty&lt;/li&gt;&lt;li&gt;Republicans Are Sending Abortion Back to the States. But D.C. Isn’t a State.&lt;/li&gt;&lt;li&gt;Opinion | Roe Was Overturned Because of Politics, Not the Constitution&lt;/li&gt;&lt;li&gt;Opinion | The Future of the West Is in Question&lt;/li&gt;&lt;li&gt;The Supreme Court’s Faux ‘Originalism’&lt;/li&gt;&lt;li&gt;The Twilight of Pope Francis&lt;/li&gt;&lt;li&gt;20 Ways the Supreme Court Just Changed America&lt;/li&gt;&lt;li&gt;A Radical Ruling for Radical Times&lt;/li&gt;&lt;li&gt;Opinion | Trump’s Legal Advisers Could Be the First Major Jan. 6 Defendants&lt;/li&gt;&lt;li&gt;D.C. Power Players Are Paying Thousands of Dollars to Find Dates&lt;/li&gt;&lt;li&gt;Is the State Department Trolling Henry Kissinger?&lt;/li&gt;&lt;li&gt;Opinion | What Happens if the GOP Tries to Leave Trump Behind&lt;/li&gt;&lt;li&gt;What Republicans Know (and Democrats Don’t) About the White Working Class&lt;/li&gt;&lt;li&gt;Are You Married to Kellyanne Conway? A Real Therapist Has Some Advice.&lt;/li&gt;&lt;li&gt;Opinion | Memo to the New York Times: Enough with the Semafor Coverage&lt;/li&gt;&lt;li&gt;Robots, Marines and the Ultimate Battle with Bureaucracy&lt;/li&gt;&lt;li&gt;Opinion | Don’t Indict Trump&lt;/li&gt;&lt;li&gt;Opinion | John Eastman’s Criminal Exposure Is Real&lt;/li&gt;&lt;li&gt;The Biggest Change in Media Since Cable Is Happening Right Now&lt;/li&gt;&lt;/ul&gt;
-                News, Analysis and Opinion from POLITICO
-                </content>
-<updated>2022-06-29T16:19:59Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-06-29.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-06-29.epub"/>
 </entry>
 <entry>
 <id>Economist</id>
