@@ -84,31 +84,13 @@ class NYTimesBooks(BasicNewsRecipe):
     def publication_date(self):
         return self.pub_date
 
-    def preprocess_initial_data(self, info, raw_html, url):
-
+    def preprocess_initial_data(self, template_html, info, raw_html, url):
         article = (info.get("initialData", {}) or {}).get("data", {}).get("article")
-
-        if not (info and article):
-            # Sometimes the page does not have article content in the <script>
-            # particularly in the Sports section, so we fallback to
-            # raw_html and rely on remove_tags to clean it up
-            self.log.warning(f"Unable to find article from script in {url}")
+        body = article.get("sprinkledBody") or article.get("body")
+        if not body:
             return raw_html
 
-        body = article.get("sprinkledBody") or article.get("body")
-        html_output = f"""<html><head><title></title></head>
-        <body>
-            <article>
-            <h1 class="headline"></h1>
-            <div class="sub-headline"></div>
-            <div class="article-meta">
-                <span class="author"></span>
-                <span class="published-dt"></span>
-            </div>
-            </article>
-        </body></html>
-        """
-        new_soup = BeautifulSoup(html_output, "html.parser")
+        new_soup = BeautifulSoup(template_html, "html.parser")
         for c in body.get("content", []):
             content_type = c["__typename"]
             if content_type in [
@@ -144,7 +126,7 @@ class NYTimesBooks(BasicNewsRecipe):
                 if c.get("summary"):
                     summary_text = ""
                     for x in c["summary"].get("content", []):
-                        summary_text += x.get("text", "") or x.get("", "text@stripHtml")
+                        summary_text += x.get("text", "") or x.get("text@stripHtml", "")
                     subheadline = new_soup.find("div", class_="sub-headline")
                     subheadline.string = summary_text
                 if c.get("timestampBlock"):
@@ -188,10 +170,12 @@ class NYTimesBooks(BasicNewsRecipe):
             elif content_type == "ImageBlock":
                 image_block = c["media"]
                 container_ele = new_soup.new_tag("div", attrs={"class": "article-img"})
-                img_url = image_block["crops"][0]["renditions"][0]["url"]
-                img_ele = new_soup.new_tag("img")
-                img_ele["src"] = img_url
-                container_ele.append(img_ele)
+                for v in image_block.get("crops", []):
+                    img_url = v["renditions"][0]["url"]
+                    img_ele = new_soup.new_tag("img")
+                    img_ele["src"] = img_url
+                    container_ele.append(img_ele)
+                    break
                 if image_block.get("legacyHtmlCaption"):
                     span_ele = new_soup.new_tag("span", attrs={"class": "caption"})
                     span_ele.append(BeautifulSoup(image_block["legacyHtmlCaption"]))
@@ -344,15 +328,7 @@ class NYTimesBooks(BasicNewsRecipe):
 
         return str(new_soup)
 
-    def preprocess_initial_state(self, info, raw_html, url):
-
-        if not (info and info.get("initialState")):
-            # Sometimes the page does not have article content in the <script>
-            # particularly in the Sports section, so we fallback to
-            # raw_html and rely on remove_tags to clean it up
-            self.log(f"Unable to find article from script in {url}")
-            return raw_html
-
+    def preprocess_initial_state(self, template_html, info, raw_html, url):
         content_service = info.get("initialState")
         content_node_id = None
         for k, v in content_service["ROOT_QUERY"].items():
@@ -386,19 +362,7 @@ class NYTimesBooks(BasicNewsRecipe):
             self.log(f"Unable to find content in article object")
             return raw_html
 
-        html_output = f"""<html><head><title></title></head>
-        <body>
-            <article>
-            <h1 class="headline"></h1>
-            <div class="sub-headline"></div>
-            <div class="article-meta">
-                <span class="author"></span>
-                <span class="published-dt"></span>
-            </div>
-            </article>
-        </body></html>
-        """
-        new_soup = BeautifulSoup(html_output, "html.parser")
+        new_soup = BeautifulSoup(template_html, "html.parser")
 
         for c in document_block.get("content@filterEmpty", []):
             content_type = c["typename"]
@@ -699,13 +663,29 @@ class NYTimesBooks(BasicNewsRecipe):
             info = json.loads(article_js)
             break
 
+        html_output = """<html><head><title></title></head>
+        <body>
+            <article>
+            <h1 class="headline"></h1>
+            <div class="sub-headline"></div>
+            <div class="article-meta">
+                <span class="author"></span>
+                <span class="published-dt"></span>
+            </div>
+            </article>
+        </body></html>
+        """
+
         if info and info.get("initialState"):
-            return self.preprocess_initial_state(info, raw_html, url)
+            return self.preprocess_initial_state(html_output, info, raw_html, url)
 
         article = (info.get("initialData", {}) or {}).get("data", {}).get("article")
         if info and article:
-            return self.preprocess_initial_data(info, raw_html, url)
+            return self.preprocess_initial_data(html_output, info, raw_html, url)
 
+        # Sometimes the page does not have article content in the <script>
+        # particularly in the Sports section, so we fallback to
+        # raw_html and rely on remove_tags to clean it up
         self.log(f"Unable to find article from script in {url}")
         return raw_html
 
