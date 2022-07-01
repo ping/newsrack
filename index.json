@@ -11,12 +11,12 @@
 ],
 "Asian Review of Books": [
 {
-"filename": "arb-2022-06-30.mobi",
-"published": 1656579759.0
+"filename": "arb-2022-07-01.mobi",
+"published": 1656635768.0
 },
 {
-"filename": "arb-2022-06-30.epub",
-"published": 1656579759.0
+"filename": "arb-2022-07-01.epub",
+"published": 1656635768.0
 }
 ],
 "The Atlantic": [
@@ -41,22 +41,22 @@
 ],
 "ChannelNewsAsia": [
 {
-"filename": "channelnewsasia-2022-06-30.mobi",
-"published": 1656628860.0
+"filename": "channelnewsasia-2022-07-01.mobi",
+"published": 1656635760.0
 },
 {
-"filename": "channelnewsasia-2022-06-30.epub",
-"published": 1656628860.0
+"filename": "channelnewsasia-2022-07-01.epub",
+"published": 1656635760.0
 }
 ],
 "The Diplomat": [
 {
-"filename": "the-diplomat-2022-06-30.mobi",
-"published": 1656606701.0
+"filename": "the-diplomat-2022-07-01.mobi",
+"published": 1656635133.0
 },
 {
-"filename": "the-diplomat-2022-06-30.epub",
-"published": 1656606701.0
+"filename": "the-diplomat-2022-07-01.epub",
+"published": 1656635133.0
 }
 ],
 "Economist": [
@@ -71,12 +71,12 @@
 ],
 "Financial Times": [
 {
-"filename": "ft-2022-06-30.mobi",
-"published": 1656626028.0
+"filename": "ft-2022-07-01.mobi",
+"published": 1656633618.0
 },
 {
-"filename": "ft-2022-06-30.epub",
-"published": 1656626028.0
+"filename": "ft-2022-07-01.epub",
+"published": 1656633618.0
 }
 ],
 "Five Books": [
@@ -92,31 +92,31 @@
 "Guardian": [
 {
 "filename": "guardian-2022-06-30.mobi",
-"published": 1656629547.0
+"published": 1656632944.0
 },
 {
 "filename": "guardian-2022-06-30.epub",
-"published": 1656629547.0
+"published": 1656632944.0
 }
 ],
 "JoongAng Daily": [
 {
-"filename": "joongang-daily-2022-06-30.mobi",
-"published": 1656626825.0
+"filename": "joongang-daily-2022-07-01.mobi",
+"published": 1656636627.0
 },
 {
-"filename": "joongang-daily-2022-06-30.epub",
-"published": 1656626825.0
+"filename": "joongang-daily-2022-07-01.epub",
+"published": 1656636627.0
 }
 ],
 "Korea Herald": [
 {
-"filename": "korea-herald-2022-06-30.mobi",
-"published": 1656621038.0
+"filename": "korea-herald-2022-07-01.mobi",
+"published": 1656633648.0
 },
 {
-"filename": "korea-herald-2022-06-30.epub",
-"published": 1656621038.0
+"filename": "korea-herald-2022-07-01.epub",
+"published": 1656633648.0
 }
 ],
 "London Review of Books": [
@@ -157,12 +157,12 @@
 ],
 "NY Times": [
 {
-"filename": "nytimes-global-2022-06-30.mobi",
-"published": 1656630238.0
+"filename": "nytimes-global-2022-07-01.mobi",
+"published": 1656636686.0
 },
 {
-"filename": "nytimes-global-2022-06-30.epub",
-"published": 1656630238.0
+"filename": "nytimes-global-2022-07-01.epub",
+"published": 1656636686.0
 }
 ],
 "NY Times (Print)": [
@@ -217,22 +217,22 @@
 ],
 "South China Morning Post": [
 {
-"filename": "scmp-2022-06-30.mobi",
-"published": 1656628661.0
+"filename": "scmp-2022-07-01.mobi",
+"published": 1656636308.0
 },
 {
-"filename": "scmp-2022-06-30.epub",
-"published": 1656628661.0
+"filename": "scmp-2022-07-01.epub",
+"published": 1656636308.0
 }
 ],
 "Sydney Morning Herald": [
 {
-"filename": "sydney-morning-herald-2022-06-30.mobi",
-"published": 1656630376.0
+"filename": "sydney-morning-herald-2022-07-01.mobi",
+"published": 1656636848.0
 },
 {
-"filename": "sydney-morning-herald-2022-06-30.epub",
-"published": 1656630376.0
+"filename": "sydney-morning-herald-2022-07-01.epub",
+"published": 1656636848.0
 }
 ],
 "Taipei Times": [],
@@ -268,12 +268,12 @@
 ],
 "Washington Post": [
 {
-"filename": "wapo-2022-06-30.mobi",
-"published": 1656630128.0
+"filename": "wapo-2022-07-01.mobi",
+"published": 1656635598.0
 },
 {
-"filename": "wapo-2022-06-30.epub",
-"published": 1656630128.0
+"filename": "wapo-2022-07-01.epub",
+"published": 1656635598.0
 }
 ],
 "Wired Magazine": [
@@ -286,5 +286,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1656631595
+"_generated": 1656638073
 }
