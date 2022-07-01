@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-01T07:22:57Z</updated>
+<updated>2022-07-01T11:20:27Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 1 Jul, 2022</title>
-<summary>NY Times Books: 1 Jul, 2022 published at 2022-07-01 04:20AM.</summary>
+<summary>NY Times Books: 1 Jul, 2022 published at 2022-07-01 09:00AM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Review: “Mordechai Anielewicz: No to Despair” by Rachel Hausfater&lt;/li&gt;&lt;li&gt;Alice Elliott Dark By the Book Interview&lt;/li&gt;&lt;li&gt;Leila Mottley Graduated From High School and Wrote a Novel&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Candace Bushnell, Hanya Yanagihara and More on Their Favorite New York City Novels&lt;/li&gt;&lt;li&gt;Poem: Beyond Theity, Ity Idiom/Dear Faith&lt;/li&gt;&lt;li&gt;New Books to Read in July&lt;/li&gt;&lt;li&gt;‘Why We Did It’ Is a Dark Ride on the ‘Republican Road to Hell’&lt;/li&gt;&lt;li&gt;Revisiting Justice Stephen Breyer’s Curious (and Strangely Timed) Defense of the Court&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Lisbon, Portugal&lt;/li&gt;&lt;li&gt;Naked No More: A TV Rodent Teaches Families About Tolerance&lt;/li&gt;&lt;li&gt;Book Review: “The Measure” by Nikki Erlick&lt;/li&gt;&lt;li&gt;Newly Published, From Yan Lianke to Hurricane Maria&lt;/li&gt;&lt;li&gt;The Books About Sex That Every Family Should Read&lt;/li&gt;&lt;li&gt;In ‘Thrust,’ Talking Animals and Others Take Aim at Humanity’s Cruelty&lt;/li&gt;&lt;li&gt;Review: ‘Elsewhere,’ by Alexis Schaitkin&lt;/li&gt;&lt;li&gt;Book Review: Ways of Being by James Bridle&lt;/li&gt;&lt;li&gt;Book Review: ‘The Colony’ by Sally Denton&lt;/li&gt;&lt;li&gt;Review: “X,” by Davey Davis&lt;/li&gt;&lt;li&gt;Book Review: “Dele Weds Destiny,” by Tomi Obaro&lt;/li&gt;&lt;li&gt;Review: ‘Life Ceremony,’ by Sayaka Murata&lt;/li&gt;&lt;li&gt;Blitz Bazawule Is Building Bridges Between Worlds&lt;/li&gt;&lt;li&gt;Review: “Girls They Write Songs About,” by Carlene Bauer&lt;/li&gt;&lt;li&gt;Review: ‘In the Houses of Their Dead,’ by Terry Alford&lt;/li&gt;&lt;li&gt;Sensing the World Anew Through Other Species&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;New Novels That Weave Past and Present&lt;/li&gt;&lt;li&gt;Review: ‘Night of the Living Rez,’ by Morgan Talty&lt;/li&gt;&lt;li&gt;Review: “Mordechai Anielewicz: No to Despair” by Rachel Hausfater&lt;/li&gt;&lt;li&gt;Alice Elliott Dark By the Book Interview&lt;/li&gt;&lt;li&gt;Leila Mottley Graduated From High School and Wrote a Novel&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Candace Bushnell, Hanya Yanagihara and More on Their Favorite New York City Novels&lt;/li&gt;&lt;li&gt;Poem: Beyond Theity, Ity Idiom/Dear Faith&lt;/li&gt;&lt;li&gt;New Books to Read in July&lt;/li&gt;&lt;li&gt;‘Why We Did It’ Is a Dark Ride on the ‘Republican Road to Hell’&lt;/li&gt;&lt;li&gt;Revisiting Justice Stephen Breyer’s Curious (and Strangely Timed) Defense of the Court&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Lisbon, Portugal&lt;/li&gt;&lt;li&gt;Naked No More: A TV Rodent Teaches Families About Tolerance&lt;/li&gt;&lt;li&gt;Book Review: “The Measure” by Nikki Erlick&lt;/li&gt;&lt;li&gt;Newly Published, From Yan Lianke to Hurricane Maria&lt;/li&gt;&lt;li&gt;The Books About Sex That Every Family Should Read&lt;/li&gt;&lt;li&gt;In ‘Thrust,’ Talking Animals and Others Take Aim at Humanity’s Cruelty&lt;/li&gt;&lt;li&gt;Review: ‘Elsewhere,’ by Alexis Schaitkin&lt;/li&gt;&lt;li&gt;Book Review: Ways of Being by James Bridle&lt;/li&gt;&lt;li&gt;Book Review: ‘The Colony’ by Sally Denton&lt;/li&gt;&lt;li&gt;Review: “X,” by Davey Davis&lt;/li&gt;&lt;li&gt;Book Review: “Dele Weds Destiny,” by Tomi Obaro&lt;/li&gt;&lt;li&gt;Review: ‘Life Ceremony,’ by Sayaka Murata&lt;/li&gt;&lt;li&gt;Blitz Bazawule Is Building Bridges Between Worlds&lt;/li&gt;&lt;li&gt;Sensing the World Anew Through Other Species&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-07-01T04:20:49Z</updated>
+<updated>2022-07-01T09:00:12Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
