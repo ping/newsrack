@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-02T19:14:21Z</updated>
+<updated>2022-07-02T23:15:57Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,18 +10,34 @@
 <entry>
 <id>Vox</id>
 <title>Vox: 2 Jul, 2022</title>
-<summary>Vox: 2 Jul, 2022 published at 2022-07-02 13:59PM.</summary>
+<summary>Vox: 2 Jul, 2022 published at 2022-07-02 20:56PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The Supreme Court is keeping Trump’s promises&lt;/li&gt;&lt;li&gt;We’re battling a sleep loss epidemic. California has a plan to fight it.&lt;/li&gt;&lt;li&gt;One Good Thing: A Danish drama lets its girlbosses fail&lt;/li&gt;&lt;li&gt;10 ways to fix a broken Supreme Court&lt;/li&gt;&lt;li&gt;The many reasons the “just vote” rhetoric from Democrats falls flat&lt;/li&gt;&lt;li&gt;The Supreme Court overturns Roe v. Wade&lt;/li&gt;&lt;li&gt;Who overturning Roe hurts most, explained in 7 charts&lt;/li&gt;&lt;li&gt;Under Obamacare, birth control pills are free. Why aren’t vasectomies?&lt;/li&gt;&lt;li&gt;Go ahead, be a little spontaneous&lt;/li&gt;&lt;li&gt;The best movies of 2022 (so far) — and how to watch them&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Xi Jinping asserts his power on Hong Kong’s handover anniversary&lt;/li&gt;&lt;li&gt;The Supreme Court is keeping Trump’s promises&lt;/li&gt;&lt;li&gt;We’re battling a sleep loss epidemic. California has a plan to fight it.&lt;/li&gt;&lt;li&gt;One Good Thing: A Danish drama lets its girlbosses fail&lt;/li&gt;&lt;li&gt;10 ways to fix a broken Supreme Court&lt;/li&gt;&lt;li&gt;The many reasons the “just vote” rhetoric from Democrats falls flat&lt;/li&gt;&lt;li&gt;The Supreme Court overturns Roe v. Wade&lt;/li&gt;&lt;li&gt;Who overturning Roe hurts most, explained in 7 charts&lt;/li&gt;&lt;li&gt;Under Obamacare, birth control pills are free. Why aren’t vasectomies?&lt;/li&gt;&lt;li&gt;Go ahead, be a little spontaneous&lt;/li&gt;&lt;/ul&gt;
                 General interest news site
                 </content>
-<updated>2022-07-02T13:59:27Z</updated>
+<updated>2022-07-02T20:56:30Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-02.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-02.epub"/>
+</entry>
+<entry>
+<id>The Atlantic</id>
+<title>The Atlantic: 2 Jul, 2022</title>
+<summary>The Atlantic: 2 Jul, 2022 published at 2022-07-02 19:10PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;What Lies Behind That ‘No Trespass’ Sign&lt;/li&gt;&lt;li&gt;The January 6 Committee Is Going to Have the Final Word&lt;/li&gt;&lt;li&gt;The Accidental Trumpification of NATO&lt;/li&gt;&lt;li&gt;Rock Never Dies—But It Does Get Older and Wiser&lt;/li&gt;&lt;li&gt;A Portrait of the Artist Who Never Makes Art&lt;/li&gt;&lt;li&gt;What Comes After Roe?&lt;/li&gt;&lt;li&gt;Don’t Worry, It’s Not COVID&lt;/li&gt;&lt;li&gt;Leonard Cohen’s ‘Hallelujah’ Belongs to Everyone&lt;/li&gt;&lt;li&gt;Literature for a Post-Roe World&lt;/li&gt;&lt;li&gt;You’re Not Allowed to Have the Best Sunscreens in the World&lt;/li&gt;&lt;li&gt;The Coming Rise of Abortion as a Crime&lt;/li&gt;&lt;li&gt;Ukraine Has Exposed Russia as a Not-So-Great Power&lt;/li&gt;&lt;li&gt;Photos of the Week: Lightning Rod, Crown Fountain, Lunar Transit&lt;/li&gt;&lt;li&gt;The Summer of Our Discontent&lt;/li&gt;&lt;li&gt;Is Biden a Man Out of Time?&lt;/li&gt;&lt;li&gt;Marcel the Shell Is the Hero the World Needs&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Ruling Is Going to Be Very, Very Expensive&lt;/li&gt;&lt;li&gt;Where France Differs on Abortion&lt;/li&gt;&lt;li&gt;What a Story of 1970s Abortion Activism Can Teach Us Today&lt;/li&gt;&lt;li&gt;Don’t Surround Yourself With Admirers&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-abortion Laws&lt;/li&gt;&lt;li&gt;We Now Know&lt;/li&gt;&lt;li&gt;The Abortion Pill Can Be Used Later Than the FDA Says&lt;/li&gt;&lt;li&gt;Don’t Forget That 43 Senate Republicans Let Trump Get Away With It&lt;/li&gt;&lt;li&gt;The Kate Bush Resurgence Is a Reminder That We Can Have Nice Things&lt;/li&gt;&lt;li&gt;America Is Growing Apart, Possibly for Good&lt;/li&gt;&lt;li&gt;America Is About to See Just How Pro-life Republicans Actually Are&lt;/li&gt;&lt;li&gt;The January 6 Committee’s Most Damning Revelation Yet&lt;/li&gt;&lt;li&gt;The Black Religion That’s Been Maligned for Centuries&lt;/li&gt;&lt;li&gt;The Conservative Women Radicalizing Amish Literature&lt;/li&gt;&lt;li&gt;Where to Turn When You Feel ‘at Odds With Being Human’&lt;/li&gt;&lt;li&gt;History Is Never Only One Person’s Story&lt;/li&gt;&lt;li&gt;Welcome to the Summer of Dancing and Darkness&lt;/li&gt;&lt;li&gt;The Most American Form of Architecture Isn’t Going Anywhere&lt;/li&gt;&lt;li&gt;The Dust Devils of Mars&lt;/li&gt;&lt;li&gt;How the Rest of the World Is Doing RTO&lt;/li&gt;&lt;li&gt;Scenes From Glastonbury 2022&lt;/li&gt;&lt;li&gt;Where Russia’s Declinist Rage Isn’t Enough&lt;/li&gt;&lt;li&gt;The 10-Year-Old Tweet That Still Defines the Internet&lt;/li&gt;&lt;li&gt;Have the Crypto Bosses Learned Anything At All?&lt;/li&gt;&lt;li&gt;Photos: Protests Against the Overturning of &lt;em&gt;Roe&lt;/em&gt;&lt;/li&gt;&lt;li&gt;This Fall Will Be a Vaccination Reboot&lt;/li&gt;&lt;li&gt;America Is Sliding Into the Long Pandemic Defeat&lt;/li&gt;&lt;li&gt;Five COVID Numbers That Don’t Make Sense Anymore&lt;/li&gt;&lt;li&gt;‘Greenwashing’ Isn’t About Consumers&lt;/li&gt;&lt;li&gt;Twice a Year, Reindeer Eyes Pull Off a Wonderful Magic Trick&lt;/li&gt;&lt;li&gt;Today: January 6 Chaos, Russia’s War Against Civilians&lt;/li&gt;&lt;li&gt;‘How You React Is the Only Thing You Can Control’&lt;/li&gt;&lt;li&gt;Roe Was Flawed. Dobbs Is Worse.&lt;/li&gt;&lt;li&gt;The Strawberry Festival at the End of the World&lt;/li&gt;&lt;li&gt;Air Travel Is a Disaster Right Now. Here’s Why.&lt;/li&gt;&lt;li&gt;They Really Did It&lt;/li&gt;&lt;li&gt;How a Recession Could Weaken the Work-From-Home Revolution&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;/ul&gt;
+                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
+                </content>
+<updated>2022-07-02T19:10:30Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-02.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-02.epub"/>
 </entry>
 <entry>
 <id>Economist</id>
@@ -38,22 +54,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-07-02.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="economist-2022-07-02.epub"/>
-</entry>
-<entry>
-<id>The Atlantic</id>
-<title>The Atlantic: 2 Jul, 2022</title>
-<summary>The Atlantic: 2 Jul, 2022 published at 2022-07-02 13:24PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;What Lies Behind That ‘No Trespass’ Sign&lt;/li&gt;&lt;li&gt;The January 6 Committee Is Going to Have the Final Word&lt;/li&gt;&lt;li&gt;The Accidental Trumpification of NATO&lt;/li&gt;&lt;li&gt;Rock Never Dies—But It Does Get Older and Wiser&lt;/li&gt;&lt;li&gt;A Portrait of the Artist Who Never Makes Art&lt;/li&gt;&lt;li&gt;What Comes After Roe?&lt;/li&gt;&lt;li&gt;Don’t Worry, It’s Not COVID&lt;/li&gt;&lt;li&gt;Leonard Cohen’s ‘Hallelujah’ Belongs to Everyone&lt;/li&gt;&lt;li&gt;Literature for a Post-Roe World&lt;/li&gt;&lt;li&gt;You’re Not Allowed to Have the Best Sunscreens in the World&lt;/li&gt;&lt;li&gt;The Coming Rise of Abortion as a Crime&lt;/li&gt;&lt;li&gt;Ukraine Has Exposed Russia as a Not-So-Great Power&lt;/li&gt;&lt;li&gt;Photos of the Week: Lightning Rod, Crown Fountain, Lunar Transit&lt;/li&gt;&lt;li&gt;The Summer of Our Discontent&lt;/li&gt;&lt;li&gt;Is Biden a Man Out of Time?&lt;/li&gt;&lt;li&gt;Marcel the Shell Is the Hero the World Needs&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Ruling Is Going to Be Very, Very Expensive&lt;/li&gt;&lt;li&gt;Where France Differs on Abortion&lt;/li&gt;&lt;li&gt;What a Story of 1970s Abortion Activism Can Teach Us Today&lt;/li&gt;&lt;li&gt;Don’t Surround Yourself With Admirers&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-abortion Laws&lt;/li&gt;&lt;li&gt;We Now Know&lt;/li&gt;&lt;li&gt;The Abortion Pill Can Be Used Later Than the FDA Says&lt;/li&gt;&lt;li&gt;Don’t Forget That 43 Senate Republicans Let Trump Get Away With It&lt;/li&gt;&lt;li&gt;The Kate Bush Resurgence Is a Reminder That We Can Have Nice Things&lt;/li&gt;&lt;li&gt;America Is Growing Apart, Possibly for Good&lt;/li&gt;&lt;li&gt;America Is About to See Just How Pro-life Republicans Actually Are&lt;/li&gt;&lt;li&gt;The January 6 Committee’s Most Damning Revelation Yet&lt;/li&gt;&lt;li&gt;The Black Religion That’s Been Maligned for Centuries&lt;/li&gt;&lt;li&gt;The Conservative Women Radicalizing Amish Literature&lt;/li&gt;&lt;li&gt;Where to Turn When You Feel ‘at Odds With Being Human’&lt;/li&gt;&lt;li&gt;History Is Never Only One Person’s Story&lt;/li&gt;&lt;li&gt;Welcome to the Summer of Dancing and Darkness&lt;/li&gt;&lt;li&gt;The Most American Form of Architecture Isn’t Going Anywhere&lt;/li&gt;&lt;li&gt;The Dust Devils of Mars&lt;/li&gt;&lt;li&gt;How the Rest of the World Is Doing RTO&lt;/li&gt;&lt;li&gt;Scenes From Glastonbury 2022&lt;/li&gt;&lt;li&gt;Where Russia’s Declinist Rage Isn’t Enough&lt;/li&gt;&lt;li&gt;The 10-Year-Old Tweet That Still Defines the Internet&lt;/li&gt;&lt;li&gt;Have the Crypto Bosses Learned Anything At All?&lt;/li&gt;&lt;li&gt;Photos: Protests Against the Overturning of &lt;em&gt;Roe&lt;/em&gt;&lt;/li&gt;&lt;li&gt;This Fall Will Be a Vaccination Reboot&lt;/li&gt;&lt;li&gt;America Is Sliding Into the Long Pandemic Defeat&lt;/li&gt;&lt;li&gt;Five COVID Numbers That Don’t Make Sense Anymore&lt;/li&gt;&lt;li&gt;‘Greenwashing’ Isn’t About Consumers&lt;/li&gt;&lt;li&gt;Twice a Year, Reindeer Eyes Pull Off a Wonderful Magic Trick&lt;/li&gt;&lt;li&gt;Today: January 6 Chaos, Russia’s War Against Civilians&lt;/li&gt;&lt;li&gt;‘How You React Is the Only Thing You Can Control’&lt;/li&gt;&lt;li&gt;Roe Was Flawed. Dobbs Is Worse.&lt;/li&gt;&lt;li&gt;The Strawberry Festival at the End of the World&lt;/li&gt;&lt;li&gt;Air Travel Is a Disaster Right Now. Here’s Why.&lt;/li&gt;&lt;li&gt;They Really Did It&lt;/li&gt;&lt;li&gt;How a Recession Could Weaken the Work-From-Home Revolution&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;/ul&gt;
-                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
-                </content>
-<updated>2022-07-02T13:24:04Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-02.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-02.epub"/>
 </entry>
 <entry>
 <id>POLITICO Magazine</id>
@@ -76,7 +76,7 @@
 <title>Nautilus: 1 Jul, 2022</title>
 <summary>Nautilus: 1 Jul, 2022 published at 2022-07-01 21:47PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Land of Extremes: Poetry of the Sonoran Desert&lt;/li&gt;&lt;li&gt;Feeling Stressed? Read a Poem&lt;/li&gt;&lt;li&gt;This Planetary Scientist Is Always Reaching for Something Big&lt;/li&gt;&lt;li&gt;Gravitational Waves Continue to Astound&lt;/li&gt;&lt;li&gt;Were It Not for Cosmic Good Fortune, We Wouldn’t Be Here&lt;/li&gt;&lt;li&gt;How Do We Get People Who Believe in Pseudoscience to Trust Science?&lt;/li&gt;&lt;li&gt;Mysteries Are to Be Embraced, But Also to Be Solved&lt;/li&gt;&lt;li&gt;How Are the Bees?&lt;/li&gt;&lt;li&gt;Reshuffled Rivers Bolster the Amazon’s Hyper-Biodiversity&lt;/li&gt;&lt;li&gt;Who Are the Scientists Here?&lt;/li&gt;&lt;li&gt;The Race to Explore the Ocean’s Twilight Zone&lt;/li&gt;&lt;li&gt;The Oceans Are Teeming with Unknown Species&lt;/li&gt;&lt;li&gt;The Giraffe Neck Evolved for Sexual Combat&lt;/li&gt;&lt;li&gt;Life’s First Peptides May Have Grown on RNA Strands&lt;/li&gt;&lt;li&gt;You Eat a Credit Card’s Worth of Plastic Every Week&lt;/li&gt;&lt;li&gt;Under Anesthesia, Where Do Our Minds Go?&lt;/li&gt;&lt;li&gt;Unlocking Mom’s Brain&lt;/li&gt;&lt;li&gt;Portrait of the Human as a Young Hominin&lt;/li&gt;&lt;li&gt;Thinking Like a Scientist Will Make You Happier&lt;/li&gt;&lt;li&gt;Don’t Give Up on Facts&lt;/li&gt;&lt;li&gt;Are You a Naïve Realist?&lt;/li&gt;&lt;li&gt;Moving Beyond Mimicry in Artificial Intelligence&lt;/li&gt;&lt;li&gt;What Oceanographers Can Learn From Their Animal Colleagues&lt;/li&gt;&lt;li&gt;The Secrets of the Blind Salamander&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Land of Extremes: Poetry of the Sonoran Desert&lt;/li&gt;&lt;li&gt;Feeling Stressed? Read a Poem&lt;/li&gt;&lt;li&gt;This Planetary Scientist Is Always Reaching for Something Big&lt;/li&gt;&lt;li&gt;Gravitational Waves Continue to Astound&lt;/li&gt;&lt;li&gt;Were It Not for Cosmic Good Fortune, We Wouldn’t Be Here&lt;/li&gt;&lt;li&gt;How Do We Get People Who Believe in Pseudoscience to Trust Science?&lt;/li&gt;&lt;li&gt;Mysteries Are to Be Embraced, But Also to Be Solved&lt;/li&gt;&lt;li&gt;How Are the Bees?&lt;/li&gt;&lt;li&gt;Reshuffled Rivers Bolster the Amazon’s Hyper-Biodiversity&lt;/li&gt;&lt;li&gt;Who Are the Scientists Here?&lt;/li&gt;&lt;li&gt;The Race to Explore the Ocean’s Twilight Zone&lt;/li&gt;&lt;li&gt;The Giraffe Neck Evolved for Sexual Combat&lt;/li&gt;&lt;li&gt;Life’s First Peptides May Have Grown on RNA Strands&lt;/li&gt;&lt;li&gt;You Eat a Credit Card’s Worth of Plastic Every Week&lt;/li&gt;&lt;li&gt;Under Anesthesia, Where Do Our Minds Go?&lt;/li&gt;&lt;li&gt;Unlocking Mom’s Brain&lt;/li&gt;&lt;li&gt;Portrait of the Human as a Young Hominin&lt;/li&gt;&lt;li&gt;Thinking Like a Scientist Will Make You Happier&lt;/li&gt;&lt;li&gt;Don’t Give Up on Facts&lt;/li&gt;&lt;li&gt;Are You a Naïve Realist?&lt;/li&gt;&lt;li&gt;Moving Beyond Mimicry in Artificial Intelligence&lt;/li&gt;&lt;li&gt;What Oceanographers Can Learn From Their Animal Colleagues&lt;/li&gt;&lt;li&gt;The Secrets of the Blind Salamander&lt;/li&gt;&lt;/ul&gt;
                 Nautilus is a different kind of science magazine. Our stories take you into the depths of science and spotlight its ripples in our lives and cultures. We believe any subject in science, no matter how complex, can be explained with clarity and vitality.
                 </content>
 <updated>2022-07-01T21:47:03Z</updated>
