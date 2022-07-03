@@ -132,6 +132,7 @@ recipes = [
         recipe="nautilus",
         slug="nautilus",
         src_ext="mobi",
+        target_ext=["epub"],
         category="magazines",
     ),
     Recipe(
