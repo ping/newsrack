@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-03T14:05:47Z</updated>
+<updated>2022-07-03T15:14:49Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>Vox</id>
 <title>Vox: 3 Jul, 2022</title>
-<summary>Vox: 3 Jul, 2022 published at 2022-07-03 14:00PM.</summary>
+<summary>Vox: 3 Jul, 2022 published at 2022-07-03 15:00PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The best $79 I ever spent: Paint for my very own bedroom walls&lt;/li&gt;&lt;li&gt;Not all religions oppose abortion&lt;/li&gt;&lt;li&gt;Could California become the first state to provide reparations?&lt;/li&gt;&lt;li&gt;Xi Jinping asserts his power on Hong Kong’s handover anniversary&lt;/li&gt;&lt;li&gt;The Supreme Court is keeping Trump’s promises&lt;/li&gt;&lt;li&gt;We’re battling a sleep loss epidemic. California has a plan to fight it.&lt;/li&gt;&lt;li&gt;One Good Thing: A Danish drama lets its girlbosses fail&lt;/li&gt;&lt;li&gt;10 ways to fix a broken Supreme Court&lt;/li&gt;&lt;li&gt;The many reasons the “just vote” rhetoric from Democrats falls flat&lt;/li&gt;&lt;li&gt;The Supreme Court overturns Roe v. Wade&lt;/li&gt;&lt;li&gt;“How do you go through the world and not be bitter and angry?”&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;A record number of abortion measures are on the ballot in 2022&lt;/li&gt;&lt;li&gt;“How do you go through the world and not be bitter and angry?”&lt;/li&gt;&lt;li&gt;The best $79 I ever spent: Paint for my very own bedroom walls&lt;/li&gt;&lt;li&gt;Not all religions oppose abortion&lt;/li&gt;&lt;li&gt;Could California become the first state to provide reparations?&lt;/li&gt;&lt;li&gt;Xi Jinping asserts his power on Hong Kong’s handover anniversary&lt;/li&gt;&lt;li&gt;The Supreme Court is keeping Trump’s promises&lt;/li&gt;&lt;li&gt;We’re battling a sleep loss epidemic. California has a plan to fight it.&lt;/li&gt;&lt;li&gt;One Good Thing: A Danish drama lets its girlbosses fail&lt;/li&gt;&lt;li&gt;10 ways to fix a broken Supreme Court&lt;/li&gt;&lt;/ul&gt;
                 General interest news site
                 </content>
-<updated>2022-07-03T14:00:00Z</updated>
+<updated>2022-07-03T15:00:00Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
