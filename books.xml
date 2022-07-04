@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-04T11:18:29Z</updated>
+<updated>2022-07-04T15:17:27Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -24,6 +24,22 @@
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-04.epub"/>
 </entry>
 <entry>
+<id>Five Books</id>
+<title>Five Books: 4 Jul, 2022</title>
+<summary>Five Books: 4 Jul, 2022 published at 2022-07-04 00:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Samuel A. Chambers on Money Books&lt;/li&gt;&lt;li&gt;Nick Enfield on Language and Post-Truth Books&lt;/li&gt;&lt;li&gt;Kevin G. Bethune on Design Books&lt;/li&gt;&lt;li&gt;Evan Lieberman on African Politics Books&lt;/li&gt;&lt;li&gt;Frank Wynne on The Best of World Literature: The 2022 International Booker Prize Shortlist&lt;/li&gt;&lt;li&gt;Myisha Cherry on Anger at Racial Injustice Books&lt;/li&gt;&lt;li&gt;Darren Collins on The Best Finance Books for Teens and Young Adults&lt;/li&gt;&lt;li&gt;Elizabeth Laird on The Best Historical Fiction: The 2022 Walter Scott Prize Shortlist&lt;/li&gt;&lt;li&gt;David George Haskell on Natural History Books&lt;/li&gt;&lt;li&gt;Gary Gerstle on Neoliberalism Books&lt;/li&gt;&lt;li&gt;Helen Scales on The Best Ocean Novels for 10-14 Year Olds&lt;/li&gt;&lt;li&gt;Jan Loeys on Market Concentration Books&lt;/li&gt;&lt;li&gt;Rosa Rankin-Gee on The Best Near-Future Dystopias&lt;/li&gt;&lt;li&gt;Cal Flyn on The Notable Novels of Summer 2022&lt;/li&gt;&lt;li&gt;Benno Gammerl on Queer History Books&lt;/li&gt;&lt;li&gt;Matthew Brookes &amp; Zack Raffin on Wanderlust Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Spring 2022&lt;/li&gt;&lt;li&gt;Carole Hillenbrand on The Best History Books: the 2022 Wolfson Prize Shortlist&lt;/li&gt;&lt;li&gt;Michele Cobb on The Best Audiobooks: the 2022 Audie Awards&lt;/li&gt;&lt;li&gt;Serhii Plokhy on Ukraine and Russia Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Early 2022&lt;/li&gt;&lt;li&gt;Cal Flyn on Notable Novels of Spring 2022&lt;/li&gt;&lt;li&gt;Jeffrey Archer on The Best Detective Fiction&lt;/li&gt;&lt;li&gt;Marion Turner on Best Medieval Historical Fiction&lt;/li&gt;&lt;/ul&gt;
+                Expert book recommendations
+                </content>
+<updated>2022-07-04T00:00:00Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-07-04.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="fivebooks-2022-07-04.epub"/>
+</entry>
+<entry>
 <id>Asian Review of Books</id>
 <title>Asian Review of Books: 3 Jul, 2022</title>
 <summary>Asian Review of Books: 3 Jul, 2022 published at 2022-07-03 22:54PM.</summary>
@@ -38,22 +54,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-07-03.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-07-03.epub"/>
-</entry>
-<entry>
-<id>Five Books</id>
-<title>Five Books: 2 Jul, 2022</title>
-<summary>Five Books: 2 Jul, 2022 published at 2022-07-02 00:00AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Nick Enfield on Language and Post-Truth Books&lt;/li&gt;&lt;li&gt;Kevin G. Bethune on Design Books&lt;/li&gt;&lt;li&gt;Evan Lieberman on African Politics Books&lt;/li&gt;&lt;li&gt;Frank Wynne on The Best of World Literature: The 2022 International Booker Prize Shortlist&lt;/li&gt;&lt;li&gt;Myisha Cherry on Anger at Racial Injustice Books&lt;/li&gt;&lt;li&gt;Darren Collins on The Best Finance Books for Teens and Young Adults&lt;/li&gt;&lt;li&gt;Elizabeth Laird on The Best Historical Fiction: The 2022 Walter Scott Prize Shortlist&lt;/li&gt;&lt;li&gt;David George Haskell on Natural History Books&lt;/li&gt;&lt;li&gt;Gary Gerstle on Neoliberalism Books&lt;/li&gt;&lt;li&gt;Helen Scales on The Best Ocean Novels for 10-14 Year Olds&lt;/li&gt;&lt;li&gt;Jan Loeys on Market Concentration Books&lt;/li&gt;&lt;li&gt;Rosa Rankin-Gee on The Best Near-Future Dystopias&lt;/li&gt;&lt;li&gt;Cal Flyn on The Notable Novels of Summer 2022&lt;/li&gt;&lt;li&gt;Benno Gammerl on Queer History Books&lt;/li&gt;&lt;li&gt;Matthew Brookes &amp; Zack Raffin on Wanderlust Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Spring 2022&lt;/li&gt;&lt;li&gt;Carole Hillenbrand on The Best History Books: the 2022 Wolfson Prize Shortlist&lt;/li&gt;&lt;li&gt;Michele Cobb on The Best Audiobooks: the 2022 Audie Awards&lt;/li&gt;&lt;li&gt;Serhii Plokhy on Ukraine and Russia Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Early 2022&lt;/li&gt;&lt;li&gt;Cal Flyn on Notable Novels of Spring 2022&lt;/li&gt;&lt;li&gt;Jeffrey Archer on The Best Detective Fiction&lt;/li&gt;&lt;li&gt;Marion Turner on Best Medieval Historical Fiction&lt;/li&gt;&lt;/ul&gt;
-                Expert book recommendations
-                </content>
-<updated>2022-07-02T00:00:00Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-07-02.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="fivebooks-2022-07-02.epub"/>
 </entry>
 <entry>
 <id>London Review of Books</id>
