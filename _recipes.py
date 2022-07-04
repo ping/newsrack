@@ -213,7 +213,7 @@ recipes = [
         slug="taipei-times",
         src_ext="mobi",
         target_ext=["epub"],
-        timeout=300,
+        timeout=600,
         category="news",
         enable_on=onlyat_hours(list(range(6, 14)), 8),
     ),
