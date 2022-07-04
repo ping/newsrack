@@ -42,11 +42,11 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-07-04.mobi",
-"published": 1656894160.0
+"published": 1656896954.0
 },
 {
 "filename": "channelnewsasia-2022-07-04.epub",
-"published": 1656894160.0
+"published": 1656896954.0
 }
 ],
 "The Diplomat": [
@@ -71,12 +71,12 @@
 ],
 "Financial Times": [
 {
-"filename": "ft-2022-07-03.mobi",
-"published": 1656889328.0
+"filename": "ft-2022-07-04.mobi",
+"published": 1656897625.0
 },
 {
-"filename": "ft-2022-07-03.epub",
-"published": 1656889328.0
+"filename": "ft-2022-07-04.epub",
+"published": 1656897625.0
 }
 ],
 "Five Books": [
@@ -92,31 +92,31 @@
 "Guardian": [
 {
 "filename": "guardian-2022-07-04.mobi",
-"published": 1656893938.0
+"published": 1656895333.0
 },
 {
 "filename": "guardian-2022-07-04.epub",
-"published": 1656893938.0
+"published": 1656895333.0
 }
 ],
 "JoongAng Daily": [
 {
-"filename": "joongang-daily-2022-07-03.mobi",
-"published": 1656845435.0
+"filename": "joongang-daily-2022-07-04.mobi",
+"published": 1656896931.0
 },
 {
-"filename": "joongang-daily-2022-07-03.epub",
-"published": 1656845435.0
+"filename": "joongang-daily-2022-07-04.epub",
+"published": 1656896931.0
 }
 ],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-07-04.mobi",
-"published": 1656894890.0
+"published": 1656898673.0
 },
 {
 "filename": "korea-herald-2022-07-04.epub",
-"published": 1656894890.0
+"published": 1656898673.0
 }
 ],
 "London Review of Books": [
@@ -162,11 +162,11 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-07-04.mobi",
-"published": 1656893857.0
+"published": 1656897426.0
 },
 {
 "filename": "nytimes-global-2022-07-04.epub",
-"published": 1656893857.0
+"published": 1656897426.0
 }
 ],
 "NY Times (Print)": [
@@ -232,11 +232,11 @@
 "Sydney Morning Herald": [
 {
 "filename": "sydney-morning-herald-2022-07-04.mobi",
-"published": 1656895433.0
+"published": 1656899107.0
 },
 {
 "filename": "sydney-morning-herald-2022-07-04.epub",
-"published": 1656895433.0
+"published": 1656899107.0
 }
 ],
 "Taipei Times": [
@@ -282,11 +282,11 @@
 "Washington Post": [
 {
 "filename": "wapo-2022-07-04.mobi",
-"published": 1656894956.0
+"published": 1656898059.0
 },
 {
 "filename": "wapo-2022-07-04.epub",
-"published": 1656894956.0
+"published": 1656898059.0
 }
 ],
 "Wired Magazine": [
@@ -299,5 +299,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1656895814
+"_generated": 1656899532
 }
