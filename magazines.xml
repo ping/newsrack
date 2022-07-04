@@ -2,11 +2,59 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-04T07:18:02Z</updated>
+<updated>2022-07-04T11:18:29Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>Economist</id>
+<title>Economist: 2 Jul, 2022</title>
+<summary>Economist: 2 Jul, 2022 published at 2022-07-04 10:31AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Politics&lt;/li&gt;&lt;li&gt;Business&lt;/li&gt;&lt;li&gt;KAL’s cartoon&lt;/li&gt;&lt;li&gt;How to win the long war&lt;/li&gt;&lt;li&gt;After the shattering of Roe&lt;/li&gt;&lt;li&gt;The reckoning&lt;/li&gt;&lt;li&gt;A new order in Asia&lt;/li&gt;&lt;li&gt;Mexico’s shame&lt;/li&gt;&lt;li&gt;On artificial intelligence, greener buildings, inventory cycles, the subjunctive, cheap wine&lt;/li&gt;&lt;li&gt;Linda Thomas-Greenfield believes the UN Security Council should make better use of technology&lt;/li&gt;&lt;li&gt;John Barrasso wants America to lead the world in nuclear energy&lt;/li&gt;&lt;li&gt;On and on&lt;/li&gt;&lt;li&gt;The fallout from overturning Roe&lt;/li&gt;&lt;li&gt;An end-of-term report&lt;/li&gt;&lt;li&gt;Win one, lose one&lt;/li&gt;&lt;li&gt;Where have all the lifeguards gone?&lt;/li&gt;&lt;li&gt;Questions of trust&lt;/li&gt;&lt;li&gt;A tragedy in Texas&lt;/li&gt;&lt;li&gt;The courage of a conservative&lt;/li&gt;&lt;li&gt;100,000 missing Mexicans&lt;/li&gt;&lt;li&gt;Rain strain&lt;/li&gt;&lt;li&gt;Open and shut&lt;/li&gt;&lt;li&gt;On the edge&lt;/li&gt;&lt;li&gt;Feeling the chill&lt;/li&gt;&lt;li&gt;Indomitable valley&lt;/li&gt;&lt;li&gt;Memory loss&lt;/li&gt;&lt;li&gt;Three steps to heaven&lt;/li&gt;&lt;li&gt;Low school&lt;/li&gt;&lt;li&gt;Holes in the great firewall&lt;/li&gt;&lt;li&gt;Speakeasies v snitches&lt;/li&gt;&lt;li&gt;Echoes of war&lt;/li&gt;&lt;li&gt;Digital stevedores&lt;/li&gt;&lt;li&gt;One shield to guard them all?&lt;/li&gt;&lt;li&gt;Safer at last&lt;/li&gt;&lt;li&gt;The great moustache comeback&lt;/li&gt;&lt;li&gt;Back in business&lt;/li&gt;&lt;li&gt;Nest of vipers&lt;/li&gt;&lt;li&gt;The quiet German&lt;/li&gt;&lt;li&gt;Changing friends&lt;/li&gt;&lt;li&gt;Jacket, tie, nationalism&lt;/li&gt;&lt;li&gt;The Poles’ position&lt;/li&gt;&lt;li&gt;Under the deep green sea&lt;/li&gt;&lt;li&gt;Getting picky&lt;/li&gt;&lt;li&gt;The neverendum&lt;/li&gt;&lt;li&gt;Home economics&lt;/li&gt;&lt;li&gt;Another blow for the Met&lt;/li&gt;&lt;li&gt;Vanishing Londoners&lt;/li&gt;&lt;li&gt;Boots off&lt;/li&gt;&lt;li&gt;Boz and Jez&lt;/li&gt;&lt;li&gt;Severe complications&lt;/li&gt;&lt;li&gt;The great Silicon Valley shake-out&lt;/li&gt;&lt;li&gt;The VC-industrial complex&lt;/li&gt;&lt;li&gt;A concoction a day&lt;/li&gt;&lt;li&gt;The Sakhalin exception&lt;/li&gt;&lt;li&gt;Beach reads for business folk&lt;/li&gt;&lt;li&gt;Mars unwrapped&lt;/li&gt;&lt;li&gt;A tale of three cities&lt;/li&gt;&lt;li&gt;Power outrage&lt;/li&gt;&lt;li&gt;The top of the hill&lt;/li&gt;&lt;li&gt;The price of accuracy&lt;/li&gt;&lt;li&gt;Creeping controls&lt;/li&gt;&lt;li&gt;Sweet dealmaking&lt;/li&gt;&lt;li&gt;Terms of surrender&lt;/li&gt;&lt;li&gt;Forward misguidance&lt;/li&gt;&lt;li&gt;Butterflies of the soul&lt;/li&gt;&lt;li&gt;Smell you later, alligator&lt;/li&gt;&lt;li&gt;A little something in the bank&lt;/li&gt;&lt;li&gt;No more “Swan Lake”&lt;/li&gt;&lt;li&gt;The pity of tiny feet&lt;/li&gt;&lt;li&gt;Warning from hell&lt;/li&gt;&lt;li&gt;Power to the people&lt;/li&gt;&lt;li&gt;Eyes wide shut&lt;/li&gt;&lt;li&gt;The miracle of writing&lt;/li&gt;&lt;li&gt;Economic data, commodities and markets&lt;/li&gt;&lt;li&gt;Quotas on it&lt;/li&gt;&lt;li&gt;How consumer drones are changing warfare&lt;/li&gt;&lt;li&gt;Why Britain is extending controversial tariffs on steel&lt;/li&gt;&lt;li&gt;King of cocaine&lt;/li&gt;&lt;/ul&gt;
+                Global news and current affairs from a European perspective. Best downloaded on Friday mornings (GMT)
+                </content>
+<updated>2022-07-04T10:31:09Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-07-04.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="economist-2022-07-04.epub"/>
+</entry>
+<entry>
+<id>The Atlantic</id>
+<title>The Atlantic: 4 Jul, 2022</title>
+<summary>The Atlantic: 4 Jul, 2022 published at 2022-07-04 10:15AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;America Is in Denial&lt;/li&gt;&lt;li&gt;What’s Better in Britain&lt;/li&gt;&lt;li&gt;America’s Necessary Myth for the World&lt;/li&gt;&lt;li&gt;Ars Poetica With Mother and Dogs&lt;/li&gt;&lt;li&gt;Truly Humbled to Be the Author of This Article&lt;/li&gt;&lt;li&gt;North Carolina Is a Warning&lt;/li&gt;&lt;li&gt;If It Can Happen in San Francisco, It Can Happen Anywhere&lt;/li&gt;&lt;li&gt;What Lies Behind That ‘No Trespass’ Sign&lt;/li&gt;&lt;li&gt;The January 6 Committee Is Going to Have the Final Word&lt;/li&gt;&lt;li&gt;The Accidental Trumpification of NATO&lt;/li&gt;&lt;li&gt;Rock Never Dies—But It Does Get Older and Wiser&lt;/li&gt;&lt;li&gt;A Portrait of the Artist Who Never Makes Art&lt;/li&gt;&lt;li&gt;What Comes After Roe?&lt;/li&gt;&lt;li&gt;Don’t Worry, It’s Not COVID&lt;/li&gt;&lt;li&gt;Leonard Cohen’s ‘Hallelujah’ Belongs to Everyone&lt;/li&gt;&lt;li&gt;Literature for a Post-Roe World&lt;/li&gt;&lt;li&gt;You’re Not Allowed to Have the Best Sunscreens in the World&lt;/li&gt;&lt;li&gt;The Coming Rise of Abortion as a Crime&lt;/li&gt;&lt;li&gt;Ukraine Has Exposed Russia as a Not-So-Great Power&lt;/li&gt;&lt;li&gt;Photos of the Week: Lightning Rod, Crown Fountain, Lunar Transit&lt;/li&gt;&lt;li&gt;The Summer of Our Discontent&lt;/li&gt;&lt;li&gt;Is Biden a Man Out of Time?&lt;/li&gt;&lt;li&gt;Marcel the Shell Is the Hero the World Needs&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Ruling Is Going to Be Very, Very Expensive&lt;/li&gt;&lt;li&gt;Where France Differs on Abortion&lt;/li&gt;&lt;li&gt;The Abortion Pill Can Be Used Later Than the FDA Says&lt;/li&gt;&lt;li&gt;Don’t Surround Yourself With Admirers&lt;/li&gt;&lt;li&gt;Lessons From 40 Men in Egalitarian Relationships&lt;/li&gt;&lt;li&gt;America Is About to See Just How Pro-life Republicans Actually Are&lt;/li&gt;&lt;li&gt;The January 6 Committee’s Most Damning Revelation Yet&lt;/li&gt;&lt;li&gt;What a Story of 1970s Abortion Activism Can Teach Us Today&lt;/li&gt;&lt;li&gt;The Kate Bush Resurgence Is a Reminder That We Can Have Nice Things&lt;/li&gt;&lt;li&gt;The Black Religion That’s Been Maligned for Centuries&lt;/li&gt;&lt;li&gt;The Conservative Women Radicalizing Amish Literature&lt;/li&gt;&lt;li&gt;Where to Turn When You Feel ‘at Odds With Being Human’&lt;/li&gt;&lt;li&gt;Welcome to the Summer of Dancing and Darkness&lt;/li&gt;&lt;li&gt;The Dust Devils of Mars&lt;/li&gt;&lt;li&gt;How the Rest of the World Is Doing RTO&lt;/li&gt;&lt;li&gt;Scenes From Glastonbury 2022&lt;/li&gt;&lt;li&gt;Where Russia’s Declinist Rage Isn’t Enough&lt;/li&gt;&lt;li&gt;The 10-Year-Old Tweet That Still Defines the Internet&lt;/li&gt;&lt;li&gt;This Fall Will Be a Vaccination Reboot&lt;/li&gt;&lt;li&gt;America Is Sliding Into the Long Pandemic Defeat&lt;/li&gt;&lt;li&gt;‘Greenwashing’ Isn’t About Consumers&lt;/li&gt;&lt;li&gt;Twice a Year, Reindeer Eyes Pull Off a Wonderful Magic Trick&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-abortion Laws&lt;/li&gt;&lt;li&gt;We Now Know&lt;/li&gt;&lt;li&gt;Today: January 6 Chaos, Russia’s War Against Civilians&lt;/li&gt;&lt;li&gt;‘How You React Is the Only Thing You Can Control’&lt;/li&gt;&lt;li&gt;Roe Was Flawed. Dobbs Is Worse.&lt;/li&gt;&lt;li&gt;The Strawberry Festival at the End of the World&lt;/li&gt;&lt;li&gt;They Really Did It&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;/ul&gt;
+                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
+                </content>
+<updated>2022-07-04T10:15:56Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-04.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-04.epub"/>
+</entry>
+<entry>
+<id>New Yorker</id>
+<title>New Yorker: July 11 &amp; 18, 2022</title>
+<summary>New Yorker: July 11 &amp; 18, 2022 published at 2022-07-04 10:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;The Truth About My Father&lt;/li&gt;&lt;li&gt;Emmanuel Carrère Writes His Way Through a Breakdown&lt;/li&gt;&lt;li&gt;“Call Me Ishmael,” an Early Story by Shirley Jackson&lt;/li&gt;&lt;li&gt;“Arrivals”&lt;/li&gt;&lt;li&gt;“A King Alone”&lt;/li&gt;&lt;li&gt;“Peking Duck”&lt;/li&gt;&lt;li&gt;Mine Field&lt;/li&gt;&lt;li&gt;Wide World of Disney&lt;/li&gt;&lt;li&gt;In the Beforetime&lt;/li&gt;&lt;li&gt;Night Driving&lt;/li&gt;&lt;li&gt;The Many Confrontations of Jean Rhys&lt;/li&gt;&lt;li&gt;Briefly Noted&lt;/li&gt;&lt;li&gt;Cristina Rivera Garza’s Bodies Politic&lt;/li&gt;&lt;li&gt;The Rediscovery of Halldór Laxness&lt;/li&gt;&lt;li&gt;A Frequently Misunderstood American Master&lt;/li&gt;&lt;li&gt;The Supreme Court’s Conservatives Have Asserted Their Power&lt;/li&gt;&lt;li&gt;The Wes Andersons of Sign-Making&lt;/li&gt;&lt;li&gt;Selling Lies with Jon Hamm&lt;/li&gt;&lt;li&gt;DALL-E, Make Me Another Picasso, Please&lt;/li&gt;&lt;li&gt;Rebellion of the Speech Bubble!&lt;/li&gt;&lt;li&gt;The Crossword: Friday, July 1, 2022&lt;/li&gt;&lt;li&gt;“The Dead”&lt;/li&gt;&lt;li&gt;“A Theory of Human Origin”&lt;/li&gt;&lt;li&gt;Arturo O’Farrill’s “Fandango at the Wall”&lt;/li&gt;&lt;li&gt;Evelia’s Tamales, from Pushcart to Brick and Mortar&lt;/li&gt;&lt;li&gt;Letters from our Readers&lt;/li&gt;&lt;/ul&gt;
+                Articles of the week's New Yorker magazine
+                </content>
+<updated>2022-07-04T10:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="newyorker-2022-07-04.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="newyorker-2022-07-04.epub"/>
+</entry>
 <entry>
 <id>The Diplomat</id>
 <title>The Diplomat: 4 Jul, 2022</title>
@@ -40,22 +88,6 @@
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-03.epub"/>
 </entry>
 <entry>
-<id>The Atlantic</id>
-<title>The Atlantic: 3 Jul, 2022</title>
-<summary>The Atlantic: 3 Jul, 2022 published at 2022-07-03 15:21PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Ars Poetica With Mother and Dogs&lt;/li&gt;&lt;li&gt;Truly Humbled to Be the Author of This Article&lt;/li&gt;&lt;li&gt;North Carolina Is a Warning&lt;/li&gt;&lt;li&gt;If It Can Happen in San Francisco, It Can Happen Anywhere&lt;/li&gt;&lt;li&gt;What Lies Behind That ‘No Trespass’ Sign&lt;/li&gt;&lt;li&gt;The January 6 Committee Is Going to Have the Final Word&lt;/li&gt;&lt;li&gt;The Accidental Trumpification of NATO&lt;/li&gt;&lt;li&gt;Rock Never Dies—But It Does Get Older and Wiser&lt;/li&gt;&lt;li&gt;A Portrait of the Artist Who Never Makes Art&lt;/li&gt;&lt;li&gt;What Comes After Roe?&lt;/li&gt;&lt;li&gt;Don’t Worry, It’s Not COVID&lt;/li&gt;&lt;li&gt;Leonard Cohen’s ‘Hallelujah’ Belongs to Everyone&lt;/li&gt;&lt;li&gt;Literature for a Post-Roe World&lt;/li&gt;&lt;li&gt;You’re Not Allowed to Have the Best Sunscreens in the World&lt;/li&gt;&lt;li&gt;The Coming Rise of Abortion as a Crime&lt;/li&gt;&lt;li&gt;Ukraine Has Exposed Russia as a Not-So-Great Power&lt;/li&gt;&lt;li&gt;Photos of the Week: Lightning Rod, Crown Fountain, Lunar Transit&lt;/li&gt;&lt;li&gt;The Summer of Our Discontent&lt;/li&gt;&lt;li&gt;Is Biden a Man Out of Time?&lt;/li&gt;&lt;li&gt;Marcel the Shell Is the Hero the World Needs&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Ruling Is Going to Be Very, Very Expensive&lt;/li&gt;&lt;li&gt;Where France Differs on Abortion&lt;/li&gt;&lt;li&gt;What a Story of 1970s Abortion Activism Can Teach Us Today&lt;/li&gt;&lt;li&gt;Don’t Surround Yourself With Admirers&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-abortion Laws&lt;/li&gt;&lt;li&gt;The Abortion Pill Can Be Used Later Than the FDA Says&lt;/li&gt;&lt;li&gt;Lessons From 40 Men in Egalitarian Relationships&lt;/li&gt;&lt;li&gt;America Is About to See Just How Pro-life Republicans Actually Are&lt;/li&gt;&lt;li&gt;The January 6 Committee’s Most Damning Revelation Yet&lt;/li&gt;&lt;li&gt;The Kate Bush Resurgence Is a Reminder That We Can Have Nice Things&lt;/li&gt;&lt;li&gt;The Black Religion That’s Been Maligned for Centuries&lt;/li&gt;&lt;li&gt;The Conservative Women Radicalizing Amish Literature&lt;/li&gt;&lt;li&gt;Where to Turn When You Feel ‘at Odds With Being Human’&lt;/li&gt;&lt;li&gt;Welcome to the Summer of Dancing and Darkness&lt;/li&gt;&lt;li&gt;The Dust Devils of Mars&lt;/li&gt;&lt;li&gt;How the Rest of the World Is Doing RTO&lt;/li&gt;&lt;li&gt;Scenes From Glastonbury 2022&lt;/li&gt;&lt;li&gt;Where Russia’s Declinist Rage Isn’t Enough&lt;/li&gt;&lt;li&gt;The 10-Year-Old Tweet That Still Defines the Internet&lt;/li&gt;&lt;li&gt;This Fall Will Be a Vaccination Reboot&lt;/li&gt;&lt;li&gt;America Is Sliding Into the Long Pandemic Defeat&lt;/li&gt;&lt;li&gt;‘Greenwashing’ Isn’t About Consumers&lt;/li&gt;&lt;li&gt;Twice a Year, Reindeer Eyes Pull Off a Wonderful Magic Trick&lt;/li&gt;&lt;li&gt;We Now Know&lt;/li&gt;&lt;li&gt;Today: January 6 Chaos, Russia’s War Against Civilians&lt;/li&gt;&lt;li&gt;‘How You React Is the Only Thing You Can Control’&lt;/li&gt;&lt;li&gt;Roe Was Flawed. Dobbs Is Worse.&lt;/li&gt;&lt;li&gt;The Strawberry Festival at the End of the World&lt;/li&gt;&lt;li&gt;They Really Did It&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;/ul&gt;
-                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
-                </content>
-<updated>2022-07-03T15:21:17Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-03.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-03.epub"/>
-</entry>
-<entry>
 <id>POLITICO Magazine</id>
 <title>POLITICO Magazine: 3 Jul, 2022</title>
 <summary>POLITICO Magazine: 3 Jul, 2022 published at 2022-07-03 13:02PM.</summary>
@@ -70,22 +102,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-07-03.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-07-03.epub"/>
-</entry>
-<entry>
-<id>Economist</id>
-<title>Economist: 2 Jul, 2022</title>
-<summary>Economist: 2 Jul, 2022 published at 2022-07-03 10:50AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Politics&lt;/li&gt;&lt;li&gt;Business&lt;/li&gt;&lt;li&gt;KAL’s cartoon&lt;/li&gt;&lt;li&gt;How to win the long war&lt;/li&gt;&lt;li&gt;After the shattering of Roe&lt;/li&gt;&lt;li&gt;The reckoning&lt;/li&gt;&lt;li&gt;A new order in Asia&lt;/li&gt;&lt;li&gt;Mexico’s shame&lt;/li&gt;&lt;li&gt;On artificial intelligence, greener buildings, inventory cycles, the subjunctive, cheap wine&lt;/li&gt;&lt;li&gt;Linda Thomas-Greenfield believes the UN Security Council should make better use of technology&lt;/li&gt;&lt;li&gt;John Barrasso wants America to lead the world in nuclear energy&lt;/li&gt;&lt;li&gt;On and on&lt;/li&gt;&lt;li&gt;The fallout from overturning Roe&lt;/li&gt;&lt;li&gt;An end-of-term report&lt;/li&gt;&lt;li&gt;Win one, lose one&lt;/li&gt;&lt;li&gt;Where have all the lifeguards gone?&lt;/li&gt;&lt;li&gt;Questions of trust&lt;/li&gt;&lt;li&gt;A tragedy in Texas&lt;/li&gt;&lt;li&gt;The courage of a conservative&lt;/li&gt;&lt;li&gt;100,000 missing Mexicans&lt;/li&gt;&lt;li&gt;Rain strain&lt;/li&gt;&lt;li&gt;Open and shut&lt;/li&gt;&lt;li&gt;On the edge&lt;/li&gt;&lt;li&gt;Feeling the chill&lt;/li&gt;&lt;li&gt;Indomitable valley&lt;/li&gt;&lt;li&gt;Memory loss&lt;/li&gt;&lt;li&gt;Three steps to heaven&lt;/li&gt;&lt;li&gt;Low school&lt;/li&gt;&lt;li&gt;Holes in the great firewall&lt;/li&gt;&lt;li&gt;Speakeasies v snitches&lt;/li&gt;&lt;li&gt;Echoes of war&lt;/li&gt;&lt;li&gt;Digital stevedores&lt;/li&gt;&lt;li&gt;One shield to guard them all?&lt;/li&gt;&lt;li&gt;Safer at last&lt;/li&gt;&lt;li&gt;The great moustache comeback&lt;/li&gt;&lt;li&gt;Back in business&lt;/li&gt;&lt;li&gt;Nest of vipers&lt;/li&gt;&lt;li&gt;The quiet German&lt;/li&gt;&lt;li&gt;Changing friends&lt;/li&gt;&lt;li&gt;Jacket, tie, nationalism&lt;/li&gt;&lt;li&gt;The Poles’ position&lt;/li&gt;&lt;li&gt;Under the deep green sea&lt;/li&gt;&lt;li&gt;Getting picky&lt;/li&gt;&lt;li&gt;The neverendum&lt;/li&gt;&lt;li&gt;Home economics&lt;/li&gt;&lt;li&gt;Another blow for the Met&lt;/li&gt;&lt;li&gt;Vanishing Londoners&lt;/li&gt;&lt;li&gt;Boots off&lt;/li&gt;&lt;li&gt;Boz and Jez&lt;/li&gt;&lt;li&gt;Severe complications&lt;/li&gt;&lt;li&gt;The great Silicon Valley shake-out&lt;/li&gt;&lt;li&gt;The VC-industrial complex&lt;/li&gt;&lt;li&gt;A concoction a day&lt;/li&gt;&lt;li&gt;The Sakhalin exception&lt;/li&gt;&lt;li&gt;Beach reads for business folk&lt;/li&gt;&lt;li&gt;Mars unwrapped&lt;/li&gt;&lt;li&gt;A tale of three cities&lt;/li&gt;&lt;li&gt;Power outrage&lt;/li&gt;&lt;li&gt;The top of the hill&lt;/li&gt;&lt;li&gt;The price of accuracy&lt;/li&gt;&lt;li&gt;Creeping controls&lt;/li&gt;&lt;li&gt;Sweet dealmaking&lt;/li&gt;&lt;li&gt;Terms of surrender&lt;/li&gt;&lt;li&gt;Forward misguidance&lt;/li&gt;&lt;li&gt;Butterflies of the soul&lt;/li&gt;&lt;li&gt;Smell you later, alligator&lt;/li&gt;&lt;li&gt;A little something in the bank&lt;/li&gt;&lt;li&gt;No more “Swan Lake”&lt;/li&gt;&lt;li&gt;The pity of tiny feet&lt;/li&gt;&lt;li&gt;Warning from hell&lt;/li&gt;&lt;li&gt;Power to the people&lt;/li&gt;&lt;li&gt;Eyes wide shut&lt;/li&gt;&lt;li&gt;The miracle of writing&lt;/li&gt;&lt;li&gt;Economic data, commodities and markets&lt;/li&gt;&lt;li&gt;Quotas on it&lt;/li&gt;&lt;li&gt;How consumer drones are changing warfare&lt;/li&gt;&lt;li&gt;Why Britain is extending controversial tariffs on steel&lt;/li&gt;&lt;li&gt;King of cocaine&lt;/li&gt;&lt;/ul&gt;
-                Global news and current affairs from a European perspective. Best downloaded on Friday mornings (GMT)
-                </content>
-<updated>2022-07-03T10:50:56Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-07-03.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="economist-2022-07-03.epub"/>
 </entry>
 <entry>
 <id>Nautilus</id>
@@ -150,22 +166,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nature-2022-06-29.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nature-2022-06-29.epub"/>
-</entry>
-<entry>
-<id>New Yorker</id>
-<title>New Yorker: July 4, 2022</title>
-<summary>New Yorker: July 4, 2022 published at 2022-06-27 10:00AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Swamps Can Protect Against Climate Change, If We Only Let Them&lt;/li&gt;&lt;li&gt;The Weird, Analog Delights of Foley Sound Effects&lt;/li&gt;&lt;li&gt;Does Hungary Offer a Glimpse of Our Authoritarian Future?&lt;/li&gt;&lt;li&gt;The Gospel According to Mavis Staples&lt;/li&gt;&lt;li&gt;How “Elvis” Plays the King&lt;/li&gt;&lt;li&gt;Briefly Noted&lt;/li&gt;&lt;li&gt;Modern Art and the Esteem Machine&lt;/li&gt;&lt;li&gt;Anything Goes at the Ojai Festival&lt;/li&gt;&lt;li&gt;Harmonic Lightscapes in Two Furtively Spiritual Plays&lt;/li&gt;&lt;li&gt;We’re Not Going Back to the Time Before Roe. We’re Going Somewhere Worse&lt;/li&gt;&lt;li&gt;A Reporter in Right-Wing “Crazy Town”&lt;/li&gt;&lt;li&gt;How to Split Custody of a One-Inch-Tall Talking Shell&lt;/li&gt;&lt;li&gt;Missed Connections at the Capitol&lt;/li&gt;&lt;li&gt;Delegates to the World’s Only Truly Universal Global Organization&lt;/li&gt;&lt;li&gt;“To Sunland”&lt;/li&gt;&lt;li&gt;The Crossword: Thursday, June 23, 2022&lt;/li&gt;&lt;li&gt;“Fracture Story”&lt;/li&gt;&lt;li&gt;“The Bread, the Butter, the Orange Marmalade”&lt;/li&gt;&lt;li&gt;An Exploration of Chinese Identity, at Asia Society&lt;/li&gt;&lt;li&gt;Making Magic, at Place des Fêtes&lt;/li&gt;&lt;li&gt;Letters from our Readers&lt;/li&gt;&lt;/ul&gt;
-                Articles of the week's New Yorker magazine
-                </content>
-<updated>2022-06-27T10:00:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="newyorker-2022-06-27.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="newyorker-2022-06-27.epub"/>
 </entry>
 <entry>
 <id>TIME</id>
