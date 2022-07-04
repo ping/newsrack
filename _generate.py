@@ -56,7 +56,6 @@ job_log_filename = "job_log.json"
 publish_site = args.publish_site
 if not publish_site.endswith("/"):
     publish_site += "/"
-max_retry_attempts = 1
 
 catalog_path = "catalog.xml"
 parsed_site = urlparse(publish_site)
@@ -210,13 +209,28 @@ for recipe in recipes:
                 regenerate_recipes_slugs
                 and recipe.slug in regenerate_recipes_slugs
             ):
-                # run recipe
-                exit_code = subprocess.call(
-                    cmd,
-                    timeout=recipe.timeout,
-                    stdout=sys.stdout,
-                    stderr=sys.stderr,
-                )
+                for attempt in range(recipe.retry_attempts + 1):
+                    try:
+                        # run recipe
+                        exit_code = subprocess.call(
+                            cmd,
+                            timeout=recipe.timeout,
+                            stdout=sys.stdout,
+                            stderr=sys.stderr,
+                        )
+                        break
+                    except subprocess.TimeoutExpired:
+                        if attempt < recipe.retry_attempts:
+                            recipe_elapsed_time = timedelta(
+                                seconds=timer() - recipe_start_time
+                            )
+                            logger.warning(
+                                f"TimeoutExpired fetching '{recipe.name}' "
+                                f"after {humanize.precisedelta(recipe_elapsed_time)}. Retrying..."
+                            )
+                            time.sleep(2)
+                            continue
+                        raise
                 curr_job_log[recipe.name] = int(time.time())
             else:
                 # use cache
@@ -229,10 +243,10 @@ for recipe in recipes:
                             continue
                         ebook_url = urljoin(publish_site, cached_item["filename"])
                         timeout = 120
-                        for attempt in range(1 + max_retry_attempts):
+                        for attempt in range(1 + recipe.retry_attempts):
                             try:
                                 ebook_res = cache_sess.get(
-                                    ebook_url, timeout=120, stream=True
+                                    ebook_url, timeout=timeout, stream=True
                                 )
                                 ebook_res.raise_for_status()
                                 with open(
@@ -245,7 +259,7 @@ for recipe in recipes:
                                 job_status = ":outbox_tray: From cache"
                                 break
                             except requests.exceptions.ReadTimeout as err:
-                                if attempt < max_retry_attempts:
+                                if attempt < recipe.retry_attempts:
                                     logger.warning(f"ReadTimeout for {ebook_url}")
                                     timeout += 30
                                     time.sleep(2)
@@ -267,12 +281,28 @@ for recipe in recipes:
                 else:
                     # not cached, so run it anyway to ensure that we try to have a copy
                     logger.warning(f'"{recipe.name}" is not cached.')
-                    exit_code = subprocess.call(
-                        cmd,
-                        timeout=recipe.timeout,
-                        stdout=sys.stdout,
-                        stderr=sys.stderr,
-                    )
+                    for attempt in range(recipe.retry_attempts + 1):
+                        try:
+                            # run recipe
+                            exit_code = subprocess.call(
+                                cmd,
+                                timeout=recipe.timeout,
+                                stdout=sys.stdout,
+                                stderr=sys.stderr,
+                            )
+                            break
+                        except subprocess.TimeoutExpired:
+                            if attempt < recipe.retry_attempts:
+                                recipe_elapsed_time = timedelta(
+                                    seconds=timer() - recipe_start_time
+                                )
+                                logger.warning(
+                                    f"TimeoutExpired fetching '{recipe.name}' "
+                                    f"after {humanize.precisedelta(recipe_elapsed_time)}. Retrying..."
+                                )
+                                time.sleep(2)
+                                continue
+                            raise
                     curr_job_log[recipe.name] = int(time.time())
 
         except subprocess.TimeoutExpired:

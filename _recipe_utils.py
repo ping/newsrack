@@ -25,6 +25,9 @@ class Recipe:
     enable_on: Union[
         bool, Callable[[], bool]
     ] = True  # determines when to run the recipe
+    retry_attempts: int = (
+        1  # number of attempts to retry on TimeoutExpired, ReadTimeout
+    )
     run_interval_in_days: float = 0  # kinda like Calibre's every X days
     drift_in_hours: float = (
         1  # allowance for schedule drift since scheduler is not precise
