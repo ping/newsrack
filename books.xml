@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-04T04:19:14Z</updated>
+<updated>2022-07-04T07:18:02Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -24,6 +24,22 @@
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-07-03.epub"/>
 </entry>
 <entry>
+<id>NY Times Books</id>
+<title>NY Times Books: 3 Jul, 2022</title>
+<summary>NY Times Books: 3 Jul, 2022 published at 2022-07-03 20:26PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Richard Taruskin Was Classical Music’s Towering Intellectual&lt;/li&gt;&lt;li&gt;Review: ‘Take No Names,’ by Daniel Nieh&lt;/li&gt;&lt;li&gt;Review: ‘The Mermaid of Black Conch,’ by Monique Roffey&lt;/li&gt;&lt;li&gt;Review: ‘Fellowship Point,’ by Alice Elliott Dark&lt;/li&gt;&lt;li&gt;Review: “George Michael: A Life,” by James Gavin&lt;/li&gt;&lt;li&gt;Richard Taruskin, Vigorously Polemical Musicologist, Dies at 77&lt;/li&gt;&lt;li&gt;A Chameleon Flies From ‘The Blacklist’ to ‘The Kite Runner’&lt;/li&gt;&lt;li&gt;Seeing Norma: The Conflicted Life of the Woman at the Center of Roe v. Wade&lt;/li&gt;&lt;li&gt;New in Paperback: Susan Orlean and Brandon Taylor&lt;/li&gt;&lt;li&gt;A Novel About Brilliant Young Game Designers&lt;/li&gt;&lt;li&gt;‘Honey and Spice,’ by Bolu Babalola&lt;/li&gt;&lt;li&gt;How TikTok Became a Best Seller Machine&lt;/li&gt;&lt;li&gt;New Novels That Weave Past and Present&lt;/li&gt;&lt;li&gt;Review: ‘Night of the Living Rez,’ by Morgan Talty&lt;/li&gt;&lt;li&gt;Review: “Mordechai Anielewicz: No to Despair” by Rachel Hausfater&lt;/li&gt;&lt;li&gt;Alice Elliott Dark By the Book Interview&lt;/li&gt;&lt;li&gt;Leila Mottley Graduated From High School and Wrote a Novel&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Candace Bushnell, Hanya Yanagihara and More on Their Favorite New York City Novels&lt;/li&gt;&lt;li&gt;Poem: Beyond Theity, Ity Idiom/Dear Faith&lt;/li&gt;&lt;li&gt;New Books to Read in July&lt;/li&gt;&lt;li&gt;‘Why We Did It’ Is a Dark Ride on the ‘Republican Road to Hell’&lt;/li&gt;&lt;li&gt;Revisiting Justice Stephen Breyer’s Curious (and Strangely Timed) Defense of the Court&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Lisbon, Portugal&lt;/li&gt;&lt;li&gt;Naked No More: A TV Rodent Teaches Families About Tolerance&lt;/li&gt;&lt;/ul&gt;
+                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
+                </content>
+<updated>2022-07-03T20:26:52Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-03.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-03.epub"/>
+</entry>
+<entry>
 <id>Five Books</id>
 <title>Five Books: 2 Jul, 2022</title>
 <summary>Five Books: 2 Jul, 2022 published at 2022-07-02 00:00AM.</summary>
@@ -38,22 +54,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-07-02.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="fivebooks-2022-07-02.epub"/>
-</entry>
-<entry>
-<id>NY Times Books</id>
-<title>NY Times Books: 1 Jul, 2022</title>
-<summary>NY Times Books: 1 Jul, 2022 published at 2022-07-01 22:05PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Review: ‘Take No Names,’ by Daniel Nieh&lt;/li&gt;&lt;li&gt;New in Paperback: Susan Orlean and Brandon Taylor&lt;/li&gt;&lt;li&gt;A Novel About Brilliant Young Game Designers&lt;/li&gt;&lt;li&gt;Richard Taruskin, Vigorously Polemical Musicologist, Dies at 77&lt;/li&gt;&lt;li&gt;‘Honey and Spice,’ by Bolu Babalola&lt;/li&gt;&lt;li&gt;How TikTok Became a Best Seller Machine&lt;/li&gt;&lt;li&gt;A Chameleon Flies From ‘The Blacklist’ to ‘The Kite Runner’&lt;/li&gt;&lt;li&gt;New Novels That Weave Past and Present&lt;/li&gt;&lt;li&gt;Review: ‘Night of the Living Rez,’ by Morgan Talty&lt;/li&gt;&lt;li&gt;Review: “Mordechai Anielewicz: No to Despair” by Rachel Hausfater&lt;/li&gt;&lt;li&gt;Alice Elliott Dark By the Book Interview&lt;/li&gt;&lt;li&gt;Leila Mottley Graduated From High School and Wrote a Novel&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Candace Bushnell, Hanya Yanagihara and More on Their Favorite New York City Novels&lt;/li&gt;&lt;li&gt;Poem: Beyond Theity, Ity Idiom/Dear Faith&lt;/li&gt;&lt;li&gt;New Books to Read in July&lt;/li&gt;&lt;li&gt;‘Why We Did It’ Is a Dark Ride on the ‘Republican Road to Hell’&lt;/li&gt;&lt;li&gt;Revisiting Justice Stephen Breyer’s Curious (and Strangely Timed) Defense of the Court&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Lisbon, Portugal&lt;/li&gt;&lt;li&gt;Naked No More: A TV Rodent Teaches Families About Tolerance&lt;/li&gt;&lt;li&gt;Book Review: “The Measure” by Nikki Erlick&lt;/li&gt;&lt;li&gt;Newly Published, From Yan Lianke to Hurricane Maria&lt;/li&gt;&lt;li&gt;In ‘Thrust,’ Talking Animals and Others Take Aim at Humanity’s Cruelty&lt;/li&gt;&lt;li&gt;Review: ‘Elsewhere,’ by Alexis Schaitkin&lt;/li&gt;&lt;li&gt;Book Review: Ways of Being by James Bridle&lt;/li&gt;&lt;/ul&gt;
-                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
-                </content>
-<updated>2022-07-01T22:05:23Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-01.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-01.epub"/>
 </entry>
 <entry>
 <id>London Review of Books</id>
