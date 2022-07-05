@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-05T04:13:00Z</updated>
+<updated>2022-07-05T07:18:02Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -54,6 +54,22 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-07-04.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="economist-2022-07-04.epub"/>
+</entry>
+<entry>
+<id>The Third Pole</id>
+<title>The Third Pole: 5 Jul, 2022</title>
+<summary>The Third Pole: 5 Jul, 2022 published at 2022-07-04 16:08PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;In Vietnam’s Mekong Delta, sand mining means lost homes and fortunes&lt;/li&gt;&lt;li&gt;How much progress has been made on Kyrgyz-Uzbek water cooperation?&lt;/li&gt;&lt;li&gt;Bonn climate talks end with ‘almost empty pages’&lt;/li&gt;&lt;li&gt;Farmers in mountainous areas of Pakistan feel the heat&lt;/li&gt;&lt;li&gt;Interview: ‘The narrative around hydro in Pakistan remains superficial’&lt;/li&gt;&lt;/ul&gt;
+                The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there.
+                </content>
+<updated>2022-07-04T16:08:42Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-07-04.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="thirdpole-2022-07-04.epub"/>
 </entry>
 <entry>
 <id>The Atlantic</id>
@@ -134,22 +150,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="poetry-magazine-2022-07-01.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="poetry-magazine-2022-07-01.epub"/>
-</entry>
-<entry>
-<id>The Third Pole</id>
-<title>The Third Pole: 30 Jun, 2022</title>
-<summary>The Third Pole: 30 Jun, 2022 published at 2022-06-29 12:26PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;How much progress has been made on Kyrgyz-Uzbek water cooperation?&lt;/li&gt;&lt;li&gt;Bonn climate talks end with ‘almost empty pages’&lt;/li&gt;&lt;li&gt;Farmers in mountainous areas of Pakistan feel the heat&lt;/li&gt;&lt;li&gt;Interview: ‘The narrative around hydro in Pakistan remains superficial’&lt;/li&gt;&lt;/ul&gt;
-                The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there.
-                </content>
-<updated>2022-06-29T12:26:19Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-06-29.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="thirdpole-2022-06-29.epub"/>
 </entry>
 <entry>
 <id>Nature</id>
