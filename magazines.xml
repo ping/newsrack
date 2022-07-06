@@ -2,17 +2,49 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-06T09:17:46Z</updated>
+<updated>2022-07-06T11:19:05Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
+<id>The Atlantic</id>
+<title>The Atlantic: 6 Jul, 2022</title>
+<summary>The Atlantic: 6 Jul, 2022 published at 2022-07-06 10:01AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Is There a Better Way to Propose?&lt;/li&gt;&lt;li&gt;The Game Is (Probably) Up for Boris Johnson&lt;/li&gt;&lt;li&gt;Maybe Ridding the World of Superheroes Isn’t Such a Bad Idea&lt;/li&gt;&lt;li&gt;A Nation of Hostages&lt;/li&gt;&lt;li&gt;The Future of Mud&lt;/li&gt;&lt;li&gt;Uber Pool Is a Zombie&lt;/li&gt;&lt;li&gt;Should Americans Have a Right to Absolute Privacy?&lt;/li&gt;&lt;li&gt;Eight Books in Which Ignorance Is the Point&lt;/li&gt;&lt;li&gt;Letter: The NIH Has Responded Forcefully to COVID-19&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;A Crisis Historian Has Some Bad News for Us&lt;/li&gt;&lt;li&gt;The Origin of Vibes&lt;/li&gt;&lt;li&gt;Let the Rich Have Their Supertalls&lt;/li&gt;&lt;li&gt;How to Forgive Ourselves for What We Can’t Change&lt;/li&gt;&lt;li&gt;Actually Good News About Voting for a Change&lt;/li&gt;&lt;li&gt;Hell Yeah, Tom Cruise&lt;/li&gt;&lt;li&gt;Books for a Sun-Addled Mind&lt;/li&gt;&lt;li&gt;America Is in Denial&lt;/li&gt;&lt;li&gt;What’s Better in Britain&lt;/li&gt;&lt;li&gt;America’s Necessary Myth for the World&lt;/li&gt;&lt;li&gt;Ars Poetica With Mother and Dogs&lt;/li&gt;&lt;li&gt;Truly Humbled to Be the Author of This Article&lt;/li&gt;&lt;li&gt;North Carolina Is a Warning&lt;/li&gt;&lt;li&gt;If It Can Happen in San Francisco, It Can Happen Anywhere&lt;/li&gt;&lt;li&gt;What Lies Behind That ‘No Trespass’ Sign&lt;/li&gt;&lt;li&gt;You’re Not Allowed to Have the Best Sunscreens in the World&lt;/li&gt;&lt;li&gt;What Comes After Roe?&lt;/li&gt;&lt;li&gt;Is Biden a Man Out of Time?&lt;/li&gt;&lt;li&gt;The January 6 Committee’s Most Damning Revelation Yet&lt;/li&gt;&lt;li&gt;Leonard Cohen’s ‘Hallelujah’ Belongs to Everyone&lt;/li&gt;&lt;li&gt;Marcel the Shell Is the Hero the World Needs&lt;/li&gt;&lt;li&gt;What a Story of 1970s Abortion Activism Can Teach Us Today&lt;/li&gt;&lt;li&gt;The Kate Bush Resurgence Is a Reminder That We Can Have Nice Things&lt;/li&gt;&lt;li&gt;The Black Religion That’s Been Maligned for Centuries&lt;/li&gt;&lt;li&gt;The Accidental Trumpification of NATO&lt;/li&gt;&lt;li&gt;Photos of the Week: Lightning Rod, Crown Fountain, Lunar Transit&lt;/li&gt;&lt;li&gt;The Dust Devils of Mars&lt;/li&gt;&lt;li&gt;How the Rest of the World Is Doing RTO&lt;/li&gt;&lt;li&gt;Don’t Worry, It’s Not COVID&lt;/li&gt;&lt;li&gt;The Abortion Pill Can Be Used Later Than the FDA Says&lt;/li&gt;&lt;li&gt;This Fall Will Be a Vaccination Reboot&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Ruling Is Going to Be Very, Very Expensive&lt;/li&gt;&lt;li&gt;‘Greenwashing’ Isn’t About Consumers&lt;/li&gt;&lt;li&gt;Twice a Year, Reindeer Eyes Pull Off a Wonderful Magic Trick&lt;/li&gt;&lt;li&gt;Rock Never Dies—But It Does Get Older and Wiser&lt;/li&gt;&lt;li&gt;The Summer of Our Discontent&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-abortion Laws&lt;/li&gt;&lt;li&gt;We Now Know&lt;/li&gt;&lt;li&gt;Today: January 6 Chaos, Russia’s War Against Civilians&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;/ul&gt;
+                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
+                </content>
+<updated>2022-07-06T10:01:56Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-06.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-06.epub"/>
+</entry>
+<entry>
+<id>ProPublica</id>
+<title>ProPublica: 6 Jul, 2022</title>
+<summary>ProPublica: 6 Jul, 2022 published at 2022-07-06 10:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;DOJ Investigating Texas’ Operation Lone Star for Alleged Civil Rights Violations&lt;/li&gt;&lt;li&gt;How Foreign Private Equity Hooked New England’s Fishing Industry&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Decision Could Hamper Regulators’ Ability to Protect the Public&lt;/li&gt;&lt;li&gt;Federal Patient Privacy Law Does Not Cover Most Period-Tracking Apps&lt;/li&gt;&lt;li&gt;Google Allowed a Sanctioned Russian Ad Company to Harvest User Data for Months&lt;/li&gt;&lt;li&gt;How We Fight Back When Officials Resist Releasing Information You Have a Right to Know&lt;/li&gt;&lt;li&gt;Congress Investigates Portable Generator Manufacturers Following Carbon Monoxide Deaths&lt;/li&gt;&lt;li&gt;The Other Cancel Culture: How a Public University Is Bowing to a Conservative Crusade&lt;/li&gt;&lt;li&gt;Army Corps of Engineers to Order New Study of Grain Elevator That Could Harm Black Heritage Sites&lt;/li&gt;&lt;li&gt;Help Us Learn About Sheltered Workshops in Missouri&lt;/li&gt;&lt;li&gt;The Polluter Just Got a Million-Dollar Fine. That Won’t Cure This Woman’s Rare Cancer.&lt;/li&gt;&lt;li&gt;School Board Candidates Who Criticized the Hiring of a Black DEI Educator Lose Their Elections&lt;/li&gt;&lt;li&gt;Ten Ways Billionaires Avoid Taxes on an Epic Scale&lt;/li&gt;&lt;li&gt;“We’re at a Crisis Point”: NY Attorney General Hearing Spotlights Child Mental Health Care Failures&lt;/li&gt;&lt;li&gt;$53.3 Million. 33 Jobs. No Plan. That’s How Mississippi Lawmakers Are Spending BP Oil Spill Money.&lt;/li&gt;&lt;li&gt;How Susquehanna’s Jeff Yass Avoided $1 Billion in Taxes&lt;/li&gt;&lt;li&gt;Facebook Finally Agrees to Eliminate Tool That Enabled Discriminatory Advertising&lt;/li&gt;&lt;li&gt;Louisiana Limits Solitary Confinement for Youth&lt;/li&gt;&lt;li&gt;Utah Officials Called It the “Year of Water.” Special Interests Still Resist Conservation.&lt;/li&gt;&lt;li&gt;Meet the Billionaire and Rising GOP Mega-Donor Who’s Gaming the Tax System&lt;/li&gt;&lt;/ul&gt;
+                ProPublica is an independent, nonprofit newsroom that produces investigative journalism with moral force.
+                </content>
+<updated>2022-07-06T10:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="propublica-2022-07-06.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="propublica-2022-07-06.epub"/>
+</entry>
+<entry>
 <id>POLITICO Magazine</id>
 <title>POLITICO Magazine: 6 Jul, 2022</title>
 <summary>POLITICO Magazine: 6 Jul, 2022 published at 2022-07-06 08:30AM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Opinion | The Jan. 6 Hearings May Be Undermining the Justice Department&lt;/li&gt;&lt;li&gt;Opinion | How the Founders Intended to Check the Supreme Court’s Power&lt;/li&gt;&lt;li&gt;Opinion | The Rudy Giuliani Joke Isn’t Funny Anymore&lt;/li&gt;&lt;li&gt;There Are 11 Types of Donald Trump Enablers. Which One Are You?&lt;/li&gt;&lt;li&gt;The Real Reason Washington Ignored Kavanaugh’s Would-Be Killer&lt;/li&gt;&lt;li&gt;From Chelsea Clinton to David Petraeus, Here’s What Politicos Are Reading This Summer&lt;/li&gt;&lt;li&gt;The Michigan Democrat Who Could Solve Her Party’s Identity Crisis&lt;/li&gt;&lt;li&gt;The Supreme Court Just Rolled Democracy Back. You Can Measure How Much.&lt;/li&gt;&lt;li&gt;‘It Was All Just a Show’: Confessions of a Republican Campaign Hit Man&lt;/li&gt;&lt;li&gt;Opinion | A Bold Plan to Preserve Access to Abortion&lt;/li&gt;&lt;li&gt;Opinion | A Grand Compromise on Abortion&lt;/li&gt;&lt;li&gt;Trump Is in Trouble and He Knows It&lt;/li&gt;&lt;li&gt;Opinion | Why Are Democrats Letting Republicans Steamroll Them?&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Opinion | Bombshell Jan. 6 Testimony Could Hurt a Justice Department Prosecution&lt;/li&gt;&lt;li&gt;Opinion | How the Founders Intended to Check the Supreme Court’s Power&lt;/li&gt;&lt;li&gt;Opinion | The Rudy Giuliani Joke Isn’t Funny Anymore&lt;/li&gt;&lt;li&gt;There Are 11 Types of Donald Trump Enablers. Which One Are You?&lt;/li&gt;&lt;li&gt;The Real Reason Washington Ignored Kavanaugh’s Would-Be Killer&lt;/li&gt;&lt;li&gt;From Chelsea Clinton to David Petraeus, Here’s What Politicos Are Reading This Summer&lt;/li&gt;&lt;li&gt;The Michigan Democrat Who Could Solve Her Party’s Identity Crisis&lt;/li&gt;&lt;li&gt;The Supreme Court Just Rolled Democracy Back. You Can Measure How Much.&lt;/li&gt;&lt;li&gt;‘It Was All Just a Show’: Confessions of a Republican Campaign Hit Man&lt;/li&gt;&lt;li&gt;Opinion | A Bold Plan to Preserve Access to Abortion&lt;/li&gt;&lt;li&gt;Opinion | A Grand Compromise on Abortion&lt;/li&gt;&lt;li&gt;Trump Is in Trouble and He Knows It&lt;/li&gt;&lt;li&gt;Opinion | Why Are Democrats Letting Republicans Steamroll Them?&lt;/li&gt;&lt;/ul&gt;
                 News, Analysis and Opinion from POLITICO
                 </content>
 <updated>2022-07-06T08:30:00Z</updated>
@@ -54,38 +86,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-07-06.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="thirdpole-2022-07-06.epub"/>
-</entry>
-<entry>
-<id>The Atlantic</id>
-<title>The Atlantic: 6 Jul, 2022</title>
-<summary>The Atlantic: 6 Jul, 2022 published at 2022-07-06 00:48AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The Game Is (Probably) Up for Boris Johnson&lt;/li&gt;&lt;li&gt;Maybe Ridding the World of Superheroes Isn’t Such a Bad Idea&lt;/li&gt;&lt;li&gt;A Nation of Hostages&lt;/li&gt;&lt;li&gt;The Future of Mud&lt;/li&gt;&lt;li&gt;Uber Pool Is a Zombie&lt;/li&gt;&lt;li&gt;Should Americans Have a Right to Absolute Privacy?&lt;/li&gt;&lt;li&gt;Eight Books in Which Ignorance Is the Point&lt;/li&gt;&lt;li&gt;Letter: The NIH Has Responded Forcefully to COVID-19&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;A Crisis Historian Has Some Bad News for Us&lt;/li&gt;&lt;li&gt;The Origin of Vibes&lt;/li&gt;&lt;li&gt;Let the Rich Have Their Supertalls&lt;/li&gt;&lt;li&gt;How to Forgive Ourselves for What We Can’t Change&lt;/li&gt;&lt;li&gt;Actually Good News About Voting for a Change&lt;/li&gt;&lt;li&gt;Hell Yeah, Tom Cruise&lt;/li&gt;&lt;li&gt;Books for a Sun-Addled Mind&lt;/li&gt;&lt;li&gt;America Is in Denial&lt;/li&gt;&lt;li&gt;What’s Better in Britain&lt;/li&gt;&lt;li&gt;America’s Necessary Myth for the World&lt;/li&gt;&lt;li&gt;Ars Poetica With Mother and Dogs&lt;/li&gt;&lt;li&gt;Truly Humbled to Be the Author of This Article&lt;/li&gt;&lt;li&gt;North Carolina Is a Warning&lt;/li&gt;&lt;li&gt;If It Can Happen in San Francisco, It Can Happen Anywhere&lt;/li&gt;&lt;li&gt;What Lies Behind That ‘No Trespass’ Sign&lt;/li&gt;&lt;li&gt;The January 6 Committee Is Going to Have the Final Word&lt;/li&gt;&lt;li&gt;You’re Not Allowed to Have the Best Sunscreens in the World&lt;/li&gt;&lt;li&gt;What Comes After Roe?&lt;/li&gt;&lt;li&gt;Is Biden a Man Out of Time?&lt;/li&gt;&lt;li&gt;The January 6 Committee’s Most Damning Revelation Yet&lt;/li&gt;&lt;li&gt;Leonard Cohen’s ‘Hallelujah’ Belongs to Everyone&lt;/li&gt;&lt;li&gt;Marcel the Shell Is the Hero the World Needs&lt;/li&gt;&lt;li&gt;What a Story of 1970s Abortion Activism Can Teach Us Today&lt;/li&gt;&lt;li&gt;The Kate Bush Resurgence Is a Reminder That We Can Have Nice Things&lt;/li&gt;&lt;li&gt;The Black Religion That’s Been Maligned for Centuries&lt;/li&gt;&lt;li&gt;The Accidental Trumpification of NATO&lt;/li&gt;&lt;li&gt;Photos of the Week: Lightning Rod, Crown Fountain, Lunar Transit&lt;/li&gt;&lt;li&gt;The Dust Devils of Mars&lt;/li&gt;&lt;li&gt;How the Rest of the World Is Doing RTO&lt;/li&gt;&lt;li&gt;Don’t Worry, It’s Not COVID&lt;/li&gt;&lt;li&gt;The Abortion Pill Can Be Used Later Than the FDA Says&lt;/li&gt;&lt;li&gt;This Fall Will Be a Vaccination Reboot&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Ruling Is Going to Be Very, Very Expensive&lt;/li&gt;&lt;li&gt;‘Greenwashing’ Isn’t About Consumers&lt;/li&gt;&lt;li&gt;Twice a Year, Reindeer Eyes Pull Off a Wonderful Magic Trick&lt;/li&gt;&lt;li&gt;Rock Never Dies—But It Does Get Older and Wiser&lt;/li&gt;&lt;li&gt;The Summer of Our Discontent&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-abortion Laws&lt;/li&gt;&lt;li&gt;We Now Know&lt;/li&gt;&lt;li&gt;Today: January 6 Chaos, Russia’s War Against Civilians&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;/ul&gt;
-                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
-                </content>
-<updated>2022-07-06T00:48:35Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-06.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-06.epub"/>
-</entry>
-<entry>
-<id>ProPublica</id>
-<title>ProPublica: 5 Jul, 2022</title>
-<summary>ProPublica: 5 Jul, 2022 published at 2022-07-05 21:25PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The Supreme Court’s EPA Decision Could Hamper Regulators’ Ability to Protect the Public&lt;/li&gt;&lt;li&gt;Federal Patient Privacy Law Does Not Cover Most Period-Tracking Apps&lt;/li&gt;&lt;li&gt;Google Allowed a Sanctioned Russian Ad Company to Harvest User Data for Months&lt;/li&gt;&lt;li&gt;How We Fight Back When Officials Resist Releasing Information You Have a Right to Know&lt;/li&gt;&lt;li&gt;Congress Investigates Portable Generator Manufacturers Following Carbon Monoxide Deaths&lt;/li&gt;&lt;li&gt;The Other Cancel Culture: How a Public University Is Bowing to a Conservative Crusade&lt;/li&gt;&lt;li&gt;Army Corps of Engineers to Order New Study of Grain Elevator That Could Harm Black Heritage Sites&lt;/li&gt;&lt;li&gt;Help Us Learn About Sheltered Workshops in Missouri&lt;/li&gt;&lt;li&gt;The Polluter Just Got a Million-Dollar Fine. That Won’t Cure This Woman’s Rare Cancer.&lt;/li&gt;&lt;li&gt;School Board Candidates Who Criticized the Hiring of a Black DEI Educator Lose Their Elections&lt;/li&gt;&lt;li&gt;Ten Ways Billionaires Avoid Taxes on an Epic Scale&lt;/li&gt;&lt;li&gt;“We’re at a Crisis Point”: NY Attorney General Hearing Spotlights Child Mental Health Care Failures&lt;/li&gt;&lt;li&gt;$53.3 Million. 33 Jobs. No Plan. That’s How Mississippi Lawmakers Are Spending BP Oil Spill Money.&lt;/li&gt;&lt;li&gt;How Susquehanna’s Jeff Yass Avoided $1 Billion in Taxes&lt;/li&gt;&lt;li&gt;Facebook Finally Agrees to Eliminate Tool That Enabled Discriminatory Advertising&lt;/li&gt;&lt;li&gt;Louisiana Limits Solitary Confinement for Youth&lt;/li&gt;&lt;li&gt;Utah Officials Called It the “Year of Water.” Special Interests Still Resist Conservation.&lt;/li&gt;&lt;li&gt;Meet the Billionaire and Rising GOP Mega-Donor Who’s Gaming the Tax System&lt;/li&gt;&lt;li&gt;Why the Black Educator Forced Out Over Bogus Critical Race Theory Claims Agreed to Share Her Story&lt;/li&gt;&lt;li&gt;A Sheriff’s Captain Called Our Investigation an “Entertaining Piece of Fiction.” An Inspector General Disagrees.&lt;/li&gt;&lt;/ul&gt;
-                ProPublica is an independent, nonprofit newsroom that produces investigative journalism with moral force.
-                </content>
-<updated>2022-07-05T21:25:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="propublica-2022-07-05.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="propublica-2022-07-05.epub"/>
 </entry>
 <entry>
 <id>Vox</id>
