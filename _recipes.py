@@ -178,6 +178,13 @@ recipes = [
         category="magazines",
     ),
     Recipe(
+        recipe="propublica",
+        slug="propublica",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="magazines",
+    ),
+    Recipe(
         recipe="politico-magazine",
         slug="politico-magazine",
         src_ext="mobi",

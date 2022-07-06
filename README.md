@@ -34,11 +34,12 @@ In alphabetical order:
 7. [The New Yorker](https://www.newyorker.com/)
 8. [Poetry](https://www.poetryfoundation.org/poetrymagazine)
 9. [Politico](https://www.politico.com/)
-10. [Scientific American](https://www.scientificamerican.com/)
-11. [The Third Pole](https://www.thethirdpole.net/)
-12. [Time Magazine](https://time.com/magazine/)
-13. [Vox](https://www.vox.com/)
-14. [Wired](https://www.wired.com/magazine/)
+10. [ProPublica](https://www.propublica.org/)
+11. [Scientific American](https://www.scientificamerican.com/)
+12. [The Third Pole](https://www.thethirdpole.net/)
+13. [Time Magazine](https://time.com/magazine/)
+14. [Vox](https://www.vox.com/)
+15. [Wired](https://www.wired.com/magazine/)
 
 ### Books
 1. [Asian Review of Books](https://asianreviewofbooks.com)
