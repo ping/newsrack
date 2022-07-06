@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-06T19:21:08Z</updated>
+<updated>2022-07-06T23:28:03Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>Vox</id>
 <title>Vox: 6 Jul, 2022</title>
-<summary>Vox: 6 Jul, 2022 published at 2022-07-06 19:00PM.</summary>
+<summary>Vox: 6 Jul, 2022 published at 2022-07-06 22:30PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The inside story at Meta as it moves beyond Facebook&lt;/li&gt;&lt;li&gt;What’s going on with Georgia’s Trump investigation?&lt;/li&gt;&lt;li&gt;How China’s relationship to Hollywood has shaped the movies&lt;/li&gt;&lt;li&gt;The Supreme Court overturns Roe v. Wade&lt;/li&gt;&lt;li&gt;Should I delete my period app? And other post-Roe privacy questions.&lt;/li&gt;&lt;li&gt;How to be a little less judgmental&lt;/li&gt;&lt;li&gt;How conservatism conquered America — and corrupted itself&lt;/li&gt;&lt;li&gt;The man giving the California GOP its best shot at statewide office in years&lt;/li&gt;&lt;li&gt;Buffalo, seven weeks after the massacre&lt;/li&gt;&lt;li&gt;Inside Ukraine’s lobbying blitz in Washington&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Democrats are trying to resurrect part of Build Back Better — again&lt;/li&gt;&lt;li&gt;Is this the political end for Boris Johnson?&lt;/li&gt;&lt;li&gt;The inside story at Meta as it moves beyond Facebook&lt;/li&gt;&lt;li&gt;What’s going on with Georgia’s Trump investigation?&lt;/li&gt;&lt;li&gt;How China’s relationship to Hollywood has shaped the movies&lt;/li&gt;&lt;li&gt;The Supreme Court overturns Roe v. Wade&lt;/li&gt;&lt;li&gt;Should I delete my period app? And other post-Roe privacy questions.&lt;/li&gt;&lt;li&gt;How to be a little less judgmental&lt;/li&gt;&lt;li&gt;How conservatism conquered America — and corrupted itself&lt;/li&gt;&lt;li&gt;The man giving the California GOP its best shot at statewide office in years&lt;/li&gt;&lt;/ul&gt;
                 General interest news site
                 </content>
-<updated>2022-07-06T19:00:00Z</updated>
+<updated>2022-07-06T22:30:00Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
@@ -24,20 +24,52 @@
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-06.epub"/>
 </entry>
 <entry>
+<id>Nautilus</id>
+<title>Nautilus: 6 Jul, 2022</title>
+<summary>Nautilus: 6 Jul, 2022 published at 2022-07-06 22:15PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Land of Extremes: Poetry of the Sonoran Desert&lt;/li&gt;&lt;li&gt;Feeling Stressed? Read a Poem&lt;/li&gt;&lt;li&gt;This Planetary Scientist Is Always Reaching for Something Big&lt;/li&gt;&lt;li&gt;Gravitational Waves Continue to Astound&lt;/li&gt;&lt;li&gt;Were It Not for Cosmic Good Fortune, We Wouldn’t Be Here&lt;/li&gt;&lt;li&gt;A Surprising Side of Carl Sagan&lt;/li&gt;&lt;li&gt;How Do We Get People Who Believe in Pseudoscience to Trust Science?&lt;/li&gt;&lt;li&gt;Mysteries Are to Be Embraced, But Also to Be Solved&lt;/li&gt;&lt;li&gt;How Are the Bees?&lt;/li&gt;&lt;li&gt;Reshuffled Rivers Bolster the Amazon’s Hyper-Biodiversity&lt;/li&gt;&lt;li&gt;Who Are the Scientists Here?&lt;/li&gt;&lt;li&gt;The Race to Explore the Ocean’s Twilight Zone&lt;/li&gt;&lt;li&gt;The Giraffe Neck Evolved for Sexual Combat&lt;/li&gt;&lt;li&gt;Print Edition 43&lt;/li&gt;&lt;li&gt;Print Edition 42&lt;/li&gt;&lt;li&gt;Print Edition 41&lt;/li&gt;&lt;li&gt;Print Edition 40&lt;/li&gt;&lt;li&gt;Life’s First Peptides May Have Grown on RNA Strands&lt;/li&gt;&lt;li&gt;Under Anesthesia, Where Do Our Minds Go?&lt;/li&gt;&lt;li&gt;Unlocking Mom’s Brain&lt;/li&gt;&lt;li&gt;Portrait of the Human as a Young Hominin&lt;/li&gt;&lt;li&gt;Thinking Like a Scientist Will Make You Happier&lt;/li&gt;&lt;li&gt;Don’t Give Up on Facts&lt;/li&gt;&lt;li&gt;Are You a Naïve Realist?&lt;/li&gt;&lt;li&gt;Moving Beyond Mimicry in Artificial Intelligence&lt;/li&gt;&lt;li&gt;Overthrowing the Patriarchy Through Ecstatic Sex&lt;/li&gt;&lt;li&gt;What Oceanographers Can Learn From Their Animal Colleagues&lt;/li&gt;&lt;li&gt;The Secrets of the Blind Salamander&lt;/li&gt;&lt;/ul&gt;
+                Nautilus is a different kind of science magazine. Our stories take you into the depths of science and spotlight its ripples in our lives and cultures. We believe any subject in science, no matter how complex, can be explained with clarity and vitality.
+                </content>
+<updated>2022-07-06T22:15:04Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nautilus-2022-07-06.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nautilus-2022-07-06.epub"/>
+</entry>
+<entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 6 Jul, 2022</title>
-<summary>The Atlantic: 6 Jul, 2022 published at 2022-07-06 18:34PM.</summary>
+<summary>The Atlantic: 6 Jul, 2022 published at 2022-07-06 21:44PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Too Many Pets, Not Enough Vets&lt;/li&gt;&lt;li&gt;College Football Is Cannibalizing Itself&lt;/li&gt;&lt;li&gt;Hybrid Work Is Doomed&lt;/li&gt;&lt;li&gt;The World Is Turning Back to Coal&lt;/li&gt;&lt;li&gt;Let’s Use Chicago Rules to Beat Russia&lt;/li&gt;&lt;li&gt;King of the River&lt;/li&gt;&lt;li&gt;We’ve Never Seen Mars Quite Like This&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;A Simple Fix for a Better Marriage Proposal&lt;/li&gt;&lt;li&gt;The Game Is (Probably) Up for Boris Johnson&lt;/li&gt;&lt;li&gt;Maybe Ridding the World of Superheroes Isn’t Such a Bad Idea&lt;/li&gt;&lt;li&gt;A Nation of Hostages&lt;/li&gt;&lt;li&gt;The Future of Mud&lt;/li&gt;&lt;li&gt;Uber Pool Is a Zombie&lt;/li&gt;&lt;li&gt;Should Americans Have a Right to Absolute Privacy?&lt;/li&gt;&lt;li&gt;Eight Books in Which Ignorance Is the Point&lt;/li&gt;&lt;li&gt;Letter: The NIH Has Responded Forcefully to COVID-19&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;A Crisis Historian Has Some Bad News for Us&lt;/li&gt;&lt;li&gt;The Origin of Vibes&lt;/li&gt;&lt;li&gt;Let the Rich Have Their Supertalls&lt;/li&gt;&lt;li&gt;How to Forgive Ourselves for What We Can’t Change&lt;/li&gt;&lt;li&gt;Actually Good News About Voting for a Change&lt;/li&gt;&lt;li&gt;Hell Yeah, Tom Cruise&lt;/li&gt;&lt;li&gt;Books for a Sun-Addled Mind&lt;/li&gt;&lt;li&gt;You’re Not Allowed to Have the Best Sunscreens in the World&lt;/li&gt;&lt;li&gt;What Comes After Roe?&lt;/li&gt;&lt;li&gt;Is Biden a Man Out of Time?&lt;/li&gt;&lt;li&gt;Leonard Cohen’s ‘Hallelujah’ Belongs to Everyone&lt;/li&gt;&lt;li&gt;Marcel the Shell Is the Hero the World Needs&lt;/li&gt;&lt;li&gt;What a Story of 1970s Abortion Activism Can Teach Us Today&lt;/li&gt;&lt;li&gt;The Kate Bush Resurgence Is a Reminder That We Can Have Nice Things&lt;/li&gt;&lt;li&gt;The Black Religion That’s Been Maligned for Centuries&lt;/li&gt;&lt;li&gt;What’s Better in Britain&lt;/li&gt;&lt;li&gt;America’s Necessary Myth for the World&lt;/li&gt;&lt;li&gt;The Accidental Trumpification of NATO&lt;/li&gt;&lt;li&gt;Photos of the Week: Lightning Rod, Crown Fountain, Lunar Transit&lt;/li&gt;&lt;li&gt;How the Rest of the World Is Doing RTO&lt;/li&gt;&lt;li&gt;Don’t Worry, It’s Not COVID&lt;/li&gt;&lt;li&gt;The Abortion Pill Can Be Used Later Than the FDA Says&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Ruling Is Going to Be Very, Very Expensive&lt;/li&gt;&lt;li&gt;Rock Never Dies—But It Does Get Older and Wiser&lt;/li&gt;&lt;li&gt;The Summer of Our Discontent&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-abortion Laws&lt;/li&gt;&lt;li&gt;We Now Know&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Are the Last Rational Republicans in Denial?&lt;/li&gt;&lt;li&gt;Stranger Things Isn’t TV. It’s Something Else.&lt;/li&gt;&lt;li&gt;America’s Public-Health Efforts Have Slowed to a Crawl&lt;/li&gt;&lt;li&gt;The Great Veterinary Shortage&lt;/li&gt;&lt;li&gt;College Football Is Cannibalizing Itself&lt;/li&gt;&lt;li&gt;Hybrid Work Is Doomed&lt;/li&gt;&lt;li&gt;The World Is Turning Back to Coal&lt;/li&gt;&lt;li&gt;Let’s Use Chicago Rules to Beat Russia&lt;/li&gt;&lt;li&gt;King of the River&lt;/li&gt;&lt;li&gt;We’ve Never Seen Mars Quite Like This&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;A Simple Fix for a Better Marriage Proposal&lt;/li&gt;&lt;li&gt;The Game Is (Probably) Up for Boris Johnson&lt;/li&gt;&lt;li&gt;Maybe Ridding the World of Superheroes Isn’t Such a Bad Idea&lt;/li&gt;&lt;li&gt;A Nation of Hostages&lt;/li&gt;&lt;li&gt;The Future of Mud&lt;/li&gt;&lt;li&gt;Uber Pool Is a Zombie&lt;/li&gt;&lt;li&gt;Should Americans Have a Right to Absolute Privacy?&lt;/li&gt;&lt;li&gt;Eight Books in Which Ignorance Is the Point&lt;/li&gt;&lt;li&gt;Letter: The NIH Has Responded Forcefully to COVID-19&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;A Crisis Historian Has Some Bad News for Us&lt;/li&gt;&lt;li&gt;The Origin of Vibes&lt;/li&gt;&lt;li&gt;Let the Rich Have Their Supertalls&lt;/li&gt;&lt;li&gt;How to Forgive Ourselves for What We Can’t Change&lt;/li&gt;&lt;li&gt;You’re Not Allowed to Have the Best Sunscreens in the World&lt;/li&gt;&lt;li&gt;What Comes After Roe?&lt;/li&gt;&lt;li&gt;Is Biden a Man Out of Time?&lt;/li&gt;&lt;li&gt;Leonard Cohen’s ‘Hallelujah’ Belongs to Everyone&lt;/li&gt;&lt;li&gt;Marcel the Shell Is the Hero the World Needs&lt;/li&gt;&lt;li&gt;What a Story of 1970s Abortion Activism Can Teach Us Today&lt;/li&gt;&lt;li&gt;The Kate Bush Resurgence Is a Reminder That We Can Have Nice Things&lt;/li&gt;&lt;li&gt;The Black Religion That’s Been Maligned for Centuries&lt;/li&gt;&lt;li&gt;What’s Better in Britain&lt;/li&gt;&lt;li&gt;America’s Necessary Myth for the World&lt;/li&gt;&lt;li&gt;The Accidental Trumpification of NATO&lt;/li&gt;&lt;li&gt;Photos of the Week: Lightning Rod, Crown Fountain, Lunar Transit&lt;/li&gt;&lt;li&gt;How the Rest of the World Is Doing RTO&lt;/li&gt;&lt;li&gt;Don’t Worry, It’s Not COVID&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Ruling Is Going to Be Very, Very Expensive&lt;/li&gt;&lt;li&gt;Rock Never Dies—But It Does Get Older and Wiser&lt;/li&gt;&lt;li&gt;The Summer of Our Discontent&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-abortion Laws&lt;/li&gt;&lt;/ul&gt;
                 News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
                 </content>
-<updated>2022-07-06T18:34:52Z</updated>
+<updated>2022-07-06T21:44:49Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-06.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-06.epub"/>
+</entry>
+<entry>
+<id>POLITICO Magazine</id>
+<title>POLITICO Magazine: 6 Jul, 2022</title>
+<summary>POLITICO Magazine: 6 Jul, 2022 published at 2022-07-06 19:48PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Crypto ATMs Are on the Rise. Who’s Supposed to Keep an Eye on Them?&lt;/li&gt;&lt;li&gt;Opinion | Bombshell Jan. 6 Testimony Could Hurt a Justice Department Prosecution&lt;/li&gt;&lt;li&gt;Opinion | How the Founders Intended to Check the Supreme Court’s Power&lt;/li&gt;&lt;li&gt;Opinion | The Rudy Giuliani Joke Isn’t Funny Anymore&lt;/li&gt;&lt;li&gt;There Are 11 Types of Donald Trump Enablers. Which One Are You?&lt;/li&gt;&lt;li&gt;The Real Reason Washington Ignored Kavanaugh’s Would-Be Killer&lt;/li&gt;&lt;li&gt;From Chelsea Clinton to David Petraeus, Here’s What Politicos Are Reading This Summer&lt;/li&gt;&lt;li&gt;The Michigan Democrat Who Could Solve Her Party’s Identity Crisis&lt;/li&gt;&lt;li&gt;The Supreme Court Just Rolled Democracy Back. You Can Measure How Much.&lt;/li&gt;&lt;li&gt;‘It Was All Just a Show’: Confessions of a Republican Campaign Hit Man&lt;/li&gt;&lt;li&gt;Opinion | A Bold Plan to Preserve Access to Abortion&lt;/li&gt;&lt;li&gt;Opinion | A Grand Compromise on Abortion&lt;/li&gt;&lt;li&gt;Trump Is in Trouble and He Knows It&lt;/li&gt;&lt;/ul&gt;
+                News, Analysis and Opinion from POLITICO
+                </content>
+<updated>2022-07-06T19:48:06Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-07-06.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-07-06.epub"/>
 </entry>
 <entry>
 <id>The Diplomat</id>
@@ -70,22 +102,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="propublica-2022-07-06.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="propublica-2022-07-06.epub"/>
-</entry>
-<entry>
-<id>POLITICO Magazine</id>
-<title>POLITICO Magazine: 6 Jul, 2022</title>
-<summary>POLITICO Magazine: 6 Jul, 2022 published at 2022-07-06 08:30AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Opinion | Bombshell Jan. 6 Testimony Could Hurt a Justice Department Prosecution&lt;/li&gt;&lt;li&gt;Opinion | How the Founders Intended to Check the Supreme Court’s Power&lt;/li&gt;&lt;li&gt;Opinion | The Rudy Giuliani Joke Isn’t Funny Anymore&lt;/li&gt;&lt;li&gt;There Are 11 Types of Donald Trump Enablers. Which One Are You?&lt;/li&gt;&lt;li&gt;The Real Reason Washington Ignored Kavanaugh’s Would-Be Killer&lt;/li&gt;&lt;li&gt;From Chelsea Clinton to David Petraeus, Here’s What Politicos Are Reading This Summer&lt;/li&gt;&lt;li&gt;The Michigan Democrat Who Could Solve Her Party’s Identity Crisis&lt;/li&gt;&lt;li&gt;The Supreme Court Just Rolled Democracy Back. You Can Measure How Much.&lt;/li&gt;&lt;li&gt;‘It Was All Just a Show’: Confessions of a Republican Campaign Hit Man&lt;/li&gt;&lt;li&gt;Opinion | A Bold Plan to Preserve Access to Abortion&lt;/li&gt;&lt;li&gt;Opinion | A Grand Compromise on Abortion&lt;/li&gt;&lt;li&gt;Trump Is in Trouble and He Knows It&lt;/li&gt;&lt;/ul&gt;
-                News, Analysis and Opinion from POLITICO
-                </content>
-<updated>2022-07-06T08:30:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-07-06.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-07-06.epub"/>
 </entry>
 <entry>
 <id>The Third Pole</id>
@@ -150,22 +166,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="newyorker-2022-07-04.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="newyorker-2022-07-04.epub"/>
-</entry>
-<entry>
-<id>Nautilus</id>
-<title>Nautilus: 1 Jul, 2022</title>
-<summary>Nautilus: 1 Jul, 2022 published at 2022-07-01 21:47PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Land of Extremes: Poetry of the Sonoran Desert&lt;/li&gt;&lt;li&gt;Feeling Stressed? Read a Poem&lt;/li&gt;&lt;li&gt;This Planetary Scientist Is Always Reaching for Something Big&lt;/li&gt;&lt;li&gt;Gravitational Waves Continue to Astound&lt;/li&gt;&lt;li&gt;Were It Not for Cosmic Good Fortune, We Wouldn’t Be Here&lt;/li&gt;&lt;li&gt;How Do We Get People Who Believe in Pseudoscience to Trust Science?&lt;/li&gt;&lt;li&gt;Mysteries Are to Be Embraced, But Also to Be Solved&lt;/li&gt;&lt;li&gt;How Are the Bees?&lt;/li&gt;&lt;li&gt;Reshuffled Rivers Bolster the Amazon’s Hyper-Biodiversity&lt;/li&gt;&lt;li&gt;Who Are the Scientists Here?&lt;/li&gt;&lt;li&gt;The Race to Explore the Ocean’s Twilight Zone&lt;/li&gt;&lt;li&gt;The Giraffe Neck Evolved for Sexual Combat&lt;/li&gt;&lt;li&gt;Life’s First Peptides May Have Grown on RNA Strands&lt;/li&gt;&lt;li&gt;Under Anesthesia, Where Do Our Minds Go?&lt;/li&gt;&lt;li&gt;Unlocking Mom’s Brain&lt;/li&gt;&lt;li&gt;Portrait of the Human as a Young Hominin&lt;/li&gt;&lt;li&gt;Thinking Like a Scientist Will Make You Happier&lt;/li&gt;&lt;li&gt;Don’t Give Up on Facts&lt;/li&gt;&lt;li&gt;Are You a Naïve Realist?&lt;/li&gt;&lt;li&gt;Moving Beyond Mimicry in Artificial Intelligence&lt;/li&gt;&lt;li&gt;What Oceanographers Can Learn From Their Animal Colleagues&lt;/li&gt;&lt;li&gt;The Secrets of the Blind Salamander&lt;/li&gt;&lt;/ul&gt;
-                Nautilus is a different kind of science magazine. Our stories take you into the depths of science and spotlight its ripples in our lives and cultures. We believe any subject in science, no matter how complex, can be explained with clarity and vitality.
-                </content>
-<updated>2022-07-01T21:47:03Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nautilus-2022-07-01.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nautilus-2022-07-01.epub"/>
 </entry>
 <entry>
 <id>Poetry</id>
