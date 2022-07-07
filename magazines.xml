@@ -2,42 +2,90 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-07T07:20:30Z</updated>
+<updated>2022-07-07T11:20:40Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
+<id>Vox</id>
+<title>Vox: 7 Jul, 2022</title>
+<summary>Vox: 7 Jul, 2022 published at 2022-07-07 11:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Even bosses are joining the Great Resignation&lt;/li&gt;&lt;li&gt;Democrats are trying to resurrect part of Build Back Better — again&lt;/li&gt;&lt;li&gt;Is this the political end for Boris Johnson?&lt;/li&gt;&lt;li&gt;The inside story at Meta as it moves beyond Facebook&lt;/li&gt;&lt;li&gt;What’s going on with Georgia’s Trump investigation?&lt;/li&gt;&lt;li&gt;How China’s relationship to Hollywood has shaped the movies&lt;/li&gt;&lt;li&gt;The Supreme Court overturns Roe v. Wade&lt;/li&gt;&lt;li&gt;Should I delete my period app? And other post-Roe privacy questions.&lt;/li&gt;&lt;li&gt;How to be a little less judgmental&lt;/li&gt;&lt;li&gt;How conservatism conquered America — and corrupted itself&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-07-07T11:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-07.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-07.epub"/>
+</entry>
+<entry>
+<id>The Atlantic</id>
+<title>The Atlantic: 7 Jul, 2022</title>
+<summary>The Atlantic: 7 Jul, 2022 published at 2022-07-07 10:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;How the UN Security Council Can Reinvent Itself&lt;/li&gt;&lt;li&gt;Why Are the Police So Bad at Solving Murders?&lt;/li&gt;&lt;li&gt;Why You Should (Metaphorically) Run With the Bulls&lt;/li&gt;&lt;li&gt;Are the Last Rational Republicans in Denial?&lt;/li&gt;&lt;li&gt;Stranger Things Isn’t TV. It’s Something Else.&lt;/li&gt;&lt;li&gt;America’s Public-Health Efforts Have Slowed to a Crawl&lt;/li&gt;&lt;li&gt;The Great Veterinary Shortage&lt;/li&gt;&lt;li&gt;College Football Is Cannibalizing Itself&lt;/li&gt;&lt;li&gt;Hybrid Work Is Doomed&lt;/li&gt;&lt;li&gt;The World Is Turning Back to Coal&lt;/li&gt;&lt;li&gt;Let’s Use Chicago Rules to Beat Russia&lt;/li&gt;&lt;li&gt;King of the River&lt;/li&gt;&lt;li&gt;We’ve Never Seen Mars Quite Like This&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;A Simple Fix for a Better Marriage Proposal&lt;/li&gt;&lt;li&gt;The Game Is (Probably) Up for Boris Johnson&lt;/li&gt;&lt;li&gt;Maybe Ridding the World of Superheroes Isn’t Such a Bad Idea&lt;/li&gt;&lt;li&gt;A Nation of Hostages&lt;/li&gt;&lt;li&gt;The Future of Mud&lt;/li&gt;&lt;li&gt;Uber Pool Is a Zombie&lt;/li&gt;&lt;li&gt;Should Americans Have a Right to Absolute Privacy?&lt;/li&gt;&lt;li&gt;Eight Books in Which Ignorance Is the Point&lt;/li&gt;&lt;li&gt;Letter: The NIH Has Responded Forcefully to COVID-19&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;A Crisis Historian Has Some Bad News for Us&lt;/li&gt;&lt;li&gt;You’re Not Allowed to Have the Best Sunscreens in the World&lt;/li&gt;&lt;li&gt;What Comes After Roe?&lt;/li&gt;&lt;li&gt;Is Biden a Man Out of Time?&lt;/li&gt;&lt;li&gt;Leonard Cohen’s ‘Hallelujah’ Belongs to Everyone&lt;/li&gt;&lt;li&gt;Marcel the Shell Is the Hero the World Needs&lt;/li&gt;&lt;li&gt;What a Story of 1970s Abortion Activism Can Teach Us Today&lt;/li&gt;&lt;li&gt;The Kate Bush Resurgence Is a Reminder That We Can Have Nice Things&lt;/li&gt;&lt;li&gt;The Black Religion That’s Been Maligned for Centuries&lt;/li&gt;&lt;li&gt;What’s Better in Britain&lt;/li&gt;&lt;li&gt;America’s Necessary Myth for the World&lt;/li&gt;&lt;li&gt;The Accidental Trumpification of NATO&lt;/li&gt;&lt;li&gt;Photos of the Week: Lightning Rod, Crown Fountain, Lunar Transit&lt;/li&gt;&lt;li&gt;How the Rest of the World Is Doing RTO&lt;/li&gt;&lt;li&gt;Don’t Worry, It’s Not COVID&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Ruling Is Going to Be Very, Very Expensive&lt;/li&gt;&lt;li&gt;Rock Never Dies—But It Does Get Older and Wiser&lt;/li&gt;&lt;li&gt;The Summer of Our Discontent&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-abortion Laws&lt;/li&gt;&lt;/ul&gt;
+                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
+                </content>
+<updated>2022-07-07T10:00:57Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-07.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-07.epub"/>
+</entry>
+<entry>
+<id>ProPublica</id>
+<title>ProPublica: 7 Jul, 2022</title>
+<summary>ProPublica: 7 Jul, 2022 published at 2022-07-07 09:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Ken Griffin Spent $54 Million Fighting a Tax Increase for the Rich. Secret IRS Data Shows It Paid Off for Him.&lt;/li&gt;&lt;li&gt;DOJ Investigating Texas’ Operation Lone Star for Alleged Civil Rights Violations&lt;/li&gt;&lt;li&gt;How Foreign Private Equity Hooked New England’s Fishing Industry&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Decision Could Hamper Regulators’ Ability to Protect the Public&lt;/li&gt;&lt;li&gt;Federal Patient Privacy Law Does Not Cover Most Period-Tracking Apps&lt;/li&gt;&lt;li&gt;Google Allowed a Sanctioned Russian Ad Company to Harvest User Data for Months&lt;/li&gt;&lt;li&gt;How We Fight Back When Officials Resist Releasing Information You Have a Right to Know&lt;/li&gt;&lt;li&gt;Congress Investigates Portable Generator Manufacturers Following Carbon Monoxide Deaths&lt;/li&gt;&lt;li&gt;The Other Cancel Culture: How a Public University Is Bowing to a Conservative Crusade&lt;/li&gt;&lt;li&gt;Army Corps of Engineers to Order New Study of Grain Elevator That Could Harm Black Heritage Sites&lt;/li&gt;&lt;li&gt;Help Us Learn About Sheltered Workshops in Missouri&lt;/li&gt;&lt;li&gt;The Polluter Just Got a Million-Dollar Fine. That Won’t Cure This Woman’s Rare Cancer.&lt;/li&gt;&lt;li&gt;School Board Candidates Who Criticized the Hiring of a Black DEI Educator Lose Their Elections&lt;/li&gt;&lt;li&gt;Ten Ways Billionaires Avoid Taxes on an Epic Scale&lt;/li&gt;&lt;li&gt;“We’re at a Crisis Point”: NY Attorney General Hearing Spotlights Child Mental Health Care Failures&lt;/li&gt;&lt;li&gt;$53.3 Million. 33 Jobs. No Plan. That’s How Mississippi Lawmakers Are Spending BP Oil Spill Money.&lt;/li&gt;&lt;li&gt;How Susquehanna’s Jeff Yass Avoided $1 Billion in Taxes&lt;/li&gt;&lt;li&gt;Facebook Finally Agrees to Eliminate Tool That Enabled Discriminatory Advertising&lt;/li&gt;&lt;li&gt;Louisiana Limits Solitary Confinement for Youth&lt;/li&gt;&lt;li&gt;Utah Officials Called It the “Year of Water.” Special Interests Still Resist Conservation.&lt;/li&gt;&lt;/ul&gt;
+                ProPublica is an independent, nonprofit newsroom that produces investigative journalism with moral force.
+                </content>
+<updated>2022-07-07T09:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="propublica-2022-07-07.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="propublica-2022-07-07.epub"/>
+</entry>
+<entry>
+<id>POLITICO Magazine</id>
+<title>POLITICO Magazine: 7 Jul, 2022</title>
+<summary>POLITICO Magazine: 7 Jul, 2022 published at 2022-07-07 08:30AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Liz Cheney Wins the GOP’s Manhood Contest&lt;/li&gt;&lt;li&gt;He Was Dismissed as a Conservative Kook. Now the Supreme Court Is Embracing His Blueprint.&lt;/li&gt;&lt;li&gt;Why Bitcoin ATMs are Vexing Rulemakers&lt;/li&gt;&lt;li&gt;Opinion | Bombshell Jan. 6 Testimony Could Hurt a Justice Department Prosecution&lt;/li&gt;&lt;li&gt;Opinion | How the Founders Intended to Check the Supreme Court’s Power&lt;/li&gt;&lt;li&gt;Opinion | The Rudy Giuliani Joke Isn’t Funny Anymore&lt;/li&gt;&lt;li&gt;There Are 11 Types of Donald Trump Enablers. Which One Are You?&lt;/li&gt;&lt;li&gt;The Real Reason Washington Ignored Kavanaugh’s Would-Be Killer&lt;/li&gt;&lt;li&gt;From Chelsea Clinton to David Petraeus, Here’s What Politicos Are Reading This Summer&lt;/li&gt;&lt;li&gt;The Michigan Democrat Who Could Solve Her Party’s Identity Crisis&lt;/li&gt;&lt;li&gt;The Supreme Court Just Rolled Democracy Back. You Can Measure How Much.&lt;/li&gt;&lt;li&gt;‘It Was All Just a Show’: Confessions of a Republican Campaign Hit Man&lt;/li&gt;&lt;li&gt;Opinion | A Bold Plan to Preserve Access to Abortion&lt;/li&gt;&lt;/ul&gt;
+                News, Analysis and Opinion from POLITICO
+                </content>
+<updated>2022-07-07T08:30:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-07-07.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-07-07.epub"/>
+</entry>
+<entry>
 <id>The Diplomat</id>
 <title>The Diplomat: 7 Jul, 2022</title>
-<summary>The Diplomat: 7 Jul, 2022 published at 2022-07-07 04:04AM.</summary>
+<summary>The Diplomat: 7 Jul, 2022 published at 2022-07-07 07:15AM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Foreign Casinos Have Been a Disaster for Cambodia&lt;/li&gt;&lt;li&gt;Reexamining East Malaysian Security in an Age of Growing Threats&lt;/li&gt;&lt;li&gt;Chinese Foreign Minister Courts Philippines’ President Marcos&lt;/li&gt;&lt;li&gt;Will the Uyghur Forced Labor Prevention Act Make a Difference?&lt;/li&gt;&lt;li&gt;Japan’s NATO Outreach Bears Fruit&lt;/li&gt;&lt;li&gt;Ahead of G-20 Ministers’ Meeting, China Slams US, NATO&lt;/li&gt;&lt;li&gt;Can the Taliban Actually Prevent Attacks Launched From Afghan Soil?&lt;/li&gt;&lt;li&gt;South Korean Spy Agency Files Charges Against Ex-Chiefs Over North Korea Border Incidents&lt;/li&gt;&lt;li&gt;China’s Main Food Security Challenge: Feeding Its Pigs&lt;/li&gt;&lt;li&gt;Economic Crisis Forces Sri Lanka to Shed Fears and Move Closer to US, Middle East&lt;/li&gt;&lt;li&gt;Pipeline Critical to Kazakh Oil Exports Ordered to Halt Operations by Russian Court&lt;/li&gt;&lt;li&gt;Amid Worsening Medicine Shortages, North Korea Cracks Down on Private Drug Sellers&lt;/li&gt;&lt;li&gt;China Takes Full Advantage of Taliban’s Isolation&lt;/li&gt;&lt;li&gt;Twitter Files Lawsuit Against Indian Government in Court&lt;/li&gt;&lt;li&gt;Decapitation Video Points to Increasing Military Atrocities in Myanmar&lt;/li&gt;&lt;li&gt;Inflation in Laos Reaches 22-Year High as Economic Crisis Worsens&lt;/li&gt;&lt;li&gt;‘Forward Singapore’ Offers a Timely Opportunity for Difficult Conversations&lt;/li&gt;&lt;li&gt;What Do High Oil Prices Mean for Clean Energy in Southeast Asia?&lt;/li&gt;&lt;li&gt;Campaigners Urge Clemency Ahead of Singapore Drug Executions&lt;/li&gt;&lt;li&gt;New Zealand Will Not Join the US Coalition Against China Anytime Soon&lt;/li&gt;&lt;li&gt;Russian Foreign Minister Visits Mongolia in Drive for Support&lt;/li&gt;&lt;li&gt;Unrest in Central Asia: The Trouble in Karakalpakstan&lt;/li&gt;&lt;li&gt;Is Jacinda Ardern Rethinking Her China Strategy?&lt;/li&gt;&lt;li&gt;Mongolia’s Military Diplomacy Highlights Female Peacekeepers&lt;/li&gt;&lt;li&gt;Can Japan’s Revamped Childcare Policy Get Workaholic Fathers to Take Leave?&lt;/li&gt;&lt;li&gt;Following NATO Summit, North Korea Denounces US-South Korea-Japan Joint Military Cooperation&lt;/li&gt;&lt;li&gt;China Sees Record Rains, Heat as Weather Turns Volatile&lt;/li&gt;&lt;li&gt;Karakalpak Protests Reflect the Shattered Promise of Mirziyoyev’s ‘New Uzbekistan’&lt;/li&gt;&lt;li&gt;In Kashmir, ‘Conscious Music’ Tests India’s Limits on Speech&lt;/li&gt;&lt;li&gt;Islamophobia Exists in India’s Private Sector&lt;/li&gt;&lt;li&gt;Russian Foreign Minister to Visit Vietnam Ahead of G-20&lt;/li&gt;&lt;li&gt;The Social Costs of Chinese Transnational Crime in Sihanoukville&lt;/li&gt;&lt;li&gt;Chinese FM Pledges ‘Closer’ Ties with Myanmar’s Military Government&lt;/li&gt;&lt;li&gt;Japan-South Korea Tensions on Display at NATO Summit&lt;/li&gt;&lt;li&gt;Afghan Clerics’ Assembly Urges Recognition of Taliban Government&lt;/li&gt;&lt;li&gt;Amid Shortages and Turmoil, Sri Lanka Grinds to a Halt&lt;/li&gt;&lt;li&gt;Russia-Ukraine War: Implications for Asian Geoeconomics&lt;/li&gt;&lt;li&gt;Modi’s UAE Stopover to Give a Fillip to the India-UAE Partnership&lt;/li&gt;&lt;li&gt;Can China Achieve Its BRICS Ambitions?&lt;/li&gt;&lt;li&gt;Japan Awards Contract to Shipbuilder JMU for 12 New Offshore Patrol Vessels&lt;/li&gt;&lt;li&gt;Can South Korea Bridge NATO and the US Indo-Pacific Strategy?&lt;/li&gt;&lt;li&gt;Can India and ASEAN Lean on Each Other Amid ‘Systemic’ China-US Competition?&lt;/li&gt;&lt;li&gt;US-led RIMPAC, World’s Largest Maritime Exercise, Starts Without China or Taiwan&lt;/li&gt;&lt;li&gt;Xi Defends Vision of Hong Kong on 25th Anniversary of Return&lt;/li&gt;&lt;li&gt;Ardern-Kishida Meeting: Stepping up the New Zealand-Japan Strategic Partnership&lt;/li&gt;&lt;li&gt;New Constitutional Amendments in Mongolia: Real Reform or Political Opportunism?&lt;/li&gt;&lt;li&gt;A Return to Values-based Foreign Policy in New Zealand&lt;/li&gt;&lt;li&gt;Cups, Straws, Spoons: India Starts on Single-use Plastic Ban&lt;/li&gt;&lt;li&gt;China’s Up-and-Coming Sports Gear Makers: When Politics Meets Business&lt;/li&gt;&lt;li&gt;With Kinmen Comments, Ko Wen-je Dives Into Cross-Strait Debate&lt;/li&gt;&lt;li&gt;Bangladesh’s Padma Bridge Built Against All Odds&lt;/li&gt;&lt;li&gt;Myanmar Apologizes After Jet Fighter Violated Thai Airspace&lt;/li&gt;&lt;li&gt;Jokowi Says Russia Agrees to Permit Vital Exports From Ukraine&lt;/li&gt;&lt;li&gt;The Disappointment of the Quad Vaccine Partnership&lt;/li&gt;&lt;li&gt;What the G-7 Infrastructure Initiative Can Offer Southeast Asia&lt;/li&gt;&lt;li&gt;Biden’s Uphill Battle to Restructure the Global Semiconductor Sector&lt;/li&gt;&lt;li&gt;South Korea’s Space Program Is a Big Deal&lt;/li&gt;&lt;li&gt;India Hindus Begin Pilgrimage in Kashmir Amid Heavy Security&lt;/li&gt;&lt;li&gt;Xi Visits a Changed Hong Kong for Handover Anniversary&lt;/li&gt;&lt;li&gt;How the War in Ukraine Could Change Japan’s Refugee Policies&lt;/li&gt;&lt;li&gt;Indian Australians Fastest Growing Group in Australia&lt;/li&gt;&lt;li&gt;India’s Urban Unemployment Crisis&lt;/li&gt;&lt;li&gt;Ambassador Xiao Qian’s Speech: A New Way Forward for Australia-China Relations?&lt;/li&gt;&lt;li&gt;Rohingya Man Sentenced to Death in Bangladesh&lt;/li&gt;&lt;li&gt;Assimilation: China’s Failed Strategy in Xinjiang&lt;/li&gt;&lt;li&gt;The Revival of Islam in Turkmenistan&lt;/li&gt;&lt;li&gt;The Complexity of Kazakhstan-Russia Relations on Display&lt;/li&gt;&lt;li&gt;From Europe, Yoon Suk Yeol Calls for International Cooperation on North Korea’s Nuclear and Missile Threats&lt;/li&gt;&lt;li&gt;Sri Lanka Overestimates its Importance to China&lt;/li&gt;&lt;li&gt;A Counter­revolution in the Philippines: Marcos 2.0&lt;/li&gt;&lt;li&gt;Is There a New Kazakhstan?&lt;/li&gt;&lt;li&gt;Is Anyone Listening to the Pacific Islands?&lt;/li&gt;&lt;li&gt;India’s Energy-Environment Catch-22&lt;/li&gt;&lt;li&gt;Botakoz Kassymbekova and Erica Marat on Russia’s ‘Imperial Myth’&lt;/li&gt;&lt;li&gt;Dictator’s Son Marcos Jr. Takes Oath as Philippine President&lt;/li&gt;&lt;li&gt;Indonesia Shuts Down Bar Chain Following Blasphemy Controversy&lt;/li&gt;&lt;li&gt;As Cyber Threats Grow, Indonesia’s Data Protection Efforts Are Falling Short&lt;/li&gt;&lt;li&gt;ASEAN Special Envoy Begins Second Official Mission to Myanmar&lt;/li&gt;&lt;li&gt;Hong Kong’s Dismantled Society&lt;/li&gt;&lt;li&gt;Japan Pushes for Stronger Cooperation to Counter China at G7&lt;/li&gt;&lt;li&gt;China’s Baidu Races Waymo, GM to Develop Self-driving Cars&lt;/li&gt;&lt;li&gt;What Do the Pacific Island Countries Think About China?&lt;/li&gt;&lt;li&gt;Nepal Plans to Lower Age at Marriage&lt;/li&gt;&lt;li&gt;Uzbek Company Falls Afoul of Russia Sanctions&lt;/li&gt;&lt;li&gt;Russia’s Putin Makes First Trip Abroad Since Invasion, to Tajikistan and Turkmenistan&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;ASEAN Envoy Hails ‘Some Progress’ on Second Myanmar Mission&lt;/li&gt;&lt;li&gt;Foreign Casinos Have Been a Disaster for Cambodia&lt;/li&gt;&lt;li&gt;Reexamining East Malaysian Security in an Age of Growing Threats&lt;/li&gt;&lt;li&gt;Chinese Foreign Minister Courts Philippines’ President Marcos&lt;/li&gt;&lt;li&gt;Will the Uyghur Forced Labor Prevention Act Make a Difference?&lt;/li&gt;&lt;li&gt;Japan’s NATO Outreach Bears Fruit&lt;/li&gt;&lt;li&gt;Ahead of G-20 Ministers’ Meeting, China Slams US, NATO&lt;/li&gt;&lt;li&gt;Can the Taliban Actually Prevent Attacks Launched From Afghan Soil?&lt;/li&gt;&lt;li&gt;South Korean Spy Agency Files Charges Against Ex-Chiefs Over North Korea Border Incidents&lt;/li&gt;&lt;li&gt;China’s Main Food Security Challenge: Feeding Its Pigs&lt;/li&gt;&lt;li&gt;Economic Crisis Forces Sri Lanka to Shed Fears and Move Closer to US, Middle East&lt;/li&gt;&lt;li&gt;Pipeline Critical to Kazakh Oil Exports Ordered to Halt Operations by Russian Court&lt;/li&gt;&lt;li&gt;Amid Worsening Medicine Shortages, North Korea Cracks Down on Private Drug Sellers&lt;/li&gt;&lt;li&gt;China Takes Full Advantage of Taliban’s Isolation&lt;/li&gt;&lt;li&gt;Twitter Files Lawsuit Against Indian Government in Court&lt;/li&gt;&lt;li&gt;Decapitation Video Points to Increasing Military Atrocities in Myanmar&lt;/li&gt;&lt;li&gt;Inflation in Laos Reaches 22-Year High as Economic Crisis Worsens&lt;/li&gt;&lt;li&gt;‘Forward Singapore’ Offers a Timely Opportunity for Difficult Conversations&lt;/li&gt;&lt;li&gt;What Do High Oil Prices Mean for Clean Energy in Southeast Asia?&lt;/li&gt;&lt;li&gt;Campaigners Urge Clemency Ahead of Singapore Drug Executions&lt;/li&gt;&lt;li&gt;New Zealand Will Not Join the US Coalition Against China Anytime Soon&lt;/li&gt;&lt;li&gt;Russian Foreign Minister Visits Mongolia in Drive for Support&lt;/li&gt;&lt;li&gt;Unrest in Central Asia: The Trouble in Karakalpakstan&lt;/li&gt;&lt;li&gt;Is Jacinda Ardern Rethinking Her China Strategy?&lt;/li&gt;&lt;li&gt;Mongolia’s Military Diplomacy Highlights Female Peacekeepers&lt;/li&gt;&lt;li&gt;Can Japan’s Revamped Childcare Policy Get Workaholic Fathers to Take Leave?&lt;/li&gt;&lt;li&gt;Following NATO Summit, North Korea Denounces US-South Korea-Japan Joint Military Cooperation&lt;/li&gt;&lt;li&gt;China Sees Record Rains, Heat as Weather Turns Volatile&lt;/li&gt;&lt;li&gt;Karakalpak Protests Reflect the Shattered Promise of Mirziyoyev’s ‘New Uzbekistan’&lt;/li&gt;&lt;li&gt;In Kashmir, ‘Conscious Music’ Tests India’s Limits on Speech&lt;/li&gt;&lt;li&gt;Islamophobia Exists in India’s Private Sector&lt;/li&gt;&lt;li&gt;Russian Foreign Minister to Visit Vietnam Ahead of G-20&lt;/li&gt;&lt;li&gt;The Social Costs of Chinese Transnational Crime in Sihanoukville&lt;/li&gt;&lt;li&gt;Chinese FM Pledges ‘Closer’ Ties with Myanmar’s Military Government&lt;/li&gt;&lt;li&gt;Japan-South Korea Tensions on Display at NATO Summit&lt;/li&gt;&lt;li&gt;Afghan Clerics’ Assembly Urges Recognition of Taliban Government&lt;/li&gt;&lt;li&gt;Amid Shortages and Turmoil, Sri Lanka Grinds to a Halt&lt;/li&gt;&lt;li&gt;Russia-Ukraine War: Implications for Asian Geoeconomics&lt;/li&gt;&lt;li&gt;Modi’s UAE Stopover to Give a Fillip to the India-UAE Partnership&lt;/li&gt;&lt;li&gt;Can China Achieve Its BRICS Ambitions?&lt;/li&gt;&lt;li&gt;Japan Awards Contract to Shipbuilder JMU for 12 New Offshore Patrol Vessels&lt;/li&gt;&lt;li&gt;Can South Korea Bridge NATO and the US Indo-Pacific Strategy?&lt;/li&gt;&lt;li&gt;Can India and ASEAN Lean on Each Other Amid ‘Systemic’ China-US Competition?&lt;/li&gt;&lt;li&gt;US-led RIMPAC, World’s Largest Maritime Exercise, Starts Without China or Taiwan&lt;/li&gt;&lt;li&gt;Xi Defends Vision of Hong Kong on 25th Anniversary of Return&lt;/li&gt;&lt;li&gt;Ardern-Kishida Meeting: Stepping up the New Zealand-Japan Strategic Partnership&lt;/li&gt;&lt;li&gt;New Constitutional Amendments in Mongolia: Real Reform or Political Opportunism?&lt;/li&gt;&lt;li&gt;A Return to Values-based Foreign Policy in New Zealand&lt;/li&gt;&lt;li&gt;Cups, Straws, Spoons: India Starts on Single-use Plastic Ban&lt;/li&gt;&lt;li&gt;China’s Up-and-Coming Sports Gear Makers: When Politics Meets Business&lt;/li&gt;&lt;li&gt;With Kinmen Comments, Ko Wen-je Dives Into Cross-Strait Debate&lt;/li&gt;&lt;li&gt;Bangladesh’s Padma Bridge Built Against All Odds&lt;/li&gt;&lt;li&gt;Myanmar Apologizes After Jet Fighter Violated Thai Airspace&lt;/li&gt;&lt;li&gt;Jokowi Says Russia Agrees to Permit Vital Exports From Ukraine&lt;/li&gt;&lt;li&gt;The Disappointment of the Quad Vaccine Partnership&lt;/li&gt;&lt;li&gt;What the G-7 Infrastructure Initiative Can Offer Southeast Asia&lt;/li&gt;&lt;li&gt;Biden’s Uphill Battle to Restructure the Global Semiconductor Sector&lt;/li&gt;&lt;li&gt;South Korea’s Space Program Is a Big Deal&lt;/li&gt;&lt;li&gt;India Hindus Begin Pilgrimage in Kashmir Amid Heavy Security&lt;/li&gt;&lt;li&gt;Xi Visits a Changed Hong Kong for Handover Anniversary&lt;/li&gt;&lt;li&gt;How the War in Ukraine Could Change Japan’s Refugee Policies&lt;/li&gt;&lt;li&gt;Indian Australians Fastest Growing Group in Australia&lt;/li&gt;&lt;li&gt;India’s Urban Unemployment Crisis&lt;/li&gt;&lt;li&gt;Ambassador Xiao Qian’s Speech: A New Way Forward for Australia-China Relations?&lt;/li&gt;&lt;li&gt;Rohingya Man Sentenced to Death in Bangladesh&lt;/li&gt;&lt;li&gt;Assimilation: China’s Failed Strategy in Xinjiang&lt;/li&gt;&lt;li&gt;The Revival of Islam in Turkmenistan&lt;/li&gt;&lt;li&gt;The Complexity of Kazakhstan-Russia Relations on Display&lt;/li&gt;&lt;li&gt;From Europe, Yoon Suk Yeol Calls for International Cooperation on North Korea’s Nuclear and Missile Threats&lt;/li&gt;&lt;li&gt;Sri Lanka Overestimates its Importance to China&lt;/li&gt;&lt;li&gt;A Counter­revolution in the Philippines: Marcos 2.0&lt;/li&gt;&lt;li&gt;Is There a New Kazakhstan?&lt;/li&gt;&lt;li&gt;Is Anyone Listening to the Pacific Islands?&lt;/li&gt;&lt;li&gt;India’s Energy-Environment Catch-22&lt;/li&gt;&lt;li&gt;Botakoz Kassymbekova and Erica Marat on Russia’s ‘Imperial Myth’&lt;/li&gt;&lt;li&gt;Dictator’s Son Marcos Jr. Takes Oath as Philippine President&lt;/li&gt;&lt;li&gt;Indonesia Shuts Down Bar Chain Following Blasphemy Controversy&lt;/li&gt;&lt;li&gt;As Cyber Threats Grow, Indonesia’s Data Protection Efforts Are Falling Short&lt;/li&gt;&lt;li&gt;ASEAN Special Envoy Begins Second Official Mission to Myanmar&lt;/li&gt;&lt;li&gt;Hong Kong’s Dismantled Society&lt;/li&gt;&lt;li&gt;Japan Pushes for Stronger Cooperation to Counter China at G7&lt;/li&gt;&lt;li&gt;China’s Baidu Races Waymo, GM to Develop Self-driving Cars&lt;/li&gt;&lt;li&gt;What Do the Pacific Island Countries Think About China?&lt;/li&gt;&lt;li&gt;Nepal Plans to Lower Age at Marriage&lt;/li&gt;&lt;li&gt;Uzbek Company Falls Afoul of Russia Sanctions&lt;/li&gt;&lt;li&gt;Russia’s Putin Makes First Trip Abroad Since Invasion, to Tajikistan and Turkmenistan&lt;/li&gt;&lt;/ul&gt;
                 The Diplomat is a current-affairs magazine for the Asia-Pacific, with news and analysis on politics, security, business, technology and life across the region.
                 </content>
-<updated>2022-07-07T04:04:18Z</updated>
+<updated>2022-07-07T07:15:44Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-diplomat-2022-07-07.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-diplomat-2022-07-07.epub"/>
-</entry>
-<entry>
-<id>Vox</id>
-<title>Vox: 6 Jul, 2022</title>
-<summary>Vox: 6 Jul, 2022 published at 2022-07-06 22:30PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Democrats are trying to resurrect part of Build Back Better — again&lt;/li&gt;&lt;li&gt;Is this the political end for Boris Johnson?&lt;/li&gt;&lt;li&gt;The inside story at Meta as it moves beyond Facebook&lt;/li&gt;&lt;li&gt;What’s going on with Georgia’s Trump investigation?&lt;/li&gt;&lt;li&gt;How China’s relationship to Hollywood has shaped the movies&lt;/li&gt;&lt;li&gt;The Supreme Court overturns Roe v. Wade&lt;/li&gt;&lt;li&gt;Should I delete my period app? And other post-Roe privacy questions.&lt;/li&gt;&lt;li&gt;How to be a little less judgmental&lt;/li&gt;&lt;li&gt;How conservatism conquered America — and corrupted itself&lt;/li&gt;&lt;li&gt;The man giving the California GOP its best shot at statewide office in years&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-07-06T22:30:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-06.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-06.epub"/>
 </entry>
 <entry>
 <id>Nautilus</id>
@@ -56,38 +104,6 @@
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nautilus-2022-07-06.epub"/>
 </entry>
 <entry>
-<id>The Atlantic</id>
-<title>The Atlantic: 6 Jul, 2022</title>
-<summary>The Atlantic: 6 Jul, 2022 published at 2022-07-06 21:44PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Are the Last Rational Republicans in Denial?&lt;/li&gt;&lt;li&gt;Stranger Things Isn’t TV. It’s Something Else.&lt;/li&gt;&lt;li&gt;America’s Public-Health Efforts Have Slowed to a Crawl&lt;/li&gt;&lt;li&gt;The Great Veterinary Shortage&lt;/li&gt;&lt;li&gt;College Football Is Cannibalizing Itself&lt;/li&gt;&lt;li&gt;Hybrid Work Is Doomed&lt;/li&gt;&lt;li&gt;The World Is Turning Back to Coal&lt;/li&gt;&lt;li&gt;Let’s Use Chicago Rules to Beat Russia&lt;/li&gt;&lt;li&gt;King of the River&lt;/li&gt;&lt;li&gt;We’ve Never Seen Mars Quite Like This&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;A Simple Fix for a Better Marriage Proposal&lt;/li&gt;&lt;li&gt;The Game Is (Probably) Up for Boris Johnson&lt;/li&gt;&lt;li&gt;Maybe Ridding the World of Superheroes Isn’t Such a Bad Idea&lt;/li&gt;&lt;li&gt;A Nation of Hostages&lt;/li&gt;&lt;li&gt;The Future of Mud&lt;/li&gt;&lt;li&gt;Uber Pool Is a Zombie&lt;/li&gt;&lt;li&gt;Should Americans Have a Right to Absolute Privacy?&lt;/li&gt;&lt;li&gt;Eight Books in Which Ignorance Is the Point&lt;/li&gt;&lt;li&gt;Letter: The NIH Has Responded Forcefully to COVID-19&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;A Crisis Historian Has Some Bad News for Us&lt;/li&gt;&lt;li&gt;The Origin of Vibes&lt;/li&gt;&lt;li&gt;Let the Rich Have Their Supertalls&lt;/li&gt;&lt;li&gt;How to Forgive Ourselves for What We Can’t Change&lt;/li&gt;&lt;li&gt;You’re Not Allowed to Have the Best Sunscreens in the World&lt;/li&gt;&lt;li&gt;What Comes After Roe?&lt;/li&gt;&lt;li&gt;Is Biden a Man Out of Time?&lt;/li&gt;&lt;li&gt;Leonard Cohen’s ‘Hallelujah’ Belongs to Everyone&lt;/li&gt;&lt;li&gt;Marcel the Shell Is the Hero the World Needs&lt;/li&gt;&lt;li&gt;What a Story of 1970s Abortion Activism Can Teach Us Today&lt;/li&gt;&lt;li&gt;The Kate Bush Resurgence Is a Reminder That We Can Have Nice Things&lt;/li&gt;&lt;li&gt;The Black Religion That’s Been Maligned for Centuries&lt;/li&gt;&lt;li&gt;What’s Better in Britain&lt;/li&gt;&lt;li&gt;America’s Necessary Myth for the World&lt;/li&gt;&lt;li&gt;The Accidental Trumpification of NATO&lt;/li&gt;&lt;li&gt;Photos of the Week: Lightning Rod, Crown Fountain, Lunar Transit&lt;/li&gt;&lt;li&gt;How the Rest of the World Is Doing RTO&lt;/li&gt;&lt;li&gt;Don’t Worry, It’s Not COVID&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Ruling Is Going to Be Very, Very Expensive&lt;/li&gt;&lt;li&gt;Rock Never Dies—But It Does Get Older and Wiser&lt;/li&gt;&lt;li&gt;The Summer of Our Discontent&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-abortion Laws&lt;/li&gt;&lt;/ul&gt;
-                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
-                </content>
-<updated>2022-07-06T21:44:49Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-06.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-06.epub"/>
-</entry>
-<entry>
-<id>POLITICO Magazine</id>
-<title>POLITICO Magazine: 6 Jul, 2022</title>
-<summary>POLITICO Magazine: 6 Jul, 2022 published at 2022-07-06 19:48PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Why Bitcoin ATMs are Vexing Rulemakers&lt;/li&gt;&lt;li&gt;Opinion | Bombshell Jan. 6 Testimony Could Hurt a Justice Department Prosecution&lt;/li&gt;&lt;li&gt;Opinion | How the Founders Intended to Check the Supreme Court’s Power&lt;/li&gt;&lt;li&gt;Opinion | The Rudy Giuliani Joke Isn’t Funny Anymore&lt;/li&gt;&lt;li&gt;There Are 11 Types of Donald Trump Enablers. Which One Are You?&lt;/li&gt;&lt;li&gt;The Real Reason Washington Ignored Kavanaugh’s Would-Be Killer&lt;/li&gt;&lt;li&gt;From Chelsea Clinton to David Petraeus, Here’s What Politicos Are Reading This Summer&lt;/li&gt;&lt;li&gt;The Michigan Democrat Who Could Solve Her Party’s Identity Crisis&lt;/li&gt;&lt;li&gt;The Supreme Court Just Rolled Democracy Back. You Can Measure How Much.&lt;/li&gt;&lt;li&gt;‘It Was All Just a Show’: Confessions of a Republican Campaign Hit Man&lt;/li&gt;&lt;li&gt;Opinion | A Bold Plan to Preserve Access to Abortion&lt;/li&gt;&lt;li&gt;Opinion | A Grand Compromise on Abortion&lt;/li&gt;&lt;li&gt;Trump Is in Trouble and He Knows It&lt;/li&gt;&lt;/ul&gt;
-                News, Analysis and Opinion from POLITICO
-                </content>
-<updated>2022-07-06T19:48:06Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-07-06.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-07-06.epub"/>
-</entry>
-<entry>
 <id>The Third Pole</id>
 <title>The Third Pole: 6 Jul, 2022</title>
 <summary>The Third Pole: 6 Jul, 2022 published at 2022-07-06 15:12PM.</summary>
@@ -102,22 +118,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-07-06.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="thirdpole-2022-07-06.epub"/>
-</entry>
-<entry>
-<id>ProPublica</id>
-<title>ProPublica: 6 Jul, 2022</title>
-<summary>ProPublica: 6 Jul, 2022 published at 2022-07-06 10:00AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;DOJ Investigating Texas’ Operation Lone Star for Alleged Civil Rights Violations&lt;/li&gt;&lt;li&gt;How Foreign Private Equity Hooked New England’s Fishing Industry&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Decision Could Hamper Regulators’ Ability to Protect the Public&lt;/li&gt;&lt;li&gt;Federal Patient Privacy Law Does Not Cover Most Period-Tracking Apps&lt;/li&gt;&lt;li&gt;Google Allowed a Sanctioned Russian Ad Company to Harvest User Data for Months&lt;/li&gt;&lt;li&gt;How We Fight Back When Officials Resist Releasing Information You Have a Right to Know&lt;/li&gt;&lt;li&gt;Congress Investigates Portable Generator Manufacturers Following Carbon Monoxide Deaths&lt;/li&gt;&lt;li&gt;The Other Cancel Culture: How a Public University Is Bowing to a Conservative Crusade&lt;/li&gt;&lt;li&gt;Army Corps of Engineers to Order New Study of Grain Elevator That Could Harm Black Heritage Sites&lt;/li&gt;&lt;li&gt;Help Us Learn About Sheltered Workshops in Missouri&lt;/li&gt;&lt;li&gt;The Polluter Just Got a Million-Dollar Fine. That Won’t Cure This Woman’s Rare Cancer.&lt;/li&gt;&lt;li&gt;School Board Candidates Who Criticized the Hiring of a Black DEI Educator Lose Their Elections&lt;/li&gt;&lt;li&gt;Ten Ways Billionaires Avoid Taxes on an Epic Scale&lt;/li&gt;&lt;li&gt;“We’re at a Crisis Point”: NY Attorney General Hearing Spotlights Child Mental Health Care Failures&lt;/li&gt;&lt;li&gt;$53.3 Million. 33 Jobs. No Plan. That’s How Mississippi Lawmakers Are Spending BP Oil Spill Money.&lt;/li&gt;&lt;li&gt;How Susquehanna’s Jeff Yass Avoided $1 Billion in Taxes&lt;/li&gt;&lt;li&gt;Facebook Finally Agrees to Eliminate Tool That Enabled Discriminatory Advertising&lt;/li&gt;&lt;li&gt;Louisiana Limits Solitary Confinement for Youth&lt;/li&gt;&lt;li&gt;Utah Officials Called It the “Year of Water.” Special Interests Still Resist Conservation.&lt;/li&gt;&lt;li&gt;Meet the Billionaire and Rising GOP Mega-Donor Who’s Gaming the Tax System&lt;/li&gt;&lt;/ul&gt;
-                ProPublica is an independent, nonprofit newsroom that produces investigative journalism with moral force.
-                </content>
-<updated>2022-07-06T10:00:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="propublica-2022-07-06.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="propublica-2022-07-06.epub"/>
 </entry>
 <entry>
 <id>Nature</id>
