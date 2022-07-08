@@ -2,26 +2,58 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-08T19:20:42Z</updated>
+<updated>2022-07-08T23:23:09Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
+<id>Vox</id>
+<title>Vox: 8 Jul, 2022</title>
+<summary>Vox: 8 Jul, 2022 published at 2022-07-08 22:30PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;The limitations of Joe Biden’s executive order on abortion&lt;/li&gt;&lt;li&gt;The January 6 committee is holding a series of public hearings&lt;/li&gt;&lt;li&gt;Who is Pat Cipollone, the Trump lawyer testifying behind closed doors on Friday?&lt;/li&gt;&lt;li&gt;Shinzo Abe wanted to make Japan a “normal country” — as he saw it&lt;/li&gt;&lt;li&gt;7 of your most pressing monkeypox vaccine questions, answered&lt;/li&gt;&lt;li&gt;What the latest jobs report means&lt;/li&gt;&lt;li&gt;How abortion bans make inequality worse&lt;/li&gt;&lt;li&gt;Marvel’s villains are eclipsing its heroes&lt;/li&gt;&lt;li&gt;Preparing for extreme weather is a community concern. Here’s how to be ready.&lt;/li&gt;&lt;li&gt;Boris Johnson was a winner, until he wasn’t&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-07-08T22:30:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-08.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-08.epub"/>
+</entry>
+<entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 8 Jul, 2022</title>
-<summary>The Atlantic: 8 Jul, 2022 published at 2022-07-08 18:11PM.</summary>
+<summary>The Atlantic: 8 Jul, 2022 published at 2022-07-08 22:21PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Admit It, Squirrels Are Just Tree Rats&lt;/li&gt;&lt;li&gt;What Happened to Michael Flynn?&lt;/li&gt;&lt;li&gt;Shinzo Abe Made the World Better&lt;/li&gt;&lt;li&gt;There’s Nothing Like a Great Takedown&lt;/li&gt;&lt;li&gt;Dobbs Is No Brown v. Board of Education&lt;/li&gt;&lt;li&gt;The Vasectomy Influencers&lt;/li&gt;&lt;li&gt;Why Illinois’ Red-Flag Laws Didn’t Stop the Highland Park Shooting&lt;/li&gt;&lt;li&gt;The Glaring Contradiction of Republicans’ Rhetoric of Freedom&lt;/li&gt;&lt;li&gt;Democrats Try to Build Back (A Bit) Better&lt;/li&gt;&lt;li&gt;Photos of the Week: Oil Wrestling, Flaming Bull, Gorgosaurus Sale&lt;/li&gt;&lt;li&gt;The Shameless Boris Johnson&lt;/li&gt;&lt;li&gt;How to Hold a Charismatic Charlatan to Account&lt;/li&gt;&lt;li&gt;Coming Undone in the Age of Mass Shootings&lt;/li&gt;&lt;li&gt;The Minions Are Good. I’m Serious.&lt;/li&gt;&lt;li&gt;The 2022 Audubon Photography Awards&lt;/li&gt;&lt;li&gt;What Brexit Did to Boris Johnson—And Britain&lt;/li&gt;&lt;li&gt;The Most Pathetic Men in America&lt;/li&gt;&lt;li&gt;The Worst, Best Prime Minister&lt;/li&gt;&lt;li&gt;Why These Frogs Make ‘the Grossest Blunder in Sexual Preference’&lt;/li&gt;&lt;li&gt;Here Lies Boris Johnson&lt;/li&gt;&lt;li&gt;How Are We Possibly Still Disinfecting Things?&lt;/li&gt;&lt;li&gt;Cities Aren’t Built for Kids&lt;/li&gt;&lt;li&gt;Take Away the President’s Immunity&lt;/li&gt;&lt;li&gt;How the UN Security Council Can Reinvent Itself&lt;/li&gt;&lt;li&gt;Six Reasons the Murder Clearance Rate Is at an All-Time Low&lt;/li&gt;&lt;li&gt;Maybe Ridding the World of Superheroes Isn’t Such a Bad Idea&lt;/li&gt;&lt;li&gt;What Comes After Roe?&lt;/li&gt;&lt;li&gt;Is Biden a Man Out of Time?&lt;/li&gt;&lt;li&gt;Why Biden Shouldn’t Run in 2024&lt;/li&gt;&lt;li&gt;Trump Gets the January 6 Trial He Long Dodged&lt;/li&gt;&lt;li&gt;Are Iowa’s Democratic Days Gone for Good?&lt;/li&gt;&lt;li&gt;Pennsylvania Becomes the Land of Oz&lt;/li&gt;&lt;li&gt;Stranger Things Isn’t TV. It’s Something Else.&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;Eight Books in Which Ignorance Is the Point&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;What a Story of 1970s Abortion Activism Can Teach Us Today&lt;/li&gt;&lt;li&gt;The Game Is (Probably) Up for Boris Johnson&lt;/li&gt;&lt;li&gt;What’s Better in Britain&lt;/li&gt;&lt;li&gt;America’s Necessary Myth for the World&lt;/li&gt;&lt;li&gt;The Accidental Trumpification of NATO&lt;/li&gt;&lt;li&gt;Britain’s Unbridgeable Divide&lt;/li&gt;&lt;li&gt;Where Russia’s Declinist Rage Isn’t Enough&lt;/li&gt;&lt;li&gt;What’s Behind American Decline: Domestic Dysfunction&lt;/li&gt;&lt;li&gt;Hybrid Work Is Doomed&lt;/li&gt;&lt;li&gt;Uber Pool Is a Zombie&lt;/li&gt;&lt;li&gt;The Betrayal&lt;/li&gt;&lt;li&gt;Biden Won Big With a Bad Hand&lt;/li&gt;&lt;li&gt;How Do Democrats Recover From This?&lt;/li&gt;&lt;li&gt;The Great Veterinary Shortage&lt;/li&gt;&lt;li&gt;The World Is Turning Back to Coal&lt;/li&gt;&lt;li&gt;We’ve Never Seen Mars Quite Like This&lt;/li&gt;&lt;li&gt;The Future of Mud&lt;/li&gt;&lt;li&gt;Biden’s Climate Goals Rest on a 71-Year-Old Defense Law&lt;/li&gt;&lt;li&gt;Trump May Not Have to Steal 2024&lt;/li&gt;&lt;li&gt;Are the Last Rational Republicans in Denial?&lt;/li&gt;&lt;li&gt;America’s Public-Health Efforts Have Slowed to a Crawl&lt;/li&gt;&lt;li&gt;A Nation of Hostages&lt;/li&gt;&lt;li&gt;Should Americans Have a Right to Absolute Privacy?&lt;/li&gt;&lt;li&gt;Rock Never Dies—But It Does Get Older and Wiser&lt;/li&gt;&lt;li&gt;The Summer of Our Discontent&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-abortion Laws&lt;/li&gt;&lt;li&gt;We Now Know&lt;/li&gt;&lt;li&gt;What Trump Has Taken From Us&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;America Endures&lt;/li&gt;&lt;li&gt;Astronomers Haven’t Been This Giddy in Years&lt;/li&gt;&lt;li&gt;Admit It, Squirrels Are Just Tree Rats&lt;/li&gt;&lt;li&gt;What Happened to Michael Flynn?&lt;/li&gt;&lt;li&gt;Shinzo Abe Made the World Better&lt;/li&gt;&lt;li&gt;There’s Nothing Like a Great Takedown&lt;/li&gt;&lt;li&gt;Dobbs Is No Brown v. Board of Education&lt;/li&gt;&lt;li&gt;The Vasectomy Influencers&lt;/li&gt;&lt;li&gt;Why Illinois’ Red-Flag Laws Didn’t Stop the Highland Park Shooting&lt;/li&gt;&lt;li&gt;The Glaring Contradiction of Republicans’ Rhetoric of Freedom&lt;/li&gt;&lt;li&gt;Democrats Try to Build Back (A Bit) Better&lt;/li&gt;&lt;li&gt;Photos of the Week: Oil Wrestling, Flaming Bull, Gorgosaurus Sale&lt;/li&gt;&lt;li&gt;The Shameless Boris Johnson&lt;/li&gt;&lt;li&gt;How to Hold a Charismatic Charlatan to Account&lt;/li&gt;&lt;li&gt;Coming Undone in the Age of Mass Shootings&lt;/li&gt;&lt;li&gt;The Minions Are Good. I’m Serious.&lt;/li&gt;&lt;li&gt;The 2022 Audubon Photography Awards&lt;/li&gt;&lt;li&gt;What Brexit Did to Boris Johnson—And Britain&lt;/li&gt;&lt;li&gt;The Most Pathetic Men in America&lt;/li&gt;&lt;li&gt;The Worst, Best Prime Minister&lt;/li&gt;&lt;li&gt;Why These Frogs Make ‘the Grossest Blunder in Sexual Preference’&lt;/li&gt;&lt;li&gt;Here Lies Boris Johnson&lt;/li&gt;&lt;li&gt;How Are We Possibly Still Disinfecting Things?&lt;/li&gt;&lt;li&gt;Cities Aren’t Built for Kids&lt;/li&gt;&lt;li&gt;Take Away the President’s Immunity&lt;/li&gt;&lt;li&gt;Maybe Ridding the World of Superheroes Isn’t Such a Bad Idea&lt;/li&gt;&lt;li&gt;What Comes After Roe?&lt;/li&gt;&lt;li&gt;Is Biden a Man Out of Time?&lt;/li&gt;&lt;li&gt;Why Biden Shouldn’t Run in 2024&lt;/li&gt;&lt;li&gt;Trump Gets the January 6 Trial He Long Dodged&lt;/li&gt;&lt;li&gt;Are Iowa’s Democratic Days Gone for Good?&lt;/li&gt;&lt;li&gt;Pennsylvania Becomes the Land of Oz&lt;/li&gt;&lt;li&gt;Stranger Things Isn’t TV. It’s Something Else.&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;Eight Books in Which Ignorance Is the Point&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;What a Story of 1970s Abortion Activism Can Teach Us Today&lt;/li&gt;&lt;li&gt;The Game Is (Probably) Up for Boris Johnson&lt;/li&gt;&lt;li&gt;What’s Better in Britain&lt;/li&gt;&lt;li&gt;America’s Necessary Myth for the World&lt;/li&gt;&lt;li&gt;The Accidental Trumpification of NATO&lt;/li&gt;&lt;li&gt;Britain’s Unbridgeable Divide&lt;/li&gt;&lt;li&gt;Where Russia’s Declinist Rage Isn’t Enough&lt;/li&gt;&lt;li&gt;What’s Behind American Decline: Domestic Dysfunction&lt;/li&gt;&lt;li&gt;Hybrid Work Is Doomed&lt;/li&gt;&lt;li&gt;Uber Pool Is a Zombie&lt;/li&gt;&lt;li&gt;The Betrayal&lt;/li&gt;&lt;li&gt;Biden Won Big With a Bad Hand&lt;/li&gt;&lt;li&gt;How Do Democrats Recover From This?&lt;/li&gt;&lt;li&gt;The Great Veterinary Shortage&lt;/li&gt;&lt;li&gt;The World Is Turning Back to Coal&lt;/li&gt;&lt;li&gt;We’ve Never Seen Mars Quite Like This&lt;/li&gt;&lt;li&gt;The Future of Mud&lt;/li&gt;&lt;li&gt;Trump May Not Have to Steal 2024&lt;/li&gt;&lt;li&gt;Six Reasons the Murder Clearance Rate Is at an All-Time Low&lt;/li&gt;&lt;li&gt;Are the Last Rational Republicans in Denial?&lt;/li&gt;&lt;li&gt;America’s Public-Health Efforts Have Slowed to a Crawl&lt;/li&gt;&lt;li&gt;A Nation of Hostages&lt;/li&gt;&lt;li&gt;Should Americans Have a Right to Absolute Privacy?&lt;/li&gt;&lt;li&gt;Rock Never Dies—But It Does Get Older and Wiser&lt;/li&gt;&lt;li&gt;The Summer of Our Discontent&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-abortion Laws&lt;/li&gt;&lt;li&gt;We Now Know&lt;/li&gt;&lt;li&gt;What Trump Has Taken From Us&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;/ul&gt;
                 News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
                 </content>
-<updated>2022-07-08T18:11:07Z</updated>
+<updated>2022-07-08T22:21:01Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-08.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-08.epub"/>
+</entry>
+<entry>
+<id>Economist</id>
+<title>Economist: 9 Jul, 2022</title>
+<summary>Economist: 9 Jul, 2022 published at 2022-07-08 19:55PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Politics&lt;/li&gt;&lt;li&gt;Business&lt;/li&gt;&lt;li&gt;KAL’s cartoon&lt;/li&gt;&lt;li&gt;Clownfall&lt;/li&gt;&lt;li&gt;Who’s afraid of TikTok?&lt;/li&gt;&lt;li&gt;The new exceptionalism&lt;/li&gt;&lt;li&gt;Crisis in the classroom&lt;/li&gt;&lt;li&gt;Private pain&lt;/li&gt;&lt;li&gt;Magna mistake&lt;/li&gt;&lt;li&gt;On justice services, abortion, Africa, car dealers, Turkey, BTS, technology at work&lt;/li&gt;&lt;li&gt;Boris Bondarev on Vladimir Putin’s craven diplomats&lt;/li&gt;&lt;li&gt;The global economy needs to be better prepared for the coming storm, says Kathryn Judge&lt;/li&gt;&lt;li&gt;Brad DeLong asks what America can learn from its past bouts of inflation&lt;/li&gt;&lt;li&gt;Quavering&lt;/li&gt;&lt;li&gt;How a free and open Hong Kong became a police state&lt;/li&gt;&lt;li&gt;Trumpism’s new Washington army&lt;/li&gt;&lt;li&gt;Votes for zygotes?&lt;/li&gt;&lt;li&gt;Allow and unleash&lt;/li&gt;&lt;li&gt;Copicat&lt;/li&gt;&lt;li&gt;No, no se puede&lt;/li&gt;&lt;li&gt;High noon for Liz Cheney&lt;/li&gt;&lt;li&gt;Hearts, not minds&lt;/li&gt;&lt;li&gt;Find works; insert spanner; repeat&lt;/li&gt;&lt;li&gt;Rafting with rebels&lt;/li&gt;&lt;li&gt;Cold comfort&lt;/li&gt;&lt;li&gt;Bureaucratic nightmare&lt;/li&gt;&lt;li&gt;Shinde shindig&lt;/li&gt;&lt;li&gt;Bridges to liberty&lt;/li&gt;&lt;li&gt;The new isolationism&lt;/li&gt;&lt;li&gt;Building blocs&lt;/li&gt;&lt;li&gt;Above the water line&lt;/li&gt;&lt;li&gt;Hacked&lt;/li&gt;&lt;li&gt;Having a larp&lt;/li&gt;&lt;li&gt;Either ore&lt;/li&gt;&lt;li&gt;He shoots, he scores…&lt;/li&gt;&lt;li&gt;Yair apparent&lt;/li&gt;&lt;li&gt;Paving paradise&lt;/li&gt;&lt;li&gt;A burgeoning new bazaar&lt;/li&gt;&lt;li&gt;Kherson bound&lt;/li&gt;&lt;li&gt;Fate unknown&lt;/li&gt;&lt;li&gt;Welcome to boom town&lt;/li&gt;&lt;li&gt;From bad to worse&lt;/li&gt;&lt;li&gt;Minority report&lt;/li&gt;&lt;li&gt;Slings and arrows&lt;/li&gt;&lt;li&gt;No-fly zone&lt;/li&gt;&lt;li&gt;The wreckage he leaves behind&lt;/li&gt;&lt;li&gt;Spend rift&lt;/li&gt;&lt;li&gt;Men behaving badly&lt;/li&gt;&lt;li&gt;Backlog Britain&lt;/li&gt;&lt;li&gt;New tricks&lt;/li&gt;&lt;li&gt;Two mouths, one message&lt;/li&gt;&lt;li&gt;The toxicity of Boris Johnson&lt;/li&gt;&lt;li&gt;Millions of wasted minds&lt;/li&gt;&lt;li&gt;PE lessons&lt;/li&gt;&lt;li&gt;Strong headwinds&lt;/li&gt;&lt;li&gt;A species reborn&lt;/li&gt;&lt;li&gt;How to read corporate culture&lt;/li&gt;&lt;li&gt;Self-Reliance&lt;/li&gt;&lt;li&gt;Tougher than tariffs&lt;/li&gt;&lt;li&gt;Helter skelter&lt;/li&gt;&lt;li&gt;Case closed&lt;/li&gt;&lt;li&gt;Last man standing&lt;/li&gt;&lt;li&gt;Bills, bills, bills&lt;/li&gt;&lt;li&gt;Levelling down&lt;/li&gt;&lt;li&gt;Beyond the Standard Model&lt;/li&gt;&lt;li&gt;Hearts of stone&lt;/li&gt;&lt;li&gt;To be a pilgrim&lt;/li&gt;&lt;li&gt;The braids of a loaf&lt;/li&gt;&lt;li&gt;Perfidious Albion&lt;/li&gt;&lt;li&gt;Hide and seek&lt;/li&gt;&lt;li&gt;The lives of Zelensky&lt;/li&gt;&lt;li&gt;Economic data, commodities and markets&lt;/li&gt;&lt;li&gt;It could have been worse&lt;/li&gt;&lt;li&gt;Why is Georgia struggling to join the EU?&lt;/li&gt;&lt;li&gt;Why are cluster munitions so dangerous?&lt;/li&gt;&lt;li&gt;The mystic of the stage&lt;/li&gt;&lt;/ul&gt;
+                Global news and current affairs from a European perspective. Best downloaded on Friday mornings (GMT)
+                </content>
+<updated>2022-07-08T19:55:17Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-07-08.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="economist-2022-07-08.epub"/>
 </entry>
 <entry>
 <id>The Diplomat</id>
@@ -38,38 +70,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-diplomat-2022-07-08.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-diplomat-2022-07-08.epub"/>
-</entry>
-<entry>
-<id>Vox</id>
-<title>Vox: 8 Jul, 2022</title>
-<summary>Vox: 8 Jul, 2022 published at 2022-07-08 17:50PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Shinzo Abe wanted to make Japan a “normal country” — as he saw it&lt;/li&gt;&lt;li&gt;7 of your most pressing monkeypox vaccine questions, answered&lt;/li&gt;&lt;li&gt;What the latest jobs report means&lt;/li&gt;&lt;li&gt;How abortion bans make inequality worse&lt;/li&gt;&lt;li&gt;Marvel’s villains are eclipsing its heroes&lt;/li&gt;&lt;li&gt;Preparing for extreme weather is a community concern. Here’s how to be ready.&lt;/li&gt;&lt;li&gt;Boris Johnson was a winner, until he wasn’t&lt;/li&gt;&lt;li&gt;Thor: Love and Thunder’s post-credits scene is a big casting announcement&lt;/li&gt;&lt;li&gt;How will we know if we’re in a recession?&lt;/li&gt;&lt;li&gt;What we know about the deadly police shooting of Jayland Walker&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-07-08T17:50:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-08.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-08.epub"/>
-</entry>
-<entry>
-<id>Economist</id>
-<title>Economist: 9 Jul, 2022</title>
-<summary>Economist: 9 Jul, 2022 published at 2022-07-08 16:35PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Politics&lt;/li&gt;&lt;li&gt;Business&lt;/li&gt;&lt;li&gt;KAL’s cartoon&lt;/li&gt;&lt;li&gt;Clownfall&lt;/li&gt;&lt;li&gt;Who’s afraid of TikTok?&lt;/li&gt;&lt;li&gt;The new exceptionalism&lt;/li&gt;&lt;li&gt;Crisis in the classroom&lt;/li&gt;&lt;li&gt;Private pain&lt;/li&gt;&lt;li&gt;Magna mistake&lt;/li&gt;&lt;li&gt;On justice services, abortion, Africa, car dealers, Turkey, BTS, technology at work&lt;/li&gt;&lt;li&gt;Boris Bondarev on Vladimir Putin’s craven diplomats&lt;/li&gt;&lt;li&gt;The global economy needs to be better prepared for the coming storm, says Kathryn Judge&lt;/li&gt;&lt;li&gt;Brad DeLong asks what America can learn from its past bouts of inflation&lt;/li&gt;&lt;li&gt;Quavering&lt;/li&gt;&lt;li&gt;How a free and open Hong Kong became a police state&lt;/li&gt;&lt;li&gt;Trumpism’s new Washington army&lt;/li&gt;&lt;li&gt;Votes for zygotes?&lt;/li&gt;&lt;li&gt;Allow and unleash&lt;/li&gt;&lt;li&gt;Copicat&lt;/li&gt;&lt;li&gt;No, no se puede&lt;/li&gt;&lt;li&gt;High noon for Liz Cheney&lt;/li&gt;&lt;li&gt;Hearts, not minds&lt;/li&gt;&lt;li&gt;Find works; insert spanner; repeat&lt;/li&gt;&lt;li&gt;Rafting with rebels&lt;/li&gt;&lt;li&gt;Cold comfort&lt;/li&gt;&lt;li&gt;Bureaucratic nightmare&lt;/li&gt;&lt;li&gt;Shinde shindig&lt;/li&gt;&lt;li&gt;Bridges to liberty&lt;/li&gt;&lt;li&gt;The new isolationism&lt;/li&gt;&lt;li&gt;Building blocs&lt;/li&gt;&lt;li&gt;Above the water line&lt;/li&gt;&lt;li&gt;Hacked&lt;/li&gt;&lt;li&gt;Having a larp&lt;/li&gt;&lt;li&gt;Either ore&lt;/li&gt;&lt;li&gt;He shoots, he scores…&lt;/li&gt;&lt;li&gt;Yair apparent&lt;/li&gt;&lt;li&gt;Paving paradise&lt;/li&gt;&lt;li&gt;A burgeoning new bazaar&lt;/li&gt;&lt;li&gt;Kherson bound&lt;/li&gt;&lt;li&gt;Fate unknown&lt;/li&gt;&lt;li&gt;Welcome to boom town&lt;/li&gt;&lt;li&gt;From bad to worse&lt;/li&gt;&lt;li&gt;Minority report&lt;/li&gt;&lt;li&gt;Slings and arrows&lt;/li&gt;&lt;li&gt;No-fly zone&lt;/li&gt;&lt;li&gt;The wreckage he leaves behind&lt;/li&gt;&lt;li&gt;Spend rift&lt;/li&gt;&lt;li&gt;Men behaving badly&lt;/li&gt;&lt;li&gt;Backlog Britain&lt;/li&gt;&lt;li&gt;New tricks&lt;/li&gt;&lt;li&gt;Two mouths, one message&lt;/li&gt;&lt;li&gt;The toxicity of Boris Johnson&lt;/li&gt;&lt;li&gt;Millions of wasted minds&lt;/li&gt;&lt;li&gt;PE lessons&lt;/li&gt;&lt;li&gt;Strong headwinds&lt;/li&gt;&lt;li&gt;A species reborn&lt;/li&gt;&lt;li&gt;How to read corporate culture&lt;/li&gt;&lt;li&gt;Self-Reliance&lt;/li&gt;&lt;li&gt;Tougher than tariffs&lt;/li&gt;&lt;li&gt;Helter skelter&lt;/li&gt;&lt;li&gt;Case closed&lt;/li&gt;&lt;li&gt;Last man standing&lt;/li&gt;&lt;li&gt;Bills, bills, bills&lt;/li&gt;&lt;li&gt;Levelling down&lt;/li&gt;&lt;li&gt;Beyond the Standard Model&lt;/li&gt;&lt;li&gt;Hearts of stone&lt;/li&gt;&lt;li&gt;To be a pilgrim&lt;/li&gt;&lt;li&gt;The braids of a loaf&lt;/li&gt;&lt;li&gt;Perfidious Albion&lt;/li&gt;&lt;li&gt;Hide and seek&lt;/li&gt;&lt;li&gt;The lives of Zelensky&lt;/li&gt;&lt;li&gt;Economic data, commodities and markets&lt;/li&gt;&lt;li&gt;It could have been worse&lt;/li&gt;&lt;li&gt;Why is Georgia struggling to join the EU?&lt;/li&gt;&lt;li&gt;Why are cluster munitions so dangerous?&lt;/li&gt;&lt;li&gt;The mystic of the stage&lt;/li&gt;&lt;/ul&gt;
-                Global news and current affairs from a European perspective. Best downloaded on Friday mornings (GMT)
-                </content>
-<updated>2022-07-08T16:35:08Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-07-08.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="economist-2022-07-08.epub"/>
 </entry>
 <entry>
 <id>ProPublica</id>
