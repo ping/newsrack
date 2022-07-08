@@ -2,11 +2,75 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-08T07:24:29Z</updated>
+<updated>2022-07-08T11:19:59Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>The Third Pole</id>
+<title>The Third Pole: 8 Jul, 2022</title>
+<summary>The Third Pole: 8 Jul, 2022 published at 2022-07-08 10:45AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Women’s lives get harder in Bundelkhand as water scarcity grows&lt;/li&gt;&lt;li&gt;Stalled monsoon behind devastating floods in northeast India and Bangladesh&lt;/li&gt;&lt;li&gt;In Vietnam’s Mekong Delta, sand mining means lost homes and fortunes&lt;/li&gt;&lt;li&gt;How much progress has been made on Kyrgyz-Uzbek water cooperation?&lt;/li&gt;&lt;li&gt;Bonn climate talks end with ‘almost empty pages’&lt;/li&gt;&lt;li&gt;Farmers in mountainous areas of Pakistan feel the heat&lt;/li&gt;&lt;li&gt;Interview: ‘The narrative around hydro in Pakistan remains superficial’&lt;/li&gt;&lt;/ul&gt;
+                The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there.
+                </content>
+<updated>2022-07-08T10:45:47Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-07-08.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="thirdpole-2022-07-08.epub"/>
+</entry>
+<entry>
+<id>Economist</id>
+<title>Economist: 9 Jul, 2022</title>
+<summary>Economist: 9 Jul, 2022 published at 2022-07-08 09:29AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Politics&lt;/li&gt;&lt;li&gt;Business&lt;/li&gt;&lt;li&gt;KAL’s cartoon&lt;/li&gt;&lt;li&gt;Clownfall&lt;/li&gt;&lt;li&gt;Who’s afraid of TikTok?&lt;/li&gt;&lt;li&gt;The new exceptionalism&lt;/li&gt;&lt;li&gt;Crisis in the classroom&lt;/li&gt;&lt;li&gt;Private pain&lt;/li&gt;&lt;li&gt;Magna mistake&lt;/li&gt;&lt;li&gt;On justice services, abortion, Africa, car dealers, Turkey, BTS, technology at work&lt;/li&gt;&lt;li&gt;Boris Bondarev on Vladimir Putin’s craven diplomats&lt;/li&gt;&lt;li&gt;The global economy needs to be better prepared for the coming storm, says Kathryn Judge&lt;/li&gt;&lt;li&gt;Brad DeLong asks what America can learn from its past bouts of inflation&lt;/li&gt;&lt;li&gt;Quavering&lt;/li&gt;&lt;li&gt;How a free and open Hong Kong became a police state&lt;/li&gt;&lt;li&gt;Trumpism’s new Washington army&lt;/li&gt;&lt;li&gt;Votes for zygotes?&lt;/li&gt;&lt;li&gt;Allow and unleash&lt;/li&gt;&lt;li&gt;Copicat&lt;/li&gt;&lt;li&gt;No, no se puede&lt;/li&gt;&lt;li&gt;High noon for Liz Cheney&lt;/li&gt;&lt;li&gt;Hearts, not minds&lt;/li&gt;&lt;li&gt;Find works; insert spanner; repeat&lt;/li&gt;&lt;li&gt;Rafting with rebels&lt;/li&gt;&lt;li&gt;Cold comfort&lt;/li&gt;&lt;li&gt;Bureaucratic nightmare&lt;/li&gt;&lt;li&gt;Shinde shindig&lt;/li&gt;&lt;li&gt;Bridges to liberty&lt;/li&gt;&lt;li&gt;The new isolationism&lt;/li&gt;&lt;li&gt;Building blocs&lt;/li&gt;&lt;li&gt;Above the water line&lt;/li&gt;&lt;li&gt;Hacked&lt;/li&gt;&lt;li&gt;Having a larp&lt;/li&gt;&lt;li&gt;Either ore&lt;/li&gt;&lt;li&gt;He shoots, he scores…&lt;/li&gt;&lt;li&gt;Yair apparent&lt;/li&gt;&lt;li&gt;Paving paradise&lt;/li&gt;&lt;li&gt;A burgeoning new bazaar&lt;/li&gt;&lt;li&gt;Kherson bound&lt;/li&gt;&lt;li&gt;Fate unknown&lt;/li&gt;&lt;li&gt;Welcome to boom town&lt;/li&gt;&lt;li&gt;From bad to worse&lt;/li&gt;&lt;li&gt;Minority report&lt;/li&gt;&lt;li&gt;Slings and arrows&lt;/li&gt;&lt;li&gt;No-fly zone&lt;/li&gt;&lt;li&gt;The wreckage he leaves behind&lt;/li&gt;&lt;li&gt;Spend rift&lt;/li&gt;&lt;li&gt;Men behaving badly&lt;/li&gt;&lt;li&gt;Backlog Britain&lt;/li&gt;&lt;li&gt;New tricks&lt;/li&gt;&lt;li&gt;Two mouths, one message&lt;/li&gt;&lt;li&gt;The toxicity of Boris Johnson&lt;/li&gt;&lt;li&gt;Millions of wasted minds&lt;/li&gt;&lt;li&gt;PE lessons&lt;/li&gt;&lt;li&gt;Strong headwinds&lt;/li&gt;&lt;li&gt;A species reborn&lt;/li&gt;&lt;li&gt;How to read corporate culture&lt;/li&gt;&lt;li&gt;Self-Reliance&lt;/li&gt;&lt;li&gt;Tougher than tariffs&lt;/li&gt;&lt;li&gt;Helter skelter&lt;/li&gt;&lt;li&gt;Case closed&lt;/li&gt;&lt;li&gt;Last man standing&lt;/li&gt;&lt;li&gt;Bills, bills, bills&lt;/li&gt;&lt;li&gt;Levelling down&lt;/li&gt;&lt;li&gt;Beyond the Standard Model&lt;/li&gt;&lt;li&gt;Hearts of stone&lt;/li&gt;&lt;li&gt;To be a pilgrim&lt;/li&gt;&lt;li&gt;The braids of a loaf&lt;/li&gt;&lt;li&gt;Perfidious Albion&lt;/li&gt;&lt;li&gt;Hide and seek&lt;/li&gt;&lt;li&gt;The lives of Zelensky&lt;/li&gt;&lt;li&gt;Economic data, commodities and markets&lt;/li&gt;&lt;li&gt;It could have been worse&lt;/li&gt;&lt;li&gt;Why is Georgia struggling to join the EU?&lt;/li&gt;&lt;li&gt;Why are cluster munitions so dangerous?&lt;/li&gt;&lt;li&gt;The mystic of the stage&lt;/li&gt;&lt;/ul&gt;
+                Global news and current affairs from a European perspective. Best downloaded on Friday mornings (GMT)
+                </content>
+<updated>2022-07-08T09:29:08Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-07-08.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="economist-2022-07-08.epub"/>
+</entry>
+<entry>
+<id>ProPublica</id>
+<title>ProPublica: 8 Jul, 2022</title>
+<summary>ProPublica: 8 Jul, 2022 published at 2022-07-08 09:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;In Debate Over Chicago’s Speed Cameras, Concerns Over Safety, Racial Disparities Collide&lt;/li&gt;&lt;li&gt;The City Where Investigations of Police Take So Long, Officers Kill Again Before Reviews Are Done&lt;/li&gt;&lt;li&gt;Ken Griffin Spent $54 Million Fighting a Tax Increase for the Rich. Secret IRS Data Shows It Paid Off for Him.&lt;/li&gt;&lt;li&gt;DOJ Investigating Texas’ Operation Lone Star for Alleged Civil Rights Violations&lt;/li&gt;&lt;li&gt;How Foreign Private Equity Hooked New England’s Fishing Industry&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Decision Could Hamper Regulators’ Ability to Protect the Public&lt;/li&gt;&lt;li&gt;Federal Patient Privacy Law Does Not Cover Most Period-Tracking Apps&lt;/li&gt;&lt;li&gt;Google Allowed a Sanctioned Russian Ad Company to Harvest User Data for Months&lt;/li&gt;&lt;li&gt;How We Fight Back When Officials Resist Releasing Information You Have a Right to Know&lt;/li&gt;&lt;li&gt;Congress Investigates Portable Generator Manufacturers Following Carbon Monoxide Deaths&lt;/li&gt;&lt;li&gt;The Other Cancel Culture: How a Public University Is Bowing to a Conservative Crusade&lt;/li&gt;&lt;li&gt;Army Corps of Engineers to Order New Study of Grain Elevator That Could Harm Black Heritage Sites&lt;/li&gt;&lt;li&gt;Help Us Learn About Sheltered Workshops in Missouri&lt;/li&gt;&lt;li&gt;The Polluter Just Got a Million-Dollar Fine. That Won’t Cure This Woman’s Rare Cancer.&lt;/li&gt;&lt;li&gt;School Board Candidates Who Criticized the Hiring of a Black DEI Educator Lose Their Elections&lt;/li&gt;&lt;li&gt;Ten Ways Billionaires Avoid Taxes on an Epic Scale&lt;/li&gt;&lt;li&gt;“We’re at a Crisis Point”: NY Attorney General Hearing Spotlights Child Mental Health Care Failures&lt;/li&gt;&lt;li&gt;$53.3 Million. 33 Jobs. No Plan. That’s How Mississippi Lawmakers Are Spending BP Oil Spill Money.&lt;/li&gt;&lt;li&gt;How Susquehanna’s Jeff Yass Avoided $1 Billion in Taxes&lt;/li&gt;&lt;li&gt;Facebook Finally Agrees to Eliminate Tool That Enabled Discriminatory Advertising&lt;/li&gt;&lt;/ul&gt;
+                ProPublica is an independent, nonprofit newsroom that produces investigative journalism with moral force.
+                </content>
+<updated>2022-07-08T09:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="propublica-2022-07-08.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="propublica-2022-07-08.epub"/>
+</entry>
+<entry>
+<id>POLITICO Magazine</id>
+<title>POLITICO Magazine: 8 Jul, 2022</title>
+<summary>POLITICO Magazine: 8 Jul, 2022 published at 2022-07-08 08:30AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Opinion | The (Fairly Serious) Case for Jon Stewart in 2024&lt;/li&gt;&lt;li&gt;Opinion | Take the Deal: Brittney Griner in Exchange for the ‘Merchant of Death’&lt;/li&gt;&lt;li&gt;My Time at the Side of Albany’s ‘Prince of Darkness’&lt;/li&gt;&lt;li&gt;Mark Leibovich Doesn’t Want to Be the #ThisTown Guy Anymore&lt;/li&gt;&lt;li&gt;Opinion | Boris Johnson’s Grip on Power Was Always Weaker than Trump’s&lt;/li&gt;&lt;li&gt;Opinion | Liberals Should Welcome Ron DeSantis’ Rise&lt;/li&gt;&lt;li&gt;He Was Dismissed as a Conservative Kook. Now the Supreme Court Is Embracing His Blueprint.&lt;/li&gt;&lt;li&gt;Liz Cheney Wins the GOP’s Manhood Contest&lt;/li&gt;&lt;li&gt;Why Bitcoin ATMs are Vexing Rulemakers&lt;/li&gt;&lt;li&gt;Opinion | Bombshell Jan. 6 Testimony Could Hurt a Justice Department Prosecution&lt;/li&gt;&lt;li&gt;Opinion | How the Founders Intended to Check the Supreme Court’s Power&lt;/li&gt;&lt;li&gt;Opinion | The Rudy Giuliani Joke Isn’t Funny Anymore&lt;/li&gt;&lt;/ul&gt;
+                News, Analysis and Opinion from POLITICO
+                </content>
+<updated>2022-07-08T08:30:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-07-08.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-07-08.epub"/>
+</entry>
 <entry>
 <id>The Diplomat</id>
 <title>The Diplomat: 8 Jul, 2022</title>
@@ -54,70 +118,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-07.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-07.epub"/>
-</entry>
-<entry>
-<id>Economist</id>
-<title>Economist: 9 Jul, 2022</title>
-<summary>Economist: 9 Jul, 2022 published at 2022-07-07 21:06PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Politics&lt;/li&gt;&lt;li&gt;Business&lt;/li&gt;&lt;li&gt;KAL’s cartoon&lt;/li&gt;&lt;li&gt;Clownfall&lt;/li&gt;&lt;li&gt;Who’s afraid of TikTok?&lt;/li&gt;&lt;li&gt;The new exceptionalism&lt;/li&gt;&lt;li&gt;Crisis in the classroom&lt;/li&gt;&lt;li&gt;Private pain&lt;/li&gt;&lt;li&gt;Magna mistake&lt;/li&gt;&lt;li&gt;On justice services, abortion, Africa, car dealers, Turkey, BTS, technology at work&lt;/li&gt;&lt;li&gt;Boris Bondarev on Vladimir Putin’s craven diplomats&lt;/li&gt;&lt;li&gt;The global economy needs to be better prepared for the coming storm, says Kathryn Judge&lt;/li&gt;&lt;li&gt;Brad DeLong asks what America can learn from its past bouts of inflation&lt;/li&gt;&lt;li&gt;Quavering&lt;/li&gt;&lt;li&gt;How a free and open Hong Kong became a police state&lt;/li&gt;&lt;li&gt;Trumpism’s new Washington army&lt;/li&gt;&lt;li&gt;Votes for zygotes?&lt;/li&gt;&lt;li&gt;Allow and unleash&lt;/li&gt;&lt;li&gt;Copicat&lt;/li&gt;&lt;li&gt;No, no se puede&lt;/li&gt;&lt;li&gt;High noon for Liz Cheney&lt;/li&gt;&lt;li&gt;Hearts, not minds&lt;/li&gt;&lt;li&gt;Find works; insert spanner; repeat&lt;/li&gt;&lt;li&gt;Rafting with rebels&lt;/li&gt;&lt;li&gt;Cold comfort&lt;/li&gt;&lt;li&gt;Bureaucratic nightmare&lt;/li&gt;&lt;li&gt;Shinde shindig&lt;/li&gt;&lt;li&gt;Bridges to liberty&lt;/li&gt;&lt;li&gt;The new isolationism&lt;/li&gt;&lt;li&gt;Building blocs&lt;/li&gt;&lt;li&gt;Above the water line&lt;/li&gt;&lt;li&gt;Hacked&lt;/li&gt;&lt;li&gt;Having a larp&lt;/li&gt;&lt;li&gt;Either ore&lt;/li&gt;&lt;li&gt;He shoots, he scores…&lt;/li&gt;&lt;li&gt;Yair apparent&lt;/li&gt;&lt;li&gt;Paving paradise&lt;/li&gt;&lt;li&gt;A burgeoning new bazaar&lt;/li&gt;&lt;li&gt;Kherson bound&lt;/li&gt;&lt;li&gt;Fate unknown&lt;/li&gt;&lt;li&gt;Welcome to boom town&lt;/li&gt;&lt;li&gt;From bad to worse&lt;/li&gt;&lt;li&gt;Minority report&lt;/li&gt;&lt;li&gt;Slings and arrows&lt;/li&gt;&lt;li&gt;No-fly zone&lt;/li&gt;&lt;li&gt;The wreckage he leaves behind&lt;/li&gt;&lt;li&gt;Spend rift&lt;/li&gt;&lt;li&gt;Men behaving badly&lt;/li&gt;&lt;li&gt;Backlog Britain&lt;/li&gt;&lt;li&gt;New tricks&lt;/li&gt;&lt;li&gt;Two mouths, one message&lt;/li&gt;&lt;li&gt;The toxicity of Boris Johnson&lt;/li&gt;&lt;li&gt;Millions of wasted minds&lt;/li&gt;&lt;li&gt;PE lessons&lt;/li&gt;&lt;li&gt;Strong headwinds&lt;/li&gt;&lt;li&gt;A species reborn&lt;/li&gt;&lt;li&gt;How to read corporate culture&lt;/li&gt;&lt;li&gt;Self-Reliance&lt;/li&gt;&lt;li&gt;Tougher than tariffs&lt;/li&gt;&lt;li&gt;Helter skelter&lt;/li&gt;&lt;li&gt;Case closed&lt;/li&gt;&lt;li&gt;Last man standing&lt;/li&gt;&lt;li&gt;Bills, bills, bills&lt;/li&gt;&lt;li&gt;Levelling down&lt;/li&gt;&lt;li&gt;Beyond the Standard Model&lt;/li&gt;&lt;li&gt;Hearts of stone&lt;/li&gt;&lt;li&gt;To be a pilgrim&lt;/li&gt;&lt;li&gt;The braids of a loaf&lt;/li&gt;&lt;li&gt;Perfidious Albion&lt;/li&gt;&lt;li&gt;Hide and seek&lt;/li&gt;&lt;li&gt;The lives of Zelensky&lt;/li&gt;&lt;li&gt;Economic data, commodities and markets&lt;/li&gt;&lt;li&gt;It could have been worse&lt;/li&gt;&lt;li&gt;Why is Georgia struggling to join the EU?&lt;/li&gt;&lt;li&gt;Why are cluster munitions so dangerous?&lt;/li&gt;&lt;li&gt;The mystic of the stage&lt;/li&gt;&lt;/ul&gt;
-                Global news and current affairs from a European perspective. Best downloaded on Friday mornings (GMT)
-                </content>
-<updated>2022-07-07T21:06:23Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-07-07.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="economist-2022-07-07.epub"/>
-</entry>
-<entry>
-<id>POLITICO Magazine</id>
-<title>POLITICO Magazine: 7 Jul, 2022</title>
-<summary>POLITICO Magazine: 7 Jul, 2022 published at 2022-07-07 20:18PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Opinion | Boris Johnson’s Grip on Power Was Always Weaker than Trump’s&lt;/li&gt;&lt;li&gt;Opinion | Liberals Should Welcome Ron DeSantis’ Rise&lt;/li&gt;&lt;li&gt;He Was Dismissed as a Conservative Kook. Now the Supreme Court Is Embracing His Blueprint.&lt;/li&gt;&lt;li&gt;Liz Cheney Wins the GOP’s Manhood Contest&lt;/li&gt;&lt;li&gt;Why Bitcoin ATMs are Vexing Rulemakers&lt;/li&gt;&lt;li&gt;Opinion | Bombshell Jan. 6 Testimony Could Hurt a Justice Department Prosecution&lt;/li&gt;&lt;li&gt;Opinion | How the Founders Intended to Check the Supreme Court’s Power&lt;/li&gt;&lt;li&gt;Opinion | The Rudy Giuliani Joke Isn’t Funny Anymore&lt;/li&gt;&lt;li&gt;There Are 11 Types of Donald Trump Enablers. Which One Are You?&lt;/li&gt;&lt;li&gt;The Real Reason Washington Ignored Kavanaugh’s Would-Be Killer&lt;/li&gt;&lt;li&gt;From Chelsea Clinton to David Petraeus, Here’s What Politicos Are Reading This Summer&lt;/li&gt;&lt;li&gt;The Michigan Democrat Who Could Solve Her Party’s Identity Crisis&lt;/li&gt;&lt;/ul&gt;
-                News, Analysis and Opinion from POLITICO
-                </content>
-<updated>2022-07-07T20:18:38Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-07-07.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-07-07.epub"/>
-</entry>
-<entry>
-<id>The Third Pole</id>
-<title>The Third Pole: 8 Jul, 2022</title>
-<summary>The Third Pole: 8 Jul, 2022 published at 2022-07-07 15:34PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Women’s lives get harder in Bundelkhand as water scarcity grows&lt;/li&gt;&lt;li&gt;Stalled monsoon behind devastating floods in northeast India and Bangladesh&lt;/li&gt;&lt;li&gt;In Vietnam’s Mekong Delta, sand mining means lost homes and fortunes&lt;/li&gt;&lt;li&gt;How much progress has been made on Kyrgyz-Uzbek water cooperation?&lt;/li&gt;&lt;li&gt;Bonn climate talks end with ‘almost empty pages’&lt;/li&gt;&lt;li&gt;Farmers in mountainous areas of Pakistan feel the heat&lt;/li&gt;&lt;li&gt;Interview: ‘The narrative around hydro in Pakistan remains superficial’&lt;/li&gt;&lt;/ul&gt;
-                The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there.
-                </content>
-<updated>2022-07-07T15:34:28Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-07-07.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="thirdpole-2022-07-07.epub"/>
-</entry>
-<entry>
-<id>ProPublica</id>
-<title>ProPublica: 7 Jul, 2022</title>
-<summary>ProPublica: 7 Jul, 2022 published at 2022-07-07 10:00AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The City Where Investigations of Police Take So Long, Officers Kill Again Before Reviews Are Done&lt;/li&gt;&lt;li&gt;Ken Griffin Spent $54 Million Fighting a Tax Increase for the Rich. Secret IRS Data Shows It Paid Off for Him.&lt;/li&gt;&lt;li&gt;DOJ Investigating Texas’ Operation Lone Star for Alleged Civil Rights Violations&lt;/li&gt;&lt;li&gt;How Foreign Private Equity Hooked New England’s Fishing Industry&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Decision Could Hamper Regulators’ Ability to Protect the Public&lt;/li&gt;&lt;li&gt;Federal Patient Privacy Law Does Not Cover Most Period-Tracking Apps&lt;/li&gt;&lt;li&gt;Google Allowed a Sanctioned Russian Ad Company to Harvest User Data for Months&lt;/li&gt;&lt;li&gt;How We Fight Back When Officials Resist Releasing Information You Have a Right to Know&lt;/li&gt;&lt;li&gt;Congress Investigates Portable Generator Manufacturers Following Carbon Monoxide Deaths&lt;/li&gt;&lt;li&gt;The Other Cancel Culture: How a Public University Is Bowing to a Conservative Crusade&lt;/li&gt;&lt;li&gt;Army Corps of Engineers to Order New Study of Grain Elevator That Could Harm Black Heritage Sites&lt;/li&gt;&lt;li&gt;Help Us Learn About Sheltered Workshops in Missouri&lt;/li&gt;&lt;li&gt;The Polluter Just Got a Million-Dollar Fine. That Won’t Cure This Woman’s Rare Cancer.&lt;/li&gt;&lt;li&gt;School Board Candidates Who Criticized the Hiring of a Black DEI Educator Lose Their Elections&lt;/li&gt;&lt;li&gt;Ten Ways Billionaires Avoid Taxes on an Epic Scale&lt;/li&gt;&lt;li&gt;“We’re at a Crisis Point”: NY Attorney General Hearing Spotlights Child Mental Health Care Failures&lt;/li&gt;&lt;li&gt;$53.3 Million. 33 Jobs. No Plan. That’s How Mississippi Lawmakers Are Spending BP Oil Spill Money.&lt;/li&gt;&lt;li&gt;How Susquehanna’s Jeff Yass Avoided $1 Billion in Taxes&lt;/li&gt;&lt;li&gt;Facebook Finally Agrees to Eliminate Tool That Enabled Discriminatory Advertising&lt;/li&gt;&lt;li&gt;Louisiana Limits Solitary Confinement for Youth&lt;/li&gt;&lt;/ul&gt;
-                ProPublica is an independent, nonprofit newsroom that produces investigative journalism with moral force.
-                </content>
-<updated>2022-07-07T10:00:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="propublica-2022-07-07.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="propublica-2022-07-07.epub"/>
 </entry>
 <entry>
 <id>Nautilus</id>

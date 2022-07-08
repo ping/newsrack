@@ -2,11 +2,43 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-08T07:24:29Z</updated>
+<updated>2022-07-08T11:19:59Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>London Review of Books</id>
+<title>London Review of Books: 7 Jul, 2022</title>
+<summary>London Review of Books: 7 Jul, 2022 published at 2022-07-08 11:59AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Ferdinand Mount  -  Conspiracy on Cato Street: A Tale of Liberty and Revolution in Regency London&lt;/li&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Zain Samir  - Is this a new Taliban?&lt;/li&gt;&lt;li&gt;Malcolm Gaskill  -  Resistance: The Underground War in Europe, 1939-45&lt;/li&gt;&lt;li&gt;Jeremy Harding  - In Brittany&lt;/li&gt;&lt;li&gt;Catherine Hall  -  Who’s Black and Why? A Hidden Chapter from the 18th-Century Invention of Race&lt;/li&gt;&lt;li&gt;Clair Wills  -  Either/Or&lt;/li&gt;&lt;li&gt;Adewale Maja-Pearce  -  Vagabonds!&lt;/li&gt;&lt;li&gt;Hal Foster  -  Magritte: A Life&lt;/li&gt;&lt;li&gt;Gwen Burnyeat  - Short Cuts: Petro Wins&lt;/li&gt;&lt;li&gt;Rosemary Hill  -  France: An Adventure History&lt;/li&gt;&lt;li&gt;Paul Mendez  - The Lonely Londoners&lt;/li&gt;&lt;li&gt;Francesca Wade  - At Studio Voltaire&lt;/li&gt;&lt;li&gt;Blake Morrison  - The Hurly Burly and Other Stories&lt;/li&gt;&lt;li&gt;Katrina Forrester  -  Work without the Worker: Labour in the Age of Platform Capitalism  /  Dirty Work: Essential Jobs and the Hidden Toll of Inequality in America&lt;/li&gt;&lt;li&gt;Iain Sinclair  - Diary: The Plutocrat Tour&lt;/li&gt;&lt;/ul&gt;
+                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
+                </content>
+<updated>2022-07-08T11:59:32Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-07-08.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-07-08.epub"/>
+</entry>
+<entry>
+<id>NY Times Books</id>
+<title>NY Times Books: 8 Jul, 2022</title>
+<summary>NY Times Books: 8 Jul, 2022 published at 2022-07-08 09:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Book Review: “Tomorrow, and Tomorrow, and Tomorrow” by Gabrielle Zevin&lt;/li&gt;&lt;li&gt;New Crime Fiction&lt;/li&gt;&lt;li&gt;Why We Need Bugs&lt;/li&gt;&lt;li&gt;Newly Published, From Banksy to Patrick Radden Keefe&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;The Shape-Shifting Sherlock Holmes, Now Playing the Villain&lt;/li&gt;&lt;li&gt;Book Review: “The Shores of Bohemia,” by John Taylor Williams&lt;/li&gt;&lt;li&gt;Book Review: “Doctors and Distillers,” by Camper English&lt;/li&gt;&lt;li&gt;Ni Kuang, Novelist and Screenwriter for Martial Arts Films, Dies at 87&lt;/li&gt;&lt;li&gt;Review: ‘The Man Who Could Move Clouds,’ by Ingrid Rojas Contreras&lt;/li&gt;&lt;li&gt;How a Failed Screenwriting Career Forged a Best-Selling Author&lt;/li&gt;&lt;li&gt;Erika L. Sánchez Wishes More Authors Would Write About Money&lt;/li&gt;&lt;li&gt;Review: ‘MOTHERS DON’T,’ by Katixa Agirre&lt;/li&gt;&lt;li&gt;Poem: Sister Song&lt;/li&gt;&lt;li&gt;‘Son of Elsewhere,’ a Funny and Frank Story About Life After a Big Move&lt;/li&gt;&lt;li&gt;With Rising Book Bans, Librarians Have Come Under Attack&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Berlin, Germany&lt;/li&gt;&lt;li&gt;Review: ‘Big Girl,’ by Mecca Jamilah Sullivan&lt;/li&gt;&lt;li&gt;‘Growing Up Getty’ Shakes the Dust Off a Family’s Aristocratic Name&lt;/li&gt;&lt;li&gt;Book Review: “Human Blues” by Elisa Albert&lt;/li&gt;&lt;li&gt;Review: ‘The Displacements,’ by Bruce Holsinger&lt;/li&gt;&lt;li&gt;Review: ‘The Earthspinner,’ by Anuradha Roy&lt;/li&gt;&lt;li&gt;New Books to Read in July&lt;/li&gt;&lt;li&gt;In This Debut Novel, Family Ties Bind, Even From Afar&lt;/li&gt;&lt;li&gt;A Novel About Brilliant Young Game Designers&lt;/li&gt;&lt;/ul&gt;
+                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
+                </content>
+<updated>2022-07-08T09:00:09Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-08.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-08.epub"/>
+</entry>
 <entry>
 <id>Asian Review of Books</id>
 <title>Asian Review of Books: 8 Jul, 2022</title>
@@ -38,37 +70,5 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-07-08.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="fivebooks-2022-07-08.epub"/>
-</entry>
-<entry>
-<id>NY Times Books</id>
-<title>NY Times Books: 7 Jul, 2022</title>
-<summary>NY Times Books: 7 Jul, 2022 published at 2022-07-07 21:28PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;The Shape-Shifting Sherlock Holmes, Now Playing the Villain&lt;/li&gt;&lt;li&gt;Book Review: “The Shores of Bohemia,” by John Taylor Williams&lt;/li&gt;&lt;li&gt;Book Review: “Doctors and Distillers,” by Camper English&lt;/li&gt;&lt;li&gt;Ni Kuang, Novelist and Screenwriter for Martial Arts Films, Dies at 87&lt;/li&gt;&lt;li&gt;Review: ‘The Man Who Could Move Clouds,’ by Ingrid Rojas Contreras&lt;/li&gt;&lt;li&gt;How a Failed Screenwriting Career Forged a Best-Selling Author&lt;/li&gt;&lt;li&gt;Erika L. Sánchez Wishes More Authors Would Write About Money&lt;/li&gt;&lt;li&gt;Review: ‘MOTHERS DON’T,’ by Katixa Agirre&lt;/li&gt;&lt;li&gt;Poem: Sister Song&lt;/li&gt;&lt;li&gt;‘Son of Elsewhere,’ a Funny and Frank Story About Life After a Big Move&lt;/li&gt;&lt;li&gt;With Rising Book Bans, Librarians Have Come Under Attack&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Berlin, Germany&lt;/li&gt;&lt;li&gt;Review: ‘Big Girl,’ by Mecca Jamilah Sullivan&lt;/li&gt;&lt;li&gt;‘Growing Up Getty’ Shakes the Dust Off a Family’s Aristocratic Name&lt;/li&gt;&lt;li&gt;Book Review: “Joan” by Katherine J. Chen&lt;/li&gt;&lt;li&gt;Book Review: “Human Blues” by Elisa Albert&lt;/li&gt;&lt;li&gt;Review: ‘The Displacements,’ by Bruce Holsinger&lt;/li&gt;&lt;li&gt;Review: ‘The Earthspinner,’ by Anuradha Roy&lt;/li&gt;&lt;li&gt;New Books to Read in July&lt;/li&gt;&lt;li&gt;Richard Taruskin Was Classical Music’s Towering Intellectual&lt;/li&gt;&lt;li&gt;In This Debut Novel, Family Ties Bind, Even From Afar&lt;/li&gt;&lt;li&gt;Review: ‘The Mermaid of Black Conch,’ by Monique Roffey&lt;/li&gt;&lt;li&gt;Review: ‘Fellowship Point,’ by Alice Elliott Dark&lt;/li&gt;&lt;li&gt;A Novel About Brilliant Young Game Designers&lt;/li&gt;&lt;/ul&gt;
-                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
-                </content>
-<updated>2022-07-07T21:28:46Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-07.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-07.epub"/>
-</entry>
-<entry>
-<id>London Review of Books</id>
-<title>London Review of Books: 7 Jul, 2022</title>
-<summary>London Review of Books: 7 Jul, 2022 published at 2022-07-05 15:19PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Ferdinand Mount  -  Conspiracy on Cato Street: A Tale of Liberty and Revolution in Regency London&lt;/li&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Zain Samir  - Is this a new Taliban?&lt;/li&gt;&lt;li&gt;Malcolm Gaskill  -  Resistance: The Underground War in Europe, 1939-45&lt;/li&gt;&lt;li&gt;Jeremy Harding  - In Brittany&lt;/li&gt;&lt;li&gt;Catherine Hall  -  Who’s Black and Why? A Hidden Chapter from the 18th-Century Invention of Race&lt;/li&gt;&lt;li&gt;Clair Wills  -  Either/Or&lt;/li&gt;&lt;li&gt;Adewale Maja-Pearce  -  Vagabonds!&lt;/li&gt;&lt;li&gt;Hal Foster  -  Magritte: A Life&lt;/li&gt;&lt;li&gt;Gwen Burnyeat  - Short Cuts: Petro Wins&lt;/li&gt;&lt;li&gt;Rosemary Hill  -  France: An Adventure History&lt;/li&gt;&lt;li&gt;Paul Mendez  - The Lonely Londoners&lt;/li&gt;&lt;li&gt;Francesca Wade  - At Studio Voltaire&lt;/li&gt;&lt;li&gt;Blake Morrison  - The Hurly Burly and Other Stories&lt;/li&gt;&lt;li&gt;Katrina Forrester  -  Work without the Worker: Labour in the Age of Platform Capitalism  /  Dirty Work: Essential Jobs and the Hidden Toll of Inequality in America&lt;/li&gt;&lt;li&gt;Iain Sinclair  - Diary: The Plutocrat Tour&lt;/li&gt;&lt;/ul&gt;
-                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
-                </content>
-<updated>2022-07-05T15:19:43Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-07-05.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-07-05.epub"/>
 </entry>
 </feed>
