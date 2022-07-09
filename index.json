@@ -2,11 +2,11 @@
 "Asahi Shimbun": [
 {
 "filename": "asahi-shimbun-2022-07-09.mobi",
-"published": 1657347900.0
+"published": 1657360560.0
 },
 {
 "filename": "asahi-shimbun-2022-07-09.epub",
-"published": 1657347900.0
+"published": 1657360560.0
 }
 ],
 "Asian Review of Books": [
@@ -42,11 +42,11 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-07-09.mobi",
-"published": 1657348981.0
+"published": 1657361831.0
 },
 {
 "filename": "channelnewsasia-2022-07-09.epub",
-"published": 1657348981.0
+"published": 1657361831.0
 }
 ],
 "The Diplomat": [
@@ -72,11 +72,11 @@
 "Financial Times": [
 {
 "filename": "ft-2022-07-09.mobi",
-"published": 1657344764.0
+"published": 1657360826.0
 },
 {
 "filename": "ft-2022-07-09.epub",
-"published": 1657344764.0
+"published": 1657360826.0
 }
 ],
 "Five Books": [
@@ -91,24 +91,15 @@
 ],
 "Guardian": [
 {
-"filename": "guardian-2022-07-09.mobi",
-"published": 1657348946.0
+"filename": "guardian-2022-07-08.mobi",
+"published": 1657307467.0
 },
 {
-"filename": "guardian-2022-07-09.epub",
-"published": 1657348946.0
+"filename": "guardian-2022-07-08.epub",
+"published": 1657307467.0
 }
 ],
-"JoongAng Daily": [
-{
-"filename": "joongang-daily-2022-07-08.mobi",
-"published": 1657317600.0
-},
-{
-"filename": "joongang-daily-2022-07-08.epub",
-"published": 1657317600.0
-}
-],
+"JoongAng Daily": [],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-07-09.mobi",
@@ -162,11 +153,11 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-07-09.mobi",
-"published": 1657350017.0
+"published": 1657364426.0
 },
 {
 "filename": "nytimes-global-2022-07-09.epub",
-"published": 1657350017.0
+"published": 1657364426.0
 }
 ],
 "NY Times (Print)": [
@@ -232,21 +223,21 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-07-09.mobi",
-"published": 1657349462.0
+"published": 1657364281.0
 },
 {
 "filename": "scmp-2022-07-09.epub",
-"published": 1657349462.0
+"published": 1657364281.0
 }
 ],
 "Sydney Morning Herald": [
 {
 "filename": "sydney-morning-herald-2022-07-09.mobi",
-"published": 1657350559.0
+"published": 1657365021.0
 },
 {
 "filename": "sydney-morning-herald-2022-07-09.epub",
-"published": 1657350559.0
+"published": 1657365021.0
 }
 ],
 "Taipei Times": [
@@ -292,11 +283,11 @@
 "Washington Post": [
 {
 "filename": "wapo-2022-07-09.mobi",
-"published": 1657349751.0
+"published": 1657364451.0
 },
 {
 "filename": "wapo-2022-07-09.epub",
-"published": 1657349751.0
+"published": 1657364451.0
 }
 ],
 "Wired Magazine": [
@@ -309,5 +300,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1657350968
+"_generated": 1657365430
 }
