@@ -2,26 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-08T23:23:09Z</updated>
+<updated>2022-07-09T04:00:14Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
 <id>NY Times Books</id>
-<title>NY Times Books: 8 Jul, 2022</title>
-<summary>NY Times Books: 8 Jul, 2022 published at 2022-07-08 22:01PM.</summary>
+<title>NY Times Books: 9 Jul, 2022</title>
+<summary>NY Times Books: 9 Jul, 2022 published at 2022-07-09 03:28AM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;With Rising Book Bans, Librarians Have Come Under Attack&lt;/li&gt;&lt;li&gt;Review: ‘Mother Noise,’ by Cindy House; ‘My Seven Black Fathers,’ by Will Jawando; and ‘This Body I Wore,’ by Diana Goetsch&lt;/li&gt;&lt;li&gt;“Our Fort” by Marie Dorléans&lt;/li&gt;&lt;li&gt;Book Review: “Tomorrow, and Tomorrow, and Tomorrow” by Gabrielle Zevin&lt;/li&gt;&lt;li&gt;New Crime Fiction&lt;/li&gt;&lt;li&gt;Why We Need Bugs&lt;/li&gt;&lt;li&gt;Newly Published, From Banksy to Patrick Radden Keefe&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;The Shape-Shifting Sherlock Holmes, Now Playing the Villain&lt;/li&gt;&lt;li&gt;Book Review: “The Shores of Bohemia,” by John Taylor Williams&lt;/li&gt;&lt;li&gt;Book Review: “Doctors and Distillers,” by Camper English&lt;/li&gt;&lt;li&gt;Ni Kuang, Novelist and Screenwriter for Martial Arts Films, Dies at 87&lt;/li&gt;&lt;li&gt;Review: ‘The Man Who Could Move Clouds,’ by Ingrid Rojas Contreras&lt;/li&gt;&lt;li&gt;How a Failed Screenwriting Career Forged a Best-Selling Author&lt;/li&gt;&lt;li&gt;Erika L. Sánchez Wishes More Authors Would Write About Money&lt;/li&gt;&lt;li&gt;Review: ‘MOTHERS DON’T,’ by Katixa Agirre&lt;/li&gt;&lt;li&gt;Poem: Sister Song&lt;/li&gt;&lt;li&gt;‘Son of Elsewhere,’ a Funny and Frank Story About Life After a Big Move&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Berlin, Germany&lt;/li&gt;&lt;li&gt;Review: ‘Big Girl,’ by Mecca Jamilah Sullivan&lt;/li&gt;&lt;li&gt;‘Growing Up Getty’ Shakes the Dust Off a Family’s Aristocratic Name&lt;/li&gt;&lt;li&gt;Book Review: “Human Blues” by Elisa Albert&lt;/li&gt;&lt;li&gt;Review: ‘The Displacements,’ by Bruce Holsinger&lt;/li&gt;&lt;li&gt;Review: ‘The Earthspinner,’ by Anuradha Roy&lt;/li&gt;&lt;li&gt;New Books to Read in July&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Poem: Sister Song&lt;/li&gt;&lt;li&gt;Alice Elliott Dark on ‘Fellowship Point’&lt;/li&gt;&lt;li&gt;Susie Steiner, Author of Acclaimed British Crime Novels, Dies at 51&lt;/li&gt;&lt;li&gt;Review: ‘The Man Who Could Move Clouds,’ by Ingrid Rojas Contreras&lt;/li&gt;&lt;li&gt;With Rising Book Bans, Librarians Have Come Under Attack&lt;/li&gt;&lt;li&gt;Review: ‘Mother Noise,’ by Cindy House; ‘My Seven Black Fathers,’ by Will Jawando; and ‘This Body I Wore,’ by Diana Goetsch&lt;/li&gt;&lt;li&gt;“Our Fort” by Marie Dorléans&lt;/li&gt;&lt;li&gt;Book Review: “Tomorrow, and Tomorrow, and Tomorrow” by Gabrielle Zevin&lt;/li&gt;&lt;li&gt;New Crime Fiction&lt;/li&gt;&lt;li&gt;Why We Need Bugs&lt;/li&gt;&lt;li&gt;Newly Published, From Banksy to Patrick Radden Keefe&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;The Shape-Shifting Sherlock Holmes, Now Playing the Villain&lt;/li&gt;&lt;li&gt;Book Review: “The Shores of Bohemia,” by John Taylor Williams&lt;/li&gt;&lt;li&gt;Book Review: “Doctors and Distillers,” by Camper English&lt;/li&gt;&lt;li&gt;Ni Kuang, Novelist and Screenwriter for Martial Arts Films, Dies at 87&lt;/li&gt;&lt;li&gt;How a Failed Screenwriting Career Forged a Best-Selling Author&lt;/li&gt;&lt;li&gt;Erika L. Sánchez Wishes More Authors Would Write About Money&lt;/li&gt;&lt;li&gt;Review: ‘MOTHERS DON’T,’ by Katixa Agirre&lt;/li&gt;&lt;li&gt;‘Son of Elsewhere,’ a Funny and Frank Story About Life After a Big Move&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Berlin, Germany&lt;/li&gt;&lt;li&gt;Review: ‘Big Girl,’ by Mecca Jamilah Sullivan&lt;/li&gt;&lt;li&gt;‘Growing Up Getty’ Shakes the Dust Off a Family’s Aristocratic Name&lt;/li&gt;&lt;li&gt;Book Review: “Human Blues” by Elisa Albert&lt;/li&gt;&lt;li&gt;New Books to Read in July&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-07-08T22:01:08Z</updated>
+<updated>2022-07-09T03:28:32Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-08.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-08.epub"/>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-09.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-09.epub"/>
 </entry>
 <entry>
 <id>London Review of Books</id>
