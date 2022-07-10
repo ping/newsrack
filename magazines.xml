@@ -2,26 +2,42 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-10T11:14:31Z</updated>
+<updated>2022-07-10T15:14:16Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
-<id>Vox</id>
-<title>Vox: 9 Jul, 2022</title>
-<summary>Vox: 9 Jul, 2022 published at 2022-07-09 21:52PM.</summary>
+<id>The Atlantic</id>
+<title>The Atlantic: 10 Jul, 2022</title>
+<summary>The Atlantic: 10 Jul, 2022 published at 2022-07-10 13:26PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Protests force Sri Lanka’s leaders to resign&lt;/li&gt;&lt;li&gt;When cash giving doesn’t work&lt;/li&gt;&lt;li&gt;The post-legal Supreme Court&lt;/li&gt;&lt;li&gt;The limitations of Joe Biden’s executive order on abortion&lt;/li&gt;&lt;li&gt;The January 6 committee is holding a series of public hearings&lt;/li&gt;&lt;li&gt;Who is Pat Cipollone, the Trump lawyer testifying behind closed doors on Friday?&lt;/li&gt;&lt;li&gt;Shinzo Abe wanted to make Japan a “normal country” — as he saw it&lt;/li&gt;&lt;li&gt;7 of your most pressing monkeypox vaccine questions, answered&lt;/li&gt;&lt;li&gt;What the latest jobs report means&lt;/li&gt;&lt;li&gt;How abortion bans make inequality worse&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
+                &lt;ul&gt;&lt;li&gt;Lucky&lt;/li&gt;&lt;li&gt;Can You Cure Mental Illness? Two Centuries of Trying Says No.&lt;/li&gt;&lt;li&gt;Make Birth Free&lt;/li&gt;&lt;li&gt;In Praise of Pointless Goals&lt;/li&gt;&lt;li&gt;America Endures&lt;/li&gt;&lt;li&gt;Astronomers Haven’t Been This Giddy in Years&lt;/li&gt;&lt;li&gt;Admit It, Squirrels Are Just Tree Rats&lt;/li&gt;&lt;li&gt;What Happened to Michael Flynn?&lt;/li&gt;&lt;li&gt;Shinzo Abe Made the World Better&lt;/li&gt;&lt;li&gt;There’s Nothing Like a Great Takedown&lt;/li&gt;&lt;li&gt;Dobbs Is No Brown v. Board of Education&lt;/li&gt;&lt;li&gt;The Vasectomy Influencers&lt;/li&gt;&lt;li&gt;Why Illinois’ Red-Flag Laws Didn’t Stop the Highland Park Shooting&lt;/li&gt;&lt;li&gt;The Glaring Contradiction of Republicans’ Rhetoric of Freedom&lt;/li&gt;&lt;li&gt;Democrats Try to Build Back (A Bit) Better&lt;/li&gt;&lt;li&gt;Photos of the Week: Oil Wrestling, Flaming Bull, Gorgosaurus Sale&lt;/li&gt;&lt;li&gt;The Shameless Boris Johnson&lt;/li&gt;&lt;li&gt;How to Hold a Charismatic Charlatan to Account&lt;/li&gt;&lt;li&gt;Coming Undone in the Age of Mass Shootings&lt;/li&gt;&lt;li&gt;The Minions Are Good. I’m Serious.&lt;/li&gt;&lt;li&gt;The 2022 Audubon Photography Awards&lt;/li&gt;&lt;li&gt;What Brexit Did to Boris Johnson—And Britain&lt;/li&gt;&lt;li&gt;The Most Pathetic Men in America&lt;/li&gt;&lt;li&gt;The Worst, Best Prime Minister&lt;/li&gt;&lt;li&gt;Why These Frogs Make ‘the Grossest Blunder in Sexual Preference’&lt;/li&gt;&lt;li&gt;Hybrid Work Is Doomed&lt;/li&gt;&lt;li&gt;A Crisis Historian Has Some Bad News for Us&lt;/li&gt;&lt;li&gt;What Comes After Roe?&lt;/li&gt;&lt;li&gt;Is Biden a Man Out of Time?&lt;/li&gt;&lt;li&gt;Why Biden Shouldn’t Run in 2024&lt;/li&gt;&lt;li&gt;Trump Gets the January 6 Trial He Long Dodged&lt;/li&gt;&lt;li&gt;Are Iowa’s Democratic Days Gone for Good?&lt;/li&gt;&lt;li&gt;Pennsylvania Becomes the Land of Oz&lt;/li&gt;&lt;li&gt;Stranger Things Isn’t TV. It’s Something Else.&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;Maybe Ridding the World of Superheroes Isn’t Such a Bad Idea&lt;/li&gt;&lt;li&gt;Eight Books in Which Ignorance Is the Point&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;What a Story of 1970s Abortion Activism Can Teach Us Today&lt;/li&gt;&lt;li&gt;The Game Is (Probably) Up for Boris Johnson&lt;/li&gt;&lt;li&gt;What’s Better in Britain&lt;/li&gt;&lt;li&gt;America’s Necessary Myth for the World&lt;/li&gt;&lt;li&gt;The Accidental Trumpification of NATO&lt;/li&gt;&lt;li&gt;Britain’s Unbridgeable Divide&lt;/li&gt;&lt;li&gt;Where Russia’s Declinist Rage Isn’t Enough&lt;/li&gt;&lt;li&gt;What’s Behind American Decline: Domestic Dysfunction&lt;/li&gt;&lt;li&gt;Uber Pool Is a Zombie&lt;/li&gt;&lt;li&gt;The Betrayal&lt;/li&gt;&lt;li&gt;Biden Won Big With a Bad Hand&lt;/li&gt;&lt;li&gt;How Do Democrats Recover From This?&lt;/li&gt;&lt;li&gt;How Are We Possibly Still Disinfecting Things?&lt;/li&gt;&lt;li&gt;The Great Veterinary Shortage&lt;/li&gt;&lt;li&gt;The World Is Turning Back to Coal&lt;/li&gt;&lt;li&gt;We’ve Never Seen Mars Quite Like This&lt;/li&gt;&lt;li&gt;The Future of Mud&lt;/li&gt;&lt;li&gt;Trump May Not Have to Steal 2024&lt;/li&gt;&lt;li&gt;Six Reasons the Murder Clearance Rate Is at an All-Time Low&lt;/li&gt;&lt;li&gt;Are the Last Rational Republicans in Denial?&lt;/li&gt;&lt;li&gt;America’s Public-Health Efforts Have Slowed to a Crawl&lt;/li&gt;&lt;li&gt;A Nation of Hostages&lt;/li&gt;&lt;li&gt;Should Americans Have a Right to Absolute Privacy?&lt;/li&gt;&lt;li&gt;The Summer of Our Discontent&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-abortion Laws&lt;/li&gt;&lt;li&gt;We Now Know&lt;/li&gt;&lt;li&gt;What Trump Has Taken From Us&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;/ul&gt;
+                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
                 </content>
-<updated>2022-07-09T21:52:47Z</updated>
+<updated>2022-07-10T13:26:33Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
 </author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-09.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-09.epub"/>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-10.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-10.epub"/>
+</entry>
+<entry>
+<id>Vox</id>
+<title>Vox: 10 Jul, 2022</title>
+<summary>Vox: 10 Jul, 2022 published at 2022-07-10 13:00PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;The battleground House and Senate races where the end of Roe could have the biggest impact&lt;/li&gt;&lt;li&gt;Why disasters are getting more severe but killing fewer people&lt;/li&gt;&lt;li&gt;Protests force Sri Lanka’s leaders to resign&lt;/li&gt;&lt;li&gt;When cash giving doesn’t work&lt;/li&gt;&lt;li&gt;The post-legal Supreme Court&lt;/li&gt;&lt;li&gt;The limitations of Joe Biden’s executive order on abortion&lt;/li&gt;&lt;li&gt;The January 6 committee is holding a series of public hearings&lt;/li&gt;&lt;li&gt;Who is Pat Cipollone, the Trump lawyer testifying behind closed doors on Friday?&lt;/li&gt;&lt;li&gt;Shinzo Abe wanted to make Japan a “normal country” — as he saw it&lt;/li&gt;&lt;li&gt;7 of your most pressing monkeypox vaccine questions, answered&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-07-10T13:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-10.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-10.epub"/>
 </entry>
 <entry>
 <id>Economist</id>
@@ -38,22 +54,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-07-09.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="economist-2022-07-09.epub"/>
-</entry>
-<entry>
-<id>The Atlantic</id>
-<title>The Atlantic: 9 Jul, 2022</title>
-<summary>The Atlantic: 9 Jul, 2022 published at 2022-07-09 13:25PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Make Birth Free&lt;/li&gt;&lt;li&gt;In Praise of Pointless Goals&lt;/li&gt;&lt;li&gt;America Endures&lt;/li&gt;&lt;li&gt;Astronomers Haven’t Been This Giddy in Years&lt;/li&gt;&lt;li&gt;Admit It, Squirrels Are Just Tree Rats&lt;/li&gt;&lt;li&gt;What Happened to Michael Flynn?&lt;/li&gt;&lt;li&gt;Shinzo Abe Made the World Better&lt;/li&gt;&lt;li&gt;There’s Nothing Like a Great Takedown&lt;/li&gt;&lt;li&gt;Dobbs Is No Brown v. Board of Education&lt;/li&gt;&lt;li&gt;The Vasectomy Influencers&lt;/li&gt;&lt;li&gt;Why Illinois’ Red-Flag Laws Didn’t Stop the Highland Park Shooting&lt;/li&gt;&lt;li&gt;The Glaring Contradiction of Republicans’ Rhetoric of Freedom&lt;/li&gt;&lt;li&gt;Democrats Try to Build Back (A Bit) Better&lt;/li&gt;&lt;li&gt;Photos of the Week: Oil Wrestling, Flaming Bull, Gorgosaurus Sale&lt;/li&gt;&lt;li&gt;The Shameless Boris Johnson&lt;/li&gt;&lt;li&gt;How to Hold a Charismatic Charlatan to Account&lt;/li&gt;&lt;li&gt;Coming Undone in the Age of Mass Shootings&lt;/li&gt;&lt;li&gt;The Minions Are Good. I’m Serious.&lt;/li&gt;&lt;li&gt;The 2022 Audubon Photography Awards&lt;/li&gt;&lt;li&gt;What Brexit Did to Boris Johnson—And Britain&lt;/li&gt;&lt;li&gt;The Most Pathetic Men in America&lt;/li&gt;&lt;li&gt;The Worst, Best Prime Minister&lt;/li&gt;&lt;li&gt;Why These Frogs Make ‘the Grossest Blunder in Sexual Preference’&lt;/li&gt;&lt;li&gt;Here Lies Boris Johnson&lt;/li&gt;&lt;li&gt;How Are We Possibly Still Disinfecting Things?&lt;/li&gt;&lt;li&gt;What Comes After Roe?&lt;/li&gt;&lt;li&gt;Is Biden a Man Out of Time?&lt;/li&gt;&lt;li&gt;Why Biden Shouldn’t Run in 2024&lt;/li&gt;&lt;li&gt;Trump Gets the January 6 Trial He Long Dodged&lt;/li&gt;&lt;li&gt;Are Iowa’s Democratic Days Gone for Good?&lt;/li&gt;&lt;li&gt;Pennsylvania Becomes the Land of Oz&lt;/li&gt;&lt;li&gt;Stranger Things Isn’t TV. It’s Something Else.&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;Maybe Ridding the World of Superheroes Isn’t Such a Bad Idea&lt;/li&gt;&lt;li&gt;Eight Books in Which Ignorance Is the Point&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;What a Story of 1970s Abortion Activism Can Teach Us Today&lt;/li&gt;&lt;li&gt;The Game Is (Probably) Up for Boris Johnson&lt;/li&gt;&lt;li&gt;What’s Better in Britain&lt;/li&gt;&lt;li&gt;America’s Necessary Myth for the World&lt;/li&gt;&lt;li&gt;The Accidental Trumpification of NATO&lt;/li&gt;&lt;li&gt;Britain’s Unbridgeable Divide&lt;/li&gt;&lt;li&gt;Where Russia’s Declinist Rage Isn’t Enough&lt;/li&gt;&lt;li&gt;What’s Behind American Decline: Domestic Dysfunction&lt;/li&gt;&lt;li&gt;Hybrid Work Is Doomed&lt;/li&gt;&lt;li&gt;Uber Pool Is a Zombie&lt;/li&gt;&lt;li&gt;The Betrayal&lt;/li&gt;&lt;li&gt;Biden Won Big With a Bad Hand&lt;/li&gt;&lt;li&gt;How Do Democrats Recover From This?&lt;/li&gt;&lt;li&gt;The Great Veterinary Shortage&lt;/li&gt;&lt;li&gt;The World Is Turning Back to Coal&lt;/li&gt;&lt;li&gt;We’ve Never Seen Mars Quite Like This&lt;/li&gt;&lt;li&gt;The Future of Mud&lt;/li&gt;&lt;li&gt;Trump May Not Have to Steal 2024&lt;/li&gt;&lt;li&gt;Six Reasons the Murder Clearance Rate Is at an All-Time Low&lt;/li&gt;&lt;li&gt;Are the Last Rational Republicans in Denial?&lt;/li&gt;&lt;li&gt;America’s Public-Health Efforts Have Slowed to a Crawl&lt;/li&gt;&lt;li&gt;A Nation of Hostages&lt;/li&gt;&lt;li&gt;Should Americans Have a Right to Absolute Privacy?&lt;/li&gt;&lt;li&gt;The Summer of Our Discontent&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-abortion Laws&lt;/li&gt;&lt;li&gt;We Now Know&lt;/li&gt;&lt;li&gt;What Trump Has Taken From Us&lt;/li&gt;&lt;li&gt;What Are Trump Supporters So Afraid Of?&lt;/li&gt;&lt;/ul&gt;
-                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
-                </content>
-<updated>2022-07-09T13:25:55Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-09.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-09.epub"/>
 </entry>
 <entry>
 <id>The Diplomat</id>
