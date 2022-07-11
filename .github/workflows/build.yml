@@ -53,10 +53,13 @@ jobs:
       - name: Install python requirements
         run: pip install -r requirements.txt
 
+      - name: Install calibre dependencies
+        run: sudo apt-get update -y && sudo apt-get install --no-install-recommends -y libgl1-mesa-dev
+
       - name: Install calibre
         run: |
           mkdir -p ~/calibre-bin
-          wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin install_dir=~/calibre-bin isolated=y version=5.44.0
+          wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin install_dir=~/calibre-bin isolated=y
           export PATH=$PATH:$HOME/calibre-bin/calibre
           calibre --version
           echo "$HOME/calibre-bin/calibre" >> $GITHUB_PATH
