@@ -22,75 +22,84 @@
 "The Atlantic": [
 {
 "filename": "the-atlantic-2022-07-12.mobi",
-"published": 1657626859.0
+"published": 1657652476.0
 },
 {
 "filename": "the-atlantic-2022-07-12.epub",
-"published": 1657626859.0
+"published": 1657652476.0
 }
 ],
 "The Atlantic Magazine": [],
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-07-12.mobi",
-"published": 1657637584.0
+"published": 1657651980.0
 },
 {
 "filename": "channelnewsasia-2022-07-12.epub",
-"published": 1657637584.0
+"published": 1657651980.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-07-12.mobi",
-"published": 1657632472.0
+"published": 1657645793.0
 },
 {
 "filename": "the-diplomat-2022-07-12.epub",
-"published": 1657632472.0
+"published": 1657645793.0
 }
 ],
 "Economist": [
 {
-"filename": "economist-2022-07-09.mobi",
-"published": 1657398356.0
+"filename": "economist-2022-07-12.mobi",
+"published": 1657644326.0
 },
 {
-"filename": "economist-2022-07-09.epub",
-"published": 1657398356.0
+"filename": "economist-2022-07-12.epub",
+"published": 1657644326.0
 }
 ],
 "Financial Times": [
 {
 "filename": "ft-2022-07-12.mobi",
-"published": 1657638342.0
+"published": 1657652775.0
 },
 {
 "filename": "ft-2022-07-12.epub",
-"published": 1657638342.0
+"published": 1657652775.0
 }
 ],
 "Five Books": [
 {
 "filename": "fivebooks-2022-07-12.mobi",
-"published": 1657638349.0
+"published": 1657652780.0
 },
 {
 "filename": "fivebooks-2022-07-12.epub",
-"published": 1657638349.0
+"published": 1657652780.0
 }
 ],
 "Guardian": [
 {
 "filename": "guardian-2022-07-12.mobi",
-"published": 1657634994.0
+"published": 1657652014.0
 },
 {
 "filename": "guardian-2022-07-12.epub",
-"published": 1657634994.0
+"published": 1657652014.0
 }
 ],
-"JoongAng Daily": [],
+"JoongAng Daily": [
+{
+"filename": "joongang-daily-2022-07-12.mobi",
+"published": 1657623490.0
+},
+{
+"filename": "joongang-daily-2022-07-12.epub",
+"published": 1657623490.0
+}
+],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-07-12.mobi",
@@ -104,11 +113,11 @@
 "London Review of Books": [
 {
 "filename": "lrb-2022-07-12.mobi",
-"published": 1657638474.0
+"published": 1657652885.0
 },
 {
 "filename": "lrb-2022-07-12.epub",
-"published": 1657638474.0
+"published": 1657652885.0
 }
 ],
 "Nature": [
@@ -134,21 +143,21 @@
 "New Yorker": [
 {
 "filename": "newyorker-2022-07-12.mobi",
-"published": 1657638528.0
+"published": 1657652937.0
 },
 {
 "filename": "newyorker-2022-07-12.epub",
-"published": 1657638528.0
+"published": 1657652937.0
 }
 ],
 "NY Times": [
 {
 "filename": "nytimes-global-2022-07-12.mobi",
-"published": 1657638538.0
+"published": 1657652951.0
 },
 {
 "filename": "nytimes-global-2022-07-12.epub",
-"published": 1657638538.0
+"published": 1657652951.0
 }
 ],
 "NY Times (Print)": [
@@ -164,11 +173,11 @@
 "NY Times Books": [
 {
 "filename": "nytimes-books-2022-07-12.mobi",
-"published": 1657638551.0
+"published": 1657652974.0
 },
 {
 "filename": "nytimes-books-2022-07-12.epub",
-"published": 1657638551.0
+"published": 1657652974.0
 }
 ],
 "Poetry": [
@@ -214,21 +223,21 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-07-12.mobi",
-"published": 1657638022.0
+"published": 1657648031.0
 },
 {
 "filename": "scmp-2022-07-12.epub",
-"published": 1657638022.0
+"published": 1657648031.0
 }
 ],
 "Sydney Morning Herald": [
 {
 "filename": "sydney-morning-herald-2022-07-12.mobi",
-"published": 1657635989.0
+"published": 1657653000.0
 },
 {
 "filename": "sydney-morning-herald-2022-07-12.epub",
-"published": 1657635989.0
+"published": 1657653000.0
 }
 ],
 "Taipei Times": [
@@ -264,21 +273,21 @@
 "Vox": [
 {
 "filename": "vox-2022-07-12.mobi",
-"published": 1657637259.0
+"published": 1657650600.0
 },
 {
 "filename": "vox-2022-07-12.epub",
-"published": 1657637259.0
+"published": 1657650600.0
 }
 ],
 "Washington Post": [
 {
 "filename": "wapo-2022-07-12.mobi",
-"published": 1657638995.0
+"published": 1657653424.0
 },
 {
 "filename": "wapo-2022-07-12.epub",
-"published": 1657638995.0
+"published": 1657653424.0
 }
 ],
 "Wired Magazine": [
@@ -291,5 +300,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1657639072
+"_generated": 1657653501
 }
