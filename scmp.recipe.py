@@ -56,7 +56,7 @@ class SCMP(BasicNewsRecipe):
             ]
         ),
         dict(attrs={"addthis_title": True}),
-        dict(name=["script", "style"]),
+        dict(name=["script", "style", "svg"]),
     ]
     remove_attributes = ["style", "font"]
 
