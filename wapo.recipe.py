@@ -198,11 +198,12 @@ class TheWashingtonPost(BasicNewsRecipe):
 
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
-        data = json.loads(
-            soup.find(
-                "script", attrs={"id": "__NEXT_DATA__", "type": "application/json"}
-            ).text
-        )
+        script = soup.find_all("script", id="__NEXT_DATA__")
+        try:
+            data = json.loads(script[0].contents[0])
+        except json.decoder.JSONDecodeError:
+            self.log.error(script[0].contents[0])
+            self.log.exception("Unable to decode script json")
         content = data.get("props", {}).get("pageProps", {}).get("globalContent", {})
         if not content:
             # E.g. interactive articles
