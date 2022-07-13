@@ -72,7 +72,7 @@ class NYTimesBooks(BasicNewsRecipe):
     def get_browser(self, *a, **kw):
         kw[
             "user_agent"
-        ] = "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"
+        ] = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
         br = BasicNewsRecipe.get_browser(self, *a, **kw)
         return br
 
@@ -679,7 +679,10 @@ class NYTimesBooks(BasicNewsRecipe):
         if info and info.get("initialState"):
             return self.preprocess_initial_state(html_output, info, raw_html, url)
 
-        article = (info.get("initialData", {}) or {}).get("data", {}).get("article")
+        article = ((info.get("initialData", {}) or {}).get("data", {}) or {}).get(
+            "article"
+        )
+
         if info and article:
             return self.preprocess_initial_data(html_output, info, raw_html, url)
 
