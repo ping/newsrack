@@ -404,7 +404,7 @@ class NYTimesGlobal(BasicNewsRecipe):
             document_block = content_service[body["id"]]  # typename = "DocumentBlock"
         except:  # noqa
             # live blog probably
-            self.log(f"Unable to find content in article object")
+            self.log(f"Unable to find content in article object for {url}")
             return raw_html
 
         new_soup = BeautifulSoup(template_html, "html.parser")
@@ -708,6 +708,10 @@ class NYTimesGlobal(BasicNewsRecipe):
             info = json.loads(article_js)
             break
 
+        if not info:
+            self.log(f"Unable to find article from script in {url}")
+            return raw_html
+
         html_output = """<html><head><title></title></head>
         <body>
             <article>
@@ -721,7 +725,7 @@ class NYTimesGlobal(BasicNewsRecipe):
         </body></html>
         """
 
-        if info and info.get("initialState"):
+        if info.get("initialState"):
             # Seems limited to "live" articles
             return self.preprocess_initial_state(html_output, info, raw_html, url)
 

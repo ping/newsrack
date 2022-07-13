@@ -663,6 +663,10 @@ class NYTimesBooks(BasicNewsRecipe):
             info = json.loads(article_js)
             break
 
+        if not info:
+            self.log(f"Unable to find article from script in {url}")
+            return raw_html
+
         html_output = """<html><head><title></title></head>
         <body>
             <article>
@@ -675,9 +679,6 @@ class NYTimesBooks(BasicNewsRecipe):
             </article>
         </body></html>
         """
-        if not info:
-            self.log(f"Unable to find article from script in {url}")
-            return raw_html
 
         if info.get("initialState"):
             return self.preprocess_initial_state(html_output, info, raw_html, url)
