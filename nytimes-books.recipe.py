@@ -72,7 +72,7 @@ class NYTimesBooks(BasicNewsRecipe):
     def get_browser(self, *a, **kw):
         kw[
             "user_agent"
-        ] = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+        ] = "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"
         br = BasicNewsRecipe.get_browser(self, *a, **kw)
         return br
 
