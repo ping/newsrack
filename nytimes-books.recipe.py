@@ -69,12 +69,12 @@ class NYTimesBooks(BasicNewsRecipe):
         ("NYTimes Books", "https://rss.nytimes.com/services/xml/rss/nyt/Books.xml"),
     ]
 
-    def get_browser(self, *a, **kw):
-        kw[
-            "user_agent"
-        ] = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
-        br = BasicNewsRecipe.get_browser(self, *a, **kw)
-        return br
+    # def get_browser(self, *a, **kw):
+    #     kw[
+    #         "user_agent"
+    #     ] = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+    #     br = BasicNewsRecipe.get_browser(self, *a, **kw)
+    #     return br
 
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
@@ -359,7 +359,7 @@ class NYTimesBooks(BasicNewsRecipe):
             document_block = content_service[body["id"]]  # typename = "DocumentBlock"
         except:  # noqa
             # live blog probably
-            self.log(f"Unable to find content in article object")
+            self.log(f"Unable to find content in article object for {url}")
             return raw_html
 
         new_soup = BeautifulSoup(template_html, "html.parser")
