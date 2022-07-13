@@ -202,7 +202,7 @@ class TheWashingtonPost(BasicNewsRecipe):
         try:
             data = json.loads(script[0].contents[0])
         except json.decoder.JSONDecodeError:
-            self.log.error(script[0].contents[0])
+            # self.log.error(script[0].contents[0])
             self.log.exception("Unable to decode script json")
         content = data.get("props", {}).get("pageProps", {}).get("globalContent", {})
         if not content:
