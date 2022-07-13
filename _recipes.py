@@ -201,13 +201,13 @@ recipes = [
         overwrite_cover=False,
         enable_on=onlyon_days(list(range(13, 18)), -5),  # middle of the month?
     ),
-    Recipe(
-        recipe="scmp",
-        slug="scmp",
-        src_ext="mobi",
-        target_ext=["epub"],
-        category="news",
-    ),
+    # Recipe(
+    #     recipe="scmp",
+    #     slug="scmp",
+    #     src_ext="mobi",
+    #     target_ext=["epub"],
+    #     category="news",
+    # ),
     Recipe(
         recipe="sydney-morning-herald",
         slug="sydney-morning-herald",

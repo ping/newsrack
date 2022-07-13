@@ -18,10 +18,10 @@ In alphabetical order:
 6. [The Korea Herald](https://koreaherald.com/)
 7. [The New York Times](https://www.nytimes.com/)
 8. [The New York Times (Print)](https://www.nytimes.com/section/todayspaper)
-9. [South China Morning Post](https://www.scmp.com/)
-10. [Sydney Morning Herald](https://www.smh.com.au/)
-11. [Taipei Times](https://www.taipeitimes.com/)
-12. [The Washington Post](https://www.washingtonpost.com/)
+9. [Sydney Morning Herald](https://www.smh.com.au/)
+10. [Taipei Times](https://www.taipeitimes.com/)
+11. [The Washington Post](https://www.washingtonpost.com/)
+12. ~~[South China Morning Post](https://www.scmp.com/)~~
 13. ~~[The Japan Times](https://www.japantimes.co.jp/)~~
 
 ### Magazines
