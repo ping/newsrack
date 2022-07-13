@@ -675,13 +675,14 @@ class NYTimesBooks(BasicNewsRecipe):
             </article>
         </body></html>
         """
+        if not info:
+            self.log(f"Unable to find article from script in {url}")
+            return raw_html
 
-        if info and info.get("initialState"):
+        if info.get("initialState"):
             return self.preprocess_initial_state(html_output, info, raw_html, url)
 
-        article = ((info.get("initialData", {}) or {}).get("data", {}) or {}).get(
-            "article"
-        )
+        article = (info.get("initialData", {}) or {}).get("data", {}).get("article")
 
         if info and article:
             return self.preprocess_initial_data(html_output, info, raw_html, url)
