@@ -39,7 +39,7 @@ class SydneyMorningHerald(BasicNewsRecipe):
     remove_attributes = ["style", "font", "width", "height"]
     keep_only_tags = [dict(name="article")]
     remove_tags = [
-        dict(name=["button"]),
+        dict(name=["button", "svg"]),
         dict(id=["saveTooltip"]),
         dict(attrs={"class": "noPrint"}),
     ]
