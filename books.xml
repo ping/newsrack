@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-13T09:49:11Z</updated>
+<updated>2022-07-13T09:58:33Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books</title>
-<summary>NY Times Books published at 2022-07-13 09:41AM.</summary>
+<summary>NY Times Books published at 2022-07-13 09:57AM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Review: “Thank You for Your Servitude,” by Mark Leibovich&lt;/li&gt;&lt;li&gt;Newly Published, From Joseph Smith to Salmon Farms&lt;/li&gt;&lt;li&gt;In West Africa and Beyond, Mali’s Famed Manuscripts Are Put to Use&lt;/li&gt;&lt;li&gt;In ‘Carnality,’ a Wild Ride Fueled by Rash Decisions&lt;/li&gt;&lt;li&gt;Ada Limón Is Named the Next Poet Laureate&lt;/li&gt;&lt;li&gt;His First Novel Was a Critical Hit. Two Decades Later, He Rewrote It.&lt;/li&gt;&lt;li&gt;Book Review: “Agent Josephine,” by Damien Lewis&lt;/li&gt;&lt;li&gt;Review: ‘Any Other Family,’ by Eleanor Brown&lt;/li&gt;&lt;li&gt;Review: ‘Gods of Want,’ by K-Ming Chang&lt;/li&gt;&lt;li&gt;Review: ‘Winter Work,’ by Dan Fesperman&lt;/li&gt;&lt;li&gt;Review: ‘Brother Alive,’ by Zain Khalid&lt;/li&gt;&lt;li&gt;Review: ‘Total: Stories,’ by Rebecca Miller&lt;/li&gt;&lt;li&gt;Review: ‘Harry Sylvester Bird,’ by Chinelo Okparanta&lt;/li&gt;&lt;li&gt;Among the Literary Lions, at Full Roar, in the 1980s&lt;/li&gt;&lt;li&gt;India and the United States: Two Countries That Can’t Live With Each Other or Without Each Other&lt;/li&gt;&lt;li&gt;Tanqueray Looks Back at Her Grand and Gritty New York Life&lt;/li&gt;&lt;li&gt;Review: ‘Bad Thoughts,’ by Nada Alic&lt;/li&gt;&lt;li&gt;‘Hollywood Ending,’ a Cradle-to-Jail Biography of Harvey Weinstein&lt;/li&gt;&lt;li&gt;Some Surprising Good News: Bookstores Are Booming and Becoming More Diverse&lt;/li&gt;&lt;li&gt;Review: ‘Roll Red Roll,’ by Nancy Schwartzman&lt;/li&gt;&lt;li&gt;Review: ‘The Great Man Theory,’ by Teddy Wayne&lt;/li&gt;&lt;li&gt;Book Review: “The Crane Wife” by CJ Hauser&lt;/li&gt;&lt;li&gt;Invisibility, a Hippo and Antiques&lt;/li&gt;&lt;li&gt;Book Review: “Why Didn’t You Tell Me?” by Carmen Rita Wong and “Normal Family” by Chrysta Bilton&lt;/li&gt;&lt;li&gt;Alice Elliott Dark on ‘Fellowship Point’&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-07-13T09:41:11Z</updated>
+<updated>2022-07-13T09:57:58Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
