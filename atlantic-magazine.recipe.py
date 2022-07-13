@@ -135,6 +135,7 @@ class TheAtlanticMagazine(BasicNewsRecipe):
 
     masthead_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/The_Atlantic_magazine_logo.svg/1200px-The_Atlantic_magazine_logo.svg.png"
 
+    publication_type = "magazine"
     no_stylesheets = True
     remove_javascript = True
     remove_empty_feeds = True
@@ -217,59 +218,28 @@ class TheAtlanticMagazine(BasicNewsRecipe):
 
     def parse_index(self):
         soup = self.index_to_soup(self.INDEX)
-        figure = soup.find("figure", id="cover-image")
-        if figure is not None:
-            img = figure.find("img", src=True)
-            if img:
-                self.cover_url = img["src"]
-        issue_ele = soup.find("h1", attrs={"class": "c-section-header__title"})
-        self.title = f"{_name}: {issue_ele.text.title()}"
-        current_section, current_articles = "Cover Story", []
-        feeds = []
-        for div in soup.findAll(
-            "div",
-            attrs={
-                "class": lambda x: x
-                and set(x.split()).intersection({"top-sections", "bottom-sections"})
-            },
+        script = soup.findAll("script", id="__NEXT_DATA__")
+        if not script:
+            raise NoJSON("No script tag with JSON data found")
+        data = json.loads(script[0].contents[0])
+        issue = None
+        for t in (
+            data.get("props", {}).get("pageProps", {}).get("urqlState", {}).values()
         ):
-            for h2 in div.findAll("h2", attrs={"class": True}):
-                cls = h2["class"]
-                if hasattr(cls, "split"):
-                    cls = cls.split()
-                if "section-name" in cls:
-                    if current_articles:
-                        feeds.append((current_section, current_articles))
-                    current_articles = []
-                    current_section = self.tag_to_string(h2)
-                    self.log("\nFound section:", current_section)
-                elif "hed" in cls:
-                    title = self.tag_to_string(h2)
-                    a = h2.findParent("a", href=True)
-                    if a is None:
-                        continue
-                    url = a["href"]
-                    if url.startswith("/"):
-                        url = "https://www.theatlantic.com" + url
-                    li = a.findParent(
-                        "li",
-                        attrs={"class": lambda x: x and "article" in x.split()},
-                    )
-                    desc = ""
-                    dek = li.find(attrs={"class": lambda x: x and "dek" in x.split()})
-                    if dek is not None:
-                        desc += self.tag_to_string(dek)
-                    byline = li.find(
-                        attrs={"class": lambda x: x and "byline" in x.split()}
-                    )
-                    if byline is not None:
-                        desc += " -- " + self.tag_to_string(byline)
-                    self.log("\t", title, "at", url)
-                    if desc:
-                        self.log("\t\t", desc)
-                    current_articles.append(
-                        {"title": title, "url": url, "description": desc}
-                    )
-        if current_articles:
-            feeds.append((current_section, current_articles))
+            d = json.loads(t["data"])
+            if not d.get("latestMagazineIssue"):
+                continue
+            issue = d["latestMagazineIssue"]
+        self.title = issue["displayName"]
+        self.cover_url = (
+            issue["cover"]["srcSet"].split(",")[-1].strip().split(" ")[0].strip()
+        )
+        feeds = []
+        for section in issue["toc"]["sections"]:
+            articles = [
+                {"url": i["url"], "title": i["title"], "description": i["dek"]}
+                for i in section.get("items", [])
+            ]
+            feeds.append((section["title"], articles))
+
         return feeds
