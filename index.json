@@ -182,11 +182,11 @@
 "NY Times Books": [
 {
 "filename": "nytimes-books-2022-07-13.mobi",
-"published": 1657714145.0
+"published": 1657714905.0
 },
 {
 "filename": "nytimes-books-2022-07-13.epub",
-"published": 1657714145.0
+"published": 1657714905.0
 }
 ],
 "Poetry": [
@@ -299,5 +299,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1657714178
+"_generated": 1657714937
 }
