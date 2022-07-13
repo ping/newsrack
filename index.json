@@ -42,11 +42,11 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-07-13.mobi",
-"published": 1657723879.0
+"published": 1657726787.0
 },
 {
 "filename": "channelnewsasia-2022-07-13.epub",
-"published": 1657723879.0
+"published": 1657726787.0
 }
 ],
 "The Diplomat": [
@@ -72,21 +72,21 @@
 "Financial Times": [
 {
 "filename": "ft-2022-07-13.mobi",
-"published": 1657725138.0
+"published": 1657727483.0
 },
 {
 "filename": "ft-2022-07-13.epub",
-"published": 1657725138.0
+"published": 1657727483.0
 }
 ],
 "Five Books": [
 {
 "filename": "fivebooks-2022-07-13.mobi",
-"published": 1657725146.0
+"published": 1657727488.0
 },
 {
 "filename": "fivebooks-2022-07-13.epub",
-"published": 1657725146.0
+"published": 1657727488.0
 }
 ],
 "Guardian": [
@@ -122,11 +122,11 @@
 "London Review of Books": [
 {
 "filename": "lrb-2022-07-13.mobi",
-"published": 1657725277.0
+"published": 1657727640.0
 },
 {
 "filename": "lrb-2022-07-13.epub",
-"published": 1657725277.0
+"published": 1657727640.0
 }
 ],
 "Nature": [
@@ -152,21 +152,21 @@
 "New Yorker": [
 {
 "filename": "newyorker-2022-07-13.mobi",
-"published": 1657725370.0
+"published": 1657727732.0
 },
 {
 "filename": "newyorker-2022-07-13.epub",
-"published": 1657725370.0
+"published": 1657727732.0
 }
 ],
 "NY Times": [
 {
 "filename": "nytimes-global-2022-07-13.mobi",
-"published": 1657725383.0
+"published": 1657727637.0
 },
 {
 "filename": "nytimes-global-2022-07-13.epub",
-"published": 1657725383.0
+"published": 1657727637.0
 }
 ],
 "NY Times (Print)": [
@@ -222,11 +222,11 @@
 "Scientific American": [
 {
 "filename": "scientific-american-2022-07-13.mobi",
-"published": 1657725515.0
+"published": 1657727939.0
 },
 {
 "filename": "scientific-american-2022-07-13.epub",
-"published": 1657725515.0
+"published": 1657727939.0
 }
 ],
 "Sydney Morning Herald": [
@@ -282,11 +282,11 @@
 "Washington Post": [
 {
 "filename": "wapo-2022-07-13.mobi",
-"published": 1657725680.0
+"published": 1657728064.0
 },
 {
 "filename": "wapo-2022-07-13.epub",
-"published": 1657725680.0
+"published": 1657728064.0
 }
 ],
 "Wired Magazine": [
@@ -299,5 +299,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1657725935
+"_generated": 1657728335
 }
