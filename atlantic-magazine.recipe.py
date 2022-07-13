@@ -230,7 +230,7 @@ class TheAtlanticMagazine(BasicNewsRecipe):
             if not d.get("latestMagazineIssue"):
                 continue
             issue = d["latestMagazineIssue"]
-        self.title = issue["displayName"]
+        self.title = f'{_name}: {issue["displayName"]}'
         self.cover_url = (
             issue["cover"]["srcSet"].split(",")[-1].strip().split(" ")[0].strip()
         )
