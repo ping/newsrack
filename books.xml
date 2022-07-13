@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-13T05:30:19Z</updated>
+<updated>2022-07-13T07:18:27Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books</title>
-<summary>NY Times Books published at 2022-07-13 05:19AM.</summary>
+<summary>NY Times Books published at 2022-07-13 07:08AM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;In West Africa and Beyond, Mali’s Famed Manuscripts Are Put to Use&lt;/li&gt;&lt;li&gt;In ‘Carnality,’ a Wild Ride Fueled by Rash Decisions&lt;/li&gt;&lt;li&gt;Ada Limón Is Named the Next Poet Laureate&lt;/li&gt;&lt;li&gt;His First Novel Was a Critical Hit. Two Decades Later, He Rewrote It.&lt;/li&gt;&lt;li&gt;Book Review: “Agent Josephine,” by Damien Lewis&lt;/li&gt;&lt;li&gt;Review: ‘Any Other Family,’ by Eleanor Brown&lt;/li&gt;&lt;li&gt;Review: ‘Gods of Want,’ by K-Ming Chang&lt;/li&gt;&lt;li&gt;Review: ‘Winter Work,’ by Dan Fesperman&lt;/li&gt;&lt;li&gt;Review: ‘Brother Alive,’ by Zain Khalid&lt;/li&gt;&lt;li&gt;Review: ‘Total: Stories,’ by Rebecca Miller&lt;/li&gt;&lt;li&gt;Review: ‘Harry Sylvester Bird,’ by Chinelo Okparanta&lt;/li&gt;&lt;li&gt;Among the Literary Lions, at Full Roar, in the 1980s&lt;/li&gt;&lt;li&gt;Susie Steiner, Author of Acclaimed British Crime Novels, Dies at 51&lt;/li&gt;&lt;li&gt;India and the United States: Two Countries That Can’t Live With Each Other or Without Each Other&lt;/li&gt;&lt;li&gt;Tanqueray Looks Back at Her Grand and Gritty New York Life&lt;/li&gt;&lt;li&gt;Review: ‘Bad Thoughts,’ by Nada Alic&lt;/li&gt;&lt;li&gt;‘Hollywood Ending,’ a Cradle-to-Jail Biography of Harvey Weinstein&lt;/li&gt;&lt;li&gt;Some Surprising Good News: Bookstores Are Booming and Becoming More Diverse&lt;/li&gt;&lt;li&gt;Review: ‘Roll Red Roll,’ by Nancy Schwartzman&lt;/li&gt;&lt;li&gt;Review: ‘The Great Man Theory,’ by Teddy Wayne&lt;/li&gt;&lt;li&gt;Book Review: “The Crane Wife” by CJ Hauser&lt;/li&gt;&lt;li&gt;Invisibility, a Hippo and Antiques&lt;/li&gt;&lt;li&gt;Book Review: “Why Didn’t You Tell Me?” by Carmen Rita Wong and “Normal Family” by Chrysta Bilton&lt;/li&gt;&lt;li&gt;Alice Elliott Dark on ‘Fellowship Point’&lt;/li&gt;&lt;li&gt;Review: ‘Mother Noise,’ by Cindy House; ‘My Seven Black Fathers,’ by Will Jawando; and ‘This Body I Wore,’ by Diana Goetsch&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-07-13T05:19:20Z</updated>
+<updated>2022-07-13T07:08:40Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
@@ -26,12 +26,12 @@
 <entry>
 <id>London Review of Books</id>
 <title>London Review of Books</title>
-<summary>London Review of Books published at 2022-07-13 05:17AM.</summary>
+<summary>London Review of Books published at 2022-07-13 07:07AM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Ferdinand Mount  -  Conspiracy on Cato Street: A Tale of Liberty and Revolution in Regency London&lt;/li&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Zain Samir  - Is this a new Taliban?&lt;/li&gt;&lt;li&gt;Malcolm Gaskill  -  Resistance: The Underground War in Europe, 1939-45&lt;/li&gt;&lt;li&gt;Jeremy Harding  - In Brittany&lt;/li&gt;&lt;li&gt;Catherine Hall  -  Who’s Black and Why? A Hidden Chapter from the 18th-Century Invention of Race&lt;/li&gt;&lt;li&gt;Clair Wills  -  Either/Or&lt;/li&gt;&lt;li&gt;Adewale Maja-Pearce  -  Vagabonds!&lt;/li&gt;&lt;li&gt;Hal Foster  -  Magritte: A Life&lt;/li&gt;&lt;li&gt;Gwen Burnyeat  - Short Cuts: Petro Wins&lt;/li&gt;&lt;li&gt;Rosemary Hill  -  France: An Adventure History&lt;/li&gt;&lt;li&gt;Paul Mendez  - The Lonely Londoners&lt;/li&gt;&lt;li&gt;Francesca Wade  - At Studio Voltaire&lt;/li&gt;&lt;li&gt;Blake Morrison  - The Hurly Burly and Other Stories&lt;/li&gt;&lt;li&gt;Katrina Forrester  -  Work without the Worker: Labour in the Age of Platform Capitalism  /  Dirty Work: Essential Jobs and the Hidden Toll of Inequality in America&lt;/li&gt;&lt;li&gt;Iain Sinclair  - Diary: The Plutocrat Tour&lt;/li&gt;&lt;/ul&gt;
                 Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
                 </content>
-<updated>2022-07-13T05:17:40Z</updated>
+<updated>2022-07-13T07:07:09Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
@@ -42,12 +42,12 @@
 <entry>
 <id>Five Books</id>
 <title>Five Books</title>
-<summary>Five Books published at 2022-07-13 05:15AM.</summary>
+<summary>Five Books published at 2022-07-13 07:05AM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Caroline Crampton on The Best Summer Mysteries&lt;/li&gt;&lt;li&gt;Noga Arikha on Philosophy, Science and the Body Books&lt;/li&gt;&lt;li&gt;Samuel A. Chambers on Money Books&lt;/li&gt;&lt;li&gt;Nick Enfield on Language and Post-Truth Books&lt;/li&gt;&lt;li&gt;Kevin G. Bethune on Design Books&lt;/li&gt;&lt;li&gt;Evan Lieberman on African Politics Books&lt;/li&gt;&lt;li&gt;Frank Wynne on The Best of World Literature: The 2022 International Booker Prize Shortlist&lt;/li&gt;&lt;li&gt;Myisha Cherry on Anger at Racial Injustice Books&lt;/li&gt;&lt;li&gt;Darren Collins on The Best Finance Books for Teens and Young Adults&lt;/li&gt;&lt;li&gt;Elizabeth Laird on The Best Historical Fiction: The 2022 Walter Scott Prize Shortlist&lt;/li&gt;&lt;li&gt;David George Haskell on Natural History Books&lt;/li&gt;&lt;li&gt;Gary Gerstle on Neoliberalism Books&lt;/li&gt;&lt;li&gt;Helen Scales on The Best Ocean Novels for 10-14 Year Olds&lt;/li&gt;&lt;li&gt;Jan Loeys on Market Concentration Books&lt;/li&gt;&lt;li&gt;Rosa Rankin-Gee on The Best Near-Future Dystopias&lt;/li&gt;&lt;li&gt;Cal Flyn on The Notable Novels of Summer 2022&lt;/li&gt;&lt;li&gt;Matthew Brookes &amp; Zack Raffin on Wanderlust Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Spring 2022&lt;/li&gt;&lt;li&gt;Carole Hillenbrand on The Best History Books: the 2022 Wolfson Prize Shortlist&lt;/li&gt;&lt;li&gt;Michele Cobb on The Best Audiobooks: the 2022 Audie Awards&lt;/li&gt;&lt;li&gt;Serhii Plokhy on Ukraine and Russia Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Early 2022&lt;/li&gt;&lt;li&gt;Cal Flyn on Notable Novels of Spring 2022&lt;/li&gt;&lt;li&gt;Jeffrey Archer on The Best Detective Fiction&lt;/li&gt;&lt;li&gt;Marion Turner on Best Medieval Historical Fiction&lt;/li&gt;&lt;/ul&gt;
                 Expert book recommendations
                 </content>
-<updated>2022-07-13T05:15:20Z</updated>
+<updated>2022-07-13T07:05:02Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
