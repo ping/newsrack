@@ -162,11 +162,11 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-07-14.mobi",
-"published": 1657769177.0
+"published": 1657770533.0
 },
 {
 "filename": "nytimes-global-2022-07-14.epub",
-"published": 1657769177.0
+"published": 1657770533.0
 }
 ],
 "NY Times (Print)": [
@@ -221,12 +221,12 @@
 ],
 "Scientific American": [
 {
-"filename": "scientific-american-2022-07-14.mobi",
-"published": 1657767987.0
+"filename": "scientific-american-2022-07-01.mobi",
+"published": 1656680400.0
 },
 {
-"filename": "scientific-american-2022-07-14.epub",
-"published": 1657767987.0
+"filename": "scientific-american-2022-07-01.epub",
+"published": 1656680400.0
 }
 ],
 "South China Morning Post": [
@@ -309,5 +309,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1657770120
+"_generated": 1657771263
 }
