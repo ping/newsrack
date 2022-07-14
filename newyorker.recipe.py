@@ -84,7 +84,7 @@ class NewYorker(BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
         for script in soup.find_all(name="script", type="application/ld+json"):
-            info = json.loads(script.text)
+            info = json.loads(script.contents[0])
             if not info.get("headline"):
                 continue
 
