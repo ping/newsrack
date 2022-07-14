@@ -87,7 +87,7 @@ class ScientificAmerican(BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
         for script in soup.find_all(name="script"):
-            article_js = script.text.strip()
+            article_js = script.contents[0].strip()
             if not article_js.startswith("dataLayer"):
                 continue
             article_js = re.sub(r"dataLayer\s*=\s*", "", article_js)

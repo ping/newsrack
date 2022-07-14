@@ -672,10 +672,10 @@ class NewYorkTimesPrint(BasicNewsRecipe):
         soup = BeautifulSoup(raw_html)
 
         for script in soup.find_all("script"):
-            if not script.text.strip().startswith("window.__preloadedData"):
+            if not script.contents[0].strip().startswith("window.__preloadedData"):
                 continue
             article_js = re.sub(
-                r"window.__preloadedData\s*=\s*", "", script.text.strip()
+                r"window.__preloadedData\s*=\s*", "", script.contents[0].strip()
             )
             if article_js.endswith(";"):
                 article_js = article_js[:-1]

@@ -144,10 +144,10 @@ class SCMP(BasicNewsRecipe):
         soup = BeautifulSoup(raw_html)
 
         for script in soup.find_all("script"):
-            if not script.text.startswith("window.__APOLLO_STATE__"):
+            if not script.contents[0].startswith("window.__APOLLO_STATE__"):
                 continue
             article_js = re.sub(
-                r"window.__APOLLO_STATE__\s*=\s*", "", script.text.strip()
+                r"window.__APOLLO_STATE__\s*=\s*", "", script.contents[0].strip()
             )
             if article_js.endswith(";"):
                 article_js = article_js[:-1]

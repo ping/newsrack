@@ -79,7 +79,7 @@ class LondonReviewOfBooksPayed(BasicNewsRecipe):
             attrs={"data-schema": "Article", "type": "application/ld+json"},
         )
         if info_ele:
-            info = json.loads(info_ele.text)
+            info = json.loads(info_ele.contents[0])
             soup.body["data-og-summary"] = info.get("description", "")
             published_date = datetime.strptime(
                 info["datePublished"], "%Y-%m-%d %H:%M:%S"

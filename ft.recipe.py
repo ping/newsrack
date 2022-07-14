@@ -74,7 +74,7 @@ class FinancialTimes(BasicNewsRecipe):
         article = None
         soup = BeautifulSoup(raw_html)
         for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
-            article = json.loads(script.text)
+            article = json.loads(script.contents[0])
             if not (article.get("@type") and article["@type"] == "NewsArticle"):
                 continue
             break
