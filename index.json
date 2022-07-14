@@ -151,12 +151,12 @@
 ],
 "New Yorker": [
 {
-"filename": "newyorker-2022-07-13.mobi",
-"published": 1657753837.0
+"filename": "newyorker-2022-07-04.mobi",
+"published": 1656928800.0
 },
 {
-"filename": "newyorker-2022-07-13.epub",
-"published": 1657753837.0
+"filename": "newyorker-2022-07-04.epub",
+"published": 1656928800.0
 }
 ],
 "NY Times": [
@@ -299,5 +299,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1657764695
+"_generated": 1657766592
 }
