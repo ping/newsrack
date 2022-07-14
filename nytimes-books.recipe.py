@@ -2,6 +2,7 @@ import os
 import datetime
 import re
 import json
+from urllib.parse import urlparse
 
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.web.feeds import Feed
@@ -660,16 +661,24 @@ class NYTimesBooks(BasicNewsRecipe):
             )
             if article_js.endswith(";"):
                 article_js = article_js[:-1]
+            self.log(article_js)
             article_js = article_js.replace(":undefined", ":null")
             info = json.loads(article_js)
             break
 
         if not info:
             if os.environ.get("recipe_debug_folder", ""):
-                debug_output_file = os.path.join(
-                    os.environ["recipe_debug_folder"], "nytimes-books.html"
+                recipe_folder = os.path.join(
+                    os.environ["recipe_debug_folder"], "nytimes-books"
                 )
-                self.log(f'Writing debug raw html to "{debug_output_file}"')
+                if not os.path.exists(recipe_folder):
+                    os.makedirs(recipe_folder)
+                debug_output_file = os.path.join(
+                    recipe_folder, os.path.basename(urlparse(url).path)
+                )
+                if not debug_output_file.endswith(".html"):
+                    debug_output_file += ".html"
+                self.log(f'Writing debug raw html to "{debug_output_file}" for {url}')
                 with open(debug_output_file, "w", encoding="utf-8") as f:
                     f.write(raw_html)
             self.log(f"Unable to find article from script in {url}")
@@ -748,3 +757,16 @@ class NYTimesBooks(BasicNewsRecipe):
                 new_feeds.append(curr_feed)
 
         return new_feeds
+
+    def parse_index(self):
+        return [
+            (
+                "Articles",
+                [
+                    {
+                        "url": "https://ping.github.io/newsrack/nytimes-books.html",
+                        "title": "Debug",
+                    }
+                ],
+            )
+        ]
