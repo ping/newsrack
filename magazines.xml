@@ -2,20 +2,36 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-14T19:38:13Z</updated>
+<updated>2022-07-14T23:53:35Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
+<id>POLITICO Magazine</id>
+<title>POLITICO Magazine: 14 Jul, 2022</title>
+<summary>POLITICO Magazine: 14 Jul, 2022 published at 2022-07-14 23:30PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Opinion | How Announcing His 2024 Campaign Could Be Trump’s Best Legal Defense&lt;/li&gt;&lt;li&gt;Opinion | Polls Show Americans Don’t Care that Much about Dobbs — and Won’t Base Their Vote on it&lt;/li&gt;&lt;li&gt;Opinion | A New Shape for US-Saudi Relations&lt;/li&gt;&lt;li&gt;The Republican Who Wants To End The Trump Era — Without Taking on Trump&lt;/li&gt;&lt;li&gt;The Man at the Center of the New Cyber World War&lt;/li&gt;&lt;li&gt;Opinion | I Am a Man With a Genetic Condition. The Abortion Fight Is About Me, Too.&lt;/li&gt;&lt;li&gt;Opinion | It’s Not Just Khashoggi: The Saudi Issue Biden Can’t Ignore&lt;/li&gt;&lt;li&gt;A Former Mueller Prosecutor Takes Merrick Garland to Task&lt;/li&gt;&lt;li&gt;Opinion | Newsom, Harris, Buttigieg and the Democrats Definitely Not Challenging Joe Biden&lt;/li&gt;&lt;li&gt;How Abortion Is Sundering Amy Coney Barrett’s Hometown&lt;/li&gt;&lt;li&gt;Opinion | Why Hard-Liners Are Gaining Steam in Latin America&lt;/li&gt;&lt;li&gt;The New Trump Documentary Shows Us Exactly What He’s So Good At&lt;/li&gt;&lt;li&gt;Opinion | Take the Deal: Brittney Griner in Exchange for the ‘Merchant of Death’&lt;/li&gt;&lt;li&gt;‘This Is Disgusting’: An Insider’s Account on the Fall of Cuomo&lt;/li&gt;&lt;li&gt;Toto, We’re Not in This Town Anymore&lt;/li&gt;&lt;li&gt;Opinion | If Tucker Runs in 2024, Here’s Who the Democrats Need&lt;/li&gt;&lt;/ul&gt;
+                News, Analysis and Opinion from POLITICO
+                </content>
+<updated>2022-07-14T23:30:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-07-14.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-07-14.epub"/>
+</entry>
+<entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 14 Jul, 2022</title>
-<summary>The Atlantic: 14 Jul, 2022 published at 2022-07-14 18:49PM.</summary>
+<summary>The Atlantic: 14 Jul, 2022 published at 2022-07-14 22:18PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;How to Successfully Smash Your Face Against a Tree&lt;/li&gt;&lt;li&gt;Texas’s Season in Hell&lt;/li&gt;&lt;li&gt;The Hawley-Bridges Exchange Was Not Constructive&lt;/li&gt;&lt;li&gt;Those Sequoias Didn’t Just Get Lucky&lt;/li&gt;&lt;li&gt;The BA.5 Wave Is What COVID Normal Looks Like&lt;/li&gt;&lt;li&gt;The DOJ Must Prosecute Trump&lt;/li&gt;&lt;li&gt;Democrats Need a Real Primary Contest&lt;/li&gt;&lt;li&gt;‘Netflix Thinks Exactly Like an Old Movie Studio’&lt;/li&gt;&lt;li&gt;The Trouble With Zooming Forever&lt;/li&gt;&lt;li&gt;The Bannon Strategy&lt;/li&gt;&lt;li&gt;Elon Musk Is a ‘Nightmare Client’&lt;/li&gt;&lt;li&gt;Trump Terrified Even His Truest Believers&lt;/li&gt;&lt;li&gt;Everything About Twitter v. Musk Is Utter Nonsense&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;Why They Still Support Trump&lt;/li&gt;&lt;li&gt;Selections From the Audubon Photography Awards Top 100&lt;/li&gt;&lt;li&gt;Britain’s Surprisingly Diverse Tories&lt;/li&gt;&lt;li&gt;When Does the Clean-Energy Infinity Loop Start?&lt;/li&gt;&lt;li&gt;Jane Austen’s Persuasion Meets the Girlboss Era&lt;/li&gt;&lt;li&gt;Whatever This Is, It Won’t Be Build Back Better&lt;/li&gt;&lt;li&gt;Police Reform Needs to Come From Within&lt;/li&gt;&lt;li&gt;TV’s Best New Show Is a Study of Masculinity in Crisis&lt;/li&gt;&lt;li&gt;Russia’s War Against Ukraine Has Turned Into Terrorism&lt;/li&gt;&lt;li&gt;How China Wants to Replace the U.S. Order&lt;/li&gt;&lt;li&gt;The Liberals Threatening to Pick Up and Leave&lt;/li&gt;&lt;li&gt;Where the Crawdads Sing Author Wanted for Questioning in Murder&lt;/li&gt;&lt;li&gt;The Incitement Paper Trail&lt;/li&gt;&lt;li&gt;What Happened to Michael Flynn?&lt;/li&gt;&lt;li&gt;The Glaring Contradiction of Republicans’ Rhetoric of Freedom&lt;/li&gt;&lt;li&gt;Democrats Try to Build Back (A Bit) Better&lt;/li&gt;&lt;li&gt;What Comes After Roe?&lt;/li&gt;&lt;li&gt;Is Biden a Man Out of Time?&lt;/li&gt;&lt;li&gt;Why Biden Shouldn’t Run in 2024&lt;/li&gt;&lt;li&gt;Trump Gets the January 6 Trial He Long Dodged&lt;/li&gt;&lt;li&gt;Are Iowa’s Democratic Days Gone for Good?&lt;/li&gt;&lt;li&gt;Pennsylvania Becomes the Land of Oz&lt;/li&gt;&lt;li&gt;‘Everything About This Boy Was About His Mother’&lt;/li&gt;&lt;li&gt;Seven Books Grappling With What Writers Leave Behind&lt;/li&gt;&lt;li&gt;The Minions Are Good. I’m Serious.&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;What a Story of 1970s Abortion Activism Can Teach Us Today&lt;/li&gt;&lt;li&gt;First Images From the James Webb Space Telescope&lt;/li&gt;&lt;li&gt;Photos of the Week: Oil Wrestling, Flaming Bull, Gorgosaurus Sale&lt;/li&gt;&lt;li&gt;The Worst, Best Prime Minister&lt;/li&gt;&lt;li&gt;The Accidental Trumpification of NATO&lt;/li&gt;&lt;li&gt;Where Russia’s Declinist Rage Isn’t Enough&lt;/li&gt;&lt;li&gt;Hard Seltzer Has Gone Flat&lt;/li&gt;&lt;li&gt;Introducing the Atlantic Archive&lt;/li&gt;&lt;li&gt;The Betrayal&lt;/li&gt;&lt;li&gt;Biden Won Big With a Bad Hand&lt;/li&gt;&lt;li&gt;How Do Democrats Recover From This?&lt;/li&gt;&lt;li&gt;Is BA.5 the ‘Reinfection Wave’?&lt;/li&gt;&lt;li&gt;The Vasectomy Influencers&lt;/li&gt;&lt;li&gt;The Coolest Space Picture I’ve Ever Seen&lt;/li&gt;&lt;li&gt;This Is the Picture Astronomers Have Been Waiting For&lt;/li&gt;&lt;li&gt;Do Gophers … Farm?&lt;/li&gt;&lt;li&gt;Astronomers Haven’t Been This Giddy in Years&lt;/li&gt;&lt;li&gt;Admit It, Squirrels Are Just Tree Rats&lt;/li&gt;&lt;li&gt;Trump May Not Have to Steal 2024&lt;/li&gt;&lt;li&gt;Where Is the National Outrage Over Uvalde?&lt;/li&gt;&lt;li&gt;Make Politics Boring Again&lt;/li&gt;&lt;li&gt;Your Odes to Summer&lt;/li&gt;&lt;li&gt;The Biggest Problem With Remote Work&lt;/li&gt;&lt;li&gt;America Endures&lt;/li&gt;&lt;li&gt;There’s Nothing Like a Great Takedown&lt;/li&gt;&lt;li&gt;The Shameless Boris Johnson&lt;/li&gt;&lt;li&gt;The Summer of Our Discontent&lt;/li&gt;&lt;li&gt;The Domino Effects of New Anti-abortion Laws&lt;/li&gt;&lt;li&gt;We Now Know&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Local Prosecutors Can’t Protect Abortion Rights&lt;/li&gt;&lt;li&gt;How to Successfully Smash Your Face Against a Tree&lt;/li&gt;&lt;li&gt;Texas’s Season in Hell&lt;/li&gt;&lt;li&gt;The Hawley-Bridges Exchange Was Not Constructive&lt;/li&gt;&lt;li&gt;Those Sequoias Didn’t Just Get Lucky&lt;/li&gt;&lt;li&gt;The BA.5 Wave Is What COVID Normal Looks Like&lt;/li&gt;&lt;li&gt;The DOJ Must Prosecute Trump&lt;/li&gt;&lt;li&gt;Democrats Need a Real Primary Contest&lt;/li&gt;&lt;li&gt;‘Netflix Thinks Exactly Like an Old Movie Studio’&lt;/li&gt;&lt;li&gt;The Trouble With Zooming Forever&lt;/li&gt;&lt;li&gt;The Bannon Strategy&lt;/li&gt;&lt;li&gt;Elon Musk Is a ‘Nightmare Client’&lt;/li&gt;&lt;li&gt;Trump Terrified Even His Truest Believers&lt;/li&gt;&lt;li&gt;Everything About Twitter v. Musk Is Utter Nonsense&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;Why They Still Support Trump&lt;/li&gt;&lt;li&gt;Selections From the Audubon Photography Awards Top 100&lt;/li&gt;&lt;li&gt;Britain’s Surprisingly Diverse Tories&lt;/li&gt;&lt;li&gt;When Does the Clean-Energy Infinity Loop Start?&lt;/li&gt;&lt;li&gt;Jane Austen’s Persuasion Meets the Girlboss Era&lt;/li&gt;&lt;li&gt;Whatever This Is, It Won’t Be Build Back Better&lt;/li&gt;&lt;li&gt;Police Reform Needs to Come From Within&lt;/li&gt;&lt;li&gt;TV’s Best New Show Is a Study of Masculinity in Crisis&lt;/li&gt;&lt;li&gt;Russia’s War Against Ukraine Has Turned Into Terrorism&lt;/li&gt;&lt;li&gt;How China Wants to Replace the U.S. Order&lt;/li&gt;&lt;li&gt;Hard Seltzer Has Gone Flat&lt;/li&gt;&lt;li&gt;Where the Crawdads Sing Author Wanted for Questioning in Murder&lt;/li&gt;&lt;li&gt;The Incitement Paper Trail&lt;/li&gt;&lt;li&gt;What Happened to Michael Flynn?&lt;/li&gt;&lt;li&gt;The Glaring Contradiction of Republicans’ Rhetoric of Freedom&lt;/li&gt;&lt;li&gt;Democrats Try to Build Back (A Bit) Better&lt;/li&gt;&lt;li&gt;‘Everything About This Boy Was About His Mother’&lt;/li&gt;&lt;li&gt;Seven Books Grappling With What Writers Leave Behind&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;First Images From the James Webb Space Telescope&lt;/li&gt;&lt;li&gt;Photos of the Week: Oil Wrestling, Flaming Bull, Gorgosaurus Sale&lt;/li&gt;&lt;li&gt;Introducing the Atlantic Archive&lt;/li&gt;&lt;li&gt;Is BA.5 the ‘Reinfection Wave’?&lt;/li&gt;&lt;li&gt;The Vasectomy Influencers&lt;/li&gt;&lt;li&gt;The Coolest Space Picture I’ve Ever Seen&lt;/li&gt;&lt;li&gt;This Is the Picture Astronomers Have Been Waiting For&lt;/li&gt;&lt;li&gt;Do Gophers … Farm?&lt;/li&gt;&lt;li&gt;Astronomers Haven’t Been This Giddy in Years&lt;/li&gt;&lt;li&gt;Admit It, Squirrels Are Just Tree Rats&lt;/li&gt;&lt;li&gt;Where Is the National Outrage Over Uvalde?&lt;/li&gt;&lt;li&gt;Make Politics Boring Again&lt;/li&gt;&lt;li&gt;Your Odes to Summer&lt;/li&gt;&lt;li&gt;The Biggest Problem With Remote Work&lt;/li&gt;&lt;li&gt;America Endures&lt;/li&gt;&lt;li&gt;There’s Nothing Like a Great Takedown&lt;/li&gt;&lt;/ul&gt;
                 News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
                 </content>
-<updated>2022-07-14T18:49:12Z</updated>
+<updated>2022-07-14T22:18:50Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
@@ -28,7 +44,7 @@
 <title>Vox: 14 Jul, 2022</title>
 <summary>Vox: 14 Jul, 2022 published at 2022-07-14 18:10PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The race to replace — and escape — Boris Johnson&lt;/li&gt;&lt;li&gt;Can Biden and Lapid reverse Israel’s anti-democratic — and anti-Democratic — turn?&lt;/li&gt;&lt;li&gt;Biden says he wants a two-state solution. Why is he silent on Israeli settlements?&lt;/li&gt;&lt;li&gt;The Supreme Court overturns Roe v. Wade&lt;/li&gt;&lt;li&gt;How the pandemic screwed up our antibiotics&lt;/li&gt;&lt;li&gt;How the world changed its mind on Tracy Flick&lt;/li&gt;&lt;li&gt;We all just fell for Amazon’s made-up holiday yet again&lt;/li&gt;&lt;li&gt;Why adoption won’t fill the gaps of a Roe-less America&lt;/li&gt;&lt;li&gt;The world is getting better. That doesn’t mean it’s good enough.&lt;/li&gt;&lt;li&gt;7 governor’s races that could hinge on abortion politics&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;The race to replace — and escape — Boris Johnson&lt;/li&gt;&lt;li&gt;What Joe Biden and Israel’s prime minister have in common&lt;/li&gt;&lt;li&gt;Biden says he wants a two-state solution. Why is he silent on Israeli settlements?&lt;/li&gt;&lt;li&gt;The Supreme Court overturns Roe v. Wade&lt;/li&gt;&lt;li&gt;How the pandemic screwed up our antibiotics&lt;/li&gt;&lt;li&gt;How the world changed its mind on Tracy Flick&lt;/li&gt;&lt;li&gt;We all just fell for Amazon’s made-up holiday yet again&lt;/li&gt;&lt;li&gt;Why adoption won’t fill the gaps of a Roe-less America&lt;/li&gt;&lt;li&gt;The world is getting better. That doesn’t mean it’s good enough.&lt;/li&gt;&lt;li&gt;7 governor’s races that could hinge on abortion politics&lt;/li&gt;&lt;/ul&gt;
                 General interest news site
                 </content>
 <updated>2022-07-14T18:10:50Z</updated>
@@ -70,22 +86,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-diplomat-2022-07-14.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-diplomat-2022-07-14.epub"/>
-</entry>
-<entry>
-<id>POLITICO Magazine</id>
-<title>POLITICO Magazine: 14 Jul, 2022</title>
-<summary>POLITICO Magazine: 14 Jul, 2022 published at 2022-07-14 14:33PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Opinion | A New Shape for US-Saudi Relations&lt;/li&gt;&lt;li&gt;The Republican Who Wants To End The Trump Era — Without Taking on Trump&lt;/li&gt;&lt;li&gt;The Man at the Center of the New Cyber World War&lt;/li&gt;&lt;li&gt;Opinion | I Am a Man With a Genetic Condition. The Abortion Fight Is About Me, Too.&lt;/li&gt;&lt;li&gt;Opinion | It’s Not Just Khashoggi: The Saudi Issue Biden Can’t Ignore&lt;/li&gt;&lt;li&gt;A Former Mueller Prosecutor Takes Merrick Garland to Task&lt;/li&gt;&lt;li&gt;Opinion | Newsom, Harris, Buttigieg and the Democrats Definitely Not Challenging Joe Biden&lt;/li&gt;&lt;li&gt;How Abortion Is Sundering Amy Coney Barrett’s Hometown&lt;/li&gt;&lt;li&gt;Opinion | Why Hard-Liners Are Gaining Steam in Latin America&lt;/li&gt;&lt;li&gt;The New Trump Documentary Shows Us Exactly What He’s So Good At&lt;/li&gt;&lt;li&gt;Opinion | Take the Deal: Brittney Griner in Exchange for the ‘Merchant of Death’&lt;/li&gt;&lt;li&gt;‘This Is Disgusting’: An Insider’s Account on the Fall of Cuomo&lt;/li&gt;&lt;li&gt;Toto, We’re Not in This Town Anymore&lt;/li&gt;&lt;li&gt;Opinion | If Tucker Runs in 2024, Here’s Who the Democrats Need&lt;/li&gt;&lt;li&gt;Opinion | Boris Johnson’s Grip on Power Was Always Weaker than Trump’s&lt;/li&gt;&lt;/ul&gt;
-                News, Analysis and Opinion from POLITICO
-                </content>
-<updated>2022-07-14T14:33:18Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-07-14.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-07-14.epub"/>
 </entry>
 <entry>
 <id>ProPublica</id>
