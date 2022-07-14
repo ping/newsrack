@@ -654,6 +654,8 @@ class NYTimesBooks(BasicNewsRecipe):
         soup = BeautifulSoup(raw_html)
 
         for script in soup.find_all("script"):
+            if not script.contents:
+                continue
             if not script.contents[0].strip().startswith("window.__preloadedData"):
                 continue
             article_js = re.sub(

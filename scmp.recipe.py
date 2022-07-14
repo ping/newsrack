@@ -1,9 +1,11 @@
 """
 scmp.com
 """
+import os
 import re
 import json
 from datetime import datetime, timezone, timedelta
+from urllib.parse import urlparse
 
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -144,6 +146,8 @@ class SCMP(BasicNewsRecipe):
         soup = BeautifulSoup(raw_html)
 
         for script in soup.find_all("script"):
+            if not script.contents:
+                continue
             if not script.contents[0].startswith("window.__APOLLO_STATE__"):
                 continue
             article_js = re.sub(
@@ -153,6 +157,22 @@ class SCMP(BasicNewsRecipe):
                 article_js = article_js[:-1]
             article = json.loads(article_js)
             break
+
+        if not article:
+            if os.environ.get("recipe_debug_folder", ""):
+                recipe_folder = os.path.join(os.environ["recipe_debug_folder"], "scmp")
+                if not os.path.exists(recipe_folder):
+                    os.makedirs(recipe_folder)
+                debug_output_file = os.path.join(
+                    recipe_folder, os.path.basename(urlparse(url).path)
+                )
+                if not debug_output_file.endswith(".html"):
+                    debug_output_file += ".html"
+                self.log(f'Writing debug raw html to "{debug_output_file}" for {url}')
+                with open(debug_output_file, "w", encoding="utf-8") as f:
+                    f.write(raw_html)
+            self.log(f"Unable to find article from script in {url}")
+            return raw_html
 
         if not (article and article.get("contentService")):
             # Sometimes the page does not have article content in the <script>
