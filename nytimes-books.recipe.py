@@ -757,16 +757,3 @@ class NYTimesBooks(BasicNewsRecipe):
                 new_feeds.append(curr_feed)
 
         return new_feeds
-
-    def parse_index(self):
-        return [
-            (
-                "Articles",
-                [
-                    {
-                        "url": "https://ping.github.io/newsrack/nytimes-books.html",
-                        "title": "Debug",
-                    }
-                ],
-            )
-        ]
