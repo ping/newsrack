@@ -87,13 +87,18 @@ class ScientificAmerican(BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
         for script in soup.find_all(name="script"):
+            if not script.contents:
+                continue
             article_js = script.contents[0].strip()
             if not article_js.startswith("dataLayer"):
                 continue
             article_js = re.sub(r"dataLayer\s*=\s*", "", article_js)
             if article_js.endswith(";"):
                 article_js = article_js[:-1]
-            info = json.loads(article_js)
+            try:
+                info = json.loads(article_js)
+            except json.JSONDecodeError:
+                continue
             for i in info:
                 if not i.get("content"):
                     continue

@@ -155,8 +155,11 @@ class SCMP(BasicNewsRecipe):
             )
             if article_js.endswith(";"):
                 article_js = article_js[:-1]
-            article = json.loads(article_js)
-            break
+            try:
+                article = json.loads(article_js)
+                break
+            except json.JSONDecodeError:
+                self.log.exception("Unable to parse __APOLLO_STATE__")
 
         if not article:
             if os.environ.get("recipe_debug_folder", ""):

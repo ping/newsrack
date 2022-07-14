@@ -104,6 +104,8 @@ class FiveBooks(BasicNewsRecipe):
         soup = BeautifulSoup(raw_html)
         content = soup.find(class_="main-content")
         script = soup.find("script", attrs={"type": "application/ld+json"})
+        if not (script and script.get_text()):
+            return raw_html
         graph = json.loads(script.get_text()).get("@graph", [])
         if not graph:
             return raw_html
