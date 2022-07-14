@@ -134,10 +134,10 @@ class SCMP(BasicNewsRecipe):
                     caption_text = child.get("attribs", {}).get("alt") or child.get(
                         "attribs", {}
                     ).get("title")
-                    caption_tag = soup.new_tag("span")
-                    caption_tag.string = caption_text
-                    caption_tag["class"] = "caption"
-                    child_html += str(caption_tag)
+                    new_ele = soup.new_tag("span")
+                    new_ele.append(caption_text)
+                    new_ele["class"] = "caption"
+                    child_html += str(new_ele)
                     ele["class"] = "article-img"
         ele.append(BeautifulSoup(child_html))
 
