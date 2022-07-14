@@ -182,11 +182,11 @@
 "NY Times Books": [
 {
 "filename": "nytimes-books-2022-07-14.mobi",
-"published": 1657769191.0
+"published": 1657769199.0
 },
 {
 "filename": "nytimes-books-2022-07-14.epub",
-"published": 1657769191.0
+"published": 1657769199.0
 }
 ],
 "Poetry": [
@@ -232,11 +232,11 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-07-14.mobi",
-"published": 1657769219.0
+"published": 1657768626.0
 },
 {
 "filename": "scmp-2022-07-14.epub",
-"published": 1657769219.0
+"published": 1657768626.0
 }
 ],
 "Sydney Morning Herald": [
@@ -309,5 +309,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1657769251
+"_generated": 1657770120
 }
