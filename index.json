@@ -162,11 +162,11 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-07-14.mobi",
-"published": 1657767903.0
+"published": 1657769177.0
 },
 {
 "filename": "nytimes-global-2022-07-14.epub",
-"published": 1657767903.0
+"published": 1657769177.0
 }
 ],
 "NY Times (Print)": [
@@ -182,11 +182,11 @@
 "NY Times Books": [
 {
 "filename": "nytimes-books-2022-07-14.mobi",
-"published": 1657767914.0
+"published": 1657769191.0
 },
 {
 "filename": "nytimes-books-2022-07-14.epub",
-"published": 1657767914.0
+"published": 1657769191.0
 }
 ],
 "Poetry": [
@@ -232,11 +232,11 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-07-14.mobi",
-"published": 1657768004.0
+"published": 1657769219.0
 },
 {
 "filename": "scmp-2022-07-14.epub",
-"published": 1657768004.0
+"published": 1657769219.0
 }
 ],
 "Sydney Morning Herald": [
@@ -309,5 +309,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1657768741
+"_generated": 1657769251
 }
