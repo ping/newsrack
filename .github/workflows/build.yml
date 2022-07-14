@@ -9,9 +9,9 @@ on:
   pull_request:
     branches:
       - '**'
-#  schedule:
-#    # 4 hourly
-#    - cron: "0 3,7,11,15,19,23 * * *"
+  schedule:
+    # 4 hourly
+    - cron: "0 3,7,11,15,19,23 * * *"
   workflow_dispatch:
     inputs:
       regenerate:
