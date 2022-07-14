@@ -92,11 +92,11 @@
 "Guardian": [
 {
 "filename": "guardian-2022-07-14.mobi",
-"published": 1657766256.0
+"published": 1657775652.0
 },
 {
 "filename": "guardian-2022-07-14.epub",
-"published": 1657766256.0
+"published": 1657775652.0
 }
 ],
 "JoongAng Daily": [
@@ -232,11 +232,11 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-07-14.mobi",
-"published": 1657771238.0
+"published": 1657773918.0
 },
 {
 "filename": "scmp-2022-07-14.epub",
-"published": 1657771238.0
+"published": 1657773918.0
 }
 ],
 "Sydney Morning Herald": [
@@ -292,11 +292,11 @@
 "Washington Post": [
 {
 "filename": "wapo-2022-07-14.mobi",
-"published": 1657773672.0
+"published": 1657775348.0
 },
 {
 "filename": "wapo-2022-07-14.epub",
-"published": 1657773672.0
+"published": 1657775348.0
 }
 ],
 "Wired Magazine": [
@@ -309,5 +309,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1657774755
+"_generated": 1657776759
 }
