@@ -116,11 +116,15 @@ class Guardian(BasicNewsRecipe):
             max_img_url = None
             for source in picture.find_all("source"):
                 for img in source["srcset"].split(","):
-                    img_url, img_width = img.strip().split(" ")
-                    # Example: 1400w
-                    img_width = int(img_width[:-1])
-                    if img_width > max_img_width:
-                        max_img_url = img_url
+                    if len(img.strip().split(" ")) > 1:
+                        img_url, img_width = img.strip().split(" ")
+                        # Example: 1400w
+                        img_width = int(img_width[:-1])
+                        if img_width > max_img_width:
+                            max_img_url = img_url
+                    else:
+                        max_img_url = img.strip()
+                        break
             img = picture.find("img")
             img["src"] = max_img_url
 
