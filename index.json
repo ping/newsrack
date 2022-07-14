@@ -22,11 +22,11 @@
 "The Atlantic": [
 {
 "filename": "the-atlantic-2022-07-14.mobi",
-"published": 1657802551.0
+"published": 1657810916.0
 },
 {
 "filename": "the-atlantic-2022-07-14.epub",
-"published": 1657802551.0
+"published": 1657810916.0
 }
 ],
 "The Atlantic Magazine": [
@@ -42,41 +42,41 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-07-14.mobi",
-"published": 1657801944.0
+"published": 1657811728.0
 },
 {
 "filename": "channelnewsasia-2022-07-14.epub",
-"published": 1657801944.0
+"published": 1657811728.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-07-14.mobi",
-"published": 1657801512.0
+"published": 1657805692.0
 },
 {
 "filename": "the-diplomat-2022-07-14.epub",
-"published": 1657801512.0
+"published": 1657805692.0
 }
 ],
 "Economist": [
 {
 "filename": "economist-2022-07-14.mobi",
-"published": 1657801264.0
+"published": 1657812462.0
 },
 {
 "filename": "economist-2022-07-14.epub",
-"published": 1657801264.0
+"published": 1657812462.0
 }
 ],
 "Financial Times": [
 {
 "filename": "ft-2022-07-14.mobi",
-"published": 1657802058.0
+"published": 1657811614.0
 },
 {
 "filename": "ft-2022-07-14.epub",
-"published": 1657802058.0
+"published": 1657811614.0
 }
 ],
 "Five Books": [
@@ -92,11 +92,11 @@
 "Guardian": [
 {
 "filename": "guardian-2022-07-14.mobi",
-"published": 1657801786.0
+"published": 1657812526.0
 },
 {
 "filename": "guardian-2022-07-14.epub",
-"published": 1657801786.0
+"published": 1657812526.0
 }
 ],
 "JoongAng Daily": [
@@ -162,11 +162,11 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-07-14.mobi",
-"published": 1657802685.0
+"published": 1657812624.0
 },
 {
 "filename": "nytimes-global-2022-07-14.epub",
-"published": 1657802685.0
+"published": 1657812624.0
 }
 ],
 "NY Times (Print)": [
@@ -212,11 +212,11 @@
 "POLITICO Magazine": [
 {
 "filename": "politico-magazine-2022-07-14.mobi",
-"published": 1657787400.0
+"published": 1657809198.0
 },
 {
 "filename": "politico-magazine-2022-07-14.epub",
-"published": 1657787400.0
+"published": 1657809198.0
 }
 ],
 "Scientific American": [
@@ -232,21 +232,21 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-07-14.mobi",
-"published": 1657801813.0
+"published": 1657810826.0
 },
 {
 "filename": "scmp-2022-07-14.epub",
-"published": 1657801813.0
+"published": 1657810826.0
 }
 ],
 "Sydney Morning Herald": [
 {
 "filename": "sydney-morning-herald-2022-07-14.mobi",
-"published": 1657803248.0
+"published": 1657812440.0
 },
 {
 "filename": "sydney-morning-herald-2022-07-14.epub",
-"published": 1657803248.0
+"published": 1657812440.0
 }
 ],
 "Taipei Times": [
@@ -282,21 +282,21 @@
 "Vox": [
 {
 "filename": "vox-2022-07-14.mobi",
-"published": 1657801800.0
+"published": 1657813200.0
 },
 {
 "filename": "vox-2022-07-14.epub",
-"published": 1657801800.0
+"published": 1657813200.0
 }
 ],
 "Washington Post": [
 {
 "filename": "wapo-2022-07-14.mobi",
-"published": 1657803365.0
+"published": 1657813424.0
 },
 {
 "filename": "wapo-2022-07-14.epub",
-"published": 1657803365.0
+"published": 1657813424.0
 }
 ],
 "Wired Magazine": [
@@ -309,5 +309,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1657803691
+"_generated": 1657813699
 }
