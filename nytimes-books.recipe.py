@@ -661,10 +661,12 @@ class NYTimesBooks(BasicNewsRecipe):
             )
             if article_js.endswith(";"):
                 article_js = article_js[:-1]
-            self.log(article_js)
             article_js = article_js.replace(":undefined", ":null")
-            info = json.loads(article_js)
-            break
+            try:
+                info = json.loads(article_js)
+                break
+            except json.JSONDecodeError:
+                self.log.exception("Unable to parse preloadedData")
 
         if not info:
             if os.environ.get("recipe_debug_folder", ""):
@@ -700,9 +702,7 @@ class NYTimesBooks(BasicNewsRecipe):
         if info.get("initialState"):
             return self.preprocess_initial_state(html_output, info, raw_html, url)
 
-        article = (info.get("initialData", {}) or {}).get("data", {}).get("article")
-
-        if article:
+        if (info.get("initialData", {}) or {}).get("data", {}).get("article"):
             return self.preprocess_initial_data(html_output, info, raw_html, url)
 
         # Sometimes the page does not have article content in the <script>

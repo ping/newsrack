@@ -705,8 +705,11 @@ class NYTimesGlobal(BasicNewsRecipe):
             if article_js.endswith(";"):
                 article_js = article_js[:-1]
             article_js = article_js.replace(":undefined", ":null")
-            info = json.loads(article_js)
-            break
+            try:
+                info = json.loads(article_js)
+                break
+            except json.JSONDecodeError:
+                self.log.exception("Unable to parse preloadedData")
 
         if not info:
             self.log(f"Unable to find article from script in {url}")
@@ -729,8 +732,7 @@ class NYTimesGlobal(BasicNewsRecipe):
             # Seems limited to "live" articles
             return self.preprocess_initial_state(html_output, info, raw_html, url)
 
-        article = (info.get("initialData", {}) or {}).get("data", {}).get("article")
-        if info and article:
+        if (info.get("initialData", {}) or {}).get("data", {}).get("article"):
             return self.preprocess_initial_data(html_output, info, raw_html, url)
 
         # Sometimes the page does not have article content in the <script>
