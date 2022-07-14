@@ -1,3 +1,4 @@
+import os
 import datetime
 import re
 import json
@@ -664,6 +665,13 @@ class NYTimesBooks(BasicNewsRecipe):
             break
 
         if not info:
+            if os.environ.get("recipe_debug_folder", ""):
+                debug_output_file = os.path.join(
+                    os.environ["recipe_debug_folder"], "nytimes-books.html"
+                )
+                self.log(f'Writing debug raw html to "{debug_output_file}"')
+                with open(debug_output_file, "w", encoding="utf-8") as f:
+                    f.write(raw_html)
             self.log(f"Unable to find article from script in {url}")
             return raw_html
 
@@ -685,7 +693,7 @@ class NYTimesBooks(BasicNewsRecipe):
 
         article = (info.get("initialData", {}) or {}).get("data", {}).get("article")
 
-        if info and article:
+        if article:
             return self.preprocess_initial_data(html_output, info, raw_html, url)
 
         # Sometimes the page does not have article content in the <script>

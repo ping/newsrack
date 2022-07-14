@@ -199,6 +199,10 @@ for recipe in recipes:
 
     exit_code = 0
 
+    # set recipe debug output folder
+    if verbose_mode:
+        os.environ["recipe_debug_folder"] = os.path.abspath(publish_folder)
+
     # use glob for re-run cases in local dev
     if not glob.glob(publish_folder + f"/{recipe.slug}*.{recipe.src_ext}"):
         # existing file does not exist
@@ -317,6 +321,10 @@ for recipe in recipes:
             continue
     else:
         job_status = ":file_folder: From local"
+
+    # unset debug folder
+    if os.environ.get("recipe_debug_folder", ""):
+        del os.environ["recipe_debug_folder"]
 
     source_file_paths = sorted(
         glob.glob(publish_folder + f"/{recipe.slug}*.{recipe.src_ext}")
