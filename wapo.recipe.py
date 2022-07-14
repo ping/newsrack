@@ -44,9 +44,9 @@ class TheWashingtonPost(BasicNewsRecipe):
     remove_attributes = ["style"]
 
     extra_css = """
-    .headline { font-size: 1.8rem; margin-bottom: 0.5rem; }
-    .sub-headline { font-size: 1.4rem; margin-top: 0; margin-bottom: 0.5rem; }
-    .article-meta {  margin-top: 1rem; margin-bottom: 1rem; }
+    .headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
+    .sub-headline { font-size: 1.2rem; font-style: italic; margin-bottom: 0.5rem; }
+    .article-meta {  margin-top: 0.5rem; margin-bottom: 1rem; }
     .article-meta .author { font-weight: bold; color: #444; display: block; }
     .figure, .video { margin: 0.5rem 0; }
     .figure img { max-width: 100%; height: auto; }
