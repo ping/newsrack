@@ -2,11 +2,11 @@
 "Asahi Shimbun": [
 {
 "filename": "asahi-shimbun-2022-07-15.mobi",
-"published": 1657879380.0
+"published": 1657926000.0
 },
 {
 "filename": "asahi-shimbun-2022-07-15.epub",
-"published": 1657879380.0
+"published": 1657926000.0
 }
 ],
 "Asian Review of Books": [
@@ -22,11 +22,11 @@
 "The Atlantic": [
 {
 "filename": "the-atlantic-2022-07-15.mobi",
-"published": 1657911254.0
+"published": 1657921718.0
 },
 {
 "filename": "the-atlantic-2022-07-15.epub",
-"published": 1657911254.0
+"published": 1657921718.0
 }
 ],
 "The Atlantic Magazine": [
@@ -42,21 +42,21 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-07-15.mobi",
-"published": 1657910887.0
+"published": 1657926513.0
 },
 {
 "filename": "channelnewsasia-2022-07-15.epub",
-"published": 1657910887.0
+"published": 1657926513.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-07-15.mobi",
-"published": 1657911248.0
+"published": 1657914290.0
 },
 {
 "filename": "the-diplomat-2022-07-15.epub",
-"published": 1657911248.0
+"published": 1657914290.0
 }
 ],
 "Economist": [
@@ -72,11 +72,11 @@
 "Financial Times": [
 {
 "filename": "ft-2022-07-15.mobi",
-"published": 1657911601.0
+"published": 1657926777.0
 },
 {
 "filename": "ft-2022-07-15.epub",
-"published": 1657911601.0
+"published": 1657926777.0
 }
 ],
 "Five Books": [
@@ -92,21 +92,21 @@
 "Guardian": [
 {
 "filename": "guardian-2022-07-15.mobi",
-"published": 1657912257.0
+"published": 1657926157.0
 },
 {
 "filename": "guardian-2022-07-15.epub",
-"published": 1657912257.0
+"published": 1657926157.0
 }
 ],
 "JoongAng Daily": [
 {
 "filename": "joongang-daily-2022-07-15.mobi",
-"published": 1657876823.0
+"published": 1657922460.0
 },
 {
 "filename": "joongang-daily-2022-07-15.epub",
-"published": 1657876823.0
+"published": 1657922460.0
 }
 ],
 "Korea Herald": [
@@ -162,11 +162,11 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-07-15.mobi",
-"published": 1657912534.0
+"published": 1657927658.0
 },
 {
 "filename": "nytimes-global-2022-07-15.epub",
-"published": 1657912534.0
+"published": 1657927658.0
 }
 ],
 "NY Times (Print)": [
@@ -182,11 +182,11 @@
 "NY Times Books": [
 {
 "filename": "nytimes-books-2022-07-15.mobi",
-"published": 1657908003.0
+"published": 1657926644.0
 },
 {
 "filename": "nytimes-books-2022-07-15.epub",
-"published": 1657908003.0
+"published": 1657926644.0
 }
 ],
 "Poetry": [
@@ -202,11 +202,11 @@
 "ProPublica": [
 {
 "filename": "propublica-2022-07-15.mobi",
-"published": 1657875600.0
+"published": 1657912200.0
 },
 {
 "filename": "propublica-2022-07-15.epub",
-"published": 1657875600.0
+"published": 1657912200.0
 }
 ],
 "POLITICO Magazine": [
@@ -232,31 +232,31 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-07-15.mobi",
-"published": 1657908024.0
+"published": 1657926609.0
 },
 {
 "filename": "scmp-2022-07-15.epub",
-"published": 1657908024.0
+"published": 1657926609.0
 }
 ],
 "Sydney Morning Herald": [
 {
 "filename": "sydney-morning-herald-2022-07-15.mobi",
-"published": 1657913400.0
+"published": 1657927920.0
 },
 {
 "filename": "sydney-morning-herald-2022-07-15.epub",
-"published": 1657913400.0
+"published": 1657927920.0
 }
 ],
 "Taipei Times": [
 {
-"filename": "taipei-times-2022-07-15.mobi",
-"published": 1657843200.0
+"filename": "taipei-times-2022-07-16.mobi",
+"published": 1657929600.0
 },
 {
-"filename": "taipei-times-2022-07-15.epub",
-"published": 1657843200.0
+"filename": "taipei-times-2022-07-16.epub",
+"published": 1657929600.0
 }
 ],
 "The Third Pole": [
@@ -282,21 +282,21 @@
 "Vox": [
 {
 "filename": "vox-2022-07-15.mobi",
-"published": 1657903200.0
+"published": 1657923187.0
 },
 {
 "filename": "vox-2022-07-15.epub",
-"published": 1657903200.0
+"published": 1657923187.0
 }
 ],
 "Washington Post": [
 {
 "filename": "wapo-2022-07-15.mobi",
-"published": 1657913664.0
+"published": 1657929151.0
 },
 {
 "filename": "wapo-2022-07-15.epub",
-"published": 1657913664.0
+"published": 1657929151.0
 }
 ],
 "Wired Magazine": [
@@ -309,5 +309,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1657914202
+"_generated": 1657929397
 }
