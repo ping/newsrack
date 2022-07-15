@@ -2,20 +2,100 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-15T07:45:12Z</updated>
+<updated>2022-07-15T11:40:48Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
+<id>The Atlantic</id>
+<title>The Atlantic: 15 Jul, 2022</title>
+<summary>The Atlantic: 15 Jul, 2022 published at 2022-07-15 11:19AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Netflix’s Persuasion Tries to Have It All&lt;/li&gt;&lt;li&gt;The Supreme Court Has Ushered In New Era of Religion at School&lt;/li&gt;&lt;li&gt;Mother Nature Dissents&lt;/li&gt;&lt;li&gt;Ignore the Chaos. Britain’s System Is Working.&lt;/li&gt;&lt;li&gt;Photos of the Week: Elephant Rescue, Buck Moon, Love Parade&lt;/li&gt;&lt;li&gt;Jamal Khashoggi Would ‘Forgive’ MBS, His Widow Says&lt;/li&gt;&lt;li&gt;Local Prosecutors Can’t Protect Abortion Rights&lt;/li&gt;&lt;li&gt;How to Successfully Smash Your Face Against a Tree&lt;/li&gt;&lt;li&gt;Texas’s Season in Hell&lt;/li&gt;&lt;li&gt;The Hawley-Bridges Exchange Was Not Constructive&lt;/li&gt;&lt;li&gt;Those Sequoias Didn’t Just Get Lucky&lt;/li&gt;&lt;li&gt;The BA.5 Wave Is What COVID Normal Looks Like&lt;/li&gt;&lt;li&gt;The DOJ Must Prosecute Trump&lt;/li&gt;&lt;li&gt;Democrats Need a Real Primary Contest&lt;/li&gt;&lt;li&gt;‘Netflix Thinks Exactly Like an Old Movie Studio’&lt;/li&gt;&lt;li&gt;The Trouble With Zooming Forever&lt;/li&gt;&lt;li&gt;The Bannon Strategy&lt;/li&gt;&lt;li&gt;Elon Musk Is a ‘Nightmare Client’&lt;/li&gt;&lt;li&gt;Trump Terrified Even His Truest Believers&lt;/li&gt;&lt;li&gt;Everything About Twitter v. Musk Is Utter Nonsense&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;Why They Still Support Trump&lt;/li&gt;&lt;li&gt;Selections From the Audubon Photography Awards Top 100&lt;/li&gt;&lt;li&gt;Britain’s Surprisingly Diverse Tories&lt;/li&gt;&lt;li&gt;When Does the Clean-Energy Infinity Loop Start?&lt;/li&gt;&lt;li&gt;Hard Seltzer Has Gone Flat&lt;/li&gt;&lt;li&gt;Where the Crawdads Sing Author Wanted for Questioning in Murder&lt;/li&gt;&lt;li&gt;Russia’s War Against Ukraine Has Turned Into Terrorism&lt;/li&gt;&lt;li&gt;The Incitement Paper Trail&lt;/li&gt;&lt;li&gt;What Happened to Michael Flynn?&lt;/li&gt;&lt;li&gt;The Glaring Contradiction of Republicans’ Rhetoric of Freedom&lt;/li&gt;&lt;li&gt;Democrats Try to Build Back (A Bit) Better&lt;/li&gt;&lt;li&gt;TV’s Best New Show Is a Study of Masculinity in Crisis&lt;/li&gt;&lt;li&gt;‘Everything About This Boy Was About His Mother’&lt;/li&gt;&lt;li&gt;Seven Books Grappling With What Writers Leave Behind&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;How China Wants to Replace the U.S. Order&lt;/li&gt;&lt;li&gt;First Images From the James Webb Space Telescope&lt;/li&gt;&lt;li&gt;Photos of the Week: Oil Wrestling, Flaming Bull, Gorgosaurus Sale&lt;/li&gt;&lt;li&gt;Introducing the Atlantic Archive&lt;/li&gt;&lt;li&gt;Is BA.5 the ‘Reinfection Wave’?&lt;/li&gt;&lt;li&gt;The Vasectomy Influencers&lt;/li&gt;&lt;li&gt;Whatever This Is, It Won’t Be Build Back Better&lt;/li&gt;&lt;li&gt;The Coolest Space Picture I’ve Ever Seen&lt;/li&gt;&lt;li&gt;This Is the Picture Astronomers Have Been Waiting For&lt;/li&gt;&lt;li&gt;Do Gophers … Farm?&lt;/li&gt;&lt;li&gt;Astronomers Haven’t Been This Giddy in Years&lt;/li&gt;&lt;li&gt;Admit It, Squirrels Are Just Tree Rats&lt;/li&gt;&lt;li&gt;Where Is the National Outrage Over Uvalde?&lt;/li&gt;&lt;li&gt;Make Politics Boring Again&lt;/li&gt;&lt;li&gt;Your Odes to Summer&lt;/li&gt;&lt;li&gt;The Biggest Problem With Remote Work&lt;/li&gt;&lt;li&gt;America Endures&lt;/li&gt;&lt;li&gt;There’s Nothing Like a Great Takedown&lt;/li&gt;&lt;/ul&gt;
+                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
+                </content>
+<updated>2022-07-15T11:19:40Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-15.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-15.epub"/>
+</entry>
+<entry>
+<id>The Third Pole</id>
+<title>The Third Pole: 14 Jul, 2022</title>
+<summary>The Third Pole: 14 Jul, 2022 published at 2022-07-15 11:02AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Climate change drives down yields and nutrition of Indian crops&lt;/li&gt;&lt;li&gt;Heatwave in Kashmir spells difficult future for pastoralists&lt;/li&gt;&lt;li&gt;How plastic is fuelling a hidden climate crisis in Southeast Asia&lt;/li&gt;&lt;li&gt;Women’s lives get harder in Bundelkhand as water scarcity grows&lt;/li&gt;&lt;li&gt;Stalled monsoon behind devastating floods in northeast India and Bangladesh&lt;/li&gt;&lt;li&gt;In Vietnam’s Mekong Delta, sand mining means lost homes and fortunes&lt;/li&gt;&lt;/ul&gt;
+                The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there.
+                </content>
+<updated>2022-07-15T11:02:42Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-07-15.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="thirdpole-2022-07-15.epub"/>
+</entry>
+<entry>
+<id>Vox</id>
+<title>Vox: 15 Jul, 2022</title>
+<summary>Vox: 15 Jul, 2022 published at 2022-07-15 11:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Biden arrives in a Saudi Arabia where human rights violations go far beyond Khashoggi’s murder&lt;/li&gt;&lt;li&gt;Can pharmacists refuse to fill prescriptions for drugs that can be used in abortions?&lt;/li&gt;&lt;li&gt;The race to replace — and escape — Boris Johnson&lt;/li&gt;&lt;li&gt;What Joe Biden and Israel’s prime minister have in common&lt;/li&gt;&lt;li&gt;Biden says he wants a two-state solution. Why is he silent on Israeli settlements?&lt;/li&gt;&lt;li&gt;The Supreme Court overturns Roe v. Wade&lt;/li&gt;&lt;li&gt;How the pandemic screwed up our antibiotics&lt;/li&gt;&lt;li&gt;How the world changed its mind on Tracy Flick&lt;/li&gt;&lt;li&gt;We all just fell for Amazon’s made-up holiday yet again&lt;/li&gt;&lt;li&gt;Why adoption won’t fill the gaps of a Roe-less America&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-07-15T11:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-15.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-15.epub"/>
+</entry>
+<entry>
+<id>ProPublica</id>
+<title>ProPublica: 15 Jul, 2022</title>
+<summary>ProPublica: 15 Jul, 2022 published at 2022-07-15 09:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Her Ex-Husband Is Suing a Clinic Over the Abortion She Had Four Years Ago&lt;/li&gt;&lt;li&gt;Pharma Companies Sue for the Right to Buy Blood From Mexicans Along Border&lt;/li&gt;&lt;li&gt;Critical Omissions Plague Texas Gun Background Check Law&lt;/li&gt;&lt;li&gt;Pegasus Spyware Maker NSO Is Conducting a Lobbying Campaign to Get Off U.S. Blacklist&lt;/li&gt;&lt;li&gt;“The Drone Problem”: How the U.S. Has Struggled to Curb Turkey, a Key Exporter of Armed Drones&lt;/li&gt;&lt;li&gt;Right-Wing Think Tank Family Research Council Is Now a Church in Eyes of the IRS&lt;/li&gt;&lt;li&gt;ProPublica Opens Up New Opportunities to Join Our Local Reporting Network&lt;/li&gt;&lt;li&gt;In Debate Over Chicago’s Speed Cameras, Concerns Over Safety, Racial Disparities Collide&lt;/li&gt;&lt;li&gt;The City Where Investigations of Police Take So Long, Officers Kill Again Before Reviews Are Done&lt;/li&gt;&lt;li&gt;Ken Griffin Spent $54 Million Fighting a Tax Increase for the Rich. Secret IRS Data Shows It Paid Off for Him.&lt;/li&gt;&lt;li&gt;DOJ Investigating Texas’ Operation Lone Star for Alleged Civil Rights Violations&lt;/li&gt;&lt;li&gt;How Foreign Private Equity Hooked New England’s Fishing Industry&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Decision Could Hamper Regulators’ Ability to Protect the Public&lt;/li&gt;&lt;li&gt;Federal Patient Privacy Law Does Not Cover Most Period-Tracking Apps&lt;/li&gt;&lt;li&gt;Google Allowed a Sanctioned Russian Ad Company to Harvest User Data for Months&lt;/li&gt;&lt;li&gt;How We Fight Back When Officials Resist Releasing Information You Have a Right to Know&lt;/li&gt;&lt;li&gt;Congress Investigates Portable Generator Manufacturers Following Carbon Monoxide Deaths&lt;/li&gt;&lt;li&gt;The Other Cancel Culture: How a Public University Is Bowing to a Conservative Crusade&lt;/li&gt;&lt;li&gt;Army Corps of Engineers to Order New Study of Grain Elevator That Could Harm Black Heritage Sites&lt;/li&gt;&lt;li&gt;Help Us Learn About Sheltered Workshops in Missouri&lt;/li&gt;&lt;/ul&gt;
+                ProPublica is an independent, nonprofit newsroom that produces investigative journalism with moral force.
+                </content>
+<updated>2022-07-15T09:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="propublica-2022-07-15.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="propublica-2022-07-15.epub"/>
+</entry>
+<entry>
+<id>POLITICO Magazine</id>
+<title>POLITICO Magazine: 15 Jul, 2022</title>
+<summary>POLITICO Magazine: 15 Jul, 2022 published at 2022-07-15 08:30AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Opinion | How Kevin McCarthy Misplayed His Hand on the Jan. 6 Hearings&lt;/li&gt;&lt;li&gt;‘I Had Been Seen as a Little Radioactive’: Lis Smith Talks Mayor Pete, How She Picks Stars and the Future of the Democratic Party&lt;/li&gt;&lt;li&gt;I Once Supported Putin. Now I Know the Truth.&lt;/li&gt;&lt;li&gt;The GOP Failed Millennial Moms Like Me. But It Needs Us Now More Than Ever.&lt;/li&gt;&lt;li&gt;‘A real chilling effect’: A Lefty Scholar is Dumping CAP — For AEI&lt;/li&gt;&lt;li&gt;Opinion | How Announcing His 2024 Campaign Could Be Trump’s Best Legal Defense&lt;/li&gt;&lt;li&gt;Opinion | Polls Show Americans Don’t Care that Much about Dobbs — and Won’t Base Their Vote on it&lt;/li&gt;&lt;li&gt;Opinion | A New Shape for US-Saudi Relations&lt;/li&gt;&lt;li&gt;The Republican Who Wants To End The Trump Era — Without Taking on Trump&lt;/li&gt;&lt;li&gt;The Man at the Center of the New Cyber World War&lt;/li&gt;&lt;li&gt;Opinion | I Am a Man With a Genetic Condition. The Abortion Fight Is About Me, Too.&lt;/li&gt;&lt;li&gt;Opinion | It’s Not Just Khashoggi: The Saudi Issue Biden Can’t Ignore&lt;/li&gt;&lt;li&gt;A Former Mueller Prosecutor Takes Merrick Garland to Task&lt;/li&gt;&lt;li&gt;Opinion | Newsom, Harris, Buttigieg and the Democrats Definitely Not Challenging Joe Biden&lt;/li&gt;&lt;li&gt;How Abortion Is Sundering Amy Coney Barrett’s Hometown&lt;/li&gt;&lt;li&gt;Opinion | Why Hard-Liners Are Gaining Steam in Latin America&lt;/li&gt;&lt;li&gt;The New Trump Documentary Shows Us Exactly What He’s So Good At&lt;/li&gt;&lt;/ul&gt;
+                News, Analysis and Opinion from POLITICO
+                </content>
+<updated>2022-07-15T08:30:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-07-15.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-07-15.epub"/>
+</entry>
+<entry>
 <id>Economist</id>
 <title>Economist: 16 Jul, 2022</title>
-<summary>Economist: 16 Jul, 2022 published at 2022-07-15 06:40AM.</summary>
+<summary>Economist: 16 Jul, 2022 published at 2022-07-15 07:53AM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Politics&lt;/li&gt;&lt;li&gt;Business&lt;/li&gt;&lt;li&gt;KAL’s cartoon&lt;/li&gt;&lt;li&gt;Europe’s coming winter peril&lt;/li&gt;&lt;li&gt;Wake up, Democrats&lt;/li&gt;&lt;li&gt;After Abe&lt;/li&gt;&lt;li&gt;British understatement&lt;/li&gt;&lt;li&gt;Post-quantum solace&lt;/li&gt;&lt;li&gt;Let priests wed&lt;/li&gt;&lt;li&gt;On pumped-storage hydropower, the Republicans, corporate governance, consultants, America’s national anthem, writing, moustaches&lt;/li&gt;&lt;li&gt;Abe Shinzo was the most important Japanese leader in the past 50 years, says Kevin Rudd&lt;/li&gt;&lt;li&gt;Banning critical race theory in schools is unjustified, argues Jason Stanley&lt;/li&gt;&lt;li&gt;Critical race theory is appropriate in universities, but not schools, says Bonnie Kerrigan Snyder&lt;/li&gt;&lt;li&gt;Peak progressive&lt;/li&gt;&lt;li&gt;Schools for scandal&lt;/li&gt;&lt;li&gt;More writing on the wall&lt;/li&gt;&lt;li&gt;Recession-spotting&lt;/li&gt;&lt;li&gt;Farewell to a bizarre landmark&lt;/li&gt;&lt;li&gt;Democrats dither dangerously on abortion&lt;/li&gt;&lt;li&gt;Might Bolsonaro try to steal the vote?&lt;/li&gt;&lt;li&gt;On the move&lt;/li&gt;&lt;li&gt;Staying the course&lt;/li&gt;&lt;li&gt;Gota goes&lt;/li&gt;&lt;li&gt;Politics takes atoll&lt;/li&gt;&lt;li&gt;The way the wind blows&lt;/li&gt;&lt;li&gt;Abe’s legacy&lt;/li&gt;&lt;li&gt;Heading down a dangerous path&lt;/li&gt;&lt;li&gt;Send in the thugs&lt;/li&gt;&lt;li&gt;The civilising effect&lt;/li&gt;&lt;li&gt;A voyage to nowhere&lt;/li&gt;&lt;li&gt;The blockade generation&lt;/li&gt;&lt;li&gt;Rhinos, cows and men with guns&lt;/li&gt;&lt;li&gt;A legacy of looting&lt;/li&gt;&lt;li&gt;Winter is coming&lt;/li&gt;&lt;li&gt;Cold front&lt;/li&gt;&lt;li&gt;Deep battle&lt;/li&gt;&lt;li&gt;The price is wrong&lt;/li&gt;&lt;li&gt;How many cows are too many?&lt;/li&gt;&lt;li&gt;Leisure class&lt;/li&gt;&lt;li&gt;The Conservative Party after Boris Johnson&lt;/li&gt;&lt;li&gt;The British dream&lt;/li&gt;&lt;li&gt;The interregnum&lt;/li&gt;&lt;li&gt;Autumn leaves&lt;/li&gt;&lt;li&gt;The British Army has a new focus and outdated equipment&lt;/li&gt;&lt;li&gt;The play’s not the only thing&lt;/li&gt;&lt;li&gt;The rotten presidency&lt;/li&gt;&lt;li&gt;The unending storm&lt;/li&gt;&lt;li&gt;When the chips are way down&lt;/li&gt;&lt;li&gt;Blocked and reported&lt;/li&gt;&lt;li&gt;Fighting the power&lt;/li&gt;&lt;li&gt;The high cost of low pressure&lt;/li&gt;&lt;li&gt;Small moments of great tension&lt;/li&gt;&lt;li&gt;Oil’s new eastern bloc&lt;/li&gt;&lt;li&gt;When maturity misleads&lt;/li&gt;&lt;li&gt;On the up and up&lt;/li&gt;&lt;li&gt;The visible hand&lt;/li&gt;&lt;li&gt;The new abnormal&lt;/li&gt;&lt;li&gt;Abenomics After Abe&lt;/li&gt;&lt;li&gt;Disciples of discipline&lt;/li&gt;&lt;li&gt;Secrets squirrelled&lt;/li&gt;&lt;li&gt;I’m in heaven&lt;/li&gt;&lt;li&gt;Green-sky thinking&lt;/li&gt;&lt;li&gt;A pour decision&lt;/li&gt;&lt;li&gt;Protein shake-up&lt;/li&gt;&lt;li&gt;Pages in the sun&lt;/li&gt;&lt;li&gt;They stooped to conquer&lt;/li&gt;&lt;li&gt;Ignoble lords&lt;/li&gt;&lt;li&gt;From El-Salam to the world&lt;/li&gt;&lt;li&gt;Distinctions with a difference&lt;/li&gt;&lt;li&gt;Economic data, commodities and markets&lt;/li&gt;&lt;li&gt;People watching&lt;/li&gt;&lt;li&gt;Can tax cuts boost Britain’s lacklustre economy?&lt;/li&gt;&lt;li&gt;What makes a global financial centre?&lt;/li&gt;&lt;li&gt;Tracking the samurai&lt;/li&gt;&lt;/ul&gt;
                 Global news and current affairs from a European perspective. Best downloaded on Friday mornings (GMT)
                 </content>
-<updated>2022-07-15T06:40:40Z</updated>
+<updated>2022-07-15T07:53:48Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
@@ -38,86 +118,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-diplomat-2022-07-15.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-diplomat-2022-07-15.epub"/>
-</entry>
-<entry>
-<id>The Atlantic</id>
-<title>The Atlantic: 15 Jul, 2022</title>
-<summary>The Atlantic: 15 Jul, 2022 published at 2022-07-15 05:01AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Ignore the Chaos. Britain’s System Is Working.&lt;/li&gt;&lt;li&gt;Photos of the Week: Elephant Rescue, Buck Moon, Love Parade&lt;/li&gt;&lt;li&gt;Jamal Khashoggi Would ‘Forgive’ MBS, His Widow Says&lt;/li&gt;&lt;li&gt;Local Prosecutors Can’t Protect Abortion Rights&lt;/li&gt;&lt;li&gt;How to Successfully Smash Your Face Against a Tree&lt;/li&gt;&lt;li&gt;Texas’s Season in Hell&lt;/li&gt;&lt;li&gt;The Hawley-Bridges Exchange Was Not Constructive&lt;/li&gt;&lt;li&gt;Those Sequoias Didn’t Just Get Lucky&lt;/li&gt;&lt;li&gt;The BA.5 Wave Is What COVID Normal Looks Like&lt;/li&gt;&lt;li&gt;The DOJ Must Prosecute Trump&lt;/li&gt;&lt;li&gt;Democrats Need a Real Primary Contest&lt;/li&gt;&lt;li&gt;‘Netflix Thinks Exactly Like an Old Movie Studio’&lt;/li&gt;&lt;li&gt;The Trouble With Zooming Forever&lt;/li&gt;&lt;li&gt;The Bannon Strategy&lt;/li&gt;&lt;li&gt;Elon Musk Is a ‘Nightmare Client’&lt;/li&gt;&lt;li&gt;Trump Terrified Even His Truest Believers&lt;/li&gt;&lt;li&gt;Everything About Twitter v. Musk Is Utter Nonsense&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;Why They Still Support Trump&lt;/li&gt;&lt;li&gt;Selections From the Audubon Photography Awards Top 100&lt;/li&gt;&lt;li&gt;Britain’s Surprisingly Diverse Tories&lt;/li&gt;&lt;li&gt;When Does the Clean-Energy Infinity Loop Start?&lt;/li&gt;&lt;li&gt;Jane Austen’s Persuasion Meets the Girlboss Era&lt;/li&gt;&lt;li&gt;Whatever This Is, It Won’t Be Build Back Better&lt;/li&gt;&lt;li&gt;Police Reform Needs to Come From Within&lt;/li&gt;&lt;li&gt;Hard Seltzer Has Gone Flat&lt;/li&gt;&lt;li&gt;Where the Crawdads Sing Author Wanted for Questioning in Murder&lt;/li&gt;&lt;li&gt;Russia’s War Against Ukraine Has Turned Into Terrorism&lt;/li&gt;&lt;li&gt;The Incitement Paper Trail&lt;/li&gt;&lt;li&gt;What Happened to Michael Flynn?&lt;/li&gt;&lt;li&gt;The Glaring Contradiction of Republicans’ Rhetoric of Freedom&lt;/li&gt;&lt;li&gt;Democrats Try to Build Back (A Bit) Better&lt;/li&gt;&lt;li&gt;TV’s Best New Show Is a Study of Masculinity in Crisis&lt;/li&gt;&lt;li&gt;‘Everything About This Boy Was About His Mother’&lt;/li&gt;&lt;li&gt;Seven Books Grappling With What Writers Leave Behind&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;How China Wants to Replace the U.S. Order&lt;/li&gt;&lt;li&gt;First Images From the James Webb Space Telescope&lt;/li&gt;&lt;li&gt;Photos of the Week: Oil Wrestling, Flaming Bull, Gorgosaurus Sale&lt;/li&gt;&lt;li&gt;Introducing the Atlantic Archive&lt;/li&gt;&lt;li&gt;Is BA.5 the ‘Reinfection Wave’?&lt;/li&gt;&lt;li&gt;The Vasectomy Influencers&lt;/li&gt;&lt;li&gt;The Coolest Space Picture I’ve Ever Seen&lt;/li&gt;&lt;li&gt;This Is the Picture Astronomers Have Been Waiting For&lt;/li&gt;&lt;li&gt;Do Gophers … Farm?&lt;/li&gt;&lt;li&gt;Astronomers Haven’t Been This Giddy in Years&lt;/li&gt;&lt;li&gt;Admit It, Squirrels Are Just Tree Rats&lt;/li&gt;&lt;li&gt;Where Is the National Outrage Over Uvalde?&lt;/li&gt;&lt;li&gt;Make Politics Boring Again&lt;/li&gt;&lt;li&gt;Your Odes to Summer&lt;/li&gt;&lt;li&gt;The Biggest Problem With Remote Work&lt;/li&gt;&lt;li&gt;America Endures&lt;/li&gt;&lt;li&gt;There’s Nothing Like a Great Takedown&lt;/li&gt;&lt;/ul&gt;
-                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
-                </content>
-<updated>2022-07-15T05:01:56Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-15.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-15.epub"/>
-</entry>
-<entry>
-<id>POLITICO Magazine</id>
-<title>POLITICO Magazine: 14 Jul, 2022</title>
-<summary>POLITICO Magazine: 14 Jul, 2022 published at 2022-07-14 23:30PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Opinion | How Announcing His 2024 Campaign Could Be Trump’s Best Legal Defense&lt;/li&gt;&lt;li&gt;Opinion | Polls Show Americans Don’t Care that Much about Dobbs — and Won’t Base Their Vote on it&lt;/li&gt;&lt;li&gt;Opinion | A New Shape for US-Saudi Relations&lt;/li&gt;&lt;li&gt;The Republican Who Wants To End The Trump Era — Without Taking on Trump&lt;/li&gt;&lt;li&gt;The Man at the Center of the New Cyber World War&lt;/li&gt;&lt;li&gt;Opinion | I Am a Man With a Genetic Condition. The Abortion Fight Is About Me, Too.&lt;/li&gt;&lt;li&gt;Opinion | It’s Not Just Khashoggi: The Saudi Issue Biden Can’t Ignore&lt;/li&gt;&lt;li&gt;A Former Mueller Prosecutor Takes Merrick Garland to Task&lt;/li&gt;&lt;li&gt;Opinion | Newsom, Harris, Buttigieg and the Democrats Definitely Not Challenging Joe Biden&lt;/li&gt;&lt;li&gt;How Abortion Is Sundering Amy Coney Barrett’s Hometown&lt;/li&gt;&lt;li&gt;Opinion | Why Hard-Liners Are Gaining Steam in Latin America&lt;/li&gt;&lt;li&gt;The New Trump Documentary Shows Us Exactly What He’s So Good At&lt;/li&gt;&lt;li&gt;Opinion | Take the Deal: Brittney Griner in Exchange for the ‘Merchant of Death’&lt;/li&gt;&lt;li&gt;‘This Is Disgusting’: An Insider’s Account on the Fall of Cuomo&lt;/li&gt;&lt;li&gt;Toto, We’re Not in This Town Anymore&lt;/li&gt;&lt;li&gt;Opinion | If Tucker Runs in 2024, Here’s Who the Democrats Need&lt;/li&gt;&lt;/ul&gt;
-                News, Analysis and Opinion from POLITICO
-                </content>
-<updated>2022-07-14T23:30:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-07-14.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-07-14.epub"/>
-</entry>
-<entry>
-<id>Vox</id>
-<title>Vox: 14 Jul, 2022</title>
-<summary>Vox: 14 Jul, 2022 published at 2022-07-14 18:10PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The race to replace — and escape — Boris Johnson&lt;/li&gt;&lt;li&gt;What Joe Biden and Israel’s prime minister have in common&lt;/li&gt;&lt;li&gt;Biden says he wants a two-state solution. Why is he silent on Israeli settlements?&lt;/li&gt;&lt;li&gt;The Supreme Court overturns Roe v. Wade&lt;/li&gt;&lt;li&gt;How the pandemic screwed up our antibiotics&lt;/li&gt;&lt;li&gt;How the world changed its mind on Tracy Flick&lt;/li&gt;&lt;li&gt;We all just fell for Amazon’s made-up holiday yet again&lt;/li&gt;&lt;li&gt;Why adoption won’t fill the gaps of a Roe-less America&lt;/li&gt;&lt;li&gt;The world is getting better. That doesn’t mean it’s good enough.&lt;/li&gt;&lt;li&gt;7 governor’s races that could hinge on abortion politics&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-07-14T18:10:50Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-14.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-14.epub"/>
-</entry>
-<entry>
-<id>ProPublica</id>
-<title>ProPublica: 14 Jul, 2022</title>
-<summary>ProPublica: 14 Jul, 2022 published at 2022-07-14 09:00AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Pharma Companies Sue for the Right to Buy Blood From Mexicans Along Border&lt;/li&gt;&lt;li&gt;Critical Omissions Plague Texas Gun Background Check Law&lt;/li&gt;&lt;li&gt;Pegasus Spyware Maker NSO Is Conducting a Lobbying Campaign to Get Off U.S. Blacklist&lt;/li&gt;&lt;li&gt;“The Drone Problem”: How the U.S. Has Struggled to Curb Turkey, a Key Exporter of Armed Drones&lt;/li&gt;&lt;li&gt;Right-Wing Think Tank Family Research Council Is Now a Church in Eyes of the IRS&lt;/li&gt;&lt;li&gt;ProPublica Opens Up New Opportunities to Join Our Local Reporting Network&lt;/li&gt;&lt;li&gt;In Debate Over Chicago’s Speed Cameras, Concerns Over Safety, Racial Disparities Collide&lt;/li&gt;&lt;li&gt;The City Where Investigations of Police Take So Long, Officers Kill Again Before Reviews Are Done&lt;/li&gt;&lt;li&gt;Ken Griffin Spent $54 Million Fighting a Tax Increase for the Rich. Secret IRS Data Shows It Paid Off for Him.&lt;/li&gt;&lt;li&gt;DOJ Investigating Texas’ Operation Lone Star for Alleged Civil Rights Violations&lt;/li&gt;&lt;li&gt;How Foreign Private Equity Hooked New England’s Fishing Industry&lt;/li&gt;&lt;li&gt;The Supreme Court’s EPA Decision Could Hamper Regulators’ Ability to Protect the Public&lt;/li&gt;&lt;li&gt;Federal Patient Privacy Law Does Not Cover Most Period-Tracking Apps&lt;/li&gt;&lt;li&gt;Google Allowed a Sanctioned Russian Ad Company to Harvest User Data for Months&lt;/li&gt;&lt;li&gt;How We Fight Back When Officials Resist Releasing Information You Have a Right to Know&lt;/li&gt;&lt;li&gt;Congress Investigates Portable Generator Manufacturers Following Carbon Monoxide Deaths&lt;/li&gt;&lt;li&gt;The Other Cancel Culture: How a Public University Is Bowing to a Conservative Crusade&lt;/li&gt;&lt;li&gt;Army Corps of Engineers to Order New Study of Grain Elevator That Could Harm Black Heritage Sites&lt;/li&gt;&lt;li&gt;Help Us Learn About Sheltered Workshops in Missouri&lt;/li&gt;&lt;li&gt;The Polluter Just Got a Million-Dollar Fine. That Won’t Cure This Woman’s Rare Cancer.&lt;/li&gt;&lt;/ul&gt;
-                ProPublica is an independent, nonprofit newsroom that produces investigative journalism with moral force.
-                </content>
-<updated>2022-07-14T09:00:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="propublica-2022-07-14.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="propublica-2022-07-14.epub"/>
-</entry>
-<entry>
-<id>The Third Pole</id>
-<title>The Third Pole: 14 Jul, 2022</title>
-<summary>The Third Pole: 14 Jul, 2022 published at 2022-07-14 05:49AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Climate change drives down yields and nutrition of Indian crops&lt;/li&gt;&lt;li&gt;Heatwave in Kashmir spells difficult future for pastoralists&lt;/li&gt;&lt;li&gt;How plastic is fuelling a hidden climate crisis in Southeast Asia&lt;/li&gt;&lt;li&gt;Women’s lives get harder in Bundelkhand as water scarcity grows&lt;/li&gt;&lt;li&gt;Stalled monsoon behind devastating floods in northeast India and Bangladesh&lt;/li&gt;&lt;li&gt;In Vietnam’s Mekong Delta, sand mining means lost homes and fortunes&lt;/li&gt;&lt;/ul&gt;
-                The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there.
-                </content>
-<updated>2022-07-14T05:49:01Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-07-14.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="thirdpole-2022-07-14.epub"/>
 </entry>
 <entry>
 <id>Nautilus</id>
