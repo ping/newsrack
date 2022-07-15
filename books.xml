@@ -2,42 +2,42 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-14T23:53:35Z</updated>
+<updated>2022-07-15T04:42:49Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
+<id>Asian Review of Books</id>
+<title>Asian Review of Books: 15 Jul, 2022</title>
+<summary>Asian Review of Books: 15 Jul, 2022 published at 2022-07-15 00:04AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;“Life Ceremony” by Sayaka Murata&lt;/li&gt;&lt;li&gt;Podcast with Jennifer Lin, author of “Beethoven in Beijing: Stories from the Philadelphia Orchestra’s Historic Journey to China”&lt;/li&gt;&lt;li&gt;A translated extract from “Silver and the Pacific”&lt;/li&gt;&lt;li&gt;“Guo Pei: Couture Fantasy” by Jill D’Alessandro&lt;/li&gt;&lt;li&gt;“The Emperors of Byzantium” by Kevin Lygo&lt;/li&gt;&lt;li&gt;“Chronicles of the Lost Daughters” by Debarati Mukhopadhyay&lt;/li&gt;&lt;li&gt;“Babe” by Dorothy Chan&lt;/li&gt;&lt;li&gt;Podcast with Gish Jen, author of “Thank You, Mr Nixon”&lt;/li&gt;&lt;li&gt;“The Miraculous True History of Nomi Ali” by Uzma Aslam Khan&lt;/li&gt;&lt;li&gt;“A Flutter in the Colony” by Sandeep Ray&lt;/li&gt;&lt;/ul&gt;
+                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
+                </content>
+<updated>2022-07-15T00:04:04Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-07-15.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-07-15.epub"/>
+</entry>
+<entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 14 Jul, 2022</title>
-<summary>NY Times Books: 14 Jul, 2022 published at 2022-07-14 22:50PM.</summary>
+<summary>NY Times Books: 14 Jul, 2022 published at 2022-07-14 23:58PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Book Review: “Agent Josephine,” by Damien Lewis&lt;/li&gt;&lt;li&gt;Teddy Wayne Misses the Purity of His Adolescent Reading&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;What Were People Reading In the Summer of 1972?&lt;/li&gt;&lt;li&gt;In West Africa and Beyond, Mali’s Famed Manuscripts Are Put to Use&lt;/li&gt;&lt;li&gt;‘Desperate Characters’ and the Chaos That Lies Beneath&lt;/li&gt;&lt;li&gt;Review: ‘Bad City,’ by Paul Pringle&lt;/li&gt;&lt;li&gt;Math Defeated Him in School. In His 60s, He Went Back for More.&lt;/li&gt;&lt;li&gt;Review: “Thank You for Your Servitude,” by Mark Leibovich&lt;/li&gt;&lt;li&gt;Newly Published, From Joseph Smith to Salmon Farms&lt;/li&gt;&lt;li&gt;In ‘Carnality,’ a Wild Ride Fueled by Rash Decisions&lt;/li&gt;&lt;li&gt;Ada Limón Is Named the Next Poet Laureate&lt;/li&gt;&lt;li&gt;His First Novel Was a Critical Hit. Two Decades Later, He Rewrote It.&lt;/li&gt;&lt;li&gt;Review: ‘Winter Work,’ by Dan Fesperman&lt;/li&gt;&lt;li&gt;Review: ‘Any Other Family,’ by Eleanor Brown&lt;/li&gt;&lt;li&gt;Review: ‘Gods of Want,’ by K-Ming Chang&lt;/li&gt;&lt;li&gt;Review: ‘Brother Alive,’ by Zain Khalid&lt;/li&gt;&lt;li&gt;Review: ‘Total: Stories,’ by Rebecca Miller&lt;/li&gt;&lt;li&gt;Review: ‘Harry Sylvester Bird,’ by Chinelo Okparanta&lt;/li&gt;&lt;li&gt;Among the Literary Lions, at Full Roar, in the 1980s&lt;/li&gt;&lt;li&gt;India and the United States: Two Countries That Can’t Live With Each Other or Without Each Other&lt;/li&gt;&lt;li&gt;Tanqueray Looks Back at Her Grand and Gritty New York Life&lt;/li&gt;&lt;li&gt;Review: ‘Bad Thoughts,’ by Nada Alic&lt;/li&gt;&lt;li&gt;‘Hollywood Ending,’ a Cradle-to-Jail Biography of Harvey Weinstein&lt;/li&gt;&lt;li&gt;Alice Elliott Dark on ‘Fellowship Point’&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Book Review: “The Sewing Girl’s Tale,” by John Wood Sweet&lt;/li&gt;&lt;li&gt;Book Review: “Agent Josephine,” by Damien Lewis&lt;/li&gt;&lt;li&gt;Teddy Wayne Misses the Purity of His Adolescent Reading&lt;/li&gt;&lt;li&gt;10 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;What Were People Reading In the Summer of 1972?&lt;/li&gt;&lt;li&gt;In West Africa and Beyond, Mali’s Famed Manuscripts Are Put to Use&lt;/li&gt;&lt;li&gt;‘Desperate Characters’ and the Chaos That Lies Beneath&lt;/li&gt;&lt;li&gt;Review: ‘Bad City,’ by Paul Pringle&lt;/li&gt;&lt;li&gt;Math Defeated Him in School. In His 60s, He Went Back for More.&lt;/li&gt;&lt;li&gt;Review: “Thank You for Your Servitude,” by Mark Leibovich&lt;/li&gt;&lt;li&gt;Newly Published, From Joseph Smith to Salmon Farms&lt;/li&gt;&lt;li&gt;In ‘Carnality,’ a Wild Ride Fueled by Rash Decisions&lt;/li&gt;&lt;li&gt;Ada Limón Is Named the Next Poet Laureate&lt;/li&gt;&lt;li&gt;His First Novel Was a Critical Hit. Two Decades Later, He Rewrote It.&lt;/li&gt;&lt;li&gt;Review: ‘Winter Work,’ by Dan Fesperman&lt;/li&gt;&lt;li&gt;Review: ‘Any Other Family,’ by Eleanor Brown&lt;/li&gt;&lt;li&gt;Review: ‘Gods of Want,’ by K-Ming Chang&lt;/li&gt;&lt;li&gt;Review: ‘Brother Alive,’ by Zain Khalid&lt;/li&gt;&lt;li&gt;Review: ‘Total: Stories,’ by Rebecca Miller&lt;/li&gt;&lt;li&gt;Review: ‘Harry Sylvester Bird,’ by Chinelo Okparanta&lt;/li&gt;&lt;li&gt;Among the Literary Lions, at Full Roar, in the 1980s&lt;/li&gt;&lt;li&gt;India and the United States: Two Countries That Can’t Live With Each Other or Without Each Other&lt;/li&gt;&lt;li&gt;Tanqueray Looks Back at Her Grand and Gritty New York Life&lt;/li&gt;&lt;li&gt;Review: ‘Bad Thoughts,’ by Nada Alic&lt;/li&gt;&lt;li&gt;Alice Elliott Dark on ‘Fellowship Point’&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-07-14T22:50:05Z</updated>
+<updated>2022-07-14T23:58:10Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-14.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-14.epub"/>
-</entry>
-<entry>
-<id>Asian Review of Books</id>
-<title>Asian Review of Books: 14 Jul, 2022</title>
-<summary>Asian Review of Books: 14 Jul, 2022 published at 2022-07-14 09:47AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Podcast with Jennifer Lin, author of “Beethoven in Beijing: Stories from the Philadelphia Orchestra’s Historic Journey to China”&lt;/li&gt;&lt;li&gt;A translated extract from “Silver and the Pacific”&lt;/li&gt;&lt;li&gt;“Guo Pei: Couture Fantasy” by Jill D’Alessandro&lt;/li&gt;&lt;li&gt;“The Emperors of Byzantium” by Kevin Lygo&lt;/li&gt;&lt;li&gt;“Chronicles of the Lost Daughters” by Debarati Mukhopadhyay&lt;/li&gt;&lt;li&gt;“Babe” by Dorothy Chan&lt;/li&gt;&lt;li&gt;Podcast with Gish Jen, author of “Thank You, Mr Nixon”&lt;/li&gt;&lt;li&gt;“The Miraculous True History of Nomi Ali” by Uzma Aslam Khan&lt;/li&gt;&lt;li&gt;“A Flutter in the Colony” by Sandeep Ray&lt;/li&gt;&lt;li&gt;“Photography in Cambodia: 1866 to the Present” by Nicholas Coffill&lt;/li&gt;&lt;/ul&gt;
-                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
-                </content>
-<updated>2022-07-14T09:47:52Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-07-14.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-07-14.epub"/>
 </entry>
 <entry>
 <id>London Review of Books</id>
