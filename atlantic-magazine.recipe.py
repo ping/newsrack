@@ -149,9 +149,9 @@ class TheAtlanticMagazine(BasicNewsRecipe):
     remove_attributes = ["style"]
     extra_css = """
     .issue { font-weight: bold; margin-bottom: 0.2rem; }
-    .headline { font-size: 1.8rem; margin-bottom: 0.5rem; }
-    .sub-headline { font-size: 1.4rem; margin-top: 0; margin-bottom: 0.5rem; }
-    .article-meta {  margin-top: 1rem; margin-bottom: 1rem; }
+    .headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
+    .sub-headline { font-size: 1.2rem; font-style: italic; font-weight: normal; margin-bottom: 0.5rem; }
+    .article-meta {  margin-top: 0.5rem; margin-bottom: 1rem; }
     .article-meta .author { font-weight: bold; color: #444; display: inline-block; }
     .article-meta .published-dt { display: inline-block; margin-left: 0.5rem; }
     .article-meta .modified-dt { display: block; margin-top: 0.2rem; font-style: italic; }
