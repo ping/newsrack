@@ -2,11 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-16T19:33:45Z</updated>
+<updated>2022-07-16T23:46:51Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>Vox</id>
+<title>Vox: 16 Jul, 2022</title>
+<summary>Vox: 16 Jul, 2022 published at 2022-07-16 22:19PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;How can Sri Lanka move forward?&lt;/li&gt;&lt;li&gt;The case of the missing fireflies&lt;/li&gt;&lt;li&gt;Sri Lanka’s protests are just the beginning of global instability&lt;/li&gt;&lt;li&gt;Democrats’ latest attempt at resurrecting Build Back Better, explained&lt;/li&gt;&lt;li&gt;Why BA.5 is cause for concern, but not alarm. Yet.&lt;/li&gt;&lt;li&gt;This Michigan Democrat wants her party to “call bullshit, bullshit”&lt;/li&gt;&lt;li&gt;Netflix’s Persuasion is an absolute disaster&lt;/li&gt;&lt;li&gt;Sri Lanka’s organic farming disaster, explained&lt;/li&gt;&lt;li&gt;Fire of Love, about married volcanologists, is this summer’s must-see doc&lt;/li&gt;&lt;li&gt;Amazon executives have discussed ditching Amazon Basics to appease regulators&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-07-16T22:19:23Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-16.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-16.epub"/>
+</entry>
 <entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 16 Jul, 2022</title>
@@ -22,22 +38,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-16.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-16.epub"/>
-</entry>
-<entry>
-<id>Vox</id>
-<title>Vox: 16 Jul, 2022</title>
-<summary>Vox: 16 Jul, 2022 published at 2022-07-16 13:00PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The case of the missing fireflies&lt;/li&gt;&lt;li&gt;Sri Lanka’s protests are just the beginning of global instability&lt;/li&gt;&lt;li&gt;Democrats’ latest attempt at resurrecting Build Back Better, explained&lt;/li&gt;&lt;li&gt;Why BA.5 is cause for concern, but not alarm. Yet.&lt;/li&gt;&lt;li&gt;This Michigan Democrat wants her party to “call bullshit, bullshit”&lt;/li&gt;&lt;li&gt;Netflix’s Persuasion is an absolute disaster&lt;/li&gt;&lt;li&gt;Sri Lanka’s organic farming disaster, explained&lt;/li&gt;&lt;li&gt;Fire of Love, about married volcanologists, is this summer’s must-see doc&lt;/li&gt;&lt;li&gt;Amazon executives have discussed ditching Amazon Basics to appease regulators&lt;/li&gt;&lt;li&gt;Biden arrives in a Saudi Arabia where human rights violations go far beyond Khashoggi’s murder&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-07-16T13:00:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-16.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-16.epub"/>
 </entry>
 <entry>
 <id>The Diplomat</id>
@@ -124,7 +124,7 @@
 <title>Nautilus: 13 Jul, 2022</title>
 <summary>Nautilus: 13 Jul, 2022 published at 2022-07-13 23:41PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Land of Extremes: Poetry of the Sonoran Desert&lt;/li&gt;&lt;li&gt;Feeling Stressed? Read a Poem&lt;/li&gt;&lt;li&gt;This Planetary Scientist Is Always Reaching for Something Big&lt;/li&gt;&lt;li&gt;Gravitational Waves Continue to Astound&lt;/li&gt;&lt;li&gt;The Case for Popularizing Ocean Science&lt;/li&gt;&lt;li&gt;A Surprising Side of Carl Sagan&lt;/li&gt;&lt;li&gt;How Do We Get People Who Believe in Pseudoscience to Trust Science?&lt;/li&gt;&lt;li&gt;Mysteries Are to Be Embraced, But Also to Be Solved&lt;/li&gt;&lt;li&gt;The High Price of Cheap Shrimp&lt;/li&gt;&lt;li&gt;How Are the Bees?&lt;/li&gt;&lt;li&gt;Reshuffled Rivers Bolster the Amazon’s Hyper-Biodiversity&lt;/li&gt;&lt;li&gt;Who Are the Scientists Here?&lt;/li&gt;&lt;li&gt;The Giraffe Neck Evolved for Sexual Combat&lt;/li&gt;&lt;li&gt;Print Edition 43&lt;/li&gt;&lt;li&gt;Print Edition 42&lt;/li&gt;&lt;li&gt;Print Edition 41&lt;/li&gt;&lt;li&gt;Print Edition 40&lt;/li&gt;&lt;li&gt;Embryo Cells Set Patterns for Growth by Pushing and Pulling&lt;/li&gt;&lt;li&gt;Life Helps Make Almost Half of All Minerals on Earth&lt;/li&gt;&lt;li&gt;Under Anesthesia, Where Do Our Minds Go?&lt;/li&gt;&lt;li&gt;Unlocking Mom’s Brain&lt;/li&gt;&lt;li&gt;Thinking Like a Scientist Will Make You Happier&lt;/li&gt;&lt;li&gt;Don’t Give Up on Facts&lt;/li&gt;&lt;li&gt;Are You a Naïve Realist?&lt;/li&gt;&lt;li&gt;Moving Beyond Mimicry in Artificial Intelligence&lt;/li&gt;&lt;li&gt;Overthrowing the Patriarchy Through Ecstatic Sex&lt;/li&gt;&lt;li&gt;What Oceanographers Can Learn From Their Animal Colleagues&lt;/li&gt;&lt;li&gt;The Secrets of the Blind Salamander&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Land of Extremes: Poetry of the Sonoran Desert&lt;/li&gt;&lt;li&gt;Feeling Stressed? Read a Poem&lt;/li&gt;&lt;li&gt;This Planetary Scientist Is Always Reaching for Something Big&lt;/li&gt;&lt;li&gt;Gravitational Waves Continue to Astound&lt;/li&gt;&lt;li&gt;The Case for Popularizing Ocean Science&lt;/li&gt;&lt;li&gt;A Surprising Side of Carl Sagan&lt;/li&gt;&lt;li&gt;How Do We Get People Who Believe in Pseudoscience to Trust Science?&lt;/li&gt;&lt;li&gt;The High Price of Cheap Shrimp&lt;/li&gt;&lt;li&gt;How Are the Bees?&lt;/li&gt;&lt;li&gt;Reshuffled Rivers Bolster the Amazon’s Hyper-Biodiversity&lt;/li&gt;&lt;li&gt;Who Are the Scientists Here?&lt;/li&gt;&lt;li&gt;The Giraffe Neck Evolved for Sexual Combat&lt;/li&gt;&lt;li&gt;Print Edition 43&lt;/li&gt;&lt;li&gt;Print Edition 42&lt;/li&gt;&lt;li&gt;Print Edition 41&lt;/li&gt;&lt;li&gt;Print Edition 40&lt;/li&gt;&lt;li&gt;Embryo Cells Set Patterns for Growth by Pushing and Pulling&lt;/li&gt;&lt;li&gt;Life Helps Make Almost Half of All Minerals on Earth&lt;/li&gt;&lt;li&gt;Under Anesthesia, Where Do Our Minds Go?&lt;/li&gt;&lt;li&gt;Thinking Like a Scientist Will Make You Happier&lt;/li&gt;&lt;li&gt;Don’t Give Up on Facts&lt;/li&gt;&lt;li&gt;Are You a Naïve Realist?&lt;/li&gt;&lt;li&gt;Moving Beyond Mimicry in Artificial Intelligence&lt;/li&gt;&lt;li&gt;Overthrowing the Patriarchy Through Ecstatic Sex&lt;/li&gt;&lt;li&gt;What Oceanographers Can Learn From Their Animal Colleagues&lt;/li&gt;&lt;/ul&gt;
                 Nautilus is a different kind of science magazine. Our stories take you into the depths of science and spotlight its ripples in our lives and cultures. We believe any subject in science, no matter how complex, can be explained with clarity and vitality.
                 </content>
 <updated>2022-07-13T23:41:32Z</updated>
