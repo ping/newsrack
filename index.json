@@ -22,11 +22,11 @@
 "The Atlantic": [
 {
 "filename": "the-atlantic-2022-07-16.mobi",
-"published": 1657978205.0
+"published": 1657987256.0
 },
 {
 "filename": "the-atlantic-2022-07-16.epub",
-"published": 1657978205.0
+"published": 1657987256.0
 }
 ],
 "The Atlantic Magazine": [
@@ -42,11 +42,11 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-07-16.mobi",
-"published": 1657984664.0
+"published": 1657999069.0
 },
 {
 "filename": "channelnewsasia-2022-07-16.epub",
-"published": 1657984664.0
+"published": 1657999069.0
 }
 ],
 "The Diplomat": [
@@ -72,11 +72,11 @@
 "Financial Times": [
 {
 "filename": "ft-2022-07-16.mobi",
-"published": 1657984424.0
+"published": 1657998013.0
 },
 {
 "filename": "ft-2022-07-16.epub",
-"published": 1657984424.0
+"published": 1657998013.0
 }
 ],
 "Five Books": [
@@ -92,11 +92,11 @@
 "Guardian": [
 {
 "filename": "guardian-2022-07-16.mobi",
-"published": 1657984262.0
+"published": 1657998595.0
 },
 {
 "filename": "guardian-2022-07-16.epub",
-"published": 1657984262.0
+"published": 1657998595.0
 }
 ],
 "JoongAng Daily": [
@@ -162,11 +162,11 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-07-16.mobi",
-"published": 1657985102.0
+"published": 1657998286.0
 },
 {
 "filename": "nytimes-global-2022-07-16.epub",
-"published": 1657985102.0
+"published": 1657998286.0
 }
 ],
 "NY Times (Print)": [
@@ -232,21 +232,21 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-07-16.mobi",
-"published": 1657983714.0
+"published": 1657992617.0
 },
 {
 "filename": "scmp-2022-07-16.epub",
-"published": 1657983714.0
+"published": 1657992617.0
 }
 ],
 "Sydney Morning Herald": [
 {
 "filename": "sydney-morning-herald-2022-07-16.mobi",
-"published": 1657983600.0
+"published": 1657999063.0
 },
 {
 "filename": "sydney-morning-herald-2022-07-16.epub",
-"published": 1657983600.0
+"published": 1657999063.0
 }
 ],
 "Taipei Times": [
@@ -292,11 +292,11 @@
 "Washington Post": [
 {
 "filename": "wapo-2022-07-16.mobi",
-"published": 1657985409.0
+"published": 1657998691.0
 },
 {
 "filename": "wapo-2022-07-16.epub",
-"published": 1657985409.0
+"published": 1657998691.0
 }
 ],
 "Wired Magazine": [
@@ -309,5 +309,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1657986074
+"_generated": 1658000025
 }
