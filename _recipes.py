@@ -193,6 +193,14 @@ recipes = [
         enable_on=onlyon_weekdays([0, 1, 2, 3, 4, 5], -5),
     ),
     Recipe(
+        recipe="restofworld",
+        slug="restofworld",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="magazines",
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4, 5], -5),
+    ),
+    Recipe(
         recipe="scientific-american",
         slug="scientific-american",
         src_ext="mobi",
