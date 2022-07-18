@@ -100,6 +100,7 @@ recipes = [
         slug="hbr",
         src_ext="mobi",
         target_ext=["epub"],
+        overwrite_cover=False,
         category="magazines",
     ),
     Recipe(
