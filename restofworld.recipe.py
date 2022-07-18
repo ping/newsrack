@@ -3,7 +3,6 @@ restofworld.org
 """
 from datetime import timezone, timedelta
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds import Feed
 from calibre.web.feeds.news import BasicNewsRecipe
 

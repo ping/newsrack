@@ -96,6 +96,13 @@ recipes = [
         category="news",
     ),
     Recipe(
+        recipe="hbr",
+        slug="hbr",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="magazines",
+    ),
+    Recipe(
         recipe="joongangdaily",
         slug="joongang-daily",
         src_ext="mobi",
