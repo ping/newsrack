@@ -66,8 +66,7 @@ class RestOfWorld(BasicNewsRecipe):
     def publication_date(self):
         return self.pub_date
 
-    def preprocess_raw_html(self, raw_html, url):
-        soup = BeautifulSoup(raw_html)
+    def preprocess_html(self, soup):
         for img in soup.find_all("img", attrs={"data-srcset": True}):
             sources = [s.strip() for s in img["data-srcset"].split(",") if s.strip()]
             img["src"] = sources[-1].split(" ")[0].strip()
@@ -78,7 +77,7 @@ class RestOfWorld(BasicNewsRecipe):
             if picture.find("img", attrs={"src": True}):
                 for s in sources:
                     s.decompose()
-        return str(soup)
+        return soup
 
     def parse_feeds(self):
         # convert single parsed feed into date-sectioned feed
