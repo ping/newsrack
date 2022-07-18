@@ -2,11 +2,43 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-18T15:50:38Z</updated>
+<updated>2022-07-18T19:37:29Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>The Atlantic</id>
+<title>The Atlantic: 18 Jul, 2022</title>
+<summary>The Atlantic: 18 Jul, 2022 published at 2022-07-18 19:04PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Wildfires Rage Across Southwestern Europe&lt;/li&gt;&lt;li&gt;Do Animals Dream?&lt;/li&gt;&lt;li&gt;The War in Ukraine Is Dividing Lifelong Friends&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Power Imbalance Undermining Global Health&lt;/li&gt;&lt;li&gt;The Everything-Is-Weird Economy&lt;/li&gt;&lt;li&gt;The Case for Dating a Friend&lt;/li&gt;&lt;li&gt;New COVID Vaccines Will Be Ready This Fall. America Won’t Be.&lt;/li&gt;&lt;li&gt;Party Politics&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;Why We Remember Floods and Forget Droughts&lt;/li&gt;&lt;li&gt;How to Fix the Bias Against Free Speech on Campus&lt;/li&gt;&lt;li&gt;Uyghur Poems From a Chinese Prison&lt;/li&gt;&lt;li&gt;You’ve Never Seen Anything Quite Like The Rehearsal&lt;/li&gt;&lt;li&gt;Russia’s Invasion Is Making Ukraine More Democratic&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;li&gt;Joe Manchin’s Fickleness Is a Needless Catastrophe&lt;/li&gt;&lt;li&gt;It’s Joe Manchin’s America&lt;/li&gt;&lt;li&gt;Seriously, What’s Making All These Mysterious Space Signals?&lt;/li&gt;&lt;li&gt;The Ways We Make a Living&lt;/li&gt;&lt;li&gt;When Iran Says ‘Death to Israel,’ It Means It&lt;/li&gt;&lt;li&gt;When a Troubling Book Gets a Hollywood Makeover&lt;/li&gt;&lt;li&gt;What We Talk About When We Talk About Israel&lt;/li&gt;&lt;li&gt;Netflix’s Persuasion Tries to Have It All&lt;/li&gt;&lt;li&gt;The Supreme Court Has Ushered In a New Era of Religion at School&lt;/li&gt;&lt;li&gt;What Joe Biden Should Know About Jamal Khashoggi&lt;/li&gt;&lt;li&gt;Mother Nature Dissents&lt;/li&gt;&lt;li&gt;The Bannon Strategy&lt;/li&gt;&lt;li&gt;The Incitement Paper Trail&lt;/li&gt;&lt;li&gt;‘Netflix Thinks Exactly Like an Old Movie Studio’&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;TV’s Best New Show Is a Study of Masculinity in Crisis&lt;/li&gt;&lt;li&gt;‘Everything About This Boy Was About His Mother’&lt;/li&gt;&lt;li&gt;Seven Books Grappling With What Writers Leave Behind&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;Ignore the Chaos. Britain’s System Is Working.&lt;/li&gt;&lt;li&gt;Photos of the Week: Elephant Rescue, Buck Moon, Love Parade&lt;/li&gt;&lt;li&gt;Selections From the Audubon Photography Awards Top 100&lt;/li&gt;&lt;li&gt;Britain’s Surprisingly Diverse Tories&lt;/li&gt;&lt;li&gt;How China Wants to Replace the U.S. Order&lt;/li&gt;&lt;li&gt;First Images From the James Webb Space Telescope&lt;/li&gt;&lt;li&gt;Everything About Twitter v. Musk Is Utter Nonsense&lt;/li&gt;&lt;li&gt;Hard Seltzer Has Gone Flat&lt;/li&gt;&lt;li&gt;The BA.5 Wave Is What COVID Normal Looks Like&lt;/li&gt;&lt;li&gt;Is BA.5 the ‘Reinfection Wave’?&lt;/li&gt;&lt;li&gt;How to Successfully Smash Your Face Against a Tree&lt;/li&gt;&lt;li&gt;When Does the Clean-Energy Infinity Loop Start?&lt;/li&gt;&lt;li&gt;Whatever This Is, It Won’t Be Build Back Better&lt;/li&gt;&lt;li&gt;The Coolest Space Picture I’ve Ever Seen&lt;/li&gt;&lt;li&gt;This Is the Picture Astronomers Have Been Waiting For&lt;/li&gt;&lt;li&gt;Do Gophers … Farm?&lt;/li&gt;&lt;li&gt;Local Prosecutors Can’t Protect Abortion Rights&lt;/li&gt;&lt;li&gt;The Hawley-Bridges Exchange Was Not Constructive&lt;/li&gt;&lt;li&gt;Trump Terrified Even His Truest Believers&lt;/li&gt;&lt;li&gt;Where Is the National Outrage Over Uvalde?&lt;/li&gt;&lt;li&gt;Make Politics Boring Again&lt;/li&gt;&lt;/ul&gt;
+                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
+                </content>
+<updated>2022-07-18T19:04:04Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-18.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-18.epub"/>
+</entry>
+<entry>
+<id>Vox</id>
+<title>Vox: 18 Jul, 2022</title>
+<summary>Vox: 18 Jul, 2022 published at 2022-07-18 16:30PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Build Back Better may end up a health care bill, thanks to Joe Manchin&lt;/li&gt;&lt;li&gt;Sadhguru, the spiritual leader with ties to Will Smith and Modi, explained&lt;/li&gt;&lt;li&gt;Biden sought to end endless wars. So what’s the military doing in Somalia?&lt;/li&gt;&lt;li&gt;Costco’s inflation-proof $4.99 rotisserie chicken, explained&lt;/li&gt;&lt;li&gt;Why the US doesn’t want Turkey to invade Syria&lt;/li&gt;&lt;li&gt;The January 6 committee is holding a series of public hearings&lt;/li&gt;&lt;li&gt;BA.5 doesn’t care that you just had Covid-19&lt;/li&gt;&lt;li&gt;What is Steve Bannon planning in his war room?&lt;/li&gt;&lt;li&gt;How can Sri Lanka move forward?&lt;/li&gt;&lt;li&gt;The case of the missing fireflies&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-07-18T16:30:17Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-18.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-18.epub"/>
+</entry>
 <entry>
 <id>POLITICO Magazine</id>
 <title>POLITICO Magazine: 18 Jul, 2022</title>
@@ -54,38 +86,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-07-18.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="economist-2022-07-18.epub"/>
-</entry>
-<entry>
-<id>Vox</id>
-<title>Vox: 18 Jul, 2022</title>
-<summary>Vox: 18 Jul, 2022 published at 2022-07-18 13:10PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Sadhguru, the spiritual leader with ties to Will Smith and Modi, explained&lt;/li&gt;&lt;li&gt;Biden sought to end endless wars. So what’s the military doing in Somalia?&lt;/li&gt;&lt;li&gt;Costco’s inflation-proof $4.99 rotisserie chicken, explained&lt;/li&gt;&lt;li&gt;Why the US doesn’t want Turkey to invade Syria&lt;/li&gt;&lt;li&gt;The January 6 committee is holding a series of public hearings&lt;/li&gt;&lt;li&gt;BA.5 doesn’t care that you just had Covid-19&lt;/li&gt;&lt;li&gt;What is Steve Bannon planning in his war room?&lt;/li&gt;&lt;li&gt;How can Sri Lanka move forward?&lt;/li&gt;&lt;li&gt;The case of the missing fireflies&lt;/li&gt;&lt;li&gt;Sri Lanka’s protests are just the beginning of global instability&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-07-18T13:10:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-18.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-18.epub"/>
-</entry>
-<entry>
-<id>The Atlantic</id>
-<title>The Atlantic: 18 Jul, 2022</title>
-<summary>The Atlantic: 18 Jul, 2022 published at 2022-07-18 13:07PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Do Animals Dream?&lt;/li&gt;&lt;li&gt;The War in Ukraine Is Dividing Lifelong Friends&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Power Imbalance Undermining Global Health&lt;/li&gt;&lt;li&gt;The Three Biggest Mysteries About the U.S. Economy Right Now&lt;/li&gt;&lt;li&gt;The Case for Dating a Friend&lt;/li&gt;&lt;li&gt;New COVID Vaccines Will Be Ready This Fall. America Won’t Be.&lt;/li&gt;&lt;li&gt;Party Politics&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;Why We Remember Floods and Forget Droughts&lt;/li&gt;&lt;li&gt;How to Fix the Bias Against Free Speech on Campus&lt;/li&gt;&lt;li&gt;Uyghur Poems From a Chinese Prison&lt;/li&gt;&lt;li&gt;You’ve Never Seen Anything Quite Like The Rehearsal&lt;/li&gt;&lt;li&gt;Russia’s Invasion Is Making Ukraine More Democratic&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;li&gt;Joe Manchin’s Fickleness Is a Needless Catastrophe&lt;/li&gt;&lt;li&gt;It’s Joe Manchin’s America&lt;/li&gt;&lt;li&gt;Seriously, What’s Making All These Mysterious Space Signals?&lt;/li&gt;&lt;li&gt;The Ways We Make a Living&lt;/li&gt;&lt;li&gt;When Iran Says ‘Death to Israel,’ It Means It&lt;/li&gt;&lt;li&gt;When a Troubling Book Gets a Hollywood Makeover&lt;/li&gt;&lt;li&gt;What We Talk About When We Talk About Israel&lt;/li&gt;&lt;li&gt;Netflix’s Persuasion Tries to Have It All&lt;/li&gt;&lt;li&gt;The Supreme Court Has Ushered In a New Era of Religion at School&lt;/li&gt;&lt;li&gt;Mother Nature Dissents&lt;/li&gt;&lt;li&gt;What Joe Biden Should Know About Jamal Khashoggi&lt;/li&gt;&lt;li&gt;The Bannon Strategy&lt;/li&gt;&lt;li&gt;The Incitement Paper Trail&lt;/li&gt;&lt;li&gt;‘Netflix Thinks Exactly Like an Old Movie Studio’&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;TV’s Best New Show Is a Study of Masculinity in Crisis&lt;/li&gt;&lt;li&gt;‘Everything About This Boy Was About His Mother’&lt;/li&gt;&lt;li&gt;Where the Crawdads Sing Author Wanted for Questioning in Murder&lt;/li&gt;&lt;li&gt;Seven Books Grappling With What Writers Leave Behind&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;Ignore the Chaos. Britain’s System Is Working.&lt;/li&gt;&lt;li&gt;Photos of the Week: Elephant Rescue, Buck Moon, Love Parade&lt;/li&gt;&lt;li&gt;Selections From the Audubon Photography Awards Top 100&lt;/li&gt;&lt;li&gt;Britain’s Surprisingly Diverse Tories&lt;/li&gt;&lt;li&gt;How China Wants to Replace the U.S. Order&lt;/li&gt;&lt;li&gt;First Images From the James Webb Space Telescope&lt;/li&gt;&lt;li&gt;Everything About Twitter v. Musk Is Utter Nonsense&lt;/li&gt;&lt;li&gt;Hard Seltzer Has Gone Flat&lt;/li&gt;&lt;li&gt;The BA.5 Wave Is What COVID Normal Looks Like&lt;/li&gt;&lt;li&gt;Is BA.5 the ‘Reinfection Wave’?&lt;/li&gt;&lt;li&gt;How to Successfully Smash Your Face Against a Tree&lt;/li&gt;&lt;li&gt;When Does the Clean-Energy Infinity Loop Start?&lt;/li&gt;&lt;li&gt;Whatever This Is, It Won’t Be Build Back Better&lt;/li&gt;&lt;li&gt;The Coolest Space Picture I’ve Ever Seen&lt;/li&gt;&lt;li&gt;This Is the Picture Astronomers Have Been Waiting For&lt;/li&gt;&lt;li&gt;Do Gophers … Farm?&lt;/li&gt;&lt;li&gt;Local Prosecutors Can’t Protect Abortion Rights&lt;/li&gt;&lt;li&gt;The Hawley-Bridges Exchange Was Not Constructive&lt;/li&gt;&lt;li&gt;Trump Terrified Even His Truest Believers&lt;/li&gt;&lt;li&gt;Where Is the National Outrage Over Uvalde?&lt;/li&gt;&lt;li&gt;Make Politics Boring Again&lt;/li&gt;&lt;li&gt;Your Odes to Summer&lt;/li&gt;&lt;/ul&gt;
-                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
-                </content>
-<updated>2022-07-18T13:07:49Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-18.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-18.epub"/>
 </entry>
 <entry>
 <id>Wired Magazine</id>
