@@ -1,12 +1,12 @@
 {
 "Asahi Shimbun": [
 {
-"filename": "asahi-shimbun-2022-07-17.mobi",
-"published": 1658095200.0
+"filename": "asahi-shimbun-2022-07-18.mobi",
+"published": 1658115540.0
 },
 {
-"filename": "asahi-shimbun-2022-07-17.epub",
-"published": 1658095200.0
+"filename": "asahi-shimbun-2022-07-18.epub",
+"published": 1658115540.0
 }
 ],
 "Asian Review of Books": [
@@ -41,22 +41,22 @@
 ],
 "ChannelNewsAsia": [
 {
-"filename": "channelnewsasia-2022-07-17.mobi",
-"published": 1658098500.0
+"filename": "channelnewsasia-2022-07-18.mobi",
+"published": 1658116205.0
 },
 {
-"filename": "channelnewsasia-2022-07-17.epub",
-"published": 1658098500.0
+"filename": "channelnewsasia-2022-07-18.epub",
+"published": 1658116205.0
 }
 ],
 "The Diplomat": [
 {
-"filename": "the-diplomat-2022-07-17.mobi",
-"published": 1658094688.0
+"filename": "the-diplomat-2022-07-18.mobi",
+"published": 1658116105.0
 },
 {
-"filename": "the-diplomat-2022-07-17.epub",
-"published": 1658094688.0
+"filename": "the-diplomat-2022-07-18.epub",
+"published": 1658116105.0
 }
 ],
 "Economist": [
@@ -71,52 +71,62 @@
 ],
 "Financial Times": [
 {
-"filename": "ft-2022-07-17.mobi",
-"published": 1658098918.0
+"filename": "ft-2022-07-18.mobi",
+"published": 1658116831.0
 },
 {
-"filename": "ft-2022-07-17.epub",
-"published": 1658098918.0
+"filename": "ft-2022-07-18.epub",
+"published": 1658116831.0
 }
 ],
 "Five Books": [
 {
-"filename": "fivebooks-2022-07-11.mobi",
-"published": 1657497600.0
+"filename": "fivebooks-2022-07-16.mobi",
+"published": 1657929600.0
 },
 {
-"filename": "fivebooks-2022-07-11.epub",
-"published": 1657497600.0
+"filename": "fivebooks-2022-07-16.epub",
+"published": 1657929600.0
 }
 ],
 "Guardian": [
 {
-"filename": "guardian-2022-07-17.mobi",
-"published": 1658097686.0
+"filename": "guardian-2022-07-18.mobi",
+"published": 1658116084.0
 },
 {
-"filename": "guardian-2022-07-17.epub",
-"published": 1658097686.0
+"filename": "guardian-2022-07-18.epub",
+"published": 1658116084.0
+}
+],
+"Harvard Business Review": [
+{
+"filename": "hbr-2022-07-01.mobi",
+"published": 1656676800.0
+},
+{
+"filename": "hbr-2022-07-01.epub",
+"published": 1656676800.0
 }
 ],
 "JoongAng Daily": [
 {
-"filename": "joongang-daily-2022-07-17.mobi",
-"published": 1658056315.0
+"filename": "joongang-daily-2022-07-18.mobi",
+"published": 1658117502.0
 },
 {
-"filename": "joongang-daily-2022-07-17.epub",
-"published": 1658056315.0
+"filename": "joongang-daily-2022-07-18.epub",
+"published": 1658117502.0
 }
 ],
 "Korea Herald": [
 {
-"filename": "korea-herald-2022-07-17.mobi",
-"published": 1658098858.0
+"filename": "korea-herald-2022-07-18.mobi",
+"published": 1658117088.0
 },
 {
-"filename": "korea-herald-2022-07-17.epub",
-"published": 1658098858.0
+"filename": "korea-herald-2022-07-18.epub",
+"published": 1658117088.0
 }
 ],
 "London Review of Books": [
@@ -161,12 +171,12 @@
 ],
 "NY Times": [
 {
-"filename": "nytimes-global-2022-07-17.mobi",
-"published": 1658100173.0
+"filename": "nytimes-global-2022-07-18.mobi",
+"published": 1658117413.0
 },
 {
-"filename": "nytimes-global-2022-07-17.epub",
-"published": 1658100173.0
+"filename": "nytimes-global-2022-07-18.epub",
+"published": 1658117413.0
 }
 ],
 "NY Times (Print)": [
@@ -241,22 +251,22 @@
 ],
 "South China Morning Post": [
 {
-"filename": "scmp-2022-07-17.mobi",
-"published": 1658096983.0
+"filename": "scmp-2022-07-18.mobi",
+"published": 1658116253.0
 },
 {
-"filename": "scmp-2022-07-17.epub",
-"published": 1658096983.0
+"filename": "scmp-2022-07-18.epub",
+"published": 1658116253.0
 }
 ],
 "Sydney Morning Herald": [
 {
-"filename": "sydney-morning-herald-2022-07-17.mobi",
-"published": 1658100620.0
+"filename": "sydney-morning-herald-2022-07-18.mobi",
+"published": 1658118168.0
 },
 {
-"filename": "sydney-morning-herald-2022-07-17.epub",
-"published": 1658100620.0
+"filename": "sydney-morning-herald-2022-07-18.epub",
+"published": 1658118168.0
 }
 ],
 "Taipei Times": [
@@ -301,12 +311,12 @@
 ],
 "Washington Post": [
 {
-"filename": "wapo-2022-07-17.mobi",
-"published": 1658101182.0
+"filename": "wapo-2022-07-18.mobi",
+"published": 1658117303.0
 },
 {
-"filename": "wapo-2022-07-17.epub",
-"published": 1658101182.0
+"filename": "wapo-2022-07-18.epub",
+"published": 1658117303.0
 }
 ],
 "Wired Magazine": [
@@ -319,5 +329,5 @@
 "published": 1655978400.0
 }
 ],
-"_generated": 1658101631
+"_generated": 1658118622
 }
