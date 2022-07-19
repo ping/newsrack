@@ -2,20 +2,36 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-19T19:38:28Z</updated>
+<updated>2022-07-19T23:50:56Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
+<id>The Atlantic</id>
+<title>The Atlantic: 19 Jul, 2022</title>
+<summary>The Atlantic: 19 Jul, 2022 published at 2022-07-19 23:18PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;U.S. Messaging on Monkeypox Is Deeply Flawed&lt;/li&gt;&lt;li&gt;There Is a Planet With Clouds Made of Sand&lt;/li&gt;&lt;li&gt;The White Liberals’ Burden&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;Put Your Face in Airplane Mode&lt;/li&gt;&lt;li&gt;The Atlantic Hires Alice McKown as Publisher and EVP and Mary Liz McCurdy as SVP of Strategic Partnerships and Business Development&lt;/li&gt;&lt;li&gt;Lizzo’s Music Really Is Special&lt;/li&gt;&lt;li&gt;The Supreme Court’s Extreme Power Grab&lt;/li&gt;&lt;li&gt;The Cause of the Crime Wave Is Hiding in Plain Sight&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;Wildfires Rage Across Southwestern Europe&lt;/li&gt;&lt;li&gt;Do Animals Dream?&lt;/li&gt;&lt;li&gt;The War in Ukraine Is Dividing Lifelong Friends&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Power Imbalance Undermining Global Health&lt;/li&gt;&lt;li&gt;The Everything-Is-Weird Economy&lt;/li&gt;&lt;li&gt;The Case for Dating a Friend&lt;/li&gt;&lt;li&gt;New COVID Vaccines Will Be Ready This Fall. America Won’t Be.&lt;/li&gt;&lt;li&gt;Party Politics&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;Why We Remember Floods and Forget Droughts&lt;/li&gt;&lt;li&gt;How to Fix the Bias Against Free Speech on Campus&lt;/li&gt;&lt;li&gt;Uyghur Poems From a Chinese Prison&lt;/li&gt;&lt;li&gt;You’ve Never Seen Anything Quite Like The Rehearsal&lt;/li&gt;&lt;li&gt;When a Troubling Book Gets a Hollywood Makeover&lt;/li&gt;&lt;li&gt;It’s Joe Manchin’s America&lt;/li&gt;&lt;li&gt;Mother Nature Dissents&lt;/li&gt;&lt;li&gt;The Bannon Strategy&lt;/li&gt;&lt;li&gt;The Incitement Paper Trail&lt;/li&gt;&lt;li&gt;Netflix’s Persuasion Tries to Have It All&lt;/li&gt;&lt;li&gt;‘Netflix Thinks Exactly Like an Old Movie Studio’&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;TV’s Best New Show Is a Study of Masculinity in Crisis&lt;/li&gt;&lt;li&gt;Where the Crawdads Sing Author Wanted for Questioning in Murder&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;Where to Turn When You Feel ‘at Odds With Being Human’&lt;/li&gt;&lt;li&gt;Ignore the Chaos. Britain’s System Is Working.&lt;/li&gt;&lt;li&gt;Photos of the Week: Elephant Rescue, Buck Moon, Love Parade&lt;/li&gt;&lt;li&gt;Selections From the Audubon Photography Awards Top 100&lt;/li&gt;&lt;li&gt;Britain’s Surprisingly Diverse Tories&lt;/li&gt;&lt;li&gt;How China Wants to Replace the U.S. Order&lt;/li&gt;&lt;li&gt;Everything About Twitter v. Musk Is Utter Nonsense&lt;/li&gt;&lt;li&gt;The BA.5 Wave Is What COVID Normal Looks Like&lt;/li&gt;&lt;li&gt;Joe Manchin’s Fickleness Is a Needless Catastrophe&lt;/li&gt;&lt;li&gt;Seriously, What’s Making All These Mysterious Space Signals?&lt;/li&gt;&lt;li&gt;How to Successfully Smash Your Face Against a Tree&lt;/li&gt;&lt;li&gt;When Does the Clean-Energy Infinity Loop Start?&lt;/li&gt;&lt;li&gt;Whatever This Is, It Won’t Be Build Back Better&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;li&gt;The Ways We Make a Living&lt;/li&gt;&lt;li&gt;Local Prosecutors Can’t Protect Abortion Rights&lt;/li&gt;&lt;li&gt;The Hawley-Bridges Exchange Was Not Constructive&lt;/li&gt;&lt;li&gt;Trump Terrified Even His Truest Believers&lt;/li&gt;&lt;li&gt;Where Is the National Outrage Over Uvalde?&lt;/li&gt;&lt;/ul&gt;
+                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
+                </content>
+<updated>2022-07-19T23:18:09Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-19.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-19.epub"/>
+</entry>
+<entry>
 <id>Vox</id>
 <title>Vox: 19 Jul, 2022</title>
-<summary>Vox: 19 Jul, 2022 published at 2022-07-19 19:00PM.</summary>
+<summary>Vox: 19 Jul, 2022 published at 2022-07-19 21:14PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Europe is burning like it’s 2052&lt;/li&gt;&lt;li&gt;The January 6 committee is holding a series of public hearings&lt;/li&gt;&lt;li&gt;Campaigns may have lost their most effective — and annoying — outreach tool&lt;/li&gt;&lt;li&gt;What Biden wanted in the Middle East — and what he actually got&lt;/li&gt;&lt;li&gt;The return of the “worm wars”&lt;/li&gt;&lt;li&gt;The case for caring less&lt;/li&gt;&lt;li&gt;9 questions about the January 6 committee, answered&lt;/li&gt;&lt;li&gt;A deadly elementary school shooting in Uvalde, Texas&lt;/li&gt;&lt;li&gt;3 takeaways from Texas’s investigation of the Uvalde school shooting&lt;/li&gt;&lt;li&gt;Build Back Better may end up a health care bill, thanks to Joe Manchin&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Why motion capture is harder than it looks&lt;/li&gt;&lt;li&gt;Europe is burning like it’s 2052&lt;/li&gt;&lt;li&gt;The January 6 committee is holding a series of public hearings&lt;/li&gt;&lt;li&gt;Campaigns may have lost their most effective — and annoying — outreach tool&lt;/li&gt;&lt;li&gt;What Biden wanted in the Middle East — and what he actually got&lt;/li&gt;&lt;li&gt;The return of the “worm wars”&lt;/li&gt;&lt;li&gt;The case for caring less&lt;/li&gt;&lt;li&gt;9 questions about the January 6 committee, answered&lt;/li&gt;&lt;li&gt;A deadly elementary school shooting in Uvalde, Texas&lt;/li&gt;&lt;li&gt;3 takeaways from Texas’s investigation of the Uvalde school shooting&lt;/li&gt;&lt;/ul&gt;
                 General interest news site
                 </content>
-<updated>2022-07-19T19:00:00Z</updated>
+<updated>2022-07-19T21:14:36Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
@@ -24,20 +40,20 @@
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-19.epub"/>
 </entry>
 <entry>
-<id>The Atlantic</id>
-<title>The Atlantic: 19 Jul, 2022</title>
-<summary>The Atlantic: 19 Jul, 2022 published at 2022-07-19 18:13PM.</summary>
+<id>Nautilus</id>
+<title>Nautilus: 19 Jul, 2022</title>
+<summary>Nautilus: 19 Jul, 2022 published at 2022-07-19 20:34PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The White Liberals’ Burden&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;Put Your Face in Airplane Mode&lt;/li&gt;&lt;li&gt;The Atlantic Hires Alice McKown as Publisher and EVP and Mary Liz McCurdy as SVP of Strategic Partnerships and Business Development&lt;/li&gt;&lt;li&gt;Lizzo’s Music Really Is Special&lt;/li&gt;&lt;li&gt;The Supreme Court’s Extreme Power Grab&lt;/li&gt;&lt;li&gt;The Cause of the Crime Wave Is Hiding in Plain Sight&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;Wildfires Rage Across Southwestern Europe&lt;/li&gt;&lt;li&gt;Do Animals Dream?&lt;/li&gt;&lt;li&gt;The War in Ukraine Is Dividing Lifelong Friends&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Power Imbalance Undermining Global Health&lt;/li&gt;&lt;li&gt;The Everything-Is-Weird Economy&lt;/li&gt;&lt;li&gt;The Case for Dating a Friend&lt;/li&gt;&lt;li&gt;New COVID Vaccines Will Be Ready This Fall. America Won’t Be.&lt;/li&gt;&lt;li&gt;Party Politics&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;Why We Remember Floods and Forget Droughts&lt;/li&gt;&lt;li&gt;How to Fix the Bias Against Free Speech on Campus&lt;/li&gt;&lt;li&gt;Uyghur Poems From a Chinese Prison&lt;/li&gt;&lt;li&gt;You’ve Never Seen Anything Quite Like The Rehearsal&lt;/li&gt;&lt;li&gt;Russia’s Invasion Is Making Ukraine More Democratic&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;li&gt;When a Troubling Book Gets a Hollywood Makeover&lt;/li&gt;&lt;li&gt;It’s Joe Manchin’s America&lt;/li&gt;&lt;li&gt;Mother Nature Dissents&lt;/li&gt;&lt;li&gt;The Bannon Strategy&lt;/li&gt;&lt;li&gt;The Incitement Paper Trail&lt;/li&gt;&lt;li&gt;Netflix’s Persuasion Tries to Have It All&lt;/li&gt;&lt;li&gt;‘Netflix Thinks Exactly Like an Old Movie Studio’&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;TV’s Best New Show Is a Study of Masculinity in Crisis&lt;/li&gt;&lt;li&gt;Where the Crawdads Sing Author Wanted for Questioning in Murder&lt;/li&gt;&lt;li&gt;The Older Woman Comes of Age&lt;/li&gt;&lt;li&gt;Ignore the Chaos. Britain’s System Is Working.&lt;/li&gt;&lt;li&gt;Photos of the Week: Elephant Rescue, Buck Moon, Love Parade&lt;/li&gt;&lt;li&gt;Selections From the Audubon Photography Awards Top 100&lt;/li&gt;&lt;li&gt;Britain’s Surprisingly Diverse Tories&lt;/li&gt;&lt;li&gt;How China Wants to Replace the U.S. Order&lt;/li&gt;&lt;li&gt;Everything About Twitter v. Musk Is Utter Nonsense&lt;/li&gt;&lt;li&gt;The BA.5 Wave Is What COVID Normal Looks Like&lt;/li&gt;&lt;li&gt;Joe Manchin’s Fickleness Is a Needless Catastrophe&lt;/li&gt;&lt;li&gt;Seriously, What’s Making All These Mysterious Space Signals?&lt;/li&gt;&lt;li&gt;How to Successfully Smash Your Face Against a Tree&lt;/li&gt;&lt;li&gt;When Does the Clean-Energy Infinity Loop Start?&lt;/li&gt;&lt;li&gt;Whatever This Is, It Won’t Be Build Back Better&lt;/li&gt;&lt;li&gt;The Coolest Space Picture I’ve Ever Seen&lt;/li&gt;&lt;li&gt;The Ways We Make a Living&lt;/li&gt;&lt;li&gt;Local Prosecutors Can’t Protect Abortion Rights&lt;/li&gt;&lt;li&gt;The Hawley-Bridges Exchange Was Not Constructive&lt;/li&gt;&lt;li&gt;Trump Terrified Even His Truest Believers&lt;/li&gt;&lt;li&gt;Where Is the National Outrage Over Uvalde?&lt;/li&gt;&lt;/ul&gt;
-                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
+                &lt;ul&gt;&lt;li&gt;Land of Extremes: Poetry of the Sonoran Desert&lt;/li&gt;&lt;li&gt;Feeling Stressed? Read a Poem&lt;/li&gt;&lt;li&gt;This Planetary Scientist Is Always Reaching for Something Big&lt;/li&gt;&lt;li&gt;Gravitational Waves Continue to Astound&lt;/li&gt;&lt;li&gt;The Case for Popularizing Ocean Science&lt;/li&gt;&lt;li&gt;A Surprising Side of Carl Sagan&lt;/li&gt;&lt;li&gt;How Do We Get People Who Believe in Pseudoscience to Trust Science?&lt;/li&gt;&lt;li&gt;Swimming in Noise&lt;/li&gt;&lt;li&gt;The High Price of Cheap Shrimp&lt;/li&gt;&lt;li&gt;How Are the Bees?&lt;/li&gt;&lt;li&gt;Reshuffled Rivers Bolster the Amazon’s Hyper-Biodiversity&lt;/li&gt;&lt;li&gt;Who Are the Scientists Here?&lt;/li&gt;&lt;li&gt;The Giraffe Neck Evolved for Sexual Combat&lt;/li&gt;&lt;li&gt;Print Edition 43&lt;/li&gt;&lt;li&gt;Print Edition 42&lt;/li&gt;&lt;li&gt;Print Edition 41&lt;/li&gt;&lt;li&gt;Print Edition 40&lt;/li&gt;&lt;li&gt;Embryo Cells Set Patterns for Growth by Pushing and Pulling&lt;/li&gt;&lt;li&gt;Life Helps Make Almost Half of All Minerals on Earth&lt;/li&gt;&lt;li&gt;Under Anesthesia, Where Do Our Minds Go?&lt;/li&gt;&lt;li&gt;Thinking Like a Scientist Will Make You Happier&lt;/li&gt;&lt;li&gt;Don’t Give Up on Facts&lt;/li&gt;&lt;li&gt;Are You a Naïve Realist?&lt;/li&gt;&lt;li&gt;Moving Beyond Mimicry in Artificial Intelligence&lt;/li&gt;&lt;li&gt;Overthrowing the Patriarchy Through Ecstatic Sex&lt;/li&gt;&lt;li&gt;What Oceanographers Can Learn From Their Animal Colleagues&lt;/li&gt;&lt;/ul&gt;
+                Nautilus is a different kind of science magazine. Our stories take you into the depths of science and spotlight its ripples in our lives and cultures. We believe any subject in science, no matter how complex, can be explained with clarity and vitality.
                 </content>
-<updated>2022-07-19T18:13:33Z</updated>
+<updated>2022-07-19T20:34:09Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
 </author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-19.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-19.epub"/>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nautilus-2022-07-19.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nautilus-2022-07-19.epub"/>
 </entry>
 <entry>
 <id>The Diplomat</id>
@@ -124,7 +140,7 @@
 <title>POLITICO Magazine: 19 Jul, 2022</title>
 <summary>POLITICO Magazine: 19 Jul, 2022 published at 2022-07-19 08:30AM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Opinion | The Supreme Court is Now Operating Outside of American Public Opinion&lt;/li&gt;&lt;li&gt;Without Ivana, There’s No ‘The Donald’&lt;/li&gt;&lt;li&gt;When Ivana Trump Met Sarah Palin&lt;/li&gt;&lt;li&gt;I Once Supported Putin. Now I Know the Truth.&lt;/li&gt;&lt;li&gt;The GOP Failed Millennial Moms Like Me. But It Needs Us Now More Than Ever.&lt;/li&gt;&lt;li&gt;‘A Real Chilling Effect’: A Lefty Scholar is Dumping CAP — For AEI&lt;/li&gt;&lt;li&gt;‘I Had Been Seen as a Little Radioactive’: Lis Smith Talks Mayor Pete, How She Picks Stars and the Future of the Democratic Party&lt;/li&gt;&lt;li&gt;Opinion | How Kevin McCarthy Misplayed His Hand on the Jan. 6 Hearings&lt;/li&gt;&lt;li&gt;Opinion | How Announcing His 2024 Campaign Could Be Trump’s Best Legal Defense&lt;/li&gt;&lt;li&gt;Opinion | Polls Show Americans Don’t Care that Much about Dobbs — and Won’t Base Their Vote on it&lt;/li&gt;&lt;li&gt;Opinion | A New Shape for US-Saudi Relations&lt;/li&gt;&lt;li&gt;The Republican Who Wants To End The Trump Era — Without Taking on Trump&lt;/li&gt;&lt;li&gt;The Man at the Center of the New Cyber World War&lt;/li&gt;&lt;li&gt;Opinion | I Am a Man With a Genetic Condition. The Abortion Fight Is About Me, Too.&lt;/li&gt;&lt;li&gt;Opinion | It’s Not Just Khashoggi: The Saudi Issue Biden Can’t Ignore&lt;/li&gt;&lt;li&gt;A Former Mueller Prosecutor Takes Merrick Garland to Task&lt;/li&gt;&lt;li&gt;Opinion | Newsom, Harris, Buttigieg and the Democrats Definitely Not Challenging Joe Biden&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Opinion | The Supreme Court is Now Operating Outside of American Public Opinion&lt;/li&gt;&lt;li&gt;Without Ivana, There’s No ‘The Donald’&lt;/li&gt;&lt;li&gt;When Ivana Trump Met Sarah Palin&lt;/li&gt;&lt;li&gt;I Once Supported Putin. Now I Know the Truth.&lt;/li&gt;&lt;li&gt;The GOP Failed Millennial Moms Like Me. But It Needs Us Now More Than Ever.&lt;/li&gt;&lt;li&gt;‘A Real Chilling Effect’: A Lefty Scholar is Dumping CAP — For AEI&lt;/li&gt;&lt;li&gt;‘I Had Been Seen as a Little Radioactive’: Lis Smith Talks Mayor Pete, How She Picks Stars and the Future of the Democratic Party&lt;/li&gt;&lt;li&gt;Opinion | How Kevin McCarthy Misplayed His Hand on the Jan. 6 Hearings&lt;/li&gt;&lt;li&gt;Opinion | How Announcing His 2024 Campaign Could Be Trump’s Best Legal Defense&lt;/li&gt;&lt;li&gt;Opinion | Polls Show Americans Don’t Care that Much about Dobbs — and Won’t Base Their Vote on it&lt;/li&gt;&lt;li&gt;Opinion | A New Shape for US-Saudi Relations&lt;/li&gt;&lt;li&gt;The Republican Who Wants To End The Trump Era — Without Taking on Trump&lt;/li&gt;&lt;li&gt;The Man at the Center of the New Cyber World War&lt;/li&gt;&lt;li&gt;Opinion | I Am a Man With a Genetic Condition. The Abortion Fight Is About Me, Too.&lt;/li&gt;&lt;li&gt;Opinion | It’s Not Just Khashoggi: The Saudi Issue Biden Can’t Ignore&lt;/li&gt;&lt;li&gt;A Former Mueller Prosecutor Takes Merrick Garland to Task&lt;/li&gt;&lt;/ul&gt;
                 News, Analysis and Opinion from POLITICO
                 </content>
 <updated>2022-07-19T08:30:00Z</updated>
@@ -166,22 +182,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="newyorker-2022-07-18.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="newyorker-2022-07-18.epub"/>
-</entry>
-<entry>
-<id>Nautilus</id>
-<title>Nautilus: 13 Jul, 2022</title>
-<summary>Nautilus: 13 Jul, 2022 published at 2022-07-13 23:41PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Land of Extremes: Poetry of the Sonoran Desert&lt;/li&gt;&lt;li&gt;Feeling Stressed? Read a Poem&lt;/li&gt;&lt;li&gt;This Planetary Scientist Is Always Reaching for Something Big&lt;/li&gt;&lt;li&gt;Gravitational Waves Continue to Astound&lt;/li&gt;&lt;li&gt;The Case for Popularizing Ocean Science&lt;/li&gt;&lt;li&gt;A Surprising Side of Carl Sagan&lt;/li&gt;&lt;li&gt;How Do We Get People Who Believe in Pseudoscience to Trust Science?&lt;/li&gt;&lt;li&gt;The High Price of Cheap Shrimp&lt;/li&gt;&lt;li&gt;How Are the Bees?&lt;/li&gt;&lt;li&gt;Reshuffled Rivers Bolster the Amazon’s Hyper-Biodiversity&lt;/li&gt;&lt;li&gt;Who Are the Scientists Here?&lt;/li&gt;&lt;li&gt;The Giraffe Neck Evolved for Sexual Combat&lt;/li&gt;&lt;li&gt;Print Edition 43&lt;/li&gt;&lt;li&gt;Print Edition 42&lt;/li&gt;&lt;li&gt;Print Edition 41&lt;/li&gt;&lt;li&gt;Print Edition 40&lt;/li&gt;&lt;li&gt;Embryo Cells Set Patterns for Growth by Pushing and Pulling&lt;/li&gt;&lt;li&gt;Life Helps Make Almost Half of All Minerals on Earth&lt;/li&gt;&lt;li&gt;Under Anesthesia, Where Do Our Minds Go?&lt;/li&gt;&lt;li&gt;Thinking Like a Scientist Will Make You Happier&lt;/li&gt;&lt;li&gt;Don’t Give Up on Facts&lt;/li&gt;&lt;li&gt;Are You a Naïve Realist?&lt;/li&gt;&lt;li&gt;Moving Beyond Mimicry in Artificial Intelligence&lt;/li&gt;&lt;li&gt;Overthrowing the Patriarchy Through Ecstatic Sex&lt;/li&gt;&lt;li&gt;What Oceanographers Can Learn From Their Animal Colleagues&lt;/li&gt;&lt;/ul&gt;
-                Nautilus is a different kind of science magazine. Our stories take you into the depths of science and spotlight its ripples in our lives and cultures. We believe any subject in science, no matter how complex, can be explained with clarity and vitality.
-                </content>
-<updated>2022-07-13T23:41:32Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nautilus-2022-07-13.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nautilus-2022-07-13.epub"/>
 </entry>
 <entry>
 <id>TIME</id>
@@ -234,12 +234,12 @@
 <entry>
 <id>Harvard Business Review</id>
 <title>Harvard Business Review: 19 Jul, 2022</title>
-<summary>Harvard Business Review: 19 Jul, 2022 published at 2022-07-01 11:00AM.</summary>
+<summary>Harvard Business Review: 19 Jul, 2022 published at 2022-07-01 12:00PM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;A Role That’s More Challenging Than Ever&lt;/li&gt;&lt;li&gt;A Seat at the Table Is Not Enough&lt;/li&gt;&lt;li&gt;A Common Parasite Can Make People More Entrepreneurial&lt;/li&gt;&lt;li&gt;Two Cofounders of Xendit on Pioneering Fintech in Southeast Asia&lt;/li&gt;&lt;li&gt;The C-Suite Skills That Matter Most&lt;/li&gt;&lt;li&gt;Is It Time to Consider Co-CEOs?&lt;/li&gt;&lt;li&gt;When Hiring CEOs, Focus on Character&lt;/li&gt;&lt;li&gt;As the World Shifts, So Should Leaders&lt;/li&gt;&lt;li&gt;Identifying Unmet Needs in a Digital Age&lt;/li&gt;&lt;li&gt;To Drive Diversity Efforts, Don’t Tiptoe Around Your Legal Risk&lt;/li&gt;&lt;li&gt;Private Equity Should Take the Lead in Sustainability&lt;/li&gt;&lt;li&gt;What You’re Getting Wrong About Customer Journeys&lt;/li&gt;&lt;li&gt;A Better Way to Put Your Data to Work&lt;/li&gt;&lt;li&gt;Leadership in a Politically Charged Age&lt;/li&gt;&lt;li&gt;Why You Need an AI Ethics Committee&lt;/li&gt;&lt;li&gt;How to Turn a Supply Chain Platform into an Innovation Engine&lt;/li&gt;&lt;li&gt;How to Overcome Your Fear of the Unknown&lt;/li&gt;&lt;li&gt;Case Study: Would Vegan Offerings Dilute Our Brand?&lt;/li&gt;&lt;li&gt;Exploring the Metaverse&lt;/li&gt;&lt;li&gt;Life’s Work: An Interview with Misty Copeland&lt;/li&gt;&lt;/ul&gt;
                 Harvard Business Review is the leading destination for smart management thinking. Through its flagship magazine, books, and digital content and tools published on HBR.org, Harvard Business Review aims to provide professionals around the world with rigorous insights and best practices to help lead themselves and their organizations more effectively and to make a positive impact.
                 </content>
-<updated>2022-07-01T11:00:00Z</updated>
+<updated>2022-07-01T12:00:00Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
