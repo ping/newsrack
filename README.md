@@ -36,7 +36,7 @@ In alphabetical order:
 9. [Poetry](https://www.poetryfoundation.org/poetrymagazine)
 10. [Politico](https://www.politico.com/)
 11. [ProPublica](https://www.propublica.org/)
-12. [Rest of World][https://restofworld.org]
+12. [Rest of World](https://restofworld.org)
 13. [Scientific American](https://www.scientificamerican.com/)
 14. [The Third Pole](https://www.thethirdpole.net/)
 15. [Time Magazine](https://time.com/magazine/)
