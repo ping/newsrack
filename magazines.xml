@@ -2,36 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-21T19:41:42Z</updated>
+<updated>2022-07-21T23:52:59Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
-<id>Vox</id>
-<title>Vox: 21 Jul, 2022</title>
-<summary>Vox: 21 Jul, 2022 published at 2022-07-21 19:22PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;President Biden just tested positive for Covid-19. What happens now?&lt;/li&gt;&lt;li&gt;Europe’s gas crisis is here&lt;/li&gt;&lt;li&gt;The end of Roe could finally convince Americans to care more about privacy&lt;/li&gt;&lt;li&gt;How to fall back in love with reading&lt;/li&gt;&lt;li&gt;Biden’s dismal poll numbers, explained in 9 charts&lt;/li&gt;&lt;li&gt;Congress failed on climate. What can Biden do now?&lt;/li&gt;&lt;li&gt;The Supreme Court overturns Roe v. Wade&lt;/li&gt;&lt;li&gt;How the “Move Fast” era of Facebook led to one of its biggest scandals&lt;/li&gt;&lt;li&gt;The UK’s next prime minister will be one of these two people&lt;/li&gt;&lt;li&gt;Same-sex marriage could get historic protections — if the Senate votes on it&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-07-21T19:22:09Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-21.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-21.epub"/>
-</entry>
-<entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 21 Jul, 2022</title>
-<summary>The Atlantic: 21 Jul, 2022 published at 2022-07-21 19:13PM.</summary>
+<summary>The Atlantic: 21 Jul, 2022 published at 2022-07-21 22:36PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Of Course Biden Has COVID&lt;/li&gt;&lt;li&gt;We’re Testing for Monkeypox the Wrong Way&lt;/li&gt;&lt;li&gt;Are Latinos Really Realigning Toward Republicans?&lt;/li&gt;&lt;li&gt;America Was in an Early-Death Crisis Long Before COVID&lt;/li&gt;&lt;li&gt;The Most Moving Film of the Year Is a Documentary About Volcanoes&lt;/li&gt;&lt;li&gt;Middle Eastern Autocrats Embarrassed Biden at Will&lt;/li&gt;&lt;li&gt;A Love Letter to the ‘Best Mountain Range on Earth’&lt;/li&gt;&lt;li&gt;A Happiness Columnist’s Three Biggest Happiness Rules&lt;/li&gt;&lt;li&gt;America’s Self-Obsession Is Killing Its Democracy&lt;/li&gt;&lt;li&gt;The Next Generation of NIMBYs&lt;/li&gt;&lt;li&gt;Six Books to Guide You Through the Real American West&lt;/li&gt;&lt;li&gt;The Real Reason Democrats Are Losing Ground on Education&lt;/li&gt;&lt;li&gt;The Spiders That Choose Death&lt;/li&gt;&lt;li&gt;How to Pivot on a Thursday Night&lt;/li&gt;&lt;li&gt;Jordan Peele’s Nope Is Spectacular, Indulgent, and Brutal&lt;/li&gt;&lt;li&gt;One Developer’s Case for Building in a High-Risk Fire Zone&lt;/li&gt;&lt;li&gt;We’ve Had Other Climate Defeats. This One Is by Far the Weirdest.&lt;/li&gt;&lt;li&gt;Portrait of the Artist With the Family Dog&lt;/li&gt;&lt;li&gt;America’s Most Misunderstood Marsupial&lt;/li&gt;&lt;li&gt;Russia’s Hunger War&lt;/li&gt;&lt;li&gt;This Court Has Revealed Conservative Originalism to Be a Hollow Shell&lt;/li&gt;&lt;li&gt;England Can’t Take the Heat&lt;/li&gt;&lt;li&gt;The World Is Burning Once Again&lt;/li&gt;&lt;li&gt;U.S. Messaging on Monkeypox Is Deeply Flawed&lt;/li&gt;&lt;li&gt;There Is a Planet With Clouds Made of Sand&lt;/li&gt;&lt;li&gt;When Racial Progress Comes for White Liberals&lt;/li&gt;&lt;li&gt;The Everything-Is-Weird Economy&lt;/li&gt;&lt;li&gt;Put Your Face in Airplane Mode&lt;/li&gt;&lt;li&gt;It’s Joe Manchin’s America&lt;/li&gt;&lt;li&gt;Mother Nature Dissents&lt;/li&gt;&lt;li&gt;Lizzo’s Music Really Is Special&lt;/li&gt;&lt;li&gt;Do Animals Dream?&lt;/li&gt;&lt;li&gt;You’ve Never Seen Anything Quite Like The Rehearsal&lt;/li&gt;&lt;li&gt;When a Troubling Book Gets a Hollywood Makeover&lt;/li&gt;&lt;li&gt;Netflix’s Persuasion Tries to Have It All&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;Where the Crawdads Sing Author Wanted for Questioning in Murder&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;Wildfires Rage Across Southwestern Europe&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Power Imbalance Undermining Global Health&lt;/li&gt;&lt;li&gt;Uyghur Poems From a Chinese Prison&lt;/li&gt;&lt;li&gt;Ignore the Chaos. Britain’s System Is Working.&lt;/li&gt;&lt;li&gt;Photos of the Week: Elephant Rescue, Buck Moon, Love Parade&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;New COVID Vaccines Will Be Ready This Fall. America Won’t Be.&lt;/li&gt;&lt;li&gt;Joe Manchin’s Fickleness Is a Needless Catastrophe&lt;/li&gt;&lt;li&gt;Seriously, What’s Making All These Mysterious Space Signals?&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;li&gt;The Ways We Make a Living&lt;/li&gt;&lt;li&gt;Local Prosecutors Can’t Protect Abortion Rights&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;The Opening for Democrats on Abortion&lt;/li&gt;&lt;li&gt;The Secret Service Texting Scandal Makes No Sense&lt;/li&gt;&lt;li&gt;Of Course Biden Has COVID&lt;/li&gt;&lt;li&gt;We’re Testing for Monkeypox the Wrong Way&lt;/li&gt;&lt;li&gt;Are Latinos Really Realigning Toward Republicans?&lt;/li&gt;&lt;li&gt;America Was in an Early-Death Crisis Long Before COVID&lt;/li&gt;&lt;li&gt;The Most Moving Film of the Year Is a Documentary About Volcanoes&lt;/li&gt;&lt;li&gt;Middle Eastern Autocrats Embarrassed Biden at Will&lt;/li&gt;&lt;li&gt;A Love Letter to the ‘Best Mountain Range on Earth’&lt;/li&gt;&lt;li&gt;A Happiness Columnist’s Three Biggest Happiness Rules&lt;/li&gt;&lt;li&gt;America’s Self-Obsession Is Killing Its Democracy&lt;/li&gt;&lt;li&gt;The Next Generation of NIMBYs&lt;/li&gt;&lt;li&gt;Six Books to Guide You Through the Real American West&lt;/li&gt;&lt;li&gt;The Real Reason Democrats Are Losing Ground on Education&lt;/li&gt;&lt;li&gt;The Spiders That Choose Death&lt;/li&gt;&lt;li&gt;How to Pivot on a Thursday Night&lt;/li&gt;&lt;li&gt;Jordan Peele’s Nope Is Spectacular, Indulgent, and Brutal&lt;/li&gt;&lt;li&gt;One Developer’s Case for Building in a High-Risk Fire Zone&lt;/li&gt;&lt;li&gt;We’ve Had Other Climate Defeats. This One Is by Far the Weirdest.&lt;/li&gt;&lt;li&gt;Portrait of the Artist With the Family Dog&lt;/li&gt;&lt;li&gt;America’s Most Misunderstood Marsupial&lt;/li&gt;&lt;li&gt;Russia’s Hunger War&lt;/li&gt;&lt;li&gt;This Court Has Revealed Conservative Originalism to Be a Hollow Shell&lt;/li&gt;&lt;li&gt;England Can’t Take the Heat&lt;/li&gt;&lt;li&gt;The World Is Burning Once Again&lt;/li&gt;&lt;li&gt;When Racial Progress Comes for White Liberals&lt;/li&gt;&lt;li&gt;The Everything-Is-Weird Economy&lt;/li&gt;&lt;li&gt;Put Your Face in Airplane Mode&lt;/li&gt;&lt;li&gt;It’s Joe Manchin’s America&lt;/li&gt;&lt;li&gt;Mother Nature Dissents&lt;/li&gt;&lt;li&gt;Lizzo’s Music Really Is Special&lt;/li&gt;&lt;li&gt;Do Animals Dream?&lt;/li&gt;&lt;li&gt;You’ve Never Seen Anything Quite Like The Rehearsal&lt;/li&gt;&lt;li&gt;When a Troubling Book Gets a Hollywood Makeover&lt;/li&gt;&lt;li&gt;Netflix’s Persuasion Tries to Have It All&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;Where the Crawdads Sing Author Wanted for Questioning in Murder&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;Wildfires Rage Across Southwestern Europe&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Power Imbalance Undermining Global Health&lt;/li&gt;&lt;li&gt;Uyghur Poems From a Chinese Prison&lt;/li&gt;&lt;li&gt;Ignore the Chaos. Britain’s System Is Working.&lt;/li&gt;&lt;li&gt;Photos of the Week: Elephant Rescue, Buck Moon, Love Parade&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;New COVID Vaccines Will Be Ready This Fall. America Won’t Be.&lt;/li&gt;&lt;li&gt;There Is a Planet With Clouds Made of Sand&lt;/li&gt;&lt;li&gt;Joe Manchin’s Fickleness Is a Needless Catastrophe&lt;/li&gt;&lt;li&gt;Seriously, What’s Making All These Mysterious Space Signals?&lt;/li&gt;&lt;li&gt;U.S. Messaging on Monkeypox Is Deeply Flawed&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;li&gt;The Ways We Make a Living&lt;/li&gt;&lt;/ul&gt;
                 News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
                 </content>
-<updated>2022-07-21T19:13:48Z</updated>
+<updated>2022-07-21T22:36:00Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
@@ -40,36 +24,68 @@
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-21.epub"/>
 </entry>
 <entry>
-<id>POLITICO Magazine</id>
-<title>POLITICO Magazine: 21 Jul, 2022</title>
-<summary>POLITICO Magazine: 21 Jul, 2022 published at 2022-07-21 18:51PM.</summary>
+<id>Vox</id>
+<title>Vox: 21 Jul, 2022</title>
+<summary>Vox: 21 Jul, 2022 published at 2022-07-21 22:30PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Opinion | Declaring a Climate Emergency Is a Step Toward Constitutional Breakdown&lt;/li&gt;&lt;li&gt;No Wonder Biden Is Angry&lt;/li&gt;&lt;li&gt;Opinion | The Supreme Court Reform that Could Actually Win Bipartisan Support&lt;/li&gt;&lt;li&gt;Opinion | You Trust the Media More Than You Say You Do&lt;/li&gt;&lt;li&gt;Opinion | It’s Time for Democrats to Play Hardball to Thwart Mitch McConnell&lt;/li&gt;&lt;li&gt;Opinion | The Supreme Court is Now Operating Outside of American Public Opinion&lt;/li&gt;&lt;li&gt;Without Ivana, There’s No ‘The Donald’&lt;/li&gt;&lt;li&gt;When Ivana Trump Met Sarah Palin&lt;/li&gt;&lt;li&gt;I Once Supported Putin. Now I Know the Truth.&lt;/li&gt;&lt;li&gt;‘A Real Chilling Effect’: A Lefty Scholar is Dumping CAP — For AEI&lt;/li&gt;&lt;li&gt;The GOP Failed Millennial Moms Like Me. But It Needs Us Now More Than Ever.&lt;/li&gt;&lt;li&gt;‘I Had Been Seen as a Little Radioactive’: Lis Smith Talks Mayor Pete, How She Picks Stars and the Future of the Democratic Party&lt;/li&gt;&lt;li&gt;Opinion | How Kevin McCarthy Misplayed His Hand on the Jan. 6 Hearings&lt;/li&gt;&lt;li&gt;Opinion | How Announcing His 2024 Campaign Could Be Trump’s Best Legal Defense&lt;/li&gt;&lt;li&gt;Opinion | Polls Show Americans Don’t Care that Much about Dobbs — and Won’t Base Their Vote on it&lt;/li&gt;&lt;/ul&gt;
-                News, Analysis and Opinion from POLITICO
+                &lt;ul&gt;&lt;li&gt;The Supreme Court just let a Trump judge seize control of ICE, at least for now&lt;/li&gt;&lt;li&gt;The Supreme Court overturns Roe v. Wade&lt;/li&gt;&lt;li&gt;Jordan Peele’s Nope, explained&lt;/li&gt;&lt;li&gt;9 questions about the January 6 committee, answered&lt;/li&gt;&lt;li&gt;Amazon wants to be your doctor now, too&lt;/li&gt;&lt;li&gt;6 battleground state attorney general races to watch in 2022&lt;/li&gt;&lt;li&gt;President Biden just tested positive for Covid-19. What happens now?&lt;/li&gt;&lt;li&gt;Europe’s gas crisis is here&lt;/li&gt;&lt;li&gt;The end of Roe could finally convince Americans to care more about privacy&lt;/li&gt;&lt;li&gt;How to fall back in love with reading&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
                 </content>
-<updated>2022-07-21T18:51:24Z</updated>
+<updated>2022-07-21T22:30:00Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
 </author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-07-21.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-07-21.epub"/>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-21.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-21.epub"/>
 </entry>
 <entry>
 <id>Economist</id>
 <title>Economist: 23 Jul, 2022</title>
-<summary>Economist: 23 Jul, 2022 published at 2022-07-21 17:44PM.</summary>
+<summary>Economist: 23 Jul, 2022 published at 2022-07-21 22:16PM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Politics&lt;/li&gt;&lt;li&gt;Business&lt;/li&gt;&lt;li&gt;KAL’s cartoon&lt;/li&gt;&lt;li&gt;Growth cure&lt;/li&gt;&lt;li&gt;Three letters that won’t save the planet&lt;/li&gt;&lt;li&gt;A warning of worse to come&lt;/li&gt;&lt;li&gt;Progress and poverty&lt;/li&gt;&lt;li&gt;Turkey shoot&lt;/li&gt;&lt;li&gt;On medical data, Singapore, Boris Johnson, Switzerland, servant-leaders&lt;/li&gt;&lt;li&gt;Somalia’s president wants help to fight Africa’s terrorist groups&lt;/li&gt;&lt;li&gt;Reform labour laws to tackle inequality in America, urges Celine McNicholas&lt;/li&gt;&lt;li&gt;Unions are now a lifestyle choice for some young, aspirational workers, says Walter Olson&lt;/li&gt;&lt;li&gt;Inflation nation&lt;/li&gt;&lt;li&gt;Tick, tick, boom&lt;/li&gt;&lt;li&gt;The struggle for hearts and minds&lt;/li&gt;&lt;li&gt;Derailed&lt;/li&gt;&lt;li&gt;Lifting the veil on Uvalde&lt;/li&gt;&lt;li&gt;Mortal danger for mothers&lt;/li&gt;&lt;li&gt;Trumped&lt;/li&gt;&lt;li&gt;Follow the influencers&lt;/li&gt;&lt;li&gt;Mired in meth&lt;/li&gt;&lt;li&gt;A yearning for Utopia&lt;/li&gt;&lt;li&gt;Feeling the pinch&lt;/li&gt;&lt;li&gt;Cheers!&lt;/li&gt;&lt;li&gt;In with the old&lt;/li&gt;&lt;li&gt;Comeback Khan&lt;/li&gt;&lt;li&gt;One-track mind&lt;/li&gt;&lt;li&gt;States of mind&lt;/li&gt;&lt;li&gt;Tearing down the bamboo walls&lt;/li&gt;&lt;li&gt;Test after test&lt;/li&gt;&lt;li&gt;Travel bug&lt;/li&gt;&lt;li&gt;Lessons from Malcolm X&lt;/li&gt;&lt;li&gt;Too many to count&lt;/li&gt;&lt;li&gt;A reform that makes matters worse&lt;/li&gt;&lt;li&gt;Unsecured green investments&lt;/li&gt;&lt;li&gt;Adventurous capital&lt;/li&gt;&lt;li&gt;Game over&lt;/li&gt;&lt;li&gt;When will Odessa’s port be reopened?&lt;/li&gt;&lt;li&gt;Common enemies&lt;/li&gt;&lt;li&gt;Red-hot in Alex&lt;/li&gt;&lt;li&gt;Let the sleeper awaken&lt;/li&gt;&lt;li&gt;Bio Britannia&lt;/li&gt;&lt;li&gt;Don’t gloat about the float&lt;/li&gt;&lt;li&gt;Sunak v Truss&lt;/li&gt;&lt;li&gt;What was that, again?&lt;/li&gt;&lt;li&gt;A motorway for drones&lt;/li&gt;&lt;li&gt;The battle for the Stupid Party&lt;/li&gt;&lt;li&gt;Raising the game&lt;/li&gt;&lt;li&gt;In need of a clean-up&lt;/li&gt;&lt;li&gt;The saviour complex&lt;/li&gt;&lt;li&gt;How to charge more&lt;/li&gt;&lt;li&gt;The warm glow&lt;/li&gt;&lt;li&gt;Internalising the externalities&lt;/li&gt;&lt;li&gt;The signal and the noise&lt;/li&gt;&lt;li&gt;Missionary creep&lt;/li&gt;&lt;li&gt;Measure less, but better&lt;/li&gt;&lt;li&gt;Acknowledgments&lt;/li&gt;&lt;li&gt;A juggling act&lt;/li&gt;&lt;li&gt;Watershed’s moment&lt;/li&gt;&lt;li&gt;The latest in WFH&lt;/li&gt;&lt;li&gt;What graduates want&lt;/li&gt;&lt;li&gt;Puttin’ it up at the Ritz&lt;/li&gt;&lt;li&gt;Unlocking Keyence’s secret&lt;/li&gt;&lt;li&gt;The fragile 53&lt;/li&gt;&lt;li&gt;Bittersweet&lt;/li&gt;&lt;li&gt;A tale of three parities&lt;/li&gt;&lt;li&gt;Power play&lt;/li&gt;&lt;li&gt;No delivery, no payment&lt;/li&gt;&lt;li&gt;Wake-up call&lt;/li&gt;&lt;li&gt;Aiming high&lt;/li&gt;&lt;li&gt;Predict and survive&lt;/li&gt;&lt;li&gt;Wrong turning&lt;/li&gt;&lt;li&gt;Cycle races&lt;/li&gt;&lt;li&gt;Association of British Science Writers&lt;/li&gt;&lt;li&gt;The vision thing&lt;/li&gt;&lt;li&gt;The guilty and the gone&lt;/li&gt;&lt;li&gt;Guts and glory&lt;/li&gt;&lt;li&gt;Designs for living&lt;/li&gt;&lt;li&gt;The power of 3&lt;/li&gt;&lt;li&gt;The oligarch’s lament&lt;/li&gt;&lt;li&gt;Economic data, commodities and markets&lt;/li&gt;&lt;li&gt;The scorched Earth&lt;/li&gt;&lt;li&gt;Why have new Omicron strains of covid not been given Greek names?&lt;/li&gt;&lt;li&gt;The increase in simultaneous heatwaves&lt;/li&gt;&lt;li&gt;How to be a lady&lt;/li&gt;&lt;/ul&gt;
                 Global news and current affairs from a European perspective. Best downloaded on Friday mornings (GMT)
                 </content>
-<updated>2022-07-21T17:44:40Z</updated>
+<updated>2022-07-21T22:16:51Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-07-21.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="economist-2022-07-21.epub"/>
+</entry>
+<entry>
+<id>Rest of World</id>
+<title>Rest of World: 21 Jul, 2022</title>
+<summary>Rest of World: 21 Jul, 2022 published at 2022-07-21 20:15PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Mexican scam loan apps will edit your face onto X-rated photos and send them to your family&lt;/li&gt;&lt;li&gt;For Japanese Uber delivery drivers, gig work is working&lt;/li&gt;&lt;li&gt;Instagram is fueling a thrifting boom in India, Pakistan, and Nepal&lt;/li&gt;&lt;li&gt;Funding’s dry. Companies are cutting back. We’ve been here before&lt;/li&gt;&lt;li&gt;Fleeing Putin, Russian tech workers find a home in Armenia&lt;/li&gt;&lt;li&gt;The global downturn is real, but the allure of Africa’s digital markets hasn’t changed&lt;/li&gt;&lt;li&gt;How to buy a hijab in Jakarta&lt;/li&gt;&lt;li&gt;“We’re just fucking illegal”: Uber Files reveal a pattern of shady behavior around the world&lt;/li&gt;&lt;li&gt;As global funding dries up, Mexico’s delivery startups see an opportunity&lt;/li&gt;&lt;li&gt;Overrun by influencers, historic sites are banning TikTok creators in Nepal&lt;/li&gt;&lt;li&gt;Pegasus used to spy on protesters, a popular actress, and  dozens more in Thailand, report shows&lt;/li&gt;&lt;li&gt;“When your poster child gets assassinated”: Airlift’s collapse shocks Pakistan’s startup world&lt;/li&gt;&lt;/ul&gt;
+                Reporting Global Tech Stories
+                </content>
+<updated>2022-07-21T20:15:29Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="restofworld-2022-07-21.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="restofworld-2022-07-21.epub"/>
+</entry>
+<entry>
+<id>POLITICO Magazine</id>
+<title>POLITICO Magazine: 21 Jul, 2022</title>
+<summary>POLITICO Magazine: 21 Jul, 2022 published at 2022-07-21 20:03PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Opinion | Get Well, Mr. President! And Don’t Lie About Your Health.&lt;/li&gt;&lt;li&gt;Opinion | Declaring a Climate Emergency Is a Step Toward Constitutional Breakdown&lt;/li&gt;&lt;li&gt;No Wonder Biden Is Angry&lt;/li&gt;&lt;li&gt;Opinion | The Supreme Court Reform that Could Actually Win Bipartisan Support&lt;/li&gt;&lt;li&gt;Opinion | You Trust the Media More Than You Say You Do&lt;/li&gt;&lt;li&gt;Opinion | It’s Time for Democrats to Play Hardball to Thwart Mitch McConnell&lt;/li&gt;&lt;li&gt;Opinion | The Supreme Court is Now Operating Outside of American Public Opinion&lt;/li&gt;&lt;li&gt;Without Ivana, There’s No ‘The Donald’&lt;/li&gt;&lt;li&gt;When Ivana Trump Met Sarah Palin&lt;/li&gt;&lt;li&gt;I Once Supported Putin. Now I Know the Truth.&lt;/li&gt;&lt;li&gt;‘A Real Chilling Effect’: A Lefty Scholar is Dumping CAP — For AEI&lt;/li&gt;&lt;li&gt;The GOP Failed Millennial Moms Like Me. But It Needs Us Now More Than Ever.&lt;/li&gt;&lt;li&gt;‘I Had Been Seen as a Little Radioactive’: Lis Smith Talks Mayor Pete, How She Picks Stars and the Future of the Democratic Party&lt;/li&gt;&lt;li&gt;Opinion | How Kevin McCarthy Misplayed His Hand on the Jan. 6 Hearings&lt;/li&gt;&lt;/ul&gt;
+                News, Analysis and Opinion from POLITICO
+                </content>
+<updated>2022-07-21T20:03:46Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-07-21.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-07-21.epub"/>
 </entry>
 <entry>
 <id>The Diplomat</id>
@@ -102,22 +118,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="propublica-2022-07-21.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="propublica-2022-07-21.epub"/>
-</entry>
-<entry>
-<id>Rest of World</id>
-<title>Rest of World: 21 Jul, 2022</title>
-<summary>Rest of World: 21 Jul, 2022 published at 2022-07-21 10:00AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;For Japanese Uber delivery drivers, gig work is working&lt;/li&gt;&lt;li&gt;Instagram is fueling a thrifting boom in India, Pakistan, and Nepal&lt;/li&gt;&lt;li&gt;Funding’s dry. Companies are cutting back. We’ve been here before&lt;/li&gt;&lt;li&gt;Fleeing Putin, Russian tech workers find a home in Armenia&lt;/li&gt;&lt;li&gt;The global downturn is real, but the allure of Africa’s digital markets hasn’t changed&lt;/li&gt;&lt;li&gt;How to buy a hijab in Jakarta&lt;/li&gt;&lt;li&gt;“We’re just fucking illegal”: Uber Files reveal a pattern of shady behavior around the world&lt;/li&gt;&lt;li&gt;As global funding dries up, Mexico’s delivery startups see an opportunity&lt;/li&gt;&lt;li&gt;Overrun by influencers, historic sites are banning TikTok creators in Nepal&lt;/li&gt;&lt;li&gt;Pegasus used to spy on protesters, a popular actress, and  dozens more in Thailand, report shows&lt;/li&gt;&lt;li&gt;“When your poster child gets assassinated”: Airlift’s collapse shocks Pakistan’s startup world&lt;/li&gt;&lt;li&gt;How internet sleuths exposed a celebrity “volunteer soldier” in Ukraine as a fraud&lt;/li&gt;&lt;/ul&gt;
-                Reporting Global Tech Stories
-                </content>
-<updated>2022-07-21T10:00:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="restofworld-2022-07-21.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="restofworld-2022-07-21.epub"/>
 </entry>
 <entry>
 <id>The Third Pole</id>
