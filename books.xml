@@ -2,58 +2,42 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-21T07:44:47Z</updated>
+<updated>2022-07-21T11:40:24Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
-<id>London Review of Books</id>
-<title>London Review of Books</title>
-<summary>London Review of Books published at 2022-07-21 07:31AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;/ul&gt;
-                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
-                </content>
-<updated>2022-07-21T07:31:29Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-07-21.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-07-21.epub"/>
-</entry>
-<entry>
 <id>NY Times Books</id>
-<title>NY Times Books: 20 Jul, 2022</title>
-<summary>NY Times Books: 20 Jul, 2022 published at 2022-07-20 20:59PM.</summary>
+<title>NY Times Books: 21 Jul, 2022</title>
+<summary>NY Times Books: 21 Jul, 2022 published at 2022-07-21 09:46AM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;HarperCollins Workers Strike For Increased Wages, Benefits and Diversity&lt;/li&gt;&lt;li&gt;Quidditch Becomes ‘Quadball,’ Leaving J.K. Rowling Behind&lt;/li&gt;&lt;li&gt;Chance, Design and Inevitability in Three New Poetry Books&lt;/li&gt;&lt;li&gt;Words of War: A Literary Lifeline for the Battlefield&lt;/li&gt;&lt;li&gt;New Thrillers&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Newfoundland&lt;/li&gt;&lt;li&gt;In ‘The Kingdoms of Savannah,’ Oddballs Circle Around a Murder Mystery&lt;/li&gt;&lt;li&gt;Dana Canedy, Publisher of Simon &amp; Schuster’s Flagship Imprint, Has Left the Job&lt;/li&gt;&lt;li&gt;Why ‘Where the Crawdads Sing’ Author Delia Owens Is Wanted for Questioning&lt;/li&gt;&lt;li&gt;In ‘The Pink Hotel,’ Delusional Newlyweds Head Toward a Grand Reckoning&lt;/li&gt;&lt;li&gt;Review: ‘Porn of the Self’&lt;/li&gt;&lt;li&gt;Book Review: “The Inheritors” by Eve Fairbanks&lt;/li&gt;&lt;li&gt;Review: ‘The Haunting of Hajji Hotak and Other Stories,’ by Jamil Jan Kochai&lt;/li&gt;&lt;li&gt;Book Review: “Death by Landscape” by Elvia Wilk&lt;/li&gt;&lt;li&gt;David Dalton, Rock Writer Who Lived the Scene, Dies at 80&lt;/li&gt;&lt;li&gt;A Crop of New Novels About Race and Racism Finds Freedom in Satire&lt;/li&gt;&lt;li&gt;Love the Smell of Old Books? This Bookseller Would Like You to Leave.&lt;/li&gt;&lt;li&gt;David Weiss Halivni, Controversial Talmudic Scholar, Dies at 94&lt;/li&gt;&lt;li&gt;Review: “Picasso’s War: How Modern Art Came to America,” by Hugh Eakin&lt;/li&gt;&lt;li&gt;Wind, Of Course, Goethe and Shame&lt;/li&gt;&lt;li&gt;Review: ‘Dirtbag, Massachusetts,’ by Isaac Fitzgerald&lt;/li&gt;&lt;li&gt;Civil Rights Memoirs&lt;/li&gt;&lt;li&gt;‘Son of Elsewhere’ Recounts Life as a Young Immigrant&lt;/li&gt;&lt;li&gt;Dall-e-mini-Generated Book Covers&lt;/li&gt;&lt;li&gt;New Historical Fiction Novels&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Hip, Woke, Cool: It’s All Fodder For the Oxford Dictionary of African American English&lt;/li&gt;&lt;li&gt;Gabrielle Zevin Is Not Going to Post This Article&lt;/li&gt;&lt;li&gt;Review: ‘Dirt Creek,’ by Hayley Scrivenor and ‘Wake,’ by Shelley Burr&lt;/li&gt;&lt;li&gt;Ruth Ware Won’t Read ‘Bleak House’ Until She Retires&lt;/li&gt;&lt;li&gt;Review: ‘Fish Swimming in Dappled Water,’ by Riku Onda&lt;/li&gt;&lt;li&gt;HarperCollins Workers Strike For Increased Wages, Benefits and Diversity&lt;/li&gt;&lt;li&gt;Quidditch Becomes ‘Quadball,’ Leaving J.K. Rowling Behind&lt;/li&gt;&lt;li&gt;Chance, Design and Inevitability in Three New Poetry Books&lt;/li&gt;&lt;li&gt;Words of War: A Literary Lifeline for the Battlefield&lt;/li&gt;&lt;li&gt;New Thrillers&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Newfoundland&lt;/li&gt;&lt;li&gt;In ‘The Kingdoms of Savannah,’ Oddballs Circle Around a Murder Mystery&lt;/li&gt;&lt;li&gt;Dana Canedy, Publisher of Simon &amp; Schuster’s Flagship Imprint, Has Left the Job&lt;/li&gt;&lt;li&gt;Why ‘Where the Crawdads Sing’ Author Delia Owens Is Wanted for Questioning&lt;/li&gt;&lt;li&gt;In ‘The Pink Hotel,’ Delusional Newlyweds Head Toward a Grand Reckoning&lt;/li&gt;&lt;li&gt;Review: ‘Porn of the Self’&lt;/li&gt;&lt;li&gt;Book Review: “The Inheritors” by Eve Fairbanks&lt;/li&gt;&lt;li&gt;Review: ‘The Haunting of Hajji Hotak and Other Stories,’ by Jamil Jan Kochai&lt;/li&gt;&lt;li&gt;Book Review: “Death by Landscape” by Elvia Wilk&lt;/li&gt;&lt;li&gt;A Crop of New Novels About Race and Racism Finds Freedom in Satire&lt;/li&gt;&lt;li&gt;Love the Smell of Old Books? This Bookseller Would Like You to Leave.&lt;/li&gt;&lt;li&gt;David Weiss Halivni, Controversial Talmudic Scholar, Dies at 94&lt;/li&gt;&lt;li&gt;Review: “Picasso’s War: How Modern Art Came to America,” by Hugh Eakin&lt;/li&gt;&lt;li&gt;Wind, Of Course, Goethe and Shame&lt;/li&gt;&lt;li&gt;‘Son of Elsewhere’ Recounts Life as a Young Immigrant&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-07-20T20:59:13Z</updated>
+<updated>2022-07-21T09:46:12Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-20.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-20.epub"/>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-21.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-21.epub"/>
 </entry>
 <entry>
 <id>Asian Review of Books</id>
-<title>Asian Review of Books: 20 Jul, 2022</title>
-<summary>Asian Review of Books: 20 Jul, 2022 published at 2022-07-20 11:40AM.</summary>
+<title>Asian Review of Books: 21 Jul, 2022</title>
+<summary>Asian Review of Books: 21 Jul, 2022 published at 2022-07-21 09:06AM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;“Empires of Ideas: Creating the Modern University from Germany to America to China” by William C Kirby&lt;/li&gt;&lt;li&gt;“Sensitive Reading: The Pleasures of South Asian Literature in Translation”&lt;/li&gt;&lt;li&gt;“Banaras Talkies” by Satya Vyas&lt;/li&gt;&lt;li&gt;“An Object of Seduction: Chinese Silk in the Early Modern Transpacific Trade, 1500–1700” by Xiolin Duan&lt;/li&gt;&lt;li&gt;“Life Ceremony” by Sayaka Murata&lt;/li&gt;&lt;li&gt;Podcast with Jennifer Lin, author of “Beethoven in Beijing: Stories from the Philadelphia Orchestra’s Historic Journey to China”&lt;/li&gt;&lt;li&gt;A translated extract from “Silver and the Pacific”&lt;/li&gt;&lt;li&gt;“Guo Pei: Couture Fantasy” by Jill D’Alessandro&lt;/li&gt;&lt;li&gt;“The Emperors of Byzantium” by Kevin Lygo&lt;/li&gt;&lt;li&gt;“Chronicles of the Lost Daughters” by Debarati Mukhopadhyay&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Podcast with Kaveh L Hemmat, translator of “The Kushnameh: The Persian Epic of Kush the Tusked” by Iranshah ibn Abu’l-Khayr&lt;/li&gt;&lt;li&gt;“Empires of Ideas: Creating the Modern University from Germany to America to China” by William C Kirby&lt;/li&gt;&lt;li&gt;“Sensitive Reading: The Pleasures of South Asian Literature in Translation”&lt;/li&gt;&lt;li&gt;“Banaras Talkies” by Satya Vyas&lt;/li&gt;&lt;li&gt;“An Object of Seduction: Chinese Silk in the Early Modern Transpacific Trade, 1500–1700” by Xiolin Duan&lt;/li&gt;&lt;li&gt;“Life Ceremony” by Sayaka Murata&lt;/li&gt;&lt;li&gt;Podcast with Jennifer Lin, author of “Beethoven in Beijing: Stories from the Philadelphia Orchestra’s Historic Journey to China”&lt;/li&gt;&lt;li&gt;A translated extract from “Silver and the Pacific”&lt;/li&gt;&lt;li&gt;“Guo Pei: Couture Fantasy” by Jill D’Alessandro&lt;/li&gt;&lt;li&gt;“The Emperors of Byzantium” by Kevin Lygo&lt;/li&gt;&lt;/ul&gt;
                 In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
                 </content>
-<updated>2022-07-20T11:40:05Z</updated>
+<updated>2022-07-21T09:06:18Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-07-20.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-07-20.epub"/>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-07-21.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-07-21.epub"/>
 </entry>
 <entry>
 <id>Five Books</id>
