@@ -2,20 +2,36 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-22T19:41:45Z</updated>
+<updated>2022-07-22T23:45:30Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
+<id>Nautilus</id>
+<title>Nautilus: 22 Jul, 2022</title>
+<summary>Nautilus: 22 Jul, 2022 published at 2022-07-22 22:16PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Land of Extremes: Poetry of the Sonoran Desert&lt;/li&gt;&lt;li&gt;Feeling Stressed? Read a Poem&lt;/li&gt;&lt;li&gt;This Planetary Scientist Is Always Reaching for Something Big&lt;/li&gt;&lt;li&gt;The Case for Popularizing Ocean Science&lt;/li&gt;&lt;li&gt;A Surprising Side of Carl Sagan&lt;/li&gt;&lt;li&gt;How Do We Get People Who Believe in Pseudoscience to Trust Science?&lt;/li&gt;&lt;li&gt;Swimming in Noise&lt;/li&gt;&lt;li&gt;The High Price of Cheap Shrimp&lt;/li&gt;&lt;li&gt;How Are the Bees?&lt;/li&gt;&lt;li&gt;Reshuffled Rivers Bolster the Amazon’s Hyper-Biodiversity&lt;/li&gt;&lt;li&gt;Who Are the Scientists Here?&lt;/li&gt;&lt;li&gt;The Giraffe Neck Evolved for Sexual Combat&lt;/li&gt;&lt;li&gt;Print Edition 43&lt;/li&gt;&lt;li&gt;Print Edition 42&lt;/li&gt;&lt;li&gt;Print Edition 41&lt;/li&gt;&lt;li&gt;Print Edition 40&lt;/li&gt;&lt;li&gt;After 100 Years of Research, Autism Remains a Puzzle&lt;/li&gt;&lt;li&gt;Embryo Cells Set Patterns for Growth by Pushing and Pulling&lt;/li&gt;&lt;li&gt;Life Helps Make Almost Half of All Minerals on Earth&lt;/li&gt;&lt;li&gt;Termination of Pregnancy Has Always Been Part of Women’s Health&lt;/li&gt;&lt;li&gt;How the Brain Allows the Deaf to Experience Music&lt;/li&gt;&lt;li&gt;Under Anesthesia, Where Do Our Minds Go?&lt;/li&gt;&lt;li&gt;Thinking Like a Scientist Will Make You Happier&lt;/li&gt;&lt;li&gt;Don’t Give Up on Facts&lt;/li&gt;&lt;li&gt;Are You a Naïve Realist?&lt;/li&gt;&lt;li&gt;Moving Beyond Mimicry in Artificial Intelligence&lt;/li&gt;&lt;li&gt;Overthrowing the Patriarchy Through Ecstatic Sex&lt;/li&gt;&lt;li&gt;What Oceanographers Can Learn From Their Animal Colleagues&lt;/li&gt;&lt;/ul&gt;
+                Nautilus is a different kind of science magazine. Our stories take you into the depths of science and spotlight its ripples in our lives and cultures. We believe any subject in science, no matter how complex, can be explained with clarity and vitality.
+                </content>
+<updated>2022-07-22T22:16:48Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nautilus-2022-07-22.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nautilus-2022-07-22.epub"/>
+</entry>
+<entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 22 Jul, 2022</title>
-<summary>The Atlantic: 22 Jul, 2022 published at 2022-07-22 19:04PM.</summary>
+<summary>The Atlantic: 22 Jul, 2022 published at 2022-07-22 21:46PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The Novel That Captures New York City Right Now&lt;/li&gt;&lt;li&gt;Why We Hate Rising Prices More Than We Fear Losing Our Jobs&lt;/li&gt;&lt;li&gt;America Is Running Out of ‘COVID Virgins’&lt;/li&gt;&lt;li&gt;The Webb Space Telescope Is a Time Machine&lt;/li&gt;&lt;li&gt;What a Warming Planet Means for Literature&lt;/li&gt;&lt;li&gt;The Risk and Opportunity of Online Fertility Groups&lt;/li&gt;&lt;li&gt;The Myth That America’s Abortion Laws Are More Permissive Than Europe’s&lt;/li&gt;&lt;li&gt;Photos of the Week: Swan Upping, Worm Charming, Living Bridge&lt;/li&gt;&lt;li&gt;The Inescapable Conclusion From the January 6 Hearings&lt;/li&gt;&lt;li&gt;The Opening for Democrats on Abortion&lt;/li&gt;&lt;li&gt;The Secret Service Texting Scandal Makes No Sense&lt;/li&gt;&lt;li&gt;Of Course Biden Has COVID&lt;/li&gt;&lt;li&gt;We’re Testing for Monkeypox the Wrong Way&lt;/li&gt;&lt;li&gt;Are Latinos Really Realigning Toward Republicans?&lt;/li&gt;&lt;li&gt;America Was in an Early-Death Crisis Long Before COVID&lt;/li&gt;&lt;li&gt;The Most Moving Film of the Year Is a Documentary About Volcanoes&lt;/li&gt;&lt;li&gt;Middle Eastern Autocrats Embarrassed Biden at Will&lt;/li&gt;&lt;li&gt;A Love Letter to the ‘Best Mountain Range on Earth’&lt;/li&gt;&lt;li&gt;A Happiness Columnist’s Three Biggest Happiness Rules&lt;/li&gt;&lt;li&gt;America’s Self-Obsession Is Killing Its Democracy&lt;/li&gt;&lt;li&gt;The Next Generation of NIMBYs&lt;/li&gt;&lt;li&gt;Six Books to Guide You Through the Real American West&lt;/li&gt;&lt;li&gt;The Real Reason Democrats Are Losing Ground on Education&lt;/li&gt;&lt;li&gt;The Spiders That Choose Death&lt;/li&gt;&lt;li&gt;How to Pivot on a Thursday Night&lt;/li&gt;&lt;li&gt;Jordan Peele’s Nope Is Spectacular, Indulgent, and Brutal&lt;/li&gt;&lt;li&gt;The Gray Man Takes the Stoic-Spy Cliché Way Too Far&lt;/li&gt;&lt;li&gt;Lizzo’s Music Really Is Special&lt;/li&gt;&lt;li&gt;Do Animals Dream?&lt;/li&gt;&lt;li&gt;You’ve Never Seen Anything Quite Like The Rehearsal&lt;/li&gt;&lt;li&gt;When a Troubling Book Gets a Hollywood Makeover&lt;/li&gt;&lt;li&gt;Where the Crawdads Sing Author Wanted for Questioning in Murder&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;England Can’t Take the Heat&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;Wildfires Rage Across Southwestern Europe&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Power Imbalance Undermining Global Health&lt;/li&gt;&lt;li&gt;Uyghur Poems From a Chinese Prison&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;Put Your Face in Airplane Mode&lt;/li&gt;&lt;li&gt;New COVID Vaccines Will Be Ready This Fall. America Won’t Be.&lt;/li&gt;&lt;li&gt;We’ve Had Other Climate Defeats. This One Is by Far the Weirdest.&lt;/li&gt;&lt;li&gt;America’s Most Misunderstood Marsupial&lt;/li&gt;&lt;li&gt;The World Is Burning Once Again&lt;/li&gt;&lt;li&gt;There Is a Planet With Clouds Made of Sand&lt;/li&gt;&lt;li&gt;Joe Manchin’s Fickleness Is a Needless Catastrophe&lt;/li&gt;&lt;li&gt;Seriously, What’s Making All These Mysterious Space Signals?&lt;/li&gt;&lt;li&gt;U.S. Messaging on Monkeypox Is Deeply Flawed&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;The Everything-Is-Weird Economy&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;The Criminal Case Against Trump Is Getting Stronger&lt;/li&gt;&lt;li&gt;The Gray Man Takes the Stoic-Spy Cliché Way Too Far&lt;/li&gt;&lt;li&gt;The Novel That Captures New York City Right Now&lt;/li&gt;&lt;li&gt;Why We Hate Rising Prices More Than We Fear Losing Our Jobs&lt;/li&gt;&lt;li&gt;America Is Running Out of ‘COVID Virgins’&lt;/li&gt;&lt;li&gt;The Webb Space Telescope Is a Time Machine&lt;/li&gt;&lt;li&gt;What a Warming Planet Means for Literature&lt;/li&gt;&lt;li&gt;The Risk and Opportunity of Online Fertility Groups&lt;/li&gt;&lt;li&gt;The Myth That America’s Abortion Laws Are More Permissive Than Europe’s&lt;/li&gt;&lt;li&gt;Photos of the Week: Swan Upping, Worm Charming, Living Bridge&lt;/li&gt;&lt;li&gt;The Inescapable Conclusion From the January 6 Hearings&lt;/li&gt;&lt;li&gt;The Opening for Democrats on Abortion&lt;/li&gt;&lt;li&gt;The Secret Service Texting Scandal Makes No Sense&lt;/li&gt;&lt;li&gt;Of Course Biden Has COVID&lt;/li&gt;&lt;li&gt;We’re Testing for Monkeypox the Wrong Way&lt;/li&gt;&lt;li&gt;Are Latinos Really Realigning Toward Republicans?&lt;/li&gt;&lt;li&gt;America Was in an Early-Death Crisis Long Before COVID&lt;/li&gt;&lt;li&gt;The Most Moving Film of the Year Is a Documentary About Volcanoes&lt;/li&gt;&lt;li&gt;Middle Eastern Autocrats Embarrassed Biden at Will&lt;/li&gt;&lt;li&gt;A Love Letter to the ‘Best Mountain Range on Earth’&lt;/li&gt;&lt;li&gt;A Happiness Columnist’s Three Biggest Happiness Rules&lt;/li&gt;&lt;li&gt;America’s Self-Obsession Is Killing Its Democracy&lt;/li&gt;&lt;li&gt;The Next Generation of NIMBYs&lt;/li&gt;&lt;li&gt;Six Books to Guide You Through the Real American West&lt;/li&gt;&lt;li&gt;The Real Reason Democrats Are Losing Ground on Education&lt;/li&gt;&lt;li&gt;Jordan Peele’s Nope Is Spectacular, Indulgent, and Brutal&lt;/li&gt;&lt;li&gt;Lizzo’s Music Really Is Special&lt;/li&gt;&lt;li&gt;Do Animals Dream?&lt;/li&gt;&lt;li&gt;You’ve Never Seen Anything Quite Like The Rehearsal&lt;/li&gt;&lt;li&gt;When a Troubling Book Gets a Hollywood Makeover&lt;/li&gt;&lt;li&gt;Where the Crawdads Sing Author Wanted for Questioning in Murder&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;England Can’t Take the Heat&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;Wildfires Rage Across Southwestern Europe&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Power Imbalance Undermining Global Health&lt;/li&gt;&lt;li&gt;Uyghur Poems From a Chinese Prison&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;Put Your Face in Airplane Mode&lt;/li&gt;&lt;li&gt;New COVID Vaccines Will Be Ready This Fall. America Won’t Be.&lt;/li&gt;&lt;li&gt;The Spiders That Choose Death&lt;/li&gt;&lt;li&gt;We’ve Had Other Climate Defeats. This One Is by Far the Weirdest.&lt;/li&gt;&lt;li&gt;America’s Most Misunderstood Marsupial&lt;/li&gt;&lt;li&gt;The World Is Burning Once Again&lt;/li&gt;&lt;li&gt;There Is a Planet With Clouds Made of Sand&lt;/li&gt;&lt;li&gt;How to Pivot on a Thursday Night&lt;/li&gt;&lt;li&gt;U.S. Messaging on Monkeypox Is Deeply Flawed&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;The Everything-Is-Weird Economy&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;/ul&gt;
                 News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
                 </content>
-<updated>2022-07-22T19:04:46Z</updated>
+<updated>2022-07-22T21:46:56Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
@@ -26,18 +42,34 @@
 <entry>
 <id>Vox</id>
 <title>Vox: 22 Jul, 2022</title>
-<summary>Vox: 22 Jul, 2022 published at 2022-07-22 17:50PM.</summary>
+<summary>Vox: 22 Jul, 2022 published at 2022-07-22 21:10PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The bill that could make it harder to overturn an election&lt;/li&gt;&lt;li&gt;Beavers are heat wave heroes&lt;/li&gt;&lt;li&gt;Amazon wants to be your doctor now, too&lt;/li&gt;&lt;li&gt;4 factors that could determine if gas prices will keep falling&lt;/li&gt;&lt;li&gt;How Germany is kicking its meat habit&lt;/li&gt;&lt;li&gt;9 questions about the January 6 committee, answered&lt;/li&gt;&lt;li&gt;5 takeaways from the January 6 hearing&lt;/li&gt;&lt;li&gt;The Supreme Court just let a Trump judge seize control of ICE, at least for now&lt;/li&gt;&lt;li&gt;The Supreme Court overturns Roe v. Wade&lt;/li&gt;&lt;li&gt;Jordan Peele’s Nope, explained&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Steve Bannon was found guilty. What happens now?&lt;/li&gt;&lt;li&gt;Finally, some good news in the fight to end robocalls&lt;/li&gt;&lt;li&gt;Rape and incest abortion exceptions don’t really exist&lt;/li&gt;&lt;li&gt;The bill that could make it harder to overturn an election&lt;/li&gt;&lt;li&gt;Beavers are heat wave heroes&lt;/li&gt;&lt;li&gt;Amazon wants to be your doctor now, too&lt;/li&gt;&lt;li&gt;4 factors that could determine if gas prices will keep falling&lt;/li&gt;&lt;li&gt;How Germany is kicking its meat habit&lt;/li&gt;&lt;li&gt;9 questions about the January 6 committee, answered&lt;/li&gt;&lt;li&gt;5 takeaways from the January 6 hearing&lt;/li&gt;&lt;/ul&gt;
                 General interest news site
                 </content>
-<updated>2022-07-22T17:50:00Z</updated>
+<updated>2022-07-22T21:10:00Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-22.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-22.epub"/>
+</entry>
+<entry>
+<id>Economist</id>
+<title>Economist: 23 Jul, 2022</title>
+<summary>Economist: 23 Jul, 2022 published at 2022-07-22 19:33PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Politics&lt;/li&gt;&lt;li&gt;Business&lt;/li&gt;&lt;li&gt;KAL’s cartoon&lt;/li&gt;&lt;li&gt;Growth cure&lt;/li&gt;&lt;li&gt;Three letters that won’t save the planet&lt;/li&gt;&lt;li&gt;A warning of worse to come&lt;/li&gt;&lt;li&gt;Progress and poverty&lt;/li&gt;&lt;li&gt;Turkey shoot&lt;/li&gt;&lt;li&gt;On medical data, Singapore, Boris Johnson, Switzerland, servant-leaders&lt;/li&gt;&lt;li&gt;Somalia’s president wants help to fight Africa’s terrorist groups&lt;/li&gt;&lt;li&gt;Reform labour laws to tackle inequality in America, urges Celine McNicholas&lt;/li&gt;&lt;li&gt;Unions are now a lifestyle choice for some young, aspirational workers, says Walter Olson&lt;/li&gt;&lt;li&gt;Inflation nation&lt;/li&gt;&lt;li&gt;Tick, tick, boom&lt;/li&gt;&lt;li&gt;The struggle for hearts and minds&lt;/li&gt;&lt;li&gt;Derailed&lt;/li&gt;&lt;li&gt;Lifting the veil on Uvalde&lt;/li&gt;&lt;li&gt;Mortal danger for mothers&lt;/li&gt;&lt;li&gt;Trumped&lt;/li&gt;&lt;li&gt;Follow the influencers&lt;/li&gt;&lt;li&gt;Mired in meth&lt;/li&gt;&lt;li&gt;A yearning for Utopia&lt;/li&gt;&lt;li&gt;Feeling the pinch&lt;/li&gt;&lt;li&gt;Cheers!&lt;/li&gt;&lt;li&gt;In with the old&lt;/li&gt;&lt;li&gt;Comeback Khan&lt;/li&gt;&lt;li&gt;One-track mind&lt;/li&gt;&lt;li&gt;States of mind&lt;/li&gt;&lt;li&gt;Tearing down the bamboo walls&lt;/li&gt;&lt;li&gt;Test after test&lt;/li&gt;&lt;li&gt;Travel bug&lt;/li&gt;&lt;li&gt;Lessons from Malcolm X&lt;/li&gt;&lt;li&gt;Too many to count&lt;/li&gt;&lt;li&gt;A reform that makes matters worse&lt;/li&gt;&lt;li&gt;Unsecured green investments&lt;/li&gt;&lt;li&gt;Adventurous capital&lt;/li&gt;&lt;li&gt;Game over&lt;/li&gt;&lt;li&gt;When will Odessa’s port be reopened?&lt;/li&gt;&lt;li&gt;Common enemies&lt;/li&gt;&lt;li&gt;Red-hot in Alex&lt;/li&gt;&lt;li&gt;Let the sleeper awaken&lt;/li&gt;&lt;li&gt;Bio Britannia&lt;/li&gt;&lt;li&gt;Don’t gloat about the float&lt;/li&gt;&lt;li&gt;Sunak v Truss&lt;/li&gt;&lt;li&gt;What was that, again?&lt;/li&gt;&lt;li&gt;A motorway for drones&lt;/li&gt;&lt;li&gt;The battle for the Stupid Party&lt;/li&gt;&lt;li&gt;Raising the game&lt;/li&gt;&lt;li&gt;In need of a clean-up&lt;/li&gt;&lt;li&gt;The saviour complex&lt;/li&gt;&lt;li&gt;How to charge more&lt;/li&gt;&lt;li&gt;The warm glow&lt;/li&gt;&lt;li&gt;Internalising the externalities&lt;/li&gt;&lt;li&gt;The signal and the noise&lt;/li&gt;&lt;li&gt;Missionary creep&lt;/li&gt;&lt;li&gt;Measure less, but better&lt;/li&gt;&lt;li&gt;Acknowledgments&lt;/li&gt;&lt;li&gt;A juggling act&lt;/li&gt;&lt;li&gt;Watershed’s moment&lt;/li&gt;&lt;li&gt;The latest in WFH&lt;/li&gt;&lt;li&gt;What graduates want&lt;/li&gt;&lt;li&gt;Puttin’ it up at the Ritz&lt;/li&gt;&lt;li&gt;Unlocking Keyence’s secret&lt;/li&gt;&lt;li&gt;The fragile 53&lt;/li&gt;&lt;li&gt;Bittersweet&lt;/li&gt;&lt;li&gt;A tale of three parities&lt;/li&gt;&lt;li&gt;Power play&lt;/li&gt;&lt;li&gt;No delivery, no payment&lt;/li&gt;&lt;li&gt;Wake-up call&lt;/li&gt;&lt;li&gt;Aiming high&lt;/li&gt;&lt;li&gt;Predict and survive&lt;/li&gt;&lt;li&gt;Wrong turning&lt;/li&gt;&lt;li&gt;Cycle races&lt;/li&gt;&lt;li&gt;Association of British Science Writers&lt;/li&gt;&lt;li&gt;The vision thing&lt;/li&gt;&lt;li&gt;The guilty and the gone&lt;/li&gt;&lt;li&gt;Guts and glory&lt;/li&gt;&lt;li&gt;Designs for living&lt;/li&gt;&lt;li&gt;The power of 3&lt;/li&gt;&lt;li&gt;The oligarch’s lament&lt;/li&gt;&lt;li&gt;Economic data, commodities and markets&lt;/li&gt;&lt;li&gt;The scorched Earth&lt;/li&gt;&lt;li&gt;Why have new Omicron strains of covid not been given Greek names?&lt;/li&gt;&lt;li&gt;The increase in simultaneous heatwaves&lt;/li&gt;&lt;li&gt;How to be a lady&lt;/li&gt;&lt;/ul&gt;
+                Global news and current affairs from a European perspective. Best downloaded on Friday mornings (GMT)
+                </content>
+<updated>2022-07-22T19:33:02Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-07-22.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="economist-2022-07-22.epub"/>
 </entry>
 <entry>
 <id>ProPublica</id>
@@ -70,22 +102,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-diplomat-2022-07-22.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-diplomat-2022-07-22.epub"/>
-</entry>
-<entry>
-<id>Economist</id>
-<title>Economist: 23 Jul, 2022</title>
-<summary>Economist: 23 Jul, 2022 published at 2022-07-22 16:47PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Politics&lt;/li&gt;&lt;li&gt;Business&lt;/li&gt;&lt;li&gt;KAL’s cartoon&lt;/li&gt;&lt;li&gt;Growth cure&lt;/li&gt;&lt;li&gt;Three letters that won’t save the planet&lt;/li&gt;&lt;li&gt;A warning of worse to come&lt;/li&gt;&lt;li&gt;Progress and poverty&lt;/li&gt;&lt;li&gt;Turkey shoot&lt;/li&gt;&lt;li&gt;On medical data, Singapore, Boris Johnson, Switzerland, servant-leaders&lt;/li&gt;&lt;li&gt;Somalia’s president wants help to fight Africa’s terrorist groups&lt;/li&gt;&lt;li&gt;Reform labour laws to tackle inequality in America, urges Celine McNicholas&lt;/li&gt;&lt;li&gt;Unions are now a lifestyle choice for some young, aspirational workers, says Walter Olson&lt;/li&gt;&lt;li&gt;Inflation nation&lt;/li&gt;&lt;li&gt;Tick, tick, boom&lt;/li&gt;&lt;li&gt;The struggle for hearts and minds&lt;/li&gt;&lt;li&gt;Derailed&lt;/li&gt;&lt;li&gt;Lifting the veil on Uvalde&lt;/li&gt;&lt;li&gt;Mortal danger for mothers&lt;/li&gt;&lt;li&gt;Trumped&lt;/li&gt;&lt;li&gt;Follow the influencers&lt;/li&gt;&lt;li&gt;Mired in meth&lt;/li&gt;&lt;li&gt;A yearning for Utopia&lt;/li&gt;&lt;li&gt;Feeling the pinch&lt;/li&gt;&lt;li&gt;Cheers!&lt;/li&gt;&lt;li&gt;In with the old&lt;/li&gt;&lt;li&gt;Comeback Khan&lt;/li&gt;&lt;li&gt;One-track mind&lt;/li&gt;&lt;li&gt;States of mind&lt;/li&gt;&lt;li&gt;Tearing down the bamboo walls&lt;/li&gt;&lt;li&gt;Test after test&lt;/li&gt;&lt;li&gt;Travel bug&lt;/li&gt;&lt;li&gt;Lessons from Malcolm X&lt;/li&gt;&lt;li&gt;Too many to count&lt;/li&gt;&lt;li&gt;A reform that makes matters worse&lt;/li&gt;&lt;li&gt;Unsecured green investments&lt;/li&gt;&lt;li&gt;Adventurous capital&lt;/li&gt;&lt;li&gt;Game over&lt;/li&gt;&lt;li&gt;When will Odessa’s port be reopened?&lt;/li&gt;&lt;li&gt;Common enemies&lt;/li&gt;&lt;li&gt;Red-hot in Alex&lt;/li&gt;&lt;li&gt;Let the sleeper awaken&lt;/li&gt;&lt;li&gt;Bio Britannia&lt;/li&gt;&lt;li&gt;Don’t gloat about the float&lt;/li&gt;&lt;li&gt;Sunak v Truss&lt;/li&gt;&lt;li&gt;What was that, again?&lt;/li&gt;&lt;li&gt;A motorway for drones&lt;/li&gt;&lt;li&gt;The battle for the Stupid Party&lt;/li&gt;&lt;li&gt;Raising the game&lt;/li&gt;&lt;li&gt;In need of a clean-up&lt;/li&gt;&lt;li&gt;The saviour complex&lt;/li&gt;&lt;li&gt;How to charge more&lt;/li&gt;&lt;li&gt;The warm glow&lt;/li&gt;&lt;li&gt;Internalising the externalities&lt;/li&gt;&lt;li&gt;The signal and the noise&lt;/li&gt;&lt;li&gt;Missionary creep&lt;/li&gt;&lt;li&gt;Measure less, but better&lt;/li&gt;&lt;li&gt;Acknowledgments&lt;/li&gt;&lt;li&gt;A juggling act&lt;/li&gt;&lt;li&gt;Watershed’s moment&lt;/li&gt;&lt;li&gt;The latest in WFH&lt;/li&gt;&lt;li&gt;What graduates want&lt;/li&gt;&lt;li&gt;Puttin’ it up at the Ritz&lt;/li&gt;&lt;li&gt;Unlocking Keyence’s secret&lt;/li&gt;&lt;li&gt;The fragile 53&lt;/li&gt;&lt;li&gt;Bittersweet&lt;/li&gt;&lt;li&gt;A tale of three parities&lt;/li&gt;&lt;li&gt;Power play&lt;/li&gt;&lt;li&gt;No delivery, no payment&lt;/li&gt;&lt;li&gt;Wake-up call&lt;/li&gt;&lt;li&gt;Aiming high&lt;/li&gt;&lt;li&gt;Predict and survive&lt;/li&gt;&lt;li&gt;Wrong turning&lt;/li&gt;&lt;li&gt;Cycle races&lt;/li&gt;&lt;li&gt;Association of British Science Writers&lt;/li&gt;&lt;li&gt;The vision thing&lt;/li&gt;&lt;li&gt;The guilty and the gone&lt;/li&gt;&lt;li&gt;Guts and glory&lt;/li&gt;&lt;li&gt;Designs for living&lt;/li&gt;&lt;li&gt;The power of 3&lt;/li&gt;&lt;li&gt;The oligarch’s lament&lt;/li&gt;&lt;li&gt;Economic data, commodities and markets&lt;/li&gt;&lt;li&gt;The scorched Earth&lt;/li&gt;&lt;li&gt;Why have new Omicron strains of covid not been given Greek names?&lt;/li&gt;&lt;li&gt;The increase in simultaneous heatwaves&lt;/li&gt;&lt;li&gt;How to be a lady&lt;/li&gt;&lt;/ul&gt;
-                Global news and current affairs from a European perspective. Best downloaded on Friday mornings (GMT)
-                </content>
-<updated>2022-07-22T16:47:57Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-07-22.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="economist-2022-07-22.epub"/>
 </entry>
 <entry>
 <id>Rest of World</id>
@@ -136,22 +152,6 @@
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="thirdpole-2022-07-22.epub"/>
 </entry>
 <entry>
-<id>Nautilus</id>
-<title>Nautilus: 20 Jul, 2022</title>
-<summary>Nautilus: 20 Jul, 2022 published at 2022-07-20 22:09PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Land of Extremes: Poetry of the Sonoran Desert&lt;/li&gt;&lt;li&gt;Feeling Stressed? Read a Poem&lt;/li&gt;&lt;li&gt;This Planetary Scientist Is Always Reaching for Something Big&lt;/li&gt;&lt;li&gt;The Case for Popularizing Ocean Science&lt;/li&gt;&lt;li&gt;A Surprising Side of Carl Sagan&lt;/li&gt;&lt;li&gt;How Do We Get People Who Believe in Pseudoscience to Trust Science?&lt;/li&gt;&lt;li&gt;Swimming in Noise&lt;/li&gt;&lt;li&gt;The High Price of Cheap Shrimp&lt;/li&gt;&lt;li&gt;How Are the Bees?&lt;/li&gt;&lt;li&gt;Reshuffled Rivers Bolster the Amazon’s Hyper-Biodiversity&lt;/li&gt;&lt;li&gt;Who Are the Scientists Here?&lt;/li&gt;&lt;li&gt;The Giraffe Neck Evolved for Sexual Combat&lt;/li&gt;&lt;li&gt;Print Edition 43&lt;/li&gt;&lt;li&gt;Print Edition 42&lt;/li&gt;&lt;li&gt;Print Edition 41&lt;/li&gt;&lt;li&gt;Print Edition 40&lt;/li&gt;&lt;li&gt;After 100 Years of Research, Autism Remains a Puzzle&lt;/li&gt;&lt;li&gt;Embryo Cells Set Patterns for Growth by Pushing and Pulling&lt;/li&gt;&lt;li&gt;Life Helps Make Almost Half of All Minerals on Earth&lt;/li&gt;&lt;li&gt;How the Brain Allows the Deaf to Experience Music&lt;/li&gt;&lt;li&gt;Under Anesthesia, Where Do Our Minds Go?&lt;/li&gt;&lt;li&gt;Thinking Like a Scientist Will Make You Happier&lt;/li&gt;&lt;li&gt;Don’t Give Up on Facts&lt;/li&gt;&lt;li&gt;Are You a Naïve Realist?&lt;/li&gt;&lt;li&gt;Moving Beyond Mimicry in Artificial Intelligence&lt;/li&gt;&lt;li&gt;Overthrowing the Patriarchy Through Ecstatic Sex&lt;/li&gt;&lt;li&gt;What Oceanographers Can Learn From Their Animal Colleagues&lt;/li&gt;&lt;/ul&gt;
-                Nautilus is a different kind of science magazine. Our stories take you into the depths of science and spotlight its ripples in our lives and cultures. We believe any subject in science, no matter how complex, can be explained with clarity and vitality.
-                </content>
-<updated>2022-07-20T22:09:24Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nautilus-2022-07-20.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nautilus-2022-07-20.epub"/>
-</entry>
-<entry>
 <id>Nature</id>
 <title>Nature: 21 Jul, 2022</title>
 <summary>Nature: 21 Jul, 2022 published at 2022-07-20 00:00AM.</summary>
@@ -166,22 +166,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nature-2022-07-20.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nature-2022-07-20.epub"/>
-</entry>
-<entry>
-<id>Wired Magazine</id>
-<title>Wired Magazine: 18 Jul, 2022</title>
-<summary>Wired Magazine: 18 Jul, 2022 published at 2022-07-18 11:00AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The Loneliness of the Junior College Esports Coach&lt;/li&gt;&lt;li&gt;Here Comes the Sun—to End Civilization&lt;/li&gt;&lt;li&gt;When Covid Came for Provincetown&lt;/li&gt;&lt;li&gt;The Unwritten Laws of Physics for Black Women&lt;/li&gt;&lt;li&gt;Volodymyr Zelensky on War, Technology, and the Future of Ukraine&lt;/li&gt;&lt;li&gt;How the Secret ‘Project Galileo’ Gave Rise to the MoonSwatch&lt;/li&gt;&lt;li&gt;Six-Word Sci-Fi: Stories Written by You&lt;/li&gt;&lt;li&gt;This Designer Guitar Is Made From a Bent Sheet of Steel&lt;/li&gt;&lt;li&gt;A Photographer Captures Earth as a Strange New World&lt;/li&gt;&lt;li&gt;The Genre-Transcending Mastery of The Staircase&lt;/li&gt;&lt;li&gt;Life Is Great in the Age of No Secrets&lt;/li&gt;&lt;li&gt;Prediction Engines Are Like Karma: You Get What You Stream&lt;/li&gt;&lt;li&gt;The Multifarious Multiplexity of Taika Waititi&lt;/li&gt;&lt;li&gt;The ‘Form’ Element Created the Modern Web. Was It a Big Mistake?&lt;/li&gt;&lt;li&gt;‘How Are They Weapons? That’s Only a Flashlight!’&lt;/li&gt;&lt;li&gt;Volodymyr Zelensky and the Art of the War Story&lt;/li&gt;&lt;li&gt;The US Military Is Building Its Own Metaverse&lt;/li&gt;&lt;li&gt;Bill Gates Is So Over This Pandemic&lt;/li&gt;&lt;li&gt;Can Social Media Be Redeemed?&lt;/li&gt;&lt;li&gt;Paradise at the Crypto Arcade: Inside the Web3 Revolution&lt;/li&gt;&lt;li&gt;Fast, Cheap, and Out of Control: Inside Shein’s Sudden Rise&lt;/li&gt;&lt;li&gt;With the Clock Running Out, Humans Need to Rethink Time Itself&lt;/li&gt;&lt;li&gt;Broken Charging Stations Could Be Stalling the EV Movement&lt;/li&gt;&lt;li&gt;Welcome to Janelle Monáe’s Dreamworld&lt;/li&gt;&lt;li&gt;Do I Really Need to Back Up All My Data?&lt;/li&gt;&lt;li&gt;The Intoxicating Pleasure of Conspiratorial Thinking&lt;/li&gt;&lt;li&gt;Extreme Heat Is a Disease for Cities. Treat It That Way&lt;/li&gt;&lt;li&gt;The End of Alcohol&lt;/li&gt;&lt;li&gt;Time Got So Much Weirder. The World Needs a New Lexicon&lt;/li&gt;&lt;li&gt;This Startup Wants to Get in Your Ears and Watch Your Brain&lt;/li&gt;&lt;li&gt;A Farmer’s Quest to Beat California’s Waves of Drought and Deluge&lt;/li&gt;&lt;li&gt;The Bitcoin Bust That Took Down the Web’s Biggest Child Abuse Site&lt;/li&gt;&lt;li&gt;If Someone Is Typing, Then Stops … Can I Ask Why?&lt;/li&gt;&lt;li&gt;I Finally Reached Computing Nirvana. What Was It All For?&lt;/li&gt;&lt;li&gt;The Enduring Legacy of Clubhouse’s Chatty Revolution&lt;/li&gt;&lt;li&gt;Is Russia’s Largest Tech Company Too Big to Fail?&lt;/li&gt;&lt;li&gt;It’s Like GPT-3, but for Code—Fun, Fast, and Full of Flaws&lt;/li&gt;&lt;li&gt;The Infinite Reach of Joel Kaplan, Facebook’s Man in Washington&lt;/li&gt;&lt;li&gt;‘I’m the Operator’: The Aftermath of a Self-Driving Tragedy&lt;/li&gt;&lt;li&gt;Trapped in Silicon Valley’s Hidden Caste System&lt;/li&gt;&lt;li&gt;Zillow Botched Buying Homes. Opendoor Thinks It Can Do Better&lt;/li&gt;&lt;li&gt;The History—and Disturbing Resurrection—of Black Androids&lt;/li&gt;&lt;li&gt;Jacques Vallée Still Doesn’t Know What UFOs Are&lt;/li&gt;&lt;li&gt;The Best Way to Learn Online? Be a Lurker&lt;/li&gt;&lt;li&gt;Driving While Baked? Inside the High-Tech Quest to Find Out&lt;/li&gt;&lt;li&gt;Ada Palmer and the Weird Hand of Progress&lt;/li&gt;&lt;li&gt;How Telegram Became the Anti-Facebook&lt;/li&gt;&lt;li&gt;Do Good Doorbell Cams Make Good Neighbors?&lt;/li&gt;&lt;li&gt;6 Apps That Take the Grind out of Your Workday&lt;/li&gt;&lt;li&gt;They Were ‘Calling to Help.’ Then They Stole Thousands&lt;/li&gt;&lt;li&gt;North Korea Hacked Him. So He Took Down Its Internet&lt;/li&gt;&lt;li&gt;Here Come the Underdogs of the Robot Olympics&lt;/li&gt;&lt;li&gt;Is It OK to Listen to a Butt-Dial Message?&lt;/li&gt;&lt;li&gt;This 22-Year-Old Builds Chips in His Parents’ Garage&lt;/li&gt;&lt;li&gt;A Grand Unified Theory of Buying Stuff&lt;/li&gt;&lt;li&gt;Can Being Reminded of My Death Improve My Life?&lt;/li&gt;&lt;/ul&gt;
-                Wired is a full-color monthly American magazine, published in both print and online editions, that reports on how emerging technologies affect culture, the economy and politics. Monthly edition, best run at the start of every month.
-                </content>
-<updated>2022-07-18T11:00:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="wired-2022-07-18.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="wired-2022-07-18.epub"/>
 </entry>
 <entry>
 <id>New Yorker</id>
@@ -234,12 +218,12 @@
 <entry>
 <id>Harvard Business Review</id>
 <title>Harvard Business Review: 22 Jul, 2022</title>
-<summary>Harvard Business Review: 22 Jul, 2022 published at 2022-07-01 11:00AM.</summary>
+<summary>Harvard Business Review: 22 Jul, 2022 published at 2022-07-01 12:00PM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;A Role That’s More Challenging Than Ever&lt;/li&gt;&lt;li&gt;A Seat at the Table Is Not Enough&lt;/li&gt;&lt;li&gt;A Common Parasite Can Make People More Entrepreneurial&lt;/li&gt;&lt;li&gt;Two Cofounders of Xendit on Pioneering Fintech in Southeast Asia&lt;/li&gt;&lt;li&gt;The C-Suite Skills That Matter Most&lt;/li&gt;&lt;li&gt;Is It Time to Consider Co-CEOs?&lt;/li&gt;&lt;li&gt;When Hiring CEOs, Focus on Character&lt;/li&gt;&lt;li&gt;As the World Shifts, So Should Leaders&lt;/li&gt;&lt;li&gt;Identifying Unmet Needs in a Digital Age&lt;/li&gt;&lt;li&gt;To Drive Diversity Efforts, Don’t Tiptoe Around Your Legal Risk&lt;/li&gt;&lt;li&gt;Private Equity Should Take the Lead in Sustainability&lt;/li&gt;&lt;li&gt;What You’re Getting Wrong About Customer Journeys&lt;/li&gt;&lt;li&gt;A Better Way to Put Your Data to Work&lt;/li&gt;&lt;li&gt;Leadership in a Politically Charged Age&lt;/li&gt;&lt;li&gt;Why You Need an AI Ethics Committee&lt;/li&gt;&lt;li&gt;How to Turn a Supply Chain Platform into an Innovation Engine&lt;/li&gt;&lt;li&gt;How to Overcome Your Fear of the Unknown&lt;/li&gt;&lt;li&gt;Case Study: Would Vegan Offerings Dilute Our Brand?&lt;/li&gt;&lt;li&gt;Exploring the Metaverse&lt;/li&gt;&lt;li&gt;Life’s Work: An Interview with Misty Copeland&lt;/li&gt;&lt;/ul&gt;
                 Harvard Business Review is the leading destination for smart management thinking. Through its flagship magazine, books, and digital content and tools published on HBR.org, Harvard Business Review aims to provide professionals around the world with rigorous insights and best practices to help lead themselves and their organizations more effectively and to make a positive impact.
                 </content>
-<updated>2022-07-01T11:00:00Z</updated>
+<updated>2022-07-01T12:00:00Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
