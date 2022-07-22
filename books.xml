@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-22T07:44:00Z</updated>
+<updated>2022-07-22T11:39:35Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 22 Jul, 2022</title>
-<summary>NY Times Books: 22 Jul, 2022 published at 2022-07-22 04:18AM.</summary>
+<summary>NY Times Books: 22 Jul, 2022 published at 2022-07-22 09:00AM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;“Chester Keene Cracks the Code” by Kekla Magoon&lt;/li&gt;&lt;li&gt;Review: ‘The Kite Runner’ Trips From Page to Stage&lt;/li&gt;&lt;li&gt;Ronni Solbert, Children’s Book Illustrator, Dies at 96&lt;/li&gt;&lt;li&gt;13 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Words of War: A Literary Lifeline for the Battlefield&lt;/li&gt;&lt;li&gt;Review: ‘Fish Swimming in Dappled Water,’ by Riku Onda&lt;/li&gt;&lt;li&gt;Michelle Obama Will Publish a New Book, ‘The Light We Carry,’ This Fall&lt;/li&gt;&lt;li&gt;Hip, Woke, Cool: It’s All Fodder For the Oxford Dictionary of African American English&lt;/li&gt;&lt;li&gt;Gabrielle Zevin Is Not Going to Post This Article&lt;/li&gt;&lt;li&gt;Review: ‘Dirt Creek,’ by Hayley Scrivenor and ‘Wake,’ by Shelley Burr&lt;/li&gt;&lt;li&gt;Ruth Ware Won’t Read ‘Bleak House’ Until She Retires&lt;/li&gt;&lt;li&gt;HarperCollins Workers Strike For Increased Wages, Benefits and Diversity&lt;/li&gt;&lt;li&gt;Quidditch Becomes ‘Quadball,’ Leaving J.K. Rowling Behind&lt;/li&gt;&lt;li&gt;Chance, Design and Inevitability in Three New Poetry Books&lt;/li&gt;&lt;li&gt;New Thrillers&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Newfoundland&lt;/li&gt;&lt;li&gt;In ‘The Kingdoms of Savannah,’ Oddballs Circle Around a Murder Mystery&lt;/li&gt;&lt;li&gt;Dana Canedy, Publisher of Simon &amp; Schuster’s Flagship Imprint, Has Left the Job&lt;/li&gt;&lt;li&gt;Why ‘Where the Crawdads Sing’ Author Delia Owens Is Wanted for Questioning&lt;/li&gt;&lt;li&gt;In ‘The Pink Hotel,’ Delusional Newlyweds Head Toward a Grand Reckoning&lt;/li&gt;&lt;li&gt;Review: ‘Porn of the Self’&lt;/li&gt;&lt;li&gt;Book Review: “The Inheritors” by Eve Fairbanks&lt;/li&gt;&lt;li&gt;Review: ‘The Haunting of Hajji Hotak and Other Stories,’ by Jamil Jan Kochai&lt;/li&gt;&lt;li&gt;A Crop of New Novels About Race and Racism Finds Freedom in Satire&lt;/li&gt;&lt;li&gt;‘Son of Elsewhere’ Recounts Life as a Young Immigrant&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;After Mocking France’s Literary Elite, a Fraught Invite Into the Club&lt;/li&gt;&lt;li&gt;Review: ‘An Honest Living,’ by Dwyer Murphy&lt;/li&gt;&lt;li&gt;Review: “The Digital Republic: On Freedom and Democracy in the 21st Century,” Jamie Susskind&lt;/li&gt;&lt;li&gt;“Chester Keene Cracks the Code” by Kekla Magoon&lt;/li&gt;&lt;li&gt;Review: ‘The Kite Runner’ Trips From Page to Stage&lt;/li&gt;&lt;li&gt;Ronni Solbert, Children’s Book Illustrator, Dies at 96&lt;/li&gt;&lt;li&gt;13 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Review: ‘Fish Swimming in Dappled Water,’ by Riku Onda&lt;/li&gt;&lt;li&gt;Michelle Obama Will Publish a New Book, ‘The Light We Carry,’ This Fall&lt;/li&gt;&lt;li&gt;Hip, Woke, Cool: It’s All Fodder For the Oxford Dictionary of African American English&lt;/li&gt;&lt;li&gt;Gabrielle Zevin Is Not Going to Post This Article&lt;/li&gt;&lt;li&gt;Review: ‘Dirt Creek,’ by Hayley Scrivenor and ‘Wake,’ by Shelley Burr&lt;/li&gt;&lt;li&gt;Ruth Ware Won’t Read ‘Bleak House’ Until She Retires&lt;/li&gt;&lt;li&gt;HarperCollins Workers Strike For Increased Wages, Benefits and Diversity&lt;/li&gt;&lt;li&gt;Quidditch Becomes ‘Quadball,’ Leaving J.K. Rowling Behind&lt;/li&gt;&lt;li&gt;Chance, Design and Inevitability in Three New Poetry Books&lt;/li&gt;&lt;li&gt;New Thrillers&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Newfoundland&lt;/li&gt;&lt;li&gt;In ‘The Kingdoms of Savannah,’ Oddballs Circle Around a Murder Mystery&lt;/li&gt;&lt;li&gt;Dana Canedy, Publisher of Simon &amp; Schuster’s Flagship Imprint, Has Left the Job&lt;/li&gt;&lt;li&gt;Why ‘Where the Crawdads Sing’ Author Delia Owens Is Wanted for Questioning&lt;/li&gt;&lt;li&gt;In ‘The Pink Hotel,’ Delusional Newlyweds Head Toward a Grand Reckoning&lt;/li&gt;&lt;li&gt;Review: ‘Porn of the Self’&lt;/li&gt;&lt;li&gt;A Crop of New Novels About Race and Racism Finds Freedom in Satire&lt;/li&gt;&lt;li&gt;‘Son of Elsewhere’ Recounts Life as a Young Immigrant&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-07-22T04:18:29Z</updated>
+<updated>2022-07-22T09:00:27Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
@@ -58,12 +58,12 @@
 <entry>
 <id>London Review of Books</id>
 <title>London Review of Books: 21 Jul, 2022</title>
-<summary>London Review of Books: 21 Jul, 2022 published at 2022-07-13 11:41AM.</summary>
+<summary>London Review of Books: 21 Jul, 2022 published at 2022-07-13 13:27PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Abigail Green  -  In the Midst of Civilised Europe: The Pogroms of 1918-21 and the Onset of the Holocaust&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Madeleine Schwartz  - Trial’s End&lt;/li&gt;&lt;li&gt;David Runciman  - Short Cuts: At Blair’s Gathering&lt;/li&gt;&lt;li&gt;Abigail Green  -  In the Midst of Civilised Europe: The Pogroms of 1918-21 and the Onset of the Holocaust&lt;/li&gt;&lt;li&gt;Michael Ledger-Lomas  - The Last Emperor of Mexico: A Disaster in the New World  /  King Leopold’s Ghostwriter: The Creation of Persons and States in the 19th Century  / The Kaiser and the Colonies: Monarchy in the Age of Empire&lt;/li&gt;&lt;li&gt;Rye Dag Holmboe  -  Speaking East: The Strange and Enchanted Life of Isidore Isou&lt;/li&gt;&lt;li&gt;Robert Crawford  - Poem: ‘Tank’&lt;/li&gt;&lt;li&gt;Tom White  - Bad Dust&lt;/li&gt;&lt;li&gt;Mimi Jiang  - Diary: Shanghai Shelf Life&lt;/li&gt;&lt;/ul&gt;
                 Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
                 </content>
-<updated>2022-07-13T11:41:35Z</updated>
+<updated>2022-07-13T13:27:33Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
