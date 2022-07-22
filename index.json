@@ -2,11 +2,11 @@
 "Asahi Shimbun": [
 {
 "filename": "asahi-shimbun-2022-07-22.mobi",
-"published": 1658461200.0
+"published": 1658474160.0
 },
 {
 "filename": "asahi-shimbun-2022-07-22.epub",
-"published": 1658461200.0
+"published": 1658474160.0
 }
 ],
 "Asian Review of Books": [
@@ -42,21 +42,21 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-07-22.mobi",
-"published": 1658462906.0
+"published": 1658473800.0
 },
 {
 "filename": "channelnewsasia-2022-07-22.epub",
-"published": 1658462906.0
+"published": 1658473800.0
 }
 ],
 "The Diplomat": [
 {
 "filename": "the-diplomat-2022-07-22.mobi",
-"published": 1658458588.0
+"published": 1658467972.0
 },
 {
 "filename": "the-diplomat-2022-07-22.epub",
-"published": 1658458588.0
+"published": 1658467972.0
 }
 ],
 "Economist": [
@@ -72,11 +72,11 @@
 "Financial Times": [
 {
 "filename": "ft-2022-07-22.mobi",
-"published": 1658462408.0
+"published": 1658473000.0
 },
 {
 "filename": "ft-2022-07-22.epub",
-"published": 1658462408.0
+"published": 1658473000.0
 }
 ],
 "Five Books": [
@@ -92,11 +92,11 @@
 "Guardian": [
 {
 "filename": "guardian-2022-07-22.mobi",
-"published": 1658461658.0
+"published": 1658473804.0
 },
 {
 "filename": "guardian-2022-07-22.epub",
-"published": 1658461658.0
+"published": 1658473804.0
 }
 ],
 "Harvard Business Review": [
@@ -112,31 +112,31 @@
 "JoongAng Daily": [
 {
 "filename": "joongang-daily-2022-07-22.mobi",
-"published": 1658463353.0
+"published": 1658474763.0
 },
 {
 "filename": "joongang-daily-2022-07-22.epub",
-"published": 1658463353.0
+"published": 1658474763.0
 }
 ],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-07-22.mobi",
-"published": 1658463028.0
+"published": 1658471897.0
 },
 {
 "filename": "korea-herald-2022-07-22.epub",
-"published": 1658463028.0
+"published": 1658471897.0
 }
 ],
 "London Review of Books": [
 {
-"filename": "lrb-2022-07-22.mobi",
-"published": 1658463509.0
+"filename": "lrb-2022-07-13.mobi",
+"published": 1657712495.0
 },
 {
-"filename": "lrb-2022-07-22.epub",
-"published": 1658463509.0
+"filename": "lrb-2022-07-13.epub",
+"published": 1657712495.0
 }
 ],
 "Nature": [
@@ -172,21 +172,21 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-07-22.mobi",
-"published": 1658462988.0
+"published": 1658474445.0
 },
 {
 "filename": "nytimes-global-2022-07-22.epub",
-"published": 1658462988.0
+"published": 1658474445.0
 }
 ],
 "NY Times (Print)": [
 {
-"filename": "nytimes-print-2022-07-21.mobi",
-"published": 1658361600.0
+"filename": "nytimes-print-2022-07-22.mobi",
+"published": 1658448000.0
 },
 {
-"filename": "nytimes-print-2022-07-21.epub",
-"published": 1658361600.0
+"filename": "nytimes-print-2022-07-22.epub",
+"published": 1658448000.0
 }
 ],
 "NY Times Books": [
@@ -252,21 +252,21 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-07-22.mobi",
-"published": 1658463098.0
+"published": 1658474419.0
 },
 {
 "filename": "scmp-2022-07-22.epub",
-"published": 1658463098.0
+"published": 1658474419.0
 }
 ],
 "Sydney Morning Herald": [
 {
 "filename": "sydney-morning-herald-2022-07-22.mobi",
-"published": 1658463565.0
+"published": 1658473632.0
 },
 {
 "filename": "sydney-morning-herald-2022-07-22.epub",
-"published": 1658463565.0
+"published": 1658473632.0
 }
 ],
 "Taipei Times": [
@@ -281,12 +281,12 @@
 ],
 "The Third Pole": [
 {
-"filename": "thirdpole-2022-07-21.mobi",
-"published": 1658442756.0
+"filename": "thirdpole-2022-07-22.mobi",
+"published": 1658469915.0
 },
 {
-"filename": "thirdpole-2022-07-21.epub",
-"published": 1658442756.0
+"filename": "thirdpole-2022-07-22.epub",
+"published": 1658469915.0
 }
 ],
 "TIME": [
@@ -302,21 +302,21 @@
 "Vox": [
 {
 "filename": "vox-2022-07-22.mobi",
-"published": 1658463600.0
+"published": 1658464430.0
 },
 {
 "filename": "vox-2022-07-22.epub",
-"published": 1658463600.0
+"published": 1658464430.0
 }
 ],
 "Washington Post": [
 {
 "filename": "wapo-2022-07-22.mobi",
-"published": 1658463845.0
+"published": 1658475292.0
 },
 {
 "filename": "wapo-2022-07-22.epub",
-"published": 1658463845.0
+"published": 1658475292.0
 }
 ],
 "Wired Magazine": [
@@ -329,5 +329,5 @@
 "published": 1658142000.0
 }
 ],
-"_generated": 1658464264
+"_generated": 1658475840
 }
