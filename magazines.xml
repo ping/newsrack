@@ -2,26 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-23T23:46:31Z</updated>
+<updated>2022-07-24T04:18:58Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
 <id>Vox</id>
-<title>Vox: 23 Jul, 2022</title>
-<summary>Vox: 23 Jul, 2022 published at 2022-07-23 21:12PM.</summary>
+<title>Vox: 24 Jul, 2022</title>
+<summary>Vox: 24 Jul, 2022 published at 2022-07-24 00:21AM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Sri Lanka’s new president is already cracking down on protests&lt;/li&gt;&lt;li&gt;Why the WHO finally declared monkeypox a global public health emergency&lt;/li&gt;&lt;li&gt;The best $180 I ever spent: My union fees&lt;/li&gt;&lt;li&gt;Democrats have been boosting ultra-right candidates. It could backfire.&lt;/li&gt;&lt;li&gt;CPAC goes to Israel&lt;/li&gt;&lt;li&gt;The mysterious disappearance of the Secret Service’s January 6 texts&lt;/li&gt;&lt;li&gt;Steve Bannon was found guilty. What happens now?&lt;/li&gt;&lt;li&gt;Finally, some good news in the fight to end robocalls&lt;/li&gt;&lt;li&gt;Rape and incest abortion exceptions don’t really exist&lt;/li&gt;&lt;li&gt;The bill that could make it harder to overturn an election&lt;/li&gt;&lt;/ul&gt;
                 General interest news site
                 </content>
-<updated>2022-07-23T21:12:43Z</updated>
+<updated>2022-07-24T00:21:37Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
 </author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-23.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-23.epub"/>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-24.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-24.epub"/>
 </entry>
 <entry>
 <id>The Atlantic</id>
@@ -233,13 +233,13 @@
 </entry>
 <entry>
 <id>Harvard Business Review</id>
-<title>Harvard Business Review: 23 Jul, 2022</title>
-<summary>Harvard Business Review: 23 Jul, 2022 published at 2022-07-01 11:00AM.</summary>
+<title>Harvard Business Review: 24 Jul, 2022</title>
+<summary>Harvard Business Review: 24 Jul, 2022 published at 2022-07-01 12:00PM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;A Role That’s More Challenging Than Ever&lt;/li&gt;&lt;li&gt;A Seat at the Table Is Not Enough&lt;/li&gt;&lt;li&gt;A Common Parasite Can Make People More Entrepreneurial&lt;/li&gt;&lt;li&gt;Two Cofounders of Xendit on Pioneering Fintech in Southeast Asia&lt;/li&gt;&lt;li&gt;The C-Suite Skills That Matter Most&lt;/li&gt;&lt;li&gt;Is It Time to Consider Co-CEOs?&lt;/li&gt;&lt;li&gt;When Hiring CEOs, Focus on Character&lt;/li&gt;&lt;li&gt;As the World Shifts, So Should Leaders&lt;/li&gt;&lt;li&gt;Identifying Unmet Needs in a Digital Age&lt;/li&gt;&lt;li&gt;To Drive Diversity Efforts, Don’t Tiptoe Around Your Legal Risk&lt;/li&gt;&lt;li&gt;Private Equity Should Take the Lead in Sustainability&lt;/li&gt;&lt;li&gt;What You’re Getting Wrong About Customer Journeys&lt;/li&gt;&lt;li&gt;A Better Way to Put Your Data to Work&lt;/li&gt;&lt;li&gt;Leadership in a Politically Charged Age&lt;/li&gt;&lt;li&gt;Why You Need an AI Ethics Committee&lt;/li&gt;&lt;li&gt;How to Turn a Supply Chain Platform into an Innovation Engine&lt;/li&gt;&lt;li&gt;How to Overcome Your Fear of the Unknown&lt;/li&gt;&lt;li&gt;Case Study: Would Vegan Offerings Dilute Our Brand?&lt;/li&gt;&lt;li&gt;Exploring the Metaverse&lt;/li&gt;&lt;li&gt;Life’s Work: An Interview with Misty Copeland&lt;/li&gt;&lt;/ul&gt;
                 Harvard Business Review is the leading destination for smart management thinking. Through its flagship magazine, books, and digital content and tools published on HBR.org, Harvard Business Review aims to provide professionals around the world with rigorous insights and best practices to help lead themselves and their organizations more effectively and to make a positive impact.
                 </content>
-<updated>2022-07-01T11:00:00Z</updated>
+<updated>2022-07-01T12:00:00Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
