@@ -2,11 +2,43 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-24T07:37:15Z</updated>
+<updated>2022-07-24T11:34:53Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>The Atlantic</id>
+<title>The Atlantic: 24 Jul, 2022</title>
+<summary>The Atlantic: 24 Jul, 2022 published at 2022-07-24 11:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Don’t Blame Dostoyevsky&lt;/li&gt;&lt;li&gt;A Court Without Precedent&lt;/li&gt;&lt;li&gt;The Torment of Odesa&lt;/li&gt;&lt;li&gt;The Era of Climate Change Has Created a New Emotion&lt;/li&gt;&lt;li&gt;Is Democracy Constitutional?&lt;/li&gt;&lt;li&gt;Mike Pence Is Trying to Send a Message&lt;/li&gt;&lt;li&gt;The Criminal Case Against Trump Is Getting Stronger&lt;/li&gt;&lt;li&gt;The Gray Man Takes the Stoic-Spy Cliché Way Too Far&lt;/li&gt;&lt;li&gt;The Novel That Captures New York City Right Now&lt;/li&gt;&lt;li&gt;Why We Hate Rising Prices More Than We Fear Losing Our Jobs&lt;/li&gt;&lt;li&gt;America Is Running Out of ‘COVID Virgins’&lt;/li&gt;&lt;li&gt;The Webb Space Telescope Is a Time Machine&lt;/li&gt;&lt;li&gt;What a Warming Planet Means for Literature&lt;/li&gt;&lt;li&gt;The Risk and Opportunity of Online Fertility Groups&lt;/li&gt;&lt;li&gt;The Myth That America’s Abortion Laws Are More Permissive Than Europe’s&lt;/li&gt;&lt;li&gt;Photos of the Week: Swan Upping, Worm Charming, Living Bridge&lt;/li&gt;&lt;li&gt;The Inescapable Conclusion From the January 6 Hearings&lt;/li&gt;&lt;li&gt;The Opening for Democrats on Abortion&lt;/li&gt;&lt;li&gt;The Secret Service Texting Scandal Makes No Sense&lt;/li&gt;&lt;li&gt;Of Course Biden Has COVID&lt;/li&gt;&lt;li&gt;We’re Testing for Monkeypox the Wrong Way&lt;/li&gt;&lt;li&gt;Are Latinos Really Realigning Toward Republicans?&lt;/li&gt;&lt;li&gt;America Was in an Early-Death Crisis Long Before COVID&lt;/li&gt;&lt;li&gt;The Most Moving Film of the Year Is a Documentary About Volcanoes&lt;/li&gt;&lt;li&gt;Middle Eastern Autocrats Embarrassed Biden at Will&lt;/li&gt;&lt;li&gt;A Happiness Columnist’s Three Biggest Happiness Rules&lt;/li&gt;&lt;li&gt;Six Books to Guide You Through the Real American West&lt;/li&gt;&lt;li&gt;America’s Self-Obsession Is Killing Its Democracy&lt;/li&gt;&lt;li&gt;A Love Letter to the ‘Best Mountain Range on Earth’&lt;/li&gt;&lt;li&gt;Jordan Peele’s Nope Is Spectacular, Indulgent, and Brutal&lt;/li&gt;&lt;li&gt;Lizzo’s Music Really Is Special&lt;/li&gt;&lt;li&gt;Do Animals Dream?&lt;/li&gt;&lt;li&gt;You’ve Never Seen Anything Quite Like The Rehearsal&lt;/li&gt;&lt;li&gt;When a Troubling Book Gets a Hollywood Makeover&lt;/li&gt;&lt;li&gt;Where the Crawdads Sing Author Wanted for Questioning in Murder&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;England Can’t Take the Heat&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;Wildfires Rage Across Southwestern Europe&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Power Imbalance Undermining Global Health&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;Put Your Face in Airplane Mode&lt;/li&gt;&lt;li&gt;New COVID Vaccines Will Be Ready This Fall. America Won’t Be.&lt;/li&gt;&lt;li&gt;The Spiders That Choose Death&lt;/li&gt;&lt;li&gt;We’ve Had Other Climate Defeats. This One Is by Far the Weirdest.&lt;/li&gt;&lt;li&gt;America’s Most Misunderstood Marsupial&lt;/li&gt;&lt;li&gt;The World Is Burning Once Again&lt;/li&gt;&lt;li&gt;There Is a Planet With Clouds Made of Sand&lt;/li&gt;&lt;li&gt;The Next Generation of NIMBYs&lt;/li&gt;&lt;li&gt;The Real Reason Democrats Are Losing Ground on Education&lt;/li&gt;&lt;li&gt;How to Pivot on a Thursday Night&lt;/li&gt;&lt;li&gt;U.S. Messaging on Monkeypox Is Deeply Flawed&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;The Everything-Is-Weird Economy&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;/ul&gt;
+                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
+                </content>
+<updated>2022-07-24T11:00:57Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-24.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-24.epub"/>
+</entry>
+<entry>
+<id>ProPublica</id>
+<title>ProPublica: 24 Jul, 2022</title>
+<summary>ProPublica: 24 Jul, 2022 published at 2022-07-24 09:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Richard Glossip Has Eaten Three Last Meals on Death Row. Years Later, the State Is Still Trying to Execute Him.&lt;/li&gt;&lt;li&gt;Michigan Proposes Juvenile Justice Reforms After Story of Teen Locked Up for Missing Homework Exposed Gaps in System&lt;/li&gt;&lt;li&gt;New Data Gives Insight Into Ticketing at Five Suburban Chicago School Districts&lt;/li&gt;&lt;li&gt;U.S. Senators Demand Federal Scrutiny of Private Equity’s Incursion Into Fishing&lt;/li&gt;&lt;li&gt;A Government Official Helped Them Register. Now They’ve Been Charged With Voter Fraud.&lt;/li&gt;&lt;li&gt;Texas Says It Cares About Mothers, but Its Medicaid Postpartum Coverage Lags Behind Most Other States&lt;/li&gt;&lt;li&gt;Help ProPublica Investigate “We Buy Houses” Practices&lt;/li&gt;&lt;li&gt;Two Cities Took Different Approaches to Pandemic Court Closures. They Got Different Results.&lt;/li&gt;&lt;li&gt;Patrick Radden Keefe Gets to the Bottom of It&lt;/li&gt;&lt;li&gt;The Judge Who Illegally Jailed Children Is Retiring. The Candidates to Replace Her Have Different Approaches.&lt;/li&gt;&lt;li&gt;Her Ex-Husband Is Suing a Clinic Over the Abortion She Had Four Years Ago&lt;/li&gt;&lt;li&gt;Pharma Companies Sue for the Right to Buy Blood From Mexicans Along Border&lt;/li&gt;&lt;li&gt;Critical Omissions Plague Texas Gun Background Check Law&lt;/li&gt;&lt;li&gt;Pegasus Spyware Maker NSO Is Conducting a Lobbying Campaign to Get Off U.S. Blacklist&lt;/li&gt;&lt;li&gt;“The Drone Problem”: How the U.S. Has Struggled to Curb Turkey, a Key Exporter of Armed Drones&lt;/li&gt;&lt;li&gt;Right-Wing Think Tank Family Research Council Is Now a Church in Eyes of the IRS&lt;/li&gt;&lt;li&gt;ProPublica Opens Up New Opportunities to Join Our Local Reporting Network&lt;/li&gt;&lt;li&gt;In Debate Over Chicago’s Speed Cameras, Concerns Over Safety, Racial Disparities Collide&lt;/li&gt;&lt;li&gt;The City Where Investigations of Police Take So Long, Officers Kill Again Before Reviews Are Done&lt;/li&gt;&lt;li&gt;Ken Griffin Spent $54 Million Fighting a Tax Increase for the Rich. Secret IRS Data Shows It Paid Off for Him.&lt;/li&gt;&lt;/ul&gt;
+                ProPublica is an independent, nonprofit newsroom that produces investigative journalism with moral force.
+                </content>
+<updated>2022-07-24T09:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="propublica-2022-07-24.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="propublica-2022-07-24.epub"/>
+</entry>
 <entry>
 <id>Vox</id>
 <title>Vox: 24 Jul, 2022</title>
@@ -22,22 +54,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-24.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-24.epub"/>
-</entry>
-<entry>
-<id>The Atlantic</id>
-<title>The Atlantic: 23 Jul, 2022</title>
-<summary>The Atlantic: 23 Jul, 2022 published at 2022-07-23 19:43PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The Torment of Odesa&lt;/li&gt;&lt;li&gt;The Era of Climate Change Has Created a New Emotion&lt;/li&gt;&lt;li&gt;Is Democracy Constitutional?&lt;/li&gt;&lt;li&gt;Mike Pence Is Trying to Send a Message&lt;/li&gt;&lt;li&gt;The Criminal Case Against Trump Is Getting Stronger&lt;/li&gt;&lt;li&gt;The Gray Man Takes the Stoic-Spy Cliché Way Too Far&lt;/li&gt;&lt;li&gt;The Novel That Captures New York City Right Now&lt;/li&gt;&lt;li&gt;Why We Hate Rising Prices More Than We Fear Losing Our Jobs&lt;/li&gt;&lt;li&gt;America Is Running Out of ‘COVID Virgins’&lt;/li&gt;&lt;li&gt;The Webb Space Telescope Is a Time Machine&lt;/li&gt;&lt;li&gt;What a Warming Planet Means for Literature&lt;/li&gt;&lt;li&gt;The Risk and Opportunity of Online Fertility Groups&lt;/li&gt;&lt;li&gt;The Myth That America’s Abortion Laws Are More Permissive Than Europe’s&lt;/li&gt;&lt;li&gt;Photos of the Week: Swan Upping, Worm Charming, Living Bridge&lt;/li&gt;&lt;li&gt;The Inescapable Conclusion From the January 6 Hearings&lt;/li&gt;&lt;li&gt;The Opening for Democrats on Abortion&lt;/li&gt;&lt;li&gt;The Secret Service Texting Scandal Makes No Sense&lt;/li&gt;&lt;li&gt;Of Course Biden Has COVID&lt;/li&gt;&lt;li&gt;We’re Testing for Monkeypox the Wrong Way&lt;/li&gt;&lt;li&gt;Are Latinos Really Realigning Toward Republicans?&lt;/li&gt;&lt;li&gt;America Was in an Early-Death Crisis Long Before COVID&lt;/li&gt;&lt;li&gt;The Most Moving Film of the Year Is a Documentary About Volcanoes&lt;/li&gt;&lt;li&gt;Middle Eastern Autocrats Embarrassed Biden at Will&lt;/li&gt;&lt;li&gt;A Love Letter to the ‘Best Mountain Range on Earth’&lt;/li&gt;&lt;li&gt;A Happiness Columnist’s Three Biggest Happiness Rules&lt;/li&gt;&lt;li&gt;Jordan Peele’s Nope Is Spectacular, Indulgent, and Brutal&lt;/li&gt;&lt;li&gt;Six Books to Guide You Through the Real American West&lt;/li&gt;&lt;li&gt;America’s Self-Obsession Is Killing Its Democracy&lt;/li&gt;&lt;li&gt;Lizzo’s Music Really Is Special&lt;/li&gt;&lt;li&gt;Do Animals Dream?&lt;/li&gt;&lt;li&gt;You’ve Never Seen Anything Quite Like The Rehearsal&lt;/li&gt;&lt;li&gt;When a Troubling Book Gets a Hollywood Makeover&lt;/li&gt;&lt;li&gt;Where the Crawdads Sing Author Wanted for Questioning in Murder&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;England Can’t Take the Heat&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;Wildfires Rage Across Southwestern Europe&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Power Imbalance Undermining Global Health&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;Put Your Face in Airplane Mode&lt;/li&gt;&lt;li&gt;New COVID Vaccines Will Be Ready This Fall. America Won’t Be.&lt;/li&gt;&lt;li&gt;The Spiders That Choose Death&lt;/li&gt;&lt;li&gt;We’ve Had Other Climate Defeats. This One Is by Far the Weirdest.&lt;/li&gt;&lt;li&gt;America’s Most Misunderstood Marsupial&lt;/li&gt;&lt;li&gt;The World Is Burning Once Again&lt;/li&gt;&lt;li&gt;There Is a Planet With Clouds Made of Sand&lt;/li&gt;&lt;li&gt;The Next Generation of NIMBYs&lt;/li&gt;&lt;li&gt;The Real Reason Democrats Are Losing Ground on Education&lt;/li&gt;&lt;li&gt;How to Pivot on a Thursday Night&lt;/li&gt;&lt;li&gt;U.S. Messaging on Monkeypox Is Deeply Flawed&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;The Everything-Is-Weird Economy&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;/ul&gt;
-                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
-                </content>
-<updated>2022-07-23T19:43:12Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-23.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-23.epub"/>
 </entry>
 <entry>
 <id>Nautilus</id>
@@ -70,22 +86,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="economist-2022-07-22.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="economist-2022-07-22.epub"/>
-</entry>
-<entry>
-<id>ProPublica</id>
-<title>ProPublica: 22 Jul, 2022</title>
-<summary>ProPublica: 22 Jul, 2022 published at 2022-07-22 17:30PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Michigan Proposes Juvenile Justice Reforms After Story of Teen Locked Up for Missing Homework Exposed Gaps in System&lt;/li&gt;&lt;li&gt;New Data Gives Insight Into Ticketing at Five Suburban Chicago School Districts&lt;/li&gt;&lt;li&gt;U.S. Senators Demand Federal Scrutiny of Private Equity’s Incursion Into Fishing&lt;/li&gt;&lt;li&gt;A Government Official Helped Them Register. Now They’ve Been Charged With Voter Fraud.&lt;/li&gt;&lt;li&gt;Texas Says It Cares About Mothers, but Its Medicaid Postpartum Coverage Lags Behind Most Other States&lt;/li&gt;&lt;li&gt;Help ProPublica Investigate “We Buy Houses” Practices&lt;/li&gt;&lt;li&gt;Two Cities Took Different Approaches to Pandemic Court Closures. They Got Different Results.&lt;/li&gt;&lt;li&gt;Patrick Radden Keefe Gets to the Bottom of It&lt;/li&gt;&lt;li&gt;The Judge Who Illegally Jailed Children Is Retiring. The Candidates to Replace Her Have Different Approaches.&lt;/li&gt;&lt;li&gt;Her Ex-Husband Is Suing a Clinic Over the Abortion She Had Four Years Ago&lt;/li&gt;&lt;li&gt;Pharma Companies Sue for the Right to Buy Blood From Mexicans Along Border&lt;/li&gt;&lt;li&gt;Critical Omissions Plague Texas Gun Background Check Law&lt;/li&gt;&lt;li&gt;Pegasus Spyware Maker NSO Is Conducting a Lobbying Campaign to Get Off U.S. Blacklist&lt;/li&gt;&lt;li&gt;“The Drone Problem”: How the U.S. Has Struggled to Curb Turkey, a Key Exporter of Armed Drones&lt;/li&gt;&lt;li&gt;Right-Wing Think Tank Family Research Council Is Now a Church in Eyes of the IRS&lt;/li&gt;&lt;li&gt;ProPublica Opens Up New Opportunities to Join Our Local Reporting Network&lt;/li&gt;&lt;li&gt;In Debate Over Chicago’s Speed Cameras, Concerns Over Safety, Racial Disparities Collide&lt;/li&gt;&lt;li&gt;The City Where Investigations of Police Take So Long, Officers Kill Again Before Reviews Are Done&lt;/li&gt;&lt;li&gt;Ken Griffin Spent $54 Million Fighting a Tax Increase for the Rich. Secret IRS Data Shows It Paid Off for Him.&lt;/li&gt;&lt;li&gt;DOJ Investigating Texas’ Operation Lone Star for Alleged Civil Rights Violations&lt;/li&gt;&lt;/ul&gt;
-                ProPublica is an independent, nonprofit newsroom that produces investigative journalism with moral force.
-                </content>
-<updated>2022-07-22T17:30:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="propublica-2022-07-22.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="propublica-2022-07-22.epub"/>
 </entry>
 <entry>
 <id>The Diplomat</id>
