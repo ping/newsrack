@@ -2,20 +2,36 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-24T11:34:53Z</updated>
+<updated>2022-07-24T15:41:08Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
+<id>Vox</id>
+<title>Vox: 24 Jul, 2022</title>
+<summary>Vox: 24 Jul, 2022 published at 2022-07-24 13:00PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;The future of remote work, according to 6 experts&lt;/li&gt;&lt;li&gt;What keeping secrets does to you&lt;/li&gt;&lt;li&gt;Sri Lanka’s new president is already cracking down on protests&lt;/li&gt;&lt;li&gt;Why the WHO finally declared monkeypox a global public health emergency&lt;/li&gt;&lt;li&gt;The best $180 I ever spent: My union fees&lt;/li&gt;&lt;li&gt;Democrats have been boosting ultra-right candidates. It could backfire.&lt;/li&gt;&lt;li&gt;CPAC goes to Israel&lt;/li&gt;&lt;li&gt;The mysterious disappearance of the Secret Service’s January 6 texts&lt;/li&gt;&lt;li&gt;Steve Bannon was found guilty. What happens now?&lt;/li&gt;&lt;li&gt;Finally, some good news in the fight to end robocalls&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-07-24T13:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-24.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-24.epub"/>
+</entry>
+<entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 24 Jul, 2022</title>
-<summary>The Atlantic: 24 Jul, 2022 published at 2022-07-24 11:00AM.</summary>
+<summary>The Atlantic: 24 Jul, 2022 published at 2022-07-24 12:00PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Don’t Blame Dostoyevsky&lt;/li&gt;&lt;li&gt;A Court Without Precedent&lt;/li&gt;&lt;li&gt;The Torment of Odesa&lt;/li&gt;&lt;li&gt;The Era of Climate Change Has Created a New Emotion&lt;/li&gt;&lt;li&gt;Is Democracy Constitutional?&lt;/li&gt;&lt;li&gt;Mike Pence Is Trying to Send a Message&lt;/li&gt;&lt;li&gt;The Criminal Case Against Trump Is Getting Stronger&lt;/li&gt;&lt;li&gt;The Gray Man Takes the Stoic-Spy Cliché Way Too Far&lt;/li&gt;&lt;li&gt;The Novel That Captures New York City Right Now&lt;/li&gt;&lt;li&gt;Why We Hate Rising Prices More Than We Fear Losing Our Jobs&lt;/li&gt;&lt;li&gt;America Is Running Out of ‘COVID Virgins’&lt;/li&gt;&lt;li&gt;The Webb Space Telescope Is a Time Machine&lt;/li&gt;&lt;li&gt;What a Warming Planet Means for Literature&lt;/li&gt;&lt;li&gt;The Risk and Opportunity of Online Fertility Groups&lt;/li&gt;&lt;li&gt;The Myth That America’s Abortion Laws Are More Permissive Than Europe’s&lt;/li&gt;&lt;li&gt;Photos of the Week: Swan Upping, Worm Charming, Living Bridge&lt;/li&gt;&lt;li&gt;The Inescapable Conclusion From the January 6 Hearings&lt;/li&gt;&lt;li&gt;The Opening for Democrats on Abortion&lt;/li&gt;&lt;li&gt;The Secret Service Texting Scandal Makes No Sense&lt;/li&gt;&lt;li&gt;Of Course Biden Has COVID&lt;/li&gt;&lt;li&gt;We’re Testing for Monkeypox the Wrong Way&lt;/li&gt;&lt;li&gt;Are Latinos Really Realigning Toward Republicans?&lt;/li&gt;&lt;li&gt;America Was in an Early-Death Crisis Long Before COVID&lt;/li&gt;&lt;li&gt;The Most Moving Film of the Year Is a Documentary About Volcanoes&lt;/li&gt;&lt;li&gt;Middle Eastern Autocrats Embarrassed Biden at Will&lt;/li&gt;&lt;li&gt;A Happiness Columnist’s Three Biggest Happiness Rules&lt;/li&gt;&lt;li&gt;Six Books to Guide You Through the Real American West&lt;/li&gt;&lt;li&gt;America’s Self-Obsession Is Killing Its Democracy&lt;/li&gt;&lt;li&gt;A Love Letter to the ‘Best Mountain Range on Earth’&lt;/li&gt;&lt;li&gt;Jordan Peele’s Nope Is Spectacular, Indulgent, and Brutal&lt;/li&gt;&lt;li&gt;Lizzo’s Music Really Is Special&lt;/li&gt;&lt;li&gt;Do Animals Dream?&lt;/li&gt;&lt;li&gt;You’ve Never Seen Anything Quite Like The Rehearsal&lt;/li&gt;&lt;li&gt;When a Troubling Book Gets a Hollywood Makeover&lt;/li&gt;&lt;li&gt;Where the Crawdads Sing Author Wanted for Questioning in Murder&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;England Can’t Take the Heat&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;Wildfires Rage Across Southwestern Europe&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Power Imbalance Undermining Global Health&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;Put Your Face in Airplane Mode&lt;/li&gt;&lt;li&gt;New COVID Vaccines Will Be Ready This Fall. America Won’t Be.&lt;/li&gt;&lt;li&gt;The Spiders That Choose Death&lt;/li&gt;&lt;li&gt;We’ve Had Other Climate Defeats. This One Is by Far the Weirdest.&lt;/li&gt;&lt;li&gt;America’s Most Misunderstood Marsupial&lt;/li&gt;&lt;li&gt;The World Is Burning Once Again&lt;/li&gt;&lt;li&gt;There Is a Planet With Clouds Made of Sand&lt;/li&gt;&lt;li&gt;The Next Generation of NIMBYs&lt;/li&gt;&lt;li&gt;The Real Reason Democrats Are Losing Ground on Education&lt;/li&gt;&lt;li&gt;How to Pivot on a Thursday Night&lt;/li&gt;&lt;li&gt;U.S. Messaging on Monkeypox Is Deeply Flawed&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;The Everything-Is-Weird Economy&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;The Day I Saw the Emperor’s Clay Soldiers&lt;/li&gt;&lt;li&gt;Don’t Blame Dostoyevsky&lt;/li&gt;&lt;li&gt;A Court Without Precedent&lt;/li&gt;&lt;li&gt;The Torment of Odesa&lt;/li&gt;&lt;li&gt;The Era of Climate Change Has Created a New Emotion&lt;/li&gt;&lt;li&gt;Is Democracy Constitutional?&lt;/li&gt;&lt;li&gt;Mike Pence Is Trying to Send a Message&lt;/li&gt;&lt;li&gt;The Criminal Case Against Trump Is Getting Stronger&lt;/li&gt;&lt;li&gt;The Gray Man Takes the Stoic-Spy Cliché Way Too Far&lt;/li&gt;&lt;li&gt;The Novel That Captures New York City Right Now&lt;/li&gt;&lt;li&gt;Why We Hate Rising Prices More Than We Fear Losing Our Jobs&lt;/li&gt;&lt;li&gt;America Is Running Out of ‘COVID Virgins’&lt;/li&gt;&lt;li&gt;The Webb Space Telescope Is a Time Machine&lt;/li&gt;&lt;li&gt;What a Warming Planet Means for Literature&lt;/li&gt;&lt;li&gt;The Risk and Opportunity of Online Fertility Groups&lt;/li&gt;&lt;li&gt;The Myth That America’s Abortion Laws Are More Permissive Than Europe’s&lt;/li&gt;&lt;li&gt;Photos of the Week: Swan Upping, Worm Charming, Living Bridge&lt;/li&gt;&lt;li&gt;The Inescapable Conclusion From the January 6 Hearings&lt;/li&gt;&lt;li&gt;The Opening for Democrats on Abortion&lt;/li&gt;&lt;li&gt;The Secret Service Texting Scandal Makes No Sense&lt;/li&gt;&lt;li&gt;Of Course Biden Has COVID&lt;/li&gt;&lt;li&gt;We’re Testing for Monkeypox the Wrong Way&lt;/li&gt;&lt;li&gt;Are Latinos Really Realigning Toward Republicans?&lt;/li&gt;&lt;li&gt;America Was in an Early-Death Crisis Long Before COVID&lt;/li&gt;&lt;li&gt;The Most Moving Film of the Year Is a Documentary About Volcanoes&lt;/li&gt;&lt;li&gt;A Happiness Columnist’s Three Biggest Happiness Rules&lt;/li&gt;&lt;li&gt;Six Books to Guide You Through the Real American West&lt;/li&gt;&lt;li&gt;America’s Self-Obsession Is Killing Its Democracy&lt;/li&gt;&lt;li&gt;A Love Letter to the ‘Best Mountain Range on Earth’&lt;/li&gt;&lt;li&gt;Jordan Peele’s Nope Is Spectacular, Indulgent, and Brutal&lt;/li&gt;&lt;li&gt;Lizzo’s Music Really Is Special&lt;/li&gt;&lt;li&gt;Do Animals Dream?&lt;/li&gt;&lt;li&gt;You’ve Never Seen Anything Quite Like The Rehearsal&lt;/li&gt;&lt;li&gt;When a Troubling Book Gets a Hollywood Makeover&lt;/li&gt;&lt;li&gt;Where the Crawdads Sing Author Wanted for Questioning in Murder&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;England Can’t Take the Heat&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;Wildfires Rage Across Southwestern Europe&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Power Imbalance Undermining Global Health&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;Put Your Face in Airplane Mode&lt;/li&gt;&lt;li&gt;New COVID Vaccines Will Be Ready This Fall. America Won’t Be.&lt;/li&gt;&lt;li&gt;The Spiders That Choose Death&lt;/li&gt;&lt;li&gt;We’ve Had Other Climate Defeats. This One Is by Far the Weirdest.&lt;/li&gt;&lt;li&gt;America’s Most Misunderstood Marsupial&lt;/li&gt;&lt;li&gt;The World Is Burning Once Again&lt;/li&gt;&lt;li&gt;There Is a Planet With Clouds Made of Sand&lt;/li&gt;&lt;li&gt;The Next Generation of NIMBYs&lt;/li&gt;&lt;li&gt;The Real Reason Democrats Are Losing Ground on Education&lt;/li&gt;&lt;li&gt;How to Pivot on a Thursday Night&lt;/li&gt;&lt;li&gt;U.S. Messaging on Monkeypox Is Deeply Flawed&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;The Everything-Is-Weird Economy&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;/ul&gt;
                 News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
                 </content>
-<updated>2022-07-24T11:00:57Z</updated>
+<updated>2022-07-24T12:00:57Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
@@ -38,22 +54,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="propublica-2022-07-24.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="propublica-2022-07-24.epub"/>
-</entry>
-<entry>
-<id>Vox</id>
-<title>Vox: 24 Jul, 2022</title>
-<summary>Vox: 24 Jul, 2022 published at 2022-07-24 00:21AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Sri Lanka’s new president is already cracking down on protests&lt;/li&gt;&lt;li&gt;Why the WHO finally declared monkeypox a global public health emergency&lt;/li&gt;&lt;li&gt;The best $180 I ever spent: My union fees&lt;/li&gt;&lt;li&gt;Democrats have been boosting ultra-right candidates. It could backfire.&lt;/li&gt;&lt;li&gt;CPAC goes to Israel&lt;/li&gt;&lt;li&gt;The mysterious disappearance of the Secret Service’s January 6 texts&lt;/li&gt;&lt;li&gt;Steve Bannon was found guilty. What happens now?&lt;/li&gt;&lt;li&gt;Finally, some good news in the fight to end robocalls&lt;/li&gt;&lt;li&gt;Rape and incest abortion exceptions don’t really exist&lt;/li&gt;&lt;li&gt;The bill that could make it harder to overturn an election&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-07-24T00:21:37Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-24.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-24.epub"/>
 </entry>
 <entry>
 <id>Nautilus</id>
