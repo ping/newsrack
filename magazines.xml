@@ -2,11 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-24T19:34:53Z</updated>
+<updated>2022-07-24T23:48:01Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>Vox</id>
+<title>Vox: 24 Jul, 2022</title>
+<summary>Vox: 24 Jul, 2022 published at 2022-07-24 21:41PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;We’ve all got Covid-19 fatigue, but BA.5 shows it’s not over&lt;/li&gt;&lt;li&gt;The future of remote work, according to 6 experts&lt;/li&gt;&lt;li&gt;What keeping secrets does to you&lt;/li&gt;&lt;li&gt;Sri Lanka’s new president is already cracking down on protests&lt;/li&gt;&lt;li&gt;Why the WHO finally declared monkeypox a global public health emergency&lt;/li&gt;&lt;li&gt;The best $180 I ever spent: My union fees&lt;/li&gt;&lt;li&gt;Democrats have been boosting ultra-right candidates. It could backfire.&lt;/li&gt;&lt;li&gt;CPAC goes to Israel&lt;/li&gt;&lt;li&gt;The mysterious disappearance of the Secret Service’s January 6 texts&lt;/li&gt;&lt;li&gt;Steve Bannon was found guilty. What happens now?&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-07-24T21:41:55Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-24.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-24.epub"/>
+</entry>
 <entry>
 <id>The Diplomat</id>
 <title>The Diplomat: 23 Jul, 2022</title>
@@ -38,22 +54,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-24.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-24.epub"/>
-</entry>
-<entry>
-<id>Vox</id>
-<title>Vox: 24 Jul, 2022</title>
-<summary>Vox: 24 Jul, 2022 published at 2022-07-24 13:00PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The future of remote work, according to 6 experts&lt;/li&gt;&lt;li&gt;What keeping secrets does to you&lt;/li&gt;&lt;li&gt;Sri Lanka’s new president is already cracking down on protests&lt;/li&gt;&lt;li&gt;Why the WHO finally declared monkeypox a global public health emergency&lt;/li&gt;&lt;li&gt;The best $180 I ever spent: My union fees&lt;/li&gt;&lt;li&gt;Democrats have been boosting ultra-right candidates. It could backfire.&lt;/li&gt;&lt;li&gt;CPAC goes to Israel&lt;/li&gt;&lt;li&gt;The mysterious disappearance of the Secret Service’s January 6 texts&lt;/li&gt;&lt;li&gt;Steve Bannon was found guilty. What happens now?&lt;/li&gt;&lt;li&gt;Finally, some good news in the fight to end robocalls&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-07-24T13:00:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-24.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-24.epub"/>
 </entry>
 <entry>
 <id>ProPublica</id>
