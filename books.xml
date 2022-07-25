@@ -2,11 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-25T07:39:10Z</updated>
+<updated>2022-07-25T11:38:51Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>NY Times Books</id>
+<title>NY Times Books: 25 Jul, 2022</title>
+<summary>NY Times Books: 25 Jul, 2022 published at 2022-07-25 09:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Review: ‘How to Read Now,’ by Elaine Castillo&lt;/li&gt;&lt;li&gt;Diana Kennedy, Authority on Mexican Cooking, Dies at 99&lt;/li&gt;&lt;li&gt;Geling Yan Says a Movie Fails to Credit Her. The Film World Shrugs.&lt;/li&gt;&lt;li&gt;Comics That Read Top to Bottom Are Bringing in New Readers&lt;/li&gt;&lt;li&gt;Diana Goetsch on ‘This Body I Wore’&lt;/li&gt;&lt;li&gt;That Voice You’re Hearing? It Might Be Julia Whelan.&lt;/li&gt;&lt;li&gt;Newly Published, From Maori Myths to Europe’s Eastern Borderlands&lt;/li&gt;&lt;li&gt;HarperCollins Workers Strike for Increased Wages, Benefits and Diversity&lt;/li&gt;&lt;li&gt;Readers’ Favorite Phantoms, Specters and Chain-Dragging Ghosts&lt;/li&gt;&lt;li&gt;After Mocking France’s Literary Elite, a Fraught Invite Into the Club&lt;/li&gt;&lt;li&gt;Review: ‘An Honest Living,’ by Dwyer Murphy&lt;/li&gt;&lt;li&gt;Review: “The Digital Republic: On Freedom and Democracy in the 21st Century,” Jamie Susskind&lt;/li&gt;&lt;li&gt;“Chester Keene Cracks the Code” by Kekla Magoon&lt;/li&gt;&lt;li&gt;Review: ‘The Kite Runner’ Trips From Page to Stage&lt;/li&gt;&lt;li&gt;Ronni Solbert, Children’s Book Illustrator, Dies at 96&lt;/li&gt;&lt;li&gt;13 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Review: ‘Fish Swimming in Dappled Water,’ by Riku Onda&lt;/li&gt;&lt;li&gt;Michelle Obama Will Publish a New Book, ‘The Light We Carry,’ This Fall&lt;/li&gt;&lt;li&gt;Hip, Woke, Cool: It’s All Fodder For the Oxford Dictionary of African American English&lt;/li&gt;&lt;li&gt;Gabrielle Zevin Is Not Going to Post This Article&lt;/li&gt;&lt;li&gt;Review: ‘Dirt Creek,’ by Hayley Scrivenor and ‘Wake,’ by Shelley Burr&lt;/li&gt;&lt;li&gt;Ruth Ware Won’t Read ‘Bleak House’ Until She Retires&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Newfoundland&lt;/li&gt;&lt;li&gt;In ‘The Kingdoms of Savannah,’ Oddballs Circle Around a Murder Mystery&lt;/li&gt;&lt;li&gt;A Crop of New Novels About Race and Racism Finds Freedom in Satire&lt;/li&gt;&lt;/ul&gt;
+                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
+                </content>
+<updated>2022-07-25T09:00:09Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-25.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-25.epub"/>
+</entry>
 <entry>
 <id>Asian Review of Books</id>
 <title>Asian Review of Books: 24 Jul, 2022</title>
@@ -22,22 +38,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-07-24.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-07-24.epub"/>
-</entry>
-<entry>
-<id>NY Times Books</id>
-<title>NY Times Books: 24 Jul, 2022</title>
-<summary>NY Times Books: 24 Jul, 2022 published at 2022-07-24 16:57PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Diana Kennedy, Authority on Mexican Cooking, Dies at 99&lt;/li&gt;&lt;li&gt;Geling Yan Says a Movie Fails to Credit Her. The Film World Shrugs.&lt;/li&gt;&lt;li&gt;Comics That Read Top to Bottom Are Bringing in New Readers&lt;/li&gt;&lt;li&gt;Diana Goetsch on ‘This Body I Wore’&lt;/li&gt;&lt;li&gt;That Voice You’re Hearing? It Might Be Julia Whelan.&lt;/li&gt;&lt;li&gt;Newly Published, From Maori Myths to Europe’s Eastern Borderlands&lt;/li&gt;&lt;li&gt;HarperCollins Workers Strike for Increased Wages, Benefits and Diversity&lt;/li&gt;&lt;li&gt;Readers’ Favorite Phantoms, Specters and Chain-Dragging Ghosts&lt;/li&gt;&lt;li&gt;After Mocking France’s Literary Elite, a Fraught Invite Into the Club&lt;/li&gt;&lt;li&gt;Review: ‘An Honest Living,’ by Dwyer Murphy&lt;/li&gt;&lt;li&gt;Review: “The Digital Republic: On Freedom and Democracy in the 21st Century,” Jamie Susskind&lt;/li&gt;&lt;li&gt;“Chester Keene Cracks the Code” by Kekla Magoon&lt;/li&gt;&lt;li&gt;Review: ‘The Kite Runner’ Trips From Page to Stage&lt;/li&gt;&lt;li&gt;Ronni Solbert, Children’s Book Illustrator, Dies at 96&lt;/li&gt;&lt;li&gt;13 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Review: ‘Fish Swimming in Dappled Water,’ by Riku Onda&lt;/li&gt;&lt;li&gt;Michelle Obama Will Publish a New Book, ‘The Light We Carry,’ This Fall&lt;/li&gt;&lt;li&gt;Hip, Woke, Cool: It’s All Fodder For the Oxford Dictionary of African American English&lt;/li&gt;&lt;li&gt;Gabrielle Zevin Is Not Going to Post This Article&lt;/li&gt;&lt;li&gt;Review: ‘Dirt Creek,’ by Hayley Scrivenor and ‘Wake,’ by Shelley Burr&lt;/li&gt;&lt;li&gt;Ruth Ware Won’t Read ‘Bleak House’ Until She Retires&lt;/li&gt;&lt;li&gt;Quidditch Becomes ‘Quadball,’ Leaving J.K. Rowling Behind&lt;/li&gt;&lt;li&gt;The Best Books to Take You Through Newfoundland&lt;/li&gt;&lt;li&gt;In ‘The Kingdoms of Savannah,’ Oddballs Circle Around a Murder Mystery&lt;/li&gt;&lt;li&gt;A Crop of New Novels About Race and Racism Finds Freedom in Satire&lt;/li&gt;&lt;/ul&gt;
-                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
-                </content>
-<updated>2022-07-24T16:57:40Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-24.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-24.epub"/>
 </entry>
 <entry>
 <id>Five Books</id>
