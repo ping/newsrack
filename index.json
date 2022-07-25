@@ -41,22 +41,22 @@
 ],
 "ChannelNewsAsia": [
 {
-"filename": "channelnewsasia-2022-07-24.mobi",
-"published": 1658704621.0
+"filename": "channelnewsasia-2022-07-25.mobi",
+"published": 1658719173.0
 },
 {
-"filename": "channelnewsasia-2022-07-24.epub",
-"published": 1658704621.0
+"filename": "channelnewsasia-2022-07-25.epub",
+"published": 1658719173.0
 }
 ],
 "The Diplomat": [
 {
-"filename": "the-diplomat-2022-07-24.mobi",
-"published": 1658685755.0
+"filename": "the-diplomat-2022-07-25.mobi",
+"published": 1658721930.0
 },
 {
-"filename": "the-diplomat-2022-07-24.epub",
-"published": 1658685755.0
+"filename": "the-diplomat-2022-07-25.epub",
+"published": 1658721930.0
 }
 ],
 "Economist": [
@@ -71,12 +71,12 @@
 ],
 "Financial Times": [
 {
-"filename": "ft-2022-07-24.mobi",
-"published": 1658703706.0
+"filename": "ft-2022-07-25.mobi",
+"published": 1658721641.0
 },
 {
-"filename": "ft-2022-07-24.epub",
-"published": 1658703706.0
+"filename": "ft-2022-07-25.epub",
+"published": 1658721641.0
 }
 ],
 "Five Books": [
@@ -91,52 +91,52 @@
 ],
 "Guardian": [
 {
-"filename": "guardian-2022-07-24.mobi",
-"published": 1658703679.0
+"filename": "guardian-2022-07-25.mobi",
+"published": 1658720382.0
 },
 {
-"filename": "guardian-2022-07-24.epub",
-"published": 1658703679.0
+"filename": "guardian-2022-07-25.epub",
+"published": 1658720382.0
 }
 ],
 "Harvard Business Review": [
 {
 "filename": "hbr-2022-07-01.mobi",
-"published": 1656676800.0
+"published": 1656673200.0
 },
 {
 "filename": "hbr-2022-07-01.epub",
-"published": 1656676800.0
+"published": 1656673200.0
 }
 ],
 "JoongAng Daily": [
 {
-"filename": "joongang-daily-2022-07-24.mobi",
-"published": 1658659597.0
+"filename": "joongang-daily-2022-07-25.mobi",
+"published": 1658718186.0
 },
 {
-"filename": "joongang-daily-2022-07-24.epub",
-"published": 1658659597.0
+"filename": "joongang-daily-2022-07-25.epub",
+"published": 1658718186.0
 }
 ],
 "Korea Herald": [
 {
-"filename": "korea-herald-2022-07-24.mobi",
-"published": 1658694658.0
+"filename": "korea-herald-2022-07-25.mobi",
+"published": 1658717321.0
 },
 {
-"filename": "korea-herald-2022-07-24.epub",
-"published": 1658694658.0
+"filename": "korea-herald-2022-07-25.epub",
+"published": 1658717321.0
 }
 ],
 "London Review of Books": [
 {
-"filename": "lrb-2022-07-22.mobi",
-"published": 1658532716.0
+"filename": "lrb-2022-07-25.mobi",
+"published": 1658722650.0
 },
 {
-"filename": "lrb-2022-07-22.epub",
-"published": 1658532716.0
+"filename": "lrb-2022-07-25.epub",
+"published": 1658722650.0
 }
 ],
 "Nature": [
@@ -171,12 +171,12 @@
 ],
 "NY Times": [
 {
-"filename": "nytimes-global-2022-07-24.mobi",
-"published": 1658705241.0
+"filename": "nytimes-global-2022-07-25.mobi",
+"published": 1658721668.0
 },
 {
-"filename": "nytimes-global-2022-07-24.epub",
-"published": 1658705241.0
+"filename": "nytimes-global-2022-07-25.epub",
+"published": 1658721668.0
 }
 ],
 "NY Times (Print)": [
@@ -251,22 +251,22 @@
 ],
 "South China Morning Post": [
 {
-"filename": "scmp-2022-07-24.mobi",
-"published": 1658704519.0
+"filename": "scmp-2022-07-25.mobi",
+"published": 1658721672.0
 },
 {
-"filename": "scmp-2022-07-24.epub",
-"published": 1658704519.0
+"filename": "scmp-2022-07-25.epub",
+"published": 1658721672.0
 }
 ],
 "Sydney Morning Herald": [
 {
-"filename": "sydney-morning-herald-2022-07-24.mobi",
-"published": 1658705555.0
+"filename": "sydney-morning-herald-2022-07-25.mobi",
+"published": 1658722506.0
 },
 {
-"filename": "sydney-morning-herald-2022-07-24.epub",
-"published": 1658705555.0
+"filename": "sydney-morning-herald-2022-07-25.epub",
+"published": 1658722506.0
 }
 ],
 "Taipei Times": [
@@ -311,12 +311,12 @@
 ],
 "Washington Post": [
 {
-"filename": "wapo-2022-07-24.mobi",
-"published": 1658704579.0
+"filename": "wapo-2022-07-25.mobi",
+"published": 1658722725.0
 },
 {
-"filename": "wapo-2022-07-24.epub",
-"published": 1658704579.0
+"filename": "wapo-2022-07-25.epub",
+"published": 1658722725.0
 }
 ],
 "Wired Magazine": [
@@ -329,5 +329,5 @@
 "published": 1658142000.0
 }
 ],
-"_generated": 1658706481
+"_generated": 1658723284
 }

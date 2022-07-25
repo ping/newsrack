@@ -2,11 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-24T23:48:01Z</updated>
+<updated>2022-07-25T04:28:04Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>London Review of Books</id>
+<title>London Review of Books</title>
+<summary>London Review of Books published at 2022-07-25 04:17AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;/ul&gt;
+                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
+                </content>
+<updated>2022-07-25T04:17:30Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-07-25.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-07-25.epub"/>
+</entry>
 <entry>
 <id>Asian Review of Books</id>
 <title>Asian Review of Books: 24 Jul, 2022</title>
@@ -22,22 +38,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-07-24.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-07-24.epub"/>
-</entry>
-<entry>
-<id>London Review of Books</id>
-<title>London Review of Books</title>
-<summary>London Review of Books published at 2022-07-22 23:31PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;/ul&gt;
-                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
-                </content>
-<updated>2022-07-22T23:31:56Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-07-22.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-07-22.epub"/>
 </entry>
 <entry>
 <id>NY Times Books</id>
