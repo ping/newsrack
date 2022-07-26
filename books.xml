@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-26T11:41:19Z</updated>
+<updated>2022-07-26T15:46:01Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 26 Jul, 2022</title>
-<summary>NY Times Books: 26 Jul, 2022 published at 2022-07-26 09:00AM.</summary>
+<summary>NY Times Books: 26 Jul, 2022 published at 2022-07-26 15:33PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Travel ‘Works to Shake Things Up,’ Says the Novelist Emily Henry&lt;/li&gt;&lt;li&gt;Review: ‘The Golden Age,’ by Wang Xiaobo&lt;/li&gt;&lt;li&gt;Rumrunning, Bootlegging and More Criminal History of ‘Liquor Island’&lt;/li&gt;&lt;li&gt;Diana Kennedy’s Complicated Relationship With Mexican Cuisine&lt;/li&gt;&lt;li&gt;In Robert Lowell’s ‘Memoirs,’ Mental Illness, Creative Friends and a Takedown of Dad&lt;/li&gt;&lt;li&gt;Diana Kennedy, Authority on Mexican Cooking, Dies at 99&lt;/li&gt;&lt;li&gt;“Chester Keene Cracks the Code” by Kekla Magoon&lt;/li&gt;&lt;li&gt;Review: ‘How to Read Now,’ by Elaine Castillo&lt;/li&gt;&lt;li&gt;Geling Yan Says a Movie Fails to Credit Her. The Film World Shrugs.&lt;/li&gt;&lt;li&gt;Comics That Read Top to Bottom Are Bringing in New Readers&lt;/li&gt;&lt;li&gt;Diana Goetsch on ‘This Body I Wore’&lt;/li&gt;&lt;li&gt;That Voice You’re Hearing? It Might Be Julia Whelan.&lt;/li&gt;&lt;li&gt;Newly Published, From Maori Myths to Europe’s Eastern Borderlands&lt;/li&gt;&lt;li&gt;Readers’ Favorite Phantoms, Specters and Chain-Dragging Ghosts&lt;/li&gt;&lt;li&gt;After Mocking France’s Literary Elite, a Fraught Invite Into the Club&lt;/li&gt;&lt;li&gt;Review: ‘An Honest Living,’ by Dwyer Murphy&lt;/li&gt;&lt;li&gt;Review: “The Digital Republic: On Freedom and Democracy in the 21st Century,” Jamie Susskind&lt;/li&gt;&lt;li&gt;Review: ‘The Kite Runner’ Trips From Page to Stage&lt;/li&gt;&lt;li&gt;Ronni Solbert, Children’s Book Illustrator, Dies at 96&lt;/li&gt;&lt;li&gt;13 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Michelle Obama Will Publish a New Book, ‘The Light We Carry,’ This Fall&lt;/li&gt;&lt;li&gt;Hip, Woke, Cool: It’s All Fodder For the Oxford Dictionary of African American English&lt;/li&gt;&lt;li&gt;Gabrielle Zevin Is Not Going to Post This Article&lt;/li&gt;&lt;li&gt;Review: ‘Dirt Creek,’ by Hayley Scrivenor and ‘Wake,’ by Shelley Burr&lt;/li&gt;&lt;li&gt;Ruth Ware Won’t Read ‘Bleak House’ Until She Retires&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Review: ‘The Boys,’ by Katie Hafner&lt;/li&gt;&lt;li&gt;U.S. Authors Dominate Booker Prize Nominees&lt;/li&gt;&lt;li&gt;Diana Kennedy’s Complicated Relationship With Mexican Cuisine&lt;/li&gt;&lt;li&gt;Emily Henry, Author of ‘Book Lovers,’ on the Appeal of Travel&lt;/li&gt;&lt;li&gt;Review: ‘The Golden Age,’ by Wang Xiaobo&lt;/li&gt;&lt;li&gt;Rumrunning, Bootlegging and More Criminal History of ‘Liquor Island’&lt;/li&gt;&lt;li&gt;In Robert Lowell’s ‘Memoirs,’ Mental Illness, Creative Friends and a Takedown of Dad&lt;/li&gt;&lt;li&gt;Diana Kennedy, Authority on Mexican Cooking, Dies at 99&lt;/li&gt;&lt;li&gt;“Chester Keene Cracks the Code” by Kekla Magoon&lt;/li&gt;&lt;li&gt;Review: ‘How to Read Now,’ by Elaine Castillo&lt;/li&gt;&lt;li&gt;Geling Yan Says a Movie Fails to Credit Her. The Film World Shrugs.&lt;/li&gt;&lt;li&gt;Comics That Read Top to Bottom Are Bringing in New Readers&lt;/li&gt;&lt;li&gt;Diana Goetsch on ‘This Body I Wore’&lt;/li&gt;&lt;li&gt;That Voice You’re Hearing? It Might Be Julia Whelan.&lt;/li&gt;&lt;li&gt;Newly Published, From Maori Myths to Europe’s Eastern Borderlands&lt;/li&gt;&lt;li&gt;Readers’ Favorite Phantoms, Specters and Chain-Dragging Ghosts&lt;/li&gt;&lt;li&gt;After Mocking France’s Literary Elite, a Fraught Invite Into the Club&lt;/li&gt;&lt;li&gt;Review: ‘An Honest Living,’ by Dwyer Murphy&lt;/li&gt;&lt;li&gt;Review: “The Digital Republic: On Freedom and Democracy in the 21st Century,” Jamie Susskind&lt;/li&gt;&lt;li&gt;Review: ‘The Kite Runner’ Trips From Page to Stage&lt;/li&gt;&lt;li&gt;Ronni Solbert, Children’s Book Illustrator, Dies at 96&lt;/li&gt;&lt;li&gt;13 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Michelle Obama Will Publish a New Book, ‘The Light We Carry,’ This Fall&lt;/li&gt;&lt;li&gt;Hip, Woke, Cool: It’s All Fodder For the Oxford Dictionary of African American English&lt;/li&gt;&lt;li&gt;Gabrielle Zevin Is Not Going to Post This Article&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-07-26T09:00:19Z</updated>
+<updated>2022-07-26T15:33:16Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
@@ -58,12 +58,12 @@
 <entry>
 <id>London Review of Books</id>
 <title>London Review of Books: 21 Jul, 2022</title>
-<summary>London Review of Books: 21 Jul, 2022 published at 2022-07-13 12:55PM.</summary>
+<summary>London Review of Books: 21 Jul, 2022 published at 2022-07-13 13:27PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Robert Crawford  - Poem: ‘Tank’&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Madeleine Schwartz  - Trial’s End&lt;/li&gt;&lt;li&gt;David Runciman  - Short Cuts: At Blair’s Gathering&lt;/li&gt;&lt;li&gt;Abigail Green  -  In the Midst of Civilised Europe: The Pogroms of 1918-21 and the Onset of the Holocaust&lt;/li&gt;&lt;li&gt;Robert Crawford  - Poem: ‘Tank’&lt;/li&gt;&lt;/ul&gt;
                 Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
                 </content>
-<updated>2022-07-13T12:55:21Z</updated>
+<updated>2022-07-13T13:27:33Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
