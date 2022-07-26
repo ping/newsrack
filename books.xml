@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-25T23:52:19Z</updated>
+<updated>2022-07-26T05:02:24Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,18 +10,34 @@
 <entry>
 <id>London Review of Books</id>
 <title>London Review of Books</title>
-<summary>London Review of Books published at 2022-07-25 23:32PM.</summary>
+<summary>London Review of Books published at 2022-07-26 04:42AM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;/ul&gt;
                 Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
                 </content>
-<updated>2022-07-25T23:32:34Z</updated>
+<updated>2022-07-26T04:42:59Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-07-25.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-07-25.epub"/>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-07-26.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-07-26.epub"/>
+</entry>
+<entry>
+<id>Asian Review of Books</id>
+<title>Asian Review of Books: 26 Jul, 2022</title>
+<summary>Asian Review of Books: 26 Jul, 2022 published at 2022-07-26 00:51AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;A Brazilian account of Hong Kong from 1879&lt;/li&gt;&lt;li&gt;Letter: Thomas McKenna on “Moro Warrior”&lt;/li&gt;&lt;li&gt;“Thirst” by Varsha Bajaj&lt;/li&gt;&lt;li&gt;“Hafez in Love” by Iraj Pezeshkzad&lt;/li&gt;&lt;li&gt;“Understanding the India-China Border: The Enduring Threat of War in High Himalaya” by Manoj Joshi&lt;/li&gt;&lt;li&gt;Podcast with Kaveh L Hemmat, translator of “The Kushnameh: The Persian Epic of Kush the Tusked” by Iranshah ibn Abu’l-Khayr&lt;/li&gt;&lt;li&gt;“Empires of Ideas: Creating the Modern University from Germany to America to China” by William C Kirby&lt;/li&gt;&lt;li&gt;“Sensitive Reading: The Pleasures of South Asian Literature in Translation”&lt;/li&gt;&lt;li&gt;“Banaras Talkies” by Satya Vyas&lt;/li&gt;&lt;li&gt;“An Object of Seduction: Chinese Silk in the Early Modern Transpacific Trade, 1500–1700” by Xiolin Duan&lt;/li&gt;&lt;/ul&gt;
+                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
+                </content>
+<updated>2022-07-26T00:51:07Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-07-26.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-07-26.epub"/>
 </entry>
 <entry>
 <id>NY Times Books</id>
@@ -54,21 +70,5 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-07-25.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="fivebooks-2022-07-25.epub"/>
-</entry>
-<entry>
-<id>Asian Review of Books</id>
-<title>Asian Review of Books: 24 Jul, 2022</title>
-<summary>Asian Review of Books: 24 Jul, 2022 published at 2022-07-24 22:56PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Letter: Thomas McKenna on “Moro Warrior”&lt;/li&gt;&lt;li&gt;“Thirst” by Varsha Bajaj&lt;/li&gt;&lt;li&gt;“Hafez in Love” by Iraj Pezeshkzad&lt;/li&gt;&lt;li&gt;“Understanding the India-China Border: The Enduring Threat of War in High Himalaya” by Manoj Joshi&lt;/li&gt;&lt;li&gt;Podcast with Kaveh L Hemmat, translator of “The Kushnameh: The Persian Epic of Kush the Tusked” by Iranshah ibn Abu’l-Khayr&lt;/li&gt;&lt;li&gt;“Empires of Ideas: Creating the Modern University from Germany to America to China” by William C Kirby&lt;/li&gt;&lt;li&gt;“Sensitive Reading: The Pleasures of South Asian Literature in Translation”&lt;/li&gt;&lt;li&gt;“Banaras Talkies” by Satya Vyas&lt;/li&gt;&lt;li&gt;“An Object of Seduction: Chinese Silk in the Early Modern Transpacific Trade, 1500–1700” by Xiolin Duan&lt;/li&gt;&lt;li&gt;“Life Ceremony” by Sayaka Murata&lt;/li&gt;&lt;/ul&gt;
-                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
-                </content>
-<updated>2022-07-24T22:56:23Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-07-24.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-07-24.epub"/>
 </entry>
 </feed>
