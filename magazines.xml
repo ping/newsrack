@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-26T19:39:40Z</updated>
+<updated>2022-07-26T23:42:05Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,18 +10,34 @@
 <entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 26 Jul, 2022</title>
-<summary>The Atlantic: 26 Jul, 2022 published at 2022-07-26 18:51PM.</summary>
+<summary>The Atlantic: 26 Jul, 2022 published at 2022-07-26 21:38PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The Work of Giants Crumbles&lt;/li&gt;&lt;li&gt;What Putin’s Treatment of Jews Reveals About Russia&lt;/li&gt;&lt;li&gt;The Dirtbag Is Back&lt;/li&gt;&lt;li&gt;The Creature That Gave Up Parasitism for … Wait, What?&lt;/li&gt;&lt;li&gt;Why Did We Buy What Victoria’s Secret Was Selling?&lt;/li&gt;&lt;li&gt;Putin’s Big Chill in Europe&lt;/li&gt;&lt;li&gt;The Supreme Court Is Making America Ungovernable&lt;/li&gt;&lt;li&gt;An Army Alone Doesn’t Make You a Great Power&lt;/li&gt;&lt;li&gt;The U.S. Has No Plan to Prevent the Next Pandemic&lt;/li&gt;&lt;li&gt;13 Reader Views on Directing Tax Money to Private Schools&lt;/li&gt;&lt;li&gt;An Ode to Trump’s Outtakes&lt;/li&gt;&lt;li&gt;Trees Are Overrated&lt;/li&gt;&lt;li&gt;The Horrors of No-News Facebook&lt;/li&gt;&lt;li&gt;Why Must We Work So Hard Before Vacation?&lt;/li&gt;&lt;li&gt;Scenes From California’s Fast-Moving Oak Fire&lt;/li&gt;&lt;li&gt;A Russian Defeat in Ukraine Could Save Taiwan&lt;/li&gt;&lt;li&gt;Could Genetics Be the Key to Never Getting the Coronavirus?&lt;/li&gt;&lt;li&gt;The Way We Talk About Nature Is Getting Weirder&lt;/li&gt;&lt;li&gt;The Gun Industry Created a New Consumer. Now It’s Killing Us.&lt;/li&gt;&lt;li&gt;Why Exceptions for the Life of the Mother Have Disappeared&lt;/li&gt;&lt;li&gt;Why Your House Was So Expensive&lt;/li&gt;&lt;li&gt;The Day I Saw the Emperor’s Clay Soldiers&lt;/li&gt;&lt;li&gt;Don’t Blame Dostoyevsky&lt;/li&gt;&lt;li&gt;A Court Without Precedent&lt;/li&gt;&lt;li&gt;The Torment of Odesa&lt;/li&gt;&lt;li&gt;Mike Pence Is Trying to Send a Message&lt;/li&gt;&lt;li&gt;The Inescapable Conclusion From the January 6 Hearings&lt;/li&gt;&lt;li&gt;Are Latinos Really Realigning Toward Republicans?&lt;/li&gt;&lt;li&gt;It’s Joe Manchin’s America&lt;/li&gt;&lt;li&gt;The Bannon Strategy&lt;/li&gt;&lt;li&gt;The Gray Man Takes the Stoic-Spy Cliché Way Too Far&lt;/li&gt;&lt;li&gt;The Novel That Captures New York City Right Now&lt;/li&gt;&lt;li&gt;The Risk and Opportunity of Online Fertility Groups&lt;/li&gt;&lt;li&gt;The Most Moving Film of the Year Is a Documentary About Volcanoes&lt;/li&gt;&lt;li&gt;Jordan Peele’s Nope Is Spectacular, Indulgent, and Brutal&lt;/li&gt;&lt;li&gt;Lizzo’s Music Really Is Special&lt;/li&gt;&lt;li&gt;Do Animals Dream?&lt;/li&gt;&lt;li&gt;When a Troubling Book Gets a Hollywood Makeover&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;The Cult Classic That Captures the Grind of Dead-End Jobs&lt;/li&gt;&lt;li&gt;Photos of the Week: Swan Upping, Worm Charming, Living Bridge&lt;/li&gt;&lt;li&gt;England Can’t Take the Heat&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;America Is Running Out of ‘COVID Virgins’&lt;/li&gt;&lt;li&gt;Of Course Biden Has COVID&lt;/li&gt;&lt;li&gt;We’re Testing for Monkeypox the Wrong Way&lt;/li&gt;&lt;li&gt;America Was in an Early-Death Crisis Long Before COVID&lt;/li&gt;&lt;li&gt;The Vasectomy Influencers&lt;/li&gt;&lt;li&gt;The Era of Climate Change Has Created a New Emotion&lt;/li&gt;&lt;li&gt;The Webb Space Telescope Is a Time Machine&lt;/li&gt;&lt;li&gt;The Spiders That Choose Death&lt;/li&gt;&lt;li&gt;We’ve Had Other Climate Defeats. This One Is by Far the Weirdest.&lt;/li&gt;&lt;li&gt;America’s Most Misunderstood Marsupial&lt;/li&gt;&lt;li&gt;The World Is Burning Once Again&lt;/li&gt;&lt;li&gt;There Is a Planet With Clouds Made of Sand&lt;/li&gt;&lt;li&gt;The Criminal Case Against Trump Is Getting Stronger&lt;/li&gt;&lt;li&gt;What a Warming Planet Means for Literature&lt;/li&gt;&lt;li&gt;The Opening for Democrats on Abortion&lt;/li&gt;&lt;li&gt;The Next Generation of NIMBYs&lt;/li&gt;&lt;li&gt;The Real Reason Democrats Are Losing Ground on Education&lt;/li&gt;&lt;li&gt;How to Pivot on a Thursday Night&lt;/li&gt;&lt;li&gt;U.S. Messaging on Monkeypox Is Deeply Flawed&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;li&gt;Local Prosecutors Can’t Protect Abortion Rights&lt;/li&gt;&lt;li&gt;The Hawley-Bridges Exchange Was Not Constructive&lt;/li&gt;&lt;li&gt;Trump Terrified Even His Truest Believers&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;The Pop Star We Need Right Now&lt;/li&gt;&lt;li&gt;The Work of Giants Crumbles&lt;/li&gt;&lt;li&gt;What Putin’s Treatment of Jews Reveals About Russia&lt;/li&gt;&lt;li&gt;The Dirtbag Is Back&lt;/li&gt;&lt;li&gt;The Creature That Gave Up Parasitism for … Wait, What?&lt;/li&gt;&lt;li&gt;Why Did We Buy What Victoria’s Secret Was Selling?&lt;/li&gt;&lt;li&gt;Putin’s Big Chill in Europe&lt;/li&gt;&lt;li&gt;The Supreme Court Is Making America Ungovernable&lt;/li&gt;&lt;li&gt;An Army Alone Doesn’t Make You a Great Power&lt;/li&gt;&lt;li&gt;The U.S. Has No Plan to Prevent the Next Pandemic&lt;/li&gt;&lt;li&gt;13 Reader Views on Directing Tax Money to Private Schools&lt;/li&gt;&lt;li&gt;An Ode to Trump’s Outtakes&lt;/li&gt;&lt;li&gt;Trees Are Overrated&lt;/li&gt;&lt;li&gt;The Horrors of No-News Facebook&lt;/li&gt;&lt;li&gt;Why Must We Work So Hard Before Vacation?&lt;/li&gt;&lt;li&gt;Scenes From California’s Fast-Moving Oak Fire&lt;/li&gt;&lt;li&gt;A Russian Defeat in Ukraine Could Save Taiwan&lt;/li&gt;&lt;li&gt;Could Genetics Be the Key to Never Getting the Coronavirus?&lt;/li&gt;&lt;li&gt;The Way We Talk About Nature Is Getting Weirder&lt;/li&gt;&lt;li&gt;The Gun Industry Created a New Consumer. Now It’s Killing Us.&lt;/li&gt;&lt;li&gt;Why Exceptions for the Life of the Mother Have Disappeared&lt;/li&gt;&lt;li&gt;Why Your House Was So Expensive&lt;/li&gt;&lt;li&gt;The Day I Saw the Emperor’s Clay Soldiers&lt;/li&gt;&lt;li&gt;Don’t Blame Dostoyevsky&lt;/li&gt;&lt;li&gt;A Court Without Precedent&lt;/li&gt;&lt;li&gt;Mike Pence Is Trying to Send a Message&lt;/li&gt;&lt;li&gt;The Inescapable Conclusion From the January 6 Hearings&lt;/li&gt;&lt;li&gt;Are Latinos Really Realigning Toward Republicans?&lt;/li&gt;&lt;li&gt;It’s Joe Manchin’s America&lt;/li&gt;&lt;li&gt;The Bannon Strategy&lt;/li&gt;&lt;li&gt;The Gray Man Takes the Stoic-Spy Cliché Way Too Far&lt;/li&gt;&lt;li&gt;The Novel That Captures New York City Right Now&lt;/li&gt;&lt;li&gt;The Risk and Opportunity of Online Fertility Groups&lt;/li&gt;&lt;li&gt;The Most Moving Film of the Year Is a Documentary About Volcanoes&lt;/li&gt;&lt;li&gt;Jordan Peele’s Nope Is Spectacular, Indulgent, and Brutal&lt;/li&gt;&lt;li&gt;Lizzo’s Music Really Is Special&lt;/li&gt;&lt;li&gt;When a Troubling Book Gets a Hollywood Makeover&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;Photos of the Week: Swan Upping, Worm Charming, Living Bridge&lt;/li&gt;&lt;li&gt;England Can’t Take the Heat&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;America Is Running Out of ‘COVID Virgins’&lt;/li&gt;&lt;li&gt;Of Course Biden Has COVID&lt;/li&gt;&lt;li&gt;We’re Testing for Monkeypox the Wrong Way&lt;/li&gt;&lt;li&gt;America Was in an Early-Death Crisis Long Before COVID&lt;/li&gt;&lt;li&gt;The Vasectomy Influencers&lt;/li&gt;&lt;li&gt;The Era of Climate Change Has Created a New Emotion&lt;/li&gt;&lt;li&gt;The Webb Space Telescope Is a Time Machine&lt;/li&gt;&lt;li&gt;The Spiders That Choose Death&lt;/li&gt;&lt;li&gt;We’ve Had Other Climate Defeats. This One Is by Far the Weirdest.&lt;/li&gt;&lt;li&gt;America’s Most Misunderstood Marsupial&lt;/li&gt;&lt;li&gt;The World Is Burning Once Again&lt;/li&gt;&lt;li&gt;There Is a Planet With Clouds Made of Sand&lt;/li&gt;&lt;li&gt;The Criminal Case Against Trump Is Getting Stronger&lt;/li&gt;&lt;li&gt;What a Warming Planet Means for Literature&lt;/li&gt;&lt;li&gt;The Opening for Democrats on Abortion&lt;/li&gt;&lt;li&gt;The Next Generation of NIMBYs&lt;/li&gt;&lt;li&gt;The Real Reason Democrats Are Losing Ground on Education&lt;/li&gt;&lt;li&gt;How to Pivot on a Thursday Night&lt;/li&gt;&lt;li&gt;U.S. Messaging on Monkeypox Is Deeply Flawed&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;li&gt;Local Prosecutors Can’t Protect Abortion Rights&lt;/li&gt;&lt;li&gt;The Hawley-Bridges Exchange Was Not Constructive&lt;/li&gt;&lt;li&gt;Trump Terrified Even His Truest Believers&lt;/li&gt;&lt;/ul&gt;
                 News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
                 </content>
-<updated>2022-07-26T18:51:26Z</updated>
+<updated>2022-07-26T21:38:24Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-26.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-26.epub"/>
+</entry>
+<entry>
+<id>Vox</id>
+<title>Vox: 26 Jul, 2022</title>
+<summary>Vox: 26 Jul, 2022 published at 2022-07-26 20:54PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;4 ways Americans are still getting abortion pills&lt;/li&gt;&lt;li&gt;Why Russia is abandoning the International Space Station&lt;/li&gt;&lt;li&gt;The drama over Nancy Pelosi’s Taiwan travel plans, briefly explained&lt;/li&gt;&lt;li&gt;Rewatching Gigli in the age of Bennifer’s triumph&lt;/li&gt;&lt;li&gt;What if the suburbs were just a first draft?&lt;/li&gt;&lt;li&gt;A Black rodeo rewrites the story of the West&lt;/li&gt;&lt;li&gt;Democrats are taking what they can get on Build Back Better&lt;/li&gt;&lt;li&gt;9 questions about the January 6 committee, answered&lt;/li&gt;&lt;li&gt;A worldwide monkeypox outbreak&lt;/li&gt;&lt;li&gt;Gavin Newsom’s plan to save the Constitution by trolling the Supreme Court&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-07-26T20:54:09Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-26.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-26.epub"/>
 </entry>
 <entry>
 <id>The Diplomat</id>
@@ -38,22 +54,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-diplomat-2022-07-26.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-diplomat-2022-07-26.epub"/>
-</entry>
-<entry>
-<id>Vox</id>
-<title>Vox: 26 Jul, 2022</title>
-<summary>Vox: 26 Jul, 2022 published at 2022-07-26 16:37PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Why Russia is abandoning the International Space Station&lt;/li&gt;&lt;li&gt;The drama over Nancy Pelosi’s Taiwan travel plans, briefly explained&lt;/li&gt;&lt;li&gt;Rewatching Gigli in the age of Bennifer’s triumph&lt;/li&gt;&lt;li&gt;What if the suburbs were just a first draft?&lt;/li&gt;&lt;li&gt;A Black rodeo rewrites the story of the West&lt;/li&gt;&lt;li&gt;Democrats are taking what they can get on Build Back Better&lt;/li&gt;&lt;li&gt;9 questions about the January 6 committee, answered&lt;/li&gt;&lt;li&gt;A worldwide monkeypox outbreak&lt;/li&gt;&lt;li&gt;Gavin Newsom’s plan to save the Constitution by trolling the Supreme Court&lt;/li&gt;&lt;li&gt;Will the pro-abortion rights billionaires please stand up?&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-07-26T16:37:02Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-26.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-26.epub"/>
 </entry>
 <entry>
 <id>ProPublica</id>
@@ -234,12 +234,12 @@
 <entry>
 <id>Harvard Business Review</id>
 <title>Harvard Business Review: 26 Jul, 2022</title>
-<summary>Harvard Business Review: 26 Jul, 2022 published at 2022-07-01 12:00PM.</summary>
+<summary>Harvard Business Review: 26 Jul, 2022 published at 2022-07-01 11:00AM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;A Role That’s More Challenging Than Ever&lt;/li&gt;&lt;li&gt;A Seat at the Table Is Not Enough&lt;/li&gt;&lt;li&gt;A Common Parasite Can Make People More Entrepreneurial&lt;/li&gt;&lt;li&gt;Two Cofounders of Xendit on Pioneering Fintech in Southeast Asia&lt;/li&gt;&lt;li&gt;The C-Suite Skills That Matter Most&lt;/li&gt;&lt;li&gt;Is It Time to Consider Co-CEOs?&lt;/li&gt;&lt;li&gt;When Hiring CEOs, Focus on Character&lt;/li&gt;&lt;li&gt;As the World Shifts, So Should Leaders&lt;/li&gt;&lt;li&gt;Identifying Unmet Needs in a Digital Age&lt;/li&gt;&lt;li&gt;To Drive Diversity Efforts, Don’t Tiptoe Around Your Legal Risk&lt;/li&gt;&lt;li&gt;Private Equity Should Take the Lead in Sustainability&lt;/li&gt;&lt;li&gt;What You’re Getting Wrong About Customer Journeys&lt;/li&gt;&lt;li&gt;A Better Way to Put Your Data to Work&lt;/li&gt;&lt;li&gt;Leadership in a Politically Charged Age&lt;/li&gt;&lt;li&gt;Why You Need an AI Ethics Committee&lt;/li&gt;&lt;li&gt;How to Turn a Supply Chain Platform into an Innovation Engine&lt;/li&gt;&lt;li&gt;How to Overcome Your Fear of the Unknown&lt;/li&gt;&lt;li&gt;Case Study: Would Vegan Offerings Dilute Our Brand?&lt;/li&gt;&lt;li&gt;Exploring the Metaverse&lt;/li&gt;&lt;li&gt;Life’s Work: An Interview with Misty Copeland&lt;/li&gt;&lt;/ul&gt;
                 Harvard Business Review is the leading destination for smart management thinking. Through its flagship magazine, books, and digital content and tools published on HBR.org, Harvard Business Review aims to provide professionals around the world with rigorous insights and best practices to help lead themselves and their organizations more effectively and to make a positive impact.
                 </content>
-<updated>2022-07-01T12:00:00Z</updated>
+<updated>2022-07-01T11:00:00Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>

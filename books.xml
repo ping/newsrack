@@ -2,58 +2,42 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-26T19:39:40Z</updated>
+<updated>2022-07-26T23:42:05Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
-<id>London Review of Books</id>
-<title>London Review of Books</title>
-<summary>London Review of Books published at 2022-07-26 19:28PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;/ul&gt;
-                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
-                </content>
-<updated>2022-07-26T19:28:32Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-07-26.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-07-26.epub"/>
-</entry>
-<entry>
-<id>NY Times Books</id>
-<title>NY Times Books: 26 Jul, 2022</title>
-<summary>NY Times Books: 26 Jul, 2022 published at 2022-07-26 18:01PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The Big, Bold Life of the Woman Who Brought Us the ‘It Girl’&lt;/li&gt;&lt;li&gt;Review: ‘The Boys,’ by Katie Hafner&lt;/li&gt;&lt;li&gt;U.S. Authors Dominate Booker Prize Nominees&lt;/li&gt;&lt;li&gt;Diana Kennedy’s Complicated Relationship With Mexican Cuisine&lt;/li&gt;&lt;li&gt;Emily Henry, Author of ‘Book Lovers,’ on the Appeal of Travel&lt;/li&gt;&lt;li&gt;Review: ‘The Golden Age,’ by Wang Xiaobo&lt;/li&gt;&lt;li&gt;Rumrunning, Bootlegging and More Criminal History of ‘Liquor Island’&lt;/li&gt;&lt;li&gt;In Robert Lowell’s ‘Memoirs,’ Mental Illness, Creative Friends and a Takedown of Dad&lt;/li&gt;&lt;li&gt;Diana Kennedy, Authority on Mexican Cooking, Dies at 99&lt;/li&gt;&lt;li&gt;“Chester Keene Cracks the Code” by Kekla Magoon&lt;/li&gt;&lt;li&gt;Review: ‘How to Read Now,’ by Elaine Castillo&lt;/li&gt;&lt;li&gt;Geling Yan Says a Movie Fails to Credit Her. The Film World Shrugs.&lt;/li&gt;&lt;li&gt;Comics That Read Top to Bottom Are Bringing in New Readers&lt;/li&gt;&lt;li&gt;Diana Goetsch on ‘This Body I Wore’&lt;/li&gt;&lt;li&gt;That Voice You’re Hearing? It Might Be Julia Whelan.&lt;/li&gt;&lt;li&gt;Newly Published, From Maori Myths to Europe’s Eastern Borderlands&lt;/li&gt;&lt;li&gt;Readers’ Favorite Phantoms, Specters and Chain-Dragging Ghosts&lt;/li&gt;&lt;li&gt;After Mocking France’s Literary Elite, a Fraught Invite Into the Club&lt;/li&gt;&lt;li&gt;Review: ‘An Honest Living,’ by Dwyer Murphy&lt;/li&gt;&lt;li&gt;Review: “The Digital Republic: On Freedom and Democracy in the 21st Century,” Jamie Susskind&lt;/li&gt;&lt;li&gt;Review: ‘The Kite Runner’ Trips From Page to Stage&lt;/li&gt;&lt;li&gt;Ronni Solbert, Children’s Book Illustrator, Dies at 96&lt;/li&gt;&lt;li&gt;13 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Michelle Obama Will Publish a New Book, ‘The Light We Carry,’ This Fall&lt;/li&gt;&lt;li&gt;Hip, Woke, Cool: It’s All Fodder For the Oxford Dictionary of African American English&lt;/li&gt;&lt;/ul&gt;
-                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
-                </content>
-<updated>2022-07-26T18:01:39Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-26.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-26.epub"/>
-</entry>
-<entry>
 <id>Asian Review of Books</id>
 <title>Asian Review of Books: 26 Jul, 2022</title>
-<summary>Asian Review of Books: 26 Jul, 2022 published at 2022-07-26 00:51AM.</summary>
+<summary>Asian Review of Books: 26 Jul, 2022 published at 2022-07-26 22:50PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;A Brazilian account of Hong Kong from 1879&lt;/li&gt;&lt;li&gt;Letter: Thomas McKenna on “Moro Warrior”&lt;/li&gt;&lt;li&gt;“Thirst” by Varsha Bajaj&lt;/li&gt;&lt;li&gt;“Hafez in Love” by Iraj Pezeshkzad&lt;/li&gt;&lt;li&gt;“Understanding the India-China Border: The Enduring Threat of War in High Himalaya” by Manoj Joshi&lt;/li&gt;&lt;li&gt;Podcast with Kaveh L Hemmat, translator of “The Kushnameh: The Persian Epic of Kush the Tusked” by Iranshah ibn Abu’l-Khayr&lt;/li&gt;&lt;li&gt;“Empires of Ideas: Creating the Modern University from Germany to America to China” by William C Kirby&lt;/li&gt;&lt;li&gt;“Sensitive Reading: The Pleasures of South Asian Literature in Translation”&lt;/li&gt;&lt;li&gt;“Banaras Talkies” by Satya Vyas&lt;/li&gt;&lt;li&gt;“An Object of Seduction: Chinese Silk in the Early Modern Transpacific Trade, 1500–1700” by Xiolin Duan&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;“Treasures of Herat” by Barbara Brend&lt;/li&gt;&lt;li&gt;A Brazilian account of Hong Kong from 1879&lt;/li&gt;&lt;li&gt;Letter: Thomas McKenna on “Moro Warrior”&lt;/li&gt;&lt;li&gt;“Thirst” by Varsha Bajaj&lt;/li&gt;&lt;li&gt;“Hafez in Love” by Iraj Pezeshkzad&lt;/li&gt;&lt;li&gt;“Understanding the India-China Border: The Enduring Threat of War in High Himalaya” by Manoj Joshi&lt;/li&gt;&lt;li&gt;Podcast with Kaveh L Hemmat, translator of “The Kushnameh: The Persian Epic of Kush the Tusked” by Iranshah ibn Abu’l-Khayr&lt;/li&gt;&lt;li&gt;“Empires of Ideas: Creating the Modern University from Germany to America to China” by William C Kirby&lt;/li&gt;&lt;li&gt;“Sensitive Reading: The Pleasures of South Asian Literature in Translation”&lt;/li&gt;&lt;li&gt;“Banaras Talkies” by Satya Vyas&lt;/li&gt;&lt;/ul&gt;
                 In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
                 </content>
-<updated>2022-07-26T00:51:07Z</updated>
+<updated>2022-07-26T22:50:52Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-07-26.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-07-26.epub"/>
+</entry>
+<entry>
+<id>NY Times Books</id>
+<title>NY Times Books: 26 Jul, 2022</title>
+<summary>NY Times Books: 26 Jul, 2022 published at 2022-07-26 21:27PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Love or Hate Emmanuel Carrère’s Forceful Tangents, They’re Back in ‘Yoga’&lt;/li&gt;&lt;li&gt;Emily Henry, Author of ‘Book Lovers,’ on the Appeal of Travel&lt;/li&gt;&lt;li&gt;Review: “Mercury Pictures Presents,” by Anthony Marra&lt;/li&gt;&lt;li&gt;New Self-Help Books&lt;/li&gt;&lt;li&gt;The Big, Bold Life of the Woman Who Brought Us the ‘It Girl’&lt;/li&gt;&lt;li&gt;Review: ‘The Boys,’ by Katie Hafner&lt;/li&gt;&lt;li&gt;U.S. Authors Dominate Booker Prize Nominees&lt;/li&gt;&lt;li&gt;Diana Kennedy’s Complicated Relationship With Mexican Cuisine&lt;/li&gt;&lt;li&gt;Review: ‘The Golden Age,’ by Wang Xiaobo&lt;/li&gt;&lt;li&gt;Rumrunning, Bootlegging and More Criminal History of ‘Liquor Island’&lt;/li&gt;&lt;li&gt;In Robert Lowell’s ‘Memoirs,’ Mental Illness, Creative Friends and a Takedown of Dad&lt;/li&gt;&lt;li&gt;Diana Kennedy, Authority on Mexican Cooking, Dies at 99&lt;/li&gt;&lt;li&gt;“Chester Keene Cracks the Code” by Kekla Magoon&lt;/li&gt;&lt;li&gt;Review: ‘How to Read Now,’ by Elaine Castillo&lt;/li&gt;&lt;li&gt;Geling Yan Says a Movie Fails to Credit Her. The Film World Shrugs.&lt;/li&gt;&lt;li&gt;Comics That Read Top to Bottom Are Bringing in New Readers&lt;/li&gt;&lt;li&gt;Diana Goetsch on ‘This Body I Wore’&lt;/li&gt;&lt;li&gt;That Voice You’re Hearing? It Might Be Julia Whelan.&lt;/li&gt;&lt;li&gt;Newly Published, From Maori Myths to Europe’s Eastern Borderlands&lt;/li&gt;&lt;li&gt;Readers’ Favorite Phantoms, Specters and Chain-Dragging Ghosts&lt;/li&gt;&lt;li&gt;After Mocking France’s Literary Elite, a Fraught Invite Into the Club&lt;/li&gt;&lt;li&gt;Review: ‘An Honest Living,’ by Dwyer Murphy&lt;/li&gt;&lt;li&gt;Review: “The Digital Republic: On Freedom and Democracy in the 21st Century,” Jamie Susskind&lt;/li&gt;&lt;li&gt;Review: ‘The Kite Runner’ Trips From Page to Stage&lt;/li&gt;&lt;li&gt;Hip, Woke, Cool: It’s All Fodder For the Oxford Dictionary of African American English&lt;/li&gt;&lt;/ul&gt;
+                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
+                </content>
+<updated>2022-07-26T21:27:32Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-26.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-26.epub"/>
 </entry>
 <entry>
 <id>Five Books</id>
@@ -70,5 +54,21 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-07-25.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="fivebooks-2022-07-25.epub"/>
+</entry>
+<entry>
+<id>London Review of Books</id>
+<title>London Review of Books: 21 Jul, 2022</title>
+<summary>London Review of Books: 21 Jul, 2022 published at 2022-07-13 13:27PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Madeleine Schwartz  - Trial’s End&lt;/li&gt;&lt;li&gt;David Runciman  - Short Cuts: At Blair’s Gathering&lt;/li&gt;&lt;li&gt;Abigail Green  -  In the Midst of Civilised Europe: The Pogroms of 1918-21 and the Onset of the Holocaust&lt;/li&gt;&lt;li&gt;Robert Crawford  - Poem: ‘Tank’&lt;/li&gt;&lt;/ul&gt;
+                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
+                </content>
+<updated>2022-07-13T13:27:33Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-07-13.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-07-13.epub"/>
 </entry>
 </feed>
