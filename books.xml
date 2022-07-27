@@ -2,27 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-27T04:42:09Z</updated>
+<updated>2022-07-27T07:43:00Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
-<entry>
-<id>London Review of Books</id>
-<title>London Review of Books</title>
-<summary>London Review of Books published at 2022-07-27 04:22AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;/ul&gt;
-                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
-                </content>
-<updated>2022-07-27T04:22:13Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-07-27.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-07-27.epub"/>
-</entry>
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 27 Jul, 2022</title>
@@ -70,5 +54,21 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-07-25.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="fivebooks-2022-07-25.epub"/>
+</entry>
+<entry>
+<id>London Review of Books</id>
+<title>London Review of Books: 21 Jul, 2022</title>
+<summary>London Review of Books: 21 Jul, 2022 published at 2022-07-13 11:41AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Abigail Green  -  In the Midst of Civilised Europe: The Pogroms of 1918-21 and the Onset of the Holocaust&lt;/li&gt;&lt;/ul&gt;
+                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
+                </content>
+<updated>2022-07-13T11:41:35Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-07-13.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-07-13.epub"/>
 </entry>
 </feed>
