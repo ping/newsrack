@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-28T11:40:02Z</updated>
+<updated>2022-07-28T15:46:39Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>London Review of Books</id>
 <title>London Review of Books</title>
-<summary>London Review of Books published at 2022-07-28 11:29AM.</summary>
+<summary>London Review of Books published at 2022-07-28 15:35PM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;/ul&gt;
                 Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
                 </content>
-<updated>2022-07-28T11:29:17Z</updated>
+<updated>2022-07-28T15:35:15Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
@@ -26,12 +26,12 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 28 Jul, 2022</title>
-<summary>NY Times Books: 28 Jul, 2022 published at 2022-07-28 09:00AM.</summary>
+<summary>NY Times Books: 28 Jul, 2022 published at 2022-07-28 13:27PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;13 New Books Coming in August&lt;/li&gt;&lt;li&gt;Mohsin Hamid By the Book Interview&lt;/li&gt;&lt;li&gt;This Novelist Spun an Existential Question Into a Best Seller&lt;/li&gt;&lt;li&gt;New Crime Novels&lt;/li&gt;&lt;li&gt;Poem: Summer Terror&lt;/li&gt;&lt;li&gt;The Life and Death of Daniel Auster, a Son of Literary Brooklyn&lt;/li&gt;&lt;li&gt;An Empathetic Account of the Complexity After Apartheid&lt;/li&gt;&lt;li&gt;New Romance Novels&lt;/li&gt;&lt;li&gt;Newly Published, From Teen Witches to Critical Race Theory&lt;/li&gt;&lt;li&gt;U.S. Authors Dominate Booker Prize Nominees&lt;/li&gt;&lt;li&gt;Review: “Mercury Pictures Presents,” by Anthony Marra&lt;/li&gt;&lt;li&gt;Love or Hate Emmanuel Carrère’s Forceful Tangents, They’re Back in ‘Yoga’&lt;/li&gt;&lt;li&gt;Emily Henry, Author of ‘Book Lovers,’ on the Appeal of Travel&lt;/li&gt;&lt;li&gt;New Self-Help Books&lt;/li&gt;&lt;li&gt;The Big, Bold Life of the Woman Who Brought Us the ‘It Girl’&lt;/li&gt;&lt;li&gt;Review: ‘The Boys,’ by Katie Hafner&lt;/li&gt;&lt;li&gt;Diana Kennedy’s Complicated Relationship With Mexican Cuisine&lt;/li&gt;&lt;li&gt;Review: ‘The Golden Age,’ by Wang Xiaobo&lt;/li&gt;&lt;li&gt;Rumrunning, Bootlegging and More Criminal History of ‘Liquor Island’&lt;/li&gt;&lt;li&gt;In Robert Lowell’s ‘Memoirs,’ Mental Illness, Creative Friends and a Takedown of Dad&lt;/li&gt;&lt;li&gt;Diana Kennedy, Authority on Mexican Cooking, Dies at 99&lt;/li&gt;&lt;li&gt;Review: ‘How to Read Now,’ by Elaine Castillo&lt;/li&gt;&lt;li&gt;Geling Yan Says a Movie Fails to Credit Her. The Film World Shrugs.&lt;/li&gt;&lt;li&gt;Comics That Read Top to Bottom Are Bringing in New Readers&lt;/li&gt;&lt;li&gt;Diana Goetsch on ‘This Body I Wore’&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Review: ‘A Hard Place to Leave,’ by Marcia DeSanctis; ‘All Down Darkness Wide,’ by Seán Hewitt; ‘Into the Inferno,’ by Stuart Palley; ‘Crying in the Bathroom,’ by Erika L. Sánchez&lt;/li&gt;&lt;li&gt;13 New Books Coming in August&lt;/li&gt;&lt;li&gt;Mohsin Hamid By the Book Interview&lt;/li&gt;&lt;li&gt;This Novelist Spun an Existential Question Into a Best Seller&lt;/li&gt;&lt;li&gt;New Crime Novels&lt;/li&gt;&lt;li&gt;Poem: Summer Terror&lt;/li&gt;&lt;li&gt;The Life and Death of Daniel Auster, a Son of Literary Brooklyn&lt;/li&gt;&lt;li&gt;An Empathetic Account of the Complexity After Apartheid&lt;/li&gt;&lt;li&gt;New Romance Novels&lt;/li&gt;&lt;li&gt;Newly Published, From Teen Witches to Critical Race Theory&lt;/li&gt;&lt;li&gt;U.S. Authors Dominate Booker Prize Nominees&lt;/li&gt;&lt;li&gt;Review: “Mercury Pictures Presents,” by Anthony Marra&lt;/li&gt;&lt;li&gt;Love or Hate Emmanuel Carrère’s Forceful Tangents, They’re Back in ‘Yoga’&lt;/li&gt;&lt;li&gt;Emily Henry, Author of ‘Book Lovers,’ on the Appeal of Travel&lt;/li&gt;&lt;li&gt;New Self-Help Books&lt;/li&gt;&lt;li&gt;The Big, Bold Life of the Woman Who Brought Us the ‘It Girl’&lt;/li&gt;&lt;li&gt;Review: ‘The Boys,’ by Katie Hafner&lt;/li&gt;&lt;li&gt;Diana Kennedy’s Complicated Relationship With Mexican Cuisine&lt;/li&gt;&lt;li&gt;Review: ‘The Golden Age,’ by Wang Xiaobo&lt;/li&gt;&lt;li&gt;Rumrunning, Bootlegging and More Criminal History of ‘Liquor Island’&lt;/li&gt;&lt;li&gt;In Robert Lowell’s ‘Memoirs,’ Mental Illness, Creative Friends and a Takedown of Dad&lt;/li&gt;&lt;li&gt;Diana Kennedy, Authority on Mexican Cooking, Dies at 99&lt;/li&gt;&lt;li&gt;Review: ‘How to Read Now,’ by Elaine Castillo&lt;/li&gt;&lt;li&gt;Geling Yan Says a Movie Fails to Credit Her. The Film World Shrugs.&lt;/li&gt;&lt;li&gt;Diana Goetsch on ‘This Body I Wore’&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-07-28T09:00:31Z</updated>
+<updated>2022-07-28T13:27:54Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
