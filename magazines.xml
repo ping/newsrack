@@ -2,11 +2,107 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-28T07:41:09Z</updated>
+<updated>2022-07-28T11:40:02Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>Vox</id>
+<title>Vox: 28 Jul, 2022</title>
+<summary>Vox: 28 Jul, 2022 published at 2022-07-28 11:30AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;What GDP does and doesn’t tell us&lt;/li&gt;&lt;li&gt;Biden’s latest global infrastructure plan is all about competing with China. That’s a problem.&lt;/li&gt;&lt;li&gt;The rise of land acknowledgments — and their limitations&lt;/li&gt;&lt;li&gt;Biden’s agenda is, in fact, back&lt;/li&gt;&lt;li&gt;The Facebookification of Instagram&lt;/li&gt;&lt;li&gt;Republicans have a nonsensical argument against the same-sex marriage bill&lt;/li&gt;&lt;li&gt;Google’s plan to get rid of cookies (still) isn’t going well&lt;/li&gt;&lt;li&gt;The CHIPS Act won’t solve the chip shortage&lt;/li&gt;&lt;li&gt;How the ADA came to be&lt;/li&gt;&lt;li&gt;We’re one step closer to robots doing all our housework&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-07-28T11:30:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-28.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-28.epub"/>
+</entry>
+<entry>
+<id>The Atlantic</id>
+<title>The Atlantic: 28 Jul, 2022</title>
+<summary>The Atlantic: 28 Jul, 2022 published at 2022-07-28 11:09AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;They’re Really Doing It&lt;/li&gt;&lt;li&gt;The World Needs to Start Planning for the Fire Age&lt;/li&gt;&lt;li&gt;Yes, Social Media Really Is Undermining Democracy&lt;/li&gt;&lt;li&gt;How to Be Happy in a Recession&lt;/li&gt;&lt;li&gt;The January 6 Hearings Are Changing Republicans' Minds&lt;/li&gt;&lt;li&gt;Hong Kong’s Colonial Nostalgia&lt;/li&gt;&lt;li&gt;Trump Meets His New Brain Trust&lt;/li&gt;&lt;li&gt;Kamala Harris’s Blue Suit&lt;/li&gt;&lt;li&gt;Is It Worse to Ban a Book, or Never Publish It?&lt;/li&gt;&lt;li&gt;Melville. Faulkner. Spider-Man.&lt;/li&gt;&lt;li&gt;Photos: Five Months of War in Ukraine&lt;/li&gt;&lt;li&gt;Lactose Tolerance Is an Evolutionary Puzzle&lt;/li&gt;&lt;li&gt;A Plan to Lower Gas Prices—and (Maybe) Help the Climate&lt;/li&gt;&lt;li&gt;Trump Just Told Us His Master Plan&lt;/li&gt;&lt;li&gt;What Donald Trump Got Out of His Divorce From Ivana&lt;/li&gt;&lt;li&gt;The British Right Doesn’t Want to Hear Doubts&lt;/li&gt;&lt;li&gt;What Nancy Pelosi’s Taiwan Trip Says About China&lt;/li&gt;&lt;li&gt;Trump’s 2024 Soft Launch&lt;/li&gt;&lt;li&gt;The Pop Star We Need Right Now&lt;/li&gt;&lt;li&gt;The Work of Giants Crumbles&lt;/li&gt;&lt;li&gt;What Putin’s Treatment of Jews Reveals About Russia&lt;/li&gt;&lt;li&gt;The Dirtbag Is Back&lt;/li&gt;&lt;li&gt;The Creature That Gave Up Parasitism for … Wait, What?&lt;/li&gt;&lt;li&gt;Why Did We Buy What Victoria’s Secret Was Selling?&lt;/li&gt;&lt;li&gt;Putin’s Big Chill in Europe&lt;/li&gt;&lt;li&gt;Why Exceptions for the Life of the Mother Have Disappeared&lt;/li&gt;&lt;li&gt;The Supreme Court Is Making America Ungovernable&lt;/li&gt;&lt;li&gt;The Way We Talk About Nature Is Getting Weirder&lt;/li&gt;&lt;li&gt;Could Genetics Be the Key to Never Getting the Coronavirus?&lt;/li&gt;&lt;li&gt;Mike Pence Is Trying to Send a Message&lt;/li&gt;&lt;li&gt;The Inescapable Conclusion From the January 6 Hearings&lt;/li&gt;&lt;li&gt;Are Latinos Really Realigning Toward Republicans?&lt;/li&gt;&lt;li&gt;It’s Joe Manchin’s America&lt;/li&gt;&lt;li&gt;The Bannon Strategy&lt;/li&gt;&lt;li&gt;An Ode to Trump’s Outtakes&lt;/li&gt;&lt;li&gt;The Gray Man Takes the Stoic-Spy Cliché Way Too Far&lt;/li&gt;&lt;li&gt;The Risk and Opportunity of Online Fertility Groups&lt;/li&gt;&lt;li&gt;The Most Moving Film of the Year Is a Documentary About Volcanoes&lt;/li&gt;&lt;li&gt;Jordan Peele’s Nope Is Spectacular, Indulgent, and Brutal&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;Photos of the Week: Swan Upping, Worm Charming, Living Bridge&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Horrors of No-News Facebook&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;Scenes From California’s Fast-Moving Oak Fire&lt;/li&gt;&lt;li&gt;America Is Running Out of ‘COVID Virgins’&lt;/li&gt;&lt;li&gt;Of Course Biden Has COVID&lt;/li&gt;&lt;li&gt;We’re Testing for Monkeypox the Wrong Way&lt;/li&gt;&lt;li&gt;America Was in an Early-Death Crisis Long Before COVID&lt;/li&gt;&lt;li&gt;The Vasectomy Influencers&lt;/li&gt;&lt;li&gt;Trees Are Overrated&lt;/li&gt;&lt;li&gt;The Era of Climate Change Has Created a New Emotion&lt;/li&gt;&lt;li&gt;The Webb Space Telescope Is a Time Machine&lt;/li&gt;&lt;li&gt;America’s Most Misunderstood Marsupial&lt;/li&gt;&lt;li&gt;The U.S. Has No Plan to Prevent the Next Pandemic&lt;/li&gt;&lt;li&gt;13 Reader Views on Directing Tax Money to Private Schools&lt;/li&gt;&lt;li&gt;Why Your House Was So Expensive&lt;/li&gt;&lt;li&gt;The Criminal Case Against Trump Is Getting Stronger&lt;/li&gt;&lt;li&gt;What a Warming Planet Means for Literature&lt;/li&gt;&lt;li&gt;The Opening for Democrats on Abortion&lt;/li&gt;&lt;li&gt;The Real Reason Democrats Are Losing Ground on Education&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;li&gt;Local Prosecutors Can’t Protect Abortion Rights&lt;/li&gt;&lt;li&gt;The Hawley-Bridges Exchange Was Not Constructive&lt;/li&gt;&lt;li&gt;Trump Terrified Even His Truest Believers&lt;/li&gt;&lt;/ul&gt;
+                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
+                </content>
+<updated>2022-07-28T11:09:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-28.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-28.epub"/>
+</entry>
+<entry>
+<id>Rest of World</id>
+<title>Rest of World: 28 Jul, 2022</title>
+<summary>Rest of World: 28 Jul, 2022 published at 2022-07-28 10:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;The overworked humans behind China’s virtual influencers&lt;/li&gt;&lt;li&gt;For this Egyptian startup, it’s all about the data&lt;/li&gt;&lt;li&gt;The second wave of India’s crackdown on Chinese tech is here&lt;/li&gt;&lt;li&gt;Rival de TikTok en Sudamérica exige videos sobre abuso doméstico a sus creadores&lt;/li&gt;&lt;li&gt;Nepal needs tech startups that can improve existing structures: Rumee Singh&lt;/li&gt;&lt;li&gt;TikTok’s biggest rival in South America is pushing creators to make videos about domestic abuse&lt;/li&gt;&lt;li&gt;How to buy a sari in Lahore&lt;/li&gt;&lt;li&gt;Rocked by workplace scandals, Flutterwave now faces multimillion dollar fraud allegations in Kenya&lt;/li&gt;&lt;li&gt;Werewolf erotica is the latest global gig work trend&lt;/li&gt;&lt;li&gt;En México, apps de préstamo fraudulentas editan rostros de sus víctimas en fotos pornográficas para enviárselas a sus familiares&lt;/li&gt;&lt;li&gt;Mexican scam loan apps will edit your face onto X-rated photos and send them to your family&lt;/li&gt;&lt;li&gt;For Japanese Uber delivery drivers, gig work is working&lt;/li&gt;&lt;/ul&gt;
+                Reporting Global Tech Stories
+                </content>
+<updated>2022-07-28T10:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="restofworld-2022-07-28.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="restofworld-2022-07-28.epub"/>
+</entry>
+<entry>
+<id>ProPublica</id>
+<title>ProPublica: 28 Jul, 2022</title>
+<summary>ProPublica: 28 Jul, 2022 published at 2022-07-28 09:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;At Liberty University, Veterans’ Complaints Keep Coming&lt;/li&gt;&lt;li&gt;Barbados Resists Climate Colonialism in an Effort to Survive the Costs of Global Warming&lt;/li&gt;&lt;li&gt;How Polio Crept Back Into the U.S.&lt;/li&gt;&lt;li&gt;The Leader of New York’s “City of the Dead” Cashes In. Again.&lt;/li&gt;&lt;li&gt;Richard Glossip Has Eaten Three Last Meals on Death Row. Years Later, the State Is Still Trying to Execute Him.&lt;/li&gt;&lt;li&gt;Michigan Proposes Juvenile Justice Reforms After Story of Teen Locked Up for Missing Homework Exposed Gaps in System&lt;/li&gt;&lt;li&gt;New Data Gives Insight Into Ticketing at Five Suburban Chicago School Districts&lt;/li&gt;&lt;li&gt;U.S. Senators Demand Federal Scrutiny of Private Equity’s Incursion Into Fishing&lt;/li&gt;&lt;li&gt;A Government Official Helped Them Register. Now They’ve Been Charged With Voter Fraud.&lt;/li&gt;&lt;li&gt;Texas Says It Cares About Mothers, but Its Medicaid Postpartum Coverage Lags Behind Most Other States&lt;/li&gt;&lt;li&gt;Help ProPublica Investigate “We Buy Houses” Practices&lt;/li&gt;&lt;li&gt;Two Cities Took Different Approaches to Pandemic Court Closures. They Got Different Results.&lt;/li&gt;&lt;li&gt;Patrick Radden Keefe Gets to the Bottom of It&lt;/li&gt;&lt;li&gt;The Judge Who Illegally Jailed Children Is Retiring. The Candidates to Replace Her Have Different Approaches.&lt;/li&gt;&lt;li&gt;Her Ex-Husband Is Suing a Clinic Over the Abortion She Had Four Years Ago&lt;/li&gt;&lt;li&gt;Pharma Companies Sue for the Right to Buy Blood From Mexicans Along Border&lt;/li&gt;&lt;li&gt;Critical Omissions Plague Texas Gun Background Check Law&lt;/li&gt;&lt;li&gt;Pegasus Spyware Maker NSO Is Conducting a Lobbying Campaign to Get Off U.S. Blacklist&lt;/li&gt;&lt;li&gt;“The Drone Problem”: How the U.S. Has Struggled to Curb Turkey, a Key Exporter of Armed Drones&lt;/li&gt;&lt;li&gt;Right-Wing Think Tank Family Research Council Is Now a Church in Eyes of the IRS&lt;/li&gt;&lt;/ul&gt;
+                ProPublica is an independent, nonprofit newsroom that produces investigative journalism with moral force.
+                </content>
+<updated>2022-07-28T09:00:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="propublica-2022-07-28.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="propublica-2022-07-28.epub"/>
+</entry>
+<entry>
+<id>POLITICO Magazine</id>
+<title>POLITICO Magazine: 28 Jul, 2022</title>
+<summary>POLITICO Magazine: 28 Jul, 2022 published at 2022-07-28 08:30AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Who Will Care for America’s Elderly?&lt;/li&gt;&lt;li&gt;Opinion | Why Republicans Will Regret Icing Out the Press&lt;/li&gt;&lt;li&gt;Opinion | The Supreme Court Has Too Much Power and Liberals Are to Blame&lt;/li&gt;&lt;li&gt;Opinion | Putin’s Genocidal War&lt;/li&gt;&lt;li&gt;The Forgotten Constitutional Weapon Against Voter Restrictions&lt;/li&gt;&lt;li&gt;‘She’s a Human Being Who Was Killed in Cold Blood’: Shireen Abu Akleh’s Family Demands U.S. Action&lt;/li&gt;&lt;li&gt;Opinion | Both Parties Are Getting It Wrong on Parental Leave&lt;/li&gt;&lt;li&gt;Opinion | The Supreme Court Decisions on Guns and Abortion Relied Heavily on History. But Whose History?&lt;/li&gt;&lt;li&gt;Opinion | Why Rupert Murdoch Is Finally Done with Donald Trump&lt;/li&gt;&lt;li&gt;Washington’s Primary Could Dethrone Trump’s Kingmaking Power&lt;/li&gt;&lt;li&gt;Opinion | What the Jan. 6 Hearings Did — and Didn’t — Accomplish&lt;/li&gt;&lt;li&gt;The Barstool Bros’ Split Over Abortion Could Determine the Future of the GOP&lt;/li&gt;&lt;li&gt;Is Nixon the Proto-Trump? Don’t Ask the 29-Year-Old Custodian of His Legacy&lt;/li&gt;&lt;li&gt;The One Time Trump Couldn’t Lie His Way Out of a Crisis&lt;/li&gt;&lt;li&gt;The Ambassador, His Swanky New Embassy and the Limits of Diplomatic Immunity&lt;/li&gt;&lt;li&gt;Opinion | Get Well, Mr. President! And Don’t Lie About Your Health.&lt;/li&gt;&lt;li&gt;Opinion | Declaring a Climate Emergency Is a Step Toward Constitutional Breakdown&lt;/li&gt;&lt;li&gt;No Wonder Biden Is Angry&lt;/li&gt;&lt;/ul&gt;
+                News, Analysis and Opinion from POLITICO
+                </content>
+<updated>2022-07-28T08:30:00Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-07-28.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-07-28.epub"/>
+</entry>
+<entry>
+<id>The Third Pole</id>
+<title>The Third Pole: 28 Jul, 2022</title>
+<summary>The Third Pole: 28 Jul, 2022 published at 2022-07-28 08:29AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Analysis: How decentralisation in Nepal is undermining climate action&lt;/li&gt;&lt;li&gt;Coal dust casts a pall over children’s health in Pakistan&lt;/li&gt;&lt;li&gt;Bangladesh needs mangroves and embankments, say locals and experts&lt;/li&gt;&lt;li&gt;Climate change drives down yields and nutrition of Indian crops&lt;/li&gt;&lt;/ul&gt;
+                The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there.
+                </content>
+<updated>2022-07-28T08:29:58Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-07-28.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="thirdpole-2022-07-28.epub"/>
+</entry>
 <entry>
 <id>The Diplomat</id>
 <title>The Diplomat: 28 Jul, 2022</title>
@@ -24,38 +120,6 @@
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-diplomat-2022-07-28.epub"/>
 </entry>
 <entry>
-<id>Vox</id>
-<title>Vox: 27 Jul, 2022</title>
-<summary>Vox: 27 Jul, 2022 published at 2022-07-27 23:10PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Biden’s agenda is, in fact, back&lt;/li&gt;&lt;li&gt;The Facebookification of Instagram&lt;/li&gt;&lt;li&gt;Republicans have a nonsensical argument against the same-sex marriage bill&lt;/li&gt;&lt;li&gt;Google’s plan to get rid of cookies (still) isn’t going well&lt;/li&gt;&lt;li&gt;The CHIPS Act won’t solve the chip shortage&lt;/li&gt;&lt;li&gt;How the ADA came to be&lt;/li&gt;&lt;li&gt;We’re one step closer to robots doing all our housework&lt;/li&gt;&lt;li&gt;Democrats have been boosting ultra-right candidates. It could backfire.&lt;/li&gt;&lt;li&gt;Why US schools are at the center of trans rights&lt;/li&gt;&lt;li&gt;The January 6 committee is holding a series of public hearings&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-07-27T23:10:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-27.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-27.epub"/>
-</entry>
-<entry>
-<id>The Atlantic</id>
-<title>The Atlantic: 27 Jul, 2022</title>
-<summary>The Atlantic: 27 Jul, 2022 published at 2022-07-27 22:13PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Trump Meets His New Brain Trust&lt;/li&gt;&lt;li&gt;Kamala Harris’s Blue Suit&lt;/li&gt;&lt;li&gt;Is It Worse to Ban a Book, or Never Publish It?&lt;/li&gt;&lt;li&gt;Melville. Faulkner. Spider-Man.&lt;/li&gt;&lt;li&gt;Photos: Five Months of War in Ukraine&lt;/li&gt;&lt;li&gt;Lactose Tolerance Is an Evolutionary Puzzle&lt;/li&gt;&lt;li&gt;A Plan to Lower Gas Prices—and (Maybe) Help the Climate&lt;/li&gt;&lt;li&gt;Trump Just Told Us His Master Plan&lt;/li&gt;&lt;li&gt;What Donald Trump Got Out of His Divorce From Ivana&lt;/li&gt;&lt;li&gt;The British Right Doesn’t Want to Hear Doubts&lt;/li&gt;&lt;li&gt;What Nancy Pelosi’s Taiwan Trip Says About China&lt;/li&gt;&lt;li&gt;Trump’s 2024 Soft Launch&lt;/li&gt;&lt;li&gt;The Pop Star We Need Right Now&lt;/li&gt;&lt;li&gt;The Work of Giants Crumbles&lt;/li&gt;&lt;li&gt;What Putin’s Treatment of Jews Reveals About Russia&lt;/li&gt;&lt;li&gt;The Dirtbag Is Back&lt;/li&gt;&lt;li&gt;The Creature That Gave Up Parasitism for … Wait, What?&lt;/li&gt;&lt;li&gt;Why Did We Buy What Victoria’s Secret Was Selling?&lt;/li&gt;&lt;li&gt;Putin’s Big Chill in Europe&lt;/li&gt;&lt;li&gt;The Supreme Court Is Making America Ungovernable&lt;/li&gt;&lt;li&gt;An Army Alone Doesn’t Make You a Great Power&lt;/li&gt;&lt;li&gt;The U.S. Has No Plan to Prevent the Next Pandemic&lt;/li&gt;&lt;li&gt;13 Reader Views on Directing Tax Money to Private Schools&lt;/li&gt;&lt;li&gt;An Ode to Trump’s Outtakes&lt;/li&gt;&lt;li&gt;Trees Are Overrated&lt;/li&gt;&lt;li&gt;Why Exceptions for the Life of the Mother Have Disappeared&lt;/li&gt;&lt;li&gt;The Way We Talk About Nature Is Getting Weirder&lt;/li&gt;&lt;li&gt;Could Genetics Be the Key to Never Getting the Coronavirus?&lt;/li&gt;&lt;li&gt;Mike Pence Is Trying to Send a Message&lt;/li&gt;&lt;li&gt;The Inescapable Conclusion From the January 6 Hearings&lt;/li&gt;&lt;li&gt;Are Latinos Really Realigning Toward Republicans?&lt;/li&gt;&lt;li&gt;It’s Joe Manchin’s America&lt;/li&gt;&lt;li&gt;The Bannon Strategy&lt;/li&gt;&lt;li&gt;The Gray Man Takes the Stoic-Spy Cliché Way Too Far&lt;/li&gt;&lt;li&gt;The Novel That Captures New York City Right Now&lt;/li&gt;&lt;li&gt;The Risk and Opportunity of Online Fertility Groups&lt;/li&gt;&lt;li&gt;The Most Moving Film of the Year Is a Documentary About Volcanoes&lt;/li&gt;&lt;li&gt;Jordan Peele’s Nope Is Spectacular, Indulgent, and Brutal&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;Photos of the Week: Swan Upping, Worm Charming, Living Bridge&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Horrors of No-News Facebook&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;Scenes From California’s Fast-Moving Oak Fire&lt;/li&gt;&lt;li&gt;America Is Running Out of ‘COVID Virgins’&lt;/li&gt;&lt;li&gt;Of Course Biden Has COVID&lt;/li&gt;&lt;li&gt;We’re Testing for Monkeypox the Wrong Way&lt;/li&gt;&lt;li&gt;America Was in an Early-Death Crisis Long Before COVID&lt;/li&gt;&lt;li&gt;The Vasectomy Influencers&lt;/li&gt;&lt;li&gt;The Era of Climate Change Has Created a New Emotion&lt;/li&gt;&lt;li&gt;The Webb Space Telescope Is a Time Machine&lt;/li&gt;&lt;li&gt;America’s Most Misunderstood Marsupial&lt;/li&gt;&lt;li&gt;Why Your House Was So Expensive&lt;/li&gt;&lt;li&gt;The Criminal Case Against Trump Is Getting Stronger&lt;/li&gt;&lt;li&gt;What a Warming Planet Means for Literature&lt;/li&gt;&lt;li&gt;The Opening for Democrats on Abortion&lt;/li&gt;&lt;li&gt;The Real Reason Democrats Are Losing Ground on Education&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;li&gt;Local Prosecutors Can’t Protect Abortion Rights&lt;/li&gt;&lt;li&gt;The Hawley-Bridges Exchange Was Not Constructive&lt;/li&gt;&lt;li&gt;Trump Terrified Even His Truest Believers&lt;/li&gt;&lt;/ul&gt;
-                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
-                </content>
-<updated>2022-07-27T22:13:47Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-27.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-27.epub"/>
-</entry>
-<entry>
 <id>Nautilus</id>
 <title>Nautilus: 27 Jul, 2022</title>
 <summary>Nautilus: 27 Jul, 2022 published at 2022-07-27 21:20PM.</summary>
@@ -70,70 +134,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nautilus-2022-07-27.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nautilus-2022-07-27.epub"/>
-</entry>
-<entry>
-<id>The Third Pole</id>
-<title>The Third Pole: 28 Jul, 2022</title>
-<summary>The Third Pole: 28 Jul, 2022 published at 2022-07-27 16:15PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Analysis: How decentralisation in Nepal is undermining climate action&lt;/li&gt;&lt;li&gt;Coal dust casts a pall over children’s health in Pakistan&lt;/li&gt;&lt;li&gt;Bangladesh needs mangroves and embankments, say locals and experts&lt;/li&gt;&lt;li&gt;Climate change drives down yields and nutrition of Indian crops&lt;/li&gt;&lt;/ul&gt;
-                The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there.
-                </content>
-<updated>2022-07-27T16:15:01Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="thirdpole-2022-07-27.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="thirdpole-2022-07-27.epub"/>
-</entry>
-<entry>
-<id>POLITICO Magazine</id>
-<title>POLITICO Magazine: 27 Jul, 2022</title>
-<summary>POLITICO Magazine: 27 Jul, 2022 published at 2022-07-27 14:49PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Opinion | The Supreme Court Has Too Much Power and Liberals Are to Blame&lt;/li&gt;&lt;li&gt;Opinion | Putin’s Genocidal War&lt;/li&gt;&lt;li&gt;The Forgotten Constitutional Weapon Against Voter Restrictions&lt;/li&gt;&lt;li&gt;‘She’s a Human Being Who Was Killed in Cold Blood’: Shireen Abu Akleh’s Family Demands U.S. Action&lt;/li&gt;&lt;li&gt;Opinion | Both Parties Are Getting It Wrong on Parental Leave&lt;/li&gt;&lt;li&gt;Opinion | The Supreme Court Decisions on Guns and Abortion Relied Heavily on History. But Whose History?&lt;/li&gt;&lt;li&gt;Opinion | Why Rupert Murdoch Is Finally Done with Donald Trump&lt;/li&gt;&lt;li&gt;Washington’s Primary Could Dethrone Trump’s Kingmaking Power&lt;/li&gt;&lt;li&gt;Opinion | What the Jan. 6 Hearings Did — and Didn’t — Accomplish&lt;/li&gt;&lt;li&gt;The Barstool Bros’ Split Over Abortion Could Determine the Future of the GOP&lt;/li&gt;&lt;li&gt;Is Nixon the Proto-Trump? Don’t Ask the 29-Year-Old Custodian of His Legacy&lt;/li&gt;&lt;li&gt;The One Time Trump Couldn’t Lie His Way Out of a Crisis&lt;/li&gt;&lt;li&gt;The Ambassador, His Swanky New Embassy and the Limits of Diplomatic Immunity&lt;/li&gt;&lt;li&gt;Opinion | Get Well, Mr. President! And Don’t Lie About Your Health.&lt;/li&gt;&lt;li&gt;Opinion | Declaring a Climate Emergency Is a Step Toward Constitutional Breakdown&lt;/li&gt;&lt;li&gt;No Wonder Biden Is Angry&lt;/li&gt;&lt;li&gt;Opinion | The Supreme Court Reform that Could Actually Win Bipartisan Support&lt;/li&gt;&lt;/ul&gt;
-                News, Analysis and Opinion from POLITICO
-                </content>
-<updated>2022-07-27T14:49:38Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="politico-magazine-2022-07-27.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="politico-magazine-2022-07-27.epub"/>
-</entry>
-<entry>
-<id>ProPublica</id>
-<title>ProPublica: 27 Jul, 2022</title>
-<summary>ProPublica: 27 Jul, 2022 published at 2022-07-27 09:00AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Barbados Resists Climate Colonialism in an Effort to Survive the Costs of Global Warming&lt;/li&gt;&lt;li&gt;How Polio Crept Back Into the U.S.&lt;/li&gt;&lt;li&gt;The Leader of New York’s “City of the Dead” Cashes In. Again.&lt;/li&gt;&lt;li&gt;Richard Glossip Has Eaten Three Last Meals on Death Row. Years Later, the State Is Still Trying to Execute Him.&lt;/li&gt;&lt;li&gt;Michigan Proposes Juvenile Justice Reforms After Story of Teen Locked Up for Missing Homework Exposed Gaps in System&lt;/li&gt;&lt;li&gt;New Data Gives Insight Into Ticketing at Five Suburban Chicago School Districts&lt;/li&gt;&lt;li&gt;U.S. Senators Demand Federal Scrutiny of Private Equity’s Incursion Into Fishing&lt;/li&gt;&lt;li&gt;A Government Official Helped Them Register. Now They’ve Been Charged With Voter Fraud.&lt;/li&gt;&lt;li&gt;Texas Says It Cares About Mothers, but Its Medicaid Postpartum Coverage Lags Behind Most Other States&lt;/li&gt;&lt;li&gt;Help ProPublica Investigate “We Buy Houses” Practices&lt;/li&gt;&lt;li&gt;Two Cities Took Different Approaches to Pandemic Court Closures. They Got Different Results.&lt;/li&gt;&lt;li&gt;Patrick Radden Keefe Gets to the Bottom of It&lt;/li&gt;&lt;li&gt;The Judge Who Illegally Jailed Children Is Retiring. The Candidates to Replace Her Have Different Approaches.&lt;/li&gt;&lt;li&gt;Her Ex-Husband Is Suing a Clinic Over the Abortion She Had Four Years Ago&lt;/li&gt;&lt;li&gt;Pharma Companies Sue for the Right to Buy Blood From Mexicans Along Border&lt;/li&gt;&lt;li&gt;Critical Omissions Plague Texas Gun Background Check Law&lt;/li&gt;&lt;li&gt;Pegasus Spyware Maker NSO Is Conducting a Lobbying Campaign to Get Off U.S. Blacklist&lt;/li&gt;&lt;li&gt;“The Drone Problem”: How the U.S. Has Struggled to Curb Turkey, a Key Exporter of Armed Drones&lt;/li&gt;&lt;li&gt;Right-Wing Think Tank Family Research Council Is Now a Church in Eyes of the IRS&lt;/li&gt;&lt;li&gt;ProPublica Opens Up New Opportunities to Join Our Local Reporting Network&lt;/li&gt;&lt;/ul&gt;
-                ProPublica is an independent, nonprofit newsroom that produces investigative journalism with moral force.
-                </content>
-<updated>2022-07-27T09:00:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="propublica-2022-07-27.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="propublica-2022-07-27.epub"/>
-</entry>
-<entry>
-<id>Rest of World</id>
-<title>Rest of World: 27 Jul, 2022</title>
-<summary>Rest of World: 27 Jul, 2022 published at 2022-07-27 01:30AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;For this Egyptian startup, it’s all about the data&lt;/li&gt;&lt;li&gt;The second wave of India’s crackdown on Chinese tech is here&lt;/li&gt;&lt;li&gt;Rival de TikTok en Sudamérica exige videos sobre abuso doméstico a sus creadores&lt;/li&gt;&lt;li&gt;Nepal needs tech startups that can improve existing structures: Rumee Singh&lt;/li&gt;&lt;li&gt;TikTok’s biggest rival in South America is pushing creators to make videos about domestic abuse&lt;/li&gt;&lt;li&gt;How to buy a sari in Lahore&lt;/li&gt;&lt;li&gt;Rocked by workplace scandals, Flutterwave now faces multimillion dollar fraud allegations in Kenya&lt;/li&gt;&lt;li&gt;Werewolf erotica is the latest global gig work trend&lt;/li&gt;&lt;li&gt;En México, apps de préstamo fraudulentas editan rostros de sus víctimas en fotos pornográficas para enviárselas a sus familiares&lt;/li&gt;&lt;li&gt;Mexican scam loan apps will edit your face onto X-rated photos and send them to your family&lt;/li&gt;&lt;li&gt;For Japanese Uber delivery drivers, gig work is working&lt;/li&gt;&lt;li&gt;Instagram is fueling a thrifting boom in India, Bangladesh, and Nepal&lt;/li&gt;&lt;/ul&gt;
-                Reporting Global Tech Stories
-                </content>
-<updated>2022-07-27T01:30:18Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="restofworld-2022-07-27.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="restofworld-2022-07-27.epub"/>
 </entry>
 <entry>
 <id>Nature</id>
