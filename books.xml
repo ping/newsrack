@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-28T15:46:39Z</updated>
+<updated>2022-07-28T19:41:01Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>London Review of Books</id>
 <title>London Review of Books</title>
-<summary>London Review of Books published at 2022-07-28 15:35PM.</summary>
+<summary>London Review of Books published at 2022-07-28 19:27PM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;/ul&gt;
                 Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
                 </content>
-<updated>2022-07-28T15:35:15Z</updated>
+<updated>2022-07-28T19:27:59Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
