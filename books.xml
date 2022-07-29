@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-28T23:53:05Z</updated>
+<updated>2022-07-29T04:38:22Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,44 +10,44 @@
 <entry>
 <id>London Review of Books</id>
 <title>London Review of Books</title>
-<summary>London Review of Books published at 2022-07-28 23:33PM.</summary>
+<summary>London Review of Books published at 2022-07-29 04:19AM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;/ul&gt;
                 Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
                 </content>
-<updated>2022-07-28T23:33:49Z</updated>
+<updated>2022-07-29T04:19:29Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-07-28.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-07-28.epub"/>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-07-29.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-07-29.epub"/>
 </entry>
 <entry>
 <id>NY Times Books</id>
-<title>NY Times Books: 28 Jul, 2022</title>
-<summary>NY Times Books: 28 Jul, 2022 published at 2022-07-28 20:44PM.</summary>
+<title>NY Times Books: 29 Jul, 2022</title>
+<summary>NY Times Books: 29 Jul, 2022 published at 2022-07-29 04:07AM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;The Life and Death of Daniel Auster, a Son of Literary Brooklyn&lt;/li&gt;&lt;li&gt;Review: ‘A Hard Place to Leave,’ by Marcia DeSanctis; ‘All Down Darkness Wide,’ by Seán Hewitt; ‘Into the Inferno,’ by Stuart Palley; ‘Crying in the Bathroom,’ by Erika L. Sánchez&lt;/li&gt;&lt;li&gt;13 New Books Coming in August&lt;/li&gt;&lt;li&gt;Mohsin Hamid By the Book Interview&lt;/li&gt;&lt;li&gt;This Novelist Spun an Existential Question Into a Best Seller&lt;/li&gt;&lt;li&gt;New Crime Novels&lt;/li&gt;&lt;li&gt;Poem: Summer Terror&lt;/li&gt;&lt;li&gt;An Empathetic Account of the Complexity After Apartheid&lt;/li&gt;&lt;li&gt;New Romance Novels&lt;/li&gt;&lt;li&gt;Newly Published, From Teen Witches to Critical Race Theory&lt;/li&gt;&lt;li&gt;U.S. Authors Dominate Booker Prize Nominees&lt;/li&gt;&lt;li&gt;Review: “Mercury Pictures Presents,” by Anthony Marra&lt;/li&gt;&lt;li&gt;Love or Hate Emmanuel Carrère’s Forceful Tangents, They’re Back in ‘Yoga’&lt;/li&gt;&lt;li&gt;Emily Henry, Author of ‘Book Lovers,’ on the Appeal of Travel&lt;/li&gt;&lt;li&gt;New Self-Help Books&lt;/li&gt;&lt;li&gt;The Big, Bold Life of the Woman Who Brought Us the ‘It Girl’&lt;/li&gt;&lt;li&gt;Review: ‘The Boys,’ by Katie Hafner&lt;/li&gt;&lt;li&gt;Diana Kennedy’s Complicated Relationship With Mexican Cuisine&lt;/li&gt;&lt;li&gt;Review: ‘The Golden Age,’ by Wang Xiaobo&lt;/li&gt;&lt;li&gt;Rumrunning, Bootlegging and More Criminal History of ‘Liquor Island’&lt;/li&gt;&lt;li&gt;In Robert Lowell’s ‘Memoirs,’ Mental Illness, Creative Friends and a Takedown of Dad&lt;/li&gt;&lt;li&gt;Diana Kennedy, Authority on Mexican Cooking, Dies at 99&lt;/li&gt;&lt;li&gt;Review: ‘How to Read Now,’ by Elaine Castillo&lt;/li&gt;&lt;li&gt;Geling Yan Says a Movie Fails to Credit Her. The Film World Shrugs.&lt;/li&gt;&lt;li&gt;Diana Goetsch on ‘This Body I Wore’&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;“Swim Team: Small Waves, Big Changes” by Johnnie Christmas&lt;/li&gt;&lt;li&gt;The Life and Death of Daniel Auster, a Son of Literary Brooklyn&lt;/li&gt;&lt;li&gt;Review: ‘A Hard Place to Leave,’ by Marcia DeSanctis; ‘All Down Darkness Wide,’ by Seán Hewitt; ‘Into the Inferno,’ by Stuart Palley; ‘Crying in the Bathroom,’ by Erika L. Sánchez&lt;/li&gt;&lt;li&gt;13 New Books Coming in August&lt;/li&gt;&lt;li&gt;Mohsin Hamid By the Book Interview&lt;/li&gt;&lt;li&gt;This Novelist Spun an Existential Question Into a Best Seller&lt;/li&gt;&lt;li&gt;New Crime Novels&lt;/li&gt;&lt;li&gt;Poem: Summer Terror&lt;/li&gt;&lt;li&gt;An Empathetic Account of the Complexity After Apartheid&lt;/li&gt;&lt;li&gt;New Romance Novels&lt;/li&gt;&lt;li&gt;Newly Published, From Teen Witches to Critical Race Theory&lt;/li&gt;&lt;li&gt;U.S. Authors Dominate Booker Prize Nominees&lt;/li&gt;&lt;li&gt;Review: “Mercury Pictures Presents,” by Anthony Marra&lt;/li&gt;&lt;li&gt;Love or Hate Emmanuel Carrère’s Forceful Tangents, They’re Back in ‘Yoga’&lt;/li&gt;&lt;li&gt;Emily Henry, Author of ‘Book Lovers,’ on the Appeal of Travel&lt;/li&gt;&lt;li&gt;New Self-Help Books&lt;/li&gt;&lt;li&gt;The Big, Bold Life of the Woman Who Brought Us the ‘It Girl’&lt;/li&gt;&lt;li&gt;Review: ‘The Boys,’ by Katie Hafner&lt;/li&gt;&lt;li&gt;Diana Kennedy’s Complicated Relationship With Mexican Cuisine&lt;/li&gt;&lt;li&gt;Review: ‘The Golden Age,’ by Wang Xiaobo&lt;/li&gt;&lt;li&gt;Rumrunning, Bootlegging and More Criminal History of ‘Liquor Island’&lt;/li&gt;&lt;li&gt;In Robert Lowell’s ‘Memoirs,’ Mental Illness, Creative Friends and a Takedown of Dad&lt;/li&gt;&lt;li&gt;Diana Kennedy, Authority on Mexican Cooking, Dies at 99&lt;/li&gt;&lt;li&gt;Review: ‘How to Read Now,’ by Elaine Castillo&lt;/li&gt;&lt;li&gt;Diana Goetsch on ‘This Body I Wore’&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-07-28T20:44:03Z</updated>
+<updated>2022-07-29T04:07:01Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-28.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-28.epub"/>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-29.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-29.epub"/>
 </entry>
 <entry>
 <id>Asian Review of Books</id>
 <title>Asian Review of Books: 28 Jul, 2022</title>
-<summary>Asian Review of Books: 28 Jul, 2022 published at 2022-07-28 08:44AM.</summary>
+<summary>Asian Review of Books: 28 Jul, 2022 published at 2022-07-28 23:40PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Podcast with Lachlan Fleetwood, author of “Science on the Roof of the World: Empire and the remaking of the Himalaya”&lt;/li&gt;&lt;li&gt;“Treasures of Herat” by Barbara Brend&lt;/li&gt;&lt;li&gt;A Brazilian account of Hong Kong from 1879&lt;/li&gt;&lt;li&gt;Letter: Thomas McKenna on “Moro Warrior”&lt;/li&gt;&lt;li&gt;“Thirst” by Varsha Bajaj&lt;/li&gt;&lt;li&gt;“Hafez in Love” by Iraj Pezeshkzad&lt;/li&gt;&lt;li&gt;“Understanding the India-China Border: The Enduring Threat of War in High Himalaya” by Manoj Joshi&lt;/li&gt;&lt;li&gt;Podcast with Kaveh L Hemmat, translator of “The Kushnameh: The Persian Epic of Kush the Tusked” by Iranshah ibn Abu’l-Khayr&lt;/li&gt;&lt;li&gt;“Empires of Ideas: Creating the Modern University from Germany to America to China” by William C Kirby&lt;/li&gt;&lt;li&gt;“Sensitive Reading: The Pleasures of South Asian Literature in Translation”&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;“Emergent Tokyo: Designing the Spontaneous City” by Jorge Almazán&lt;/li&gt;&lt;li&gt;Podcast with Lachlan Fleetwood, author of “Science on the Roof of the World: Empire and the remaking of the Himalaya”&lt;/li&gt;&lt;li&gt;“Treasures of Herat” by Barbara Brend&lt;/li&gt;&lt;li&gt;A Brazilian account of Hong Kong from 1879&lt;/li&gt;&lt;li&gt;Letter: Thomas McKenna on “Moro Warrior”&lt;/li&gt;&lt;li&gt;“Thirst” by Varsha Bajaj&lt;/li&gt;&lt;li&gt;“Hafez in Love” by Iraj Pezeshkzad&lt;/li&gt;&lt;li&gt;“Understanding the India-China Border: The Enduring Threat of War in High Himalaya” by Manoj Joshi&lt;/li&gt;&lt;li&gt;Podcast with Kaveh L Hemmat, translator of “The Kushnameh: The Persian Epic of Kush the Tusked” by Iranshah ibn Abu’l-Khayr&lt;/li&gt;&lt;li&gt;“Empires of Ideas: Creating the Modern University from Germany to America to China” by William C Kirby&lt;/li&gt;&lt;/ul&gt;
                 In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
                 </content>
-<updated>2022-07-28T08:44:24Z</updated>
+<updated>2022-07-28T23:40:29Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
