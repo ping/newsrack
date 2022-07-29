@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-29T15:50:40Z</updated>
+<updated>2022-07-29T19:39:42Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,12 +10,12 @@
 <entry>
 <id>London Review of Books</id>
 <title>London Review of Books</title>
-<summary>London Review of Books published at 2022-07-29 15:38PM.</summary>
+<summary>London Review of Books published at 2022-07-29 19:26PM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;/ul&gt;
                 Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
                 </content>
-<updated>2022-07-29T15:38:16Z</updated>
+<updated>2022-07-29T19:26:41Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
@@ -26,18 +26,34 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 29 Jul, 2022</title>
-<summary>NY Times Books: 29 Jul, 2022 published at 2022-07-29 14:07PM.</summary>
+<summary>NY Times Books: 29 Jul, 2022 published at 2022-07-29 19:16PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;“Swim Team: Small Waves, Big Changes” by Johnnie Christmas&lt;/li&gt;&lt;li&gt;The Life and Death of Daniel Auster, a Son of Literary Brooklyn&lt;/li&gt;&lt;li&gt;Review: ‘A Hard Place to Leave,’ by Marcia DeSanctis; ‘All Down Darkness Wide,’ by Seán Hewitt; ‘Into the Inferno,’ by Stuart Palley; ‘Crying in the Bathroom,’ by Erika L. Sánchez&lt;/li&gt;&lt;li&gt;13 New Books Coming in August&lt;/li&gt;&lt;li&gt;Mohsin Hamid By the Book Interview&lt;/li&gt;&lt;li&gt;This Novelist Spun an Existential Question Into a Best Seller&lt;/li&gt;&lt;li&gt;New Crime Novels&lt;/li&gt;&lt;li&gt;Poem: Summer Terror&lt;/li&gt;&lt;li&gt;An Empathetic Account of the Complexity After Apartheid&lt;/li&gt;&lt;li&gt;New Romance Novels&lt;/li&gt;&lt;li&gt;Newly Published, From Teen Witches to Critical Race Theory&lt;/li&gt;&lt;li&gt;U.S. Authors Dominate Booker Prize Nominees&lt;/li&gt;&lt;li&gt;Review: “Mercury Pictures Presents,” by Anthony Marra&lt;/li&gt;&lt;li&gt;Love or Hate Emmanuel Carrère’s Forceful Tangents, They’re Back in ‘Yoga’&lt;/li&gt;&lt;li&gt;Emily Henry, Author of ‘Book Lovers,’ on the Appeal of Travel&lt;/li&gt;&lt;li&gt;New Self-Help Books&lt;/li&gt;&lt;li&gt;The Big, Bold Life of the Woman Who Brought Us the ‘It Girl’&lt;/li&gt;&lt;li&gt;Review: ‘The Boys,’ by Katie Hafner&lt;/li&gt;&lt;li&gt;Diana Kennedy’s Complicated Relationship With Mexican Cuisine&lt;/li&gt;&lt;li&gt;Review: ‘The Golden Age,’ by Wang Xiaobo&lt;/li&gt;&lt;li&gt;Rumrunning, Bootlegging and More Criminal History of ‘Liquor Island’&lt;/li&gt;&lt;li&gt;In Robert Lowell’s ‘Memoirs,’ Mental Illness, Creative Friends and a Takedown of Dad&lt;/li&gt;&lt;li&gt;Diana Kennedy, Authority on Mexican Cooking, Dies at 99&lt;/li&gt;&lt;li&gt;Review: ‘How to Read Now,’ by Elaine Castillo&lt;/li&gt;&lt;li&gt;Diana Goetsch on ‘This Body I Wore’&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Charlotte Pomerantz, Inventive Children’s Book Author, Dies at 92&lt;/li&gt;&lt;li&gt;‘To Kill a Mockingbird’ Closes on Broadway as Creators Spar With Rudin&lt;/li&gt;&lt;li&gt;Chaos Among Spies After the Berlin Wall Crumbles&lt;/li&gt;&lt;li&gt;“Swim Team: Small Waves, Big Changes” by Johnnie Christmas&lt;/li&gt;&lt;li&gt;The Life and Death of Daniel Auster, a Son of Literary Brooklyn&lt;/li&gt;&lt;li&gt;Review: ‘A Hard Place to Leave,’ by Marcia DeSanctis; ‘All Down Darkness Wide,’ by Seán Hewitt; ‘Into the Inferno,’ by Stuart Palley; ‘Crying in the Bathroom,’ by Erika L. Sánchez&lt;/li&gt;&lt;li&gt;13 New Books Coming in August&lt;/li&gt;&lt;li&gt;Mohsin Hamid By the Book Interview&lt;/li&gt;&lt;li&gt;This Novelist Spun an Existential Question Into a Best Seller&lt;/li&gt;&lt;li&gt;New Crime Novels&lt;/li&gt;&lt;li&gt;Poem: Summer Terror&lt;/li&gt;&lt;li&gt;An Empathetic Account of the Complexity After Apartheid&lt;/li&gt;&lt;li&gt;New Romance Novels&lt;/li&gt;&lt;li&gt;Newly Published, From Teen Witches to Critical Race Theory&lt;/li&gt;&lt;li&gt;U.S. Authors Dominate Booker Prize Nominees&lt;/li&gt;&lt;li&gt;Review: “Mercury Pictures Presents,” by Anthony Marra&lt;/li&gt;&lt;li&gt;Love or Hate Emmanuel Carrère’s Forceful Tangents, They’re Back in ‘Yoga’&lt;/li&gt;&lt;li&gt;Emily Henry, Author of ‘Book Lovers,’ on the Appeal of Travel&lt;/li&gt;&lt;li&gt;New Self-Help Books&lt;/li&gt;&lt;li&gt;The Big, Bold Life of the Woman Who Brought Us the ‘It Girl’&lt;/li&gt;&lt;li&gt;Review: ‘The Boys,’ by Katie Hafner&lt;/li&gt;&lt;li&gt;Diana Kennedy’s Complicated Relationship With Mexican Cuisine&lt;/li&gt;&lt;li&gt;Review: ‘The Golden Age,’ by Wang Xiaobo&lt;/li&gt;&lt;li&gt;Rumrunning, Bootlegging and More Criminal History of ‘Liquor Island’&lt;/li&gt;&lt;li&gt;In Robert Lowell’s ‘Memoirs,’ Mental Illness, Creative Friends and a Takedown of Dad&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-07-29T14:07:25Z</updated>
+<updated>2022-07-29T19:16:55Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-29.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-29.epub"/>
+</entry>
+<entry>
+<id>Five Books</id>
+<title>Five Books: 29 Jul, 2022</title>
+<summary>Five Books: 29 Jul, 2022 published at 2022-07-29 00:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Mutt-Lon on The Best Recent Novels from Francophone Africa&lt;/li&gt;&lt;li&gt;A. J. Jacobs on The Best Puzzle Books&lt;/li&gt;&lt;li&gt;Patrick Galbraith on Sense of Place Books&lt;/li&gt;&lt;li&gt;Maxine Berg on Global History Books&lt;/li&gt;&lt;li&gt;Bahram Rahman on The Best Books about Libraries for 4-8 Year Olds&lt;/li&gt;&lt;li&gt;Brenna Hassett on Anthropology Books&lt;/li&gt;&lt;li&gt;David Edgerton on The Best Politics Books: the 2022 Orwell Prize for Political Writing&lt;/li&gt;&lt;li&gt;Caroline Crampton on The Best Summer Mysteries&lt;/li&gt;&lt;li&gt;Noga Arikha on Philosophy, Science and the Body Books&lt;/li&gt;&lt;li&gt;Samuel A. Chambers on Money Books&lt;/li&gt;&lt;li&gt;Nick Enfield on Language and Post-Truth Books&lt;/li&gt;&lt;li&gt;Kevin G. Bethune on Design Books&lt;/li&gt;&lt;li&gt;Evan Lieberman on African Politics Books&lt;/li&gt;&lt;li&gt;Frank Wynne on The Best of World Literature: The 2022 International Booker Prize Shortlist&lt;/li&gt;&lt;li&gt;Myisha Cherry on Anger at Racial Injustice Books&lt;/li&gt;&lt;li&gt;Elizabeth Laird on The Best Historical Fiction: The 2022 Walter Scott Prize Shortlist&lt;/li&gt;&lt;li&gt;David George Haskell on Natural History Books&lt;/li&gt;&lt;li&gt;Gary Gerstle on Neoliberalism Books&lt;/li&gt;&lt;li&gt;Rosa Rankin-Gee on The Best Near-Future Dystopias&lt;/li&gt;&lt;li&gt;Cal Flyn on The Notable Novels of Summer 2022&lt;/li&gt;&lt;li&gt;Matthew Brookes &amp; Zack Raffin on Wanderlust Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Spring 2022&lt;/li&gt;&lt;li&gt;Carole Hillenbrand on The Best History Books: the 2022 Wolfson Prize Shortlist&lt;/li&gt;&lt;li&gt;Michele Cobb on The Best Audiobooks: the 2022 Audie Awards&lt;/li&gt;&lt;li&gt;Serhii Plokhy on Ukraine and Russia Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Early 2022&lt;/li&gt;&lt;li&gt;Cal Flyn on Notable Novels of Spring 2022&lt;/li&gt;&lt;li&gt;Jeffrey Archer on The Best Detective Fiction&lt;/li&gt;&lt;li&gt;Marion Turner on Best Medieval Historical Fiction&lt;/li&gt;&lt;/ul&gt;
+                Expert book recommendations
+                </content>
+<updated>2022-07-29T00:00:00Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-07-29.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="fivebooks-2022-07-29.epub"/>
 </entry>
 <entry>
 <id>Asian Review of Books</id>
@@ -54,21 +70,5 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-07-28.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-07-28.epub"/>
-</entry>
-<entry>
-<id>Five Books</id>
-<title>Five Books: 25 Jul, 2022</title>
-<summary>Five Books: 25 Jul, 2022 published at 2022-07-25 00:00AM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;A. J. Jacobs on The Best Puzzle Books&lt;/li&gt;&lt;li&gt;Patrick Galbraith on Sense of Place Books&lt;/li&gt;&lt;li&gt;Maxine Berg on Global History Books&lt;/li&gt;&lt;li&gt;Bahram Rahman on The Best Books about Libraries for 4-8 Year Olds&lt;/li&gt;&lt;li&gt;Brenna Hassett on Anthropology Books&lt;/li&gt;&lt;li&gt;David Edgerton on The Best Politics Books: the 2022 Orwell Prize for Political Writing&lt;/li&gt;&lt;li&gt;Caroline Crampton on The Best Summer Mysteries&lt;/li&gt;&lt;li&gt;Noga Arikha on Philosophy, Science and the Body Books&lt;/li&gt;&lt;li&gt;Samuel A. Chambers on Money Books&lt;/li&gt;&lt;li&gt;Nick Enfield on Language and Post-Truth Books&lt;/li&gt;&lt;li&gt;Kevin G. Bethune on Design Books&lt;/li&gt;&lt;li&gt;Evan Lieberman on African Politics Books&lt;/li&gt;&lt;li&gt;Frank Wynne on The Best of World Literature: The 2022 International Booker Prize Shortlist&lt;/li&gt;&lt;li&gt;Myisha Cherry on Anger at Racial Injustice Books&lt;/li&gt;&lt;li&gt;Darren Collins on The Best Finance Books for Teens and Young Adults&lt;/li&gt;&lt;li&gt;Elizabeth Laird on The Best Historical Fiction: The 2022 Walter Scott Prize Shortlist&lt;/li&gt;&lt;li&gt;David George Haskell on Natural History Books&lt;/li&gt;&lt;li&gt;Gary Gerstle on Neoliberalism Books&lt;/li&gt;&lt;li&gt;Rosa Rankin-Gee on The Best Near-Future Dystopias&lt;/li&gt;&lt;li&gt;Cal Flyn on The Notable Novels of Summer 2022&lt;/li&gt;&lt;li&gt;Matthew Brookes &amp; Zack Raffin on Wanderlust Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Spring 2022&lt;/li&gt;&lt;li&gt;Carole Hillenbrand on The Best History Books: the 2022 Wolfson Prize Shortlist&lt;/li&gt;&lt;li&gt;Michele Cobb on The Best Audiobooks: the 2022 Audie Awards&lt;/li&gt;&lt;li&gt;Serhii Plokhy on Ukraine and Russia Books&lt;/li&gt;&lt;li&gt;Sophie Roell on Notable Nonfiction of Early 2022&lt;/li&gt;&lt;li&gt;Cal Flyn on Notable Novels of Spring 2022&lt;/li&gt;&lt;li&gt;Jeffrey Archer on The Best Detective Fiction&lt;/li&gt;&lt;li&gt;Marion Turner on Best Medieval Historical Fiction&lt;/li&gt;&lt;/ul&gt;
-                Expert book recommendations
-                </content>
-<updated>2022-07-25T00:00:00Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-07-25.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="fivebooks-2022-07-25.epub"/>
 </entry>
 </feed>
