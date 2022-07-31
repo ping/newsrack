@@ -81,11 +81,13 @@ class LondonReviewOfBooksPayed(BasicNewsRecipe):
         if info_ele:
             info = json.loads(info_ele.contents[0])
             soup.body["data-og-summary"] = info.get("description", "")
+            # example: 2022-08-04T00:00:00+00:00
             published_date = datetime.strptime(
-                info["datePublished"], "%Y-%m-%d %H:%M:%S"
+                info["datePublished"][:19], "%Y-%m-%dT%H:%M:%S"
             ).replace(tzinfo=timezone.utc)
+            # example: 2022-07-28T12:07:08+00:00
             modified_date = datetime.strptime(
-                info["dateModified"], "%Y-%m-%d %H:%M:%S"
+                info["dateModified"][:19], "%Y-%m-%dT%H:%M:%S"
             ).replace(tzinfo=timezone.utc)
             soup.body["data-og-date"] = f"{modified_date:%Y-%m-%d %H:%M:%S}"
             if not self.pub_date or modified_date > self.pub_date:
