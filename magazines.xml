@@ -2,11 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-31T19:35:26Z</updated>
+<updated>2022-07-31T23:40:35Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>Vox</id>
+<title>Vox: 31 Jul, 2022</title>
+<summary>Vox: 31 Jul, 2022 published at 2022-07-31 22:17PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;The attack on a prison holding Ukraine POWs, explained&lt;/li&gt;&lt;li&gt;You still need to tell your friends if you get Covid&lt;/li&gt;&lt;li&gt;Free speech is essential for democracy. Could it also be democracy’s downfall?&lt;/li&gt;&lt;li&gt;Senate Republicans burned a bill that would have helped veterans — here’s why&lt;/li&gt;&lt;li&gt;Manafort book alleges Michael Cohen spied on Trump campaign&lt;/li&gt;&lt;li&gt;Plant-based diets, explained (to kids)&lt;/li&gt;&lt;li&gt;Arizona’s 2022 GOP primary is all about 2020&lt;/li&gt;&lt;li&gt;The smallpox vaccine stockpile isn’t the monkeypox solution we need — yet&lt;/li&gt;&lt;li&gt;The key to universal Covid-19 vaccines lies in your bones&lt;/li&gt;&lt;li&gt;Georgia’s big Trump election investigation, explained&lt;/li&gt;&lt;/ul&gt;
+                General interest news site
+                </content>
+<updated>2022-07-31T22:17:15Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-31.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-31.epub"/>
+</entry>
 <entry>
 <id>The Atlantic</id>
 <title>The Atlantic: 31 Jul, 2022</title>
@@ -22,22 +38,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-31.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-31.epub"/>
-</entry>
-<entry>
-<id>Vox</id>
-<title>Vox: 31 Jul, 2022</title>
-<summary>Vox: 31 Jul, 2022 published at 2022-07-31 12:00PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;You still need to tell your friends if you get Covid&lt;/li&gt;&lt;li&gt;Free speech is essential for democracy. Could it also be democracy’s downfall?&lt;/li&gt;&lt;li&gt;Senate Republicans burned a bill that would have helped veterans — here’s why&lt;/li&gt;&lt;li&gt;Manafort book alleges Michael Cohen spied on Trump campaign&lt;/li&gt;&lt;li&gt;Plant-based diets, explained (to kids)&lt;/li&gt;&lt;li&gt;Arizona’s 2022 GOP primary is all about 2020&lt;/li&gt;&lt;li&gt;The smallpox vaccine stockpile isn’t the monkeypox solution we need — yet&lt;/li&gt;&lt;li&gt;The key to universal Covid-19 vaccines lies in your bones&lt;/li&gt;&lt;li&gt;Georgia’s big Trump election investigation, explained&lt;/li&gt;&lt;li&gt;This high-speed rail project is a warning for the US&lt;/li&gt;&lt;/ul&gt;
-                General interest news site
-                </content>
-<updated>2022-07-31T12:00:00Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-31.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-31.epub"/>
 </entry>
 <entry>
 <id>Economist</id>
@@ -234,12 +234,12 @@
 <entry>
 <id>Harvard Business Review</id>
 <title>Harvard Business Review: 31 Jul, 2022</title>
-<summary>Harvard Business Review: 31 Jul, 2022 published at 2022-07-01 11:00AM.</summary>
+<summary>Harvard Business Review: 31 Jul, 2022 published at 2022-07-01 12:00PM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;A Role That’s More Challenging Than Ever&lt;/li&gt;&lt;li&gt;A Seat at the Table Is Not Enough&lt;/li&gt;&lt;li&gt;A Common Parasite Can Make People More Entrepreneurial&lt;/li&gt;&lt;li&gt;Two Cofounders of Xendit on Pioneering Fintech in Southeast Asia&lt;/li&gt;&lt;li&gt;The C-Suite Skills That Matter Most&lt;/li&gt;&lt;li&gt;Is It Time to Consider Co-CEOs?&lt;/li&gt;&lt;li&gt;When Hiring CEOs, Focus on Character&lt;/li&gt;&lt;li&gt;As the World Shifts, So Should Leaders&lt;/li&gt;&lt;li&gt;Identifying Unmet Needs in a Digital Age&lt;/li&gt;&lt;li&gt;To Drive Diversity Efforts, Don’t Tiptoe Around Your Legal Risk&lt;/li&gt;&lt;li&gt;Private Equity Should Take the Lead in Sustainability&lt;/li&gt;&lt;li&gt;What You’re Getting Wrong About Customer Journeys&lt;/li&gt;&lt;li&gt;A Better Way to Put Your Data to Work&lt;/li&gt;&lt;li&gt;Leadership in a Politically Charged Age&lt;/li&gt;&lt;li&gt;Why You Need an AI Ethics Committee&lt;/li&gt;&lt;li&gt;How to Turn a Supply Chain Platform into an Innovation Engine&lt;/li&gt;&lt;li&gt;How to Overcome Your Fear of the Unknown&lt;/li&gt;&lt;li&gt;Case Study: Would Vegan Offerings Dilute Our Brand?&lt;/li&gt;&lt;li&gt;Exploring the Metaverse&lt;/li&gt;&lt;li&gt;Life’s Work: An Interview with Misty Copeland&lt;/li&gt;&lt;/ul&gt;
                 Harvard Business Review is the leading destination for smart management thinking. Through its flagship magazine, books, and digital content and tools published on HBR.org, Harvard Business Review aims to provide professionals around the world with rigorous insights and best practices to help lead themselves and their organizations more effectively and to make a positive impact.
                 </content>
-<updated>2022-07-01T11:00:00Z</updated>
+<updated>2022-07-01T12:00:00Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
