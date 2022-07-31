@@ -132,11 +132,11 @@
 "London Review of Books": [
 {
 "filename": "lrb-2022-07-29.mobi",
-"published": 1659137567.0
+"published": 1659088542.0
 },
 {
 "filename": "lrb-2022-07-29.epub",
-"published": 1659137567.0
+"published": 1659088542.0
 }
 ],
 "Nature": [
@@ -329,5 +329,5 @@
 "published": 1658840400.0
 }
 ],
-"_generated": 1659252886
+"_generated": 1659257140
 }

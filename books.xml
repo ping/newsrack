@@ -2,27 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-07-31T07:34:46Z</updated>
+<updated>2022-07-31T08:45:40Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
-<entry>
-<id>London Review of Books</id>
-<title>London Review of Books</title>
-<summary>London Review of Books published at 2022-07-29 23:32PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;/ul&gt;
-                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
-                </content>
-<updated>2022-07-29T23:32:47Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-07-29.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-07-29.epub"/>
-</entry>
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 29 Jul, 2022</title>
@@ -38,6 +22,22 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-07-29.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-07-29.epub"/>
+</entry>
+<entry>
+<id>London Review of Books</id>
+<title>London Review of Books: 4 Aug, 2022</title>
+<summary>London Review of Books: 4 Aug, 2022 published at 2022-07-29 09:55AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;John Lanchester  -  Money Men: A Hot Startup, a Billion-Dollar Fraud, a Fight for the Truth&lt;/li&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Emma John  - On the Pitch&lt;/li&gt;&lt;li&gt;William Davies  - The Seductions of Declinism&lt;/li&gt;&lt;li&gt;Celia Paul  - At the Courtauld: Edvard Munch&lt;/li&gt;&lt;li&gt;Laleh Khalili  -  Disorder: Hard Times in the 21st Century&lt;/li&gt;&lt;li&gt;Fredric Jameson  - War as a Rhizome&lt;/li&gt;&lt;li&gt;David Renton  - Short Cuts: Swinging the Baton&lt;/li&gt;&lt;li&gt;Tom Stammers  -  Wagnerism: Art and Politics in the Shadow of Music&lt;/li&gt;&lt;li&gt;Anne Carson  - What I Like about You, Baby&lt;/li&gt;&lt;li&gt;Andrew O’Hagan  -  Run Rose Run  / The Stories of My Life&lt;/li&gt;&lt;li&gt;Karen Solie  - Poem: ‘Dust’&lt;/li&gt;&lt;li&gt;Andrea Brady  - The Baudelaire Fractal  /  Anemones: A Simone Weil Project  /  Boat&lt;/li&gt;&lt;li&gt;Richard Taws  -  Journal 1887-1910&lt;/li&gt;&lt;li&gt;Edmund Gordon  -  Homesickness&lt;/li&gt;&lt;li&gt;Eleanor Nairne  - At Modern Art Oxford: Ruth Asawa&lt;/li&gt;&lt;li&gt;Niamh Gallagher  -  Great Hatred: The Assassination of Field Marshal Sir Henry Wilson MP&lt;/li&gt;&lt;li&gt;Rory Scothorne  - The Northern Question: A History of a Divided Country&lt;/li&gt;&lt;li&gt;Eyal Weizman  - In Kassel&lt;/li&gt;&lt;li&gt;Emily Wilson  - Diary: Artemis is with us&lt;/li&gt;&lt;/ul&gt;
+                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
+                </content>
+<updated>2022-07-29T09:55:42Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-07-29.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-07-29.epub"/>
 </entry>
 <entry>
 <id>Five Books</id>
