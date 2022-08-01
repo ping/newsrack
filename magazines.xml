@@ -2,11 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - magazines</title>
-<updated>2022-07-31T23:40:35Z</updated>
+<updated>2022-08-01T05:03:33Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>The Atlantic</id>
+<title>The Atlantic: 1 Aug, 2022</title>
+<summary>The Atlantic: 1 Aug, 2022 published at 2022-08-01 03:11AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;What Made Bill Russell a Hero&lt;/li&gt;&lt;li&gt;Bring the OJ&lt;/li&gt;&lt;li&gt;I’ll Always Love the Original Buffy the Vampire Slayer&lt;/li&gt;&lt;li&gt;Every New Disease Triggers a Search for Someone to Blame&lt;/li&gt;&lt;li&gt;Abortion Is Literally on the Ballot in Kansas&lt;/li&gt;&lt;li&gt;When London Was a Gated City&lt;/li&gt;&lt;li&gt;Of Course Biden Has Rebound COVID&lt;/li&gt;&lt;li&gt;I’ll Make You Copies. But I Have Dreams, Too.&lt;/li&gt;&lt;li&gt;Everyone Loses on Jeopardy Eventually&lt;/li&gt;&lt;li&gt;What Narendra Modi Is Taking From Me&lt;/li&gt;&lt;li&gt;John Fetterman Is Very Online. That’s Not Why He’s Ahead.&lt;/li&gt;&lt;li&gt;Beyoncé’s Renaissance Is a Big, Gay Mess&lt;/li&gt;&lt;li&gt;What an Alzheimer’s Controversy Reveals About the Pressures of Academia&lt;/li&gt;&lt;li&gt;America Should Have Been Able to Handle Monkeypox&lt;/li&gt;&lt;li&gt;The Dark Side of Tourism&lt;/li&gt;&lt;li&gt;The Coziest Spot on the Moon&lt;/li&gt;&lt;li&gt;Nick Drnaso on Escaping From Isolation&lt;/li&gt;&lt;li&gt;Acting Class&lt;/li&gt;&lt;li&gt;How Six States Could Overturn the 2024 Election&lt;/li&gt;&lt;li&gt;Republicans’ Cowardly Excuses for Not Protecting Marriage Equality&lt;/li&gt;&lt;li&gt;Photos of the Week: Nail House, Scorched Forest, Raging Bull&lt;/li&gt;&lt;li&gt;Democrats in … Array?&lt;/li&gt;&lt;li&gt;Nine Books Every Sports Lover Should Read&lt;/li&gt;&lt;li&gt;Is This a Recession? Wrong Question.&lt;/li&gt;&lt;li&gt;The Problem With Saying Oontz Oontz&lt;/li&gt;&lt;li&gt;Why Your House Was So Expensive&lt;/li&gt;&lt;li&gt;The British Right Doesn’t Want to Hear Doubts&lt;/li&gt;&lt;li&gt;The January 6 Hearings Are Changing Republicans’ Minds&lt;/li&gt;&lt;li&gt;Manchin and Schumer’s Astonishing Climate Deal&lt;/li&gt;&lt;li&gt;Mike Pence Is Trying to Send a Message&lt;/li&gt;&lt;li&gt;Are Latinos Really Realigning Toward Republicans?&lt;/li&gt;&lt;li&gt;It’s Joe Manchin’s America&lt;/li&gt;&lt;li&gt;Mother Nature Dissents&lt;/li&gt;&lt;li&gt;The Bannon Strategy&lt;/li&gt;&lt;li&gt;How Bipartisan Gun-Control Talks Actually Succeeded&lt;/li&gt;&lt;li&gt;The Dirtbag Is Back&lt;/li&gt;&lt;li&gt;Why Did We Buy What Victoria’s Secret Was Selling?&lt;/li&gt;&lt;li&gt;An Ode to Trump’s Outtakes&lt;/li&gt;&lt;li&gt;The Way We Talk About Nature Is Getting Weirder&lt;/li&gt;&lt;li&gt;The Gray Man Takes the Stoic-Spy Cliché Way Too Far&lt;/li&gt;&lt;li&gt;What a Warming Planet Means for Literature&lt;/li&gt;&lt;li&gt;The Risk and Opportunity of Online Fertility Groups&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;Seeking Sanctuary in the Old Empire&lt;/li&gt;&lt;li&gt;Photos: Five Months of War in Ukraine&lt;/li&gt;&lt;li&gt;The Work of Giants Crumbles&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Horrors of No-News Facebook&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;Scenes From California’s Fast-Moving Oak Fire&lt;/li&gt;&lt;li&gt;How Long Can the Coronavirus Keep Reinfecting Us?&lt;/li&gt;&lt;li&gt;Could Genetics Be the Key to Never Getting the Coronavirus?&lt;/li&gt;&lt;li&gt;Of Course Biden Has COVID&lt;/li&gt;&lt;li&gt;The Vasectomy Influencers&lt;/li&gt;&lt;li&gt;Lactose Tolerance Is an Evolutionary Puzzle&lt;/li&gt;&lt;li&gt;A Plan to Lower Gas Prices—And (Maybe) Help the Climate&lt;/li&gt;&lt;li&gt;The Creature That Gave Up Parasitism for … Wait, What?&lt;/li&gt;&lt;li&gt;Trees Are Overrated&lt;/li&gt;&lt;li&gt;Trump Meets His New Brain Trust&lt;/li&gt;&lt;li&gt;Is It Worse to Ban a Book, or Never Publish It?&lt;/li&gt;&lt;li&gt;The Pop Star We Need Right Now&lt;/li&gt;&lt;li&gt;The U.S. Has No Plan to Prevent the Next Pandemic&lt;/li&gt;&lt;li&gt;13 Reader Views on Directing Tax Money to Private Schools&lt;/li&gt;&lt;li&gt;The Criminal Case Against Trump Is Getting Stronger&lt;/li&gt;&lt;li&gt;The Opening for Democrats on Abortion&lt;/li&gt;&lt;li&gt;The Real Reason Democrats Are Losing Ground on Education&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;li&gt;Local Prosecutors Can’t Protect Abortion Rights&lt;/li&gt;&lt;li&gt;The Hawley-Bridges Exchange Was Not Constructive&lt;/li&gt;&lt;li&gt;Trump Terrified Even His Truest Believers&lt;/li&gt;&lt;/ul&gt;
+                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
+                </content>
+<updated>2022-08-01T03:11:56Z</updated>
+<category label="Magazines"/>
+<author>
+<name>Magazines</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-08-01.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-08-01.epub"/>
+</entry>
 <entry>
 <id>Vox</id>
 <title>Vox: 31 Jul, 2022</title>
@@ -22,22 +38,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="vox-2022-07-31.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="vox-2022-07-31.epub"/>
-</entry>
-<entry>
-<id>The Atlantic</id>
-<title>The Atlantic: 31 Jul, 2022</title>
-<summary>The Atlantic: 31 Jul, 2022 published at 2022-07-31 15:17PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Bring the OJ&lt;/li&gt;&lt;li&gt;I’ll Always Love the Original Buffy the Vampire Slayer&lt;/li&gt;&lt;li&gt;Every New Disease Triggers a Search for Someone to Blame&lt;/li&gt;&lt;li&gt;Abortion Is Literally on the Ballot in Kansas&lt;/li&gt;&lt;li&gt;When London Was a Gated City&lt;/li&gt;&lt;li&gt;Of Course Biden Has Rebound COVID&lt;/li&gt;&lt;li&gt;I’ll Make You Copies. But I Have Dreams, Too.&lt;/li&gt;&lt;li&gt;Everyone Loses on Jeopardy Eventually&lt;/li&gt;&lt;li&gt;What Narendra Modi Is Taking From Me&lt;/li&gt;&lt;li&gt;John Fetterman Is Very Online. That’s Not Why He’s Ahead.&lt;/li&gt;&lt;li&gt;Beyoncé’s Renaissance Is a Big, Gay Mess&lt;/li&gt;&lt;li&gt;What an Alzheimer’s Controversy Reveals About the Pressures of Academia&lt;/li&gt;&lt;li&gt;America Should Have Been Able to Handle Monkeypox&lt;/li&gt;&lt;li&gt;The Dark Side of Tourism&lt;/li&gt;&lt;li&gt;The Coziest Spot on the Moon&lt;/li&gt;&lt;li&gt;Nick Drnaso on Escaping From Isolation&lt;/li&gt;&lt;li&gt;Acting Class&lt;/li&gt;&lt;li&gt;How Six States Could Overturn the 2024 Election&lt;/li&gt;&lt;li&gt;Republicans’ Cowardly Excuses for Not Protecting Marriage Equality&lt;/li&gt;&lt;li&gt;Photos of the Week: Nail House, Scorched Forest, Raging Bull&lt;/li&gt;&lt;li&gt;Democrats in … Array?&lt;/li&gt;&lt;li&gt;Nine Books Every Sports Lover Should Read&lt;/li&gt;&lt;li&gt;Is This a Recession? Wrong Question.&lt;/li&gt;&lt;li&gt;The Problem With Saying Oontz Oontz&lt;/li&gt;&lt;li&gt;How Long Can the Coronavirus Keep Reinfecting Us?&lt;/li&gt;&lt;li&gt;Why Your House Was So Expensive&lt;/li&gt;&lt;li&gt;The British Right Doesn’t Want to Hear Doubts&lt;/li&gt;&lt;li&gt;The January 6 Hearings Are Changing Republicans’ Minds&lt;/li&gt;&lt;li&gt;Manchin and Schumer’s Astonishing Climate Deal&lt;/li&gt;&lt;li&gt;Mike Pence Is Trying to Send a Message&lt;/li&gt;&lt;li&gt;Are Latinos Really Realigning Toward Republicans?&lt;/li&gt;&lt;li&gt;It’s Joe Manchin’s America&lt;/li&gt;&lt;li&gt;Mother Nature Dissents&lt;/li&gt;&lt;li&gt;The Bannon Strategy&lt;/li&gt;&lt;li&gt;How Bipartisan Gun-Control Talks Actually Succeeded&lt;/li&gt;&lt;li&gt;The Dirtbag Is Back&lt;/li&gt;&lt;li&gt;Why Did We Buy What Victoria’s Secret Was Selling?&lt;/li&gt;&lt;li&gt;An Ode to Trump’s Outtakes&lt;/li&gt;&lt;li&gt;The Way We Talk About Nature Is Getting Weirder&lt;/li&gt;&lt;li&gt;The Gray Man Takes the Stoic-Spy Cliché Way Too Far&lt;/li&gt;&lt;li&gt;What a Warming Planet Means for Literature&lt;/li&gt;&lt;li&gt;The Risk and Opportunity of Online Fertility Groups&lt;/li&gt;&lt;li&gt;‘Watching for Discomfort’: Mark Leibovich on Reporting His New Trump Book&lt;/li&gt;&lt;li&gt;Seeking Sanctuary in the Old Empire&lt;/li&gt;&lt;li&gt;Photos: Five Months of War in Ukraine&lt;/li&gt;&lt;li&gt;The Work of Giants Crumbles&lt;/li&gt;&lt;li&gt;Photos: The U.K. Reaches Its Highest Temperature Ever&lt;/li&gt;&lt;li&gt;‘France Has Delivered Almost Nothing’&lt;/li&gt;&lt;li&gt;The Horrors of No-News Facebook&lt;/li&gt;&lt;li&gt;What Are Abortion Code Words Even For?&lt;/li&gt;&lt;li&gt;Scenes From California’s Fast-Moving Oak Fire&lt;/li&gt;&lt;li&gt;Could Genetics Be the Key to Never Getting the Coronavirus?&lt;/li&gt;&lt;li&gt;Of Course Biden Has COVID&lt;/li&gt;&lt;li&gt;The Vasectomy Influencers&lt;/li&gt;&lt;li&gt;Lactose Tolerance Is an Evolutionary Puzzle&lt;/li&gt;&lt;li&gt;A Plan to Lower Gas Prices—And (Maybe) Help the Climate&lt;/li&gt;&lt;li&gt;The Creature That Gave Up Parasitism for … Wait, What?&lt;/li&gt;&lt;li&gt;Trees Are Overrated&lt;/li&gt;&lt;li&gt;Trump Meets His New Brain Trust&lt;/li&gt;&lt;li&gt;Is It Worse to Ban a Book, or Never Publish It?&lt;/li&gt;&lt;li&gt;The Pop Star We Need Right Now&lt;/li&gt;&lt;li&gt;The U.S. Has No Plan to Prevent the Next Pandemic&lt;/li&gt;&lt;li&gt;13 Reader Views on Directing Tax Money to Private Schools&lt;/li&gt;&lt;li&gt;The Criminal Case Against Trump Is Getting Stronger&lt;/li&gt;&lt;li&gt;The Opening for Democrats on Abortion&lt;/li&gt;&lt;li&gt;The Real Reason Democrats Are Losing Ground on Education&lt;/li&gt;&lt;li&gt;The Fate of States’ Rights After Roe&lt;/li&gt;&lt;li&gt;20 Reader Ideas for Who Could Replace Biden&lt;/li&gt;&lt;li&gt;The Shame of the Secret Service&lt;/li&gt;&lt;li&gt;Local Prosecutors Can’t Protect Abortion Rights&lt;/li&gt;&lt;li&gt;The Hawley-Bridges Exchange Was Not Constructive&lt;/li&gt;&lt;li&gt;Trump Terrified Even His Truest Believers&lt;/li&gt;&lt;/ul&gt;
-                News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine
-                </content>
-<updated>2022-07-31T15:17:56Z</updated>
-<category label="Magazines"/>
-<author>
-<name>Magazines</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="the-atlantic-2022-07-31.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="the-atlantic-2022-07-31.epub"/>
 </entry>
 <entry>
 <id>Economist</id>
@@ -233,13 +233,13 @@
 </entry>
 <entry>
 <id>Harvard Business Review</id>
-<title>Harvard Business Review: 31 Jul, 2022</title>
-<summary>Harvard Business Review: 31 Jul, 2022 published at 2022-07-01 12:00PM.</summary>
+<title>Harvard Business Review: 1 Aug, 2022</title>
+<summary>Harvard Business Review: 1 Aug, 2022 published at 2022-07-01 11:00AM.</summary>
 <content type="text/html">Articles in this issue:
                 &lt;ul&gt;&lt;li&gt;A Role That’s More Challenging Than Ever&lt;/li&gt;&lt;li&gt;A Seat at the Table Is Not Enough&lt;/li&gt;&lt;li&gt;A Common Parasite Can Make People More Entrepreneurial&lt;/li&gt;&lt;li&gt;Two Cofounders of Xendit on Pioneering Fintech in Southeast Asia&lt;/li&gt;&lt;li&gt;The C-Suite Skills That Matter Most&lt;/li&gt;&lt;li&gt;Is It Time to Consider Co-CEOs?&lt;/li&gt;&lt;li&gt;When Hiring CEOs, Focus on Character&lt;/li&gt;&lt;li&gt;As the World Shifts, So Should Leaders&lt;/li&gt;&lt;li&gt;Identifying Unmet Needs in a Digital Age&lt;/li&gt;&lt;li&gt;To Drive Diversity Efforts, Don’t Tiptoe Around Your Legal Risk&lt;/li&gt;&lt;li&gt;Private Equity Should Take the Lead in Sustainability&lt;/li&gt;&lt;li&gt;What You’re Getting Wrong About Customer Journeys&lt;/li&gt;&lt;li&gt;A Better Way to Put Your Data to Work&lt;/li&gt;&lt;li&gt;Leadership in a Politically Charged Age&lt;/li&gt;&lt;li&gt;Why You Need an AI Ethics Committee&lt;/li&gt;&lt;li&gt;How to Turn a Supply Chain Platform into an Innovation Engine&lt;/li&gt;&lt;li&gt;How to Overcome Your Fear of the Unknown&lt;/li&gt;&lt;li&gt;Case Study: Would Vegan Offerings Dilute Our Brand?&lt;/li&gt;&lt;li&gt;Exploring the Metaverse&lt;/li&gt;&lt;li&gt;Life’s Work: An Interview with Misty Copeland&lt;/li&gt;&lt;/ul&gt;
                 Harvard Business Review is the leading destination for smart management thinking. Through its flagship magazine, books, and digital content and tools published on HBR.org, Harvard Business Review aims to provide professionals around the world with rigorous insights and best practices to help lead themselves and their organizations more effectively and to make a positive impact.
                 </content>
-<updated>2022-07-01T12:00:00Z</updated>
+<updated>2022-07-01T11:00:00Z</updated>
 <category label="Magazines"/>
 <author>
 <name>Magazines</name>
