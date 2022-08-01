@@ -2,42 +2,42 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-08-01T19:36:59Z</updated>
+<updated>2022-08-01T23:55:08Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
 <entry>
-<id>NY Times Books</id>
-<title>NY Times Books: 1 Aug, 2022</title>
-<summary>NY Times Books: 1 Aug, 2022 published at 2022-08-01 19:08PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;In ‘Cyclorama,’ Former Classmates Confront an Extra Problematic Drama Teacher&lt;/li&gt;&lt;li&gt;New Science Fiction and Fantasy Novels&lt;/li&gt;&lt;li&gt;Review: “Putin,” Philip Short&lt;/li&gt;&lt;li&gt;Stuart Woods, Prolific Best-Selling Thriller Author, Dies at 84&lt;/li&gt;&lt;li&gt;Gabino Iglesias, a Writer of Noir, Explores the Texas Underworld&lt;/li&gt;&lt;li&gt;9 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Hello, World. It’s Been a While.&lt;/li&gt;&lt;li&gt;Review: ‘Acceptance,’ by Emi Nietfeld&lt;/li&gt;&lt;li&gt;Using Fiction to Summon the Glittering, Golden Age of Hollywood&lt;/li&gt;&lt;li&gt;Will the Biggest Publisher in the United States Get Even Bigger?&lt;/li&gt;&lt;li&gt;Book Review: “Yoga,” by Emmanuel Carrère&lt;/li&gt;&lt;li&gt;Eavesdropping, Worms and Outrageous Fortune&lt;/li&gt;&lt;li&gt;Review: ‘Dead-End Memories,’ by Banana Yoshimoto&lt;/li&gt;&lt;li&gt;Book Review: “The Hangman and His Wife,” by Nancy Dougherty&lt;/li&gt;&lt;li&gt;‘The Only Woman’ in the Room&lt;/li&gt;&lt;li&gt;Charlotte Pomerantz, Inventive Children’s Book Author, Dies at 92&lt;/li&gt;&lt;li&gt;‘To Kill a Mockingbird’ Closes on Broadway as Creators Spar With Rudin&lt;/li&gt;&lt;li&gt;Chaos Among Spies After the Berlin Wall Crumbles&lt;/li&gt;&lt;li&gt;“Swim Team: Small Waves, Big Changes” by Johnnie Christmas&lt;/li&gt;&lt;li&gt;Review: ‘A Hard Place to Leave,’ by Marcia DeSanctis; ‘All Down Darkness Wide,’ by Seán Hewitt; ‘Into the Inferno,’ by Stuart Palley; ‘Crying in the Bathroom,’ by Erika L. Sánchez&lt;/li&gt;&lt;li&gt;13 New Books Coming in August&lt;/li&gt;&lt;li&gt;Mohsin Hamid By the Book Interview&lt;/li&gt;&lt;li&gt;This Novelist Spun an Existential Question Into a Best Seller&lt;/li&gt;&lt;li&gt;New Crime Novels&lt;/li&gt;&lt;li&gt;Poem: Summer Terror&lt;/li&gt;&lt;/ul&gt;
-                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
-                </content>
-<updated>2022-08-01T19:08:39Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-08-01.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-08-01.epub"/>
-</entry>
-<entry>
 <id>Asian Review of Books</id>
 <title>Asian Review of Books: 1 Aug, 2022</title>
-<summary>Asian Review of Books: 1 Aug, 2022 published at 2022-08-01 00:36AM.</summary>
+<summary>Asian Review of Books: 1 Aug, 2022 published at 2022-08-01 23:05PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;“Semut: The Untold Story of a Secret Australian Operation in WWII Borneo” by Christine Helliwell&lt;/li&gt;&lt;li&gt;“You’re Invited” by Amanda Jayatissa&lt;/li&gt;&lt;li&gt;“India: A History in Objects” by T Richard Blurton&lt;/li&gt;&lt;li&gt;“Emergent Tokyo: Designing the Spontaneous City” by Jorge Almazán&lt;/li&gt;&lt;li&gt;Podcast with Lachlan Fleetwood, author of “Science on the Roof of the World: Empire and the remaking of the Himalaya”&lt;/li&gt;&lt;li&gt;“Treasures of Herat” by Barbara Brend&lt;/li&gt;&lt;li&gt;A Brazilian account of Hong Kong from 1879&lt;/li&gt;&lt;li&gt;Letter: Thomas McKenna on “Moro Warrior”&lt;/li&gt;&lt;li&gt;“Thirst” by Varsha Bajaj&lt;/li&gt;&lt;li&gt;“Hafez in Love” by Iraj Pezeshkzad&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;“A Catalog of Such Stuff as Dreams Are Made On” by Dung Kai-cheung&lt;/li&gt;&lt;li&gt;“Semut: The Untold Story of a Secret Australian Operation in WWII Borneo” by Christine Helliwell&lt;/li&gt;&lt;li&gt;“You’re Invited” by Amanda Jayatissa&lt;/li&gt;&lt;li&gt;“India: A History in Objects” by T Richard Blurton&lt;/li&gt;&lt;li&gt;“Emergent Tokyo: Designing the Spontaneous City” by Jorge Almazán&lt;/li&gt;&lt;li&gt;Podcast with Lachlan Fleetwood, author of “Science on the Roof of the World: Empire and the remaking of the Himalaya”&lt;/li&gt;&lt;li&gt;“Treasures of Herat” by Barbara Brend&lt;/li&gt;&lt;li&gt;A Brazilian account of Hong Kong from 1879&lt;/li&gt;&lt;li&gt;Letter: Thomas McKenna on “Moro Warrior”&lt;/li&gt;&lt;li&gt;“Thirst” by Varsha Bajaj&lt;/li&gt;&lt;/ul&gt;
                 In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
                 </content>
-<updated>2022-08-01T00:36:56Z</updated>
+<updated>2022-08-01T23:05:35Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-08-01.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-08-01.epub"/>
+</entry>
+<entry>
+<id>NY Times Books</id>
+<title>NY Times Books: 1 Aug, 2022</title>
+<summary>NY Times Books: 1 Aug, 2022 published at 2022-08-01 20:36PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;In ‘Cyclorama,’ Former Classmates Confront an Extra Problematic Drama Teacher&lt;/li&gt;&lt;li&gt;Review: “Putin,” Philip Short&lt;/li&gt;&lt;li&gt;New Science Fiction and Fantasy Novels&lt;/li&gt;&lt;li&gt;Stuart Woods, Prolific Best-Selling Thriller Author, Dies at 84&lt;/li&gt;&lt;li&gt;Gabino Iglesias, a Writer of Noir, Explores the Texas Underworld&lt;/li&gt;&lt;li&gt;9 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Hello, World. It’s Been a While.&lt;/li&gt;&lt;li&gt;Review: ‘Acceptance,’ by Emi Nietfeld&lt;/li&gt;&lt;li&gt;Using Fiction to Summon the Glittering, Golden Age of Hollywood&lt;/li&gt;&lt;li&gt;Will the Biggest Publisher in the United States Get Even Bigger?&lt;/li&gt;&lt;li&gt;Book Review: “Yoga,” by Emmanuel Carrère&lt;/li&gt;&lt;li&gt;Eavesdropping, Worms and Outrageous Fortune&lt;/li&gt;&lt;li&gt;Review: ‘Dead-End Memories,’ by Banana Yoshimoto&lt;/li&gt;&lt;li&gt;Book Review: “The Hangman and His Wife,” by Nancy Dougherty&lt;/li&gt;&lt;li&gt;‘The Only Woman’ in the Room&lt;/li&gt;&lt;li&gt;Charlotte Pomerantz, Inventive Children’s Book Author, Dies at 92&lt;/li&gt;&lt;li&gt;‘To Kill a Mockingbird’ Closes on Broadway as Creators Spar With Rudin&lt;/li&gt;&lt;li&gt;Chaos Among Spies After the Berlin Wall Crumbles&lt;/li&gt;&lt;li&gt;“Swim Team: Small Waves, Big Changes” by Johnnie Christmas&lt;/li&gt;&lt;li&gt;Review: ‘A Hard Place to Leave,’ by Marcia DeSanctis; ‘All Down Darkness Wide,’ by Seán Hewitt; ‘Into the Inferno,’ by Stuart Palley; ‘Crying in the Bathroom,’ by Erika L. Sánchez&lt;/li&gt;&lt;li&gt;13 New Books Coming in August&lt;/li&gt;&lt;li&gt;Mohsin Hamid By the Book Interview&lt;/li&gt;&lt;li&gt;This Novelist Spun an Existential Question Into a Best Seller&lt;/li&gt;&lt;li&gt;New Crime Novels&lt;/li&gt;&lt;li&gt;Poem: Summer Terror&lt;/li&gt;&lt;/ul&gt;
+                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
+                </content>
+<updated>2022-08-01T20:36:33Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-08-01.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-08-01.epub"/>
 </entry>
 <entry>
 <id>London Review of Books</id>
