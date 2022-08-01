@@ -2,11 +2,11 @@
 "Asahi Shimbun": [
 {
 "filename": "asahi-shimbun-2022-08-01.mobi",
-"published": 1659326280.0
+"published": 1659329100.0
 },
 {
 "filename": "asahi-shimbun-2022-08-01.epub",
-"published": 1659326280.0
+"published": 1659329100.0
 }
 ],
 "Asian Review of Books": [
@@ -42,21 +42,21 @@
 "ChannelNewsAsia": [
 {
 "filename": "channelnewsasia-2022-08-01.mobi",
-"published": 1659328585.0
+"published": 1659338341.0
 },
 {
 "filename": "channelnewsasia-2022-08-01.epub",
-"published": 1659328585.0
+"published": 1659338341.0
 }
 ],
 "The Diplomat": [
 {
-"filename": "the-diplomat-2022-07-29.mobi",
-"published": 1659109176.0
+"filename": "the-diplomat-2022-08-01.mobi",
+"published": 1659334897.0
 },
 {
-"filename": "the-diplomat-2022-07-29.epub",
-"published": 1659109176.0
+"filename": "the-diplomat-2022-08-01.epub",
+"published": 1659334897.0
 }
 ],
 "Economist": [
@@ -72,11 +72,11 @@
 "Financial Times": [
 {
 "filename": "ft-2022-08-01.mobi",
-"published": 1659328284.0
+"published": 1659337420.0
 },
 {
 "filename": "ft-2022-08-01.epub",
-"published": 1659328284.0
+"published": 1659337420.0
 }
 ],
 "Five Books": [
@@ -92,41 +92,41 @@
 "Guardian": [
 {
 "filename": "guardian-2022-08-01.mobi",
-"published": 1659327776.0
+"published": 1659338287.0
 },
 {
 "filename": "guardian-2022-08-01.epub",
-"published": 1659327776.0
+"published": 1659338287.0
 }
 ],
 "Harvard Business Review": [
 {
 "filename": "hbr-2022-07-01.mobi",
-"published": 1656673200.0
+"published": 1656676800.0
 },
 {
 "filename": "hbr-2022-07-01.epub",
-"published": 1656673200.0
+"published": 1656676800.0
 }
 ],
 "JoongAng Daily": [
 {
 "filename": "joongang-daily-2022-08-01.mobi",
-"published": 1659326133.0
+"published": 1659339155.0
 },
 {
 "filename": "joongang-daily-2022-08-01.epub",
-"published": 1659326133.0
+"published": 1659339155.0
 }
 ],
 "Korea Herald": [
 {
 "filename": "korea-herald-2022-08-01.mobi",
-"published": 1659327542.0
+"published": 1659338808.0
 },
 {
 "filename": "korea-herald-2022-08-01.epub",
-"published": 1659327542.0
+"published": 1659338808.0
 }
 ],
 "London Review of Books": [
@@ -172,31 +172,31 @@
 "NY Times": [
 {
 "filename": "nytimes-global-2022-08-01.mobi",
-"published": 1659328273.0
+"published": 1659338577.0
 },
 {
 "filename": "nytimes-global-2022-08-01.epub",
-"published": 1659328273.0
+"published": 1659338577.0
 }
 ],
 "NY Times (Print)": [
 {
-"filename": "nytimes-print-2022-07-31.mobi",
-"published": 1659225600.0
+"filename": "nytimes-print-2022-08-01.mobi",
+"published": 1659312000.0
 },
 {
-"filename": "nytimes-print-2022-07-31.epub",
-"published": 1659225600.0
+"filename": "nytimes-print-2022-08-01.epub",
+"published": 1659312000.0
 }
 ],
 "NY Times Books": [
 {
-"filename": "nytimes-books-2022-07-29.mobi",
-"published": 1659137335.0
+"filename": "nytimes-books-2022-08-01.mobi",
+"published": 1659316396.0
 },
 {
-"filename": "nytimes-books-2022-07-29.epub",
-"published": 1659137335.0
+"filename": "nytimes-books-2022-08-01.epub",
+"published": 1659316396.0
 }
 ],
 "Poetry": [
@@ -221,12 +221,12 @@
 ],
 "POLITICO Magazine": [
 {
-"filename": "politico-magazine-2022-07-29.mobi",
-"published": 1659117181.0
+"filename": "politico-magazine-2022-07-31.mobi",
+"published": 1659265200.0
 },
 {
-"filename": "politico-magazine-2022-07-29.epub",
-"published": 1659117181.0
+"filename": "politico-magazine-2022-07-31.epub",
+"published": 1659265200.0
 }
 ],
 "Rest of World": [
@@ -252,21 +252,21 @@
 "South China Morning Post": [
 {
 "filename": "scmp-2022-08-01.mobi",
-"published": 1659327960.0
+"published": 1659339010.0
 },
 {
 "filename": "scmp-2022-08-01.epub",
-"published": 1659327960.0
+"published": 1659339010.0
 }
 ],
 "Sydney Morning Herald": [
 {
 "filename": "sydney-morning-herald-2022-08-01.mobi",
-"published": 1659329225.0
+"published": 1659339034.0
 },
 {
 "filename": "sydney-morning-herald-2022-08-01.epub",
-"published": 1659329225.0
+"published": 1659339034.0
 }
 ],
 "Taipei Times": [
@@ -312,11 +312,11 @@
 "Washington Post": [
 {
 "filename": "wapo-2022-08-01.mobi",
-"published": 1659329409.0
+"published": 1659339452.0
 },
 {
 "filename": "wapo-2022-08-01.epub",
-"published": 1659329409.0
+"published": 1659339452.0
 }
 ],
 "Wired Magazine": [
@@ -329,5 +329,5 @@
 "published": 1658840400.0
 }
 ],
-"_generated": 1659330213
+"_generated": 1659339886
 }
