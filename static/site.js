@@ -43,6 +43,7 @@
     refreshedDateEle.title = refreshedDate.toLocaleString();
     refreshedDateEle.innerHTML = getRelativeTime(refreshedDate);
 
+    // toggle pub date display
     var pudDateElements = document.querySelectorAll("[data-pub-date]");
     for (var i = 0; i < pudDateElements.length; i++) {
         var pubDateEle = pudDateElements[i];
@@ -61,13 +62,34 @@
         }, false);
     }
 
+    // toggle collapsible toc for publication
     var accordionBtns = document.querySelectorAll(".pub-date");
     for (var i = 0; i < accordionBtns.length; i++) {
         var accordion = accordionBtns[i];
         accordion.onclick = function () {
             this.classList.toggle("is-open");
-            var content = this.nextElementSibling;
-            content.classList.toggle("hide");
+            this.nextElementSibling.classList.toggle("hide");   // content
+        };
+    }
+
+        // toggle collapsible toc for publication
+    var categoryButtons = document.querySelectorAll("h2.category");
+    for (var i = 0; i < categoryButtons.length; i++) {
+        var category = categoryButtons[i];
+        category.onclick = function () {
+            this.classList.toggle("is-open");
+            this.nextElementSibling.classList.toggle("hide");   // content
+        };
+    }
+
+    var catCloseShortcuts = document.querySelectorAll("[data-click-target]");
+    for (var i = 0; i < catCloseShortcuts.length; i++) {
+        var shortcut = catCloseShortcuts[i];
+        shortcut.onclick = function (e) {
+            e.preventDefault();
+            var cat = document.getElementById(e.target.dataset["clickTarget"]);
+            cat.classList.toggle("is-open");
+            cat.nextElementSibling.classList.toggle("hide");    // content
         };
     }
 

@@ -487,7 +487,9 @@ for recipe in recipes:
         )
 
 listing = ""
-for category, publications in sorted(generated.items(), key=sort_category_key):
+for i, (category, publications) in enumerate(
+    sorted(generated.items(), key=sort_category_key)
+):
     generated_items = [(k, v) for k, v in publications.items() if v]
     publication_listing = []
     for recipe_name, books in sorted(
@@ -528,9 +530,12 @@ for category, publications in sorted(generated.items(), key=sort_category_key):
                 <span class="pub-date">Not available</span></li>"""
             )
 
-    listing += f"""<h2 class="category">{category}
+    listing += f"""<h2 id="{category}" class="category">{category}
     <a class="opds" title="OPDS for {category.title()}" href="{category}.xml">OPDS</a></h2>
-    <ol class="books">{"".join(publication_listing)}</ol>"""
+    <ol class="books">{"".join(publication_listing)}
+    <div class="close-cat-container"><a class="close-cat-shortcut" href="#" data-click-target="{category}"></a></div>
+    </ol>
+    """
 
 with open(os.path.join(publish_folder, "index.json"), "w", encoding="utf-8") as f_in:
     index["_generated"] = int(time.time())
