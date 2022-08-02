@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-08-02T19:38:10Z</updated>
+<updated>2022-08-02T23:45:11Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
@@ -10,18 +10,50 @@
 <entry>
 <id>NY Times Books</id>
 <title>NY Times Books: 2 Aug, 2022</title>
-<summary>NY Times Books: 2 Aug, 2022 published at 2022-08-02 18:28PM.</summary>
+<summary>NY Times Books: 2 Aug, 2022 published at 2022-08-02 23:23PM.</summary>
 <content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;Review: In ‘The Butcher Boy,’ an Anti-Coming of Age Story&lt;/li&gt;&lt;li&gt;Review: ‘Knocking Myself Up,’ by Michelle Tea&lt;/li&gt;&lt;li&gt;Book Review: “Boulder,” by Eva Baltasar&lt;/li&gt;&lt;li&gt;Book Review: “Formidable” by Elisabeth Griffin&lt;/li&gt;&lt;li&gt;13 New Books Coming in August&lt;/li&gt;&lt;li&gt;Review: ‘The Rabbit Hutch,’ by Tess Gunty&lt;/li&gt;&lt;li&gt;Review: ‘The Lost Kings,’ by Tyrell Johnson&lt;/li&gt;&lt;li&gt;Review: ‘Inventor of the Future,’ by Alec Nevala-Lee&lt;/li&gt;&lt;li&gt;Review: “After the Ivory Tower Falls,” by Will Bunch&lt;/li&gt;&lt;li&gt;Book Review: “The Prophet of the Andes,” by Graciela Mochofsky&lt;/li&gt;&lt;li&gt;Review: ‘On Java Road,’ by Lawrence Osborne&lt;/li&gt;&lt;li&gt;Book Review: “Delphi,” by Clare Pollard&lt;/li&gt;&lt;li&gt;In ‘Cyclorama,’ Former Classmates Confront an Extra Problematic Drama Teacher&lt;/li&gt;&lt;li&gt;Review: “Putin,” Philip Short&lt;/li&gt;&lt;li&gt;New Science Fiction and Fantasy Novels&lt;/li&gt;&lt;li&gt;Gabino Iglesias, a Writer of Noir, Explores the Texas Underworld&lt;/li&gt;&lt;li&gt;9 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Hello, World. It’s Been a While.&lt;/li&gt;&lt;li&gt;Review: ‘Acceptance,’ by Emi Nietfeld&lt;/li&gt;&lt;li&gt;Using Fiction to Summon the Glittering, Golden Age of Hollywood&lt;/li&gt;&lt;li&gt;Will the Biggest Publisher in the United States Get Even Bigger?&lt;/li&gt;&lt;li&gt;Book Review: “Yoga,” by Emmanuel Carrère&lt;/li&gt;&lt;li&gt;Eavesdropping, Worms and Outrageous Fortune&lt;/li&gt;&lt;li&gt;Review: ‘Dead-End Memories,’ by Banana Yoshimoto&lt;/li&gt;&lt;li&gt;Chaos Among Spies After the Berlin Wall Crumbles&lt;/li&gt;&lt;/ul&gt;
+                &lt;ul&gt;&lt;li&gt;Eli N. Evans, Who Wrote About Jews in the American South, Dies at 85&lt;/li&gt;&lt;li&gt;Review: ‘Knocking Myself Up,’ by Michelle Tea&lt;/li&gt;&lt;li&gt;Review: In ‘The Butcher Boy,’ an Anti-Coming of Age Story&lt;/li&gt;&lt;li&gt;Book Review: “Boulder,” by Eva Baltasar&lt;/li&gt;&lt;li&gt;Book Review: “Formidable” by Elisabeth Griffin&lt;/li&gt;&lt;li&gt;13 New Books Coming in August&lt;/li&gt;&lt;li&gt;Review: ‘The Rabbit Hutch,’ by Tess Gunty&lt;/li&gt;&lt;li&gt;Review: ‘The Lost Kings,’ by Tyrell Johnson&lt;/li&gt;&lt;li&gt;Review: ‘Inventor of the Future,’ by Alec Nevala-Lee&lt;/li&gt;&lt;li&gt;Review: “After the Ivory Tower Falls,” by Will Bunch&lt;/li&gt;&lt;li&gt;Book Review: “The Prophet of the Andes,” by Graciela Mochofsky&lt;/li&gt;&lt;li&gt;Review: ‘On Java Road,’ by Lawrence Osborne&lt;/li&gt;&lt;li&gt;Book Review: “Delphi,” by Clare Pollard&lt;/li&gt;&lt;li&gt;In ‘Cyclorama,’ Former Classmates Confront an Extra Problematic Drama Teacher&lt;/li&gt;&lt;li&gt;Review: “Putin,” Philip Short&lt;/li&gt;&lt;li&gt;New Science Fiction and Fantasy Novels&lt;/li&gt;&lt;li&gt;Gabino Iglesias, a Writer of Noir, Explores the Texas Underworld&lt;/li&gt;&lt;li&gt;Hello, World. It’s Been a While.&lt;/li&gt;&lt;li&gt;Review: ‘Acceptance,’ by Emi Nietfeld&lt;/li&gt;&lt;li&gt;Using Fiction to Summon the Glittering, Golden Age of Hollywood&lt;/li&gt;&lt;li&gt;Will the Biggest Publisher in the United States Get Even Bigger?&lt;/li&gt;&lt;li&gt;Book Review: “Yoga,” by Emmanuel Carrère&lt;/li&gt;&lt;li&gt;Eavesdropping, Worms and Outrageous Fortune&lt;/li&gt;&lt;li&gt;Review: ‘Dead-End Memories,’ by Banana Yoshimoto&lt;/li&gt;&lt;li&gt;Chaos Among Spies After the Berlin Wall Crumbles&lt;/li&gt;&lt;/ul&gt;
                 The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
                 </content>
-<updated>2022-08-02T18:28:52Z</updated>
+<updated>2022-08-02T23:23:18Z</updated>
 <category label="Books"/>
 <author>
 <name>Books</name>
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-08-02.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-08-02.epub"/>
+</entry>
+<entry>
+<id>Asian Review of Books</id>
+<title>Asian Review of Books: 2 Aug, 2022</title>
+<summary>Asian Review of Books: 2 Aug, 2022 published at 2022-08-02 22:46PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;“Hmong Reverse Appliqué: Cultural Meaning and Significance” by Linda Gerdner&lt;/li&gt;&lt;li&gt;“A Catalog of Such Stuff as Dreams Are Made On” by Dung Kai-cheung&lt;/li&gt;&lt;li&gt;“Semut: The Untold Story of a Secret Australian Operation in WWII Borneo” by Christine Helliwell&lt;/li&gt;&lt;li&gt;“You’re Invited” by Amanda Jayatissa&lt;/li&gt;&lt;li&gt;“India: A History in Objects” by T Richard Blurton&lt;/li&gt;&lt;li&gt;“Emergent Tokyo: Designing the Spontaneous City” by Jorge Almazán&lt;/li&gt;&lt;li&gt;Podcast with Lachlan Fleetwood, author of “Science on the Roof of the World: Empire and the remaking of the Himalaya”&lt;/li&gt;&lt;li&gt;“Treasures of Herat” by Barbara Brend&lt;/li&gt;&lt;li&gt;A Brazilian account of Hong Kong from 1879&lt;/li&gt;&lt;li&gt;Letter: Thomas McKenna on “Moro Warrior”&lt;/li&gt;&lt;/ul&gt;
+                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
+                </content>
+<updated>2022-08-02T22:46:31Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-08-02.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-08-02.epub"/>
+</entry>
+<entry>
+<id>London Review of Books</id>
+<title>London Review of Books: 4 Aug, 2022</title>
+<summary>London Review of Books: 4 Aug, 2022 published at 2022-08-02 14:27PM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;John Lanchester  -  Money Men: A Hot Startup, a Billion-Dollar Fraud, a Fight for the Truth&lt;/li&gt;&lt;li&gt;Letters&lt;/li&gt;&lt;li&gt;Emma John  - On the Pitch&lt;/li&gt;&lt;li&gt;William Davies  - The Seductions of Declinism&lt;/li&gt;&lt;li&gt;Celia Paul  - At the Courtauld: Edvard Munch&lt;/li&gt;&lt;li&gt;Laleh Khalili  -  Disorder: Hard Times in the 21st Century&lt;/li&gt;&lt;li&gt;Fredric Jameson  - War as a Rhizome&lt;/li&gt;&lt;li&gt;David Renton  - Short Cuts: Swinging the Baton&lt;/li&gt;&lt;li&gt;Tom Stammers  -  Wagnerism: Art and Politics in the Shadow of Music&lt;/li&gt;&lt;li&gt;Anne Carson  - What I Like about You, Baby&lt;/li&gt;&lt;li&gt;Andrew O’Hagan  -  Run Rose Run  / The Stories of My Life&lt;/li&gt;&lt;li&gt;Karen Solie  - Poem: ‘Dust’&lt;/li&gt;&lt;li&gt;Andrea Brady  - The Baudelaire Fractal  /  Anemones: A Simone Weil Project  /  Boat&lt;/li&gt;&lt;li&gt;Richard Taws  -  Journal 1887-1910&lt;/li&gt;&lt;li&gt;Edmund Gordon  -  Homesickness&lt;/li&gt;&lt;li&gt;Eleanor Nairne  - At Modern Art Oxford: Ruth Asawa&lt;/li&gt;&lt;li&gt;Niamh Gallagher  -  Great Hatred: The Assassination of Field Marshal Sir Henry Wilson MP&lt;/li&gt;&lt;li&gt;Rory Scothorne  - The Northern Question: A History of a Divided Country&lt;/li&gt;&lt;li&gt;Eyal Weizman  - In Kassel&lt;/li&gt;&lt;li&gt;Emily Wilson  - Diary: Artemis is with us&lt;/li&gt;&lt;/ul&gt;
+                Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers
+                </content>
+<updated>2022-08-02T14:27:02Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="lrb-2022-08-02.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="lrb-2022-08-02.epub"/>
 </entry>
 <entry>
 <id>Five Books</id>
@@ -38,21 +70,5 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="fivebooks-2022-08-02.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="fivebooks-2022-08-02.epub"/>
-</entry>
-<entry>
-<id>Asian Review of Books</id>
-<title>Asian Review of Books: 1 Aug, 2022</title>
-<summary>Asian Review of Books: 1 Aug, 2022 published at 2022-08-01 23:05PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;“A Catalog of Such Stuff as Dreams Are Made On” by Dung Kai-cheung&lt;/li&gt;&lt;li&gt;“Semut: The Untold Story of a Secret Australian Operation in WWII Borneo” by Christine Helliwell&lt;/li&gt;&lt;li&gt;“You’re Invited” by Amanda Jayatissa&lt;/li&gt;&lt;li&gt;“India: A History in Objects” by T Richard Blurton&lt;/li&gt;&lt;li&gt;“Emergent Tokyo: Designing the Spontaneous City” by Jorge Almazán&lt;/li&gt;&lt;li&gt;Podcast with Lachlan Fleetwood, author of “Science on the Roof of the World: Empire and the remaking of the Himalaya”&lt;/li&gt;&lt;li&gt;“Treasures of Herat” by Barbara Brend&lt;/li&gt;&lt;li&gt;A Brazilian account of Hong Kong from 1879&lt;/li&gt;&lt;li&gt;Letter: Thomas McKenna on “Moro Warrior”&lt;/li&gt;&lt;li&gt;“Thirst” by Varsha Bajaj&lt;/li&gt;&lt;/ul&gt;
-                In addition to reviewing books about or of relevance to Asia, the Asian Review of Books also features long-format essays by leading Asian writers and thinkers, to providing an unparalleled forum for discussion of key contemporary issues by Asians for Asia and a vehicle of intellectual depth and breadth where leading thinkers can write on the books, arts and ideas of the day. Widely quoted and referenced, with an archive of more than one thousand book reviews, it is the only web resource dedicated to Asian books. And now, with the addition of the new premium content, the Asian Review of Books, is a must-read publication.
-                </content>
-<updated>2022-08-01T23:05:35Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-08-01.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-08-01.epub"/>
 </entry>
 </feed>
