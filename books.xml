@@ -2,11 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
 <id>kindle-newsrack</id>
 <title>Kindle News Rack - books</title>
-<updated>2022-08-02T07:45:00Z</updated>
+<updated>2022-08-02T09:45:28Z</updated>
 <author>
 <name>https://ping.github.io/newsrack/</name>
 <uri>https://ping.github.io/newsrack/</uri>
 </author>
+<entry>
+<id>NY Times Books</id>
+<title>NY Times Books: 2 Aug, 2022</title>
+<summary>NY Times Books: 2 Aug, 2022 published at 2022-08-02 09:00AM.</summary>
+<content type="text/html">Articles in this issue:
+                &lt;ul&gt;&lt;li&gt;Review: ‘Inventor of the Future,’ by Alec Nevala-Lee&lt;/li&gt;&lt;li&gt;Review: ‘The Lost Kings,’ by Tyrell Johnson&lt;/li&gt;&lt;li&gt;Review: “After the Ivory Tower Falls,” by Will Bunch&lt;/li&gt;&lt;li&gt;Book Review: “The Prophet of the Andes,” by Graciela Mochofsky&lt;/li&gt;&lt;li&gt;Review: ‘On Java Road,’ by Lawrence Osborne&lt;/li&gt;&lt;li&gt;Book Review: “Formidable” by Elisabeth Griffin&lt;/li&gt;&lt;li&gt;Book Review: “Boulder,” by Eva Baltasar&lt;/li&gt;&lt;li&gt;Review: ‘The Rabbit Hutch,’ by Tess Gunty&lt;/li&gt;&lt;li&gt;Book Review: “Delphi,” by Clare Pollard&lt;/li&gt;&lt;li&gt;In ‘Cyclorama,’ Former Classmates Confront an Extra Problematic Drama Teacher&lt;/li&gt;&lt;li&gt;Review: “Putin,” Philip Short&lt;/li&gt;&lt;li&gt;New Science Fiction and Fantasy Novels&lt;/li&gt;&lt;li&gt;Stuart Woods, Prolific Best-Selling Thriller Author, Dies at 84&lt;/li&gt;&lt;li&gt;Gabino Iglesias, a Writer of Noir, Explores the Texas Underworld&lt;/li&gt;&lt;li&gt;9 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Hello, World. It’s Been a While.&lt;/li&gt;&lt;li&gt;Review: ‘Acceptance,’ by Emi Nietfeld&lt;/li&gt;&lt;li&gt;Using Fiction to Summon the Glittering, Golden Age of Hollywood&lt;/li&gt;&lt;li&gt;Will the Biggest Publisher in the United States Get Even Bigger?&lt;/li&gt;&lt;li&gt;Book Review: “Yoga,” by Emmanuel Carrère&lt;/li&gt;&lt;li&gt;Eavesdropping, Worms and Outrageous Fortune&lt;/li&gt;&lt;li&gt;Review: ‘Dead-End Memories,’ by Banana Yoshimoto&lt;/li&gt;&lt;li&gt;Book Review: “The Hangman and His Wife,” by Nancy Dougherty&lt;/li&gt;&lt;li&gt;Chaos Among Spies After the Berlin Wall Crumbles&lt;/li&gt;&lt;li&gt;13 New Books Coming in August&lt;/li&gt;&lt;/ul&gt;
+                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
+                </content>
+<updated>2022-08-02T09:00:18Z</updated>
+<category label="Books"/>
+<author>
+<name>Books</name>
+</author>
+<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-08-02.mobi"/>
+<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-08-02.epub"/>
+</entry>
 <entry>
 <id>Asian Review of Books</id>
 <title>Asian Review of Books: 1 Aug, 2022</title>
@@ -22,22 +38,6 @@
 </author>
 <link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="arb-2022-08-01.mobi"/>
 <link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="arb-2022-08-01.epub"/>
-</entry>
-<entry>
-<id>NY Times Books</id>
-<title>NY Times Books: 1 Aug, 2022</title>
-<summary>NY Times Books: 1 Aug, 2022 published at 2022-08-01 20:36PM.</summary>
-<content type="text/html">Articles in this issue:
-                &lt;ul&gt;&lt;li&gt;In ‘Cyclorama,’ Former Classmates Confront an Extra Problematic Drama Teacher&lt;/li&gt;&lt;li&gt;Review: “Putin,” Philip Short&lt;/li&gt;&lt;li&gt;New Science Fiction and Fantasy Novels&lt;/li&gt;&lt;li&gt;Stuart Woods, Prolific Best-Selling Thriller Author, Dies at 84&lt;/li&gt;&lt;li&gt;Gabino Iglesias, a Writer of Noir, Explores the Texas Underworld&lt;/li&gt;&lt;li&gt;9 New Books We Recommend This Week&lt;/li&gt;&lt;li&gt;Hello, World. It’s Been a While.&lt;/li&gt;&lt;li&gt;Review: ‘Acceptance,’ by Emi Nietfeld&lt;/li&gt;&lt;li&gt;Using Fiction to Summon the Glittering, Golden Age of Hollywood&lt;/li&gt;&lt;li&gt;Will the Biggest Publisher in the United States Get Even Bigger?&lt;/li&gt;&lt;li&gt;Book Review: “Yoga,” by Emmanuel Carrère&lt;/li&gt;&lt;li&gt;Eavesdropping, Worms and Outrageous Fortune&lt;/li&gt;&lt;li&gt;Review: ‘Dead-End Memories,’ by Banana Yoshimoto&lt;/li&gt;&lt;li&gt;Book Review: “The Hangman and His Wife,” by Nancy Dougherty&lt;/li&gt;&lt;li&gt;‘The Only Woman’ in the Room&lt;/li&gt;&lt;li&gt;Charlotte Pomerantz, Inventive Children’s Book Author, Dies at 92&lt;/li&gt;&lt;li&gt;‘To Kill a Mockingbird’ Closes on Broadway as Creators Spar With Rudin&lt;/li&gt;&lt;li&gt;Chaos Among Spies After the Berlin Wall Crumbles&lt;/li&gt;&lt;li&gt;“Swim Team: Small Waves, Big Changes” by Johnnie Christmas&lt;/li&gt;&lt;li&gt;Review: ‘A Hard Place to Leave,’ by Marcia DeSanctis; ‘All Down Darkness Wide,’ by Seán Hewitt; ‘Into the Inferno,’ by Stuart Palley; ‘Crying in the Bathroom,’ by Erika L. Sánchez&lt;/li&gt;&lt;li&gt;13 New Books Coming in August&lt;/li&gt;&lt;li&gt;Mohsin Hamid By the Book Interview&lt;/li&gt;&lt;li&gt;This Novelist Spun an Existential Question Into a Best Seller&lt;/li&gt;&lt;li&gt;New Crime Novels&lt;/li&gt;&lt;li&gt;Poem: Summer Terror&lt;/li&gt;&lt;/ul&gt;
-                The latest book reviews, best sellers, news and features from The NY TImes critics and reporters.
-                </content>
-<updated>2022-08-01T20:36:33Z</updated>
-<category label="Books"/>
-<author>
-<name>Books</name>
-</author>
-<link rel="http://opds-spec.org/acquisition" type="application/x-mobipocket-ebook" href="nytimes-books-2022-08-01.mobi"/>
-<link rel="http://opds-spec.org/acquisition" type="application/epub+zip" href="nytimes-books-2022-08-01.epub"/>
 </entry>
 <entry>
 <id>London Review of Books</id>
