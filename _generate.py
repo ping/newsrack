@@ -566,13 +566,13 @@ with open("static/index.html", "r", encoding="utf-8") as f_in:
 
 # Generate minimal OPDS
 main_doc = minidom.Document()
-main_feed = init_feed(main_doc, publish_site, "kindle-newsrack", "Kindle News Rack")
+main_feed = init_feed(main_doc, publish_site, "newsrack", "News Rack")
 
 for category, publications in sorted(generated.items(), key=sort_category_key):
 
     cat_doc = minidom.Document()
     cat_feed = init_feed(
-        cat_doc, publish_site, "kindle-newsrack", f"Kindle News Rack - {category}"
+        cat_doc, publish_site, "newsrack", f"News Rack - {category.title()}"
     )
 
     generated_items = [(k, v) for k, v in publications.items() if v]
