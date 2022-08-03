@@ -530,7 +530,7 @@ for i, (category, publications) in enumerate(
                 <span class="pub-date">Not available</span></li>"""
             )
 
-    listing += f"""<h2 id="{category}" class="category">{category}
+    listing += f"""<h2 id="{category}" class="category is-open">{category}
     <a class="opds" title="OPDS for {category.title()}" href="{category}.xml">OPDS</a></h2>
     <ol class="books">{"".join(publication_listing)}
     <div class="close-cat-container"><a class="close-cat-shortcut" href="#" data-click-target="{category}"></a></div>
