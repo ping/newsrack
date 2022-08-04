@@ -215,7 +215,7 @@ recipes = [
         target_ext=["epub"],
         category="magazines",
         overwrite_cover=False,
-        enable_on=onlyon_days(list(range(13, 18)), -5),  # middle of the month?
+        enable_on=onlyon_days(list(range(15, 31)), -5),  # middle of the month?
     ),
     Recipe(
         recipe="scmp",
