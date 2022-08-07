@@ -5,6 +5,28 @@ Generate a "newsrack" of periodicals for your ereader.
 
 Uses [calibre](https://calibre-ebook.com/), [GitHub Actions](.github/workflows/build.yml) and hosted on [GitHub Pages](https://pages.github.com/).
 
+## Running Your Own Instance
+
+Enable Pages in your repository settings to deploy from the `gh-pages` branch. If you wish to, customise [_recipes.py](_recipes.py) in your fork to customise your own instance.
+
+### What Can Be Customised
+
+- The formats generated (`src_ext`, `target_ext`)
+- When recipes are enabled (`enable_on`)
+- Remove/add recipes
+
+For example, to only generate epubs:
+```python
+# Modify _recipes.py
+Recipe(
+    recipe="example",
+    slug="example",
+    src_ext="epub",   # generate epub first
+    target_ext=[],    # don't generate alt formats
+    category="example",
+),
+```
+
 ## Available
 
 In alphabetical order:
