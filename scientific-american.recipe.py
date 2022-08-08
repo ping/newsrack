@@ -43,6 +43,7 @@ class ScientificAmerican(BasicNewsRecipe):
     timefmt = ""
     pub_date = None  # custom publication date
 
+    remove_attributes = ["width", "height"]
     keep_only_tags = [
         dict(
             class_=[
@@ -69,6 +70,8 @@ class ScientificAmerican(BasicNewsRecipe):
     ]
 
     extra_css = """
+    h1[itemprop="headline"] { font-size: 1.8rem; margin-bottom: 0.4rem; }
+    p.t_article-subtitle { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; }
     .meta-list { padding-left: 0; }
     .article-media img, .image-captioned img { max-width: 100%; height: auto; }
     .image-captioned div, .t_caption { font-size: 0.8rem; margin-top: 0.2rem; margin-bottom: 0.5rem; }
@@ -104,6 +107,12 @@ class ScientificAmerican(BasicNewsRecipe):
                     continue
                 content = i["content"]
                 soup.find("h1")["published_at"] = content["contentInfo"]["publishedAt"]
+
+        # shift article media to after heading
+        article_media = soup.find(class_="article-media")
+        article_heading = soup.find(name="h1")
+        if article_heading and article_media:
+            article_heading.parent.append(article_media)
         return str(soup)
 
     def populate_article_metadata(self, article, soup, first):
