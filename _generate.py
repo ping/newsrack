@@ -65,7 +65,7 @@ source_url = f"https://{domain}.com/{username}{parsed_site.path}"
 
 RecipeOutput = namedtuple(
     "RecipeOutput",
-    ["title", "file", "rename_to", "published_dt", "category", "description"],
+    ["slug", "title", "file", "rename_to", "published_dt", "category", "description"],
 )
 
 # default style
@@ -364,14 +364,15 @@ for recipe in recipes:
             title = mobj.group("title")
         rename_file_name = f"{recipe.slug}-{pub_date:%Y-%m-%d}.{recipe.src_ext}"
 
-        comments = ""
+        comments = []
+        description = ""
         mobj = re.search(r"Comments\s+:\s(?P<comments>.+)", meta_out, re.DOTALL)
         if mobj:
             try:
                 comments = [
                     c.strip() for c in mobj.group("comments").split("\n") if c.strip()
                 ]
-                comments = f"""{comments[0]}
+                description = f"""{comments[0]}
                 <ul><li>{"</li><li>".join(comments[1:-1])}</li></ul>
                 {comments[-1]}
                 """
@@ -380,12 +381,13 @@ for recipe in recipes:
 
         generated[recipe.category][recipe.name].append(
             RecipeOutput(
+                slug=recipe.slug,
                 title=title,
                 file=source_file_name,
                 rename_to=rename_file_name,
                 published_dt=pub_date,
                 category=recipe.category,
-                description=comments,
+                description=description,
             )
         )
 
@@ -461,6 +463,7 @@ for recipe in recipes:
             if not exit_code:
                 generated[recipe.category][recipe.name].append(
                     RecipeOutput(
+                        slug=recipe.slug,
                         title=title,
                         file=target_file_name,
                         rename_to=f"{recipe.slug}-{pub_date:%Y-%m-%d}.{ext}",
@@ -508,7 +511,7 @@ for i, (category, publications) in enumerate(
                 f'<div class="book"><a href="{book.rename_to}">{os.path.splitext(book.file)[1]}<span class="file-size">{humanize.naturalsize(file_size).replace(" ", "")}</span></a></div>'
             )
         publication_listing.append(
-            f"""<li><span class="title">{books[0].title or recipe_name}</span>{" ".join(book_links)}
+            f"""<li id="{books[0].slug}"><span class="title">{books[0].title or recipe_name}</span>{" ".join(book_links)}
             <span class="pub-date" data-pub-date="{int(books[0].published_dt.timestamp() * 1000)}">
                 Published at {books[0].published_dt:%Y-%m-%d %-I:%M%p %z}
             </span>
