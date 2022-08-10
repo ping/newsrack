@@ -14,18 +14,81 @@ Enable Pages in your repository settings to deploy from the `gh-pages` branch. I
 - The formats generated (`src_ext`, `target_ext`)
 - When recipes are enabled (`enable_on`)
 - Remove/add recipes
+- cron schedule and job timeout interval in [.github/workflows/build.yml](.github/workflows/build.yml)
 
-For example, to only generate epubs:
+#### Recipe Definition
+
 ```python
-# Modify _recipes.py
+# Defined in _recipes.py
 Recipe(
-    recipe="example",
+    recipe="example",  # actual recipe name
+    slug="example",  # file name slug
+    src_ext="mobi",  # recipe output format
+    category="news",  # category
+    name="An Example Publication",
+    # display name, taken from recipe source by default. Must be defined for built-in recipes.
+    target_ext=[],  # alt formats that src_ext will be converted to
+    timeout=300,  # max interval (seconds) for executing the recipe, default 180 seconds
+    overwrite_cover=False,  # generate a plain cover to overwrite Calibre's
+    enable_on=True,  # determines when to run the recipe
+    retry_attempts=1,  # retry attempts on TimeoutExpired, ReadTimeout
+),
+```
+
+#### Examples
+
+Run a built-in Calibre recipe:
+
+```python
+Recipe(
+    recipe="Associated Press",
+    name="Associated Press",    # Required for built-in recipes
+    slug="ap",
+    src_ext="mobi",
+    category="news",
+),
+```
+
+Only generate epubs:
+
+```python
+Recipe(
+    recipe="example",   # example.recipe.py
     slug="example",
-    src_ext="epub",   # generate epub first
+    src_ext="epub",   # generate epub
     target_ext=[],    # don't generate alt formats
     category="example",
 ),
 ```
+
+Using `enable_on` to conditionally enable a recipe:
+
+```python
+# instead of using the available functions, you can define your own custom functions for enable_on
+Recipe(
+    recipe="example1",
+    slug="example1",
+    src_ext="epub",
+    category="example",
+    enable_on=onlyon_weekdays([0]), # enable only on Mondays
+),
+Recipe(
+    recipe="example2",
+    slug="example2",
+    src_ext="epub",
+    category="example",
+    enable_on=onlyon_days([1, 14]), # enable only on days 1, 14 of each month
+),
+Recipe(
+    recipe="example3",
+    slug="example3",
+    src_ext="epub",
+    category="example",
+    enable_on=onlyat_hours(list(range(6, 12)), -5), # enable from 6am-11.59am daily, for the timezone UTC-5
+),
+
+```
+
 
 ## Available
 
