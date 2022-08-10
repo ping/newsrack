@@ -2,10 +2,16 @@ import time
 from dataclasses import dataclass, field
 from datetime import datetime, timezone, timedelta
 from functools import cmp_to_key
-from typing import List, Union, Callable
-
+from typing import List, Union, Callable, Dict
 
 default_recipe_timeout = 180
+
+# format-specific ebook-convert options
+default_conv_options: Dict[str, List[str]] = {
+    "mobi": ["--output-profile=kindle_oasis", "--mobi-file-type=both"],
+    "pdf": ["--pdf-page-numbers"],
+    "epub": ["--output-profile=tablet"],
+}
 
 
 @dataclass
@@ -28,6 +34,9 @@ class Recipe:
     retry_attempts: int = (
         1  # number of attempts to retry on TimeoutExpired, ReadTimeout
     )
+    conv_options: Dict[str, List[str]] = field(
+        default_factory=lambda: default_conv_options, init=False
+    )  # conversion options for specific formats
     run_interval_in_days: float = 0  # kinda like Calibre's every X days
     drift_in_hours: float = (
         1  # allowance for schedule drift since scheduler is not precise

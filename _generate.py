@@ -190,10 +190,8 @@ for recipe in recipes:
         f"{recipe.recipe}.recipe",
         source_file_path,
     ]
-    if recipe.src_ext == "mobi":
-        cmd.extend(["--output-profile=kindle_oasis", "--mobi-file-type=both"])
-    if recipe.src_ext == "pdf":
-        cmd.extend(["--pdf-page-numbers"])
+    if recipe.conv_options and recipe.conv_options.get(recipe.src_ext):
+        cmd.extend(recipe.conv_options[recipe.src_ext])
     if verbose_mode:
         cmd.append("-vv")
 
@@ -437,10 +435,12 @@ for recipe in recipes:
                 "ebook-convert",
                 source_file_path,
                 target_file_path,
-                "--output-profile=tablet",
                 f"--series={recipe.name}",
                 f"--series-index={pseudo_series_index}",
             ]
+            if recipe.conv_options and recipe.conv_options.get(ext):
+                cmd.extend(recipe.conv_options[ext])
+
             customised_css_filename = os.path.join("static", f"{ext}.css")
             if os.path.exists(customised_css_filename):
                 cmd.append(f"--extra-css={customised_css_filename}")
