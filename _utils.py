@@ -1,6 +1,6 @@
 import textwrap
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont  # type: ignore
 
 # for cover generation
 font_big = ImageFont.truetype("static/OpenSans-Bold.ttf", 82)

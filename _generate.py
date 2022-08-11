@@ -11,11 +11,12 @@ import time
 from collections import namedtuple
 from datetime import datetime, timezone, timedelta
 from timeit import default_timer as timer
+from typing import List, Dict
 from urllib.parse import urljoin, urlparse
 from xml.dom import minidom
 
-import humanize
-import requests
+import humanize  # type: ignore
+import requests  # type: ignore
 
 from _opds import init_feed, simple_tag, extension_contenttype_map
 from _recipe_utils import sort_category_key
@@ -82,19 +83,19 @@ with open("static/site.js", "r", encoding="utf-8") as f:
 
 
 # use environment variables to skip specified recipes in CI
-skip_recipes_slugs = []
+skip_recipes_slugs: List[str] = []
 try:
-    skip_recipes_slugs = str(os.environ["skip"])
-    skip_recipes_slugs = [r.strip() for r in skip_recipes_slugs.split(",") if r.strip()]
+    skip_recipes_slugs = [
+        r.strip() for r in str(os.environ["skip"]).split(",") if r.strip()
+    ]
 except (KeyError, ValueError):
     pass
 
 # use environment variables to run specified recipes in CI
-regenerate_recipes_slugs = []
+regenerate_recipes_slugs: List[str] = []
 try:
-    regenerate_recipes_slugs = str(os.environ["regenerate"])
     regenerate_recipes_slugs = [
-        r.strip() for r in regenerate_recipes_slugs.split(",") if r.strip()
+        r.strip() for r in str(os.environ["regenerate"]).split(",") if r.strip()
     ]
 except (KeyError, ValueError):
     pass
@@ -127,13 +128,13 @@ try:
 except:  # noqa
     pass
 
-generated = {}
+generated: Dict[str, Dict[str, List[RecipeOutput]]] = {}
 today = datetime.utcnow().replace(tzinfo=timezone.utc)
-index = {}  # generate index.json
+index = {}  # type: ignore
 cached = fetch_cache()
 cache_sess = requests.Session()
 
-# for github
+# for GitHub
 job_summary = """| Recipe | Status | Duration |
 | ------ | ------ | -------- |
 """
@@ -251,7 +252,7 @@ for recipe in recipes:
                                     ebook_url, timeout=timeout, stream=True
                                 )
                                 ebook_res.raise_for_status()
-                                with open(
+                                with open(  # type: ignore
                                     os.path.join(
                                         publish_folder, os.path.basename(ebook_url)
                                     ),
@@ -346,7 +347,7 @@ for recipe in recipes:
         proc = subprocess.Popen(
             ["ebook-meta", source_file_path], stdout=subprocess.PIPE
         )
-        meta_out = proc.stdout.read().decode("utf-8")
+        meta_out = proc.stdout.read().decode("utf-8")  # type: ignore
         mobj = re.search(
             r"Published\s+:\s(?P<pub_date>\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})",
             meta_out,

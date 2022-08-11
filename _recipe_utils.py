@@ -29,7 +29,7 @@ class Recipe:
     timeout: int = default_recipe_timeout  # max time allowed for executing the recipe
     overwrite_cover: bool = True  # generate a plain cover to overwrite Calibre's
     enable_on: Union[
-        bool, Callable[[], bool]
+        bool, Callable[..., bool]
     ] = True  # determines when to run the recipe
     retry_attempts: int = (
         1  # number of attempts to retry on TimeoutExpired, ReadTimeout
