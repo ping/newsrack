@@ -15,6 +15,14 @@ from _recipe_utils import Recipe, onlyon_days, onlyat_hours, onlyon_weekdays
 
 # Keep this list in alphabetical order
 recipes = [
+    # Temp: for testing
+    Recipe(
+        recipe="test",
+        slug="test",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="test",
+    ),
     Recipe(
         recipe="asahi-shimbun",
         slug="asahi-shimbun",
