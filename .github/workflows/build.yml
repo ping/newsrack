@@ -10,7 +10,7 @@ on:
     branches:
       - '**'
   schedule:
-    # 4 hourly
+    # Customise: Cron interval: 4 hourly
     - cron: "0 3,7,11,15,19,23 * * *"
   workflow_dispatch:
     inputs:
@@ -30,6 +30,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # Customise: Total job run time limit
     timeout-minutes: 40
     steps:
 
@@ -82,7 +83,6 @@ jobs:
           sh _build.sh
           if [[ -f 'job_summary.md' ]]; then cat 'job_summary.md' >> $GITHUB_STEP_SUMMARY; fi
           echo -e "\n<"'!'"-- Commit ${GITHUB_SHA:0:7} -->" >> public/index.html
-          curl 'http://ipinfo.io/json'
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
