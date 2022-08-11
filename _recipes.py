@@ -35,7 +35,6 @@ recipes = [
         slug="the-atlantic",
         src_ext="mobi",
         target_ext=["epub"],
-        timeout=180,
         category="magazines",
     ),
     Recipe(
@@ -52,7 +51,6 @@ recipes = [
         slug="channelnewsasia",
         src_ext="mobi",
         target_ext=["epub"],
-        timeout=180,
         category="news",
     ),
     Recipe(
@@ -115,7 +113,6 @@ recipes = [
         slug="korea-herald",
         src_ext="mobi",
         target_ext=["epub"],
-        timeout=180,
         category="news",
     ),
     Recipe(
@@ -157,7 +154,6 @@ recipes = [
         slug="nytimes-global",
         src_ext="mobi",
         target_ext=["epub"],
-        timeout=180,
         category="news",
     ),
     Recipe(
@@ -166,7 +162,6 @@ recipes = [
         src_ext="mobi",
         target_ext=["epub"],
         overwrite_cover=False,
-        timeout=180,
         category="news",
     ),
     Recipe(
@@ -277,7 +272,6 @@ recipes = [
         slug="wired",
         src_ext="mobi",
         target_ext=["epub"],
-        timeout=180,
         overwrite_cover=True,
         category="magazines",
     ),
