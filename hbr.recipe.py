@@ -114,9 +114,8 @@ class HBR(BasicNewsRecipe):
         post_date = datetime.strptime(
             pub_date_ele["data-pub-date"], "%Y-%m-%dT%H:%M:%SZ"
         ).replace(tzinfo=timezone.utc)
-        if (not self.pub_date) or article.utctime > self.pub_date:
+        if (not self.pub_date) or post_date > self.pub_date:
             self.pub_date = post_date
-            self.title = f"{_name}: {article.utctime:%-d %b, %Y}"
 
     def parse_index(self):
         soup = self.index_to_soup(f"{self.base_url}/magazine")
@@ -125,6 +124,9 @@ class HBR(BasicNewsRecipe):
         self.cover_url = urljoin(self.base_url, cov_url)
         self.log("Downloading issue:", a["href"])
         soup = self.index_to_soup(urljoin(self.base_url, a["href"]))
+        issue_title = soup.find("h1")
+        if issue_title:
+            self.title = f"{_name}: {self.tag_to_string(issue_title)}"
 
         feeds = OrderedDict()
 
