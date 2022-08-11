@@ -398,7 +398,7 @@ for recipe in recipes:
             logger.debug(f'Setting cover for "{source_file_path}"')
             try:
                 cover_file_path = f"{source_file_path}.png"
-                generate_cover(cover_file_path, title)
+                generate_cover(cover_file_path, title, recipe.cover_options)
                 cover_cmd = [
                     "ebook-meta",
                     source_file_path,
@@ -650,11 +650,11 @@ for category, publications in sorted(generated.items(), key=sort_category_key):
             feed.appendChild(entry)
 
     opds_xml_path = os.path.join(publish_folder, f"{category}.xml")
-    with open(opds_xml_path, "wb") as f:
+    with open(opds_xml_path, "wb") as f:  # type: ignore
         f.write(cat_doc.toprettyxml(encoding="utf-8", indent=""))
 
 opds_xml_path = os.path.join(publish_folder, catalog_path)
-with open(opds_xml_path, "wb") as f:
+with open(opds_xml_path, "wb") as f:  # type: ignore
     f.write(main_doc.toprettyxml(encoding="utf-8", indent=""))
 
 with open("job_summary.md", "w", encoding="utf-8") as f:

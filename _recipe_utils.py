@@ -15,6 +15,20 @@ default_conv_options: Dict[str, List[str]] = {
 
 
 @dataclass
+class CoverOptions:
+    """Cover options"""
+
+    cover_width: int = 889
+    cover_height: int = 1186
+    text_colour: str = "black"
+    background_colour: str = "white"
+    title_font_path: str = "static/OpenSans-Bold.ttf"
+    title_font_size: int = 80
+    datestamp_font_path: str = "static/OpenSans-Bold.ttf"
+    datestamp_font_size: int = 72
+
+
+@dataclass
 class Recipe:
     """A Calibre recipe definition"""
 
@@ -42,6 +56,9 @@ class Recipe:
         1  # allowance for schedule drift since scheduler is not precise
     )
     job_log: dict = field(default_factory=dict, init=False)
+    cover_options: CoverOptions = (
+        CoverOptions()
+    )  # customise script-generated cover, used when overwrite_cover=True
 
     def is_enabled(self) -> bool:
         is_due = self.job_log.get(self.name, 0) < (
