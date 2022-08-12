@@ -73,7 +73,7 @@ RecipeOutput = namedtuple(
 with open("static/site.css", "r", encoding="utf-8") as f:
     site_css = f.read()
 
-# default style
+# non kindle style
 with open("static/nonkindle.css", "r", encoding="utf-8") as f:
     nonkindle_css = f.read()
 
