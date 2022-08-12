@@ -6,9 +6,11 @@ import time
 from urllib.parse import urlencode
 import json
 from html import unescape
+import shutil
 
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
 
 _name = "The Diplomat"
 
@@ -36,14 +38,17 @@ class TheDiplomat(BasicNewsRecipe):
     reverse_article_order = False
     timefmt = ""  # suppress date output
     pub_date = None  # custom publication date
+    temp_dir = None
 
     remove_attributes = ["style"]
 
     extra_css = """
-    .headline { font-size: 1.8rem; margin-bottom: 0.5rem; }
-    .sub-headline { font-size: 1.4rem; margin-top: 0; }
+    .headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
+    .sub-headline { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; }
     .sub-headline p { margin-top: 0; }
-    .article-meta { margin-bottom: 0.8rem; }
+    .article-meta { margin-bottom: 1rem; }
+    .article-meta .author { font-weight: bold; color: #444; margin-right: 0.5rem; }
+    .article-section { display: block; font-weight: bold; color: #444; }
     .article-img { margin-bottom: 0.8rem; max-width: 100%; }
     .article-img img { display: block; max-width: 100%; height: auto; }
     .article-img .caption { display: block; font-size: 0.8rem; margin-top: 0.2rem; }
@@ -66,16 +71,7 @@ class TheDiplomat(BasicNewsRecipe):
         if not post.get("featured_media"):
             return post_content
 
-        feature_media_links = post.get("_links", {}).get("wp:featuredmedia", [])
-        br = self.get_browser()
-        for i, feature in enumerate(feature_media_links, start=1):
-            if not feature.get("embeddable"):
-                continue
-            feature_endpoint = feature.get("href")
-            feature_info = json.loads(
-                br.open_novisit(feature_endpoint).read().decode("utf-8")
-            )
-
+        for feature_info in post.get("_embedded", {}).get("wp:featuredmedia", []):
             # put feature media at the start of the post
             if feature_info.get("source_url"):
                 caption = feature_info.get("caption", {}).get("rendered", "")
@@ -97,7 +93,8 @@ class TheDiplomat(BasicNewsRecipe):
         # formulate the api response into html
         post = json.loads(raw_html)
         post_date = datetime.strptime(post["date"], "%Y-%m-%dT%H:%M:%S")
-        html = f"""<html>
+        soup = BeautifulSoup(
+            f"""<html>
         <head></head>
         <body>
             <h1 class="headline"></h1>
@@ -109,13 +106,44 @@ class TheDiplomat(BasicNewsRecipe):
             </div>
             </article>
         </body></html>"""
-        soup = BeautifulSoup(html)
+        )
         title = soup.new_tag("title")
         title.string = unescape(post["title"]["rendered"])
         soup.body.h1.string = unescape(post["title"]["rendered"])
         soup.find("div", class_="sub-headline").append(
             BeautifulSoup(post["excerpt"]["rendered"])
         )
+        # inject authors
+        try:
+            post_authors = [
+                a["name"] for a in post.get("_embedded", {}).get("author", [])
+            ]
+            if post_authors:
+                soup.find(class_="article-meta").insert(
+                    0,
+                    BeautifulSoup(
+                        f'<span class="author">{", ".join(post_authors)}</span>'
+                    ),
+                )
+        except (KeyError, TypeError):
+            pass
+        # inject categories
+        if post.get("categories"):
+            categories = []
+            try:
+                for terms in post.get("_embedded", {}).get("wp:term", []):
+                    categories.extend(
+                        [t["name"] for t in terms if t["taxonomy"] == "category"]
+                    )
+            except (KeyError, TypeError):
+                pass
+            if categories:
+                soup.body.article.insert(
+                    0,
+                    BeautifulSoup(
+                        f'<span class="article-section">{" / ".join(categories)}</span>'
+                    ),
+                )
         soup.body.article.append(BeautifulSoup(self._extract_featured_media(post)))
         return str(soup)
 
@@ -129,10 +157,16 @@ class TheDiplomat(BasicNewsRecipe):
     def publication_date(self):
         return self.pub_date
 
+    def cleanup(self):
+        if self.temp_dir:
+            self.log("Deleting temp files...")
+            shutil.rmtree(self.temp_dir)
+
     def parse_index(self):
         br = self.get_browser()
         per_page = 100
         articles = {}
+        self.temp_dir = PersistentTemporaryDirectory()
 
         for feed_name, feed_url in self.feeds:
             posts = []
@@ -147,6 +181,7 @@ class TheDiplomat(BasicNewsRecipe):
                     "page": page,
                     "per_page": per_page,
                     "after": cutoff_date.isoformat(),
+                    "_embed": "1",
                     "_": int(time.time() * 1000),
                 }
                 endpoint = f"{feed_url}?{urlencode(params)}"
@@ -189,15 +224,14 @@ class TheDiplomat(BasicNewsRecipe):
                     section_name = f"{feed_name}: {post_date:%-d %B, %Y}"
                 if section_name not in articles:
                     articles[section_name] = []
-                params = {
-                    "rest_route": f'/wp/v2/posts/{p["id"]}',
-                    "_": int(time.time() * 1000),
-                }
-                endpoint = f"{feed_url}?{urlencode(params)}"
+
+                with PersistentTemporaryFile(suffix=".json", dir=self.temp_dir) as f:
+                    f.write(json.dumps(p).encode("utf-8"))
+
                 articles[section_name].append(
                     {
                         "title": p["title"]["rendered"] or "Untitled",
-                        "url": endpoint,
+                        "url": "file://" + f.name,
                         "date": f"{post_date:%-d %B, %Y}",
                         "description": p["excerpt"]["rendered"],
                     }

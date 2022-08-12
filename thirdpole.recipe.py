@@ -43,6 +43,8 @@ class ThirdPole(BasicNewsRecipe):
     extra_css = """
     .headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
     .article-meta {  margin-top: 1rem; margin-bottom: 1rem; }
+    .article-meta .author { font-weight: bold; color: #444; margin-right: 0.5rem; }
+    .article-section { display: block; font-weight: bold; color: #444; }
     .article-img img, .block--article-image__image img { display: block; max-width: 100%; height: auto; }
     .article-img .caption, .block--article-image__caption {
         font-size: 0.8rem; display: block; margin-top: 0.2rem; 
@@ -84,16 +86,7 @@ class ThirdPole(BasicNewsRecipe):
             # check already not embedded
             return post_content
 
-        feature_media_links = post.get("_links", {}).get("wp:featuredmedia", [])
-        br = self.get_browser()
-        for i, feature in enumerate(feature_media_links, start=1):
-            if not feature.get("embeddable"):
-                continue
-            feature_endpoint = feature.get("href")
-            feature_info = json.loads(
-                br.open_novisit(feature_endpoint).read().decode("utf-8")
-            )
-
+        for feature_info in post.get("_embedded", {}).get("wp:featuredmedia", []):
             # put feature media at the start of the post
             if feature_info.get("source_url"):
                 # higher-res
@@ -135,6 +128,37 @@ class ThirdPole(BasicNewsRecipe):
         soup.body.article.append(
             BeautifulSoup(self._extract_featured_media(post, soup))
         )
+        # inject authors
+        try:
+            post_authors = [
+                a["name"] for a in post.get("_embedded", {}).get("author", [])
+            ]
+            if post_authors:
+                soup.find(class_="article-meta").insert(
+                    0,
+                    BeautifulSoup(
+                        f'<span class="author">{", ".join(post_authors)}</span>'
+                    ),
+                )
+        except (KeyError, TypeError):
+            pass
+        # inject categories
+        if post.get("categories"):
+            categories = []
+            try:
+                for terms in post.get("_embedded", {}).get("wp:term", []):
+                    categories.extend(
+                        [t["name"] for t in terms if t["taxonomy"] == "category"]
+                    )
+            except (KeyError, TypeError):
+                pass
+            if categories:
+                soup.body.article.insert(
+                    0,
+                    BeautifulSoup(
+                        f'<span class="article-section">{" / ".join(categories)}</span>'
+                    ),
+                )
         return str(soup)
 
     def populate_article_metadata(self, article, soup, first):
@@ -169,6 +193,7 @@ class ThirdPole(BasicNewsRecipe):
                     "page": page,
                     "per_page": per_page,
                     "after": cutoff_date.isoformat(),
+                    "_embed": "1",
                     "_": int(time.time() * 1000),
                 }
                 endpoint = f"{feed_url}?{urlencode(params)}"
