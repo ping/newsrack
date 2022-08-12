@@ -125,6 +125,28 @@ recipes = [
         enable_on=onlyon_weekdays([0, 1, 2, 3, 4]),
     ),
     Recipe(
+        recipe="mit-press-reader",
+        slug="mit-press-reader",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="magazines",
+    ),
+    Recipe(
+        recipe="mit-tech-review",
+        slug="mit-tech-review-feed",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="magazines",
+    ),
+    Recipe(
+        recipe="mit-tech-review-magazine",
+        slug="mit-tech-review-magazine",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="magazines",
+        overwrite_cover=False,
+    ),
+    Recipe(
         recipe="nature",
         slug="nature",
         src_ext="mobi",
