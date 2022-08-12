@@ -55,15 +55,17 @@ def generate_cover(
             word_list = wrapper.wrap(text=text)
 
             for ii in word_list[:-1]:
-                text_w, text_h = img_draw.textsize(ii, font=font_title)
+                _, __, text_w, text_h = img_draw.textbbox((0, 0), ii, font=font_title)
                 text_w_h.append([ii, text_w, text_h, text_h, font_title])
                 total_height += text_h + line_gap
 
-            text_w, text_h = img_draw.textsize(word_list[-1], font=font_title)
+            _, __, text_w, text_h = img_draw.textbbox(
+                (0, 0), word_list[-1], font=font_title
+            )
             text_w_h.append([word_list[-1], text_w, text_h, text_h, font_title])
             total_height += text_h + line_gap
         else:
-            text_w, text_h = img_draw.textsize(text, font=font_date)
+            _, __, text_w, text_h = img_draw.textbbox((0, 0), text, font=font_title)
             text_w_h.append([text, text_w, text_h, text_h, font_date])
             total_height += text_h + line_gap
 
