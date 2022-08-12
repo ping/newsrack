@@ -10,7 +10,7 @@ on:
     branches:
       - '**'
   schedule:
-    # Customise: Cron interval: 4 hourly
+    # Customise: Cron interval
     - cron: "0 3,7,11,15,19,23 * * *"
   workflow_dispatch:
     inputs:
@@ -31,7 +31,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     # Customise: Total job run time limit
-    timeout-minutes: 40
+    timeout-minutes: 45
     steps:
 
       - name: Setup node
