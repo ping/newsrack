@@ -1,8 +1,8 @@
-__license__ = "GPL v3"
-__copyright__ = "2011, Darko Miletic <darko.miletic at gmail.com>"
-"""
-www.washingtonpost.com
-"""
+# Copyright (c) 2022 https://github.com/ping/
+#
+# This software is released under the GNU General Public License v3.0
+# https://opensource.org/licenses/GPL-3.0
+
 from datetime import datetime
 import json
 from urllib.parse import urljoin
@@ -15,7 +15,7 @@ _name = "Washington Post"
 
 class TheWashingtonPost(BasicNewsRecipe):
     title = _name
-    __author__ = "Darko Miletic"
+    __author__ = "ping"
     description = "Breaking news and analysis on politics, business, world national news, entertainment more. In-depth DC, Virginia, Maryland news coverage including traffic, weather, crime, education, restaurant reviews and more."  # noqa
     publisher = "The Washington Post Company"
     category = "news, politics, USA"
@@ -64,8 +64,8 @@ class TheWashingtonPost(BasicNewsRecipe):
         ("Opinions", "http://feeds.washingtonpost.com/rss/opinions"),
         # ("Local", "http://feeds.washingtonpost.com/rss/local"),
         # ("Entertainment", "http://feeds.washingtonpost.com/rss/entertainment"),
-        # (u"Sports", u"http://feeds.washingtonpost.com/rss/sports"),
-        # (u"Redskins", u"http://feeds.washingtonpost.com/rss/sports/redskins"),
+        # ("Sports", u"http://feeds.washingtonpost.com/rss/sports"),
+        # ("Redskins", u"http://feeds.washingtonpost.com/rss/sports/redskins"),
     ]
 
     def _extract_child_nodes(self, nodes, parent_element, soup, url):

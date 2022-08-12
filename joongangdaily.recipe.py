@@ -1,3 +1,8 @@
+# Copyright (c) 2022 https://github.com/ping/
+#
+# This software is released under the GNU General Public License v3.0
+# https://opensource.org/licenses/GPL-3.0
+
 """
 koreajoongangdaily.joins.com
 """
