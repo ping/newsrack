@@ -1,22 +1,23 @@
-
 # newsrack
 
 Generate a "newsrack" of periodicals for your ereader.
 
-Uses [calibre](https://calibre-ebook.com/), [GitHub Actions](.github/workflows/build.yml) and hosted on [GitHub Pages](https://pages.github.com/).
+Uses [calibre](https://calibre-ebook.com/), [GitHub Actions](.github/workflows/build.yml) and hosted
+on [GitHub Pages](https://pages.github.com/).
 
 ## Running Your Own Instance
 
-Enable Pages in your repository settings to deploy from the `gh-pages` branch. If you wish to, customise [_recipes.py](_recipes.py) in your fork to customise your own instance.
+Enable Pages in your repository settings to deploy from the `gh-pages` branch. If you wish to,
+customise [_recipes.py](_recipes.py) in your fork to customise your own instance.
 
 ### What Can Be Customised
 
 - The formats generated (`src_ext`, `target_ext`)
-- When recipes are enabled (`enable_on`)
+- When periodical recipes are enabled (`enable_on`)
 - Remove/add recipes
 - cron schedule and job timeout interval in [.github/workflows/build.yml](.github/workflows/build.yml)
 
-#### Recipe Definition
+#### Periodical Recipe Definition
 
 ```python
 # Defined in _recipes.py
@@ -37,12 +38,12 @@ Recipe(
 
 #### Examples
 
-Run a built-in Calibre recipe:
+Run a built-in Calibre periodical recipe:
 
 ```python
 Recipe(
     recipe="Associated Press",
-    name="Associated Press",    # Required for built-in recipes
+    name="Associated Press",  # Required for built-in recipes
     slug="ap",
     src_ext="mobi",
     category="news",
@@ -53,15 +54,15 @@ Only generate epubs:
 
 ```python
 Recipe(
-    recipe="example",   # example.recipe.py
+    recipe="example",  # example.recipe.py
     slug="example",
-    src_ext="epub",   # generate epub
-    target_ext=[],    # don't generate alt formats
+    src_ext="epub",  # generate epub
+    target_ext=[],  # don't generate alt formats
     category="example",
 ),
 ```
 
-Using `enable_on` to conditionally enable a recipe:
+Use `enable_on` to conditionally enable a recipe:
 
 ```python
 # instead of using the available functions, you can define your own custom functions for enable_on
@@ -70,31 +71,37 @@ Recipe(
     slug="example1",
     src_ext="epub",
     category="example",
-    enable_on=onlyon_weekdays([0]), # enable only on Mondays
+    enable_on=onlyon_weekdays([0]),  # only on Mondays
 ),
 Recipe(
     recipe="example2",
     slug="example2",
     src_ext="epub",
     category="example",
-    enable_on=onlyon_days([1, 14]), # enable only on days 1, 14 of each month
+    enable_on=onlyon_days([1, 14]),  # only on days 1, 14 of each month
 ),
 Recipe(
     recipe="example3",
     slug="example3",
     src_ext="epub",
     category="example",
-    enable_on=onlyat_hours(list(range(6, 12)), -5), # enable from 6am-11.59am daily, for the timezone UTC-5
+    enable_on=onlyat_hours(list(range(6, 12)), -5),  # from 6am-11.59am daily, for the timezone UTC-5
 ),
 
 ```
 
-
 ## Available
+
+In addition to built-in Calibre [recipes](https://github.com/kovidgoyal/calibre/tree/master/recipes), customised
+recipes (`*.recipe.py`) are included in this repository.
+
+Recipes customised here have a modified `publication_date` which is set to the recent most article date. This allows the
+publications to be sorted by recency.
 
 In alphabetical order:
 
 ### News
+
 1. [Asahi Shimbun](https://www.asahi.com/ajw/)
 2. [Channel News Asia](https://www.channelnewsasia.com/)
 3. [The Financial Times](https://www.ft.com/)
@@ -110,6 +117,7 @@ In alphabetical order:
 13. ~~[The Japan Times](https://www.japantimes.co.jp/)~~
 
 ### Magazines
+
 1. [The Atlantic](https://www.theatlantic.com/)
 2. [The Atlantic Magazine](https://www.theatlantic.com/magazine/)
 3. [The Diplomat](https://thediplomat.com/)
@@ -132,6 +140,7 @@ In alphabetical order:
 20. [Wired](https://www.wired.com/magazine/)
 
 ### Books
+
 1. [Asian Review of Books](https://asianreviewofbooks.com)
 2. [Five Books](https://fivebooks.com/)
 3. [London Review of Books](https://www.lrb.co.uk/)
