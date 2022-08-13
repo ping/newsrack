@@ -33,6 +33,7 @@ Recipe(
     overwrite_cover=False,  # generate a plain cover to overwrite Calibre's
     enable_on=True,  # determines when to run the recipe
     retry_attempts=1,  # retry attempts on TimeoutExpired, ReadTimeout
+    cover_options=CoverOptions(),  # cover options
 ),
 ```
 
@@ -66,6 +67,8 @@ Use `enable_on` to conditionally enable a recipe:
 
 ```python
 # instead of using the available functions, you can define your own custom functions for enable_on
+from _recipe_utils import Recipe, onlyon_days, onlyat_hours, onlyon_weekdays
+
 Recipe(
     recipe="example1",
     slug="example1",
@@ -87,20 +90,51 @@ Recipe(
     category="example",
     enable_on=onlyat_hours(list(range(6, 12)), -5),  # from 6am-11.59am daily, for the timezone UTC-5
 ),
-
 ```
 
-## Available
+Use calibre-generated cover:
+
+```python
+Recipe(
+    recipe="example",
+    slug="example",
+    src_ext="epub",
+    category="example",
+    overwrite_cover=False,
+),
+```
+
+Customise the generated cover:
+
+```python
+from _recipe_utils import CoverOptions
+
+Recipe(
+    recipe="example",
+    slug="example",
+    src_ext="epub",
+    category="example",
+    cover_options=CoverOptions(
+        text_colour="white",
+        background_colour="black",
+        title_font_path="path/to/example.ttf",
+        datestamp_font_path="path/to/example.ttf"
+    ),
+),
+```
+
+## Available Recipes
 
 In addition to built-in Calibre [recipes](https://github.com/kovidgoyal/calibre/tree/master/recipes), customised
 recipes (`*.recipe.py`) are included in this repository.
 
-Recipes customised here have a modified `publication_date` which is set to the recent most article date. This allows the
-publications to be sorted by recency.
+Recipes customised here have a modified `publication_date` which is set to the latest article date. This allows the
+outputs to be sorted by recency.
 
 In alphabetical order:
 
-### News
+<details>
+<summary><b>News</b></summary>
 
 1. [Asahi Shimbun](https://www.asahi.com/ajw/)
 2. [Channel News Asia](https://www.channelnewsasia.com/)
@@ -116,7 +150,10 @@ In alphabetical order:
 12. [The Washington Post](https://www.washingtonpost.com/)
 13. ~~[The Japan Times](https://www.japantimes.co.jp/)~~
 
-### Magazines
+</details>
+
+<details>
+<summary><b>Magazines</b></summary>
 
 1. [The Atlantic](https://www.theatlantic.com/)
 2. [The Atlantic Magazine](https://www.theatlantic.com/magazine/)
@@ -139,9 +176,15 @@ In alphabetical order:
 19. [Vox](https://www.vox.com/)
 20. [Wired](https://www.wired.com/magazine/)
 
-### Books
+</details>
+
+<details>
+<summary><b>Books</b></summary>
 
 1. [Asian Review of Books](https://asianreviewofbooks.com)
 2. [Five Books](https://fivebooks.com/)
 3. [London Review of Books](https://www.lrb.co.uk/)
 4. [The New Yorks Times - Books](https://www.nytimes.com/section/books)
+
+</details>
+
