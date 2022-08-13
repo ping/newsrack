@@ -1,6 +1,7 @@
 # change .recipe.py files to .recipe
-for f in *.recipe.py; do
-    cp -p "$f" "${f%.py}"
+for f in recipes/*.recipe.py; do
+    b="$(basename -- $f)"
+    cp -p "$f" "${b%.py}"
 done
 
 mkdir -p public cache \
