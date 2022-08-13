@@ -100,6 +100,7 @@ recipes = [
         target_ext=["epub"],
         overwrite_cover=False,
         category="magazines",
+        enable_on=onlyon_days(list(range(1, 1 + 7)) + list(range(32 - 7, 32)), -5),
     ),
     Recipe(
         recipe="joongangdaily",
@@ -145,6 +146,7 @@ recipes = [
         target_ext=["epub"],
         category="magazines",
         overwrite_cover=False,
+        enable_on=onlyon_days(list(range(1, 1 + 7)) + list(range(32 - 7, 32)), -5),
     ),
     Recipe(
         recipe="nature",
@@ -201,6 +203,7 @@ recipes = [
         target_ext=["epub"],
         overwrite_cover=False,
         category="magazines",
+        enable_on=onlyon_days(list(range(1, 1 + 7)) + list(range(32 - 7, 32)), -5),
     ),
     Recipe(
         recipe="propublica",
