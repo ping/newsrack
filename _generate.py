@@ -449,6 +449,7 @@ for recipe in recipes:
                 target_file_path,
                 f"--series={recipe.name}",
                 f"--series-index={pseudo_series_index}",
+                f"--publisher={publish_site}",
             ]
             if recipe.conv_options and recipe.conv_options.get(ext):
                 cmd.extend(recipe.conv_options[ext])
