@@ -414,6 +414,7 @@ for recipe in recipes:
                     f"--cover={cover_file_path}",
                     f"--series={recipe.name}",
                     f"--index={pseudo_series_index}",
+                    f"--publisher={publish_site}",
                 ]
                 _ = subprocess.call(cover_cmd, stdout=subprocess.PIPE)
                 os.remove(cover_file_path)
@@ -426,6 +427,7 @@ for recipe in recipes:
                 source_file_path,
                 f"--series={recipe.name}",
                 f"--index={pseudo_series_index}",
+                f"--publisher={publish_site}",
             ]
             _ = subprocess.call(series_cmd, stdout=subprocess.PIPE)
 
