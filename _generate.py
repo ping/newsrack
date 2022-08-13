@@ -158,19 +158,23 @@ for recipe in recipes:
                 recipe_source = f.read()
                 mobj = re.search(
                     r"\n_name\s=\s['\"](?P<name>.+)['\"]\n", recipe_source
-                ) or re.search(r"\btitle\s=\s['\"](?P<name>.+)['\"]\n", recipe_source)
+                ) or re.search(
+                    r"\btitle\s+=\s+u?['\"](?P<name>.+)['\"]\n", recipe_source
+                )
                 if mobj:
                     recipe.name = mobj.group("name")
                 else:
                     logger.warning(f"Unable to extract recipe name for {recipe}.")
+                    recipe.name = (
+                        f"{recipe.recipe}.recipe"  # set name to recipe file name
+                    )
         except FileNotFoundError:
-            logger.error(
-                f"Built-in recipes must be configured with a recipe name: {recipe.recipe}"
+            logger.warning(
+                f"Built-in recipes should be configured with a recipe name: {recipe.recipe}"
             )
-            continue
+            recipe.name = f"{recipe.recipe}.recipe"
         except Exception as err:  # noqa
             logger.exception("Error getting recipe name")
-            logger.error(f"Please set a recipe name for {recipe}.")
             continue
 
     recipe.job_log = job_log
