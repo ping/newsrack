@@ -44,7 +44,8 @@ recipes = [
         target_ext=["epub"],
         overwrite_cover=False,
         category="magazines",
-        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -4),
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -4)
+        and onlyon_days(list(range(32 - 14, 32)), -4),
     ),
     Recipe(
         recipe="channelnewsasia",
@@ -131,6 +132,7 @@ recipes = [
         src_ext="mobi",
         target_ext=["epub"],
         category="magazines",
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -4),
     ),
     Recipe(
         recipe="mit-tech-review",
@@ -138,6 +140,7 @@ recipes = [
         src_ext="mobi",
         target_ext=["epub"],
         category="magazines",
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4, 5], -4),
     ),
     Recipe(
         recipe="mit-tech-review-magazine",
@@ -187,6 +190,7 @@ recipes = [
         target_ext=["epub"],
         overwrite_cover=False,
         category="news",
+        enable_on=onlyat_hours(list(range(20, 24)) + list(range(0, 4))),
     ),
     Recipe(
         recipe="nytimes-books",
@@ -226,7 +230,8 @@ recipes = [
         src_ext="mobi",
         target_ext=["epub"],
         category="magazines",
-        enable_on=onlyon_weekdays([0, 1, 2, 3, 4, 5], -5),
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4, 5])
+        and onlyat_hours(list(range(9, 19))),
     ),
     Recipe(
         recipe="scientific-american",
