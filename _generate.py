@@ -251,7 +251,9 @@ for recipe in recipes:
                     abort_recipe = False
                     for cached_item in cached[recipe.name]:
                         _, ext = os.path.splitext(cached_item["filename"])
-                        if ext != f".{recipe.src_ext}":
+                        if ext != f".{recipe.src_ext}" and ext not in [
+                            f".{x}" for x in recipe.target_ext
+                        ]:
                             continue
                         ebook_url = urljoin(publish_site, cached_item["filename"])
                         timeout = 120
