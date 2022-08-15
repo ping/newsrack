@@ -39,11 +39,15 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    # if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     # Customise: Total job run time limit
     timeout-minutes: 45
     steps:
-
+      - name: Debug
+        run: |
+          echo '${{ toJSON(github.event_name) }}'
+          echo '${{ toJSON(github.ref) }}'
+          echo '${{ toJSON(github.ref_name) }}'
       - name: Setup node
         uses: actions/setup-node@v2
         with:
