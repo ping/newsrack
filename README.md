@@ -7,8 +7,9 @@ on [GitHub Pages](https://pages.github.com/).
 
 ## Running Your Own Instance
 
-Enable Pages in your repository settings to deploy from the `GitHub Actions`. If you wish to,
-customise [_recipes.py](_recipes.py) in your fork to customise your own instance.
+Enable Pages in your forked repository settings to deploy from `GitHub Actions`. If you wish to,
+customise [_recipes.py](_recipes.py) or other code in a different branch. Remember to set the new branch as default so
+that the GitHub Actions will build/deploy from the correct branch.
 
 ### What Can Be Customised
 
