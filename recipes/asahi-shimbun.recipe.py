@@ -44,7 +44,7 @@ class AsahiShimbunEnglishNews(BasicNewsRecipe):
     compress_news_images = True
     scale_news_images = (800, 800)
     scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 20
+    timeout = 40
     timefmt = ""
     pub_date = None  # custom publication date
 
