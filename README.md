@@ -7,7 +7,7 @@ on [GitHub Pages](https://pages.github.com/).
 
 ## Running Your Own Instance
 
-Enable Pages in your repository settings to deploy from the `gh-pages` branch. If you wish to,
+Enable Pages in your repository settings to deploy from the `GitHub Actions`. If you wish to,
 customise [_recipes.py](_recipes.py) in your fork to customise your own instance.
 
 ### What Can Be Customised
