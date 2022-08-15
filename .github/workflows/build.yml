@@ -43,11 +43,13 @@ jobs:
     # Customise: Total job run time limit
     timeout-minutes: 45
     steps:
-      - name: Debug
+      - name: Debug context values
         run: |
           echo '${{ toJSON(github.event_name) }}'
           echo '${{ toJSON(github.ref) }}'
           echo '${{ toJSON(github.ref_name) }}'
+          echo '${{ toJSON(github.event.repository.default_branch) }}'
+          echo '${{ toJSON(github.ref_name == github.event.repository.default_branch) }}'
       - name: Setup node
         uses: actions/setup-node@v2
         with:
