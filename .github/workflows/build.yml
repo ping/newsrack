@@ -2,8 +2,7 @@ name: "Build"
 
 on:
   push:
-    branches:
-    - $default-branch
+    branches: [ $default-branch ]
   schedule:
     # Customise: Cron interval
     - cron: "0 3,7,11,15,19,23 * * *"
