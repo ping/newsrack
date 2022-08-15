@@ -24,8 +24,9 @@ import humanize  # type: ignore
 import requests  # type: ignore
 
 from _opds import init_feed, simple_tag, extension_contenttype_map
-from _recipe_utils import sort_category_key
-from _recipes import recipes
+from _recipe_utils import sort_category_key, Recipe
+from _recipes import recipes as default_recipes
+from _recipes_custom import recipes as custom_recipes
 from _utils import generate_cover
 
 logger = logging.getLogger(__file__)
@@ -151,6 +152,7 @@ def _add_recipe_summary(rec, status, duration=None):
     return f"| {rec.name} | {status} | {duration or 0} |\n"
 
 
+recipes: List[Recipe] = custom_recipes or default_recipes
 for recipe in recipes:
     if not recipe.name:
         try:
