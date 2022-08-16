@@ -126,11 +126,11 @@ Recipe(
 
 ## Available Recipes
 
-In addition to built-in Calibre [recipes](https://github.com/kovidgoyal/calibre/tree/master/recipes), customised
-recipes (`*.recipe.py`) are included in this repository.
+In addition to built-in Calibre [recipes](https://github.com/kovidgoyal/calibre/tree/master/recipes), [customised
+recipes (`recipes/*.recipe.py`)](recipes) are included in this repository.
 
 Recipes customised here have a modified `publication_date` which is set to the latest article date. This allows the
-outputs to be sorted by recency.
+outputs to be sorted by recency. The recipe `title` is also modified to include the latest article date or issue date/number.
 
 In alphabetical order:
 
