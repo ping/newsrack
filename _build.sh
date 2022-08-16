@@ -1,16 +1,16 @@
 # change .recipe.py files to .recipe
-for f in recipes/*.recipe.py; do
-    b="$(basename -- $f)"
-    cp -p "$f" "${b%.py}"
+for recipe_folder in 'recipes' 'recipes_custom'
+do
+  if [ -n "$(ls -A "${recipe_folder}"/*.recipe.py 2>/dev/null)" ]
+  then
+    for f in "$recipe_folder"/*.recipe.py; do
+        b="$(basename -- $f)"
+        cp -p "$f" "${b%.py}"
+    done
+  else
+    echo "No recipes in ${recipe_folder}/"
+  fi
 done
-# for forks
-if [ -n "$(ls -A recipes_custom/*.recipe.py 2>/dev/null)" ]
-then
-  for f in recipes_custom/*.recipe.py; do
-      b="$(basename -- $f)"
-      cp -p "$f" "${b%.py}"
-  done
-fi
 
 mkdir -p public cache \
 && cp -p static/*.svg public/ \
