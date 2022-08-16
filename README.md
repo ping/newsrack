@@ -18,6 +18,8 @@ new branch as default so that GitHub Actions will build/deploy from the correct 
 - Remove/add recipes
 - cron schedule and job timeout interval in [.github/workflows/build.yml](.github/workflows/build.yml)
 
+[Example fork repo](https://github.com/ping/newsrack-fork-test/) / [Example customisations](https://github.com/ping/newsrack-fork-test/compare/main...custom)
+
 #### Periodical Recipe Definition
 
 ```python
