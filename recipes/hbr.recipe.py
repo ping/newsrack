@@ -81,10 +81,13 @@ class HBR(BasicNewsRecipe):
 
         # set article date
         pub_datetime = soup.find("meta", attrs={"property": "article:published_time"})
+        mod_datetime = soup.find("meta", attrs={"property": "article:modified_time"})
         # Example 2022-06-21T17:35:44Z
         post_date = datetime.strptime(pub_datetime["content"], "%Y-%m-%dT%H:%M:%SZ")
+        mod_date = datetime.strptime(mod_datetime["content"], "%Y-%m-%dT%H:%M:%SZ")
         pub_date_ele = soup.find("div", class_="pub-date")
         pub_date_ele["data-pub-date"] = pub_datetime["content"]
+        pub_date_ele["data-mod-date"] = mod_datetime["content"]
         post_date_ele = soup.new_tag("span")
         post_date_ele["class"] = "article-pub-date"
         post_date_ele.append(f"{post_date:%-d %B, %Y}")
@@ -110,9 +113,9 @@ class HBR(BasicNewsRecipe):
         return str(soup)
 
     def populate_article_metadata(self, article, soup, _):
-        pub_date_ele = soup.find(attrs={"data-pub-date": True})
+        mod_date_ele = soup.find(attrs={"data-mod-date": True})
         post_date = datetime.strptime(
-            pub_date_ele["data-pub-date"], "%Y-%m-%dT%H:%M:%SZ"
+            mod_date_ele["data-mod-date"], "%Y-%m-%dT%H:%M:%SZ"
         ).replace(tzinfo=timezone.utc)
         if (not self.pub_date) or post_date > self.pub_date:
             self.pub_date = post_date
