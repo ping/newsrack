@@ -1,5 +1,5 @@
 ---
-name: Questions/Others template
+name: Questions/Others
 about: Questions or other issues (not bug/feature request)
 title: "[OTHERS] "
 labels: ''
