@@ -1,14 +1,21 @@
-# change .recipe.py files to .recipe
 for recipe_folder in 'recipes' 'recipes_custom'
 do
+  # copy recipe_folder/*.recipe.py files to *.recipe
   if [ -n "$(ls -A "${recipe_folder}"/*.recipe.py 2>/dev/null)" ]
   then
     for f in "$recipe_folder"/*.recipe.py; do
         b="$(basename -- $f)"
         cp -p "$f" "${b%.py}"
     done
-  else
-    echo "No recipes in ${recipe_folder}/"
+  fi
+  # also support *.recipe files as is in Calibre
+  # copy recipe_folder/*.recipe files to *.recipe
+  if [ -n "$(ls -A "${recipe_folder}"/*.recipe 2>/dev/null)" ]
+  then
+    for f in "$recipe_folder"/*.recipe; do
+        b="$(basename -- $f)"
+        cp -p "$f" "$b"
+    done
   fi
 done
 
