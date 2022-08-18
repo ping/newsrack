@@ -53,12 +53,12 @@ class Nautilus(BasicNewsRecipe):
     """
 
     feeds = [
-        # ("Anthropology", "https://nautil.us/topics/anthropology/feed/"),
-        # ("Arts", "https://nautil.us/topics/arts/feed/"),
-        # ("Astronomy", "https://nautil.us/topics/astronomy/feed/"),
-        # ("Communication", "https://nautil.us/topics/communication/feed/"),
-        # ("Economics", "https://nautil.us/topics/economics/feed/"),
-        # ("Environment", "https://nautil.us/topics/environment/feed/"),
+        ("Anthropology", "https://nautil.us/topics/anthropology/feed/"),
+        ("Arts", "https://nautil.us/topics/arts/feed/"),
+        ("Astronomy", "https://nautil.us/topics/astronomy/feed/"),
+        ("Communication", "https://nautil.us/topics/communication/feed/"),
+        ("Economics", "https://nautil.us/topics/economics/feed/"),
+        ("Environment", "https://nautil.us/topics/environment/feed/"),
         ("Evolution", "https://nautil.us/topics/evolution/feed/"),
         ("General", "https://nautil.us/topics/general/feed/"),
         ("Genetics", "https://nautil.us/topics/genetics/feed/"),
