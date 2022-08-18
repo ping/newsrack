@@ -26,6 +26,7 @@ class Nautilus(BasicNewsRecipe):
     remove_empty_feeds = True
 
     compress_news_images = True
+    compress_news_images_auto_size = 10
     scale_news_images = (800, 1200)
     scale_news_images_to_device = False  # force img to be resized to scale_news_images
     timeout = 20
@@ -36,13 +37,14 @@ class Nautilus(BasicNewsRecipe):
 
     remove_tags = [
         classes(
-            "article-action-list article-bottom-newsletter_box main-post-comments-toggle-wrap main-post-comments-wrapper social-share supported-one"
+            "article-action-list article-bottom-newsletter_box main-post-comments-toggle-wrap main-post-comments-wrapper social-share supported-one article-collection_box"
         )
     ]
     extra_css = """
     .breadcrumb div { margin-right: 0.5rem; }
     h1.article-title { font-size: 1.8rem; margin-bottom: 0.4rem; }
-    .article-meta {  margin-top: 1rem; margin-bottom: 1rem; }
+    .article-left-col p { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; }
+    .article-meta {  margin-bottom: 1rem; }
     .article-meta div { display: inline-block; font-weight: bold; color: #444; margin-right: 0.5rem; }
     .article-meta div:last-child { font-weight: normal; }
     div.wp-block-image div { font-size: 0.8rem; }
@@ -51,12 +53,12 @@ class Nautilus(BasicNewsRecipe):
     """
 
     feeds = [
-        ("Anthropology", "https://nautil.us/topics/anthropology/feed/"),
-        ("Arts", "https://nautil.us/topics/arts/feed/"),
-        ("Astronomy", "https://nautil.us/topics/astronomy/feed/"),
-        ("Communication", "https://nautil.us/topics/communication/feed/"),
-        ("Economics", "https://nautil.us/topics/economics/feed/"),
-        ("Environment", "https://nautil.us/topics/environment/feed/"),
+        # ("Anthropology", "https://nautil.us/topics/anthropology/feed/"),
+        # ("Arts", "https://nautil.us/topics/arts/feed/"),
+        # ("Astronomy", "https://nautil.us/topics/astronomy/feed/"),
+        # ("Communication", "https://nautil.us/topics/communication/feed/"),
+        # ("Economics", "https://nautil.us/topics/economics/feed/"),
+        # ("Environment", "https://nautil.us/topics/environment/feed/"),
         ("Evolution", "https://nautil.us/topics/evolution/feed/"),
         ("General", "https://nautil.us/topics/general/feed/"),
         ("Genetics", "https://nautil.us/topics/genetics/feed/"),
@@ -107,6 +109,15 @@ class Nautilus(BasicNewsRecipe):
             for li in byline.find_all("li"):
                 li.name = "div"
             byline.name = "div"
+
+        author_names = soup.find_all("h6", attrs={"class": "article-author-name"})
+        for a in author_names:
+            a.name = "div"
+
+        # remove empty p tags
+        for p in soup.find_all("p"):
+            if len(p.get_text(strip=True)) == 0:
+                p.decompose()
 
         for img in soup.findAll("img", attrs={"data-src": True}):
             img["src"] = img["data-src"].split("?")[0]
