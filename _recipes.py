@@ -18,7 +18,7 @@ from _recipe_utils import Recipe, onlyon_days, onlyat_hours, onlyon_weekdays
 # Notes:
 #   - When epub is converted to mobi periodicals:
 #       - masthead is lost
-#       - mobi retains periodical support but has the non-funtional
+#       - mobi retains periodical support but has the non-functional
 #         calibre generated nav, e.g. Next Section, Main, etc
 #       - article summary/description is lost
 #   - When mobi periodical is converted to epub:

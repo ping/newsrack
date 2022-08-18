@@ -26,7 +26,7 @@ class Guardian(BasicNewsRecipe):
     use_embedded_content = False
     no_stylesheets = True
     remove_javascript = True
-    encoding = "UTF-8"
+    encoding = "utf-8"
     compress_news_images = True
     masthead_url = "https://assets.guim.co.uk/images/guardian-logo-rss.c45beb1bafa34b347ac333af2e6fe23f.png"
     scale_news_images = (800, 800)

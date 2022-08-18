@@ -22,7 +22,7 @@ class ChannelNewsAsia(BasicNewsRecipe):
     no_stylesheets = True
     auto_cleanup = False
     remove_javascript = True
-    encoding = "UTF-8"
+    encoding = "utf-8"
     language = "en"
     masthead_url = "https://www.channelnewsasia.com/sites/default/themes/mc_cna_theme/images/logo.png"
 

@@ -84,7 +84,6 @@ class HBR(BasicNewsRecipe):
         mod_datetime = soup.find("meta", attrs={"property": "article:modified_time"})
         # Example 2022-06-21T17:35:44Z
         post_date = datetime.strptime(pub_datetime["content"], "%Y-%m-%dT%H:%M:%SZ")
-        mod_date = datetime.strptime(mod_datetime["content"], "%Y-%m-%dT%H:%M:%SZ")
         pub_date_ele = soup.find("div", class_="pub-date")
         pub_date_ele["data-pub-date"] = pub_datetime["content"]
         pub_date_ele["data-mod-date"] = mod_datetime["content"]

@@ -36,7 +36,7 @@ class Nature(BasicNewsRecipe):
         " trends affecting science, scientists and the wider public."
     )
     language = "en"
-    encoding = "UTF-8"
+    encoding = "utf-8"
     masthead_url = "https://media.springernature.com/full/nature-cms/uploads/product/nature/header-86f1267ea01eccd46b530284be10585e.svg"
 
     no_javascript = True

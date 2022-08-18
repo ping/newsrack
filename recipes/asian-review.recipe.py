@@ -24,7 +24,7 @@ class AsianReviewOfBooks(BasicNewsRecipe):
     no_stylesheets = True
     use_embedded_content = False
     remove_javascript = True
-    encoding = "utf8"
+    encoding = "utf-8"
     language = "en"
     publication_type = "magazine"
     auto_cleanup = False

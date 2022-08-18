@@ -25,7 +25,7 @@ class RestOfWorld(BasicNewsRecipe):
     use_embedded_content = False
     no_stylesheets = True
     remove_javascript = True
-    encoding = "UTF-8"
+    encoding = "utf-8"
     compress_news_images = True
     masthead_url = "https://restofworld.org/style-guide/images/Variation_3.svg"
     scale_news_images = (800, 800)

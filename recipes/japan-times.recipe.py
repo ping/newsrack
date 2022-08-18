@@ -32,7 +32,7 @@ class JapanTimes(BasicNewsRecipe):
     no_stylesheets = True
     remove_javascript = True
     use_embedded_content = False
-    encoding = "utf8"
+    encoding = "utf-8"
     publication_type = "newspaper"
     masthead_url = "https://cdn-japantimes.com/wp-content/themes/jt_theme/library/img/japantimes-logo-tagline.png"
 

@@ -22,7 +22,7 @@ class ProPublica(BasicNewsRecipe):
     use_embedded_content = False
     no_stylesheets = True
     remove_javascript = True
-    encoding = "UTF-8"
+    encoding = "utf-8"
     masthead_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/ProPublica_text_logo.svg/1280px-ProPublica_text_logo.svg.png"
 
     compress_news_images = True
