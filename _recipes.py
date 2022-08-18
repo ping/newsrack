@@ -1,3 +1,10 @@
+# --------------------------------------------------------------------
+# This file defines default recipes distributed with newsrack.
+# To customise your own instance, do not modify this file.
+# Add your recipes to _recipes_custom.py instead and new recipe source
+# files to recipes_custom/.
+# --------------------------------------------------------------------
+
 from _recipe_utils import Recipe, onlyon_days, onlyat_hours, onlyon_weekdays
 
 # Only mobi work as periodicals on the Kindle
