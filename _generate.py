@@ -565,7 +565,7 @@ for i, (category, publications) in enumerate(
     listing += f"""<h2 id="{slugify(category, True)}" class="category is-open">{category}
     <a class="opds" title="OPDS for {category.title()}" href="{slugify(category, True)}.xml">OPDS</a></h2>
     <ol class="books">{"".join(publication_listing)}
-    <div class="close-cat-container"><a class="close-cat-shortcut" href="#" data-click-target="{category}"></a></div>
+    <div class="close-cat-container"><a class="close-cat-shortcut" href="#" data-click-target="{slugify(category)}"></a></div>
     </ol>
     """
 
