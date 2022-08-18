@@ -3,11 +3,31 @@
 # This software is released under the GNU General Public License v3.0
 # https://opensource.org/licenses/GPL-3.0
 
+import re
 import textwrap
+import unicodedata
 
 from PIL import Image, ImageDraw, ImageFont  # type: ignore
 
 from _recipe_utils import CoverOptions
+
+
+# From django
+def slugify(value, allow_unicode=False):
+    """
+    Convert to ASCII if 'allow_unicode' is False. Convert spaces to hyphens.
+    Remove characters that aren't alphanumerics, underscores, or hyphens.
+    Convert to lowercase. Also strip leading and trailing whitespace.
+    """
+    if allow_unicode:
+        value = unicodedata.normalize("NFKC", value)
+        value = re.sub(r"[^\w\s-]", "", value, flags=re.U).strip().lower()
+        return re.sub(r"[-\s]+", "-", value, flags=re.U)
+    value = (
+        unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode("ascii")
+    )
+    value = re.sub(r"[^\w\s-]", "", value).strip().lower()
+    return re.sub(r"[-\s]+", "-", value)
 
 
 def generate_cover(

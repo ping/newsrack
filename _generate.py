@@ -34,7 +34,7 @@ from _recipes_custom import (
     recipes as custom_recipes,
     categories_sort as custom_categories_sort,
 )
-from _utils import generate_cover
+from _utils import generate_cover, slugify
 
 logger = logging.getLogger(__file__)
 ch = logging.StreamHandler(sys.stdout)
@@ -562,8 +562,8 @@ for i, (category, publications) in enumerate(
                 <span class="pub-date">Not available</span></li>"""
             )
 
-    listing += f"""<h2 id="{category}" class="category is-open">{category}
-    <a class="opds" title="OPDS for {category.title()}" href="{category}.xml">OPDS</a></h2>
+    listing += f"""<h2 id="{slugify(category, True)}" class="category is-open">{category}
+    <a class="opds" title="OPDS for {category.title()}" href="{slugify(category, True)}.xml">OPDS</a></h2>
     <ol class="books">{"".join(publication_listing)}
     <div class="close-cat-container"><a class="close-cat-shortcut" href="#" data-click-target="{category}"></a></div>
     </ol>
@@ -677,7 +677,7 @@ for category, publications in sorted(generated.items(), key=sort_category_key):
 
             feed.appendChild(entry)
 
-    opds_xml_path = os.path.join(publish_folder, f"{category}.xml")
+    opds_xml_path = os.path.join(publish_folder, f"{slugify(category, True)}.xml")
     with open(opds_xml_path, "wb") as f:  # type: ignore
         f.write(cat_doc.toprettyxml(encoding="utf-8", indent=""))
 
