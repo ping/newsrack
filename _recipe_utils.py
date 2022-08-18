@@ -6,7 +6,6 @@
 import time
 from dataclasses import dataclass, field
 from datetime import datetime, timezone, timedelta
-from functools import cmp_to_key
 from typing import List, Union, Callable, Dict
 
 default_recipe_timeout = 180
@@ -75,16 +74,13 @@ class Recipe:
         return is_due and self.enable_on
 
 
-sorted_categories = ["news", "magazines", "books"]
-
-
-def sort_category(a, b):
+def sort_category(a, b, categories_sort):
     try:
-        a_index = sorted_categories.index(a[0])
+        a_index = categories_sort.index(a[0])
     except ValueError:
         a_index = 999
     try:
-        b_index = sorted_categories.index(b[0])
+        b_index = categories_sort.index(b[0])
     except ValueError:
         b_index = 999
 
@@ -94,9 +90,6 @@ def sort_category(a, b):
         return 1
     if a_index == b_index:
         return -1 if a[0] < b[0] else 1
-
-
-sort_category_key = cmp_to_key(sort_category)
 
 
 def get_local_now(offset: float = 0.0):

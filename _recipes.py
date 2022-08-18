@@ -1,9 +1,16 @@
+# Copyright (c) 2022 https://github.com/ping/
+#
+# This software is released under the GNU General Public License v3.0
+# https://opensource.org/licenses/GPL-3.0
+
 # --------------------------------------------------------------------
 # This file defines default recipes distributed with newsrack.
 # To customise your own instance, do not modify this file.
 # Add your recipes to _recipes_custom.py instead and new recipe source
 # files to recipes_custom/.
 # --------------------------------------------------------------------
+
+from typing import List
 
 from _recipe_utils import Recipe, onlyon_days, onlyat_hours, onlyon_weekdays
 
@@ -20,8 +27,10 @@ from _recipe_utils import Recipe, onlyon_days, onlyat_hours, onlyon_weekdays
 #   - Recipe can be defined twice with different src_ext, will work except
 #     for potential throttling and time/bandwidth taken
 
+categories_sort: List[str] = ["news", "magazines", "books"]
+
 # Keep this list in alphabetical order
-recipes = [
+recipes: List[Recipe] = [
     Recipe(
         recipe="asahi-shimbun",
         slug="asahi-shimbun",
