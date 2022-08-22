@@ -1,5 +1,4 @@
 .env
-.env
 cache/
 *.recipe
 *.epub
