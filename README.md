@@ -1,15 +1,21 @@
 # newsrack
 
-Generate a "newsrack" of periodicals for your ereader.
+Generate an online "newsrack" of periodicals for your ereader.
 
-Uses [calibre](https://calibre-ebook.com/), [GitHub Actions](.github/workflows/build.yml) and hosted
+Uses [calibre](https://calibre-ebook.com/) + [recipes](https://manual.calibre-ebook.com/news_recipe.html), [GitHub Actions](.github/workflows/build.yml), and hosted
 on [GitHub Pages](https://pages.github.com/).
 
 ## Running Your Own Instance
 
-Enable Pages in your forked repository settings to deploy from `GitHub Actions`. If you wish to, from a different
-branch, customise [_recipes_custom.py](_recipes_custom.py) and add your own recipes to the [`recipes_custom/`](recipes_custom) folder. Remember to set the
-new branch as default so that GitHub Actions will build/deploy from the correct branch.
+### General Steps
+
+1. Fork this repository.
+2. Create a new branch, for example `custom`. Using a new branch makes a few things, like contributing fixes for example, easier.
+3. Add your own recipes to the [`recipes_custom/`](recipes_custom) folder and customise [_recipes_custom.py](_recipes_custom.py). Optional.
+4. Customise the cron schedule and job run time in [.github/workflows/build.yml](.github/workflows/build.yml). Optional.
+5. Set the new branch `custom` as default.
+6. Enable Pages in repository settings to deploy from `GitHub Actions`.
+7. If needed, manually trigger the `Build` workflow from Actions to start your first build.
 
 ### What Can Be Customised
 
@@ -17,13 +23,16 @@ new branch as default so that GitHub Actions will build/deploy from the correct 
 - When periodical recipes are enabled (`enable_on`)
 - Remove/add recipes
 - cron schedule and job timeout interval in [.github/workflows/build.yml](.github/workflows/build.yml)
+- Cover colours and fonts
+
+Look at the `Recipe` class in [_recipe_utils.py](_recipe_utils.py) to discover other options.
 
 [Example fork repo](https://github.com/ping/newsrack-fork-test/) / [Example customisations](https://github.com/ping/newsrack-fork-test/compare/main...custom)
 
-#### Periodical Recipe Definition
+#### Recipe Definition
 
 ```python
-# Defined in _recipes.py
+# To be defined in _recipes_custom.py
 Recipe(
     recipe="example",  # actual recipe name
     slug="example",  # file name slug
@@ -31,7 +40,8 @@ Recipe(
     category="news",  # category
     name="An Example Publication",
     # display name, taken from recipe source by default. Must be defined for built-in recipes.
-    target_ext=[],  # alt formats that src_ext will be converted to
+    target_ext=[],
+    # alt formats that the src_ext format will be converted to
     timeout=300,  # max interval (seconds) for executing the recipe, default 180 seconds
     overwrite_cover=False,  # generate a plain cover to overwrite Calibre's
     enable_on=True,  # determines when to run the recipe
@@ -69,7 +79,6 @@ Recipe(
 Use `enable_on` to conditionally enable a recipe:
 
 ```python
-# instead of using the available functions, you can define your own custom functions for enable_on
 from _recipe_utils import Recipe, onlyon_days, onlyat_hours, onlyon_weekdays
 
 Recipe(
@@ -93,6 +102,9 @@ Recipe(
     category="example",
     enable_on=onlyat_hours(list(range(6, 12)), -5),  # from 6am-11.59am daily, for the timezone UTC-5
 ),
+
+# instead of using the available functions, you can
+# also define your own custom functions for enable_on
 ```
 
 Use calibre-generated cover:
@@ -132,7 +144,7 @@ In addition to built-in Calibre [recipes](https://github.com/kovidgoyal/calibre/
 recipes (`recipes/*.recipe.py`)](recipes) are included in this repository.
 
 Recipes customised here have a modified `publication_date` which is set to the latest article date. This allows the
-outputs to be sorted by recency. The recipe `title` is also modified to include the latest article date or issue date/number.
+outputs to be sorted by recency. The recipe `title` is also modified to include the latest article date or issue name.
 
 In alphabetical order:
 
