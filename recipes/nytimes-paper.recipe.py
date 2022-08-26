@@ -183,9 +183,11 @@ class NewYorkTimesPrint(BasicNewsRecipe):
                     pub_dt_ele.string = ", ".join(authors)
             elif content_type in ["ParagraphBlock", "DetailBlock"]:
                 para_ele = new_soup.new_tag("p")
-                para_ele.string = ""
                 for cc in c.get("content", []):
-                    para_ele.string += cc.get("text", "")
+                    if cc.get("__typename", "") == "LineBreakInline":
+                        para_ele.append(new_soup.new_tag("br"))
+                    elif cc.get("text", ""):
+                        para_ele.append(cc["text"])
                 new_soup.body.article.append(para_ele)
             elif content_type == "ImageBlock":
                 image_block = c["media"]
@@ -262,6 +264,8 @@ class NewYorkTimesPrint(BasicNewsRecipe):
                     container_tag = "h3"
                 container_ele = new_soup.new_tag(container_tag)
                 for x in c["content"]:
+                    if x["__typename"] == "LineBreakInline":
+                        container_ele.append(new_soup.new_tag("br"))
                     if x["__typename"] == "TextInline":
                         container_ele.append(
                             x.get("text", "") or x.get("text@stripHtml", "")
