@@ -30,7 +30,17 @@ from _recipe_utils import Recipe, onlyon_days, onlyat_hours, onlyon_weekdays
 categories_sort: List[str] = ["News", "Magazines", "Books"]
 
 # Keep this list in alphabetical order
+# [!] Except for NYT recipes, because running 3 NYT recipes consecutively
+# causes throttling to kick in. Space out the NYT recipes between the others to
+# avoid this.
 recipes: List[Recipe] = [
+    Recipe(
+        recipe="nytimes-global",
+        slug="nytimes-global",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="News",
+    ),
     Recipe(
         recipe="asahi-shimbun",
         slug="asahi-shimbun",
@@ -193,13 +203,6 @@ recipes: List[Recipe] = [
         enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -5),
     ),
     Recipe(
-        recipe="nytimes-global",
-        slug="nytimes-global",
-        src_ext="mobi",
-        target_ext=["epub"],
-        category="News",
-    ),
-    Recipe(
         recipe="nytimes-paper",
         slug="nytimes-print",
         src_ext="mobi",
@@ -207,14 +210,6 @@ recipes: List[Recipe] = [
         overwrite_cover=False,
         category="News",
         enable_on=onlyat_hours(list(range(20, 24)) + list(range(0, 4))),
-    ),
-    Recipe(
-        recipe="nytimes-books",
-        slug="nytimes-books",
-        src_ext="mobi",
-        target_ext=["epub"],
-        category="Books",
-        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -5),
     ),
     Recipe(
         recipe="poetry",
@@ -320,5 +315,13 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         overwrite_cover=True,
         category="Magazines",
+    ),
+    Recipe(
+        recipe="nytimes-books",
+        slug="nytimes-books",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Books",
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -5),
     ),
 ]
