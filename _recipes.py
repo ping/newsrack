@@ -199,7 +199,9 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         category="News",
-        enable_on=onlyat_hours(list(range(3, 16))),
+        enable_on=onlyat_hours(
+            list(range(0, 4)) + list(range(8, 18)) + list(range(22, 24))
+        ),
     ),
     Recipe(
         recipe="nytimes-paper",
@@ -208,7 +210,7 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         overwrite_cover=False,
         category="News",
-        enable_on=onlyat_hours(list(range(0, 2)) + list(range(22, 24))),
+        enable_on=onlyat_hours(list(range(4, 8))),
     ),
     Recipe(
         recipe="nytimes-books",
@@ -217,7 +219,7 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         category="Books",
         enable_on=onlyon_weekdays([0, 1, 2, 3, 4])
-        and onlyat_hours(list(range(16, 20))),
+        and onlyat_hours(list(range(18, 22))),
     ),
     Recipe(
         recipe="poetry",
