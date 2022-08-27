@@ -216,7 +216,8 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         category="Books",
-        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -5) and list(range(16, 20)),
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4])
+        and onlyat_hours(list(range(16, 20))),
     ),
     Recipe(
         recipe="poetry",
