@@ -5,6 +5,23 @@ This software is released under the GNU General Public License v3.0
 https://opensource.org/licenses/GPL-3.0
 */
 
+$base-bg-color: #fffefc;
+$base-color: #1b1b23;
+$base-disabled-color: #61697c;
+$link-color: #0000e6;
+$link-hover-color: darken($link-color, 20%);
+$link-visited-color: #551a8a;
+$book-bg-color: #eaeaea;
+
+$dark-base-bg-color: #1e2228;
+$dark-base-color: #e7e9f2;
+$dark-base-disabled-color: #a2a5af;
+$dark-link-color: #5ccaec;
+$dark-link-hover-color: lighten($dark-link-color, 20%);
+$dark-link-visited-color: #bbb9ff;
+$dark-book-bg-color: lighten($dark-base-bg-color, 5%);
+
+
 /* Use pt instead of px because px is odd on the Kindle browser */
 html {
     font-size: 10pt;
@@ -13,9 +30,22 @@ body {
     font-family: sans-serif;
     margin-left: 1rem;
     margin-right: 1rem;
-    color: #000;
-    background-color: #ffffff;
+    color: $base-color;
+    background-color: $base-bg-color;
 }
+
+a {
+    text-decoration: none;
+    color: $link-color;
+
+    &:hover {
+        color: $link-hover-color;
+    }
+    &:visited {
+        color: $link-visited-color;
+    }
+}
+
 h1 {
     font-size: 1.25rem;
     text-align: center;
@@ -44,7 +74,7 @@ h2.category {
     }
 
     &:before {
-        content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <polyline points="9 6 15 12 9 18"></polyline></svg>');
+        content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" style="stroke: %231b1b23;" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <polyline points="9 6 15 12 9 18"></polyline></svg>');
         display: inline-block;
         margin-right: 0.25rem;
         width: 1rem;
@@ -53,7 +83,7 @@ h2.category {
 
     &.is-open {
         &:before {
-            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="6 9 12 15 18 9"></polyline></svg>');
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" style="stroke: %231b1b23;" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="6 9 12 15 18 9"></polyline></svg>');
             display: inline-block;
             margin-right: 0.25rem;
             width: 1rem;
@@ -76,7 +106,7 @@ h2.category {
             display: block;
             margin-top: 0.2rem;
             font-size: 0.8rem;
-            color: #555555;
+            color: $base-disabled-color;
 
             &:hover {
                 cursor: pointer;
@@ -98,7 +128,7 @@ h2.category {
         }
         .contents {
             margin: 0.5rem 0 1.5rem 0;
-            color: #000;
+            color: $base-color;
             font-size: 0.8rem;
             ul {
                 margin: 0.4rem 0 0.4rem 0;
@@ -138,8 +168,8 @@ h2.category {
 .book {
     margin-left: 0.5rem;
     font-family: monospace;
-    background-color: #eaeaea;
-    border: 1px solid #555555;
+    background-color: $book-bg-color;
+    border: 1px solid $base-disabled-color;
     padding: 1pt 4pt;
     border-radius: 3pt;
     display: inline-block;
@@ -147,7 +177,7 @@ h2.category {
     .file-size {
         margin-left: 0.3rem;
         font-size: 0.7rem;
-        color: #555555;
+        color: $base-disabled-color;
     }
 }
 
@@ -168,13 +198,78 @@ footer {
             margin-left: 0.2rem;
         }
 
-        .git img {
+        .git:before {
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path style="fill: %21b1b23;" d="M13 21v2.5l-3-2-3 2V21h-.5A3.5 3.5 0 0 1 3 17.5V5a3 3 0 0 1 3-3h14a1 1 0 0 1 1 1v17a1 1 0 0 1-1 1h-7zm0-2h6v-3H6.5a1.5 1.5 0 0 0 0 3H7v-2h6v2zm6-5V4H6v10.035A3.53 3.53 0 0 1 6.5 14H19zM7 5h2v2H7V5zm0 3h2v2H7V8zm0 3h2v2H7v-2z"/></svg>');
+            display: inline-block;
             width: 0.7rem;
             height: 0.7rem;
+            margin-right: 0.2rem;
         }
     }
 }
 
 .hide {
     display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: $dark-base-bg-color;
+        color: $dark-base-color;
+    }
+    a {
+        color: $dark-link-color;
+
+        &:hover {
+            color: $dark-link-hover-color;
+        }
+        &:visited {
+            color: $dark-link-visited-color;
+        }
+    }
+
+    h2.category {
+        &:before {
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" style="stroke: %23e7e9f2;" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <polyline points="9 6 15 12 9 18"></polyline></svg>');
+        }
+
+            &.is-open {
+                &:before {
+                    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" style="stroke: %23e7e9f2;" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="6 9 12 15 18 9"></polyline></svg>');
+                }
+            }
+
+    }
+    .books {
+        li {
+            .pub-date {
+                color: $dark-base-disabled-color;
+            }
+            .contents {
+                color: $dark-base-color;
+            }
+        }
+
+        .close-cat-container {
+            .close-cat-shortcut {
+                &:before {
+                    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path style="fill: %23e7e9f2; stroke: %23e7e9f2;" d="M9.036 7.976a.75.75 0 00-1.06 1.06L10.939 12l-2.963 2.963a.75.75 0 101.06 1.06L12 13.06l2.963 2.964a.75.75 0 001.061-1.06L13.061 12l2.963-2.964a.75.75 0 10-1.06-1.06L12 10.939 9.036 7.976z"></path><path style="fill: %23e7e9f2;" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"></path></svg>');
+                }
+            }
+        }
+    }
+    .book {
+        border-color: $dark-base-disabled-color;
+        background-color: $dark-book-bg-color;
+
+        .file-size {
+            color: $dark-base-disabled-color;
+        }
+    }
+
+    footer .meta {
+        .git:before {
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path style="fill: %23e7e9f2;" d="M13 21v2.5l-3-2-3 2V21h-.5A3.5 3.5 0 0 1 3 17.5V5a3 3 0 0 1 3-3h14a1 1 0 0 1 1 1v17a1 1 0 0 1-1 1h-7zm0-2h6v-3H6.5a1.5 1.5 0 0 0 0 3H7v-2h6v2zm6-5V4H6v10.035A3.53 3.53 0 0 1 6.5 14H19zM7 5h2v2H7V5zm0 3h2v2H7V8zm0 3h2v2H7v-2z"/></svg>');
+        }
+    }
 }

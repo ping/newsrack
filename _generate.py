@@ -589,7 +589,7 @@ with open("static/index.html", "r", encoding="utf-8") as f_in:
         publish_site=publish_site,
         elapsed=humanize.naturaldelta(elapsed_time, minimum_unit="seconds"),
         catalog=catalog_path,
-        source_link=f'<a class="git" href="{source_url}"><img src="git.svg" alt="Git icon"> {commit_hash[0:7] if commit_hash else "Source"}.</a>',
+        source_link=f'<a class="git" href="{source_url}">{commit_hash[0:7] if commit_hash else "Source"}.</a>',
     )
     index_html_file = os.path.join(publish_folder, "index.html")
     with open(index_html_file, "w", encoding="utf-8") as f:
