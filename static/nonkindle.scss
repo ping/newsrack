@@ -22,7 +22,17 @@ body {
 }
 
 @media (max-width: 576px) {
-  ol.books li span.title {
-    display: block;
+  ol.books li {
+    span.title {
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .book:first-of-type {
+      margin-left: 0;
+    }
+    .pub-date {
+      padding-bottom: 0.1rem;
+      margin-bottom: 0.2rem;
+    }
   }
 }
