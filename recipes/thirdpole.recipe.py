@@ -63,6 +63,7 @@ class ThirdPole(BasicNewsRecipe):
     .block--accordion .block--accordion__content__inner p
     { margin: 0.2rem 0; }
     
+    .block--pull-quote { text-align: center; }
     .block--pull-quote blockquote { margin-left: 0; margin-bottom: 0.4rem; font-size: 1.25rem; }
     .block--pull-quote cite { font-style: italic; font-size: 0.8rem; }
     """
