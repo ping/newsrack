@@ -63,14 +63,15 @@ class FinancialTimes(BasicNewsRecipe):
         # ("How to Spend It", "https://www.ft.com/htsi?format=rss"),
     ]
 
-    def get_cover_url(self):
-        soup = self.index_to_soup(
-            "https://www.todayspapers.co.uk/the-financial-times-front-page-today/"
-        )
-        tag = soup.find("div", attrs={"class": "elementor-image"})
-        if tag:
-            self.cover_url = tag.find("img")["src"]
-        return getattr(self, "cover_url", None)
+    # site appears defunct
+    # def get_cover_url(self):
+    #     soup = self.index_to_soup(
+    #         "https://www.todayspapers.co.uk/the-financial-times-front-page-today/"
+    #     )
+    #     tag = soup.find("div", attrs={"class": "elementor-image"})
+    #     if tag:
+    #         self.cover_url = tag.find("img")["src"]
+    #     return getattr(self, "cover_url", None)
 
     def print_version(self, url):
         return urljoin("https://ft.com", url)

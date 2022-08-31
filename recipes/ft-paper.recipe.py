@@ -46,15 +46,16 @@ class FinancialTimesPrint(BasicNewsRecipe):
     .article-img .caption { font-size: 0.8rem; }
     """
 
-    def get_cover_url(self):
-        soup = self.index_to_soup(
-            "https://www.todayspapers.co.uk/the-financial-times-front-page-today/"
-        )
-        tag = soup.find("div", attrs={"class": "elementor-image"})
-        if tag:
-            print("*" * 10, tag.find("img")["src"])
-            self.cover_url = tag.find("img")["src"]
-        return getattr(self, "cover_url", None)
+    # site appears defunct
+    # def get_cover_url(self):
+    #     soup = self.index_to_soup(
+    #         "https://www.todayspapers.co.uk/the-financial-times-front-page-today/"
+    #     )
+    #     tag = soup.find("div", attrs={"class": "elementor-image"})
+    #     if tag:
+    #         print("*" * 10, tag.find("img")["src"])
+    #         self.cover_url = tag.find("img")["src"]
+    #     return getattr(self, "cover_url", None)
 
     def parse_index(self):
         soup = self.index_to_soup("https://www.ft.com/todaysnewspaper/international")
