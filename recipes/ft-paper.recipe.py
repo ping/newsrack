@@ -1,26 +1,23 @@
-# Copyright (c) 2022 https://github.com/ping/
-#
-# This software is released under the GNU General Public License v3.0
-# https://opensource.org/licenses/GPL-3.0
-
 """
 ft.com
 """
-from urllib.parse import urljoin, quote_plus
+# Original from https://github.com/kovidgoyal/calibre/blob/902e80ec173bc40037efb164031043994044ec6c/recipes/financial_times_print_edition.recipe
+
 import json
 import re
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
+from urllib.parse import quote_plus
 
-from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from calibre.web.feeds.news import BasicNewsRecipe, classes
 
-_name = "Financial Times"
+_name = "Financial Times (Print)"
 
 
-class FinancialTimes(BasicNewsRecipe):
+class FinancialTimesPrint(BasicNewsRecipe):
     title = _name
     __author__ = "ping"
-    description = "Financial Times"
+    description = "Today's Financial Times"
     publisher = "The Financial Times Ltd."
     language = "en_GB"
     category = "news, finance, politics, UK, World"
@@ -49,31 +46,64 @@ class FinancialTimes(BasicNewsRecipe):
     .article-img .caption { font-size: 0.8rem; }
     """
 
-    feeds = [
-        ("Home", "https://www.ft.com/rss/home"),
-        ("Home (International)", "https://www.ft.com/rss/home/international"),
-        ("World", "https://www.ft.com/world?format=rss"),
-        ("US", "https://www.ft.com/world/us?format=rss"),
-        ("Technology", "https://www.ft.com/technology?format=rss"),
-        ("Markets", "https://www.ft.com/markets?format=rss"),
-        ("Climate", "https://www.ft.com/climate-capital?format=rss"),
-        ("Opinion", "https://www.ft.com/opinion?format=rss"),
-        # ("Work & Careers", "https://www.ft.com/work-careers?format=rss"),
-        # ("Life & Arts", "https://www.ft.com/life-arts?format=rss"),
-        # ("How to Spend It", "https://www.ft.com/htsi?format=rss"),
-    ]
-
     def get_cover_url(self):
         soup = self.index_to_soup(
             "https://www.todayspapers.co.uk/the-financial-times-front-page-today/"
         )
         tag = soup.find("div", attrs={"class": "elementor-image"})
         if tag:
+            print("*" * 10, tag.find("img")["src"])
             self.cover_url = tag.find("img")["src"]
         return getattr(self, "cover_url", None)
 
-    def print_version(self, url):
-        return urljoin("https://ft.com", url)
+    def parse_index(self):
+        soup = self.index_to_soup("https://www.ft.com/todaysnewspaper/international")
+        # UK edition: https://www.ft.com/todaysnewspaper/uk
+        # International edition: https://www.ft.com/todaysnewspaper/international
+        ans = self.ft_parse_index(soup)
+        if not ans:
+            is_sunday = date.today().weekday() == 6
+            if is_sunday:
+                raise ValueError(
+                    "The Financial Times Newspaper is not published on Sundays."
+                )
+            else:
+                raise ValueError(
+                    "The Financial Times Newspaper is not published today."
+                )
+        return ans
+
+    def ft_parse_index(self, soup):
+        feeds = []
+        for section in soup.findAll(**classes("o-teaser-collection")):
+            h2 = section.find("h2")
+            secname = self.tag_to_string(h2)
+            self.log(secname)
+            articles = []
+            for a in section.findAll(
+                "a", href=True, **classes("js-teaser-heading-link")
+            ):
+                url = a["href"]
+                url = "https://www.ft.com" + url
+                title = self.tag_to_string(a)
+                desc_parent = a.findParent("div")
+                div = desc_parent.find_previous_sibling(
+                    "div", **classes("o-teaser__meta")
+                )
+                if div is not None:
+                    desc = div.find("a", **classes("o-teaser__tag"))
+                    desc = self.tag_to_string(desc)
+                    prefix = div.find("span", **classes("o-teaser__tag-prefix"))
+                    if prefix is not None:
+                        prefix = self.tag_to_string(prefix)
+                        desc = prefix + " " + desc
+                    articles.append({"title": title, "url": url, "description": desc})
+                    self.log("\t", desc)
+                    self.log("\t", title)
+                    self.log("\t\t", url)
+            if articles:
+                feeds.append((secname, articles))
+        return feeds
 
     def preprocess_raw_html(self, raw_html, url):
         article = None
@@ -96,12 +126,13 @@ class FinancialTimes(BasicNewsRecipe):
             date_published = datetime.strptime(
                 date_published, "%Y-%m-%dT%H:%M:%S.%fZ"
             ).replace(tzinfo=timezone.utc)
+            if (not self.pub_date) or date_published > self.pub_date:
+                self.pub_date = date_published
+                self.title = f"{_name}: {date_published:%-d %b, %Y}"
 
         paragraphs = []
         for para in article["articleBody"].split("\n\n"):
             if para.startswith("RECOMMENDED"):  # skip recommended inserts
-                continue
-            if "ARE YOU PERSONALLY AFFECTED BY THE WAR IN UKRAINE" in para.upper():
                 continue
             if "NEWSLETTER" in para:
                 continue
@@ -140,15 +171,6 @@ class FinancialTimes(BasicNewsRecipe):
         </body></html>
         """
         return html_output
-
-    def populate_article_metadata(self, article, soup, _):
-        # pick up the og link from preprocess_raw_html() and set it as url instead of the rss url
-        og_link = soup.select("[data-og-link]")
-        if og_link:
-            article.url = og_link[0]["data-og-link"]
-        if (not self.pub_date) or article.utctime > self.pub_date:
-            self.pub_date = article.utctime
-            self.title = f"{_name}: {article.utctime:%-d %b, %Y}"
 
     def publication_date(self):
         return self.pub_date

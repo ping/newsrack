@@ -90,7 +90,14 @@ recipes: List[Recipe] = [
     ),
     Recipe(
         recipe="ft",
-        slug="ft",
+        slug="ft-online",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="News",
+    ),
+    Recipe(
+        recipe="ft-paper",
+        slug="ft-print",
         src_ext="mobi",
         target_ext=["epub"],
         category="News",
