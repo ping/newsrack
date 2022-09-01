@@ -13,12 +13,20 @@ body {
     margin-right: auto;
 }
 
+#search-text {
+    width: 80%;
+}
+
 @media (max-width: 780px) {
   body {
       max-width: unset;
       margin-left: 1rem;
       margin-right: 1rem;
   }
+  #search-text {
+    width: 100%;
+  }
+
 }
 
 @media (max-width: 576px) {

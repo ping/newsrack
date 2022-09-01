@@ -16,6 +16,8 @@ https://opensource.org/licenses/GPL-3.0
     <style>
         {css}
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" defer
+        integrity="sha256-DFDZACuFeAqEKv/7Vnu1Tt5ALa58bcWZegGGFNgET8g=" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>
@@ -23,6 +25,13 @@ https://opensource.org/licenses/GPL-3.0
         News Rack
     </h1>
     <main>
+        <div id="search-form-container" class="hide">
+            <form id="search-form">
+            <input type="text" name="search-text" id="search-text" placeholder="Search titles">
+            <input type="submit" name="Search" id="search-button" value="Search">
+            </form>
+            <span id="search-info"></span>
+        </div>
         {listing}
     </main>
     <footer>

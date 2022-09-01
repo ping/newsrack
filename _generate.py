@@ -540,7 +540,7 @@ for i, (category, publications) in enumerate(
                 f'<div class="book"><a href="{book.rename_to}">{os.path.splitext(book.file)[1]}<span class="file-size">{humanize.naturalsize(file_size).replace(" ", "")}</span></a></div>'
             )
         publication_listing.append(
-            f"""<li id="{books[0].slug}"><span class="title">{books[0].title or recipe_name}</span>{" ".join(book_links)}
+            f"""<li id="{books[0].slug}" data-cat-id="cat-{slugify(category, True)}"><span class="title">{books[0].title or recipe_name}</span>{" ".join(book_links)}
             <span class="pub-date" data-pub-date="{int(books[0].published_dt.timestamp() * 1000)}">
                 Published at {books[0].published_dt:%Y-%m-%d %-I:%M%p %z}
             </span>
@@ -558,14 +558,15 @@ for i, (category, publications) in enumerate(
                 break
         if not success:
             publication_listing.append(
-                f"""<li class="not-available">{r.name}
+                f"""<li id="{r.slug}" data-cat-id="cat-{slugify(r.category, True)}" class="not-available">
+                <span class="title">{r.name}</span>
                 <span class="pub-date">Not available</span></li>"""
             )
 
-    listing += f"""<h2 id="{slugify(category, True)}" class="category is-open">{category}
+    listing += f"""<h2 id="cat-{slugify(category, True)}" class="category is-open">{category}
     <a class="opds" title="OPDS for {category.title()}" href="{slugify(category, True)}.xml">OPDS</a></h2>
     <ol class="books">{"".join(publication_listing)}
-    <div class="close-cat-container"><a class="close-cat-shortcut" href="#" data-click-target="{slugify(category)}"></a></div>
+    <div class="close-cat-container"><a class="close-cat-shortcut" href="#" data-click-target="cat-{slugify(category)}"></a></div>
     </ol>
     """
 
