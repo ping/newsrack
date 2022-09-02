@@ -63,31 +63,41 @@ h1 {
 #search-form-container {
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 #search-text {
     display: inline-block;
     margin-right: 0.3rem;
+    font-size: 0.8rem;
+    padding: 0.2rem;
     width: 100%;
 }
 #search-button {
+    font-size: 0.8rem;
     display: inline-block;
-    padding-left: 0.3rem;
-    padding-right: 0.3rem;
-    min-width: 5rem;
+    padding: 0.2rem;
+    min-width: 4rem;
+    cursor: pointer;
 }
 #search-info {
     display: inline-block;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
     color: $error-color;
 }
 
+.category-container {
+    border: 1px solid $base-disabled-color;
+    border-radius: 0.25rem;
+    padding: 0.35rem 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
 h2.category {
-    margin-bottom: 0.6rem;
+    margin: 0.5rem 0;
     font-size: 1.2rem;
-    border-bottom: 1px solid #999;
     font-weight: 500;
 
     .opds {
@@ -123,6 +133,7 @@ h2.category {
 .books {
     padding-left: 1.5rem;
     margin-top: 0.5rem;
+    margin-bottom: 0;
 
     li {
         margin-bottom: 0.5rem;
@@ -152,6 +163,13 @@ h2.category {
                     margin-right: 0.2rem;
                 }
             }
+        }
+        .tags {
+            font-family: monospace;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-left: 0.5rem;
+
         }
         .contents {
             margin: 0.5rem 0 1.5rem 0;
@@ -213,7 +231,6 @@ footer {
     margin-top: 2rem;
     margin-bottom: 1rem;
     padding-top: 0.5rem;
-    border-top: 1px solid #555555;
     font-size: 0.8rem;
     text-align: center;
 
@@ -259,6 +276,10 @@ footer {
         color: $dark-error-color;
     }
 
+    .category-container {
+        border-color: $dark-base-disabled-color;
+    }
+
     h2.category {
         &:before {
             content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" style="stroke: %23e7e9f2;" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <polyline points="9 6 15 12 9 18"></polyline></svg>');
@@ -298,9 +319,11 @@ footer {
         }
     }
 
-    footer .meta {
-        .git:before {
-            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path style="fill: %23e7e9f2;" d="M13 21v2.5l-3-2-3 2V21h-.5A3.5 3.5 0 0 1 3 17.5V5a3 3 0 0 1 3-3h14a1 1 0 0 1 1 1v17a1 1 0 0 1-1 1h-7zm0-2h6v-3H6.5a1.5 1.5 0 0 0 0 3H7v-2h6v2zm6-5V4H6v10.035A3.53 3.53 0 0 1 6.5 14H19zM7 5h2v2H7V5zm0 3h2v2H7V8zm0 3h2v2H7v-2z"/></svg>');
+    footer {
+        .meta {
+            .git:before {
+                content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path style="fill: %23e7e9f2;" d="M13 21v2.5l-3-2-3 2V21h-.5A3.5 3.5 0 0 1 3 17.5V5a3 3 0 0 1 3-3h14a1 1 0 0 1 1 1v17a1 1 0 0 1-1 1h-7zm0-2h6v-3H6.5a1.5 1.5 0 0 0 0 3H7v-2h6v2zm6-5V4H6v10.035A3.53 3.53 0 0 1 6.5 14H19zM7 5h2v2H7V5zm0 3h2v2H7V8zm0 3h2v2H7v-2z"/></svg>');
+            }
         }
     }
 }

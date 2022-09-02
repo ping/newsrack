@@ -79,7 +79,16 @@ source_url = f"https://{domain}.com/{username}{parsed_site.path}"
 
 RecipeOutput = namedtuple(
     "RecipeOutput",
-    ["slug", "title", "file", "rename_to", "published_dt", "category", "description"],
+    [
+        "slug",
+        "title",
+        "file",
+        "rename_to",
+        "published_dt",
+        "category",
+        "description",
+        "tags",
+    ],
 )
 
 # default style
@@ -412,6 +421,7 @@ for recipe in recipes:
                 published_dt=pub_date,
                 category=recipe.category,
                 description=description,
+                tags=recipe.tags,
             )
         )
 
@@ -499,6 +509,7 @@ for recipe in recipes:
                         published_dt=pub_date,
                         category=recipe.category,
                         description=comments,
+                        tags=recipe.tags,
                     )
                 )
                 index[recipe.name].append(
@@ -540,13 +551,18 @@ for i, (category, publications) in enumerate(
                 f'<div class="book"><a href="{book.rename_to}">{os.path.splitext(book.file)[1]}<span class="file-size">{humanize.naturalsize(file_size).replace(" ", "")}</span></a></div>'
             )
         publication_listing.append(
-            f"""<li id="{books[0].slug}" data-cat-id="cat-{slugify(category, True)}"><span class="title">{books[0].title or recipe_name}</span>{" ".join(book_links)}
-            <span class="pub-date" data-pub-date="{int(books[0].published_dt.timestamp() * 1000)}">
+            f"""<li id="{books[0].slug}" data-cat-id="cat-{slugify(category, True)}" data-cat-name="{category}"
+                data-tags="{"" if not books[0].tags else "#" + " #".join(books[0].tags)}">
+            <span class="title">{books[0].title or recipe_name}</span>{" ".join(book_links)}
+            <div class="pub-date" data-pub-date="{int(books[0].published_dt.timestamp() * 1000)}">
                 Published at {books[0].published_dt:%Y-%m-%d %-I:%M%p %z}
-            </span>
+                {"" if not books[0].tags else '<span class="tags">#' + " #".join(books[0].tags) + "</span>"}</span>
+            </div>
             <div class="contents hide">{books[0].description}</div>
             </li>"""
         )
+
+    # display recipes without output
     category_recipes = [r for r in recipes if r.category == category]
     for r in category_recipes:
         if not r.name:
@@ -558,16 +574,19 @@ for i, (category, publications) in enumerate(
                 break
         if not success:
             publication_listing.append(
-                f"""<li id="{r.slug}" data-cat-id="cat-{slugify(r.category, True)}" class="not-available">
+                f"""<li id="{r.slug}" data-cat-id="cat-{slugify(r.category, True)}" data-cat-name="{r.category}" class="not-available"
+                data-tags="{"" if not r.tags else "#" + " #".join(r.tags)}">
                 <span class="title">{r.name}</span>
-                <span class="pub-date">Not available</span></li>"""
+                <div class="pub-date">Not available
+                <span class="tags">{"" if not r.tags else "#" + " #".join(r.tags)}</span>
+                </div></li>"""
             )
 
-    listing += f"""<h2 id="cat-{slugify(category, True)}" class="category is-open">{category}
+    listing += f"""<div class="category-container"><h2 id="cat-{slugify(category, True)}" class="category is-open">{category}
     <a class="opds" title="OPDS for {category.title()}" href="{slugify(category, True)}.xml">OPDS</a></h2>
     <ol class="books">{"".join(publication_listing)}
     <div class="close-cat-container"><a class="close-cat-shortcut" href="#" data-click-target="cat-{slugify(category)}"></a></div>
-    </ol>
+    </ol></div>
     """
 
 with open(os.path.join(publish_folder, "index.json"), "w", encoding="utf-8") as f_in:

@@ -47,6 +47,7 @@ Recipe(
     enable_on=True,  # determines when to run the recipe
     retry_attempts=1,  # retry attempts on TimeoutExpired, ReadTimeout
     cover_options=CoverOptions(),  # cover options
+    tags=["example"],   # used in search
 ),
 ```
 

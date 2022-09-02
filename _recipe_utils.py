@@ -63,6 +63,7 @@ class Recipe:
     cover_options: CoverOptions = (
         CoverOptions()
     )  # customise script-generated cover, used when overwrite_cover=True
+    tags: List[str] = field(default_factory=list)  # used in search
 
     def is_enabled(self) -> bool:
         is_due = self.job_log.get(self.name, 0) < (

@@ -62,17 +62,32 @@ https://opensource.org/licenses/GPL-3.0
     for (var i = 0; i < pudDateElements.length; i++) {
         var pubDateEle = pudDateElements[i];
         var publishedDate = new Date(parseInt(pubDateEle.attributes["data-pub-date"].value));
+        var tags = "";
+        if (typeof(pubDateEle.parentElement.dataset["tags"]) !== "undefined"
+            && pubDateEle.parentElement.dataset["tags"].trim().length > 0) {
+            tags = ' <span class="tags">' + pubDateEle.parentElement.dataset["tags"] + "</span>";
+        }
         pubDateEle.title = publishedDate.toLocaleString();
-        pubDateEle.innerHTML = "Published " + getRelativeTime(publishedDate);
+        pubDateEle.innerHTML = "Published " + getRelativeTime(publishedDate) + tags;
 
         pubDateEle.addEventListener("pointerenter", function (event) {
             var publishedDate = new Date(parseInt(event.target.attributes["data-pub-date"].value));
-            event.target.innerHTML = "Published " + publishedDate.toLocaleString();
+            var tags = "";
+            if (typeof(event.target.parentElement.dataset["tags"]) !== "undefined"
+                && event.target.parentElement.dataset["tags"].trim().length > 0) {
+                tags = " " + '<span class="tags">' + event.target.parentElement.dataset["tags"] + "</span>";
+            }
+            event.target.innerHTML = "Published " + publishedDate.toLocaleString() + tags;
         }, false);
 
         pubDateEle.addEventListener("pointerleave", function (event) {
             var publishedDate = new Date(parseInt(event.target.attributes["data-pub-date"].value));
-            event.target.innerHTML = "Published " + getRelativeTime(publishedDate);
+            var tags = "";
+            if (typeof(event.target.parentElement.dataset["tags"]) !== "undefined"
+                && event.target.parentElement.dataset["tags"].trim().length > 0) {
+                tags = " " + '<span class="tags">' + event.target.parentElement.dataset["tags"] + "</span>";
+            }
+            event.target.innerHTML = "Published " + getRelativeTime(publishedDate) + tags;
         }, false);
     }
 
@@ -138,10 +153,13 @@ https://opensource.org/licenses/GPL-3.0
             var idx = lunr(function () {
                 this.field("title");
                 this.field("articles");
+                this.field("tags");
+                this.field("category");
 
                 for (var i = 0; i < periodicalsEles.length; i++) {
                     var periodical = periodicalsEles[i];
                     var id = periodical["id"];
+                    var catName = periodical.dataset["catName"]
                     var title = periodical.querySelector(".title").textContent;
                     var articlesEles = periodical.querySelectorAll(".contents > ul > li");
                     var articles = [];
@@ -152,7 +170,9 @@ https://opensource.org/licenses/GPL-3.0
                     this.add({
                         "id": id,
                         "title": title,
-                        "articles": articles.join(" ")
+                        "articles": articles.join(" "),
+                        "tags": periodical.dataset["tags"],
+                        "category": catName
                     });
                 }
                 document.getElementById("search-form-container").classList.remove("hide");
@@ -219,6 +239,9 @@ https://opensource.org/licenses/GPL-3.0
                     if (resultsSumm[id].indexOf("articles") >= 0) {
                         periodical.querySelector(".pub-date").classList.add("is-open");
                         periodical.querySelector(".contents").classList.remove("hide");
+                    } else {
+                        periodical.querySelector(".pub-date").classList.remove("is-open");
+                        periodical.querySelector(".contents").classList.add("hide");
                     }
 
                 }
