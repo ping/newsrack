@@ -655,15 +655,15 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
     with open(os.path.join(cache_folder, job_log_filename), "w", encoding="utf-8") as f:
         json.dump(job_log, f)
 
-    with open("static/site.css", "r", encoding="utf-8") as f_site_css, open(
-        "static/nonkindle.css", "r", encoding="utf-8"
-    ) as f_nonkindle_css, open(
-        "static/site.js", "r", encoding="utf-8"
-    ) as f_site_js, open(
-        "static/index.html", "r", encoding="utf-8"
-    ) as f_in, open(
-        os.path.join(publish_folder, "index.html"), "w", encoding="utf-8"
-    ) as f_out:
+    with (
+        open("static/site.css", "r", encoding="utf-8") as f_site_css,
+        open("static/nonkindle.css", "r", encoding="utf-8") as f_nonkindle_css,
+        open("static/site.js", "r", encoding="utf-8") as f_site_js,
+        open("static/index.html", "r", encoding="utf-8") as f_in,
+        open(
+            os.path.join(publish_folder, "index.html"), "w", encoding="utf-8"
+        ) as f_out,
+    ):
         site_css = f_site_css.read()
         nonkindle_css = f_nonkindle_css.read()
         site_js = f_site_js.read().replace(
