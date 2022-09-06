@@ -164,8 +164,9 @@ In alphabetical order:
 10. [South China Morning Post](https://www.scmp.com/)
 11. [Sydney Morning Herald](https://www.smh.com.au/)
 12. [Taipei Times](https://www.taipeitimes.com/)
-13. [The Washington Post](https://www.washingtonpost.com/)
-14. ~~[The Japan Times](https://www.japantimes.co.jp/)~~
+13. [Wall Street Journal (Print)](https://www.wsj.com/print-edition/today)
+14. [The Washington Post](https://www.washingtonpost.com/)
+15. ~~[The Japan Times](https://www.japantimes.co.jp/)~~
 
 </details>
 

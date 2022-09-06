@@ -353,4 +353,12 @@ recipes: List[Recipe] = [
         category="Magazines",
         tags=["technology"],
     ),
+    Recipe(
+        recipe="wsj-paper",
+        slug="wsj-print",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="News",
+        timeout=300,
+    ),
 ]
