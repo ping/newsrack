@@ -88,9 +88,10 @@ class WSJ(BasicNewsRecipe):
             for p in by.find_all("p"):
                 p.name = "span"
         for img in soup.find_all("amp-img"):
-            img.name = "img"
             if img["src"] == "https://s.wsj.net/img/meta/wsj-social-share.png":
-                img.extract()
+                img.decompose()
+                continue
+            img.name = "img"
         return str(soup)
 
     def get_browser(self, *a, **kw):
