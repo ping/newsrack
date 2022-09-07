@@ -118,8 +118,17 @@ class WSJ(BasicNewsRecipe):
                 self.log.exception("Unable to parse __STATE__")
         return None
 
+    def _do_wait(self, message):
+        if message:
+            self.log.warn(message)
+        pause = random.choice((1, 1.5, 2, 2.5))
+        self.log.warn(f"Retrying after {pause} seconds")
+        time.sleep(pause)
+
     def parse_index(self):
+        max_retry_attempts = 3
         sections = []
+
         for d in range(3):
             issue_date = datetime.today() - timedelta(days=d)
             issue_url = (
@@ -135,18 +144,40 @@ class WSJ(BasicNewsRecipe):
                     if s.get("id") and s.get("label"):
                         sections.append(s)
             if sections:
-                self.log(f"Issue date is: {issue_date:%Y%m%d}")
                 self.title = f"{_name}: {issue_date:%-d %b, %Y}"
+                self.log(f'Issue date is: {issue_date:%Y%m%d}, title is "{self.title}"')
                 break
+
+        if not sections:
+            for attempt in range(max_retry_attempts + 1):
+                # try default redirect
+                soup = self.index_to_soup("https://www.wsj.com/print-edition/today")
+                info = self._get_page_info(soup)
+                for k, v in info["data"].items():
+                    if not k.startswith("rss_subnav_collection_"):
+                        continue
+                    issue_date = datetime.strptime(v["data"]["id"], "%Y%m%d")
+                    self.title = f"{_name}: {issue_date:%-d %b, %Y}"
+                    self.log(
+                        f'Issue date is: {issue_date:%Y%m%d}, title is "{self.title}"'
+                    )
+                    for s in v["data"]["data"]["list"]:
+                        if s.get("id") and s.get("label"):
+                            sections.append(s)
+                    break
+                if sections:
+                    break
+                else:
+                    if attempt < max_retry_attempts:
+                        self._do_wait("Unable to determine issue date")
 
         if not sections:
             self.abort_recipe_processing("Unable to find issue.")
 
         section_feeds = OrderedDict()
-        max_attempts = 3
         for section in sections:
             section_url = f'https://www.wsj.com/print-edition/{issue_date.strftime("%Y%m%d")}/{section["id"]}'
-            for attempt in range(max_attempts + 1):
+            for attempt in range(max_retry_attempts + 1):
                 section_soup = self.index_to_soup(section_url)
                 section_info = self._get_page_info(section_soup)
                 section_articles = []
@@ -171,12 +202,8 @@ class WSJ(BasicNewsRecipe):
                     section_feeds[section["label"]] = section_articles
                     break
                 else:
-                    if attempt < max_attempts:
-                        pause = random.choice((1, 1.5, 2, 2.5))
-                        self.log.warn(
-                            f'No articles found in "{section_url}" retrying after {pause} seconds'
-                        )
-                        time.sleep(pause)
+                    if attempt < max_retry_attempts:
+                        self._do_wait(f'No articles found in "{section_url}".')
                     else:
                         self.log.warn(f'Unable to get articles in "{section_url}"')
 
