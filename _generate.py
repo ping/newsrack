@@ -195,7 +195,7 @@ def _find_output(folder_path, slug, ext):
     """
     exact_re = re.compile(slug + r"\." + ext)
     dated_re = re.compile(slug + r"-\d{4}-\d{2}-\d{2}\." + ext)
-    res = glob.glob(folder_path + f"/{slug}*.{ext}")
+    res = glob.glob(f"{folder_path}/{slug}*.{ext}")
     return [
         r
         for r in res
