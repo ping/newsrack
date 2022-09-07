@@ -186,6 +186,23 @@ def _write_opds(generated_output, publish_site):
         f.write(main_doc.toprettyxml(encoding="utf-8", indent=""))
 
 
+def _find_output(folder_path, slug, ext):
+    """
+    This is an improvement over using just glob because it finds outputs
+    more precisely by the exact slug.
+    Previously, if 2 recipes have similar slugs, e.g. "wsj" vs "wsj-print",
+    using glob will result in the wrong outputs being detected.
+    """
+    exact_re = re.compile(slug + r"\." + ext)
+    dated_re = re.compile(slug + r"-\d{4}-\d{2}-\d{2}\." + ext)
+    res = glob.glob(folder_path + f"/{slug}*.{ext}")
+    return [
+        r
+        for r in res
+        if exact_re.match(os.path.basename(r)) or dated_re.match(os.path.basename(r))
+    ]
+
+
 def run(publish_site, source_url, commit_hash, verbose_mode):
     # for GitHub
     job_summary = """| Recipe | Status | Duration |
@@ -278,8 +295,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
         if verbose_mode:
             os.environ["recipe_debug_folder"] = os.path.abspath(publish_folder)
 
-        # use glob for re-run cases in local dev
-        if not glob.glob(publish_folder + f"/{recipe.slug}*.{recipe.src_ext}"):
+        if not _find_output(publish_folder, recipe.slug, recipe.src_ext):
             # existing file does not exist
             try:
                 # regenerate restriction is not in place and recipe is enabled
@@ -405,7 +421,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
             del os.environ["recipe_debug_folder"]
 
         source_file_paths = sorted(
-            glob.glob(publish_folder + f"/{recipe.slug}*.{recipe.src_ext}")
+            _find_output(publish_folder, recipe.slug, recipe.src_ext)
         )
         if not source_file_paths:
             logger.error(
@@ -538,7 +554,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                     cmd.extend(["--pdf-page-numbers"])
                 if verbose_mode:
                     cmd.append("-vv")
-                if not glob.glob(publish_folder + f"/{recipe.slug}*.{ext}"):
+                if not _find_output(publish_folder, recipe.slug, ext):
                     exit_code = subprocess.call(
                         cmd,
                         timeout=recipe.timeout,
@@ -546,7 +562,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                         stderr=sys.stderr,
                     )
                 target_file_path = sorted(
-                    glob.glob(publish_folder + f"/{recipe.slug}*.{ext}")
+                    _find_output(publish_folder, recipe.slug, ext)
                 )[-1]
                 target_file_name = os.path.basename(target_file_path)
 
