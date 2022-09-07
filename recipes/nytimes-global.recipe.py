@@ -32,6 +32,7 @@ class NYTimesGlobal(BasicNewsRecipe):
     pub_date = None  # custom publication date
 
     simultaneous_downloads = 1
+    delay = 1
 
     remove_javascript = True
     no_stylesheets = True
