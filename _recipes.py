@@ -360,6 +360,6 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         category="News",
         timeout=300,
-        enable_on=onlyat_hours(list(range(0, 4)) + list(range(20, 24))),
+        enable_on=onlyat_hours(list(range(0, 8)), -4),
     ),
 ]
