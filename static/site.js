@@ -175,7 +175,8 @@ https://opensource.org/licenses/GPL-3.0
                         "category": catName
                     });
                 }
-                document.getElementById("search-form-container").classList.remove("hide");
+                document.getElementById("search-text").disabled = false;
+                document.getElementById("search-button").disabled = false;
             });
 
             // unhide everything when search field is cleared
