@@ -70,7 +70,7 @@ jobs:
         id: calibrelatest
         run: echo "::set-output name=ver::$(curl --retry 2 --silent 'http://code.calibre-ebook.com/latest')"
 
-      - name: Binaries Cache
+      - name: Calibre binaries cache
         id: cache-bin
         uses: actions/cache@v3
         with:
@@ -80,7 +80,7 @@ jobs:
       - name: Install calibre
         run: sh _install_calibre.sh
 
-      - name: Generate .mobi
+      - name: Generate periodicals
         env:
           CALIBRE_CONFIG_DIRECTORY: ${{ github.workspace }}/calibre_config/
           regenerate: ${{ github.event.inputs.regenerate }}
