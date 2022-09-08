@@ -66,20 +66,15 @@ jobs:
       - name: Install calibre dependencies
         run: sudo apt-get update -y && sudo apt-get install --no-install-recommends -y libegl1 libopengl0
 
-      - name: Install calibre
-        run: |
-          mkdir -p ~/calibre-bin
-          wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin install_dir=~/calibre-bin isolated=y
-          export PATH=$PATH:$HOME/calibre-bin/calibre
-          calibre --version
-          echo "$HOME/calibre-bin/calibre" >> $GITHUB_PATH
-
       - name: Cache
         id: cache
         uses: actions/cache@v3
         with:
           path: cache
           key: cache
+
+      - name: Install calibre
+        run: sh _install_calibre.sh
 
       - name: Generate .mobi
         env:
