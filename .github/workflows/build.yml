@@ -66,16 +66,16 @@ jobs:
       - name: Install calibre dependencies
         run: sudo apt-get update -y && sudo apt-get install --no-install-recommends -y libegl1 libopengl0
 
-      - name: Get current date
-        id: currweek
-        run: echo "::set-output name=week::$(date +'%Y-%U')"
+      - name: Get latest calibre version
+        id: calibrelatest
+        run: echo "::set-output name=ver::$(curl --retry 2 --silent 'http://code.calibre-ebook.com/latest')"
 
-      - name: Cache
-        id: cache
+      - name: Binaries Cache
+        id: cache-bin
         uses: actions/cache@v3
         with:
-          path: cache
-          key: cache-${{ steps.currweek.outputs.week }}
+          path: cache/calibre
+          key: cache-${{ steps.calibrelatest.outputs.ver }}
 
       - name: Install calibre
         run: sh _install_calibre.sh
