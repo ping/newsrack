@@ -340,7 +340,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                                 continue
 
                             ebook_url = urljoin(publish_site, cached_item["filename"])
-                            timeout = 120
+                            timeout = 60
                             for attempt in range(1 + recipe.retry_attempts):
                                 try:
                                     ebook_res = cache_sess.get(
