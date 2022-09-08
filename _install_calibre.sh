@@ -22,7 +22,7 @@ fi
 if [ -f "${bin_folder}/${bin_file}" ]; then
   echo "Install from cache..."
   mkdir -p ~/calibre-bin/calibre && \
-  tar xvf "${bin_folder}/${bin_file}" -C ~/calibre-bin/calibre && \
+  tar xf "${bin_folder}/${bin_file}" -C ~/calibre-bin/calibre && \
   ~/calibre-bin/calibre/calibre_postinstall && \
   export PATH=$PATH:$HOME/calibre-bin/calibre && \
   calibre --version && \
