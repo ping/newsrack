@@ -43,8 +43,6 @@ logger.addHandler(ch)
 logger.setLevel(logging.INFO)
 
 publish_folder = "public"
-cache_folder = "cache"
-job_log_filename = "job_log.json"
 catalog_path = "catalog.xml"
 index_json_filename = "index.json"
 
@@ -211,16 +209,6 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
     if not publish_site.endswith("/"):
         publish_site += "/"
 
-    curr_job_log = {}
-    job_log = {}
-    try:
-        with open(
-            os.path.join(cache_folder, job_log_filename), "r", encoding="utf-8"
-        ) as f:
-            job_log = json.load(f)
-    except:  # noqa
-        pass
-
     today = datetime.utcnow().replace(tzinfo=timezone.utc)
     cache_sess = requests.Session()
     cached = _fetch_cache(publish_site)
@@ -261,7 +249,6 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                 logger.exception("Error getting recipe name")
                 continue
 
-        recipe.job_log = job_log
         job_status = ""
 
         if recipe.slug in skip_recipes_slugs:
@@ -331,7 +318,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                                 time.sleep(2)
                                 continue
                             raise
-                    curr_job_log[recipe.name] = int(time.time())
+
                 else:
                     # use cache
                     logger.warning(f'Using cached copy for "{recipe.name}".')
@@ -644,10 +631,6 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
         json.dump(index, f_in, indent=0)
 
     elapsed_time = timedelta(seconds=timer() - start_time)
-
-    job_log.update(curr_job_log)
-    with open(os.path.join(cache_folder, job_log_filename), "w", encoding="utf-8") as f:
-        json.dump(job_log, f)
 
     with (
         open("static/site.css", "r", encoding="utf-8") as f_site_css,

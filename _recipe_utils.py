@@ -55,24 +55,15 @@ class Recipe:
     conv_options: Dict[str, List[str]] = field(
         default_factory=lambda: default_conv_options, init=False
     )  # conversion options for specific formats
-    run_interval_in_days: float = 0  # kinda like Calibre's every X days
-    drift_in_hours: float = (
-        1  # allowance for schedule drift since scheduler is not precise
-    )
-    job_log: dict = field(default_factory=dict, init=False)
     cover_options: CoverOptions = (
         CoverOptions()
     )  # customise script-generated cover, used when overwrite_cover=True
     tags: List[str] = field(default_factory=list)  # used in search
 
     def is_enabled(self) -> bool:
-        is_due = self.job_log.get(self.name, 0) < (
-            time.time()
-            - (24 * self.run_interval_in_days - self.drift_in_hours) * 60 * 60
-        )
         if callable(self.enable_on):
-            return is_due and self.enable_on()
-        return is_due and self.enable_on
+            return self.enable_on()
+        return self.enable_on
 
 
 def sort_category(a, b, categories_sort):
