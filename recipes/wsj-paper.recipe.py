@@ -16,7 +16,7 @@ from calibre.web.feeds.news import BasicNewsRecipe, classes
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
 
-_name = "WSJ (Print)"
+_name = "Wall Street Journal (Print)"
 
 
 class WSJ(BasicNewsRecipe):
