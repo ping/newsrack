@@ -92,6 +92,7 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         overwrite_cover=False,
         category="Magazines",
+        tags=["business"],
         timeout=240,
     ),
     Recipe(
@@ -100,6 +101,7 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         category="News",
+        tags=["business"],
     ),
     Recipe(
         recipe="ft-paper",
@@ -107,6 +109,7 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         category="News",
+        tags=["business"],
     ),
     Recipe(
         recipe="fivebooks",
@@ -360,6 +363,7 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         category="News",
+        tags=["business"],
         timeout=300,
         enable_on=onlyat_hours(list(range(0, 8)), -4),
     ),
