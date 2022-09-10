@@ -96,6 +96,16 @@ recipes: List[Recipe] = [
         timeout=240,
     ),
     Recipe(
+        recipe="foreign-affairs",
+        slug="foreign-affairs",
+        src_ext="mobi",
+        target_ext=["epub"],
+        overwrite_cover=False,
+        category="Magazines",
+        enable_on=onlyon_days(list(range(1, 1 + 7)) + list(range(32 - 7, 32)), -4)
+        and onlyat_hours(list(range(8, 22)), -4),
+    ),
+    Recipe(
         recipe="ft",
         slug="ft-online",
         src_ext="mobi",
