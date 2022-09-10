@@ -68,7 +68,9 @@ jobs:
 
       - name: Get latest calibre version
         id: calibrelatest
-        run: echo "::set-output name=ver::$(curl -L --retry 2 --silent 'http://code.calibre-ebook.com/latest')"
+        run: |
+          tag="$(curl -L --retry 2 --silent 'https://api.github.com/repos/kovidgoyal/calibre/releases/latest' | jq -r .tag_name)" && \
+          echo "::set-output name=ver::${tag#*v}"
 
       - name: Calibre binaries cache
         id: cache-bin
