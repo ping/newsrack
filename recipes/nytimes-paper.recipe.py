@@ -21,7 +21,7 @@ _name = "NY Times (Print)"
 
 class NewYorkTimesPrint(BasicNewsRecipe):
     title = _name
-    description = "Today's New York Times"
+    description = "Today's New York Times https://www.nytimes.com/section/todayspaper"
     encoding = "utf-8"
     __author__ = "Kovid Goyal"
     language = "en"
@@ -36,6 +36,7 @@ class NewYorkTimesPrint(BasicNewsRecipe):
     timeout = 20
     timefmt = ""
     pub_date = None  # custom publication date
+    INDEX = "https://www.nytimes.com/section/todayspaper"
 
     remove_attributes = ["style", "font"]
     remove_tags_before = [dict(id="story")]
@@ -722,9 +723,8 @@ class NewYorkTimesPrint(BasicNewsRecipe):
         return raw_html
 
     def read_todays_paper(self):
-        INDEX = "https://www.nytimes.com/section/todayspaper"
         try:
-            soup = self.index_to_soup(INDEX)
+            soup = self.index_to_soup(self.INDEX)
         except Exception as err:
             if getattr(err, "code", None) == 404:
                 try:
@@ -761,7 +761,7 @@ class NewYorkTimesPrint(BasicNewsRecipe):
         self.title = f"{_name}: {date:%-d %b, %Y}"
         return soup
 
-    def parse_todays_page(self):
+    def parse_index(self):
         soup = self.read_nyt_metadata()
         script = soup.findAll(
             "script", text=lambda x: x and "window.__preloadedData" in x
@@ -826,9 +826,6 @@ class NewYorkTimesPrint(BasicNewsRecipe):
             for article in articles:
                 self.log(article["title"] + " - " + article["url"])
         return feeds
-
-    def parse_index(self):
-        return self.parse_todays_page()
 
     # The NYT occassionally returns bogus articles for some reason just in case
     # it is because of cookies, dont store cookies
