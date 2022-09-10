@@ -4,8 +4,9 @@
 
 bin_folder='cache/calibre'
 mkdir -p "$bin_folder"
-bin_file="calibre-x86_64.txz"
-sig_file="calibre-x86_64.txz.sha512"
+platform='x86_64'
+bin_file="calibre-${platform}.txz"
+sig_file="calibre-${platform}.txz.sha512"
 
 if [ -f "${bin_folder}/${bin_file}" ]; then
   echo "Cached $bin_file exists."
@@ -15,8 +16,8 @@ else
   tag="$(curl -L --retry 2 --silent 'https://api.github.com/repos/kovidgoyal/calibre/releases/latest' | jq -r .tag_name)" && \
   latest_version="${tag#*v}" && \
   echo "Latest version: ${latest_version}" && \
-  dl_url="https://github.com/kovidgoyal/calibre/releases/download/${tag}/calibre-${latest_version}-x86_64.txz" && \
-  sig_url="https://code.calibre-ebook.com/signatures/calibre-${latest_version}-x86_64.txz.sha512" && \
+  dl_url="https://github.com/kovidgoyal/calibre/releases/download/${tag}/calibre-${latest_version}-${platform}.txz" && \
+  sig_url="https://code.calibre-ebook.com/signatures/calibre-${latest_version}-${platform}.txz.sha512" && \
   echo "Downloading sig $sig_url ..." && \
   curl -L --retry 2 --show-error --silent --insecure --output "${bin_folder}/${sig_file}" "$sig_url" && \
   echo "Downloading bin $dl_url ..." && \
