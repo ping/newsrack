@@ -237,12 +237,19 @@ https://opensource.org/licenses/GPL-3.0
                             cat.nextElementSibling.classList.remove("hide");
                         }
                     }
+                    var pubDateEle = periodical.querySelector(".pub-date");
+                    var contentsEle = periodical.querySelector(".contents");
                     if (resultsSumm[id].indexOf("articles") >= 0) {
-                        periodical.querySelector(".pub-date").classList.add("is-open");
+                        pubDateEle.classList.add("is-open");
+                        if (contentsEle) {
+                            contentsEle.classList.remove("hide");
+                        }
                         periodical.querySelector(".contents").classList.remove("hide");
                     } else {
-                        periodical.querySelector(".pub-date").classList.remove("is-open");
-                        periodical.querySelector(".contents").classList.add("hide");
+                        pubDateEle.classList.remove("is-open");
+                        if (contentsEle) {
+                            contentsEle.classList.add("hide");
+                        }
                     }
 
                 }
