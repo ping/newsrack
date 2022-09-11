@@ -90,7 +90,7 @@ jobs:
           verbose: ${{ github.event.inputs.verbose }}
         run: |
           export CI_PAGES_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io${GITHUB_REPOSITORY:${#GITHUB_REPOSITORY_OWNER}}/"
-          sh _build.sh
+          sh build.sh
           if [[ -f 'job_summary.md' ]]; then cat 'job_summary.md' >> $GITHUB_STEP_SUMMARY; fi
           echo -e "\n<"'!'"-- Commit ${GITHUB_SHA:0:7} -->" >> public/index.html
 
