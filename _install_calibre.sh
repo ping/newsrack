@@ -2,7 +2,7 @@
 # Install script for calibre
 # -------------------------------------------------------
 
-bin_folder='cache/calibre'
+bin_folder="$HOME/cache/calibre"
 mkdir -p "$bin_folder"
 platform='x86_64'
 bin_file="calibre-${platform}.txz"
@@ -27,10 +27,10 @@ else
 fi
 
 if [ -f "${bin_folder}/${bin_file}" ]; then
-  echo "Install from cache..."
-  mkdir -p ~/calibre-bin/calibre && \
-  tar xf "${bin_folder}/${bin_file}" -C ~/calibre-bin/calibre && \
-  ~/calibre-bin/calibre/calibre_postinstall && \
+  echo "Install from local..."
+  mkdir -p "$HOME/calibre-bin/calibre" && \
+  tar xf "${bin_folder}/${bin_file}" -C "$HOME/calibre-bin/calibre" && \
+  "$HOME/calibre-bin/calibre/calibre_postinstall" && \
   export PATH=$PATH:$HOME/calibre-bin/calibre && \
   calibre --version && \
   echo "$HOME/calibre-bin/calibre" >> $GITHUB_PATH
