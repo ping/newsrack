@@ -2,7 +2,7 @@
 # Install script for calibre
 # -------------------------------------------------------
 
-bin_folder="$HOME/cache/calibre"
+bin_folder="$GITHUB_WORKSPACE/cache/calibre"
 mkdir -p "$bin_folder"
 platform='x86_64'
 bin_file="calibre-${platform}.txz"
