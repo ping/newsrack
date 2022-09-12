@@ -60,7 +60,6 @@ class Nautilus(BasicNewsRecipe):
         ("Economics", "https://nautil.us/topics/economics/feed/"),
         ("Environment", "https://nautil.us/topics/environment/feed/"),
         ("Evolution", "https://nautil.us/topics/evolution/feed/"),
-        ("General", "https://nautil.us/topics/general/feed/"),
         ("Genetics", "https://nautil.us/topics/genetics/feed/"),
         ("Geoscience", "https://nautil.us/topics/geoscience/feed/"),
         ("Health", "https://nautil.us/topics/health/feed/"),
