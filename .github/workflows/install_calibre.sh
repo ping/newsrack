@@ -39,7 +39,7 @@ fi
 calibre --version || {
   echo "Install latest from calibre servers..."
   mkdir -p ~/calibre-bin
-  wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin install_dir=~/calibre-bin isolated=y
+  wget --tries=3 --timeout=30 -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin install_dir=~/calibre-bin isolated=y
   export PATH=$PATH:$HOME/calibre-bin/calibre
   calibre --version
   echo "$HOME/calibre-bin/calibre" >> $GITHUB_PATH
