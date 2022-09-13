@@ -52,6 +52,21 @@ https://opensource.org/licenses/GPL-3.0
         }
     }
 
+    function toggleDateDisplay(target, isRelative) {
+        var publishedDate = new Date(parseInt(target.attributes["data-pub-date"].value));
+        var tags = "";
+        if (typeof(target.parentElement.dataset["tags"]) !== "undefined"
+            && target.parentElement.dataset["tags"].trim().length > 0) {
+            tags = " " + '<span class="tags">' + target.parentElement.dataset["tags"] + "</span>";
+        }
+        target.title = publishedDate.toLocaleString();
+        if (isRelative) {
+            target.innerHTML = "Published " + getRelativeTime(publishedDate) + tags;
+        } else {
+            target.innerHTML = "Published " + publishedDate.toLocaleString() + tags;
+        }
+    }
+
     var refreshedDateEle = document.getElementById("refreshed_dt");
     var refreshedDate = new Date(parseInt(refreshedDateEle.attributes["data-refreshed-date"].value));
     refreshedDateEle.title = refreshedDate.toLocaleString();
@@ -61,33 +76,14 @@ https://opensource.org/licenses/GPL-3.0
     var pudDateElements = document.querySelectorAll("[data-pub-date]");
     for (var i = 0; i < pudDateElements.length; i++) {
         var pubDateEle = pudDateElements[i];
-        var publishedDate = new Date(parseInt(pubDateEle.attributes["data-pub-date"].value));
-        var tags = "";
-        if (typeof(pubDateEle.parentElement.dataset["tags"]) !== "undefined"
-            && pubDateEle.parentElement.dataset["tags"].trim().length > 0) {
-            tags = ' <span class="tags">' + pubDateEle.parentElement.dataset["tags"] + "</span>";
-        }
-        pubDateEle.title = publishedDate.toLocaleString();
-        pubDateEle.innerHTML = "Published " + getRelativeTime(publishedDate) + tags;
+        toggleDateDisplay(pubDateEle, true);
 
         pubDateEle.addEventListener("pointerenter", function (event) {
-            var publishedDate = new Date(parseInt(event.target.attributes["data-pub-date"].value));
-            var tags = "";
-            if (typeof(event.target.parentElement.dataset["tags"]) !== "undefined"
-                && event.target.parentElement.dataset["tags"].trim().length > 0) {
-                tags = " " + '<span class="tags">' + event.target.parentElement.dataset["tags"] + "</span>";
-            }
-            event.target.innerHTML = "Published " + publishedDate.toLocaleString() + tags;
+            toggleDateDisplay(event.target, false);
         }, false);
 
         pubDateEle.addEventListener("pointerleave", function (event) {
-            var publishedDate = new Date(parseInt(event.target.attributes["data-pub-date"].value));
-            var tags = "";
-            if (typeof(event.target.parentElement.dataset["tags"]) !== "undefined"
-                && event.target.parentElement.dataset["tags"].trim().length > 0) {
-                tags = " " + '<span class="tags">' + event.target.parentElement.dataset["tags"] + "</span>";
-            }
-            event.target.innerHTML = "Published " + getRelativeTime(publishedDate) + tags;
+            toggleDateDisplay(event.target, true);
         }, false);
     }
 
