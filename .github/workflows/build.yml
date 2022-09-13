@@ -64,7 +64,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Install calibre dependencies
-        run: sudo apt-get update -y && sudo apt-get install --no-install-recommends -y libegl1 libopengl0
+        run: sudo apt-fast update -y && sudo apt-fast install --no-install-recommends -y libegl1 libopengl0
 
       - name: Get latest calibre version
         id: calibrelatest
