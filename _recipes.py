@@ -137,6 +137,14 @@ recipes: List[Recipe] = [
         category="News",
     ),
     Recipe(
+        recipe="harvard-intl-review",
+        slug="harvard-intl-review",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Magazines",
+        enable_on=onlyat_hours(list(range(11, 15))),
+    ),
+    Recipe(
         recipe="hbr",
         slug="hbr",
         src_ext="mobi",
