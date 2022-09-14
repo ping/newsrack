@@ -224,6 +224,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
 
     recipes: List[Recipe] = custom_recipes or default_recipes
     for recipe in recipes:
+        logger.info(f"::group::{recipe.name}")
         if not recipe.name:
             try:
                 with open(f"{recipe.recipe}.recipe") as f:
@@ -247,12 +248,14 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                 recipe.name = f"{recipe.recipe}.recipe"
             except Exception as err:  # noqa
                 logger.exception("Error getting recipe name")
+                logger.info("::endgroup::")
                 continue
 
         job_status = ""
 
         if recipe.slug in skip_recipes_slugs:
             logger.info(f'[!] SKIPPED recipe: "{recipe.slug}"')
+            logger.info("::endgroup::")
             job_summary += _add_recipe_summary(recipe, ":arrow_right_hook: Skipped")
             continue
 
@@ -363,6 +366,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                         logger.info(
                             f'{"=" * 10} "{recipe.name}" recipe took {humanize.precisedelta(recipe_elapsed_time)} {"=" * 20}'
                         )
+                        logger.info("::endgroup::")
                         job_summary += _add_recipe_summary(
                             recipe, ":x: Cache Timeout", recipe_elapsed_time
                         )
@@ -374,6 +378,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                 logger.info(
                     f'{"=" * 10} "{recipe.name}" recipe took {humanize.precisedelta(recipe_elapsed_time)} {"=" * 20}'
                 )
+                logger.info("::endgroup::")
                 job_summary += _add_recipe_summary(
                     recipe, ":x: Convert Timeout", recipe_elapsed_time
                 )
@@ -396,6 +401,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
             logger.info(
                 f'{"=" * 20} "{recipe.name}" recipe took {humanize.precisedelta(recipe_elapsed_time)} {"=" * 20}'
             )
+            logger.info("::endgroup::")
             job_summary += _add_recipe_summary(
                 recipe, ":x: No output", recipe_elapsed_time
             )
@@ -553,6 +559,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
             logger.info(
                 f'{"=" * 20} "{recipe.name}" recipe took {humanize.precisedelta(recipe_elapsed_time)} {"=" * 20}'
             )
+            logger.info("::endgroup::")
             job_summary += _add_recipe_summary(
                 recipe,
                 job_status or ":white_check_mark: Completed",
