@@ -225,6 +225,15 @@ recipes: List[Recipe] = [
         tags=["science"],
     ),
     Recipe(
+        recipe="new-republic-magazine",
+        slug="new-republic-magazine",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Magazines",
+        overwrite_cover=False,
+        enable_on=onlyon_days(list(range(1, 15))) and onlyat_hours(list(range(8, 16))),
+    ),
+    Recipe(
         recipe="newyorker",
         slug="newyorker",
         src_ext="mobi",
