@@ -13,6 +13,15 @@ https://opensource.org/licenses/GPL-3.0
     - no `Object.keys`, `Object.values`
 */
 (function () {
+
+    // stupid workaround instead of relying on screen size
+    // to increase font size for non-kindle devices
+    if (navigator.userAgent.indexOf("Mozilla/5.0 (X11") < 0) {
+        var cssEle = document.createElement("style");
+        cssEle.innerText = "{nonkindle}";       // replaced by _generate.py
+        document.head.appendChild(cssEle);
+    }
+
     // in miliseconds
     var units = {
         year: 24 * 60 * 60 * 1000 * 365,
@@ -116,14 +125,6 @@ https://opensource.org/licenses/GPL-3.0
             cat.classList.toggle("is-open");
             cat.nextElementSibling.classList.toggle("hide");    // content
         };
-    }
-
-    // stupid workaround instead of relying on screen size
-    // to increase font size for non-kindle devices
-    if (navigator.userAgent.indexOf("Mozilla/5.0 (X11") < 0) {
-        var cssEle = document.createElement("style");
-        cssEle.innerText = "{nonkindle}";       // replaced by _generate.py
-        document.head.appendChild(cssEle);
     }
 
     var searchInfo = document.getElementById("search-info");
