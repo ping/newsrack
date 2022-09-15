@@ -72,11 +72,16 @@ def generate_cover(
     )
 
     total_height = 0
-    line_gap = 25
     text_w_h = []
     for i, text in enumerate(title_texts):
         if i == 0:
-            wrapper = textwrap.TextWrapper(width=15)
+            line_gap = int(cover_options.title_font_size / 4.0)
+            max_chars_per_length = int(
+                1.5
+                * (cover_options.cover_width - 2 * rectangle_offset)
+                / cover_options.title_font_size
+            )
+            wrapper = textwrap.TextWrapper(width=max_chars_per_length)
             word_list = wrapper.wrap(text=text)
 
             for ii in word_list[:-1]:
@@ -87,11 +92,31 @@ def generate_cover(
             _, __, text_w, text_h = img_draw.textbbox(
                 (0, 0), word_list[-1], font=font_title
             )
-            text_w_h.append([word_list[-1], text_w, text_h, text_h, font_title])
+            text_w_h.append(
+                [word_list[-1], text_w, text_h, text_h + line_gap, font_title]
+            )
             total_height += text_h + line_gap
         else:
-            _, __, text_w, text_h = img_draw.textbbox((0, 0), text, font=font_title)
-            text_w_h.append([text, text_w, text_h, text_h, font_date])
+            # also support multi-lines for the date string to support long text,
+            # such as "Volume 12, Issue 4 January 2022"
+            line_gap = int(cover_options.datestamp_font_size / 4.0)
+            max_chars_per_length = int(
+                1.5
+                * (cover_options.cover_width - 2 * rectangle_offset)
+                / cover_options.datestamp_font_size
+            )
+            wrapper = textwrap.TextWrapper(width=max_chars_per_length)
+            word_list = wrapper.wrap(text=text)
+
+            for ii in word_list[:-1]:
+                _, __, text_w, text_h = img_draw.textbbox((0, 0), ii, font=font_date)
+                text_w_h.append([ii, text_w, text_h, text_h, font_date])
+                total_height += text_h + line_gap
+
+            _, __, text_w, text_h = img_draw.textbbox(
+                (0, 0), word_list[-1], font=font_date
+            )
+            text_w_h.append([word_list[-1], text_w, text_h, text_h, font_date])
             total_height += text_h + line_gap
 
     cumu_offset = 0
