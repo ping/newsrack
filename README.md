@@ -139,6 +139,19 @@ Recipe(
 ),
 ```
 
+#### Recipe Accounts
+
+Recipe accounts can be defined using a [environment secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets) named ``ACCOUNTS``. The secret value is a json-serialised ``dict`` of recipe accounts like below:
+
+```json
+{
+  "example-recipe-slug": {
+    "username": "example_username",
+    "password": "example_password"
+  }
+}
+```
+
 ## Available Recipes
 
 In addition to built-in Calibre [recipes](https://github.com/kovidgoyal/calibre/tree/master/recipes), [customised

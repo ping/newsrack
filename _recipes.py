@@ -31,15 +31,6 @@ categories_sort: List[str] = ["News", "Magazines", "Books"]
 
 # Keep this list in alphabetical order
 recipes: List[Recipe] = [
-    # to be removed
-    Recipe(
-        recipe="Pocket",
-        slug="pocket",
-        src_ext="mobi",
-        target_ext=["epub"],
-        category="Test",
-        overwrite_cover=False,
-    ),
     Recipe(
         recipe="asahi-shimbun",
         slug="asahi-shimbun",
