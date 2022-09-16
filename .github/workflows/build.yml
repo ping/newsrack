@@ -88,6 +88,7 @@ jobs:
           regenerate: ${{ github.event.inputs.regenerate }}
           skip: ${{ github.event.inputs.skip }}
           verbose: ${{ github.event.inputs.verbose }}
+          accounts: ${{ secrets.accounts }}
         run: |
           export CI_PAGES_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io${GITHUB_REPOSITORY:${#GITHUB_REPOSITORY_OWNER}}/"
           sh build.sh

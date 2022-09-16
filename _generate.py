@@ -74,6 +74,24 @@ def _get_env_csv(key):
     return slugs
 
 
+def _get_env_accounts_info():
+    accounts_info = {}
+    try:
+        json_str = str(os.environ["accounts"])
+        if json_str:
+            accounts_info = json.loads(json_str)
+            if not isinstance(accounts_info, dict):
+                logger.error(
+                    f"accounts did not deserialize into a dict: {type(accounts_info)}"
+                )
+                accounts_info = {}
+    except KeyError:
+        pass
+    except json.decoder.JSONDecodeError:
+        logger.exception("Unable to parse accounts secret as json.")
+    return accounts_info
+
+
 # fetch index.json from published site
 def _fetch_cache(site):
     res = requests.get(urljoin(site, index_json_filename), timeout=15)
@@ -222,6 +240,8 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
 
     start_time = timer()
 
+    accounts_info = _get_env_accounts_info()
+
     recipes: List[Recipe] = custom_recipes or default_recipes
     for recipe in recipes:
         if not recipe.name:
@@ -273,6 +293,16 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
             f"{recipe.recipe}.recipe",
             source_file_path,
         ]
+        try:
+            recipe_account = accounts_info.get(recipe.slug, {})
+            recipe_username = recipe_account.get("username", None)
+            recipe_password = recipe_account.get("password", None)
+            if recipe_username and recipe_password:
+                cmd.extend(
+                    [f"--username={recipe_username}", f"--password={recipe_password}"]
+                )
+        except:  # noqa
+            pass
         if recipe.conv_options and recipe.conv_options.get(recipe.src_ext):
             cmd.extend(recipe.conv_options[recipe.src_ext])
         if verbose_mode:
