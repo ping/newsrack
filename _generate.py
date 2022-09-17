@@ -363,7 +363,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                             continue
 
                         ebook_url = urljoin(publish_site, cached_item["filename"])
-                        timeout = 60
+                        timeout = 30
                         for attempt in range(1 + recipe.retry_attempts):
                             try:
                                 ebook_res = cache_sess.get(
@@ -379,7 +379,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                                     shutil.copyfileobj(ebook_res.raw, f)
                                 job_status = ":outbox_tray: From cache"
                                 break
-                            except requests.exceptions.ReadTimeout as err:
+                            except requests.exceptions.ReadTimeout:
                                 if attempt < recipe.retry_attempts:
                                     logger.warning(f"ReadTimeout for {ebook_url}")
                                     timeout += 30
