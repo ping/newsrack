@@ -219,6 +219,51 @@ def _find_output(folder_path, slug, ext):
     ]
 
 
+def _download_from_cache(recipe, cached, publish_site, cache_sess):
+    """
+    Download a recipe output from the published site
+    :param recipe:
+    :param cached:
+    :param publish_site:
+    :param cache_sess:
+    :return:
+    """
+    abort = False
+    for cached_item in cached.get(recipe.name, []):
+        _, ext = os.path.splitext(cached_item["filename"])
+        if ext != f".{recipe.src_ext}" and ext not in [
+            f".{x}" for x in recipe.target_ext
+        ]:
+            continue
+
+        ebook_url = urljoin(publish_site, cached_item["filename"])
+        timeout = 30
+        for attempt in range(1 + recipe.retry_attempts):
+            try:
+                logger.debug(f'Downloading "{ebook_url}"...')
+                ebook_res = cache_sess.get(ebook_url, timeout=timeout, stream=True)
+                ebook_res.raise_for_status()
+                with open(  # type: ignore
+                    os.path.join(publish_folder, os.path.basename(ebook_url)),
+                    "wb",
+                ) as f:
+                    shutil.copyfileobj(ebook_res.raw, f)
+                abort = False
+                break
+            except requests.exceptions.ReadTimeout:
+                if attempt < recipe.retry_attempts:
+                    logger.warning(f"ReadTimeout for {ebook_url}")
+                    timeout += 30
+                    time.sleep(2)
+                    continue
+                logger.error(f"[!] ReadTimeout for {ebook_url}")
+                abort = True
+                if ext == f".{recipe.src_ext}":
+                    # if primary format, abort early
+                    return abort
+    return abort
+
+
 def run(publish_site, source_url, commit_hash, verbose_mode):
     # for GitHub
     job_summary = """| Recipe | Status | Duration |
@@ -354,41 +399,12 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                 else:
                     # use cache
                     logger.warning(f'Using cached copy for "{recipe.name}".')
-                    abort_recipe = False
-                    for cached_item in cached[recipe.name]:
-                        _, ext = os.path.splitext(cached_item["filename"])
-                        if ext != f".{recipe.src_ext}" and ext not in [
-                            f".{x}" for x in recipe.target_ext
-                        ]:
-                            continue
-
-                        ebook_url = urljoin(publish_site, cached_item["filename"])
-                        timeout = 30
-                        for attempt in range(1 + recipe.retry_attempts):
-                            try:
-                                ebook_res = cache_sess.get(
-                                    ebook_url, timeout=timeout, stream=True
-                                )
-                                ebook_res.raise_for_status()
-                                with open(  # type: ignore
-                                    os.path.join(
-                                        publish_folder, os.path.basename(ebook_url)
-                                    ),
-                                    "wb",
-                                ) as f:
-                                    shutil.copyfileobj(ebook_res.raw, f)
-                                job_status = ":outbox_tray: From cache"
-                                break
-                            except requests.exceptions.ReadTimeout:
-                                if attempt < recipe.retry_attempts:
-                                    logger.warning(f"ReadTimeout for {ebook_url}")
-                                    timeout += 30
-                                    time.sleep(2)
-                                    continue
-                                logger.error(f"[!] ReadTimeout for {ebook_url}")
-                                abort_recipe = True
-
-                    if abort_recipe:
+                    abort_recipe = _download_from_cache(
+                        recipe, cached, publish_site, cache_sess
+                    )
+                    if not abort_recipe:
+                        job_status = ":outbox_tray: From cache"
+                    else:
                         recipe_elapsed_time = timedelta(
                             seconds=timer() - recipe_start_time
                         )
@@ -422,6 +438,19 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
         source_file_paths = sorted(
             _find_output(publish_folder, recipe.slug, recipe.src_ext)
         )
+        if not source_file_paths and cached.get(recipe.name, []):
+            logger.warning(
+                f'Using cached copy for "{recipe.name}" because recipe has no output.'
+            )
+            # try to use cached copy if recipe does not have output
+            # for example FT(Print) has no weekend issue, so we'll try to keep the last issue
+            _ = _download_from_cache(recipe, cached, publish_site, cache_sess)
+            source_file_paths = sorted(
+                _find_output(publish_folder, recipe.slug, recipe.src_ext)
+            )
+            if source_file_paths:
+                job_status = ":outbox_tray: From cache"
+
         if not source_file_paths:
             logger.error(
                 f"Unable to find source generated: '/{recipe.slug}*.{recipe.src_ext}'"
