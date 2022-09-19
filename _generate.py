@@ -209,14 +209,9 @@ def _find_output(folder_path, slug, ext):
     Previously, if 2 recipes have similar slugs, e.g. "wsj" vs "wsj-print",
     using glob will result in the wrong outputs being detected.
     """
-    exact_re = re.compile(slug + r"\." + ext)
-    dated_re = re.compile(slug + r"-\d{4}-\d{2}-\d{2}\." + ext)
+    slug_match_re = re.compile(slug + r"(-\d{4}-\d{2}-\d{2})?\." + ext)
     res = glob.glob(f"{folder_path}/{slug}*.{ext}")
-    return [
-        r
-        for r in res
-        if exact_re.match(os.path.basename(r)) or dated_re.match(os.path.basename(r))
-    ]
+    return [r for r in res if slug_match_re.match(os.path.basename(r))]
 
 
 def _download_from_cache(recipe, cached, publish_site, cache_sess):
