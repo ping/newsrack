@@ -433,7 +433,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
         source_file_paths = sorted(
             _find_output(publish_folder, recipe.slug, recipe.src_ext)
         )
-        if not source_file_paths and cached.get(recipe.name, []):
+        if cached.get(recipe.name, []) and not source_file_paths:
             logger.warning(
                 f'Using cached copy for "{recipe.name}" because recipe has no output.'
             )
