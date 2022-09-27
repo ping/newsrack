@@ -6,7 +6,7 @@
 """
 politico.com
 """
-from datetime import timezone, timedelta
+from datetime import timezone
 
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.web.feeds import Feed

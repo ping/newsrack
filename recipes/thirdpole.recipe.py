@@ -52,7 +52,7 @@ class ThirdPole(BasicNewsRecipe):
     .article-section { display: block; font-weight: bold; color: #444; }
     .article-img img, .block--article-image__image img { display: block; max-width: 100%; height: auto; }
     .article-img .caption, .block--article-image__caption {
-        font-size: 0.8rem; display: block; margin-top: 0.2rem; 
+        font-size: 0.8rem; display: block; margin-top: 0.2rem;
     }
 
     .block--pullout-stat, .block--accordion { margin-left: 0.5rem; font-family: monospace; text-align: left; }
@@ -62,7 +62,7 @@ class ThirdPole(BasicNewsRecipe):
     .block--pullout-stat .block--pullout-stat__content p,
     .block--accordion .block--accordion__content__inner p
     { margin: 0.2rem 0; }
-    
+
     .block--pull-quote { text-align: center; }
     .block--pull-quote blockquote { margin-left: 0; margin-bottom: 0.4rem; font-size: 1.25rem; }
     .block--pull-quote cite { font-style: italic; font-size: 0.8rem; }

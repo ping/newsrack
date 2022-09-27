@@ -16,7 +16,7 @@ from collections import defaultdict
 from calibre import replace_entities
 from calibre.ebooks.BeautifulSoup import NavigableString, Tag
 from calibre.utils.cleantext import clean_ascii_chars
-from calibre.web.feeds.news import BasicNewsRecipe, classes, prefixed_classes
+from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 # For past editions, set date to, for example, '2020-11-28'
 edition_date = None

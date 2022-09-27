@@ -86,7 +86,7 @@ def json_to_html(raw):
             continue
         if tn == "ArticleHeading":
             tag_name = "h2"
-            mobj = re.match("HED(?P<level>\d)", item.get("headingSubtype", ""))
+            mobj = re.match(r"HED(?P<level>\d)", item.get("headingSubtype", ""))
             if mobj:
                 tag_name = f'h{mobj.group("level")}'
             header_ele = new_soup.new_tag(tag_name)
@@ -174,7 +174,6 @@ class TheAtlantic(BasicNewsRecipe):
     p span.smallcaps { text-transform: uppercase; }
     blockquote { font-size: 1.25rem; margin-left: 0; text-align: center; }
     div.related-content { margin-left: 0.5rem; color: #444; font-style: italic; }
-    
     /* for raw_html in Photo */
     div.img img { display: block; max-width: 100%; height: auto; }
     """

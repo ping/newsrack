@@ -86,7 +86,7 @@ def json_to_html(raw):
             continue
         if tn == "ArticleHeading":
             tag_name = "h2"
-            mobj = re.match("HED(?P<level>\d)", item.get("headingSubtype", ""))
+            mobj = re.match(r"HED(?P<level>\d)", item.get("headingSubtype", ""))
             if mobj:
                 tag_name = f'h{mobj.group("level")}'
             header_ele = new_soup.new_tag(tag_name)

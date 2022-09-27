@@ -68,7 +68,6 @@ class Guardian(BasicNewsRecipe):
     extra_css = """
     [data-gu-name="headline"] h1 { font-size: 1.8rem; margin-bottom: 0.4rem; }
     [data-gu-name="standfirst"] p { font-size: 1.2rem; font-style: italic; margin-top: 0; margin-bottom: 1rem; }
-    
     [data-component="series"], [data-component="section"] { margin-right: 0.5rem; }
     [data-gu-name="meta"] { margin-bottom: 1.5rem; }
     [data-component="meta-byline"] {
@@ -84,7 +83,6 @@ class Guardian(BasicNewsRecipe):
     [data-name="placeholder"] { color: #444; font-style: italic; }
     [data-name="placeholder"] a { color: #444; }
     blockquote { font-size: 0.85rem; color: #222; }
-    
     time { margin-right: 0.5rem; }
     .embed { color: #444; font-size: 0.8rem; }
     """

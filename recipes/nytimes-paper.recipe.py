@@ -697,7 +697,7 @@ class NewYorkTimesPrint(BasicNewsRecipe):
             self.log(f"Unable to find article from script in {url}")
             return raw_html
 
-        html_output = f"""<html><head><title></title></head>
+        html_output = """<html><head><title></title></head>
         <body>
             <article>
             <h1 class="headline"></h1>

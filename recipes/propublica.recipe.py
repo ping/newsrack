@@ -69,7 +69,7 @@ class ProPublica(BasicNewsRecipe):
         box-sizing: border-box; }
     .article .attribution { font-size: 0.8rem; }
     .article .article-body__note { font-style: italic; }
-    .topics-list { 
+    .topics-list {
         border-top: 1px solid #444;
         color: #444; margin-top: 1.5rem;
     }

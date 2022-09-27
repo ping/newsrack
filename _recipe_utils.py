@@ -3,7 +3,6 @@
 # This software is released under the GNU General Public License v3.0
 # https://opensource.org/licenses/GPL-3.0
 
-import time
 from dataclasses import dataclass, field
 from datetime import datetime, timezone, timedelta
 from typing import List, Union, Callable, Dict

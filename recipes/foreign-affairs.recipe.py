@@ -144,10 +144,10 @@ class ForeignAffairsRecipe(BasicNewsRecipe):
     extra_css = """
     h1.article-title { font-size: 1.8rem; margin-bottom: 0.4rem; }
     h2.article-subtitle { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; }
-    .article-byline { margin-bottom: 1rem; color: #444; }  
+    .article-byline { margin-bottom: 1rem; color: #444; }
     .article-inline-img-block img {
         display: block; margin-bottom: 0.3rem; max-width: 100%; height: auto;
-        box-sizing: border-box; 
+        box-sizing: border-box;
     }
     .article-inline-img-block--figcaption { font-size: 0.8rem; }
     blockquote.internal-blockquote { font-size: 1.25rem; margin-left: 0; text-align: center; }

@@ -55,7 +55,6 @@ class RestOfWorld(BasicNewsRecipe):
     blockquote { font-size: 1.25rem; margin-left: 0; text-align: center; }
     .post-footer { margin: 1rem 0; padding-top: 0.5rem; border-top: 1px solid #444; }
     .post-footer .post-footer__authors { font-size: 0.85rem; color: #444; font-style: italic; }
-    
     """
 
     feeds = [

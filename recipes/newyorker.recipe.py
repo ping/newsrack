@@ -10,7 +10,7 @@ import json
 from datetime import datetime, timezone
 
 from calibre import browser
-from calibre.ebooks.BeautifulSoup import BeautifulSoup, Tag
+from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 
