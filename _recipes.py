@@ -96,6 +96,14 @@ recipes: List[Recipe] = [
         timeout=240,
     ),
     Recipe(
+        recipe="fivebooks",
+        slug="fivebooks",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Books",
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4]),
+    ),
+    Recipe(
         recipe="foreign-affairs",
         slug="foreign-affairs",
         src_ext="mobi",
@@ -120,14 +128,6 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         category="News",
         tags=["business"],
-    ),
-    Recipe(
-        recipe="fivebooks",
-        slug="fivebooks",
-        src_ext="mobi",
-        target_ext=["epub"],
-        category="Books",
-        enable_on=onlyon_weekdays([0, 1, 2, 3, 4]),
     ),
     Recipe(
         recipe="guardian",
@@ -231,7 +231,8 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         category="Magazines",
         overwrite_cover=False,
-        enable_on=onlyon_days(list(range(1, 15))) and onlyat_hours(list(range(8, 16))),
+        enable_on=onlyon_days(list(range(1, 7)) + list(range(24, 32)))
+        and onlyat_hours(list(range(8, 16))),
     ),
     Recipe(
         recipe="newyorker",
