@@ -94,13 +94,24 @@ def _get_env_accounts_info():
 
 # fetch index.json from published site
 def _fetch_cache(site):
-    res = requests.get(urljoin(site, index_json_filename), timeout=15)
-    try:
-        res.raise_for_status()
-        return res.json()
-    except Exception as err:  # noqa
-        logger.exception("[!] Error fetching index.json")
-        return {}
+    retry_attempts = 1
+    timeout = 15
+    for attempt in range(1 + retry_attempts):
+        res = requests.get(urljoin(site, index_json_filename), timeout=timeout)
+        try:
+            res.raise_for_status()
+            return res.json()
+        except Exception as err:  # noqa
+            if attempt < retry_attempts:
+                logger.warning(
+                    f"{err.__class__.__name__} fetching {index_json_filename}"
+                )
+                logger.debug(f"Retrying {index_json_filename} download...")
+                timeout += 15
+                time.sleep(2)
+                continue
+            logger.exception(f"{err.__class__.__name__} fetching {index_json_filename}")
+            return {}
 
 
 def _add_recipe_summary(rec, status, duration=None):
@@ -245,13 +256,16 @@ def _download_from_cache(recipe, cached, publish_site, cache_sess):
                     shutil.copyfileobj(ebook_res.raw, f)
                 abort = False
                 break
-            except requests.exceptions.ReadTimeout:
+            except (
+                requests.exceptions.ReadTimeout,
+                requests.exceptions.HTTPError,  # it happens
+            ) as err:
                 if attempt < recipe.retry_attempts:
-                    logger.warning(f"ReadTimeout for {ebook_url}")
+                    logger.warning(f"{err.__class__.__name__} for {ebook_url}")
                     timeout += 30
                     time.sleep(2)
                     continue
-                logger.error(f"[!] ReadTimeout for {ebook_url}")
+                logger.error(f"[!] {err.__class__.__name__} for {ebook_url}")
                 abort = True
                 if ext == f".{recipe.src_ext}":
                     # if primary format, abort early
