@@ -95,7 +95,7 @@ def _get_env_accounts_info():
 # fetch index.json from published site
 def _fetch_cache(site):
     retry_attempts = 1
-    timeout = 15
+    timeout = 20
     for attempt in range(1 + retry_attempts):
         res = requests.get(urljoin(site, index_json_filename), timeout=timeout)
         try:
@@ -107,7 +107,7 @@ def _fetch_cache(site):
                     f"{err.__class__.__name__} fetching {index_json_filename}"
                 )
                 logger.debug(f"Retrying {index_json_filename} download...")
-                timeout += 15
+                timeout += 20
                 time.sleep(2)
                 continue
             logger.exception(f"{err.__class__.__name__} fetching {index_json_filename}")
