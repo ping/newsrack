@@ -243,6 +243,18 @@ def _download_from_cache(recipe, cached, publish_site, cache_sess):
             continue
 
         ebook_url = urljoin(publish_site, cached_item["filename"])
+        try:
+            # see if this fixes the ReadTimeout for large files, e.g. WSJ-print
+            cache_sess.head(ebook_url, timeout=5)
+        except (
+            requests.exceptions.ReadTimeout,
+            requests.exceptions.HTTPError,  # it happens
+        ) as head_err:  # noqa
+            logger.warning(
+                f"{head_err.__class__.__name__} when sending HEAD {ebook_url}"
+            )
+            time.sleep(2)
+
         timeout = 30
         for attempt in range(1 + recipe.retry_attempts):
             try:
