@@ -21,7 +21,6 @@ from typing import List, Dict
 from urllib.parse import urljoin
 from xml.dom import minidom
 
-import coloredlogs  # type: ignore
 import humanize  # type: ignore
 import requests  # type: ignore
 
@@ -38,8 +37,9 @@ from _recipes_custom import (
 from _utils import generate_cover, slugify
 
 logger = logging.getLogger(__file__)
-coloredlogs.install(fmt="%(msg)s", level="DEBUG", logger=logger)
-
+ch = logging.StreamHandler(sys.stdout)
+ch.setLevel(logging.DEBUG)
+logger.addHandler(ch)
 logger.setLevel(logging.INFO)
 
 publish_folder = "public"
@@ -265,7 +265,7 @@ def _download_from_cache(recipe, cached, publish_site, cache_sess):
                     timeout += 30
                     time.sleep(2)
                     continue
-                logger.error(f"{err.__class__.__name__} for {ebook_url}")
+                logger.error(f"[!] {err.__class__.__name__} for {ebook_url}")
                 abort = True
                 if ext == f".{recipe.src_ext}":
                     # if primary format, abort early
@@ -327,7 +327,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
         logger.info(f"::group::{recipe.name}")
 
         if recipe.slug in skip_recipes_slugs:
-            logger.info(f'SKIPPED recipe: "{recipe.slug}"')
+            logger.info(f'[!] SKIPPED recipe: "{recipe.slug}"')
             logger.info("::endgroup::")
             job_summary += _add_recipe_summary(recipe, ":arrow_right_hook: Skipped")
             continue
@@ -427,7 +427,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                         continue
 
             except subprocess.TimeoutExpired:
-                logger.exception(f"TimeoutExpired fetching '{recipe.name}'")
+                logger.exception(f"[!] TimeoutExpired fetching '{recipe.name}'")
                 recipe_elapsed_time = timedelta(seconds=timer() - recipe_start_time)
                 logger.info(
                     f'{"=" * 10} "{recipe.name}" recipe took {humanize.precisedelta(recipe_elapsed_time)} {"=" * 20}'
