@@ -458,6 +458,9 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                 _find_output(publish_folder, recipe.slug, recipe.src_ext)
             )
             if source_file_paths:
+                exit_code = (
+                    0  # reset exit_code (not 0 because of failed recipe ebook-convert)
+                )
                 job_status = ":outbox_tray: From cache"
 
         if not source_file_paths:
@@ -476,7 +479,6 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
 
         source_file_path = source_file_paths[-1]
         source_file_name = os.path.basename(source_file_path)
-
         if not exit_code:
             logger.debug(f'Get book meta info for "{source_file_path}"')
             proc = subprocess.Popen(
