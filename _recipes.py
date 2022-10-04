@@ -104,6 +104,17 @@ recipes: List[Recipe] = [
         enable_on=onlyon_weekdays([0, 1, 2, 3, 4]),
     ),
     Recipe(
+        recipe="forbes-editors-picks",
+        slug="forbes-editors-picks",
+        src_ext="mobi",
+        target_ext=["epub"],
+        timeout=480,
+        category="Magazines",
+        tags=["business"],
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -4)
+        and onlyat_hours(list(range(8, 20)), -4),
+    ),
+    Recipe(
         recipe="foreign-affairs",
         slug="foreign-affairs",
         src_ext="mobi",
@@ -384,6 +395,15 @@ recipes: List[Recipe] = [
         overwrite_cover=True,
         category="Magazines",
         tags=["technology"],
+    ),
+    Recipe(
+        recipe="world-today",
+        slug="world-today",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Magazines",
+        enable_on=onlyon_days(list(range(1, 7)) + list(range(24, 32)))
+        and onlyat_hours(list(range(4, 12))),
     ),
     Recipe(
         recipe="wsj-paper",
