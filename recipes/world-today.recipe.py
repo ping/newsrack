@@ -68,6 +68,8 @@ class WorldToday(BasicNewsRecipe):
         max-width: 100%; height: auto;
         box-sizing: border-box;
     }
+    .media-image p { font-size: 0.8rem; margin: 0; }
+    .media-image p:first-child { display: inline-block; }
     .js-sidebar-responsive { margin-top: 2rem; }
     .js-sidebar-responsive h2 { font-size: 1rem; }
     """
