@@ -23,7 +23,10 @@ class WorldToday(BasicNewsRecipe):
     ignore_duplicate_articles = {"url"}
     no_javascript = True
     no_stylesheets = True
+    compress_news_images = True
+    compress_news_images_auto_size = 4
     scale_news_images = (800, 1200)
+    scale_news_images_to_device = False  # force img to be resized to scale_news_images
     remove_empty_feeds = True
     timeout = 20
     timefmt = ""
@@ -34,9 +37,15 @@ class WorldToday(BasicNewsRecipe):
         dict(class_=["hero__title", "hero__subtitle", "hero__meta"]),
         dict(name="article", class_=["content-layout"]),
     ]
-    remove_attributes = ["style"]
+    remove_attributes = ["style", "width", "height"]
     remove_tags = [
-        dict(class_=["hero__meta-label", "person-teaser__contact"]),
+        dict(
+            class_=[
+                "hero__meta-label",
+                "person-teaser__contact",
+                "person-teaser__image-container",
+            ]
+        ),
         dict(name=["svg"]),
     ]
     extra_css = """
@@ -54,6 +63,11 @@ class WorldToday(BasicNewsRecipe):
     blockquote { margin: 0 }
     .media-callout .h1 { font-weight: bold; font-size: 1.8rem; }
     .media-callout p, blockquote p { margin: 0; }
+    .media-image img {
+        display: block; margin-bottom: 0.3rem;
+        max-width: 100%; height: auto;
+        box-sizing: border-box;
+    }
     .js-sidebar-responsive { margin-top: 2rem; }
     .js-sidebar-responsive h2 { font-size: 1rem; }
     """
@@ -78,6 +92,11 @@ class WorldToday(BasicNewsRecipe):
         )
         if not self.pub_date or post_mod_date > self.pub_date:
             self.pub_date = post_mod_date
+        for img in soup.find_all("img", attrs={"srcset": True}):
+            img["src"] = self._urlize(
+                img["srcset"].strip().split(",")[-1].strip().split(" ")[0]
+            )
+            del img["srcset"]
         return str(soup)
 
     def parse_index(self):
