@@ -16,6 +16,7 @@ import time
 from collections import namedtuple
 from datetime import datetime, timezone, timedelta
 from functools import cmp_to_key
+from math import ceil
 from timeit import default_timer as timer
 from typing import List, Dict
 from urllib.parse import urljoin
@@ -409,11 +410,12 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                                 recipe_elapsed_time = timedelta(
                                     seconds=timer() - recipe_start_time
                                 )
+                                wait_interval = ceil(recipe.timeout / 100)
                                 logger.warning(
                                     f"TimeoutExpired fetching '{recipe.name}' "
-                                    f"after {humanize.precisedelta(recipe_elapsed_time)}. Retrying..."
+                                    f"after {humanize.precisedelta(recipe_elapsed_time)}. Retrying after {wait_interval}s..."
                                 )
-                                time.sleep(2)
+                                time.sleep(max(min(wait_interval, 2), 10))
                                 continue
                             raise
 
