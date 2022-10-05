@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'schedule' || github.ref_name == github.event.repository.default_branch
     # Customise: Total job run time limit
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - name: Setup node
         uses: actions/setup-node@v2
