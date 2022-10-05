@@ -13,6 +13,7 @@ $link-hover-color: darken($link-color, 20%);
 $link-visited-color: #551a8a;
 $book-bg-color: #eaeaea;
 $error-color: #b90404;
+$tags-color: mix($base-disabled-color, $base-color);
 
 $dark-base-bg-color: #1e2228;
 $dark-base-color: #e7e9f2;
@@ -22,6 +23,7 @@ $dark-link-hover-color: lighten($dark-link-color, 20%);
 $dark-link-visited-color: #bbb9ff;
 $dark-book-bg-color: lighten($dark-base-bg-color, 5%);
 $dark-error-color: #ff6464;
+$dark-tags-color: mix($dark-base-disabled-color, $dark-base-color);
 
 
 /* Use pt instead of px because px is odd on the Kindle browser */
@@ -169,6 +171,7 @@ h2.category {
             font-size: 0.7rem;
             font-weight: bold;
             margin-left: 0.5rem;
+            color: $tags-color;
 
         }
         .contents {
@@ -299,6 +302,9 @@ footer {
             }
             .contents {
                 color: $dark-base-color;
+            }
+            .tags {
+                color: $dark-tags-color;
             }
         }
 
