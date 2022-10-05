@@ -29,6 +29,7 @@ class ForbesEditorsPicks(BasicNewsRecipe):
         dict(
             attrs={
                 "class": [
+                    "story-package__nav-wrapper",
                     "container__subnav--outer",
                     "edit-story-container",
                     "article-sharing",
