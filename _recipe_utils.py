@@ -45,6 +45,7 @@ class Recipe:
     )  # alt formats that src_ext will be converted to
     timeout: int = default_recipe_timeout  # max time allowed for executing the recipe
     overwrite_cover: bool = True  # generate a plain cover to overwrite Calibre's
+    last_run: float = 0  # last run unix timestamp
     enable_on: Union[
         bool, Callable[..., bool]
     ] = True  # determines when to run the recipe
@@ -61,7 +62,7 @@ class Recipe:
 
     def is_enabled(self) -> bool:
         if callable(self.enable_on):
-            return self.enable_on()
+            return self.enable_on(self)
         return self.enable_on
 
 
@@ -83,7 +84,7 @@ def sort_category(a, b, categories_sort):
         return -1 if a[0] < b[0] else 1
 
 
-def get_local_now(offset: float = 0.0):
+def get_local_now(offset: float = 0.0) -> datetime:
     return (
         datetime.utcnow()
         .replace(tzinfo=timezone.utc)
@@ -91,7 +92,7 @@ def get_local_now(offset: float = 0.0):
     )
 
 
-def onlyon_weekdays(days_of_the_week: List[int], offset: float = 0.0):
+def onlyon_weekdays(days_of_the_week: List[int], offset: float = 0.0) -> bool:
     """
     Enable recipe only on the specified days_of_the_week
 
@@ -102,7 +103,7 @@ def onlyon_weekdays(days_of_the_week: List[int], offset: float = 0.0):
     return get_local_now(offset).weekday() in days_of_the_week
 
 
-def onlyon_days(days_of_the_month: List[int], offset: float = 0.0):
+def onlyon_days(days_of_the_month: List[int], offset: float = 0.0) -> bool:
     """
     Enable recipe only on the specified days_of_the_month
 
@@ -113,7 +114,7 @@ def onlyon_days(days_of_the_month: List[int], offset: float = 0.0):
     return get_local_now(offset).day in days_of_the_month
 
 
-def onlyat_hours(hours_of_the_day: List[int], offset: float = 0.0):
+def onlyat_hours(hours_of_the_day: List[int], offset: float = 0.0) -> bool:
     """
     Enable recipe only at the specified hours_of_the_day
 
