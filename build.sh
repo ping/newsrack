@@ -19,7 +19,7 @@ do
   fi
 done
 
-mkdir -p public cache \
+mkdir -p public meta \
 && cp -p static/*.svg public/ \
 && sass -s compressed --no-source-map static/site.scss static/site.css \
 && sass -s compressed --no-source-map static/nonkindle.scss static/nonkindle.css \

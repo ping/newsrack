@@ -306,8 +306,8 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
             os.path.join(meta_folder, job_log_filename), "r", encoding="utf-8"
         ) as f:
             job_log = json.load(f)
-    except:  # noqa
-        pass
+    except Exception as err:  # noqa
+        logger.warning(f"Unable to load job log: {err}")
 
     today = datetime.utcnow().replace(tzinfo=timezone.utc)
     cache_sess = requests.Session()
