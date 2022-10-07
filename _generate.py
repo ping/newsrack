@@ -399,6 +399,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                     # not cached (so that we always have a copy available)
                     or not cached.get(recipe.name)
                 ):
+                    original_recipe_timeout = recipe.timeout
                     for attempt in range(recipe.retry_attempts + 1):
                         try:
                             # run recipe
@@ -420,9 +421,15 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                                     f"after {humanize.precisedelta(recipe_elapsed_time)}. "
                                     f"Retrying after {wait_interval}s..."
                                 )
+                                # increase recipe timeout by 10% on retry but up to a max of 20min
+                                recipe.timeout = max(int(1.1 * recipe.timeout), 20 * 60)
                                 time.sleep(max(min(wait_interval, 2), 10))
                                 continue
                             raise
+                        finally:
+                            # it's not used anymore, but restore original timeout
+                            # value just in case
+                            recipe.timeout = original_recipe_timeout
 
                 else:
                     # use cache
