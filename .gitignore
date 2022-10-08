@@ -1,5 +1,5 @@
 .env
-cache/
+meta/
 *.recipe
 *.epub
 *.mobi
@@ -14,8 +14,6 @@ venv3/
 
 coverage.sh
 cov_html/
-
-.mypy_cache/
 
 *.iml
 .idea/
