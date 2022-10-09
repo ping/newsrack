@@ -88,6 +88,7 @@ jobs:
         with:
           name: meta-artifacts
           path: meta
+          search_artifacts:  true
           if_no_artifact_found: warn
 
       - name: Generate periodicals
