@@ -631,8 +631,6 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                 customised_css_filename = os.path.join("static", f"{ext}.css")
                 if os.path.exists(customised_css_filename):
                     cmd.append(f"--extra-css={customised_css_filename}")
-                if ext == "pdf":
-                    cmd.extend(["--pdf-page-numbers"])
                 if verbose_mode:
                     cmd.append("-vv")
                 if not _find_output(publish_folder, recipe.slug, ext):
