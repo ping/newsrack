@@ -123,3 +123,59 @@ def onlyat_hours(hours_of_the_day: List[int], offset: float = 0.0) -> bool:
     :return:
     """
     return get_local_now(offset).hour in hours_of_the_day
+
+
+def every_x_days(last_run: float, days: float, drift: float = 0.0) -> bool:
+    """
+    Enable recipe after X days after last run.
+
+    .. code-block:: python
+
+        Recipe(
+            recipe="example",
+            slug="example",
+            src_ext="epub",
+            category="Example",
+            enable_on=lambda recipe: every_x_days(
+                last_run=recipe.last_run, days=2, drift=60
+            ),
+        ),
+
+    :param last_run:
+    :param days:
+    :param drift: In minutes
+    :return:
+    """
+    if not last_run:
+        return True
+    last_run = datetime.utcfromtimestamp(last_run).replace(tzinfo=timezone.utc)
+    now = datetime.utcnow().replace(tzinfo=timezone.utc)
+    return (now - last_run) >= (timedelta(days=days) - timedelta(minutes=drift))
+
+
+def every_x_hours(last_run: float, hours: float, drift: float = 0.0) -> bool:
+    """
+    Enable recipe after X hours after last run.
+
+    .. code-block:: python
+
+        Recipe(
+            recipe="example",
+            slug="example",
+            src_ext="epub",
+            category="Example",
+            enable_on=lambda recipe: every_x_hours(
+                last_run=recipe.last_run, hours=2, drift=15
+            ),
+        ),
+
+    :param last_run:
+    :param hours:
+    :param drift: In minutes
+    :return:
+    """
+    if not last_run:
+        return True
+    last_run = datetime.utcfromtimestamp(last_run).replace(tzinfo=timezone.utc)
+    now = datetime.utcnow().replace(tzinfo=timezone.utc)
+    return (now - last_run) >= (timedelta(hours=hours) - timedelta(minutes=drift))
