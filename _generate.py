@@ -389,6 +389,9 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
             pass
         if recipe.conv_options and recipe.conv_options.get(recipe.src_ext):
             cmd.extend(recipe.conv_options[recipe.src_ext])
+        customised_css_filename = os.path.join("static", f"{recipe.src_ext}.css")
+        if os.path.exists(customised_css_filename):
+            cmd.append(f"--extra-css={customised_css_filename}")
         if verbose_mode:
             cmd.append("-vv")
 
