@@ -126,22 +126,6 @@ recipes: List[Recipe] = [
         and onlyat_hours(list(range(8, 22)), -4),
     ),
     Recipe(
-        recipe="ft",
-        slug="ft-online",
-        src_ext="mobi",
-        target_ext=["epub"],
-        category="News",
-        tags=["business"],
-    ),
-    Recipe(
-        recipe="ft-paper",
-        slug="ft-print",
-        src_ext="mobi",
-        target_ext=["epub"],
-        category="News",
-        tags=["business"],
-    ),
-    Recipe(
         recipe="guardian",
         slug="guardian",
         src_ext="mobi",
