@@ -91,15 +91,19 @@ jobs:
           search_artifacts:  true
           if_no_artifact_found: warn
 
+      - name: Setup Pages
+        id: setup_pages
+        uses: actions/configure-pages@v2
+
       - name: Generate periodicals
         env:
+          CI_PAGES_URL: ${{ steps.setup_pages.base_url }}
           CALIBRE_CONFIG_DIRECTORY: ${{ github.workspace }}/calibre_config/
           regenerate: ${{ github.event.inputs.regenerate }}
           skip: ${{ github.event.inputs.skip }}
           verbose: ${{ github.event.inputs.verbose }}
           accounts: ${{ secrets.accounts }}
         run: |
-          export CI_PAGES_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io${GITHUB_REPOSITORY:${#GITHUB_REPOSITORY_OWNER}}/"
           sh build.sh
           if [[ -f 'job_summary.md' ]]; then cat 'job_summary.md' >> $GITHUB_STEP_SUMMARY; fi
           echo -e "\n<"'!'"-- Commit ${GITHUB_SHA:0:7} -->" >> public/index.html
@@ -111,12 +115,11 @@ jobs:
           if-no-files-found: warn
 
       # Ref: https://github.com/actions/starter-workflows/blob/main/pages/static.yml
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
