@@ -97,7 +97,7 @@ jobs:
 
       - name: Generate periodicals
         env:
-          CI_PAGES_URL: ${{ steps.setup_pages.base_url }}
+          CI_PAGES_URL: ${{ steps.setup_pages.outputs.base_url }}
           CALIBRE_CONFIG_DIRECTORY: ${{ github.workspace }}/calibre_config/
           regenerate: ${{ github.event.inputs.regenerate }}
           skip: ${{ github.event.inputs.skip }}
