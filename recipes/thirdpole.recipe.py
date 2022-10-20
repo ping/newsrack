@@ -50,8 +50,8 @@ class ThirdPole(BasicNewsRecipe):
     .article-meta {  margin-top: 1rem; margin-bottom: 1rem; }
     .article-meta .author { font-weight: bold; color: #444; margin-right: 0.5rem; }
     .article-section { display: block; font-weight: bold; color: #444; }
-    .article-img img, .block--article-image__image img { display: block; max-width: 100%; height: auto; }
-    .article-img .caption, .block--article-image__caption {
+    .article-img img, .block--article-image__image img, .wp-caption img { display: block; max-width: 100%; height: auto; }
+    .article-img .caption, .block--article-image__caption, .wp-caption-text {
         font-size: 0.8rem; display: block; margin-top: 0.2rem;
     }
 

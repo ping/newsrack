@@ -36,6 +36,7 @@ class TheDiplomat(BasicNewsRecipe):
     ignore_duplicate_articles = {"url"}
 
     compress_news_images = True
+    compress_news_images_auto_size = 8
     scale_news_images = (800, 800)
     scale_news_images_to_device = False  # force img to be resized to scale_news_images
     auto_cleanup = False
@@ -45,7 +46,7 @@ class TheDiplomat(BasicNewsRecipe):
     pub_date = None  # custom publication date
     temp_dir = None
 
-    remove_attributes = ["style"]
+    remove_attributes = ["style", "width", "height"]
 
     extra_css = """
     .headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
@@ -54,9 +55,9 @@ class TheDiplomat(BasicNewsRecipe):
     .article-meta { margin-bottom: 1rem; }
     .article-meta .author { font-weight: bold; color: #444; margin-right: 0.5rem; }
     .article-section { display: block; font-weight: bold; color: #444; }
-    .article-img { margin-bottom: 0.8rem; max-width: 100%; }
-    .article-img img { display: block; max-width: 100%; height: auto; }
-    .article-img .caption { display: block; font-size: 0.8rem; margin-top: 0.2rem; }
+    .article-img, .wp-caption { margin-bottom: 0.8rem; max-width: 100%; }
+    .article-img img, .wp-caption img { display: block; max-width: 100%; height: auto; }
+    .article-img .caption, .wp-caption-text { display: block; font-size: 0.8rem; margin-top: 0.2rem; }
     .article-img .caption p { margin: 0; }
     """
 
