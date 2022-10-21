@@ -153,3 +153,11 @@ class FinancialTimes(BasicNewsRecipe):
 
     def publication_date(self):
         return self.pub_date
+
+    def get_browser(self, *a, **kw):
+        kw[
+            "user_agent"
+        ] = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+        br = BasicNewsRecipe.get_browser(self, *a, **kw)
+        br.addheaders = [("referer", "https://www.google.com/")]
+        return br

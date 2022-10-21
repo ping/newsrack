@@ -37,7 +37,7 @@ class FinancialTimesPrint(BasicNewsRecipe):
 
     extra_css = """
     .headline { font-size: 1.8rem; margin-bottom: 0.5rem; }
-    .sub-headline { margin-bottom: 0.4rem;  color: #444; font-size: 1.2rem; }
+    .sub-headline { margin-bottom: 0.4rem;  color: #444; font-size: 1.2rem; font-style: italic; }
     .article-meta { margin-top: 1rem; padding-bottom: 0.2rem; border-bottom: 1px solid #aaa; }
     .article-meta .author { font-weight: bold; color: #444; }
     .article-meta .published-dt { margin-left: 0.5rem; }
@@ -45,17 +45,6 @@ class FinancialTimesPrint(BasicNewsRecipe):
     .article-img img { display: block; margin-bottom: 0.3rem; max-width: 100%; }
     .article-img .caption { font-size: 0.8rem; }
     """
-
-    # site appears defunct
-    # def get_cover_url(self):
-    #     soup = self.index_to_soup(
-    #         "https://www.todayspapers.co.uk/the-financial-times-front-page-today/"
-    #     )
-    #     tag = soup.find("div", attrs={"class": "elementor-image"})
-    #     if tag:
-    #         print("*" * 10, tag.find("img")["src"])
-    #         self.cover_url = tag.find("img")["src"]
-    #     return getattr(self, "cover_url", None)
 
     def parse_index(self):
         soup = self.index_to_soup("https://www.ft.com/todaysnewspaper/international")
@@ -175,3 +164,11 @@ class FinancialTimesPrint(BasicNewsRecipe):
 
     def publication_date(self):
         return self.pub_date
+
+    def get_browser(self, *a, **kw):
+        kw[
+            "user_agent"
+        ] = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+        br = BasicNewsRecipe.get_browser(self, *a, **kw)
+        br.addheaders = [("referer", "https://www.google.com/")]
+        return br
