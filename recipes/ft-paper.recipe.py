@@ -37,8 +37,8 @@ class FinancialTimesPrint(BasicNewsRecipe):
 
     extra_css = """
     .headline { font-size: 1.8rem; margin-bottom: 0.5rem; }
-    .sub-headline { margin-bottom: 0.4rem;  color: #444; font-size: 1.2rem; font-style: italic; }
-    .article-meta { margin-top: 1rem; padding-bottom: 0.2rem; border-bottom: 1px solid #aaa; }
+    .sub-headline { margin-bottom: 0.4rem;  font-size: 1.2rem; font-style: italic; }
+    .article-meta { margin-top: 1rem; padding-bottom: 0.2rem; }
     .article-meta .author { font-weight: bold; color: #444; }
     .article-meta .published-dt { margin-left: 0.5rem; }
     .article-img { margin-bottom: 0.8rem; }
