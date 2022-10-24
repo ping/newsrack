@@ -153,6 +153,11 @@ https://opensource.org/licenses/GPL-3.0
                 this.field("tags");
                 this.field("category");
 
+                var searchTextField = document.getElementById("search-text");
+                var searchButton = document.getElementById("search-button");
+                var ogPlaceholderText = searchTextField.placeholder;
+                searchTextField.placeholder = "Indexing search...";
+
                 for (var i = 0; i < periodicalsEles.length; i++) {
                     var periodical = periodicalsEles[i];
                     var id = periodical["id"];
@@ -172,8 +177,9 @@ https://opensource.org/licenses/GPL-3.0
                         "category": catName
                     });
                 }
-                document.getElementById("search-text").disabled = false;
-                document.getElementById("search-button").disabled = false;
+                searchTextField.placeholder = ogPlaceholderText;
+                searchTextField.disabled = false;
+                searchButton.disabled = false;
             });
 
             // unhide everything when search field is cleared
