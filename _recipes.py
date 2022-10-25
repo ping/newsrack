@@ -175,6 +175,14 @@ recipes: List[Recipe] = [
         tags=["asia"],
     ),
     Recipe(
+        recipe="knowable-magazine",
+        slug="knowable-magazine",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Magazines",
+        tags=["science"],
+    ),
+    Recipe(
         recipe="korea-herald",
         slug="korea-herald",
         src_ext="mobi",
