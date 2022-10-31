@@ -110,7 +110,11 @@ https://opensource.org/licenses/GPL-3.0
     var categoryButtons = document.querySelectorAll("h2.category");
     for (var i = 0; i < categoryButtons.length; i++) {
         var category = categoryButtons[i];
-        category.onclick = function () {
+        category.onclick = function (e) {
+            if (e.target.nodeName.toLowerCase() === "a") {
+                // don't do toggle action if it's a link
+                return;
+            }
             this.classList.toggle("is-open");
             this.nextElementSibling.classList.toggle("hide");   // content
         };
