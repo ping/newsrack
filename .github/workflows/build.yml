@@ -84,7 +84,7 @@ jobs:
 
       - name: Download meta artifacts
         id: download-meta-artifact
-        uses: dawidd6/action-download-artifact@v2.24.0
+        uses: dawidd6/action-download-artifact@v2
         with:
           name: meta-artifacts
           path: meta
