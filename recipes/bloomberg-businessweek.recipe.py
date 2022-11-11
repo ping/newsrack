@@ -90,9 +90,10 @@ class BloombergBusinessweek(BasicNewsRecipe):
         except Exception as e:
             if hasattr(e, "code") and e.code == 307:
                 self.bot_blocked = True
-                self.log.warn(f"Blocked by bot detection: {args[0]}")
-                self.abort_recipe_processing(f"Blocked by bot detection: {args[0]}")
-                self.abort_article(f"Blocked by bot detection: {args[0]}")
+                err_msg = f"Blocked by bot detection: {args[0]}"
+                self.log.warn(err_msg)
+                self.abort_recipe_processing(err_msg)
+                self.abort_article(err_msg)
             raise
 
     open = open_novisit
