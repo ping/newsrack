@@ -80,9 +80,9 @@ class BloombergBusinessweek(BasicNewsRecipe):
 
     def open_novisit(self, *args, **kwargs):
         if self.bot_blocked:
-            self.log.warn(f"Blocked detected. Skipping {args[0]}")
+            self.log.warn(f"Block detected. Skipping {args[0]}")
             # Abort article without making actual request
-            self.abort_article(f"Blocked detected. Skipped {args[0]}")
+            self.abort_article(f"Block detected. Skipped {args[0]}")
         br = browser()
         return br.open_novisit(*args, **kwargs)
 
@@ -206,9 +206,14 @@ class BloombergBusinessweek(BasicNewsRecipe):
 
     def parse_index(self):
         soup = self.index_to_soup("https://www.bloomberg.com/businessweek")
-        latest_issue_article = soup.select(
-            "#magazines_carousel article div[data-component='headline']"
-        )[0]
+        try:
+            latest_issue_article = soup.select(
+                "#magazines_carousel article div[data-component='headline']"
+            )[0]
+        except IndexError:
+            if "Block reference ID" in str(soup):
+                self.abort_recipe_processing("Blocked by bot detection.")
+            raise
         # latest_issue_article.find("")
         edition = self.tag_to_string(latest_issue_article)
         edition_url = urljoin(
