@@ -26,9 +26,9 @@ class BloombergBusinessweek(BasicNewsRecipe):
     ignore_duplicate_articles = {"url"}
     no_stylesheets = True
     remove_javascript = True
-    delay = 3
     auto_cleanup = False
     timeout = 20
+    delay = 3
     oldest_article = 7
     max_articles_per_feed = 25
 
@@ -38,6 +38,7 @@ class BloombergBusinessweek(BasicNewsRecipe):
     scale_news_images_to_device = False  # force img to be resized to scale_news_images
     timefmt = ""  # suppress date output
     pub_date = None  # custom publication date
+    bot_blocked = False
 
     remove_attributes = ["style", "height", "width", "align"]
     remove_tags = [
@@ -78,6 +79,10 @@ class BloombergBusinessweek(BasicNewsRecipe):
         return self.get_browser()
 
     def open_novisit(self, *args, **kwargs):
+        if self.bot_blocked:
+            self.log.warn(f"Blocked detected. Skipping {args[0]}")
+            # Abort article without making actual request
+            self.abort_article(f"Blocked detected. Skipped {args[0]}")
         br = browser()
         return br.open_novisit(*args, **kwargs)
 
@@ -102,6 +107,7 @@ class BloombergBusinessweek(BasicNewsRecipe):
             break
         if not (article and article.get("story")):
             if "Block reference ID" in raw_html:
+                self.bot_blocked = True
                 self.log.warn(f"Blocked by bot detection: {url}")
                 self.abort_article(f"Blocked by bot detection: {url}")
             else:
