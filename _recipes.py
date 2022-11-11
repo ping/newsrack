@@ -68,6 +68,17 @@ recipes: List[Recipe] = [
         tags=["editorial", "commentary"],
     ),
     Recipe(
+        recipe="bloomberg-businessweek",
+        slug="bloomberg-businessweek",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Magazines",
+        tags=["business"],
+        overwrite_cover=False,
+        enable_on=onlyon_weekdays([4]) and onlyat_hours(list(range(8, 16))),
+        timeout=600,
+    ),
+    Recipe(
         recipe="channelnewsasia",
         slug="channelnewsasia",
         src_ext="mobi",
