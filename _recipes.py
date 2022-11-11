@@ -86,7 +86,7 @@ recipes: List[Recipe] = [
         category="News",
         tags=["business"],
         overwrite_cover=False,
-        enable_on=not onlyon_weekdays([6]) and onlyat_hours(list(range(8, 16))),
+        enable_on=not (onlyon_weekdays([6]) and onlyat_hours(list(range(8, 16)))),
         timeout=600,
     ),
     Recipe(
