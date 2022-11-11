@@ -166,20 +166,21 @@ In alphabetical order:
 <summary><b>News</b></summary>
 
 1. [Asahi Shimbun](https://www.asahi.com/ajw/)
-2. [Channel News Asia](https://www.channelnewsasia.com/)
-3. [The Financial Times](https://www.ft.com/)
-4. [The Financial Times (Print)](https://www.ft.com/todaysnewspaper/international)
-5. [The Guardian](https://www.theguardian.com/international)
-6. [The JoongAng Daily](https://koreajoongangdaily.joins.com/)
-7. [The Korea Herald](https://koreaherald.com/)
-8. [The New York Times](https://www.nytimes.com/)
-9. [The New York Times (Print)](https://www.nytimes.com/section/todayspaper)
-10. [South China Morning Post](https://www.scmp.com/)
-11. [Sydney Morning Herald](https://www.smh.com.au/)
-12. [Taipei Times](https://www.taipeitimes.com/)
-13. [Wall Street Journal (Print)](https://www.wsj.com/print-edition/today)
-14. [The Washington Post](https://www.washingtonpost.com/)
-15. ~~[The Japan Times](https://www.japantimes.co.jp/)~~
+2. [Bloomberg News](https://www.bloomberg.com/)
+3. [Channel News Asia](https://www.channelnewsasia.com/)
+4. [The Financial Times](https://www.ft.com/)
+5. [The Financial Times (Print)](https://www.ft.com/todaysnewspaper/international)
+6. [The Guardian](https://www.theguardian.com/international)
+7. [The JoongAng Daily](https://koreajoongangdaily.joins.com/)
+8. [The Korea Herald](https://koreaherald.com/)
+9. [The New York Times](https://www.nytimes.com/)
+10. [The New York Times (Print)](https://www.nytimes.com/section/todayspaper)
+11. [South China Morning Post](https://www.scmp.com/)
+12. [Sydney Morning Herald](https://www.smh.com.au/)
+13. [Taipei Times](https://www.taipeitimes.com/)
+14. [Wall Street Journal (Print)](https://www.wsj.com/print-edition/today)
+15. [The Washington Post](https://www.washingtonpost.com/)
+16. ~~[The Japan Times](https://www.japantimes.co.jp/)~~
 
 </details>
 
