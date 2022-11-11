@@ -84,7 +84,16 @@ class BloombergBusinessweek(BasicNewsRecipe):
             # Abort article without making actual request
             self.abort_article(f"Block detected. Skipped {args[0]}")
         br = browser()
-        return br.open_novisit(*args, **kwargs)
+        br.set_handle_redirect(False)
+        try:
+            return br.open_novisit(*args, **kwargs)
+        except Exception as e:
+            if hasattr(e, "code") and e.code == 307:
+                self.bot_blocked = True
+                self.log.warn(f"Blocked by bot detection: {args[0]}")
+                self.abort_recipe_processing(f"Blocked by bot detection: {args[0]}")
+                self.abort_article(f"Blocked by bot detection: {args[0]}")
+            raise
 
     open = open_novisit
 
@@ -106,13 +115,8 @@ class BloombergBusinessweek(BasicNewsRecipe):
                 continue
             break
         if not (article and article.get("story")):
-            if "Block reference ID" in raw_html:
-                self.bot_blocked = True
-                self.log.warn(f"Blocked by bot detection: {url}")
-                self.abort_article(f"Blocked by bot detection: {url}")
-            else:
-                self.log.warn(f"Unable to find article: {url}")
-                self.abort_article(f"Unable to find article: {url}")
+            self.log.warn(f"Unable to find article: {url}")
+            self.abort_article(f"Unable to find article: {url}")
 
         article = article["story"]
         date_published = parse_date(article["publishedAt"], assume_utc=True)
@@ -206,15 +210,9 @@ class BloombergBusinessweek(BasicNewsRecipe):
 
     def parse_index(self):
         soup = self.index_to_soup("https://www.bloomberg.com/businessweek")
-        try:
-            latest_issue_article = soup.select(
-                "#magazines_carousel article div[data-component='headline']"
-            )[0]
-        except IndexError:
-            if "Block reference ID" in str(soup):
-                self.abort_recipe_processing("Blocked by bot detection.")
-            raise
-        # latest_issue_article.find("")
+        latest_issue_article = soup.select(
+            "#magazines_carousel article div[data-component='headline']"
+        )[0]
         edition = self.tag_to_string(latest_issue_article)
         edition_url = urljoin(
             "https://www.bloomberg.com", latest_issue_article.a["href"]
