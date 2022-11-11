@@ -108,12 +108,6 @@ jobs:
           if [[ -f 'job_summary.md' ]]; then cat 'job_summary.md' >> $GITHUB_STEP_SUMMARY; fi
           echo -e "\n<"'!'"-- Commit ${GITHUB_SHA:0:7} -->" >> public/index.html
 
-      - uses: actions/upload-artifact@v3
-        with:
-          name: meta-artifacts
-          path: meta
-          if-no-files-found: warn
-
       # Ref: https://github.com/actions/starter-workflows/blob/main/pages/static.yml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
@@ -123,3 +117,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: meta-artifacts
+          path: meta
+          if-no-files-found: warn
