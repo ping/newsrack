@@ -12,6 +12,7 @@ from calibre.utils.date import parse_date
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Bloomberg Businessweek"
+issue_url = ""  # ex: https://www.bloomberg.com/magazine/businessweek/22_44
 
 
 class BloombergBusinessweek(BasicNewsRecipe):
@@ -28,6 +29,11 @@ class BloombergBusinessweek(BasicNewsRecipe):
     remove_javascript = True
     auto_cleanup = False
     timeout = 20
+
+    # NOTES: Bot detection kicks in really easily so either:
+    # - limit the number of feeds
+    # - or max_articles_per_feed
+    # - or increase delay
     delay = 3
     oldest_article = 7
     max_articles_per_feed = 25
@@ -210,16 +216,19 @@ class BloombergBusinessweek(BasicNewsRecipe):
         return str(soup)
 
     def parse_index(self):
-        soup = self.index_to_soup("https://www.bloomberg.com/businessweek")
-        latest_issue_article = soup.select(
-            "#magazines_carousel article div[data-component='headline']"
-        )[0]
-        edition = self.tag_to_string(latest_issue_article)
-        edition_url = urljoin(
-            "https://www.bloomberg.com", latest_issue_article.a["href"]
-        )
-        self.title = f"{_name}: {edition}"
+        if not issue_url:
+            soup = self.index_to_soup("https://www.bloomberg.com/businessweek")
+            latest_issue_article = soup.select(
+                "#magazines_carousel article div[data-component='headline']"
+            )[0]
+            edition_url = urljoin(
+                "https://www.bloomberg.com", latest_issue_article.a["href"]
+            )
+        else:
+            edition_url = issue_url
         soup = self.index_to_soup(edition_url)
+        edition = self.tag_to_string(soup.find("h1")).replace(" Issue", "")
+        self.title = f"{_name}: {edition}"
         cover_img = soup.find("img", class_="story-list-module__image")
         self.cover_url = cover_img["src"].replace("/280x-1.jpg", "/800x-1.jpg")
         feeds = []
