@@ -24,6 +24,7 @@ from xml.dom import minidom
 
 import humanize  # type: ignore
 import requests  # type: ignore
+from bleach import linkify
 
 from _opds import init_feed, simple_tag, extension_contenttype_map
 from _recipe_utils import sort_category, Recipe
@@ -292,6 +293,18 @@ def _download_from_cache(recipe, cached, publish_site, cache_sess):
     return abort
 
 
+def _linkify_attrs(attrs, new=False):
+    """
+    Add required attributes when linkifying
+    :param attrs:
+    :param new:
+    :return:
+    """
+    attrs[(None, "rel")] = "noreferrer nofollow noopener"
+    attrs[(None, "target")] = "_blank"
+    return attrs
+
+
 def run(publish_site, source_url, commit_hash, verbose_mode):
     # for GitHub
     job_summary = """| Recipe | Status | Duration |
@@ -556,7 +569,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                     ]
                     description = f"""{comments[0]}
                     <ul><li>{"</li><li>".join(comments[1:-1])}</li></ul>
-                    {comments[-1]}
+                    {linkify(comments[-1], callbacks=[_linkify_attrs])}
                     """
                 except:  # noqa
                     pass
