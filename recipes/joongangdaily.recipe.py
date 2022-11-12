@@ -15,7 +15,7 @@ _name = "JoongAng Daily"
 
 class KoreaJoongAngDaily(BasicNewsRecipe):
     title = _name
-    description = "The Korea JoongAng Daily is an English-language daily published by the JoongAng Group, Korea’s leading media group, in association with The New York Times."
+    description = "The Korea JoongAng Daily is an English-language daily published by the JoongAng Group, Korea’s leading media group, in association with The New York Times. https://koreajoongangdaily.joins.com/"
     language = "en"
     __author__ = "ping"
     publication_type = "newspaper"

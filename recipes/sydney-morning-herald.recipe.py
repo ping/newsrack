@@ -13,7 +13,7 @@ _name = "Sydney Morning Herald"
 class SydneyMorningHerald(BasicNewsRecipe):
     title = _name
     __author__ = "Darko Miletic"
-    description = "Breaking news from Sydney, Australia and the world. Features the latest business, sport, entertainment, travel, lifestyle, and technology news."  # noqa
+    description = "Breaking news from Sydney, Australia and the world. Features the latest business, sport, entertainment, travel, lifestyle, and technology news. https://www.smh.com.au/"  # noqa
     publisher = "Fairfax Digital"
     category = "news, politics, Australia, Sydney"
     oldest_article = 1

@@ -24,7 +24,10 @@ _name = "Scientific American"
 
 class ScientificAmerican(BasicNewsRecipe):
     title = _name
-    description = "Popular Science. Monthly magazine. Should be downloaded around the middle of each month."
+    description = (
+        "Popular Science. Monthly magazine. Should be downloaded around the middle of each month. "
+        "https://www.scientificamerican.com/"
+    )
     category = "science"
     __author__ = "Kovid Goyal"
     language = "en"

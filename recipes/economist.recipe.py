@@ -146,6 +146,7 @@ class Economist(BasicNewsRecipe):
     description = (
         "Global news and current affairs from a European"
         " perspective. Best downloaded on Friday mornings (GMT)"
+        " https://www.economist.com/printedition"
     )
     extra_css = """
         .headline {font-size: x-large;}

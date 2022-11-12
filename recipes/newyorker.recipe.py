@@ -26,7 +26,9 @@ _name = "New Yorker"
 class NewYorker(BasicNewsRecipe):
 
     title = _name
-    description = "Articles of the week's New Yorker magazine"
+    description = (
+        "Articles of the week's New Yorker magazine https://www.newyorker.com/"
+    )
 
     url_list = []
     language = "en"

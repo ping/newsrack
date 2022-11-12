@@ -17,6 +17,7 @@ class Nautilus(BasicNewsRecipe):
         "Nautilus is a different kind of science magazine. Our stories take you into the depths"
         " of science and spotlight its ripples in our lives and cultures. We believe any subject in science,"
         " no matter how complex, can be explained with clarity and vitality."
+        " https://nautil.us/"
     )
     no_stylesheets = True
     use_embedded_content = False

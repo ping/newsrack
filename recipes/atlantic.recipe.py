@@ -127,7 +127,7 @@ _name = "The Atlantic"
 class TheAtlantic(BasicNewsRecipe):
 
     title = _name
-    description = "News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine"
+    description = "News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine https://www.theatlantic.com/"
 
     __author__ = "Kovid Goyal"
     language = "en"

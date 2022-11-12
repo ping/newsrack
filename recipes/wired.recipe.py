@@ -23,6 +23,7 @@ class WiredMagazine(BasicNewsRecipe):
         "reports on how emerging technologies affect culture, "
         "the economy and politics. "
         "Monthly edition, best run at the start of every month."
+        " https://www.wired.com/magazine/"
     )
     publisher = "Conde Nast"
     category = "news, IT, computers, technology"

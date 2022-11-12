@@ -16,7 +16,7 @@ _name = "Rest of World"
 
 class RestOfWorld(BasicNewsRecipe):
     title = _name
-    description = "Reporting Global Tech Stories"
+    description = "Reporting Global Tech Stories https://restofworld.org/"
     language = "en"
     __author__ = "ping"
     publication_type = "blog"

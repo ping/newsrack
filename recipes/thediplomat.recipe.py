@@ -22,7 +22,7 @@ _name = "The Diplomat"
 
 class TheDiplomat(BasicNewsRecipe):
     title = _name
-    description = "The Diplomat is a current-affairs magazine for the Asia-Pacific, with news and analysis on politics, security, business, technology and life across the region."
+    description = "The Diplomat is a current-affairs magazine for the Asia-Pacific, with news and analysis on politics, security, business, technology and life across the region. https://thediplomat.com/"
     language = "en"
     __author__ = "ping"
     publication_type = "magazine"

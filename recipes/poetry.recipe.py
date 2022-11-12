@@ -19,7 +19,7 @@ class Nature(BasicNewsRecipe):
     __author__ = "ping"
     description = (
         "Founded in Chicago by Harriet Monroe in 1912, Poetry is the oldest monthly "
-        "devoted to verse in the English-speaking world."
+        "devoted to verse in the English-speaking world. https://www.poetryfoundation.org/poetrymagazine"
     )
     publication_type = "magazine"
     language = "en"

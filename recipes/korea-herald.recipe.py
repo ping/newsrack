@@ -12,7 +12,7 @@ _name = "Korea Herald"
 class KoreaHerald(BasicNewsRecipe):
     title = _name
     language = "en"
-    description = "Korea Herald News articles"
+    description = "Korea Herald News articles https://koreaherald.com/"
     __author__ = "Seongkyoun Yoo"
     no_stylesheets = True
     remove_javascript = True

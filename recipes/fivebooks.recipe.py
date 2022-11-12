@@ -20,7 +20,7 @@ _name = "Five Books"
 class FiveBooks(BasicNewsRecipe):
     title = _name
     __author__ = "ping"
-    description = "Expert book recommendations"
+    description = "Expert book recommendations https://fivebooks.com/"
     language = "en"
     category = "books"
     publication_type = "blog"

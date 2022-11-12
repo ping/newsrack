@@ -17,7 +17,9 @@ _name = "Financial Times (Print)"
 class FinancialTimesPrint(BasicNewsRecipe):
     title = _name
     __author__ = "ping"
-    description = "Today's Financial Times"
+    description = (
+        "Today's Financial Times https://www.ft.com/todaysnewspaper/international"
+    )
     publisher = "The Financial Times Ltd."
     language = "en_GB"
     category = "news, finance, politics, UK, World"

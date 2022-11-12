@@ -13,7 +13,10 @@ _name = "ProPublica"
 
 class ProPublica(BasicNewsRecipe):
     title = _name
-    description = "ProPublica is an independent, nonprofit newsroom that produces investigative journalism with moral force."
+    description = (
+        "ProPublica is an independent, nonprofit newsroom that produces investigative "
+        "journalism with moral force. https://www.propublica.org/"
+    )
     language = "en"
     __author__ = "ping"
     publication_type = "newspaper"

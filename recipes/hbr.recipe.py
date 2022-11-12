@@ -20,6 +20,7 @@ class HBR(BasicNewsRecipe):
         " Through its flagship magazine, books, and digital content and tools published on HBR.org,"
         " Harvard Business Review aims to provide professionals around the world with rigorous insights"
         " and best practices to help lead themselves and their organizations more effectively and to make a positive impact."
+        " https://hbr.org/magazine"
     )
     language = "en"
     encoding = "utf-8"

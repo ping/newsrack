@@ -17,7 +17,7 @@ _name = "POLITICO Magazine"
 class PoliticoMagazine(BasicNewsRecipe):
     title = _name
     __author__ = "ping"
-    description = "News, Analysis and Opinion from POLITICO"
+    description = "News, Analysis and Opinion from POLITICO https://www.politico.com/"
     publisher = "Capitol News Company, LLC"
     category = "news, politics, USA"
     publication_type = "magazine"

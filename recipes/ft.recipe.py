@@ -20,7 +20,7 @@ _name = "Financial Times"
 class FinancialTimes(BasicNewsRecipe):
     title = _name
     __author__ = "ping"
-    description = "Financial Times"
+    description = "Financial Times https://www.ft.com/"
     publisher = "The Financial Times Ltd."
     language = "en_GB"
     category = "news, finance, politics, UK, World"

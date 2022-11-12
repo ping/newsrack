@@ -17,7 +17,7 @@ _name = "Guardian"
 
 class Guardian(BasicNewsRecipe):
     title = _name
-    description = "Latest international news, sport and comment from the Guardian"
+    description = "Latest international news, sport and comment from the Guardian https://www.theguardian.com/international"
     language = "en_GB"
     __author__ = "ping"
     publication_type = "newspaper"

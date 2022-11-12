@@ -14,7 +14,7 @@ _name = "ChannelNewsAsia"
 class ChannelNewsAsia(BasicNewsRecipe):
     title = _name
     __author__ = "ping"
-    description = "CNA: Breaking News, Singapore News, World and Asia"
+    description = "CNA: Breaking News, Singapore News, World and Asia https://www.channelnewsasia.com/"
     publisher = "Mediacorp"
     category = "news, Singapore"
     publication_type = "newspaper"

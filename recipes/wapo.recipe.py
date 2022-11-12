@@ -16,7 +16,7 @@ _name = "Washington Post"
 class TheWashingtonPost(BasicNewsRecipe):
     title = _name
     __author__ = "ping"
-    description = "Breaking news and analysis on politics, business, world national news, entertainment more. In-depth DC, Virginia, Maryland news coverage including traffic, weather, crime, education, restaurant reviews and more."  # noqa
+    description = "Breaking news and analysis on politics, business, world national news, entertainment more. In-depth DC, Virginia, Maryland news coverage including traffic, weather, crime, education, restaurant reviews and more. https://www.washingtonpost.com/"  # noqa
     publisher = "The Washington Post Company"
     category = "news, politics, USA"
     publication_type = "newspaper"

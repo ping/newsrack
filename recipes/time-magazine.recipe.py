@@ -18,7 +18,7 @@ _name = "TIME"
 class TimeMagazine(BasicNewsRecipe):
     title = _name
     __author__ = "ping"
-    description = "Weekly US magazine."
+    description = "Weekly US magazine. https://time.com/magazine/"
     language = "en"
     masthead_url = "https://time.com/img/logo.png"
     no_stylesheets = True

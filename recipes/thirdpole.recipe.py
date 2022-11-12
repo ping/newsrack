@@ -19,7 +19,11 @@ _name = "The Third Pole"
 class ThirdPole(BasicNewsRecipe):
     title = _name
     __author__ = "ping"
-    description = "The Third Pole is a multilingual platform dedicated to promoting information and discussion about the Himalayan watershed and the rivers that originate there."
+    description = (
+        "The Third Pole is a multilingual platform dedicated to promoting "
+        "information and discussion about the Himalayan watershed and the "
+        "rivers that originate there. https://www.thethirdpole.net/"
+    )
     language = "en"
     publication_type = "blog"
     oldest_article = 14  # days

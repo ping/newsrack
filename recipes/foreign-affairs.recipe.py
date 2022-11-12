@@ -113,7 +113,7 @@ class ForeignAffairsRecipe(BasicNewsRecipe):
     title = _name
     __author__ = "Kovid Goyal"
     language = "en"
-    publisher = "Council on Foreign Relations"
+    publisher = "Council on Foreign Relations https://www.foreignaffairs.com/magazine"
     category = "USA, Foreign Affairs"
     description = "The leading forum for serious discussion of American foreign policy and international affairs. https://www.foreignaffairs.com/magazine"
     masthead_url = (

@@ -20,7 +20,7 @@ _name = "London Review of Books"
 class LondonReviewOfBooksPayed(BasicNewsRecipe):
     title = _name
     __author__ = "Kovid Goyal"
-    description = "Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers"  # noqa
+    description = "Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers https://www.lrb.co.uk/"  # noqa
     category = "news, literature, UK"
     publisher = "LRB Ltd."
     language = "en_GB"

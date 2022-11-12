@@ -19,7 +19,10 @@ _name = "NY Times Books"
 class NYTimesBooks(BasicNewsRecipe):
     title = _name
     language = "en"
-    description = "The latest book reviews, best sellers, news and features from The NY TImes critics and reporters."
+    description = (
+        "The latest book reviews, best sellers, news and features from "
+        "The NY TImes critics and reporters. https://www.nytimes.com/section/books"
+    )
     __author__ = "ping"
     publication_type = "newspaper"
     oldest_article = 7  # days

@@ -24,7 +24,7 @@ class AsahiShimbunEnglishNews(BasicNewsRecipe):
     description = (
         "The Asahi Shimbun is widely regarded for its journalism as the most respected daily newspaper in Japan."
         " The English version offers selected articles from the vernacular Asahi Shimbun, as well as extensive"
-        " coverage of cool Japan,focusing on manga, travel and other timely news."
+        " coverage of cool Japan,focusing on manga, travel and other timely news. https://www.asahi.com/ajw/"
     )
     publisher = "The Asahi Shimbun Company"
     publication_type = "newspaper"

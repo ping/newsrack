@@ -11,7 +11,7 @@ _name = "Vox"
 class Vox(BasicNewsRecipe):
     title = _name
     language = "en"
-    description = "General interest news site"
+    description = "General interest news site https://www.vox.com/"
     __author__ = "ping"
     publication_type = "magazine"
     masthead_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Vox_logo.svg/300px-Vox_logo.svg.png"

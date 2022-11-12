@@ -126,7 +126,7 @@ _name = "The Atlantic Magazine"
 
 class TheAtlanticMagazine(BasicNewsRecipe):
     title = _name
-    description = "Current affairs and politics focused on the US"
+    description = "Current affairs and politics focused on the US https://www.theatlantic.com/magazine/"
     INDEX = "https://www.theatlantic.com/magazine/"
 
     __author__ = "Kovid Goyal"

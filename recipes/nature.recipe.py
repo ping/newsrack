@@ -34,6 +34,7 @@ class Nature(BasicNewsRecipe):
         " surprising conclusions.  Nature also provides rapid, authoritative,"
         " insightful and arresting news and interpretation of topical and coming"
         " trends affecting science, scientists and the wider public."
+        " https://www.nature.com/nature/current-issue/"
     )
     language = "en"
     encoding = "utf-8"

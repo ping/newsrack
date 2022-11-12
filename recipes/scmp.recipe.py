@@ -16,7 +16,7 @@ _name = "South China Morning Post"
 class SCMP(BasicNewsRecipe):
     title = _name
     __author__ = "llam"
-    description = "SCMP.com, Hong Kong's premier online English daily provides exclusive up-to-date news, audio video news, podcasts, RSS Feeds, Blogs, breaking news, top stories, award winning news and analysis on Hong Kong and China."  # noqa
+    description = "SCMP.com, Hong Kong's premier online English daily provides exclusive up-to-date news, audio video news, podcasts, RSS Feeds, Blogs, breaking news, top stories, award winning news and analysis on Hong Kong and China. https://www.scmp.com/"  # noqa
     publisher = "South China Morning Post Publishers Ltd."
     publication_type = "newspaper"
     oldest_article = 1
