@@ -128,8 +128,9 @@ class BloombergNews(BasicNewsRecipe):
                 continue
             break
         if not (article and article.get("story")):
-            self.log.warn(f"Unable to find article: {url}")
-            self.abort_article(f"Unable to find article: {url}")
+            err_msg = f"Unable to find article json: {url}"
+            self.log.warn(err_msg)
+            self.abort_article(err_msg)
 
         article = article["story"]
         date_published = parse_date(article["publishedAt"], assume_utc=True)
