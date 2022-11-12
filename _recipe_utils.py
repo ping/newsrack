@@ -17,12 +17,14 @@ default_conv_options: Dict[str, List[str]] = {
 }
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoverOptions:
     """Cover options"""
 
     cover_width: int = 889
     cover_height: int = 1186
+    border_offset: int = 25
+    border_width: int = 2
     text_colour: str = "black"
     background_colour: str = "white"
     title_font_path: str = "static/OpenSans-Bold.ttf"
@@ -53,7 +55,7 @@ class Recipe:
         1  # number of attempts to retry on TimeoutExpired, ReadTimeout
     )
     conv_options: Dict[str, List[str]] = field(
-        default_factory=lambda: default_conv_options, init=False
+        default_factory=lambda: default_conv_options
     )  # conversion options for specific formats
     cover_options: CoverOptions = (
         CoverOptions()

@@ -50,7 +50,6 @@ def generate_cover(
         cover_options.datestamp_font_path, cover_options.datestamp_font_size
     )
 
-    rectangle_offset = 25
     title_texts = [t.strip() for t in title_text.split(":")]
 
     img = Image.new(
@@ -60,16 +59,17 @@ def generate_cover(
     )
     img_draw = ImageDraw.Draw(img)
     # rectangle outline
-    img_draw.rectangle(
-        (
-            rectangle_offset,
-            rectangle_offset,
-            cover_options.cover_width - rectangle_offset,
-            cover_options.cover_height - rectangle_offset,
-        ),
-        width=2,
-        outline=cover_options.text_colour,
-    )
+    if cover_options.border_width and cover_options.border_offset >= 0:
+        img_draw.rectangle(
+            (
+                cover_options.border_offset,
+                cover_options.border_offset,
+                cover_options.cover_width - cover_options.border_offset,
+                cover_options.cover_height - cover_options.border_offset,
+            ),
+            width=cover_options.border_width,
+            outline=cover_options.text_colour,
+        )
 
     total_height = 0
     text_w_h = []
@@ -78,7 +78,10 @@ def generate_cover(
             line_gap = int(cover_options.title_font_size / 4.0)
             max_chars_per_length = int(
                 1.5
-                * (cover_options.cover_width - 2 * rectangle_offset)
+                * (
+                    cover_options.cover_width
+                    - 2 * (cover_options.border_offset + cover_options.border_width)
+                )
                 / cover_options.title_font_size
             )
             wrapper = textwrap.TextWrapper(width=max_chars_per_length)
@@ -102,7 +105,10 @@ def generate_cover(
             line_gap = int(cover_options.datestamp_font_size / 4.0)
             max_chars_per_length = int(
                 1.5
-                * (cover_options.cover_width - 2 * rectangle_offset)
+                * (
+                    cover_options.cover_width
+                    - 2 * (cover_options.border_offset + cover_options.border_width)
+                )
                 / cover_options.datestamp_font_size
             )
             wrapper = textwrap.TextWrapper(width=max_chars_per_length)
