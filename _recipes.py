@@ -37,7 +37,7 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         category="News",
-        tags=["asia"],
+        tags=["asia", "japan"],
     ),
     Recipe(
         recipe="asian-review",
@@ -95,7 +95,7 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         category="News",
-        tags=["asia"],
+        tags=["asia", "singapore"],
     ),
     Recipe(
         recipe="thediplomat",
@@ -194,7 +194,7 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         category="News",
-        tags=["asia"],
+        tags=["asia", "southkorea"],
     ),
     Recipe(
         recipe="knowable-magazine",
@@ -210,7 +210,7 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         category="News",
-        tags=["asia"],
+        tags=["asia", "southkorea"],
     ),
     Recipe(
         recipe="london-review",
@@ -366,7 +366,7 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         category="News",
-        tags=["asia"],
+        tags=["asia", "hongkong"],
     ),
     Recipe(
         recipe="sydney-morning-herald",
@@ -374,6 +374,7 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         category="News",
+        tags=["australia"],
     ),
     Recipe(
         recipe="taipei-times",
@@ -383,7 +384,7 @@ recipes: List[Recipe] = [
         timeout=600,
         category="News",
         enable_on=onlyat_hours(list(range(6, 14)), 8),
-        tags=["asia"],
+        tags=["asia", "taiwan"],
     ),
     Recipe(
         recipe="thirdpole",
