@@ -17,7 +17,7 @@ default_conv_options: Dict[str, List[str]] = {
 }
 
 
-@dataclass(kw_only=True)
+@dataclass
 class CoverOptions:
     """Cover options"""
 
