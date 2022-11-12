@@ -37,8 +37,7 @@ class Guardian(BasicNewsRecipe):
     pub_date = None  # custom publication date
 
     remove_attributes = ["style", "width", "height"]
-    remove_tags_before = [dict(name="main")]
-    remove_tags_after = [dict(name="main")]
+    keep_only_tags = [dict(name=["header", "article"])]
     remove_tags = [
         dict(name=["svg", "input", "button", "label"]),
         dict(id=["bannerandheader", "the-caption", "liveblog-navigation"]),
@@ -62,7 +61,14 @@ class Guardian(BasicNewsRecipe):
         dict(
             name="time", attrs={"data-relativeformat": "med"}
         ),  # remove the relative timestamp, e.g. 8h ago
-        dict(attrs={"data-component": "podcast-help"}),
+        dict(attrs={"data-component": ["podcast-help", "nav2", "SupportTheG"]}),
+        dict(
+            attrs={
+                "data-spacefinder-type": "model.dotcomrendering.pageElements.NewsletterSignupBlockElement"
+            }
+        ),
+        dict(name="gu-island", attrs={"name": ["HeaderTopBar", "Carousel"]}),
+        dict(attrs={"data-link-name": "nav3 : logo"}),
     ]
 
     extra_css = """
@@ -79,7 +85,7 @@ class Guardian(BasicNewsRecipe):
     *[data-gu-name="media"] span, *[item-prop="description"],
     div[data-spacefinder-type$=".ImageBlockElement"] > div,
     div.caption { font-size: 0.8rem; margin-bottom: 0.5rem; }
-    img { width: 100%; height: auto; margin-bottom: 0.2rem; }
+    img { max-width: 100%; height: auto; margin-bottom: 0.2rem; }
     [data-name="placeholder"] { color: #444; font-style: italic; }
     [data-name="placeholder"] a { color: #444; }
     blockquote { font-size: 0.85rem; color: #222; }
