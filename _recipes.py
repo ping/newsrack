@@ -75,7 +75,7 @@ recipes: List[Recipe] = [
         category="Magazines",
         tags=["business"],
         overwrite_cover=False,
-        enable_on=onlyon_weekdays([6]) and onlyat_hours(list(range(8, 16))),
+        enable_on=onlyon_weekdays([5]) and onlyat_hours(list(range(2, 8))),
         timeout=600,
     ),
     Recipe(
@@ -86,7 +86,7 @@ recipes: List[Recipe] = [
         category="News",
         tags=["business"],
         overwrite_cover=False,
-        enable_on=not (onlyon_weekdays([6]) and onlyat_hours(list(range(8, 16)))),
+        enable_on=not (onlyon_weekdays([5]) and onlyat_hours(list(range(2, 8)))),
         timeout=600,
     ),
     Recipe(
