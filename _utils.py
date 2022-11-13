@@ -226,10 +226,15 @@ def generate_cover(
                             - total_height
                             - 2
                             * (cover_options.border_offset + cover_options.border_width)
-                            - 2 * logo_buffer_gap_x  # buffer space
+                            - 2 * logo_buffer_gap_y  # buffer space
                         )
                         / 2
                     )
+                    if (logo.width / logo.height) >= 0.8:
+                        # close to square-ish, so we reduce the max height a little
+                        # so that there's a little more space above the text
+                        logo_max_height = int(logo_max_height * 0.9)
+
                     logo_new_size = calc_resize(
                         (logo_max_width, logo_max_height), logo.size
                     )
