@@ -602,7 +602,9 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                 logger.debug(f'Setting cover for "{source_file_path}"')
                 try:
                     cover_file_path = f"{source_file_path}.png"
-                    generate_cover(cover_file_path, title, recipe.cover_options)
+                    generate_cover(
+                        cover_file_path, title, recipe.cover_options, logger=logger
+                    )
                     cover_cmd = [
                         "ebook-meta",
                         source_file_path,
