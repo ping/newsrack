@@ -24,7 +24,7 @@ class SydneyMorningHerald(BasicNewsRecipe):
 
     language = "en_AU"
     remove_empty_feeds = True
-    masthead_url = "http://images.smh.com.au/2010/02/02/1087188/smh-620.jpg"
+    masthead_url = "https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Sydney_Morning_Herald_logo.svg/1024px-Sydney_Morning_Herald_logo.svg.png"
     publication_type = "newspaper"
 
     no_stylesheets = True
