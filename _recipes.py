@@ -100,9 +100,11 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         category="News",
         tags=["business"],
-        overwrite_cover=False,
         enable_on=not (onlyon_weekdays([5]) and onlyat_hours(list(range(2, 8)))),
         timeout=360,
+        cover_options=CoverOptions(
+            logo_path_or_url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/New_Bloomberg_Logo.svg/1024px-New_Bloomberg_Logo.svg.png"
+        ),
     ),
     Recipe(
         recipe="channelnewsasia",
