@@ -365,9 +365,11 @@ recipes: List[Recipe] = [
         slug="nytimes-print",
         src_ext="mobi",
         target_ext=["epub"],
-        overwrite_cover=False,
         category="News",
         enable_on=onlyat_hours(list(range(4, 8))),
+        cover_options=CoverOptions(
+            logo_path_or_url="https://static01.nyt.com/newsgraphics/2015/12/23/masthead-2016/8118277965bda8228105578895f2f4a7aeb22ce2/nyt-logo.png"
+        ),
     ),
     Recipe(
         recipe="nytimes-books",
