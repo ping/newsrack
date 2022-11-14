@@ -50,7 +50,7 @@ class NewYorker(BasicNewsRecipe):
         [data-testid="message-banner"] { font-size: 0.8rem; }
         [data-testid="message-banner"] h4 { margin-bottom: 0.2rem; }
         .headline { font-size: 1.8rem; margin-bottom: 0.5rem; }
-        .sub-headline { font-size: 1.2rem; margin-top: 0; margin-bottom: 0.5rem; }
+        .sub-headline { font-size: 1.2rem; margin-top: 0; margin-bottom: 0.5rem; font-style: italic; }
         .article-meta {  margin-top: 1rem; margin-bottom: 1rem; }
         .article-meta .author { font-weight: bold; color: #444; display: inline-block; }
         .article-meta .published-dt { display: inline-block; margin-left: 0.5rem; }
