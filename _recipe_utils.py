@@ -3,6 +3,7 @@
 # This software is released under the GNU General Public License v3.0
 # https://opensource.org/licenses/GPL-3.0
 
+from calendar import monthrange
 from dataclasses import dataclass, field
 from datetime import datetime, timezone, timedelta
 from typing import List, Union, Callable, Dict
@@ -182,3 +183,28 @@ def every_x_hours(last_run: float, hours: float, drift: float = 0.0) -> bool:
     last_run = datetime.utcfromtimestamp(last_run).replace(tzinfo=timezone.utc)
     now = datetime.utcnow().replace(tzinfo=timezone.utc)
     return (now - last_run) >= (timedelta(hours=hours) - timedelta(minutes=drift))
+
+
+def last_n_days_of_month(n_days: int, offset: float = 0.0) -> bool:
+    """
+    Enable recipe only at the last n days of the month
+
+    :param n_days:
+    :param offset: timezone offset hours
+    :return:
+    """
+    now = get_local_now(offset)
+    month_start, month_end = monthrange(now.year, now.month)
+    month_days = list(range(month_start, month_end + 1))
+    return onlyon_days(month_days[-n_days:], offset)
+
+
+def first_n_days_of_month(n_days: int, offset: float = 0.0) -> bool:
+    """
+    Enable recipe only at the first n days of the month
+
+    :param n_days:
+    :param offset: timezone offset hours
+    :return:
+    """
+    return onlyon_days(list(range(1, n_days + 1)), offset)

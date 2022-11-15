@@ -18,6 +18,8 @@ from _recipe_utils import (
     onlyon_days,
     onlyat_hours,
     onlyon_weekdays,
+    first_n_days_of_month,
+    last_n_days_of_month,
 )
 
 # Only mobi work as periodicals on the Kindle
@@ -78,8 +80,7 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         overwrite_cover=False,
         category="Magazines",
-        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -4)
-        and onlyon_days(list(range(32 - 14, 32)), -4),
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -4) and last_n_days_of_month(14, -4),
         tags=["editorial", "commentary"],
     ),
     Recipe(
@@ -173,7 +174,7 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         overwrite_cover=False,
         category="Magazines",
-        enable_on=onlyon_days(list(range(1, 1 + 7)) + list(range(32 - 7, 32)), -4)
+        enable_on=(first_n_days_of_month(7, -4) or last_n_days_of_month(7, -4))
         and onlyat_hours(list(range(8, 22)), -4),
     ),
     Recipe(
@@ -226,7 +227,7 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         overwrite_cover=False,
         category="Magazines",
-        enable_on=onlyon_days(list(range(1, 1 + 3)) + list(range(32 - 14, 32)), -5),
+        enable_on=first_n_days_of_month(3, -5) or last_n_days_of_month(14, -5),
         tags=["business"],
     ),
     Recipe(
@@ -301,7 +302,7 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         category="Magazines",
         overwrite_cover=False,
-        enable_on=onlyon_days(list(range(1, 1 + 7)) + list(range(32 - 7, 32)), -5),
+        enable_on=first_n_days_of_month(7, -5) or last_n_days_of_month(7, -5),
         tags=["technology"],
     ),
     Recipe(
@@ -332,7 +333,7 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         category="Magazines",
         overwrite_cover=False,
-        enable_on=onlyon_days(list(range(1, 7)) + list(range(24, 32)))
+        enable_on=(first_n_days_of_month(7) or last_n_days_of_month(7))
         and onlyat_hours(list(range(8, 16))),
     ),
     Recipe(
@@ -389,7 +390,7 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         overwrite_cover=False,
         category="Magazines",
-        enable_on=onlyon_days(list(range(1, 1 + 7)) + list(range(32 - 7, 32)), -5),
+        enable_on=first_n_days_of_month(7, -6) or last_n_days_of_month(7, -5),
         tags=["literature", "arts"],
     ),
     Recipe(
@@ -531,7 +532,7 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         category="Magazines",
-        enable_on=onlyon_days(list(range(1, 7)) + list(range(24, 32)))
+        enable_on=(first_n_days_of_month(7) or last_n_days_of_month(7))
         and onlyat_hours(list(range(4, 12))),
     ),
     Recipe(

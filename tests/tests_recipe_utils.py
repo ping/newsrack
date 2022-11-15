@@ -1,5 +1,6 @@
-from datetime import timedelta
 import unittest
+from calendar import monthrange
+from datetime import timedelta
 
 from _recipe_utils import (
     get_local_now,
@@ -8,6 +9,8 @@ from _recipe_utils import (
     onlyat_hours,
     every_x_days,
     every_x_hours,
+    last_n_days_of_month,
+    first_n_days_of_month,
 )
 
 
@@ -55,3 +58,14 @@ class RecipeUtilsTests(unittest.TestCase):
 
         last_run = (get_local_now() - timedelta(hours=0.75)).timestamp()
         self.assertTrue(every_x_hours(last_run, 1, drift=0.25 * 60))
+
+    def test_last_n_days_of_month(self):
+        now = get_local_now()
+        _, month_end = monthrange(now.year, now.month)
+        self.assertTrue(last_n_days_of_month(month_end - now.day + 1))
+        self.assertFalse(last_n_days_of_month(month_end - now.day))
+
+    def test_first_n_days_of_month(self):
+        now = get_local_now()
+        self.assertTrue(first_n_days_of_month(now.day))
+        self.assertFalse(first_n_days_of_month(now.day - 1))
