@@ -142,7 +142,7 @@ def generate_cover(
         total_height = 0
         text_w_h = []
         for i, text in enumerate(title_texts):
-            if i == 0:
+            if i == 0 and cover_options.title_font_size:
                 line_gap = int(cover_options.title_font_size / 4.0)
                 max_chars_per_length = int(
                     1.5
@@ -169,7 +169,7 @@ def generate_cover(
                     [word_list[-1], text_w, text_h, text_h + line_gap, font_title]
                 )
                 total_height += text_h + line_gap
-            else:
+            elif i > 0 and cover_options.datestamp_font_size:
                 # also support multi-lines for the date string to support long text,
                 # such as "Volume 12, Issue 4 January 2022"
                 line_gap = int(cover_options.datestamp_font_size / 4.0)
