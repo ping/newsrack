@@ -50,8 +50,10 @@ class PoliticoMagazine(BasicNewsRecipe):
     ]
 
     extra_css = """
+    .media-item__summary h2.headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
+    .media-item__summary p.dek { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; margin-top: 0; }
     .fig-graphic img { max-width: 100%; height: auto; }
-    .story-meta__credit { font-size: 0.8rem; margin-top: 0.2rem; }
+    .story-meta__credit, .story-photo__caption { font-size: 0.8rem; margin-top: 0.2rem; }
     """
 
     feeds = [("Magazine", "https://rss.politico.com/magazine.xml")]

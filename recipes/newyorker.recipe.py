@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
-from calibre.web.feeds.news import BasicNewsRecipe, classes
+from calibre.web.feeds.news import BasicNewsRecipe, classes, prefixed_classes
 
 
 def absurl(x):
@@ -60,7 +60,8 @@ class NewYorker(BasicNewsRecipe):
         .caption { font-size: 0.8rem; font-weight: normal; }
     """
     keep_only_tags = [
-        dict(attrs={"class": "og"}),
+        prefixed_classes("IframeEmbedWrapper-sc-"),
+        dict(class_="og"),
         dict(attrs={"data-attribute-verso-pattern": "article-body"}),
         dict(
             attrs={

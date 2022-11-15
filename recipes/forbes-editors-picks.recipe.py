@@ -27,25 +27,24 @@ class ForbesEditorsPicks(BasicNewsRecipe):
 
     remove_tags = [
         dict(
-            attrs={
-                "class": [
-                    "story-package__nav-wrapper",
-                    "container__subnav--outer",
-                    "edit-story-container",
-                    "article-sharing",
-                    "vert-pipe",
-                    "short-bio",
-                    "bottom-contrib-block",
-                    "article-footer",
-                    "sigfile",
-                    "hidden",
-                    "link-embed",
-                    "subhead3-embed",
-                    "recirc-module",
-                    "seo",
-                    "top-ad-container",
-                ]
-            }
+            class_=[
+                "story-package__nav-wrapper",
+                "container__subnav--outer",
+                "edit-story-container",
+                "article-sharing",
+                "vert-pipe",
+                "short-bio",
+                "bottom-contrib-block",
+                "article-footer",
+                "sigfile",
+                "hidden",
+                "link-embed",
+                "subhead3-embed",
+                "recirc-module",
+                "seo",
+                "top-ad-container",
+                "speakr-wrapper",
+            ]
         ),
         dict(name=["fbs-cordial", "fbs-ad", "svg"]),
     ]
@@ -54,7 +53,8 @@ class ForbesEditorsPicks(BasicNewsRecipe):
     .top-label-wrapper a { margin-right: 0.5rem; color: #444; }
     .issue { font-weight: bold; margin-bottom: 0.2rem; }
     h1 { font-size: 1.8rem; margin-bottom: 0.4rem; }
-    .sub-headline { font-size: 1.2rem; font-style: italic; font-weight: normal; margin-bottom: 0.5rem; }
+    h2.subhead-embed { font-size: 1.2rem; font-style: italic; font-weight: normal; margin-bottom: 0.5rem; }
+    h2.subhead-embed strong { font-weight: normal; }
     .top-contrib-block { margin-top: 0.5rem; font-weight: bold; color: #444; }
     .content-data { margin-bottom: 1rem; font-weight: normal; color: unset; }
     .image-embed p { font-size: 0.8rem; margin-top: 0.2rem; margin-bottom: 0.5rem; }

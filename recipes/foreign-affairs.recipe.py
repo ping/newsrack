@@ -137,8 +137,9 @@ class ForeignAffairsRecipe(BasicNewsRecipe):
         classes("article-header article-body article-lead-image article-body-text"),
     ]
     remove_tags = [
-        classes("loading-indicator paywall article-footer article-tools"),
-        dict(name=["svg"]),
+        classes("loading-indicator paywall article-footer article-tools "),
+        dict(attrs={"data-buylink-isbn": True}),
+        dict(name=["svg", "button"]),
     ]
 
     extra_css = """

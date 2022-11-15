@@ -37,6 +37,14 @@ class Vox(BasicNewsRecipe):
         ("Font Page", "https://www.vox.com/rss/front-page/index.xml"),
         ("All", "https://www.vox.com/rss/index.xml"),
     ]
+    # e-image
+    extra_css = """
+    h2 { font-size: 1.8rem; margin-bottom: 0.4rem; }
+    .article-meta { padding-bottom: 0.5rem; }
+    .article-meta .author { font-weight: bold; color: #444; margin-right: 0.5rem; }
+    .e-image cite { display: block; }
+    .e-image div, .e-image cite { font-size: 0.8rem; }
+    """
 
     def publication_date(self):
         return self.pub_date
@@ -45,3 +53,18 @@ class Vox(BasicNewsRecipe):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
             self.title = f"{_name}: {article.utctime:%-d %b, %Y}"
+
+    def parse_feeds(self):
+        parsed_feeds = super().parse_feeds()
+        for feed in parsed_feeds:
+            for article in feed.articles:
+                article.content = (
+                    f"""
+                <div class="article-meta">
+                    <span class="author">{article.author}</span>
+                    <span class="published-dt">{article.utctime:%-I:%M%p, %-d %b, %Y}</span>
+                </div>
+                """
+                    + article.content
+                )
+        return parsed_feeds

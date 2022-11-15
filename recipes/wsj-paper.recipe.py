@@ -43,7 +43,7 @@ class WSJ(BasicNewsRecipe):
 
     extra_css = """
         .wsj-article-headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
-        .sub-head { font-size: 1.2rem; font-style: italic; margin-bottom: 0.5rem; }
+        .sub-head { font-size: 1.2rem; font-style: italic; margin-bottom: 0.5rem; font-weight: normal; }
         .bylineWrap { margin-top: 0.5rem; margin-bottom: 1rem; font-weight: bold; color: #444;  }
         .image-container img, .media-object img {
             display: block; margin-bottom: 0.3rem;
@@ -146,7 +146,6 @@ class WSJ(BasicNewsRecipe):
                         sections.append(s)
             if sections:
                 self.title = f"{_name}: {issue_date:%-d %b, %Y}"
-                self.log(f'Issue date is: {issue_date:%Y%m%d}, title is "{self.title}"')
                 break
 
         if not sections:
