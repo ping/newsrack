@@ -34,7 +34,7 @@ class NYTimesBooks(BasicNewsRecipe):
     pub_date = None  # custom publication date
 
     simultaneous_downloads = 1
-    delay = 1
+    delay = 3
     bot_blocked = False
 
     remove_javascript = True
