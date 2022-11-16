@@ -364,7 +364,7 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         category="News",
-        timeout=600,
+        timeout=900,
         retry_attempts=0,
         enable_on=onlyat_hours(
             list(range(0, 4)) + list(range(8, 18)) + list(range(22, 24))
