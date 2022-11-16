@@ -192,6 +192,7 @@ In alphabetical order:
 3. [Bloomberg Businessweek](https://www.bloomberg.com/businessweek)
 4. [The Diplomat](https://thediplomat.com/)
 5. [The Economist](https://www.economist.com/printedition)
+5. [FiveThirtyEight](https://fivethirtyeight.com/)
 6. [Forbes - Editor's Picks](https://www.forbes.com/editors-picks/)
 7. [Foreign Affairs](https://www.foreignaffairs.com/magazine)
 8. [Harvard Business Review](https://hbr.org/magazine)

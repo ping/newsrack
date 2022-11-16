@@ -153,6 +153,17 @@ recipes: List[Recipe] = [
         ),
     ),
     Recipe(
+        recipe="fivethirtyeight",
+        slug="fivethirtyeight",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Magazines",
+        tags=["politics"],
+        cover_options=CoverOptions(
+            logo_path_or_url="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/FiveThirtyEight_Logo.svg/1024px-FiveThirtyEight_Logo.svg.png"
+        ),
+    ),
+    Recipe(
         recipe="forbes-editors-picks",
         slug="forbes-editors-picks",
         src_ext="mobi",
