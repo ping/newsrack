@@ -856,7 +856,6 @@ class NewYorkTimesPrint(BasicNewsRecipe):
             for article in articles:
                 self.log(article["title"] + " - " + article["url"])
                 articles_count += 1
-        self.log(f"{'*' * 15} Downloading {articles_count} articles.")
         return filtered_feeds
 
     # The NYT occassionally returns bogus articles for some reason just in case
