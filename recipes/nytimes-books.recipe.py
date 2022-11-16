@@ -3,15 +3,16 @@
 # This software is released under the GNU General Public License v3.0
 # https://opensource.org/licenses/GPL-3.0
 
-import os
 import datetime
-import re
 import json
+import os
+import re
 from urllib.parse import urlparse
 
-from calibre.web.feeds.news import BasicNewsRecipe
-from calibre.web.feeds import Feed
+from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from calibre.web.feeds import Feed
+from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "NY Times Books"
 
@@ -31,6 +32,10 @@ class NYTimesBooks(BasicNewsRecipe):
     timeout = 20
     timefmt = ""
     pub_date = None  # custom publication date
+
+    simultaneous_downloads = 1
+    delay = 1
+    bot_blocked = False
 
     remove_javascript = True
     no_stylesheets = True
@@ -78,13 +83,6 @@ class NYTimesBooks(BasicNewsRecipe):
     feeds = [
         ("NYTimes Books", "https://rss.nytimes.com/services/xml/rss/nyt/Books.xml"),
     ]
-
-    def get_browser(self, *a, **kw):
-        kw[
-            "user_agent"
-        ] = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
-        br = BasicNewsRecipe.get_browser(self, *a, **kw)
-        return br
 
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
@@ -771,3 +769,33 @@ class NYTimesBooks(BasicNewsRecipe):
                 new_feeds.append(curr_feed)
 
         return new_feeds
+
+    # The NYT occassionally returns bogus articles for some reason just in case
+    # it is because of cookies, dont store cookies
+    def get_browser(self, *args, **kwargs):
+        return self
+
+    def clone_browser(self, *args, **kwargs):
+        return self.get_browser()
+
+    def open_novisit(self, *args, **kwargs):
+        if self.bot_blocked:
+            self.log.warn(f"Block detected. Skipping {args[0]}")
+            # Abort article without making actual request
+            self.abort_article(f"Block detected. Skipped {args[0]}")
+
+        br = browser(
+            user_agent="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+        )
+        try:
+            return br.open_novisit(*args, **kwargs)
+        except Exception as e:
+            if hasattr(e, "code") and e.code == 403:
+                self.bot_blocked = True
+                err_msg = f"Blocked by bot detection: {args[0]}"
+                self.log.warn(err_msg)
+                self.abort_recipe_processing(err_msg)
+                self.abort_article(err_msg)
+            raise
+
+    open = open_novisit

@@ -7,14 +7,15 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import datetime
-import re
 import json
+import re
 from pprint import pprint  # noqa
 
+from calibre import browser
 from calibre import strftime
+from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.utils.date import strptime
 from calibre.web.feeds.news import BasicNewsRecipe
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
 _name = "NY Times (Print)"
 
@@ -36,7 +37,12 @@ class NewYorkTimesPrint(BasicNewsRecipe):
     timeout = 20
     timefmt = ""
     pub_date = None  # custom publication date
+
     INDEX = "https://www.nytimes.com/section/todayspaper"
+
+    simultaneous_downloads = 1
+    delay = 3
+    bot_blocked = False
 
     remove_attributes = ["style", "font"]
     remove_tags_before = [dict(id="story")]
@@ -820,12 +826,38 @@ class NewYorkTimesPrint(BasicNewsRecipe):
                 return 0, ""
             return 1, name.lower()
 
-        feeds.sort(key=skey)
-        for section, articles in feeds:
+        filtered_feeds = []
+        # skip sections
+        for section in feeds:
+            section_name = section[0]
+            skip_section = False
+            for skip_name_regex in [
+                r".*\bSports\b.*",
+                r".*\bCorrections\b.*",
+                r".*\bArts\b.*",
+                r".*\bStyles\b.*",
+                "Obituaries",
+                "Real Estate",
+                "Vows",
+                "Food",
+                "Marathon",
+            ]:
+                if re.search(skip_name_regex, section_name):
+                    self.log.warn(f"Skipped section: {section_name}")
+                    skip_section = True
+                    continue
+            if not skip_section:
+                filtered_feeds.append(section)
+
+        filtered_feeds.sort(key=skey)
+        articles_count = 0
+        for section, articles in filtered_feeds:
             self.log("\n" + section)
             for article in articles:
                 self.log(article["title"] + " - " + article["url"])
-        return feeds
+                articles_count += 1
+        self.log(f"{'*' * 15} Downloading {articles_count} articles.")
+        return filtered_feeds
 
     # The NYT occassionally returns bogus articles for some reason just in case
     # it is because of cookies, dont store cookies
@@ -836,12 +868,23 @@ class NewYorkTimesPrint(BasicNewsRecipe):
         return self.get_browser()
 
     def open_novisit(self, *args, **kwargs):
-        from calibre import browser
+        if self.bot_blocked:
+            self.log.warn(f"Block detected. Skipping {args[0]}")
+            # Abort article without making actual request
+            self.abort_article(f"Block detected. Skipped {args[0]}")
 
         br = browser(
             user_agent="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
         )
-        response = br.open_novisit(*args, **kwargs)
-        return response
+        try:
+            return br.open_novisit(*args, **kwargs)
+        except Exception as e:
+            if hasattr(e, "code") and e.code == 403:
+                self.bot_blocked = True
+                err_msg = f"Blocked by bot detection: {args[0]}"
+                self.log.warn(err_msg)
+                self.abort_recipe_processing(err_msg)
+                self.abort_article(err_msg)
+            raise
 
     open = open_novisit

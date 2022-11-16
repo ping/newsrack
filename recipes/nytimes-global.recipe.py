@@ -7,11 +7,12 @@
 nytimes.com
 """
 import datetime
-import re
 import json
+import re
 
-from calibre.web.feeds.news import BasicNewsRecipe
+from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "NY Times"
 
@@ -33,6 +34,7 @@ class NYTimesGlobal(BasicNewsRecipe):
 
     simultaneous_downloads = 1
     delay = 1
+    bot_blocked = False
 
     remove_javascript = True
     no_stylesheets = True
@@ -119,13 +121,6 @@ class NYTimesGlobal(BasicNewsRecipe):
         # ("Sports", "https://www.nytimes.com/services/xml/rss/nyt/Sports.xml"),
         ("Technology", "https://feeds.nytimes.com/nyt/rss/Technology"),
     ]
-
-    def get_browser(self, *a, **kw):
-        kw[
-            "user_agent"
-        ] = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
-        br = BasicNewsRecipe.get_browser(self, *a, **kw)
-        return br
 
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
@@ -752,3 +747,33 @@ class NYTimesGlobal(BasicNewsRecipe):
         # raw_html and rely on remove_tags to clean it up
         self.log(f"Unable to find article from script in {url}")
         return raw_html
+
+    # The NYT occassionally returns bogus articles for some reason just in case
+    # it is because of cookies, dont store cookies
+    def get_browser(self, *args, **kwargs):
+        return self
+
+    def clone_browser(self, *args, **kwargs):
+        return self.get_browser()
+
+    def open_novisit(self, *args, **kwargs):
+        if self.bot_blocked:
+            self.log.warn(f"Block detected. Skipping {args[0]}")
+            # Abort article without making actual request
+            self.abort_article(f"Block detected. Skipped {args[0]}")
+
+        br = browser(
+            user_agent="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+        )
+        try:
+            return br.open_novisit(*args, **kwargs)
+        except Exception as e:
+            if hasattr(e, "code") and e.code == 403:
+                self.bot_blocked = True
+                err_msg = f"Blocked by bot detection: {args[0]}"
+                self.log.warn(err_msg)
+                self.abort_recipe_processing(err_msg)
+                self.abort_article(err_msg)
+            raise
+
+    open = open_novisit
