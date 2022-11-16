@@ -870,7 +870,9 @@ class NewYorkTimesPrint(BasicNewsRecipe):
         if self.bot_blocked:
             self.log.warn(f"Block detected. Skipping {args[0]}")
             # Abort article without making actual request
-            self.abort_article(f"Block detected. Skipped {args[0]}")
+            err_msg = f"Block detected. Skipped {args[0]}"
+            self.abort_recipe_processing(err_msg)
+            self.abort_article(err_msg)
 
         br = browser(
             user_agent="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
