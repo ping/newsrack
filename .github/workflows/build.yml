@@ -107,6 +107,7 @@ jobs:
           sh build.sh
           if [[ -f 'job_summary.md' ]]; then cat 'job_summary.md' >> $GITHUB_STEP_SUMMARY; fi
           echo -e "\n<"'!'"-- Commit ${GITHUB_SHA:0:7} -->" >> public/index.html
+          rm -rf "$CALIBRE_CONFIG_DIRECTORY"
 
       # Ref: https://github.com/actions/starter-workflows/blob/main/pages/static.yml
       - name: Upload artifact
