@@ -9,6 +9,7 @@ nytimes.com
 import datetime
 import json
 import re
+from urllib.parse import urlparse
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -26,14 +27,13 @@ class NYTimesGlobal(BasicNewsRecipe):
     masthead_url = "https://mwcm.nyt.com/.resources/mkt-wcm/dist/libs/assets/img/logo-nyt-header.svg"
 
     oldest_article = 1  # days
-    max_articles_per_feed = 25
+    max_articles_per_feed = 20
     use_embedded_content = False
     timeout = 20
     timefmt = ""
     pub_date = None  # custom publication date
 
-    simultaneous_downloads = 1
-    delay = 3
+    delay = 2
     bot_blocked = False
 
     remove_javascript = True
@@ -756,13 +756,37 @@ class NYTimesGlobal(BasicNewsRecipe):
     def clone_browser(self, *args, **kwargs):
         return self.get_browser()
 
+    def open_from_wayback(self, url, br=None):
+        """
+        Fallback to wayback cache from calibre.
+        Modified from `download_url()` from https://github.com/kovidgoyal/calibre/blob/d2977ebec40a66af568adff7976cfd16f99ccbe5/src/calibre/web/site_parsers/nytimes.py
+        :param url:
+        :param br:
+        :return:
+        """
+        from mechanize import Request
+
+        rq = Request(
+            "https://wayback1.calibre-ebook.com/nytimes",
+            data=json.dumps({"url": url}),
+            headers={"User-Agent": "calibre", "Content-Type": "application/json"},
+        )
+        if br is None:
+            br = browser()
+        br.set_handle_gzip(True)
+        return br.open_novisit(rq, timeout=3 * 60)
+
     def open_novisit(self, *args, **kwargs):
-        if self.bot_blocked:
-            self.log.warn(f"Block detected. Skipping {args[0]}")
-            # Abort article without making actual request
-            err_msg = f"Block detected. Skipped {args[0]}"
-            self.abort_recipe_processing(err_msg)
-            self.abort_article(err_msg)
+        target_url = args[0]
+        is_nyt_static_asset = re.match(
+            r"static\d+\.nyt\.com", urlparse(target_url).netloc
+        )
+
+        if not is_nyt_static_asset and self.bot_blocked:
+            # don't use wayback for static assets because these are not blocked currently
+            # and the wayback cache does not support them anyway
+            self.log.warn(f"Block detected. Fetching from wayback cache: {target_url}")
+            return self.open_from_wayback(target_url)
 
         br = browser(
             user_agent="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
@@ -772,10 +796,17 @@ class NYTimesGlobal(BasicNewsRecipe):
         except Exception as e:
             if hasattr(e, "code") and e.code == 403:
                 self.bot_blocked = True
-                err_msg = f"Blocked by bot detection: {args[0]}"
-                self.log.warn(err_msg)
-                self.abort_recipe_processing(err_msg)
-                self.abort_article(err_msg)
+                self.delay = 0  # I don't think this makes a difference but oh well
+                if is_nyt_static_asset:
+                    # if static asset is also blocked, give up
+                    err_msg = f"Blocked by bot detection: {target_url}"
+                    self.log.warn(err_msg)
+                    self.abort_recipe_processing(err_msg)
+                    self.abort_article(err_msg)
+                self.log.warn(
+                    f"Blocked by bot detection. Fetching from wayback cache: {target_url}"
+                )
+                return self.open_from_wayback(target_url)
             raise
 
     open = open_novisit
