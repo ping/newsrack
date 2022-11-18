@@ -9,7 +9,6 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 import datetime
 import json
 import re
-from pprint import pprint  # noqa
 from urllib.parse import urlparse
 
 from calibre import browser
