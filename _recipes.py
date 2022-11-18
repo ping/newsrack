@@ -465,6 +465,16 @@ recipes: List[Recipe] = [
         ),
     ),
     Recipe(
+        recipe="spectator-magazine",
+        slug="spectator-magazine",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Magazines",
+        tags=["europe", "britain"],
+        enable_on=onlyon_weekdays([4]),
+        overwrite_cover=False,
+    ),
+    Recipe(
         recipe="sydney-morning-herald",
         slug="sydney-morning-herald",
         src_ext="mobi",
