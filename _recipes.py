@@ -92,7 +92,7 @@ recipes: List[Recipe] = [
         tags=["business"],
         overwrite_cover=False,
         enable_on=onlyon_weekdays([5]) and onlyat_hours(list(range(2, 8))),
-        timeout=360,
+        timeout=600,
     ),
     Recipe(
         recipe="bloomberg-news",
