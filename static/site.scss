@@ -26,14 +26,11 @@ $dark-error-color: #ff6464;
 $dark-tags-color: mix($dark-base-disabled-color, $dark-base-color);
 
 
-/* Use pt instead of px because px is odd on the Kindle browser */
-html {
-    font-size: 10pt;
-}
 body {
+    font-size: 10pt;    /* Use pt instead of px because px is odd on the Kindle browser */
     font-family: sans-serif;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 1em;
+    margin-right: 1em;
     color: $base-color;
     background-color: $base-bg-color;
 }
@@ -51,61 +48,61 @@ a {
 }
 
 h1 {
-    font-size: 1.25rem;
+    font-size: 1.25em;
     text-align: center;
 
     svg, img {
         vertical-align: middle;
-        width: 1.25rem;
-        height: 1.25rem;
+        width: 1em;
+        height: 1em;
     }
 }
 
 // search form
 #search-form-container {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 0.5rem;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
 }
 
 #search-text {
     display: inline-block;
-    margin-right: 0.3rem;
-    font-size: 0.8rem;
-    padding: 0.2rem;
+    margin-right: 0.3em;
+    font-size: 0.8em;
+    padding: 0.2em;
     width: 100%;
 }
 #search-button {
-    font-size: 0.8rem;
+    font-size: 0.8em;
     display: inline-block;
-    padding: 0.2rem;
-    min-width: 4rem;
+    padding: 0.2em;
+    min-width: 4em;
     cursor: pointer;
 }
 #search-info {
     display: inline-block;
-    font-size: 0.75rem;
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
+    font-size: 0.75em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
     color: $error-color;
 }
 
 .category-container {
     border: 1px solid $base-disabled-color;
-    border-radius: 0.25rem;
-    padding: 0.35rem 0.7rem;
-    margin-bottom: 0.5rem;
+    border-radius: 0.25em;
+    padding: 0.35rem 0.7em;
+    margin-bottom: 0.5em;
 }
 
 h2.category {
     margin: 0.5rem 0;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-weight: 500;
 
     .opds {
         float: right;
-        font-size: 0.8rem;
-        margin-top: 0.3rem;
+        font-size: 0.7em;
+        margin-top: 0.3em;
     }
 
     &:hover {
@@ -115,37 +112,37 @@ h2.category {
     &:before {
         content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" style="stroke: %23000000;" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <polyline points="9 6 15 12 9 18"></polyline></svg>');
         display: inline-block;
-        margin-right: 0.25rem;
-        width: 1rem;
-        height: 1rem;
+        margin-right: 0.25em;
+        width: 1em;
+        height: 1em;
     }
 
     &.is-open {
         &:before {
             content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" style="stroke: %23000000;" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="6 9 12 15 18 9"></polyline></svg>');
             display: inline-block;
-            margin-right: 0.25rem;
-            width: 1rem;
-            height: 1rem;
+            margin-right: 0.25em;
+            width: 1em;
+            height: 1em;
         }
     }
 
 }
 
 .books {
-    padding-left: 1.5rem;
-    margin-top: 0.5rem;
+    padding-left: 1.5em;
+    margin-top: 0.5em;
     margin-bottom: 0;
 
     li {
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
+        margin-bottom: 0.5em;
+        font-size: 1em;
         text-transform: none;
 
         .pub-date {
             display: block;
-            margin-top: 0.2rem;
-            font-size: 0.8rem;
+            margin-top: 0.2em;
+            font-size: 0.8em;
             color: $base-disabled-color;
 
             &:hover {
@@ -154,38 +151,38 @@ h2.category {
             &:before {
                 content: "+";
                 font-weight: bold;
-                margin-right: 0.2rem;
+                margin-right: 0.2em;
             }
 
             &.is-open {
-                margin-bottom: 0.5rem;
+                margin-bottom: 0.5em;
                 &:before {
                     content: "-";
                     font-weight: bold;
-                    margin-right: 0.2rem;
+                    margin-right: 0.2em;
                 }
             }
         }
         .tags {
             font-family: monospace;
-            font-size: 0.7rem;
+            font-size: 0.9em;
             font-weight: bold;
-            margin-left: 0.5rem;
+            margin-left: 0.5em;
             color: $tags-color;
 
         }
         .contents {
             margin: 0.5rem 0 1.5rem 0;
             color: $base-color;
-            font-size: 0.8rem;
+            font-size: 0.8em;
             line-height: 1.1;
             ul {
                 margin: 0.4rem 0 0.4rem 0;
-                padding-left: 0.25rem;
+                padding-left: 0.25em;
                 list-style-position: inside;
                 li {
-                    font-size: 0.8rem;
-                    margin-bottom: 0.1rem;
+                    //font-size: 1em;
+                    margin-bottom: 0.1em;
                     width: 100%;
                     white-space: nowrap;
                     overflow: hidden;
@@ -199,23 +196,23 @@ h2.category {
         text-align: center;
 
         .close-cat-shortcut {
-            font-size: 0.8rem;
+            font-size: 0.8em;
             display: inline-block;
             margin: 0.25rem 0;
 
             &:before {
                 content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.036 7.976a.75.75 0 00-1.06 1.06L10.939 12l-2.963 2.963a.75.75 0 101.06 1.06L12 13.06l2.963 2.964a.75.75 0 001.061-1.06L13.061 12l2.963-2.964a.75.75 0 10-1.06-1.06L12 10.939 9.036 7.976z"></path><path fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"></path></svg>');
                 display: inline-block;
-                padding-left: 0.25rem;
-                padding-right: 0.25rem;
-                width: 1.2rem;
-                height: 1.2rem;
+                padding-left: 0.25em;
+                padding-right: 0.25em;
+                width: 1.5em;
+                height: 1.5em;
             }
         }
     }
 }
 .book {
-    margin-left: 0.5rem;
+    margin-left: 0.5em;
     font-family: monospace;
     background-color: $book-bg-color;
     border: 1px solid $base-disabled-color;
@@ -224,34 +221,34 @@ h2.category {
     display: inline-block;
 
     .file-size {
-        margin-left: 0.3rem;
-        font-size: 0.7rem;
+        margin-left: 0.3em;
+        font-size: 0.7em;
         color: $base-disabled-color;
     }
 }
 
 footer {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    padding-top: 0.5rem;
-    font-size: 0.8rem;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding-top: 0.5em;
+    font-size: 0.85em;
     text-align: center;
 
     .meta {
-        margin-top: 0.2rem;
-        font-size: 0.7rem;
+        margin-top: 0.2em;
+        font-size: 0.8em;
 
         .refreshed-info {
             display: inline-block;
-            margin-left: 0.2rem;
+            margin-left: 0.2em;
         }
 
         .git:before {
             content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path style="fill: %2000000;" d="M13 21v2.5l-3-2-3 2V21h-.5A3.5 3.5 0 0 1 3 17.5V5a3 3 0 0 1 3-3h14a1 1 0 0 1 1 1v17a1 1 0 0 1-1 1h-7zm0-2h6v-3H6.5a1.5 1.5 0 0 0 0 3H7v-2h6v2zm6-5V4H6v10.035A3.53 3.53 0 0 1 6.5 14H19zM7 5h2v2H7V5zm0 3h2v2H7V8zm0 3h2v2H7v-2z"/></svg>');
             display: inline-block;
-            width: 0.7rem;
-            height: 0.7rem;
-            margin-right: 0.2rem;
+            width: 1em;
+            height: 1em;
+            margin-right: 0.2em;
         }
     }
 }
@@ -329,6 +326,56 @@ footer {
         .meta {
             .git:before {
                 content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path style="fill: %23e7e9f2;" d="M13 21v2.5l-3-2-3 2V21h-.5A3.5 3.5 0 0 1 3 17.5V5a3 3 0 0 1 3-3h14a1 1 0 0 1 1 1v17a1 1 0 0 1-1 1h-7zm0-2h6v-3H6.5a1.5 1.5 0 0 0 0 3H7v-2h6v2zm6-5V4H6v10.035A3.53 3.53 0 0 1 6.5 14H19zM7 5h2v2H7V5zm0 3h2v2H7V8zm0 3h2v2H7v-2z"/></svg>');
+            }
+        }
+    }
+}
+
+// Non-Kindle
+body.nonkindle {
+    font-size: 18px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    #search-text {
+        width: 85%;
+    }
+
+}
+
+
+@media (max-width: 780px) {
+    body.nonkindle {
+        max-width: unset;
+        margin-left: 1em;
+        margin-right: 1em;
+
+        #search-text {
+            width: 100%;
+        }
+
+        #search-form-container {
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    body.nonkindle {
+        ol.books li {
+            span.title {
+                display: block;
+                margin-bottom: 0.2em;
+            }
+
+            .book:first-of-type {
+                margin-left: 0;
+            }
+
+            .pub-date {
+                padding-bottom: 0.1em;
+                margin-bottom: 0.2em;
             }
         }
     }

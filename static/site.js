@@ -17,9 +17,7 @@ https://opensource.org/licenses/GPL-3.0
     // stupid workaround instead of relying on screen size
     // to increase font size for non-kindle devices
     if (navigator.userAgent.indexOf("Mozilla/5.0 (X11") < 0) {
-        var cssEle = document.createElement("style");
-        cssEle.innerText = "{nonkindle}";       // replaced by _generate.py
-        document.head.appendChild(cssEle);
+        document.body.classList.add("nonkindle");
     }
 
     // in miliseconds
