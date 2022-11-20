@@ -5,8 +5,8 @@ ft.com
 
 import json
 import re
-from datetime import date, datetime, timezone
-from urllib.parse import quote_plus
+from datetime import datetime, timezone
+from urllib.parse import quote_plus, urljoin
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
@@ -54,15 +54,15 @@ class FinancialTimesPrint(BasicNewsRecipe):
         # International edition: https://www.ft.com/todaysnewspaper/international
         ans = self.ft_parse_index(soup)
         if not ans:
-            is_sunday = date.today().weekday() == 6
+            is_sunday = datetime.now(timezone.utc).weekday() == 6
             if is_sunday:
-                raise ValueError(
-                    "The Financial Times Newspaper is not published on Sundays."
-                )
+                err_msg = "The Financial Times Newspaper is not published on Sundays."
+                self.log.warn(err_msg)
+                raise ValueError(err_msg)
             else:
-                raise ValueError(
-                    "The Financial Times Newspaper is not published today."
-                )
+                err_msg = "The Financial Times Newspaper is not published today."
+                self.log.warn(err_msg)
+                raise ValueError(err_msg)
         return ans
 
     def ft_parse_index(self, soup):
@@ -75,8 +75,7 @@ class FinancialTimesPrint(BasicNewsRecipe):
             for a in section.findAll(
                 "a", href=True, **classes("js-teaser-heading-link")
             ):
-                url = a["href"]
-                url = "https://www.ft.com" + url
+                url = urljoin("https://www.ft.com", a["href"])
                 title = self.tag_to_string(a)
                 desc_parent = a.findParent("div")
                 div = desc_parent.find_previous_sibling(
@@ -106,7 +105,10 @@ class FinancialTimesPrint(BasicNewsRecipe):
                 continue
             break
         if not (article and article.get("articleBody")):
-            self.abort_article(f"Unable to find article: {url}")
+            err_msg = f"Unable to find article: {url}"
+            self.log.warn(err_msg)
+            self.abort_article(err_msg)
+
         try:
             author = article.get("author", {}).get("name", "")
         except AttributeError:

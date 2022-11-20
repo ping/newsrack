@@ -6,13 +6,13 @@
 """
 ft.com
 """
-from urllib.parse import urljoin, quote_plus
 import json
 import re
 from datetime import datetime, timezone
+from urllib.parse import urljoin, quote_plus
 
-from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Financial Times"
 
@@ -63,16 +63,6 @@ class FinancialTimes(BasicNewsRecipe):
         # ("How to Spend It", "https://www.ft.com/htsi?format=rss"),
     ]
 
-    # site appears defunct
-    # def get_cover_url(self):
-    #     soup = self.index_to_soup(
-    #         "https://www.todayspapers.co.uk/the-financial-times-front-page-today/"
-    #     )
-    #     tag = soup.find("div", attrs={"class": "elementor-image"})
-    #     if tag:
-    #         self.cover_url = tag.find("img")["src"]
-    #     return getattr(self, "cover_url", None)
-
     def print_version(self, url):
         return urljoin("https://ft.com", url)
 
@@ -85,7 +75,10 @@ class FinancialTimes(BasicNewsRecipe):
                 continue
             break
         if not (article and article.get("articleBody")):
-            self.abort_article(f"Unable to find article: {url}")
+            err_msg = f"Unable to find article: {url}"
+            self.log.warn(err_msg)
+            self.abort_article(err_msg)
+
         try:
             author = article.get("author", {}).get("name", "")
         except AttributeError:
@@ -101,8 +94,6 @@ class FinancialTimes(BasicNewsRecipe):
         paragraphs = []
         for para in article["articleBody"].split("\n\n"):
             if para.startswith("RECOMMENDED"):  # skip recommended inserts
-                continue
-            if "ARE YOU PERSONALLY AFFECTED BY THE WAR IN UKRAINE" in para.upper():
                 continue
             if "NEWSLETTER" in para:
                 continue
