@@ -5,8 +5,8 @@
 # Original from https://github.com/kovidgoyal/calibre/blob/29cd8d64ea71595da8afdaec9b44e7100bff829a/recipes/new_yorker.recipe
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-from collections import OrderedDict
 import json
+from collections import OrderedDict
 from datetime import datetime, timezone
 
 from calibre import browser

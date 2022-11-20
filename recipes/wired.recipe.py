@@ -5,9 +5,10 @@ __copyright__ = "2014, Darko Miletic <darko.miletic at gmail.com>"
 www.wired.com
 """
 from datetime import datetime
+
 from calibre import browser
-from calibre.web.feeds.news import BasicNewsRecipe, classes
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 _name = "Wired Magazine"
 

@@ -3,9 +3,10 @@ __copyright__ = "2010-2011, Darko Miletic <darko.miletic at gmail.com>"
 """
 smh.com.au
 """
+from calibre.ebooks.BeautifulSoup import BeautifulSoup
+
 # Original at https://github.com/kovidgoyal/calibre/blob/8bc3d757f4bb78ee002caf2766d7285497349097/recipes/smh.recipe
 from calibre.web.feeds.news import BasicNewsRecipe
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
 _name = "Sydney Morning Herald"
 

@@ -4,8 +4,9 @@
 # https://opensource.org/licenses/GPL-3.0
 
 from datetime import timezone, timedelta
-from calibre.web.feeds.news import BasicNewsRecipe
+
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Taipei Times"
 

@@ -7,16 +7,16 @@ try:
 except ImportError:
     from cookielib import Cookie
 
-from datetime import datetime, timezone
 import json
-from html5_parser import parse
-from lxml import etree
 from collections import defaultdict
+from datetime import datetime, timezone
 
 from calibre import replace_entities
 from calibre.ebooks.BeautifulSoup import NavigableString, Tag
 from calibre.utils.cleantext import clean_ascii_chars
 from calibre.web.feeds.news import BasicNewsRecipe, classes
+from html5_parser import parse
+from lxml import etree
 
 # For past editions, set date to, for example, '2020-11-28'
 edition_date = None

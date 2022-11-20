@@ -2,12 +2,13 @@
 # vim:fileencoding=utf-8
 # License: GPLv3 Copyright: 2015, Kovid Goyal <kovid at kovidgoyal.net>
 from __future__ import unicode_literals
-from datetime import datetime, timezone
+
 import json
 import re
+from datetime import datetime, timezone
 
-from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from calibre.web.feeds.news import BasicNewsRecipe
 
 
 def embed_image(soup, block):

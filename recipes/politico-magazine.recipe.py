@@ -8,8 +8,8 @@ politico.com
 """
 from datetime import timezone
 
-from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.web.feeds import Feed
+from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "POLITICO Magazine"
 

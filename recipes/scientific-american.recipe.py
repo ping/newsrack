@@ -3,13 +3,13 @@ __license__ = "GPL v3"
 
 # Original at https://github.com/kovidgoyal/calibre/blob/29cd8d64ea71595da8afdaec9b44e7100bff829a/recipes/scientific_american.recipe
 
-from urllib.parse import urlparse
 import json
 import re
 from datetime import datetime, timezone, timedelta
+from urllib.parse import urlparse
 
-from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from calibre.web.feeds.news import BasicNewsRecipe
 from css_selectors import Select
 
 

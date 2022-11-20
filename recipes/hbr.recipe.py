@@ -4,8 +4,8 @@ from datetime import datetime, timezone
 from urllib.parse import urljoin
 
 from calibre import browser
-from calibre.web.feeds.news import BasicNewsRecipe, classes
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 # Original https://github.com/kovidgoyal/calibre/blob/49a1d469ce4f04f79ce786a75b8f4bdcfd32ad2c/recipes/hbr.recipe
 

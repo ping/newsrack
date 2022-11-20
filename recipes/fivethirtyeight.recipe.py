@@ -6,16 +6,16 @@
 """
 fivethirtyeight.com
 """
-from datetime import datetime, timedelta, timezone
-import time
-from urllib.parse import urlencode
 import json
-from html import unescape
 import shutil
+import time
+from datetime import datetime, timedelta, timezone
+from html import unescape
+from urllib.parse import urlencode
 
-from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
+from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "FiveThirtyEight"
 
@@ -119,7 +119,6 @@ class FiveThirtyEight(BasicNewsRecipe):
                     "_": int(time.time() * 1000),
                 }
                 endpoint = f"{feed_url}?{urlencode(params)}"
-                print("*" * 10, endpoint)
                 try:
                     res = br.open_novisit(endpoint)
                     posts_json_raw = res.read().decode("utf-8")

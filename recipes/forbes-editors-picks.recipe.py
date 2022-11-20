@@ -1,8 +1,8 @@
 import json
 from datetime import datetime, timezone
-from calibre.web.feeds.news import BasicNewsRecipe
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
+from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Forbes - Editor's Picks"
 

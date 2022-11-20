@@ -15,6 +15,7 @@ __copyright__ = (
 japantimes.co.jp
 """
 from datetime import datetime
+
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Japan Times"

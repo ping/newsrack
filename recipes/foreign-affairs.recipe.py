@@ -4,9 +4,8 @@ import re
 from datetime import datetime
 
 import mechanize
-
-from calibre.web.feeds.news import BasicNewsRecipe, classes
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 _name = "Foreign Affairs"
 

@@ -7,8 +7,9 @@
 knowablemagazine.org
 """
 from datetime import timezone, timedelta
-from calibre.web.feeds.news import BasicNewsRecipe
+
 from calibre.web.feeds import Feed
+from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Knowable Magazine"
 

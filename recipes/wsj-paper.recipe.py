@@ -12,9 +12,8 @@ import time
 from collections import OrderedDict
 from datetime import datetime, timedelta, timezone
 
-from calibre.web.feeds.news import BasicNewsRecipe, classes
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
-
+from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 _name = "Wall Street Journal (Print)"
 

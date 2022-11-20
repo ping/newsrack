@@ -778,11 +778,9 @@ class NYTimesGlobal(BasicNewsRecipe):
 
     def open_novisit(self, *args, **kwargs):
         target_url = args[0]
-        is_nyt_static_asset = re.match(
-            r"static\d+\.nyt\.com", urlparse(target_url).netloc
-        )
+        is_wayback_cached = urlparse(target_url).netloc == "www.nytimes.com"
 
-        if not is_nyt_static_asset and self.bot_blocked:
+        if not is_wayback_cached and self.bot_blocked:
             # don't use wayback for static assets because these are not blocked currently
             # and the wayback cache does not support them anyway
             self.log.warn(f"Block detected. Fetching from wayback cache: {target_url}")
@@ -797,7 +795,7 @@ class NYTimesGlobal(BasicNewsRecipe):
             if hasattr(e, "code") and e.code == 403:
                 self.bot_blocked = True
                 self.delay = 0  # I don't think this makes a difference but oh well
-                if is_nyt_static_asset:
+                if is_wayback_cached:
                     # if static asset is also blocked, give up
                     err_msg = f"Blocked by bot detection: {target_url}"
                     self.log.warn(err_msg)
