@@ -817,15 +817,16 @@ class NYTimesBooks(BasicNewsRecipe):
                 self.bot_blocked = True
                 self.delay = 0  # I don't think this makes a difference but oh well
                 if is_wayback_cached:
-                    # if static asset is also blocked, give up
-                    err_msg = f"Blocked by bot detection: {target_url}"
-                    self.log.warn(err_msg)
-                    self.abort_recipe_processing(err_msg)
-                    self.abort_article(err_msg)
-                self.log.warn(
-                    f"Blocked by bot detection. Fetching from wayback cache: {target_url}"
-                )
-                return self.open_from_wayback(target_url)
+                    self.log.warn(
+                        f"Blocked by bot detection. Fetching from wayback cache: {target_url}"
+                    )
+                    return self.open_from_wayback(target_url)
+
+                # if static asset is also blocked, give up
+                err_msg = f"Blocked by bot detection: {target_url}"
+                self.log.warn(err_msg)
+                self.abort_recipe_processing(err_msg)
+                self.abort_article(err_msg)
             raise
 
     open = open_novisit
