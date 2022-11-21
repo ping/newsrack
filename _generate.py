@@ -149,7 +149,11 @@ def _write_opds(generated_output, publish_site):
         ):
             for doc, feed in [(main_doc, main_feed), (cat_doc, cat_feed)]:
                 entry = doc.createElement("entry")
-                entry.appendChild(simple_tag(doc, "id", recipe_name))
+                entry.appendChild(
+                    simple_tag(
+                        doc, "id", books[0].recipe.slug if books else recipe_name
+                    )
+                )
                 entry.appendChild(
                     simple_tag(
                         doc,
