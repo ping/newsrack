@@ -4,7 +4,8 @@
 # https://opensource.org/licenses/GPL-3.0
 
 import json
-from urllib.parse import urljoin
+import re
+from urllib.parse import urljoin, urlparse
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -13,6 +14,8 @@ from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Bloomberg Businessweek"
 issue_url = ""  # ex: https://www.bloomberg.com/magazine/businessweek/22_44
+
+blocked_path_re = re.compile(r"/tosv.*.html")
 
 
 class BloombergBusinessweek(BasicNewsRecipe):
@@ -45,6 +48,7 @@ class BloombergBusinessweek(BasicNewsRecipe):
     timefmt = ""  # suppress date output
     pub_date = None  # custom publication date
     bot_blocked = False
+    download_count = 0
 
     remove_attributes = ["style", "height", "width", "align"]
     remove_tags = [
@@ -92,9 +96,16 @@ class BloombergBusinessweek(BasicNewsRecipe):
         br = browser()
         br.set_handle_redirect(False)
         try:
-            return br.open_novisit(*args, **kwargs)
+            res = br.open_novisit(*args, **kwargs)
+            self.download_count += 1
+            return res
         except Exception as e:
-            if hasattr(e, "code") and e.code == 307:
+            is_redirected_to_challenge = False
+            if hasattr(e, "hdrs"):
+                is_redirected_to_challenge = blocked_path_re.match(
+                    urlparse(e.hdrs.get("location") or "").path
+                )
+            if is_redirected_to_challenge or (hasattr(e, "code") and e.code == 307):
                 self.bot_blocked = True
                 err_msg = f"Blocked by bot detection: {args[0]}"
                 self.log.warn(err_msg)
@@ -103,6 +114,12 @@ class BloombergBusinessweek(BasicNewsRecipe):
             raise
 
     open = open_novisit
+
+    def cleanup(self):
+        if self.download_count <= 1 + (1 if self.masthead_url else 0):
+            err_msg = "No articles downloaded."
+            self.log.warn(err_msg)
+            self.abort_recipe_processing(err_msg)
 
     def _downsize_image_url(self, img_url):
         return img_url.replace("/-1x-1.", "/800x-1.")

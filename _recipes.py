@@ -84,30 +84,6 @@ recipes: List[Recipe] = [
         tags=["editorial", "commentary"],
     ),
     Recipe(
-        recipe="bloomberg-businessweek",
-        slug="bloomberg-businessweek",
-        src_ext="mobi",
-        target_ext=["epub"],
-        category="Magazines",
-        tags=["business"],
-        overwrite_cover=False,
-        enable_on=onlyon_weekdays([5]) and onlyat_hours(list(range(2, 8))),
-        timeout=600,
-    ),
-    Recipe(
-        recipe="bloomberg-news",
-        slug="bloomberg-news",
-        src_ext="mobi",
-        target_ext=["epub"],
-        category="News",
-        tags=["business"],
-        enable_on=not (onlyon_weekdays([5]) and onlyat_hours(list(range(2, 8)))),
-        timeout=360,
-        cover_options=CoverOptions(
-            logo_path_or_url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/New_Bloomberg_Logo.svg/1024px-New_Bloomberg_Logo.svg.png"
-        ),
-    ),
-    Recipe(
         recipe="channelnewsasia",
         slug="channelnewsasia",
         src_ext="mobi",
