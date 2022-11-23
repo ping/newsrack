@@ -825,37 +825,12 @@ class NewYorkTimesPrint(BasicNewsRecipe):
                 return 0, ""
             return 1, name.lower()
 
-        filtered_feeds = []
-        # skip sections
-        for section in feeds:
-            section_name = section[0]
-            skip_section = False
-            for skip_name_regex in [
-                r".*\bSports\b.*",
-                r".*\bCorrections\b.*",
-                r".*\bArts\b.*",
-                r".*\bStyles\b.*",
-                "Obituaries",
-                "Real Estate",
-                "Vows",
-                "Food",
-                "Marathon",
-            ]:
-                if re.search(skip_name_regex, section_name):
-                    self.log.warn(f"Skipped section: {section_name}")
-                    skip_section = True
-                    continue
-            if not skip_section:
-                filtered_feeds.append(section)
-
-        filtered_feeds.sort(key=skey)
-        articles_count = 0
-        for section, articles in filtered_feeds:
+        feeds.sort(key=skey)
+        for section, articles in feeds:
             self.log("\n" + section)
             for article in articles:
                 self.log(article["title"] + " - " + article["url"])
-                articles_count += 1
-        return filtered_feeds
+        return feeds
 
     # The NYT occassionally returns bogus articles for some reason just in case
     # it is because of cookies, dont store cookies
