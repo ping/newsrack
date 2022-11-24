@@ -14,11 +14,11 @@ https://opensource.org/licenses/GPL-3.0
 */
 (function () {
 
-    // stupid workaround instead of relying on screen size
-    // to increase font size for non-kindle devices
-    if (navigator.userAgent.indexOf("Mozilla/5.0 (X11") < 0) {
-        document.body.classList.add("nonkindle");
-    }
+    var searchInfo = document.getElementById("search-info");
+    var searchTextField = document.getElementById("search-text");
+    var searchButton = document.getElementById("search-button");
+    searchTextField.disabled = true;
+    searchButton.disabled = true;
 
     // in miliseconds
     var units = {
@@ -129,11 +129,8 @@ https://opensource.org/licenses/GPL-3.0
         };
     }
 
-    var searchInfo = document.getElementById("search-info");
     window.addEventListener("DOMContentLoaded", function() {
         if (typeof(lunr) !== "undefined") {
-            var searchTextField = document.getElementById("search-text");
-            var searchButton = document.getElementById("search-button");
             var ogPlaceholderText = searchTextField.placeholder;
             searchTextField.placeholder = "Indexing search...";
             var periodicalsEles = document.querySelectorAll("ol.books > li");
