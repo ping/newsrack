@@ -113,7 +113,7 @@ https://opensource.org/licenses/GPL-3.0
                 // don't do toggle action if it's a link
                 return;
             }
-            this.classList.toggle("is-open");
+            this.parentElement.classList.toggle("is-open");
             this.nextElementSibling.classList.toggle("hide");   // content
         };
     }
@@ -124,7 +124,7 @@ https://opensource.org/licenses/GPL-3.0
         shortcut.onclick = function (e) {
             e.preventDefault();
             var cat = document.getElementById(e.target.dataset["clickTarget"]);
-            cat.classList.toggle("is-open");
+            cat.parentElement.classList.toggle("is-open");
             cat.nextElementSibling.classList.toggle("hide");    // content
         };
     }

@@ -759,11 +759,11 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                 </div></li>"""
             )
 
-        listing += f"""<div class="category-container"><h2 id="cat-{slugify(category, True)}" class="category is-open">{category}
+        listing += f"""<div class="category-container is-open"><h2 id="cat-{slugify(category, True)}" class="category is-open">{category}
         <a class="opds" title="OPDS for {category.title()}" href="{slugify(category, True)}.xml">OPDS</a></h2>
-        <ol class="books">{"".join(publication_listing)}
+        <ol class="books">{"".join(publication_listing)}</ol>
         <div class="close-cat-container"><a class="close-cat-shortcut" href="#" data-click-target="cat-{slugify(category)}"></a></div>
-        </ol></div>
+        </div>
         """
 
     with open(
