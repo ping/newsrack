@@ -162,6 +162,10 @@ h2.category {
         font-size: 1em;
         text-transform: none;
 
+        &:target .title {
+            border-bottom: 1px dotted $base-disabled-color;
+        }
+
         .pub-date {
             display: block;
             margin-top: 0.2em;
@@ -307,6 +311,10 @@ footer {
 
     .books {
         li {
+            &:target .title {
+                border-color: $dark-base-disabled-color;
+            }
+
             .pub-date {
                 color: $dark-base-disabled-color;
             }

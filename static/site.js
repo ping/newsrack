@@ -101,10 +101,14 @@ https://opensource.org/licenses/GPL-3.0
         accordion.onclick = function () {
             this.classList.toggle("is-open");
             this.nextElementSibling.classList.toggle("hide");   // content
+            var slug = this.parentElement.id;
+            if (this.nextElementSibling.childElementCount <= 0 && RECIPE_DESCRIPTIONS[slug] !== undefined) {
+                this.nextElementSibling.innerHTML = RECIPE_DESCRIPTIONS[slug];
+            }
         };
     }
 
-    // toggle collapsible toc for publication
+    // toggle publications listing for category
     var categoryButtons = document.querySelectorAll("h2.category");
     for (var i = 0; i < categoryButtons.length; i++) {
         var category = categoryButtons[i];
