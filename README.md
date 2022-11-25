@@ -199,7 +199,8 @@ In alphabetical order:
 10. [Scientific American](https://www.scientificamerican.com/)
 11. [The Spectator](https://www.spectator.co.uk/magazine)
 12. [Time Magazine](https://time.com/magazine/)
-13. ~~[Bloomberg Businessweek](https://www.bloomberg.com/businessweek)~~
+13. [The World Today](https://www.chathamhouse.org/publications/the-world-today/)
+14. ~~[Bloomberg Businessweek](https://www.bloomberg.com/businessweek)~~
 
 </details>
 
@@ -221,7 +222,6 @@ In alphabetical order:
 13. [The Third Pole](https://www.thethirdpole.net/)
 14. [Vox](https://www.vox.com/)
 15. [Wired](https://www.wired.com/magazine/)
-16. [The World Today](https://www.chathamhouse.org/publications/the-world-today/)
 
 </details>
 

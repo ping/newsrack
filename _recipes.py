@@ -544,7 +544,7 @@ recipes: List[Recipe] = [
         slug="world-today",
         src_ext="mobi",
         target_ext=["epub"],
-        category="Online Magazines",
+        category="Magazines",
         enable_on=(first_n_days_of_month(7) or last_n_days_of_month(7))
         and onlyat_hours(list(range(4, 12))),
     ),
