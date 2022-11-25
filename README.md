@@ -204,7 +204,7 @@ In alphabetical order:
 </details>
 
 <details>
-<summary><b>Online</b></summary>
+<summary><b>Online Magazines</b></summary>
 
 1. [The Atlantic](https://www.theatlantic.com/)
 2. [The Diplomat](https://thediplomat.com/)
