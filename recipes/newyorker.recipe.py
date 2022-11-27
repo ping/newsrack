@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes, prefixed_classes
+from calibre.ebooks.markdown import Markdown
 
 
 def absurl(x):
@@ -60,7 +61,6 @@ class NewYorker(BasicNewsRecipe):
         .caption { font-size: 0.8rem; font-weight: normal; }
     """
     keep_only_tags = [
-        prefixed_classes("IframeEmbedWrapper-sc-"),
         dict(class_="og"),
         dict(attrs={"data-attribute-verso-pattern": "article-body"}),
         dict(
@@ -94,6 +94,18 @@ class NewYorker(BasicNewsRecipe):
             info = json.loads(script.contents[0])
             if not info.get("headline"):
                 continue
+
+            interactive_container = soup.body.find(id="___gatsby")
+            try:
+                if interactive_container:
+                    interactive_container.clear()
+                    md = Markdown()
+                    interactive_container.append(
+                        BeautifulSoup(md.convert(info["articleBody"]))
+                    )
+                    interactive_container["class"] = "og"
+            except Exception as e:
+                self.log.warning(f"Unable to convert interactive article: {e}")
 
             h1 = soup.new_tag("h1", attrs={"class": "og headline"})
             h1.append(info["headline"])
