@@ -15,7 +15,7 @@ from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
-_name = "NY Times"
+_name = "New York Times"
 
 
 class NYTimesGlobal(BasicNewsRecipe):
