@@ -88,6 +88,7 @@ h1 {
 }
 
 .category-container {
+    background-color: $base-bg-color;
     border: 1px solid $base-disabled-color;
     border-radius: 0.25em;
     padding: 0.35rem 0.7em;
@@ -286,6 +287,7 @@ footer {
     }
 
     .category-container {
+        background-color: $dark-base-bg-color;
         border-color: $dark-base-disabled-color;
         .close-cat-container {
             .close-cat-shortcut {
@@ -351,6 +353,7 @@ body.nonkindle {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    background-color: grayscale(darken($base-bg-color, 3%));
 
     #search-text {
         width: 85%;
@@ -391,6 +394,15 @@ body.nonkindle {
                 padding-bottom: 0.1em;
                 margin-bottom: 0.2em;
             }
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body.nonkindle {
+        background-color: lighten($dark-base-bg-color, 3%);
+        .category-container {
+            background-color: $dark-base-bg-color;
         }
     }
 }
