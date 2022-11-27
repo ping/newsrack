@@ -76,16 +76,20 @@ class NewYorker(BasicNewsRecipe):
 
     remove_tags = [
         classes("social-icons"),
+        prefixed_classes(
+            "ResponsiveCartoonLinkButtonWrapper- IframeEmbedWrapper- GenericCalloutWrapper-"
+        ),
         dict(childtypes="iframe"),
         dict(name=["button"]),
     ]
-    remove_attributes = ["style"]
+    remove_attributes = ["style", "sizes", "data-event-click"]
 
     def publication_date(self):
         return self.pub_date
 
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
+
         for script in soup.find_all(name="script", type="application/ld+json"):
             info = json.loads(script.contents[0])
             if not info.get("headline"):
@@ -120,6 +124,14 @@ class NewYorker(BasicNewsRecipe):
                 subheadline = soup.new_tag("div", attrs={"class": "og sub-headline"})
                 subheadline.append(info["description"])
                 h1.insert_after(subheadline)
+
+            if info.get("image"):
+                lede_img_container = soup.new_tag(
+                    "div", attrs={"class": "og responsive-asset"}
+                )
+                lede_image = soup.new_tag("img", attrs={"src": info["image"][-1]})
+                lede_img_container.append(lede_image)
+                meta.insert_after(lede_img_container)
 
             break
 
