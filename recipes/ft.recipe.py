@@ -34,6 +34,11 @@ class FinancialTimes(BasicNewsRecipe):
     masthead_url = "https://www.ft.com/partnercontent/content-hub/static/media/ft-horiz-new-black.215c1169.png"
     ignore_duplicate_articles = {"url"}
 
+    compress_news_images = True
+    compress_news_images_auto_size = 6
+    scale_news_images = (800, 800)
+    scale_news_images_to_device = False  # force img to be resized to scale_news_images
+
     timeout = 20
     timefmt = ""
     pub_date = None  # custom publication date
@@ -92,6 +97,11 @@ class FinancialTimes(BasicNewsRecipe):
             ).replace(tzinfo=timezone.utc)
 
         paragraphs = []
+        lede_image_url = article.get("image", {}).get("url")
+        if lede_image_url:
+            paragraphs.append(
+                f'<p class="article-img"><img src="{lede_image_url}"></p>'
+            )
         for para in article["articleBody"].split("\n\n"):
             if para.startswith("RECOMMENDED"):  # skip recommended inserts
                 continue
