@@ -130,6 +130,9 @@ https://opensource.org/licenses/GPL-3.0
             var cat = document.getElementById(e.target.dataset["clickTarget"]);
             cat.parentElement.classList.toggle("is-open");
             cat.nextElementSibling.classList.toggle("hide");    // content
+            if (!cat.parentElement.classList.contains("is-open")) {
+                cat.parentElement.scrollIntoView();
+           }
         };
     }
 
