@@ -1,5 +1,6 @@
 import json
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
+from urllib.parse import urlencode
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -14,13 +15,17 @@ class ForbesEditorsPicks(BasicNewsRecipe):
     language = "en"
     encoding = "utf-8"
 
+    oldest_article = 7
+    max_articles_per_feed = 15
+
     no_javascript = True
     no_stylesheets = True
     compress_news_images = True
     scale_news_images = (800, 1200)
-    timeout = 20
+    timeout = 10
     timefmt = ""
     pub_date = None  # custom publication date
+    simultaneous_downloads = 1
 
     keep_only_tags = [dict(name="article")]
     remove_attributes = ["style", "height", "width"]
@@ -78,17 +83,12 @@ class ForbesEditorsPicks(BasicNewsRecipe):
                 continue
             modified_date = meta.get("dateModified") or meta.get("datePublished")
             article["data-og-modified-date"] = modified_date
-            article["data-og-description"] = meta.get("description", "")
             break
         for img in soup.find_all("progressive-image"):
             img.name = "img"
         return str(soup)
 
     def populate_article_metadata(self, article, soup, first):
-        article_summary = soup.find(attrs={"data-og-description": True})
-        if article_summary:
-            article.text_summary = article_summary["data-og-description"]
-
         article_date = soup.find(attrs={"data-og-modified-date": True})
         if article_date:
             modified_date = datetime.fromisoformat(
@@ -101,11 +101,60 @@ class ForbesEditorsPicks(BasicNewsRecipe):
             article.localtime = modified_date
 
     def parse_index(self):
-        soup = self.index_to_soup("https://www.forbes.com/editors-picks/")
-        pick_links = soup.select("section.channel h2 a") + soup.select(
-            "section.channel h3 a"
+        br = self.get_browser()
+        cutoff_date = datetime.utcnow().replace(tzinfo=timezone.utc) - timedelta(
+            days=self.oldest_article
         )
         articles = []
-        for link in pick_links:
-            articles.append({"title": self.tag_to_string(link), "url": link["href"]})
+
+        date_param = 0
+        content_ids = None
+        end_feed = False
+        while not end_feed:
+            query = {
+                "limit": 25,
+                "sourceValue": "editors-pick",
+                "streamSourceType": "badge",
+            }
+            if content_ids:
+                query["ids"] = content_ids
+            if date_param:
+                query["date"] = date_param
+
+            endpoint = (
+                f"https://www.forbes.com/simple-data/chansec/stream/?{urlencode(query)}"
+            )
+
+            res = br.open_novisit(endpoint)
+            res_obj = json.loads(res.read().decode("utf-8"))
+            items = res_obj.get("blocks", {}).get("items", [])
+            if not items:
+                break
+
+            for item in items:
+                item_date = datetime.utcfromtimestamp(item["date"] / 1000.0).replace(
+                    tzinfo=timezone.utc
+                )
+                if item_date < cutoff_date:
+                    end_feed = True
+                    break
+
+                if (not self.pub_date) or item_date > self.pub_date:
+                    self.pub_date = item_date
+                    self.title = f"{_name}: {self.pub_date:%-d %b, %Y}"
+
+                articles.append(
+                    {
+                        "title": item["title"],
+                        "url": item["url"],
+                        "description": item["description"],
+                        "date": item_date,
+                    }
+                )
+                date_param = item["date"]
+                content_ids = item["id"]
+                if len(articles) >= self.max_articles_per_feed:
+                    end_feed = True
+                    break
+
         return [(_name, articles)]

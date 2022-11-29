@@ -1,10 +1,13 @@
 # Original at https://github.com/kovidgoyal/calibre/blob/b27ac9936f1ba2f0ada94ef729e41f1262958f87/recipes/wired.recipe
 __license__ = "GPL v3"
 __copyright__ = "2014, Darko Miletic <darko.miletic at gmail.com>"
+
+
 """
 www.wired.com
 """
 from datetime import datetime
+from urllib.parse import urljoin
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -47,6 +50,7 @@ class WiredMagazine(BasicNewsRecipe):
     timeout = 20
     timefmt = ""
     pub_date = None  # custom publication date
+    BASE_URL = "https://www.wired.com"
 
     extra_css = """
     [data-testid="ContentHeaderRubricDateBlock"] > div { display: inline-block; margin-right: 0.5rem; }
@@ -124,16 +128,13 @@ class WiredMagazine(BasicNewsRecipe):
             aside["class"] = aside.get("class", []) + ["custom-aside"]
         return soup
 
-    def parse_wired_index_page(self, currenturl, seen):
-        self.log("Parsing index page", currenturl)
-        soup = self.index_to_soup(currenturl)
-        baseurl = "https://www.wired.com"
+    def parse_wired_index_page(self, current_url, seen):
+        self.log("Parsing index page", current_url)
+        soup = self.index_to_soup(current_url)
         for a in soup.find("div", {"class": "multi-packages"}).findAll("a", href=True):
             url = a["href"]
             if url.startswith("/story") and url.endswith("/"):
                 title = self.tag_to_string(a.parent.find("h3"))
-                dateloc = a.parent.find("time")
-                date = self.tag_to_string(dateloc)
                 description = None
                 summary = a.parent.find(attrs={"class": "summary-item__dek"})
                 if summary:
@@ -143,19 +144,20 @@ class WiredMagazine(BasicNewsRecipe):
                     self.log("Found article:", title)
                     yield {
                         "title": title,
-                        "date": date,
-                        "url": baseurl + url,
+                        "url": urljoin(self.BASE_URL, url),
                         "description": description,
                     }
 
     def parse_index(self):
-        baseurl = "https://www.wired.com/magazine/?page={}/"
         articles = []
         seen = set()
-        for pagenum in range(1, 4):
-            articles.extend(self.parse_wired_index_page(baseurl.format(pagenum), seen))
-
-        return [("Magazine", articles)]
+        for pagenum in range(1, 2):
+            articles.extend(
+                self.parse_wired_index_page(
+                    f"{self.BASE_URL}/magazine/?page={pagenum}", seen
+                )
+            )
+        return [(_name, articles)]
 
     # Wired changes the content it delivers based on cookies, so the
     # following ensures that we send no cookies
