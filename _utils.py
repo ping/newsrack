@@ -105,12 +105,6 @@ def generate_cover(
         logger.addHandler(ch)
         logger.setLevel(logging.INFO)
 
-    if cover_options.logo_path_or_url:
-        warnings.warn(
-            "Logo support for cover generation is experimental.",
-            ExperimentalFunctionWarning,
-        )
-
     font_title = ImageFont.truetype(
         cover_options.title_font_path, cover_options.title_font_size
     )
