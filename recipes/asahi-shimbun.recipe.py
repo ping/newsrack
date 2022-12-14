@@ -82,7 +82,7 @@ class AsahiShimbunEnglishNews(BasicNewsRecipe):
             post_date_utc = post_date.astimezone(timezone.utc)
             if (
                 not self.pub_date or post_date_utc > self.pub_date
-            ) and post_date_utc > datetime.utcnow().replace(
+            ) and post_date_utc < datetime.utcnow().replace(
                 tzinfo=timezone.utc
             ):  # because asahi has wrongly dated articles far into the future
                 self.pub_date = post_date_utc
