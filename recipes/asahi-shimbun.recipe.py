@@ -80,7 +80,11 @@ class AsahiShimbunEnglishNews(BasicNewsRecipe):
                 self.tag_to_string(last_update_ele), "%B %d, %Y at %H:%M JST"
             ).replace(tzinfo=timezone(timedelta(hours=9)))
             post_date_utc = post_date.astimezone(timezone.utc)
-            if not self.pub_date or post_date_utc > self.pub_date:
+            if (
+                not self.pub_date or post_date_utc > self.pub_date
+            ) and post_date_utc > datetime.utcnow().replace(
+                tzinfo=timezone.utc
+            ):  # because asahi has wrongly dated articles far into the future
                 self.pub_date = post_date_utc
                 self.title = f"{_name}: {post_date:%-d %b, %Y}"
 
