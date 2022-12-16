@@ -7,6 +7,7 @@ import json
 import shutil
 import time
 from datetime import datetime, timedelta, timezone
+from html import unescape
 from urllib.parse import urlencode
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -119,42 +120,14 @@ class ThirdPole(BasicNewsRecipe):
         # formulate the api response into html
         post = json.loads(raw_html)
         date_published_loc = datetime.strptime(post["date"], "%Y-%m-%dT%H:%M:%S")
-        soup = BeautifulSoup(
-            f"""<html>
-        <head><title></title></head>
-        <body>
-            <article data-og-link="{post["link"]}">
-            <h1 class="headline"></h1>
-            <div class="article-meta">
-                <span class="published-dt">
-                    {date_published_loc:%-I:%M%p, %-d %b, %Y}
-                </span>
-            </div>
-            </article>
-        </body></html>"""
-        )
-        soup.head.title.string = post["title"]["rendered"]
-        soup.find("h1").string = post["title"]["rendered"]
-        soup.body.article.append(
-            BeautifulSoup(self._extract_featured_media(post, soup))
-        )
-        # inject authors
         try:
             post_authors = [
                 a["name"] for a in post.get("_embedded", {}).get("author", [])
             ]
-            if post_authors:
-                soup.find(class_="article-meta").insert(
-                    0,
-                    BeautifulSoup(
-                        f'<span class="author">{", ".join(post_authors)}</span>'
-                    ),
-                )
         except (KeyError, TypeError):
-            pass
-        # inject categories
+            post_authors = []
+        categories = []
         if post.get("categories"):
-            categories = []
             try:
                 for terms in post.get("_embedded", {}).get("wp:term", []):
                     categories.extend(
@@ -162,13 +135,26 @@ class ThirdPole(BasicNewsRecipe):
                     )
             except (KeyError, TypeError):
                 pass
-            if categories:
-                soup.body.article.insert(
-                    0,
-                    BeautifulSoup(
-                        f'<span class="article-section">{" / ".join(categories)}</span>'
-                    ),
-                )
+
+        soup = BeautifulSoup(
+            f"""<html>
+        <head><title>{post["title"]["rendered"]}</title></head>
+        <body>
+            <article data-og-link="{post["link"]}">
+            {f'<span class="article-section">{" / ".join(categories)}</span>' if categories else ''}
+            <h1 class="headline">{post["title"]["rendered"]}</h1>
+            <div class="article-meta">
+                {f'<span class="author">{", ".join(post_authors)}</span>' if post_authors else ''}
+                <span class="published-dt">
+                    {date_published_loc:%-I:%M%p, %-d %b, %Y}
+                </span>
+            </div>
+            </article>
+        </body></html>"""
+        )
+        soup.body.article.append(
+            BeautifulSoup(self._extract_featured_media(post, soup))
+        )
         return str(soup)
 
     def populate_article_metadata(self, article, soup, first):
@@ -251,10 +237,10 @@ class ThirdPole(BasicNewsRecipe):
                     f.write(json.dumps(p).encode("utf-8"))
                 articles[section_name].append(
                     {
-                        "title": p["title"]["rendered"] or "Untitled",
+                        "title": unescape(p["title"]["rendered"]) or "Untitled",
                         "url": "file://" + f.name,
                         "date": f"{post_date:%-d %B, %Y}",
-                        "description": p["excerpt"]["rendered"],
+                        "description": unescape(p["excerpt"]["rendered"]),
                     }
                 )
 

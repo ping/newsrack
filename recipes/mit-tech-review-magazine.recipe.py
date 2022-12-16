@@ -11,7 +11,6 @@ import json
 import re
 from collections import OrderedDict
 from datetime import datetime, timezone
-from html import unescape
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -109,39 +108,14 @@ class MitTechnologyReviewMagazine(BasicNewsRecipe):
             self.pub_date = post_update_dt
 
         date_published_loc = datetime.strptime(post["date"], "%Y-%m-%dT%H:%M:%S")
-        soup = BeautifulSoup(
-            f"""<html>
-        <head><title></title></head>
-        <body>
-            <article data-og-link="{post["link"]}">
-            <h1 class="headline"></h1>
-            <div class="article-meta">
-                <span class="published-dt">
-                    {date_published_loc:%-d %b, %Y}
-                </span>
-            </div>
-            </article>
-        </body></html>"""
-        )
-        soup.head.title.append(unescape(post["title"]["rendered"]))
-        soup.find("h1").append(unescape(post["title"]["rendered"]))
-        # inject authors
         try:
             post_authors = [
                 a["name"] for a in post.get("_embedded", {}).get("author", [])
             ]
-            if post_authors:
-                soup.find(class_="article-meta").insert(
-                    0,
-                    BeautifulSoup(
-                        f'<span class="author">{", ".join(post_authors)}</span>'
-                    ),
-                )
         except (KeyError, TypeError):
-            pass
-        # inject categories
+            post_authors = []
+        categories = []
         if post.get("categories"):
-            categories = []
             try:
                 for terms in post.get("_embedded", {}).get("wp:term", []):
                     categories.extend(
@@ -149,14 +123,24 @@ class MitTechnologyReviewMagazine(BasicNewsRecipe):
                     )
             except (KeyError, TypeError):
                 pass
-            if categories:
-                soup.body.article.insert(
-                    0,
-                    BeautifulSoup(
-                        f'<span class="article-section">{" / ".join(categories)}</span>'
-                    ),
-                )
-        soup.body.article.append(BeautifulSoup(self._extract_featured_media(post)))
+
+        soup = BeautifulSoup(
+            f"""<html>
+        <head><title>{post["title"]["rendered"]}</title></head>
+        <body>
+            <article data-og-link="{post["link"]}">
+            {f'<span class="article-section">{" / ".join(categories)}</span>' if categories else ''}
+            <h1 class="headline">{post["title"]["rendered"]}</h1>
+            <div class="article-meta">
+                {f'<span class="author">{", ".join(post_authors)}</span>' if post_authors else ''}
+                <span class="published-dt">
+                    {date_published_loc:%-d %b, %Y}
+                </span>
+            </div>
+            {self._extract_featured_media(post)}
+            </article>
+        </body></html>"""
+        )
         for bq in soup.find_all("blockquote"):
             for strong in bq.find_all("strong"):
                 strong.name = "span"

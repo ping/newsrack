@@ -13,7 +13,6 @@ from datetime import datetime, timedelta, timezone
 from html import unescape
 from urllib.parse import urlencode
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -56,7 +55,7 @@ class FiveThirtyEight(BasicNewsRecipe):
         margin-top: 0; margin-bottom: 0;
     }
     .single-topic { margin-top: 0; margin-bottom: 0; }
-    .single-featured-image img, p img { margin-bottom: 0.8rem; max-width: 100%; }
+    .single-featured-image img, p img, .wp-block-image img { margin-bottom: 0.8rem; max-width: 100%; }
     .single-featured-image .caption { display: block; font-size: 0.8rem; margin-top: 0.2rem; }
     """
 
@@ -68,17 +67,13 @@ class FiveThirtyEight(BasicNewsRecipe):
         # formulate the api response into html
         post = json.loads(raw_html)
 
-        soup = BeautifulSoup(
-            f"""<html>
-        <head><title></title></head>
+        return f"""<html>
+        <head><title>{post["title"]["rendered"]}</title></head>
         <body>
             <article data-og-link="{post["link"]}">
+            {post["content"]["rendered"]}
             </article>
         </body></html>"""
-        )
-        soup.head.title.string = unescape(post["title"]["rendered"])
-        soup.body.article.append(BeautifulSoup(post["content"]["rendered"]))
-        return str(soup)
 
     def populate_article_metadata(self, article, soup, first):
         # pick up the og link from preprocess_raw_html() and set it as url instead of the api endpoint
@@ -179,10 +174,10 @@ class FiveThirtyEight(BasicNewsRecipe):
 
                 articles[section_name].append(
                     {
-                        "title": p["title"]["rendered"] or "Untitled",
+                        "title": unescape(p["title"]["rendered"]) or "Untitled",
                         "url": "file://" + f.name,
                         "date": f"{post_date:%-d %B, %Y}",
-                        "description": " / ".join(verticals),
+                        "description": unescape(" / ".join(verticals)),
                     }
                 )
         return articles.items()
