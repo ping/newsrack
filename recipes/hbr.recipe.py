@@ -9,7 +9,7 @@ from calibre.web.feeds.news import BasicNewsRecipe, classes
 # Original https://github.com/kovidgoyal/calibre/blob/49a1d469ce4f04f79ce786a75b8f4bdcfd32ad2c/recipes/hbr.recipe
 
 _name = "Harvard Business Review"
-_issue_url = "https://hbr.org/archive-toc/BR2206"
+_issue_url = ""
 
 
 class HBR(BasicNewsRecipe):
