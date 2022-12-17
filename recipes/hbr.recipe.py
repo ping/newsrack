@@ -1,4 +1,3 @@
-import re
 from collections import OrderedDict
 from datetime import datetime, timezone
 from urllib.parse import urljoin
@@ -10,6 +9,7 @@ from calibre.web.feeds.news import BasicNewsRecipe, classes
 # Original https://github.com/kovidgoyal/calibre/blob/49a1d469ce4f04f79ce786a75b8f4bdcfd32ad2c/recipes/hbr.recipe
 
 _name = "Harvard Business Review"
+_issue_url = "https://hbr.org/archive-toc/BR2206"
 
 
 class HBR(BasicNewsRecipe):
@@ -121,12 +121,18 @@ class HBR(BasicNewsRecipe):
             self.pub_date = post_date
 
     def parse_index(self):
-        soup = self.index_to_soup(f"{self.base_url}/magazine")
-        a = soup.find("a", href=lambda x: x and x.startswith("/archive-toc/"))
-        cov_url = a.find("img", attrs={"src": True})["src"]
-        self.cover_url = urljoin(self.base_url, cov_url)
-        self.log("Downloading issue:", a["href"])
-        soup = self.index_to_soup(urljoin(self.base_url, a["href"]))
+        if not _issue_url:
+            soup = self.index_to_soup(f"{self.base_url}/magazine")
+            a = soup.find("a", href=lambda x: x and x.startswith("/archive-toc/"))
+            cov_url = a.find("img", attrs={"src": True})["src"]
+            self.cover_url = urljoin(self.base_url, cov_url)
+            issue_url = urljoin(self.base_url, a["href"])
+        else:
+            # no cover if custom issue url is specified
+            issue_url = _issue_url
+
+        self.log("Downloading issue:", issue_url)
+        soup = self.index_to_soup(issue_url)
         issue_title = soup.find("h1")
         if issue_title:
             self.title = f"{_name}: {self.tag_to_string(issue_title)}"
