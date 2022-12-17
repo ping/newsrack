@@ -214,7 +214,8 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         overwrite_cover=False,
         category="Magazines",
-        enable_on=first_n_days_of_month(3, -5) or last_n_days_of_month(14, -5),
+        enable_on=onlyat_hours(list(range(0, 6)), -5)
+        and (first_n_days_of_month(3, -5) or last_n_days_of_month(14, -5)),
         tags=["business"],
     ),
     Recipe(
