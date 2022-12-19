@@ -205,41 +205,12 @@ fragment ArticlePageFields on Article {
         date_published_loc = datetime.strptime(
             article["publishedAt"], "%Y-%m-%dT%H:%M:%S.%fZ"
         )
-        soup = BeautifulSoup(
-            f"""<html>
-        <head><title></title></head>
-        <body>
-            <article data-og-link="{article["urlFull"]}">
-            <h1 class="headline"></h1>
-            <div class="article-meta">
-                <span class="published-dt">
-                    {date_published_loc:%-d %b, %Y}
-                </span>
-            </div>
-            </article>
-        </body></html>"""
-        )
-        soup.head.title.append(article["cleanTitle"])
-        h1 = soup.find("h1")
-        h1.append(article["cleanTitle"])
-
-        # subheadline
-        if article.get("deck"):
-            h2 = soup.new_tag("h2", attrs={"class": "subheadline"})
-            h2.append(article["deck"])
-            h1.insert_after(h2)
-
         # authors
         author_bios_html = ""
+        post_authors = []
         try:
             post_authors = [a["name"] for a in article.get("authors", [])]
             if post_authors:
-                soup.find(class_="article-meta").insert(
-                    0,
-                    BeautifulSoup(
-                        f'<span class="author">{", ".join(post_authors)}</span>'
-                    ),
-                )
                 author_bios_html = f'<div class="author-bios">{"".join([a.get("blurb", "") for a in article.get("authors", [])])}</div>'
         except (KeyError, TypeError):
             pass
@@ -251,19 +222,28 @@ fragment ArticlePageFields on Article {
             lede_img_url = self._resize_image(
                 self._urlize(img["src"]), img["width"], img["height"]
             )
-            lede_container_ele = soup.new_tag("p", attrs={"class": "lede-media"})
-            lede_image_ele = soup.new_tag("img", attrs={"src": lede_img_url})
-            lede_container_ele.append(lede_image_ele)
-            lede_image_html = str(lede_container_ele)
-            if article.get("ledeImageRealCaption"):
-                lede_caption_ele = soup.new_tag("span", attrs={"class": "caption"})
-                lede_caption_ele.append(article["ledeImageRealCaption"])
+            lede_image_html = f"""<p class="lede-media">
+                <img src="{lede_img_url}">
+                {f'<span class="caption">{article["ledeImageRealCaption"]}</span>' if article.get("ledeImageRealCaption") else ""}
+            </p>"""
 
-        soup.body.article.append(
-            BeautifulSoup(lede_image_html + article["body"] + author_bios_html)
-        )
-
-        return str(soup)
+        return f"""<html>
+        <head><title>{article["cleanTitle"]}</title></head>
+        <body>
+            <article data-og-link="{article["urlFull"]}">
+            <h1 class="headline">{article["cleanTitle"]}</h1>
+            {('<h2 class="subheadline">' + article["deck"] + "</h2>") if article.get("deck") else ""}
+            <div class="article-meta">
+                {f'<span class="author">{", ".join(post_authors)}</span>' if post_authors else ""}
+                <span class="published-dt">
+                    {date_published_loc:%-d %b, %Y}
+                </span>
+            </div>
+            {lede_image_html}
+            {article["body"]}
+            {author_bios_html}
+            </article>
+        </body></html>"""
 
     def parse_index(self):
         br = self.get_browser()
@@ -286,7 +266,7 @@ fragment ArticlePageFields on Article {
                     feed_articles.append(
                         {
                             "url": self._article_endpoint(article["nid"]),
-                            "title": article["title"],
+                            "title": article["title"].replace("\n", " "),
                             "description": article.get("deck", ""),
                             "date": article["publishedAt"],
                             "section": k[len("magazine") :],

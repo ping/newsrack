@@ -60,26 +60,7 @@ class TimeMagazine(BasicNewsRecipe):
         date_published_utc = date_published_loc.astimezone(timezone.utc)
         if not self.pub_date or date_published_utc > self.pub_date:
             self.pub_date = date_published_utc
-        soup = BeautifulSoup(
-            f"""<html>
-        <head><title></title></head>
-        <body>
-            <article data-og-link="{article["url"]}">
-            <h1 class="headline"></h1>
-            <div class="article-meta">
-                <span class="author">
-                    {", ".join(authors)}
-                </span>
-                <span class="published-dt">
-                    {date_published_loc:%-d %b, %Y}
-                </span>
-            </div>
-            </article>
-        </body></html>"""
-        )
 
-        soup.head.title.append(unescape(article["friendly_title"]))
-        soup.find("h1").append(BeautifulSoup(unescape(article["title"])))
         content_soup = BeautifulSoup(article["content"])
         cover_url = self.canonicalize_internal_url(self.cover_url)
         # clean up weirdness
@@ -94,8 +75,22 @@ class TimeMagazine(BasicNewsRecipe):
                 continue
             img["src"] = img["data-lazy-src"]
 
-        soup.body.article.append(content_soup)
-        return str(soup)
+        return f"""<html>
+        <head><title>{article["friendly_title"]}</title></head>
+        <body>
+            <article data-og-link="{article["url"]}">
+            <h1 class="headline">{article["friendly_title"]}</h1>
+            <div class="article-meta">
+                <span class="author">
+                    {", ".join(authors)}
+                </span>
+                <span class="published-dt">
+                    {date_published_loc:%-d %b, %Y}
+                </span>
+            </div>
+            {str(content_soup.body)}
+            </article>
+        </body></html>"""
 
     def populate_article_metadata(self, article, soup, first):
         # pick up the og link from preprocess_raw_html() and set it as url instead of the api endpoint
