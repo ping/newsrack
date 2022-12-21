@@ -164,7 +164,7 @@ class NewYorker(BasicNewsRecipe):
                                 image_url = (
                                     image_source.get("sources", {})
                                     .get(
-                                        "sm", {}
+                                        "md", {}
                                     )  # other sizes as well, e.g. "sm" or "lg"
                                     .get("url", "")
                                 )
