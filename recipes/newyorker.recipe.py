@@ -6,6 +6,7 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
+import re
 from collections import OrderedDict
 from datetime import datetime, timezone
 
@@ -28,7 +29,7 @@ class NewYorker(BasicNewsRecipe):
 
     title = _name
     description = (
-        "Articles of the week's New Yorker magazine https://www.newyorker.com/"
+        "Articles of the week's New Yorker magazine https://www.newyorker.com/magazine"
     )
 
     url_list = []
@@ -41,6 +42,7 @@ class NewYorker(BasicNewsRecipe):
     masthead_url = "https://www.newyorker.com/verso/static/the-new-yorker/assets/logo-seo.38af6104b89a736857892504d04dbb9a3a56e570.png"
 
     compress_news_images = True
+    compress_news_images_auto_size = 10
     scale_news_images = (800, 800)
     scale_news_images_to_device = False  # force img to be resized to scale_news_images
     timeout = 20
@@ -56,7 +58,8 @@ class NewYorker(BasicNewsRecipe):
         .article-meta .author { font-weight: bold; color: #444; display: inline-block; }
         .article-meta .published-dt { display: inline-block; margin-left: 0.5rem; }
         .article-meta .modified-dt { display: block; margin-top: 0.2rem; font-style: italic; }
-        .responsive-asset img { max-width: 100%; height: auto; }
+        .responsive-asset img, .cust-lightbox-img img { max-width: 100%; height: auto; display: block; }
+        .cust-lightbox-img .caption { display: block; margin-top: 0.3rem; }
         h3 { margin-bottom: 6px; }
         .caption { font-size: 0.8rem; font-weight: normal; }
     """
@@ -90,18 +93,98 @@ class NewYorker(BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
 
+        preload_state = {}
+        preload_script_eles = [
+            script
+            for script in soup.find_all(name="script", type="text/javascript")
+            if script.contents
+            and script.contents[0].strip().startswith("window.__PRELOADED_STATE__ = ")
+        ]
+        if preload_script_eles:
+            preload_state_js = re.sub(
+                r"window.__PRELOADED_STATE__\s*=\s*",
+                "",
+                preload_script_eles[0].contents[0].strip(),
+            )
+            if preload_state_js.endswith(";"):
+                preload_state_js = preload_state_js[:-1]
+            try:
+                preload_state = json.loads(preload_state_js)
+            except json.JSONDecodeError:
+                self.log.exception("Unable to parse window.__PRELOADED_STATE__")
+
+        images = []
+        if preload_state:
+            images = (
+                preload_state.get("transformed", {})
+                .get("article", {})
+                .get("lightboxImages", [])
+            )
+        # grab interactive images
+        for body_ele in (
+            preload_state.get("transformed", {}).get("article", {}).get("body", [])
+        ):
+            try:
+                if not type(body_ele) is list:
+                    continue
+                if not body_ele[0] == "inline-embed":
+                    continue
+                interactive_img = body_ele[2][1].get("props", {}).get("image", {})
+                if interactive_img:
+                    images.append(interactive_img)
+            except Exception as err:
+                self.log.warning(f"Unable to get interactive elements: {err}")
         for script in soup.find_all(name="script", type="application/ld+json"):
             info = json.loads(script.contents[0])
             if not info.get("headline"):
                 continue
-
             interactive_container = soup.body.find(id="___gatsby")
             try:
                 if interactive_container:
                     interactive_container.clear()
                     md = Markdown()
+                    article_body = info["articleBody"]
+                    # replace line breaks
+                    article_body = re.sub(r"\\\n", "<br/>", article_body)
+                    # replace +++ md
+                    article_body = re.sub(r"\+\+\+.*?\n", "", article_body)
+                    article_body = re.sub(r"{: .+}\n", "", article_body)
+                    # replace image markdown with image markup
+                    if images:
+                        image_markdowns = re.findall(
+                            r"\[#(?P<md_type>[a-z]+): /(?P<md_path>[a-z]+)/(?P<image_id>[a-f0-9]+)\]",
+                            info["articleBody"],
+                        )
+                        for md_type, md_path, image_id in image_markdowns:
+                            image_source = [
+                                img for img in images if img.get("id", "") == image_id
+                            ]
+                            if image_source:
+                                image_source = image_source[0]
+                                image_url = (
+                                    image_source.get("sources", {})
+                                    .get(
+                                        "sm", {}
+                                    )  # other sizes as well, e.g. "sm" or "lg"
+                                    .get("url", "")
+                                )
+                                if image_url:
+                                    caption_html = '<span class="caption">'
+                                    if image_source.get("dangerousCaption"):
+                                        caption_html += image_source["dangerousCaption"]
+                                    if image_source.get("dangerousCredit"):
+                                        caption_html += (
+                                            f' {image_source["dangerousCredit"]}'
+                                        )
+                                    caption_html += "</span>"
+                                    image_html = f'<p class="cust-lightbox-img"><img src="{image_url}">{caption_html}</p>'
+                                    article_body = article_body.replace(
+                                        f"[#{md_type}: /{md_path}/{image_id}]",
+                                        image_html,
+                                    )
+
                     interactive_container.append(
-                        BeautifulSoup(md.convert(info["articleBody"]))
+                        BeautifulSoup(md.convert(article_body))
                     )
                     interactive_container["class"] = "og"
             except Exception as e:
@@ -183,9 +266,7 @@ class NewYorker(BasicNewsRecipe):
                 self.pub_date = mod_date_utc
 
     def parse_index(self):
-
         # Get cover
-
         cover_soup = self.index_to_soup("https://www.newyorker.com/archive")
         cover_img = cover_soup.find(
             attrs={"class": lambda x: x and "MagazineSection__cover___" in x}
@@ -209,7 +290,6 @@ class NewYorker(BasicNewsRecipe):
                 self.log("Found cover:", self.cover_url)
 
         # Get content
-
         soup = self.index_to_soup("https://www.newyorker.com/magazine?intcid=magazine")
         header_title = soup.select_one("header h2")
         if header_title:
@@ -218,7 +298,6 @@ class NewYorker(BasicNewsRecipe):
         stories = OrderedDict()  # So we can list sections in order
 
         # Iterate sections of content
-
         for section_soup in soup.findAll(
             attrs={"class": lambda x: x and "MagazinePageSection__section___21cc7" in x}
         ):
@@ -226,7 +305,6 @@ class NewYorker(BasicNewsRecipe):
             self.log("Found section:", section)
 
             # Iterate stories in section
-
             is_mail_section = section == "Mail"
 
             if is_mail_section:
