@@ -1,6 +1,5 @@
 # Original at https://github.com/kovidgoyal/calibre/blob/962fc18be18cccb6fc70d29a086f16a7e0a36519/recipes/foreignaffairs.recipe
 import json
-import os
 import re
 from datetime import datetime
 
@@ -154,17 +153,6 @@ class ForeignAffairsRecipe(BasicNewsRecipe):
     blockquote.internal-blockquote { font-size: 1.25rem; margin-left: 0; text-align: center; }
     """
 
-    def _format_title(self, feed_name, post_date):
-        """
-        Format title
-        :return:
-        """
-        try:
-            var_value = os.environ["newsrack_title_dt_format"]
-            return f"{feed_name}: {post_date:{var_value}}"
-        except:  # noqa
-            return f"{feed_name}: {post_date:%-d %b, %Y}"
-
     def publication_date(self):
         return self.pub_date
 
@@ -172,8 +160,7 @@ class ForeignAffairsRecipe(BasicNewsRecipe):
         soup = self.index_to_soup(self.INDEX)
         # get dates
         date = re.split(r"\s\|\s", self.tag_to_string(soup.head.title.string))[0]
-        self.title = self._format_title(_name, date)
-        # self.timefmt = " [%s]" % date
+        self.title = f"{_name}: {date}"
         link = soup.find("link", rel="canonical", href=True)["href"]
         year, vol_num, issue_vol = link.split("/")[-3:]
         self.cover_url = soup.find(**classes("subscribe-callout-image"))[
