@@ -4,6 +4,7 @@
 # https://opensource.org/licenses/GPL-3.0
 
 import json
+import os
 from datetime import datetime
 from urllib.parse import urljoin
 
@@ -67,6 +68,17 @@ class TheWashingtonPost(BasicNewsRecipe):
         # ("Sports", u"http://feeds.washingtonpost.com/rss/sports"),
         # ("Redskins", u"http://feeds.washingtonpost.com/rss/sports/redskins"),
     ]
+
+    def _format_title(self, feed_name, post_date):
+        """
+        Format title
+        :return:
+        """
+        try:
+            var_value = os.environ["newsrack_title_dt_format"]
+            return f"{feed_name}: {post_date:{var_value}}"
+        except:  # noqa
+            return f"{feed_name}: {post_date:%-d %b, %Y}"
 
     def _extract_child_nodes(self, nodes, parent_element, soup, url):
         if not nodes:
@@ -225,7 +237,7 @@ class TheWashingtonPost(BasicNewsRecipe):
                 pass
         if not self.pub_date or post_date > self.pub_date:
             self.pub_date = post_date
-            self.title = f"{_name}: {post_date:%-d %b, %Y}"
+            self.title = self._format_title(_name, post_date)
         title = content["headlines"]["basic"]
         html = f"""<html>
         <head></head>

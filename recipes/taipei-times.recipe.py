@@ -2,7 +2,7 @@
 #
 # This software is released under the GNU General Public License v3.0
 # https://opensource.org/licenses/GPL-3.0
-
+import os
 from datetime import timezone, timedelta
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -48,6 +48,17 @@ class TaipeiTimes(BasicNewsRecipe):
 
     feeds = [(_name, "https://www.taipeitimes.com/xml/index.rss")]
 
+    def _format_title(self, feed_name, post_date):
+        """
+        Format title
+        :return:
+        """
+        try:
+            var_value = os.environ["newsrack_title_dt_format"]
+            return f"{feed_name}: {post_date:{var_value}}"
+        except:  # noqa
+            return f"{feed_name}: {post_date:%-d %b, %Y}"
+
     def publication_date(self):
         return self.pub_date
 
@@ -55,7 +66,7 @@ class TaipeiTimes(BasicNewsRecipe):
         if not self.pub_date or article.utctime > self.pub_date:
             self.pub_date = article.utctime
             post_date_local = article.utctime.astimezone(timezone(timedelta(hours=8)))
-            self.title = f"{_name}: {post_date_local:%-d %b, %Y}"
+            self.title = self._format_title(_name, post_date_local)
 
     def preprocess_raw_html(self, raw_html, _):
         soup = BeautifulSoup(raw_html)

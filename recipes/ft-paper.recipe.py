@@ -4,6 +4,7 @@ ft.com
 # Original from https://github.com/kovidgoyal/calibre/blob/902e80ec173bc40037efb164031043994044ec6c/recipes/financial_times_print_edition.recipe
 
 import json
+import os
 import re
 from datetime import datetime, timezone
 from urllib.parse import quote_plus, urljoin
@@ -52,6 +53,17 @@ class FinancialTimesPrint(BasicNewsRecipe):
     .article-img img { display: block; margin-bottom: 0.3rem; max-width: 100%; }
     .article-img .caption { font-size: 0.8rem; }
     """
+
+    def _format_title(self, feed_name, post_date):
+        """
+        Format title
+        :return:
+        """
+        try:
+            var_value = os.environ["newsrack_title_dt_format"]
+            return f"{feed_name}: {post_date:{var_value}}"
+        except:  # noqa
+            return f"{feed_name}: {post_date:%-d %b, %Y}"
 
     def parse_index(self):
         soup = self.index_to_soup("https://www.ft.com/todaysnewspaper/international")
@@ -127,7 +139,7 @@ class FinancialTimesPrint(BasicNewsRecipe):
             ).replace(tzinfo=timezone.utc)
             if (not self.pub_date) or date_published > self.pub_date:
                 self.pub_date = date_published
-                self.title = f"{_name}: {date_published:%-d %b, %Y}"
+                self.title = self._format_title(_name, date_published)
 
         paragraphs = []
         lede_image_url = article.get("image", {}).get("url")

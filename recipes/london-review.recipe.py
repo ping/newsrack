@@ -5,6 +5,7 @@
 import json
 
 # Original at: https://github.com/kovidgoyal/calibre/blob/640ca33197ea2c7772278183b3f77701009bb733/recipes/lrb.recipe
+import os
 from datetime import datetime, timezone
 
 from calibre.web.feeds.news import BasicNewsRecipe, classes
@@ -65,6 +66,17 @@ class LondonReviewOfBooksPayed(BasicNewsRecipe):
     .article-reviewed-item .article-reviewed-item-title { font-weight: bold; }
     """
 
+    def _format_title(self, feed_name, post_date):
+        """
+        Format title
+        :return:
+        """
+        try:
+            var_value = os.environ["newsrack_title_dt_format"]
+            return f"{feed_name}: {post_date:{var_value}}"
+        except:  # noqa
+            return f"{feed_name}: {post_date:%-d %b, %Y}"
+
     def publication_date(self):
         return self.pub_date
 
@@ -94,7 +106,7 @@ class LondonReviewOfBooksPayed(BasicNewsRecipe):
             soup.body["data-og-date"] = f"{modified_date:%Y-%m-%d %H:%M:%S}"
             if not self.pub_date or modified_date > self.pub_date:
                 self.pub_date = modified_date
-                self.title = f"{_name}: {published_date:%-d %b, %Y}"
+                self.title = self._format_title(_name, published_date)
         else:
             letter_ele = soup.find(attrs={"class": "letters-titles--date"})
             if letter_ele:

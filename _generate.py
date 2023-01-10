@@ -371,6 +371,9 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                 logger.exception("Error getting recipe name")
                 continue
 
+        if os.path.exists(f"{recipe.recipe}.recipe"):
+            os.environ["newsrack_title_dt_format"] = recipe.title_date_format
+
         recipe.is_enabled()
         job_status = ""
         recipe.last_run = job_log.get(recipe.slug, 0)

@@ -6,6 +6,7 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
+import os
 import random
 import re
 import time
@@ -64,6 +65,17 @@ class WSJ(BasicNewsRecipe):
         ),
         dict(name="amp-iframe"),  # interactive graphics
     ]
+
+    def _format_title(self, feed_name, post_date):
+        """
+        Format title
+        :return:
+        """
+        try:
+            var_value = os.environ["newsrack_title_dt_format"]
+            return f"{feed_name}: {post_date:{var_value}}"
+        except:  # noqa
+            return f"{feed_name}: {post_date:%-d %b, %Y}"
 
     def publication_date(self):
         return self.pub_date
@@ -144,7 +156,7 @@ class WSJ(BasicNewsRecipe):
                     if s.get("id") and s.get("label"):
                         sections.append(s)
             if sections:
-                self.title = f"{_name}: {issue_date:%-d %b, %Y}"
+                self.title = self._format_title(_name, issue_date)
                 break
 
         if not sections:

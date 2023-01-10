@@ -7,6 +7,7 @@
 ft.com
 """
 import json
+import os
 import re
 from datetime import datetime, timezone
 from urllib.parse import urljoin, quote_plus
@@ -67,6 +68,17 @@ class FinancialTimes(BasicNewsRecipe):
         # ("Life & Arts", "https://www.ft.com/life-arts?format=rss"),
         # ("How to Spend It", "https://www.ft.com/htsi?format=rss"),
     ]
+
+    def _format_title(self, feed_name, post_date):
+        """
+        Format title
+        :return:
+        """
+        try:
+            var_value = os.environ["newsrack_title_dt_format"]
+            return f"{feed_name}: {post_date:{var_value}}"
+        except:  # noqa
+            return f"{feed_name}: {post_date:%-d %b, %Y}"
 
     def print_version(self, url):
         return urljoin("https://ft.com", url)
@@ -150,7 +162,7 @@ class FinancialTimes(BasicNewsRecipe):
             article.url = og_link[0]["data-og-link"]
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
-            self.title = f"{_name}: {article.utctime:%-d %b, %Y}"
+            self.title = self._format_title(_name, article.utctime)
 
     def publication_date(self):
         return self.pub_date

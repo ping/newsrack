@@ -7,6 +7,7 @@
 thediplomat.com
 """
 import json
+import os
 import shutil
 import time
 from datetime import datetime, timedelta, timezone
@@ -64,6 +65,17 @@ class TheDiplomat(BasicNewsRecipe):
     feeds = [
         (_name, "https://thediplomat.com/"),
     ]
+
+    def _format_title(self, feed_name, post_date):
+        """
+        Format title
+        :return:
+        """
+        try:
+            var_value = os.environ["newsrack_title_dt_format"]
+            return f"{feed_name}: {post_date:{var_value}}"
+        except:  # noqa
+            return f"{feed_name}: {post_date:%-d %b, %Y}"
 
     def _extract_featured_media(self, post):
         """
@@ -223,7 +235,7 @@ class TheDiplomat(BasicNewsRecipe):
                 post_date = datetime.strptime(p["date"], "%Y-%m-%dT%H:%M:%S")
                 if not latest_post_date or post_date > latest_post_date:
                     latest_post_date = post_date
-                    self.title = f"{feed_name}: {post_date:%-d %b, %Y}"
+                    self.title = self._format_title(feed_name, post_date)
 
                 section_name = f"{post_date:%-d %B, %Y}"
                 if len(self.get_feeds()) > 1:

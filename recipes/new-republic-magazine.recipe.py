@@ -6,7 +6,6 @@ from datetime import datetime
 from functools import cmp_to_key
 from urllib.parse import urljoin, urlencode, urlsplit
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "The New Republic Magazine"

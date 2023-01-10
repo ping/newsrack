@@ -8,6 +8,7 @@ nytimes.com
 """
 import datetime
 import json
+import os
 import re
 from urllib.parse import urlparse
 
@@ -122,10 +123,21 @@ class NYTimesGlobal(BasicNewsRecipe):
         ("Technology", "https://feeds.nytimes.com/nyt/rss/Technology"),
     ]
 
+    def _format_title(self, feed_name, post_date):
+        """
+        Format title
+        :return:
+        """
+        try:
+            var_value = os.environ["newsrack_title_dt_format"]
+            return f"{feed_name}: {post_date:{var_value}}"
+        except:  # noqa
+            return f"{feed_name}: {post_date:%-d %b, %Y}"
+
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
-            self.title = f"{_name}: {article.utctime:%-d %b, %Y}"
+            self.title = self._format_title(_name, article.utctime)
 
     def publication_date(self):
         return self.pub_date

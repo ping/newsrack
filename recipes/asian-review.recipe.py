@@ -4,6 +4,9 @@
 
 __license__ = "GPL v3"
 __copyright__ = "2012-2017, Darko Miletic <darko.miletic at gmail.com>"
+
+import os
+
 """
 asianreviewofbooks.com
 """
@@ -61,13 +64,24 @@ class AsianReviewOfBooks(BasicNewsRecipe):
 
     feeds = [("Articles", "http://asianreviewofbooks.com/content/feed/")]
 
+    def _format_title(self, feed_name, post_date):
+        """
+        Format title
+        :return:
+        """
+        try:
+            var_value = os.environ["newsrack_title_dt_format"]
+            return f"{feed_name}: {post_date:{var_value}}"
+        except:  # noqa
+            return f"{feed_name}: {post_date:%-d %b, %Y}"
+
     def publication_date(self):
         return self.pub_date
 
     def populate_article_metadata(self, article, soup, _):
         if not self.pub_date or self.pub_date < article.utctime:
             self.pub_date = article.utctime
-            self.title = f"{_name}: {self.pub_date:%-d %b, %Y}"
+            self.title = self._format_title(_name, self.pub_date)
 
     def preprocess_html(self, soup):
         # find empty <p>

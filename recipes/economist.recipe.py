@@ -2,6 +2,8 @@
 # License: GPLv3 Copyright: 2008, Kovid Goyal <kovid at kovidgoyal.net>
 
 # Modified from https://github.com/kovidgoyal/calibre/blob/1f9c67ce02acfd69b5934bba3d74ce6875b9809e/recipes/economist.recipe
+import os
+
 try:
     from http.cookiejar import Cookie
 except ImportError:
@@ -255,6 +257,17 @@ class Economist(BasicNewsRecipe):
                 "Kindle Output profile being used, reducing image quality to keep file size below amazon email threshold"
             )
 
+    def _format_title(self, feed_name, post_date):
+        """
+        Format title
+        :return:
+        """
+        try:
+            var_value = os.environ["newsrack_title_dt_format"]
+            return f"{feed_name}: {post_date:{var_value}}"
+        except:  # noqa
+            return f"{feed_name}: {post_date:%-d %b, %Y}"
+
     def get_browser(self):
         br = BasicNewsRecipe.get_browser(self)
         # Add a cookie indicating we have accepted Economist's cookie
@@ -386,7 +399,7 @@ class Economist(BasicNewsRecipe):
                 data["props"]["pageProps"]["content"]["datePublished"],
                 "%Y-%m-%dT%H:%M:%SZ",
             ).replace(tzinfo=timezone.utc)
-            self.title = f"{_name}: {date_published:%-d %b, %Y}"
+            self.title = self._format_title(_name, date_published)
             feeds_dict = defaultdict(list)
             for part in safe_dict(
                 data, "props", "pageProps", "content", "hasPart", "parts"

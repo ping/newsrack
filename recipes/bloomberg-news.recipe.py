@@ -4,6 +4,7 @@
 # https://opensource.org/licenses/GPL-3.0
 
 import json
+import os
 import re
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urlparse
@@ -84,6 +85,17 @@ class BloombergNews(BasicNewsRecipe):
     feeds = [
         ("News", "https://www.bloomberg.com/feeds/sitemap_news.xml"),
     ]
+
+    def _format_title(self, feed_name, post_date):
+        """
+        Format title
+        :return:
+        """
+        try:
+            var_value = os.environ["newsrack_title_dt_format"]
+            return f"{feed_name}: {post_date:{var_value}}"
+        except:  # noqa
+            return f"{feed_name}: {post_date:%-d %b, %Y}"
 
     def publication_date(self):
         return self.pub_date
@@ -166,7 +178,7 @@ class BloombergNews(BasicNewsRecipe):
         )
         if (not self.pub_date) or date_published > self.pub_date:
             self.pub_date = date_published
-            self.title = f"{_name}: {date_published:%-d %b, %Y}"
+            self.title = self._format_title(_name, date_published)
         published_at = soup.find(class_="published-dt")
         published_at.append(f"{date_published:%-I:%M%p, %-d %b, %Y}")
         if article.get("updatedAt"):
@@ -174,7 +186,7 @@ class BloombergNews(BasicNewsRecipe):
             published_at.append(f", Updated {date_updated:%-I:%M%p, %-d %b, %Y}")
             if (not self.pub_date) or date_updated > self.pub_date:
                 self.pub_date = date_updated
-                self.title = f"{_name}: {date_updated:%-d %b, %Y}"
+                self.title = self._format_title(_name, date_updated)
 
         soup.head.title.append(article.get("headlineText") or article["headline"])
         h1_title = soup.find("h1")

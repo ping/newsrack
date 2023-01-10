@@ -11,6 +11,9 @@ __copyright__ = (
     "2008-2013, Darko Miletic <darko.miletic at gmail.com>. "
     "2022, Albert Aparicio Isarn <aaparicio at posteo.net>"
 )
+
+import os
+
 """
 japantimes.co.jp
 """
@@ -113,6 +116,17 @@ class JapanTimes(BasicNewsRecipe):
         # ("Sports", "https://www.japantimes.co.jp/sports/feed/"),
     ]
 
+    def _format_title(self, feed_name, post_date):
+        """
+        Format title
+        :return:
+        """
+        try:
+            var_value = os.environ["newsrack_title_dt_format"]
+            return f"{feed_name}: {post_date:{var_value}}"
+        except:  # noqa
+            return f"{feed_name}: {post_date:%-d %b, %Y}"
+
     def publication_date(self):
         return self.pub_date
 
@@ -146,7 +160,7 @@ class JapanTimes(BasicNewsRecipe):
             meta.append(pub_date_ele)
             if (not self.pub_date) or pub_date > self.pub_date:
                 self.pub_date = pub_date
-                self.title = f"{_name}: {pub_date:%-d %B, %Y}"
+                self.title = self._format_title(_name, pub_date)
         soup.body.h1.insert_after(meta)
         return soup
 

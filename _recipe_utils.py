@@ -63,6 +63,7 @@ class Recipe:
         CoverOptions()
     )  # customise script-generated cover, used when overwrite_cover=True
     tags: List[str] = field(default_factory=list)  # used in search
+    title_date_format: str = "%-d %b, %Y"
 
     def is_enabled(self) -> bool:
         if callable(self.enable_on):

@@ -1,5 +1,5 @@
 # Original at https://github.com/kovidgoyal/calibre/blob/29cd8d64ea71595da8afdaec9b44e7100bff829a/recipes/nature.recipe
-
+import os
 import re
 from collections import OrderedDict
 from datetime import datetime, timezone
@@ -80,6 +80,17 @@ class Nature(BasicNewsRecipe):
     p.figure__caption { font-size: 0.8rem; margin-top: 0.2rem; }
     .figure img { max-width: 100%; height: auto; }
     """
+
+    def _format_title(self, feed_name, post_date):
+        """
+        Format title
+        :return:
+        """
+        try:
+            var_value = os.environ["newsrack_title_dt_format"]
+            return f"{feed_name}: {post_date:{var_value}}"
+        except:  # noqa
+            return f"{feed_name}: {post_date:%-d %b, %Y}"
 
     def publication_date(self):
         return self.pub_date
@@ -164,7 +175,7 @@ class Nature(BasicNewsRecipe):
             )
             if mobj:
                 issue_date = datetime.strptime(mobj.group("issue_date"), "%d %B %Y")
-                self.title = f"{_name}: {issue_date:%-d %b, %Y}"
+                self.title = self._format_title(_name, issue_date)
 
         sectioned_feeds = OrderedDict()
         section_tags = soup.find_all(

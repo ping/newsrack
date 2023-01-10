@@ -8,6 +8,7 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import datetime
 import json
+import os
 import re
 from urllib.parse import urlparse
 
@@ -106,6 +107,17 @@ class NewYorkTimesPrint(BasicNewsRecipe):
     .article-img .caption { font-size: 0.8rem; }
     div.summary { font-size: 1.2rem; margin: 1rem 0; }
     """
+
+    def _format_title(self, feed_name, post_date):
+        """
+        Format title
+        :return:
+        """
+        try:
+            var_value = os.environ["newsrack_title_dt_format"]
+            return f"{feed_name}: {post_date:{var_value}}"
+        except:  # noqa
+            return f"{feed_name}: {post_date:%-d %b, %Y}"
 
     def publication_date(self):
         return self.pub_date
@@ -763,7 +775,7 @@ class NewYorkTimesPrint(BasicNewsRecipe):
         )
         # self.timefmt = strftime(" [%d %b, %Y]", date)
         self.pub_date = date
-        self.title = f"{_name}: {date:%-d %b, %Y}"
+        self.title = self._format_title(_name, date)
         return soup
 
     def parse_index(self):

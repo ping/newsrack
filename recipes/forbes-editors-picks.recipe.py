@@ -1,4 +1,5 @@
 import json
+import os
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urlencode
 
@@ -71,6 +72,17 @@ class ForbesEditorsPicks(BasicNewsRecipe):
     blockquote .text-align { font-size: 1rem; }
     """
 
+    def _format_title(self, feed_name, post_date):
+        """
+        Format title
+        :return:
+        """
+        try:
+            var_value = os.environ["newsrack_title_dt_format"]
+            return f"{feed_name}: {post_date:{var_value}}"
+        except:  # noqa
+            return f"{feed_name}: {post_date:%-d %b, %Y}"
+
     def publication_date(self):
         return self.pub_date
 
@@ -96,7 +108,7 @@ class ForbesEditorsPicks(BasicNewsRecipe):
             ).replace(tzinfo=timezone.utc)
             if (not self.pub_date) or modified_date > self.pub_date:
                 self.pub_date = modified_date
-                self.title = f"{_name}: {self.pub_date:%-d %b, %Y}"
+                self.title = self._format_title(_name, self.pub_date)
             article.utctime = modified_date
             article.localtime = modified_date
 
@@ -141,7 +153,7 @@ class ForbesEditorsPicks(BasicNewsRecipe):
 
                 if (not self.pub_date) or item_date > self.pub_date:
                     self.pub_date = item_date
-                    self.title = f"{_name}: {self.pub_date:%-d %b, %Y}"
+                    self.title = self._format_title(_name, self.pub_date)
 
                 articles.append(
                     {

@@ -6,7 +6,6 @@
 import json
 import shutil
 from datetime import datetime, timedelta, timezone
-from html import unescape
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
