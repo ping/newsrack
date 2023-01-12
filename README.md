@@ -120,7 +120,7 @@ Recipe(
 ),
 ```
 
-Customise the generated cover:
+Customise the title date format and generated cover:
 
 ```python
 from _recipe_utils import CoverOptions
@@ -130,6 +130,7 @@ Recipe(
     slug="example",
     src_ext="epub",
     category="example",
+    title_date_format = "%Y-%m-%d",
     cover_options=CoverOptions(
         text_colour="white",
         background_colour="black",
