@@ -11,6 +11,7 @@ __license__ = "GPL v3"
 __copyright__ = "2022, Albert Aparicio Isarn <aaparicio at posteo.net>"
 
 import os
+import sys
 
 from datetime import datetime, timezone, timedelta
 
