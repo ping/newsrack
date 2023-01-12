@@ -7,7 +7,6 @@
 propublica.org
 """
 import os
-
 import sys
 
 # custom include to share code between recipes

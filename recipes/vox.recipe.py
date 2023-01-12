@@ -3,10 +3,9 @@
 # This software is released under the GNU General Public License v3.0
 # https://opensource.org/licenses/GPL-3.0
 import os
-
-# custom include to share code between recipes
 import sys
 
+# custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import format_title
 
