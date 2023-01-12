@@ -9,8 +9,13 @@ ft.com
 import json
 import os
 import re
+import sys
 from datetime import datetime, timezone
 from urllib.parse import urljoin, quote_plus
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -68,17 +73,6 @@ class FinancialTimes(BasicNewsRecipe):
         # ("Life & Arts", "https://www.ft.com/life-arts?format=rss"),
         # ("How to Spend It", "https://www.ft.com/htsi?format=rss"),
     ]
-
-    def _format_title(self, feed_name, post_date):
-        """
-        Format title
-        :return:
-        """
-        try:
-            var_value = os.environ["newsrack_title_dt_format"]
-            return f"{feed_name}: {post_date:{var_value}}"
-        except:  # noqa
-            return f"{feed_name}: {post_date:%-d %b, %Y}"
 
     def print_version(self, url):
         return urljoin("https://ft.com", url)
@@ -162,7 +156,7 @@ class FinancialTimes(BasicNewsRecipe):
             article.url = og_link[0]["data-og-link"]
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
-            self.title = self._format_title(_name, article.utctime)
+            self.title = format_title(_name, article.utctime)
 
     def publication_date(self):
         return self.pub_date

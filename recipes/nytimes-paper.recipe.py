@@ -10,7 +10,12 @@ import datetime
 import json
 import os
 import re
+import sys
 from urllib.parse import urlparse
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import format_title
 
 from calibre import browser
 from calibre import strftime
@@ -107,17 +112,6 @@ class NewYorkTimesPrint(BasicNewsRecipe):
     .article-img .caption { font-size: 0.8rem; }
     div.summary { font-size: 1.2rem; margin: 1rem 0; }
     """
-
-    def _format_title(self, feed_name, post_date):
-        """
-        Format title
-        :return:
-        """
-        try:
-            var_value = os.environ["newsrack_title_dt_format"]
-            return f"{feed_name}: {post_date:{var_value}}"
-        except:  # noqa
-            return f"{feed_name}: {post_date:%-d %b, %Y}"
 
     def publication_date(self):
         return self.pub_date
@@ -775,7 +769,7 @@ class NewYorkTimesPrint(BasicNewsRecipe):
         )
         # self.timefmt = strftime(" [%d %b, %Y]", date)
         self.pub_date = date
-        self.title = self._format_title(_name, date)
+        self.title = format_title(_name, date)
         return soup
 
     def parse_index(self):

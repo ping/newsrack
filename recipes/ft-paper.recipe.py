@@ -6,8 +6,13 @@ ft.com
 import json
 import os
 import re
+import sys
 from datetime import datetime, timezone
 from urllib.parse import quote_plus, urljoin
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
@@ -53,17 +58,6 @@ class FinancialTimesPrint(BasicNewsRecipe):
     .article-img img { display: block; margin-bottom: 0.3rem; max-width: 100%; }
     .article-img .caption { font-size: 0.8rem; }
     """
-
-    def _format_title(self, feed_name, post_date):
-        """
-        Format title
-        :return:
-        """
-        try:
-            var_value = os.environ["newsrack_title_dt_format"]
-            return f"{feed_name}: {post_date:{var_value}}"
-        except:  # noqa
-            return f"{feed_name}: {post_date:%-d %b, %Y}"
 
     def parse_index(self):
         soup = self.index_to_soup("https://www.ft.com/todaysnewspaper/international")
@@ -139,7 +133,7 @@ class FinancialTimesPrint(BasicNewsRecipe):
             ).replace(tzinfo=timezone.utc)
             if (not self.pub_date) or date_published > self.pub_date:
                 self.pub_date = date_published
-                self.title = self._format_title(_name, date_published)
+                self.title = format_title(_name, date_published)
 
         paragraphs = []
         lede_image_url = article.get("image", {}).get("url")

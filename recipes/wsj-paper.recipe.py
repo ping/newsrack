@@ -13,6 +13,10 @@ import time
 from collections import OrderedDict
 from datetime import datetime, timedelta, timezone
 
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import format_title
+
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 
@@ -65,17 +69,6 @@ class WSJ(BasicNewsRecipe):
         ),
         dict(name="amp-iframe"),  # interactive graphics
     ]
-
-    def _format_title(self, feed_name, post_date):
-        """
-        Format title
-        :return:
-        """
-        try:
-            var_value = os.environ["newsrack_title_dt_format"]
-            return f"{feed_name}: {post_date:{var_value}}"
-        except:  # noqa
-            return f"{feed_name}: {post_date:%-d %b, %Y}"
 
     def publication_date(self):
         return self.pub_date
@@ -156,7 +149,7 @@ class WSJ(BasicNewsRecipe):
                     if s.get("id") and s.get("label"):
                         sections.append(s)
             if sections:
-                self.title = self._format_title(_name, issue_date)
+                self.title = format_title(_name, issue_date)
                 break
 
         if not sections:

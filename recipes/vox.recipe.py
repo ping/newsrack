@@ -4,6 +4,12 @@
 # https://opensource.org/licenses/GPL-3.0
 import os
 
+# custom include to share code between recipes
+import sys
+
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import format_title
+
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Vox"
@@ -47,24 +53,13 @@ class Vox(BasicNewsRecipe):
     .e-image div, .e-image cite { font-size: 0.8rem; }
     """
 
-    def _format_title(self, feed_name, post_date):
-        """
-        Format title
-        :return:
-        """
-        try:
-            var_value = os.environ["newsrack_title_dt_format"]
-            return f"{feed_name}: {post_date:{var_value}}"
-        except:  # noqa
-            return f"{feed_name}: {post_date:%-d %b, %Y}"
-
     def publication_date(self):
         return self.pub_date
 
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
-            self.title = self._format_title(_name, article.utctime)
+            self.title = format_title(_name, article.utctime)
 
     def parse_feeds(self):
         parsed_feeds = super().parse_feeds()

@@ -3,6 +3,11 @@
 # This software is released under the GNU General Public License v3.0
 # https://opensource.org/licenses/GPL-3.0
 import os
+import sys
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import format_title
 
 from calibre.utils.date import parse_date
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -65,23 +70,12 @@ class MITPressReader(BasicNewsRecipe):
         (_name, "https://thereader.mitpress.mit.edu/feed/"),
     ]
 
-    def _format_title(self, feed_name, post_date):
-        """
-        Format title
-        :return:
-        """
-        try:
-            var_value = os.environ["newsrack_title_dt_format"]
-            return f"{feed_name}: {post_date:{var_value}}"
-        except:  # noqa
-            return f"{feed_name}: {post_date:%-d %b, %Y}"
-
     def postprocess_html(self, soup, _):
         time_ele = soup.find(name="time", attrs={"datetime": True})
         post_date = parse_date(time_ele["datetime"])
         if (not self.pub_date) or post_date > self.pub_date:
             self.pub_date = post_date
-            self.title = self._format_title(_name, post_date)
+            self.title = format_title(_name, post_date)
         athor_ele = soup.find(class_="ma-top-shares-left")
         if athor_ele:
             post_date_ele = soup.new_tag("div")

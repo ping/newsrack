@@ -312,6 +312,10 @@ def _linkify_attrs(attrs, new=False):
 
 
 def run(publish_site, source_url, commit_hash, verbose_mode):
+
+    # set path to recipe includes in os environ so that recipes can pick it up
+    os.environ["recipes_includes"] = os.path.abspath("recipes/includes/")
+
     # for GitHub
     job_summary = """| Recipe | Status | Duration |
 | ------ | ------ | -------- |

@@ -5,8 +5,13 @@
 
 import json
 import os
+import sys
 from datetime import datetime
 from urllib.parse import urljoin
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -68,17 +73,6 @@ class TheWashingtonPost(BasicNewsRecipe):
         # ("Sports", u"http://feeds.washingtonpost.com/rss/sports"),
         # ("Redskins", u"http://feeds.washingtonpost.com/rss/sports/redskins"),
     ]
-
-    def _format_title(self, feed_name, post_date):
-        """
-        Format title
-        :return:
-        """
-        try:
-            var_value = os.environ["newsrack_title_dt_format"]
-            return f"{feed_name}: {post_date:{var_value}}"
-        except:  # noqa
-            return f"{feed_name}: {post_date:%-d %b, %Y}"
 
     def _extract_child_nodes(self, nodes, parent_element, soup, url):
         if not nodes:
@@ -237,7 +231,7 @@ class TheWashingtonPost(BasicNewsRecipe):
                 pass
         if not self.pub_date or post_date > self.pub_date:
             self.pub_date = post_date
-            self.title = self._format_title(_name, post_date)
+            self.title = format_title(_name, post_date)
         title = content["headlines"]["basic"]
         html = f"""<html>
         <head></head>

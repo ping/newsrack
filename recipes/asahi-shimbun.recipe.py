@@ -2,17 +2,21 @@
 # -*- coding: utf-8 -*-
 
 # Original at https://github.com/kovidgoyal/calibre/blob/0f2e921ff1d71cb9b8d29fc5393771861a465f13/recipes/asahi_shimbun_en.recipe
+"""
+https://www.asahi.com/ajw/
+"""
+
 
 __license__ = "GPL v3"
 __copyright__ = "2022, Albert Aparicio Isarn <aaparicio at posteo.net>"
 
 import os
 
-"""
-https://www.asahi.com/ajw/
-"""
-
 from datetime import datetime, timezone, timedelta
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import format_title
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -72,17 +76,6 @@ class AsahiShimbunEnglishNews(BasicNewsRecipe):
     div.Image .Caption, div.insert_image_full div > div { display: block; font-size: 0.8rem; margin-top: 0.2rem; }
     """
 
-    def _format_title(self, feed_name, post_date):
-        """
-        Format title
-        :return:
-        """
-        try:
-            var_value = os.environ["newsrack_title_dt_format"]
-            return f"{feed_name}: {post_date:{var_value}}"
-        except:  # noqa
-            return f"{feed_name}: {post_date:%-d %b, %Y}"
-
     def publication_date(self):
         return self.pub_date
 
@@ -99,7 +92,7 @@ class AsahiShimbunEnglishNews(BasicNewsRecipe):
                 tzinfo=timezone.utc
             ):  # because asahi has wrongly dated articles far into the future
                 self.pub_date = post_date_utc
-                self.title = self._format_title(_name, post_date)
+                self.title = format_title(_name, post_date)
 
     def preprocess_html(self, soup):
         gallery = soup.find(name="ul", attrs={"class": "Thum"})

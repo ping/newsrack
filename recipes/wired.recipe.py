@@ -1,14 +1,19 @@
+"""
+www.wired.com
+"""
 # Original at https://github.com/kovidgoyal/calibre/blob/b27ac9936f1ba2f0ada94ef729e41f1262958f87/recipes/wired.recipe
 __license__ = "GPL v3"
 __copyright__ = "2014, Darko Miletic <darko.miletic at gmail.com>"
 
 import os
+import sys
 
-"""
-www.wired.com
-"""
 from datetime import datetime
 from urllib.parse import urljoin
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import format_title
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -82,17 +87,6 @@ class WiredMagazine(BasicNewsRecipe):
         dict(attrs={"data-testid": ["ContentHeaderRubric", "GenericCallout"]}),
     ]
 
-    def _format_title(self, feed_name, post_date):
-        """
-        Format title
-        :return:
-        """
-        try:
-            var_value = os.environ["newsrack_title_dt_format"]
-            return f"{feed_name}: {post_date:{var_value}}"
-        except:  # noqa
-            return f"{feed_name}: {post_date:%-d %b, %Y}"
-
     def publication_date(self):
         return self.pub_date
 
@@ -104,7 +98,7 @@ class WiredMagazine(BasicNewsRecipe):
         post_date = datetime.strptime(pub_date_meta["content"], "%Y-%m-%dT%H:%M:%S.%fZ")
         if not self.pub_date or post_date > self.pub_date:
             self.pub_date = post_date
-            self.title = self._format_title(_name, post_date)
+            self.title = format_title(_name, post_date)
 
         authors = [b.text for b in soup.find_all(attrs={"class": "byline__name-link"})]
         category = soup.find(attrs={"class": "rubric"}).text

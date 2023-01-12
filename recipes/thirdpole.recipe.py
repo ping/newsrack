@@ -6,10 +6,15 @@
 import json
 import os
 import shutil
+import sys
 import time
 from datetime import datetime, timedelta, timezone
 from html import unescape
 from urllib.parse import urlencode
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
@@ -77,17 +82,6 @@ class ThirdPole(BasicNewsRecipe):
     feeds = [
         (_name, "https://www.thethirdpole.net/wp-json/wp/v2/posts"),
     ]
-
-    def _format_title(self, feed_name, post_date):
-        """
-        Format title
-        :return:
-        """
-        try:
-            var_value = os.environ["newsrack_title_dt_format"]
-            return f"{feed_name}: {post_date:{var_value}}"
-        except:  # noqa
-            return f"{feed_name}: {post_date:%-d %b, %Y}"
 
     def _extract_featured_media(self, post, soup):
         """
@@ -237,7 +231,7 @@ class ThirdPole(BasicNewsRecipe):
                 post_date = datetime.strptime(p["date"], "%Y-%m-%dT%H:%M:%S")
                 if not latest_post_date or post_date > latest_post_date:
                     latest_post_date = post_date
-                    self.title = self._format_title(feed_name, post_date)
+                    self.title = format_title(feed_name, post_date)
 
                 section_name = f"{post_date:%-d %B, %Y}"
                 if len(self.get_feeds()) > 1:

@@ -3,7 +3,12 @@
 # This software is released under the GNU General Public License v3.0
 # https://opensource.org/licenses/GPL-3.0
 import os
+import sys
 from datetime import timezone, timedelta
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -48,17 +53,6 @@ class TaipeiTimes(BasicNewsRecipe):
 
     feeds = [(_name, "https://www.taipeitimes.com/xml/index.rss")]
 
-    def _format_title(self, feed_name, post_date):
-        """
-        Format title
-        :return:
-        """
-        try:
-            var_value = os.environ["newsrack_title_dt_format"]
-            return f"{feed_name}: {post_date:{var_value}}"
-        except:  # noqa
-            return f"{feed_name}: {post_date:%-d %b, %Y}"
-
     def publication_date(self):
         return self.pub_date
 
@@ -66,7 +60,7 @@ class TaipeiTimes(BasicNewsRecipe):
         if not self.pub_date or article.utctime > self.pub_date:
             self.pub_date = article.utctime
             post_date_local = article.utctime.astimezone(timezone(timedelta(hours=8)))
-            self.title = self._format_title(_name, post_date_local)
+            self.title = format_title(_name, post_date_local)
 
     def preprocess_raw_html(self, raw_html, _):
         soup = BeautifulSoup(raw_html)

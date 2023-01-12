@@ -1,7 +1,12 @@
 import json
 import os
+import sys
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urlencode
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -72,17 +77,6 @@ class ForbesEditorsPicks(BasicNewsRecipe):
     blockquote .text-align { font-size: 1rem; }
     """
 
-    def _format_title(self, feed_name, post_date):
-        """
-        Format title
-        :return:
-        """
-        try:
-            var_value = os.environ["newsrack_title_dt_format"]
-            return f"{feed_name}: {post_date:{var_value}}"
-        except:  # noqa
-            return f"{feed_name}: {post_date:%-d %b, %Y}"
-
     def publication_date(self):
         return self.pub_date
 
@@ -108,7 +102,7 @@ class ForbesEditorsPicks(BasicNewsRecipe):
             ).replace(tzinfo=timezone.utc)
             if (not self.pub_date) or modified_date > self.pub_date:
                 self.pub_date = modified_date
-                self.title = self._format_title(_name, self.pub_date)
+                self.title = format_title(_name, self.pub_date)
             article.utctime = modified_date
             article.localtime = modified_date
 
@@ -153,7 +147,7 @@ class ForbesEditorsPicks(BasicNewsRecipe):
 
                 if (not self.pub_date) or item_date > self.pub_date:
                     self.pub_date = item_date
-                    self.title = self._format_title(_name, self.pub_date)
+                    self.title = format_title(_name, self.pub_date)
 
                 articles.append(
                     {
