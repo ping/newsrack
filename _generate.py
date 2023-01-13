@@ -819,7 +819,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
             publish_site=publish_site,
             elapsed=humanize.naturaldelta(elapsed_time, minimum_unit="seconds"),
             catalog=catalog_path,
-            source_link=f'<a class="git" href="{source_url}">{commit_hash[0:7]}.</a>',
+            source_link=f'<a class="git" href="{source_url}">{commit_hash[0:7]}</a>',
         )
         f_out.write(html_output)
 
