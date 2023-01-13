@@ -89,7 +89,7 @@ h1 {
 
 .category-container {
     background-color: $base-bg-color;
-    border: 1px solid $base-disabled-color;
+    border: 1px solid lighten($base-disabled-color, 20%);
     border-radius: 0.25em;
     padding: 0.35rem 0.7em;
     margin-bottom: 0.5em;
@@ -294,7 +294,7 @@ footer {
 
     .category-container {
         background-color: $dark-base-bg-color;
-        border-color: $dark-base-disabled-color;
+        border-color: darken($dark-base-disabled-color, 20%);
         .close-cat-container {
             .close-cat-shortcut {
                 &:before {
