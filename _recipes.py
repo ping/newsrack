@@ -187,6 +187,19 @@ recipes: List[Recipe] = [
         ),
     ),
     Recipe(
+        recipe="fulcrum-sg",
+        slug="fulcrum-sg",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Online Magazines",
+        tags=["asia"],
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], 8)
+        and onlyat_hours(list(range(8, 20)), 8),
+        cover_options=CoverOptions(
+            logo_path_or_url="https://i0.wp.com/fulcrum.sg/wp-content/uploads/logo.png",
+        ),
+    ),
+    Recipe(
         recipe="guardian",
         slug="guardian",
         src_ext="mobi",
