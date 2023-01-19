@@ -1,0 +1,93 @@
+# Original at https://github.com/kovidgoyal/calibre/blob/f1002b15ef6874fa125292060b14cca6cfe36a15/recipes/smith.recipe
+import json
+from urllib.parse import urljoin
+
+from calibre.web.feeds.news import BasicNewsRecipe, classes, prefixed_classes
+from calibre.utils.date import parse_date
+
+_name = "Smithsonian Magazine"
+
+
+class SmithsonianMag(BasicNewsRecipe):
+
+    title = _name
+    __author__ = "Kovid Goyal"
+
+    description = "This magazine chronicles the arts, environment, sciences and popular culture of the times. It is edited for modern, well-rounded individuals with diverse, general interests. With your order, you become a National Associate Member of the Smithsonian. Membership benefits include your subscription to Smithsonian magazine, a personalized membership card, discounts from the Smithsonian catalog, and more. https://www.smithsonianmag.com/"  # noqa
+    masthead_url = "https://www.smithsonianmag.com/static/smithsonianmag/img/smithsonian_magazine_logo_black.46435ad4efd4.svg"
+    language = "en"
+    category = "news"
+    encoding = "UTF-8"
+    BASE = "https://www.smithsonianmag.com/"
+
+    no_javascript = True
+    no_stylesheets = True
+
+    oldest_article = 30  # days
+    max_articles_per_feed = 10
+    compress_news_images = True
+    compress_news_images_auto_size = 10
+    scale_news_images = (800, 800)
+    scale_news_images_to_device = False  # force img to be resized to scale_news_images
+    timeout = 20
+    timefmt = ""
+    pub_date = None  # custom publication date
+
+    keep_only_tags = [classes("main-hero main-content")]
+    remove_tags = [
+        classes(
+            "hidden-phone hidden-tablet hidden-desktop slideshow-nav associated-container"
+            " widget-article-pixel tag-list recommended-videos comments"
+            " amazon-associated-product affiliateLink mobile-heading author-headshot binding-box"
+        ),
+        prefixed_classes("widget-"),
+    ]
+    extra_css = """
+    .category-label h2 { font-size: 1rem; }
+    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    p.subtitle { font-size: 1.2rem; font-style: italic; font-weight: normal; margin-bottom: 0.5rem; margin-top: 0; }
+    .author-text { color: #444; margin-top: 1rem; margin-bottom: 1rem; }
+    .author-text p.author { font-weight: bold; display: inline-block; margin-top: 0; margin-bottom: 0; }
+    .author-text p.author-short-bio { display: inline-block; }
+    .author-text time { display: inline-block;  margin-left: 1rem; }
+    .caption { font-size: 0.8rem; margin-top: 0.2rem; margin-bottom: 0.5rem; }
+    img { max-width: 100%; height: auto; }
+    """
+
+    def publication_date(self):
+        return self.pub_date
+
+    def preprocess_html(self, soup):
+        for hr in soup.select(".category-label hr") + soup.select(".article-line hr"):
+            hr.decompose()
+        for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
+            article = json.loads(script.contents[0])
+            date_modified = parse_date(article["dateModified"])
+            if (not self.pub_date) or date_modified > self.pub_date:
+                self.pub_date = date_modified
+        return soup
+
+    def parse_index(self):
+        soup = self.index_to_soup(self.BASE)
+        curr_issue_ele = soup.find("div", class_="current-issue")
+        self.title = f'{_name}: {self.tag_to_string(curr_issue_ele.find("time"))}'
+        issue_url = urljoin(
+            self.BASE, curr_issue_ele.select(".issue-left a")[0]["href"]
+        )
+        soup = self.index_to_soup(issue_url)
+        self.cover_url = soup.select(".issue-cover img")[0]["src"]
+        articles = []
+        for article in soup.select(".article-list .article-wrapper"):
+            article_link = article.select_one(".headline a")
+            description = ""
+            summary = article.find("p", class_="summary")
+            if summary:
+                description = self.tag_to_string(summary)
+            articles.append(
+                {
+                    "title": self.tag_to_string(article_link),
+                    "url": urljoin(self.BASE, article_link["href"]),
+                    "description": description,
+                }
+            )
+        return [(_name, articles)]

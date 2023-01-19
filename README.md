@@ -198,10 +198,11 @@ In alphabetical order:
 8. [The New Republic Magazine](https://newrepublic.com/magazine)
 9. [The New Yorker](https://www.newyorker.com/)
 10. [Scientific American](https://www.scientificamerican.com/)
-11. [The Spectator](https://www.spectator.co.uk/magazine)
-12. [Time Magazine](https://time.com/magazine/)
-13. [The World Today](https://www.chathamhouse.org/publications/the-world-today/)
-14. ~~[Bloomberg Businessweek](https://www.bloomberg.com/businessweek)~~
+11. [Smithsonian Magazine](https://www.smithsonianmag.com/)
+12. [The Spectator](https://www.spectator.co.uk/magazine)
+13. [Time Magazine](https://time.com/magazine/)
+14. [The World Today](https://www.chathamhouse.org/publications/the-world-today/)
+15. ~~[Bloomberg Businessweek](https://www.bloomberg.com/businessweek)~~
 
 </details>
 
