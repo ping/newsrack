@@ -1,6 +1,5 @@
-# Original at https://github.com/kovidgoyal/calibre/blob/f1002b15ef6874fa125292060b14cca6cfe36a15/recipes/smith.recipe
 import json
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 from calibre.web.feeds.news import BasicNewsRecipe, classes, prefixed_classes
 from calibre.utils.date import parse_date
@@ -11,9 +10,9 @@ _name = "Smithsonian Magazine"
 class SmithsonianMag(BasicNewsRecipe):
 
     title = _name
-    __author__ = "Kovid Goyal"
+    __author__ = "ping"
 
-    description = "This magazine chronicles the arts, environment, sciences and popular culture of the times. It is edited for modern, well-rounded individuals with diverse, general interests. With your order, you become a National Associate Member of the Smithsonian. Membership benefits include your subscription to Smithsonian magazine, a personalized membership card, discounts from the Smithsonian catalog, and more. https://www.smithsonianmag.com/"  # noqa
+    description = "This magazine chronicles the arts, environment, sciences and popular culture of the times. It is edited for modern, well-rounded individuals with diverse, general interests. https://www.smithsonianmag.com/"  # noqa
     masthead_url = "https://www.smithsonianmag.com/static/smithsonianmag/img/smithsonian_magazine_logo_black.46435ad4efd4.svg"
     language = "en"
     category = "news"
@@ -23,8 +22,6 @@ class SmithsonianMag(BasicNewsRecipe):
     no_javascript = True
     no_stylesheets = True
 
-    oldest_article = 30  # days
-    max_articles_per_feed = 10
     compress_news_images = True
     compress_news_images_auto_size = 10
     scale_news_images = (800, 800)
@@ -36,9 +33,8 @@ class SmithsonianMag(BasicNewsRecipe):
     keep_only_tags = [classes("main-hero main-content")]
     remove_tags = [
         classes(
-            "hidden-phone hidden-tablet hidden-desktop slideshow-nav associated-container"
-            " widget-article-pixel tag-list recommended-videos comments"
-            " amazon-associated-product affiliateLink mobile-heading author-headshot binding-box"
+            "tag-list recommended-videos comments amazon-associated-product affiliateLink "
+            "mobile-heading author-headshot binding-box"
         ),
         prefixed_classes("widget-"),
     ]
@@ -67,6 +63,13 @@ class SmithsonianMag(BasicNewsRecipe):
                 self.pub_date = date_modified
         return soup
 
+    def populate_article_metadata(self, article, soup, first):
+        h1 = soup.find("h1")
+        if h1:
+            # we update the title from the article because
+            # the issue page often uses an alternative title
+            article.title = self.tag_to_string(h1)
+
     def parse_index(self):
         soup = self.index_to_soup(self.BASE)
         curr_issue_ele = soup.find("div", class_="current-issue")
@@ -75,7 +78,15 @@ class SmithsonianMag(BasicNewsRecipe):
             self.BASE, curr_issue_ele.select(".issue-left a")[0]["href"]
         )
         soup = self.index_to_soup(issue_url)
-        self.cover_url = soup.select(".issue-cover img")[0]["src"]
+        try:
+            # ultra high-res cover
+            cover_url_parsed = urlparse(soup.select(".issue-cover img")[0]["src"])
+            cover_url = cover_url_parsed.path[cover_url_parsed.path.index("https://") :]
+            self.log(f"Cover url: {cover_url}")
+        except:  # noqa
+            cover_url = soup.select(".issue-cover img")[0]["src"]
+        self.cover_url = cover_url
+
         articles = []
         for article in soup.select(".article-list .article-wrapper"):
             article_link = article.select_one(".headline a")
