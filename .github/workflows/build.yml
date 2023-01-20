@@ -69,7 +69,8 @@ jobs:
       - name: Get latest calibre version
         id: calibrelatest
         run: |
-          tag="$(curl -L --retry 2 --silent --fail 'https://api.github.com/repos/kovidgoyal/calibre/releases/latest' | jq -r .tag_name)" && \
+          tag="$(curl -L --retry 3 --silent --fail 'https://api.github.com/repos/kovidgoyal/calibre/releases/latest' | jq -r .tag_name)" && \
+          echo "calibre_ver=${tag#*v}" && \
           echo "calibre_ver=${tag#*v}" >> $GITHUB_ENV
 
       - name: Calibre binaries cache
