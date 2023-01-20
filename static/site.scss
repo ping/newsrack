@@ -71,6 +71,7 @@ h1 {
     font-size: 0.8em;
     padding: 0.2em;
     width: 100%;
+    box-sizing: border-box;
 }
 #search-button {
     font-size: 0.8em;
@@ -394,6 +395,17 @@ body.nonkindle {
 
 @media (max-width: 576px) {
     body.nonkindle {
+        margin-left: 0;
+        margin-right: 0;
+
+        #search-form-container {
+            margin-left: 0.7em;
+            margin-right: 0.7em;
+        }
+        .category-container {
+            border: 0;
+        }
+
         ol.books li {
             span.title {
                 display: block;
