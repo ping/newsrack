@@ -406,19 +406,22 @@ body.nonkindle {
             border: 0;
         }
 
-        ol.books li {
-            span.title {
-                display: block;
-                margin-bottom: 0.2em;
-            }
+        ol.books {
+            margin-top: 1em;
+            li {
+                span.title {
+                    display: block;
+                    margin-bottom: 0.2em;
+                }
 
-            .book:first-of-type {
-                margin-left: 0;
-            }
+                .book:first-of-type {
+                    margin-left: 0;
+                }
 
-            .pub-date {
-                padding-bottom: 0.1em;
-                margin-bottom: 0.2em;
+                .pub-date {
+                    padding-bottom: 0.1em;
+                    margin-bottom: 0.2em;
+                }
             }
         }
     }
