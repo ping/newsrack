@@ -4,8 +4,15 @@
 # https://opensource.org/licenses/GPL-3.0
 
 import json
+import os
 import shutil
+import sys
 from datetime import datetime, timedelta, timezone
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import BasicNewsrackRecipe
+
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
@@ -14,24 +21,15 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "TIME"
 
 
-class TimeMagazine(BasicNewsRecipe):
+class TimeMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "ping"
     description = "Weekly US magazine. https://time.com/magazine/"
     language = "en"
     masthead_url = "https://time.com/img/logo.png"
-    no_stylesheets = True
-    remove_javascript = True
     oldest_article = 14
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
     auto_cleanup = False
-    timeout = 20
     reverse_article_order = False
-    timefmt = ""  # suppress date output
-    pub_date = None  # custom publication date
-
-    temp_dir = None
 
     remove_attributes = ["style"]
     extra_css = """
@@ -96,14 +94,6 @@ class TimeMagazine(BasicNewsRecipe):
         og_link = soup.select("[data-og-link]")
         if og_link:
             article.url = og_link[0]["data-og-link"]
-
-    def publication_date(self):
-        return self.pub_date
-
-    def cleanup(self):
-        if self.temp_dir:
-            self.log("Deleting temp files...")
-            shutil.rmtree(self.temp_dir)
 
     def parse_index(self):
         br = self.get_browser()

@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -18,7 +18,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "South China Morning Post"
 
 
-class SCMP(BasicNewsRecipe):
+class SCMP(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "llam"
     description = "SCMP.com, Hong Kong's premier online English daily provides exclusive up-to-date news, audio video news, podcasts, RSS Feeds, Blogs, breaking news, top stories, award winning news and analysis on Hong Kong and China. https://www.scmp.com/"  # noqa
@@ -26,24 +26,17 @@ class SCMP(BasicNewsRecipe):
     publication_type = "newspaper"
     oldest_article = 1
     max_articles_per_feed = 25
-    no_stylesheets = True
-    remove_javascript = True
     encoding = "utf-8"
     use_embedded_content = False
     language = "en"
     remove_empty_feeds = True
     auto_cleanup = False
-    compress_news_images = True
     ignore_duplicate_articles = {"title", "url"}
 
     masthead_url = (
         "https://cdn.shopify.com/s/files/1/0280/0258/2595/files/SCMP_Logo_2018_540x.png"
     )
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
     timeout = 30
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     # used when unable to extract article from <script>, particularly in the Sports section
     remove_tags = [
@@ -255,6 +248,3 @@ class SCMP(BasicNewsRecipe):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
             self.title = format_title(_name, article.utctime)
-
-    def publication_date(self):
-        return self.pub_date

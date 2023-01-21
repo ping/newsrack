@@ -11,14 +11,14 @@ import sys
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "ChannelNewsAsia"
 
 
-class ChannelNewsAsia(BasicNewsRecipe):
+class ChannelNewsAsia(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "ping"
     description = "CNA: Breaking News, Singapore News, World and Asia https://www.channelnewsasia.com/"
@@ -26,20 +26,13 @@ class ChannelNewsAsia(BasicNewsRecipe):
     category = "news, Singapore"
     publication_type = "newspaper"
     use_embedded_content = False
-    no_stylesheets = True
     auto_cleanup = False
-    remove_javascript = True
     encoding = "utf-8"
     language = "en"
     masthead_url = "https://www.channelnewsasia.com/sites/default/themes/mc_cna_theme/images/logo.png"
 
     oldest_article = 1
     max_articles_per_feed = 25
-    compress_news_images = True
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 20
-    pub_date = None  # custom publication date
 
     remove_tags_before = [dict(class_=["h1--page-title"])]
     remove_tags_after = [dict(class_=["content"])]
@@ -98,6 +91,3 @@ class ChannelNewsAsia(BasicNewsRecipe):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
             self.title = format_title(_name, article.utctime)
-
-    def publication_date(self):
-        return self.pub_date

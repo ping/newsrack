@@ -16,7 +16,7 @@ from datetime import datetime, timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre import replace_entities
 from calibre.ebooks.BeautifulSoup import NavigableString, Tag
@@ -143,7 +143,7 @@ def process_url(url):
 _name = "Economist"
 
 
-class Economist(BasicNewsRecipe):
+class Economist(BasicNewsrackRecipe, BasicNewsRecipe):
 
     title = _name
     language = "en"
@@ -234,20 +234,13 @@ class Economist(BasicNewsRecipe):
         ),
     ]
     keep_only_tags = [dict(name="article", id=lambda x: not x)]
-    no_stylesheets = True
     remove_attributes = ["data-reactid", "width", "height"]
     # economist.com has started throttling after about 60% of the total has
     # downloaded with connection reset by peer (104) errors.
     # delay = 1
     simultaneous_downloads = 2  # doesn't seem throttled now 2022.04.15
 
-    compress_news_images = True
     masthead_url = "https://www.economist.com/assets/the-economist-logo.png"
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 20
-    timefmt = ""
-    pub_date = None
 
     needs_subscription = False
 
@@ -341,12 +334,6 @@ class Economist(BasicNewsRecipe):
             if not self.pub_date or date_published > self.pub_date:
                 self.pub_date = date_published
                 # self.title = f"{_name}: {date_published:%-d %b, %Y}"
-
-    def publication_date(self):
-        # if edition_date:
-        #     return parse_only_date(edition_date, as_utc=False)
-        # return BasicNewsRecipe.publication_date(self)
-        return self.pub_date
 
     def parse_index(self):
         if edition_date:

@@ -12,7 +12,7 @@ from datetime import timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds import Feed
@@ -21,7 +21,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "Harvard International Review"
 
 
-class HarvardInternationalReview(BasicNewsRecipe):
+class HarvardInternationalReview(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     description = "The Harvard International Review is a quarterly magazine offering insight on international affairs from the perspectives of scholars, leaders, and policymakers. https://hir.harvard.edu/"
     language = "en"
@@ -30,20 +30,13 @@ class HarvardInternationalReview(BasicNewsRecipe):
     oldest_article = 30  # days
     max_articles_per_feed = 30
     use_embedded_content = True
-    no_stylesheets = True
-    remove_javascript = True
     encoding = "utf-8"
-    compress_news_images = True
     masthead_url = (
         "https://hir.harvard.edu/content/images/2020/12/HIRlogo_crimson-4.png"
     )
     compress_news_images_auto_size = 7
-    scale_news_images = (800, 1200)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
     auto_cleanup = True
     timeout = 60
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     extra_css = """
     .article-meta { margin-bottom: 1rem; }
@@ -59,9 +52,6 @@ class HarvardInternationalReview(BasicNewsRecipe):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
             self.title = format_title(_name, article.utctime)
-
-    def publication_date(self):
-        return self.pub_date
 
     def parse_feeds(self):
         # convert single parsed feed into date-sectioned feed

@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 
@@ -24,15 +24,14 @@ def absolutize(href):
 _name = "London Review of Books"
 
 
-class LondonReviewOfBooksPayed(BasicNewsRecipe):
+class LondonReviewOfBooksPayed(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "Kovid Goyal"
     description = "Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers https://www.lrb.co.uk/"  # noqa
     category = "news, literature, UK"
     publisher = "LRB Ltd."
     language = "en_GB"
-    no_stylesheets = True
-    remove_javascript = True
+
     # delay = 1
     encoding = "utf-8"
     INDEX = "https://www.lrb.co.uk"
@@ -44,12 +43,6 @@ class LondonReviewOfBooksPayed(BasicNewsRecipe):
     masthead_url = (
         "https://www.pw.org/files/small_press_images/london_review_of_books.png"
     )
-    compress_news_images = True
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 20
-    timefmt = ""
-    pub_date = None
 
     keep_only_tags = [
         classes(
@@ -69,9 +62,6 @@ class LondonReviewOfBooksPayed(BasicNewsRecipe):
     .article-reviewed-item { margin-bottom: 1rem; margin-left: 0.5rem; }
     .article-reviewed-item .article-reviewed-item-title { font-weight: bold; }
     """
-
-    def publication_date(self):
-        return self.pub_date
 
     def get_browser(self, *a, **kw):
         kw[

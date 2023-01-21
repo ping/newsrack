@@ -1,6 +1,12 @@
+import os
+import sys
 from collections import OrderedDict
 from datetime import datetime, timezone
 from urllib.parse import urljoin
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import BasicNewsrackRecipe
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -12,7 +18,7 @@ _name = "Harvard Business Review"
 _issue_url = ""
 
 
-class HBR(BasicNewsRecipe):
+class HBR(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "unkn0wn"
     description = (
@@ -28,16 +34,8 @@ class HBR(BasicNewsRecipe):
     masthead_url = "http://hbr.org/resources/css/images/hbr_logo.svg"
     publication_type = "magazine"
     use_embedded_content = False
-    remove_javascript = True
-    no_stylesheets = True
     auto_cleanup = False
-    compress_news_images = True
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
     ignore_duplicate_articles = {"url"}
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     remove_attributes = ["height", "width", "style"]
     extra_css = """
@@ -73,9 +71,6 @@ class HBR(BasicNewsRecipe):
             "left-rail--container translate-message follow-topic newsletter-container by-prefix"
         ),
     ]
-
-    def publication_date(self):
-        return self.pub_date
 
     def preprocess_raw_html(self, raw_html, _):
         soup = BeautifulSoup(raw_html)

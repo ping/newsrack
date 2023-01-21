@@ -15,7 +15,7 @@ from urllib.parse import urljoin, quote_plus
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -23,7 +23,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "Financial Times"
 
 
-class FinancialTimes(BasicNewsRecipe):
+class FinancialTimes(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "ping"
     description = "Financial Times https://www.ft.com/"
@@ -34,20 +34,11 @@ class FinancialTimes(BasicNewsRecipe):
     oldest_article = 1  # days
     use_embedded_content = False
     encoding = "utf-8"
-    remove_javascript = True
-    no_stylesheets = True
     auto_cleanup = False
     masthead_url = "https://www.ft.com/partnercontent/content-hub/static/media/ft-horiz-new-black.215c1169.png"
     ignore_duplicate_articles = {"url"}
 
-    compress_news_images = True
     compress_news_images_auto_size = 6
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     extra_css = """
     .headline { font-size: 1.8rem; margin-bottom: 0.5rem; }
@@ -157,9 +148,6 @@ class FinancialTimes(BasicNewsRecipe):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
             self.title = format_title(_name, article.utctime)
-
-    def publication_date(self):
-        return self.pub_date
 
     def get_browser(self, *a, **kw):
         kw[

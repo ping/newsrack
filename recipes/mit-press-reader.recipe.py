@@ -7,7 +7,7 @@ import sys
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.utils.date import parse_date
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -15,7 +15,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "The MIT Press Reader"
 
 
-class MITPressReader(BasicNewsRecipe):
+class MITPressReader(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "ping"
     description = "Thought-provoking excerpts, interviews and essays backed by academic rigor written by MIT Press authors. https://thereader.mitpress.mit.edu/"
@@ -24,18 +24,10 @@ class MITPressReader(BasicNewsRecipe):
     oldest_article = 30  # days
     use_embedded_content = False
     encoding = "utf-8"
-    remove_javascript = True
-    no_stylesheets = True
     compress_news_images = False
     masthead_url = "https://thereader.mitpress.mit.edu/wp-content/themes/ta/img/log.png"
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
     auto_cleanup = False
-    timeout = 20
     reverse_article_order = False
-    timefmt = ""  # suppress date output
-    pub_date = None  # custom publication date
-    temp_dir = None
 
     keep_only_tags = [dict(class_=["article-entry"])]
     remove_tags = [
@@ -85,6 +77,3 @@ class MITPressReader(BasicNewsRecipe):
             if time_parent_ele:
                 time_parent_ele.decompose()
         return soup
-
-    def publication_date(self):
-        return self.pub_date

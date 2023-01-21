@@ -8,7 +8,7 @@ from datetime import timezone, timedelta
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -16,7 +16,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "Taipei Times"
 
 
-class TaipeiTimes(BasicNewsRecipe):
+class TaipeiTimes(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     language = "en"
     __author__ = "ping"
@@ -27,17 +27,8 @@ class TaipeiTimes(BasicNewsRecipe):
     oldest_article = 1  # days
     max_articles_per_feed = 50
     use_embedded_content = False
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
-    remove_javascript = True
-    no_stylesheets = True
     auto_cleanup = True
-    compress_news_images = True
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-
     ignore_duplicate_articles = {"title", "url"}
 
     keep_only_tags = [dict(name="div", class_="archives")]
@@ -52,9 +43,6 @@ class TaipeiTimes(BasicNewsRecipe):
     """
 
     feeds = [(_name, "https://www.taipeitimes.com/xml/index.rss")]
-
-    def publication_date(self):
-        return self.pub_date
 
     def populate_article_metadata(self, article, _, __):
         if not self.pub_date or article.utctime > self.pub_date:

@@ -15,7 +15,7 @@ from urllib.parse import urlparse
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre import browser
 from calibre import strftime
@@ -26,7 +26,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "New York Times (Print)"
 
 
-class NewYorkTimesPrint(BasicNewsRecipe):
+class NewYorkTimesPrint(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     description = "Today's New York Times https://www.nytimes.com/section/todayspaper"
     encoding = "utf-8"
@@ -35,14 +35,8 @@ class NewYorkTimesPrint(BasicNewsRecipe):
     publication_type = "newspaper"
     masthead_url = "https://mwcm.nyt.com/.resources/mkt-wcm/dist/libs/assets/img/logo-nyt-header.svg"
     ignore_duplicate_articles = {"title", "url"}
-    no_stylesheets = True
-    compress_news_images = True
+
     compress_news_images_auto_size = 5
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     INDEX = "https://www.nytimes.com/section/todayspaper"
 
@@ -112,9 +106,6 @@ class NewYorkTimesPrint(BasicNewsRecipe):
     .article-img .caption { font-size: 0.8rem; }
     div.summary { font-size: 1.2rem; margin: 1rem 0; }
     """
-
-    def publication_date(self):
-        return self.pub_date
 
     def preprocess_initial_data(self, template_html, info, raw_html, url):
         article = (info.get("initialData", {}) or {}).get("data", {}).get("article")

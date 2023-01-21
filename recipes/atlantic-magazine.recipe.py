@@ -4,8 +4,14 @@
 from __future__ import unicode_literals
 
 import json
+import os
 import re
+import sys
 from datetime import datetime, timezone
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import BasicNewsrackRecipe
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -125,7 +131,7 @@ def extract_html(soup):
 _name = "The Atlantic Magazine"
 
 
-class TheAtlanticMagazine(BasicNewsRecipe):
+class TheAtlanticMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     description = "Current affairs and politics focused on the US https://www.theatlantic.com/magazine/"
     INDEX = "https://www.theatlantic.com/magazine/"
@@ -137,15 +143,7 @@ class TheAtlanticMagazine(BasicNewsRecipe):
     masthead_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/The_Atlantic_magazine_logo.svg/1200px-The_Atlantic_magazine_logo.svg.png"
 
     publication_type = "magazine"
-    no_stylesheets = True
-    remove_javascript = True
     remove_empty_feeds = True
-    compress_news_images = True
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     remove_attributes = ["style"]
     extra_css = """
@@ -190,9 +188,6 @@ class TheAtlanticMagazine(BasicNewsRecipe):
         for img in soup.findAll("img", attrs={"data-src": True}):
             img["src"] = img["data-src"]
         return soup
-
-    def publication_date(self):
-        return self.pub_date
 
     def populate_article_metadata(self, article, soup, _):
         headline = soup.find("h1", attrs={"class": "headline"})

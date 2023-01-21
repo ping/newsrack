@@ -10,20 +10,18 @@ import sys
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Korea Herald"
 
 
-class KoreaHerald(BasicNewsRecipe):
+class KoreaHerald(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     language = "en"
     description = "Korea Herald News articles https://koreaherald.com/"
     __author__ = "Seongkyoun Yoo"
-    no_stylesheets = True
-    remove_javascript = True
     use_embedded_content = False
     encoding = "utf-8"
     publication_type = "newspaper"
@@ -32,13 +30,7 @@ class KoreaHerald(BasicNewsRecipe):
     oldest_article = 1
     max_articles_per_feed = 25
 
-    compress_news_images = True
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
     auto_cleanup = False
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     remove_attributes = ["style", "align"]
     remove_tags_before = [dict(class_="main")]
@@ -78,9 +70,6 @@ class KoreaHerald(BasicNewsRecipe):
         ("World", "http://www.koreaherald.com/common/rss_xml.php?ct=107"),
         ("Opinion", "http://www.koreaherald.com/common/rss_xml.php?ct=108"),
     ]
-
-    def publication_date(self):
-        return self.pub_date
 
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:

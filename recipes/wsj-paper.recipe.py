@@ -16,7 +16,7 @@ from datetime import datetime, timedelta, timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
@@ -24,7 +24,7 @@ from calibre.web.feeds.news import BasicNewsRecipe, classes
 _name = "Wall Street Journal (Print)"
 
 
-class WSJ(BasicNewsRecipe):
+class WSJ(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "Kovid Goyal"
     description = "Print edition of the WSJ https://www.wsj.com/print-edition/today"
@@ -33,18 +33,12 @@ class WSJ(BasicNewsRecipe):
         "https://vir.wsj.net/fp/assets/webpack4/img/wsj-logo-small.1e2f0a7a.svg"
     )
 
-    compress_news_images = True
     compress_news_images_auto_size = 7
     scale_news_images = (800, 1200)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
 
-    no_stylesheets = True
     ignore_duplicate_articles = {"url"}
     remove_attributes = ["style", "height", "width"]
     needs_subscription = False
-
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     extra_css = """
         .wsj-article-headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
@@ -70,9 +64,6 @@ class WSJ(BasicNewsRecipe):
         ),
         dict(name="amp-iframe"),  # interactive graphics
     ]
-
-    def publication_date(self):
-        return self.pub_date
 
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)

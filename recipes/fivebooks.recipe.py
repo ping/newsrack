@@ -15,7 +15,7 @@ from datetime import timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -23,7 +23,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "Five Books"
 
 
-class FiveBooks(BasicNewsRecipe):
+class FiveBooks(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "ping"
     description = "Expert book recommendations https://fivebooks.com/"
@@ -33,16 +33,9 @@ class FiveBooks(BasicNewsRecipe):
     max_articles_per_feed = 15
     use_embedded_content = False
     encoding = "utf-8"
-    remove_javascript = True
-    no_stylesheets = True
-    compress_news_images = True
     masthead_url = "https://fivebooks.com/app/themes/five-books/assets/images/logo.png"
     scale_news_images = (400, 400)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
     auto_cleanup = False
-    timeout = 20
-    timefmt = ""  # suppress date output
-    pub_date = None  # custom publication date
 
     ignore_duplicate_articles = {"url"}
 
@@ -86,9 +79,6 @@ class FiveBooks(BasicNewsRecipe):
         ("Newest", "https://fivebooks.com/interviews/?order=newest"),
         ("Popular", "https://fivebooks.com/interviews/?order=popular"),
     ]
-
-    def publication_date(self):
-        return self.pub_date
 
     def populate_article_metadata(self, article, soup, first):
         post_date = None

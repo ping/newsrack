@@ -12,7 +12,7 @@ from datetime import timezone, timedelta
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.web.feeds import Feed
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -20,7 +20,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "Knowable Magazine"
 
 
-class KnowableMagazine(BasicNewsRecipe):
+class KnowableMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     description = (
         "Knowable Magazine explores the real-world significance of scholarly work "
@@ -35,17 +35,11 @@ class KnowableMagazine(BasicNewsRecipe):
     oldest_article = 45  # days
     max_articles_per_feed = 15
     use_embedded_content = False
-    no_stylesheets = True
-    remove_javascript = True
     encoding = "utf-8"
-    compress_news_images = True
     masthead_url = "https://knowablemagazine.org/pb-assets/knowable-assets/images/logo-1586554394067.svg"
     scale_news_images = (800, 1200)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
     auto_cleanup = False
     timeout = 60
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     keep_only_tags = [
         dict(class_=["article-container"]),
@@ -89,9 +83,6 @@ class KnowableMagazine(BasicNewsRecipe):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
             self.title = format_title(_name, article.utctime)
-
-    def publication_date(self):
-        return self.pub_date
 
     def parse_feeds(self):
         # convert single parsed feed into date-sectioned feed

@@ -8,9 +8,15 @@ __copyright__ = "2015 Michael Marotta <mikefm at gmail.net>"
 technologyreview.com
 """
 import json
+import os
 import re
+import sys
 from collections import OrderedDict
 from datetime import datetime, timezone
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import WordPressNewsrackRecipe
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -27,7 +33,7 @@ def absurl(x):
 _name = "MIT Technology Review Magazine"
 
 
-class MitTechnologyReviewMagazine(BasicNewsRecipe):
+class MitTechnologyReviewMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
 
     title = _name
     __author__ = "Michael Marotta, revised by unkn0wn"
@@ -38,15 +44,9 @@ class MitTechnologyReviewMagazine(BasicNewsRecipe):
     publication_type = "magazine"
     tags = "news, technology, science"
     remove_empty_feeds = True
-    remove_javascript = True
-    no_stylesheets = True
     masthead_url = "https://wp-preprod.technologyreview.com/wp-content/uploads/2021/08/Screen-Shot-2021-08-20-at-11.11.12-AM-e1629473232355.png"
 
     compress_news_images = False
-    auto_cleanup = False
-    timeout = 20
-    timefmt = ""  # suppress date output
-    pub_date = None  # custom publication date
 
     remove_attributes = ["height", "width", "style", "padding", "padding-top"]
 
@@ -108,21 +108,8 @@ class MitTechnologyReviewMagazine(BasicNewsRecipe):
             self.pub_date = post_update_dt
 
         date_published_loc = datetime.strptime(post["date"], "%Y-%m-%dT%H:%M:%S")
-        try:
-            post_authors = [
-                a["name"] for a in post.get("_embedded", {}).get("author", [])
-            ]
-        except (KeyError, TypeError):
-            post_authors = []
-        categories = []
-        if post.get("categories"):
-            try:
-                for terms in post.get("_embedded", {}).get("wp:term", []):
-                    categories.extend(
-                        [t["name"] for t in terms if t["taxonomy"] == "category"]
-                    )
-            except (KeyError, TypeError):
-                pass
+        post_authors = self.extract_authors(post)
+        categories = self.extract_categories(post)
 
         soup = BeautifulSoup(
             f"""<html>
@@ -150,15 +137,6 @@ class MitTechnologyReviewMagazine(BasicNewsRecipe):
         for img in soup.find_all("img", attrs={"src": True}):
             img["src"] = img["src"].split("?")[0] + "?w=800"
         return str(soup)
-
-    def populate_article_metadata(self, article, soup, first):
-        # pick up the og link from preprocess_raw_html() and set it as url instead of the api endpoint
-        og_link = soup.select("[data-og-link]")
-        if og_link:
-            article.url = og_link[0]["data-og-link"]
-
-    def publication_date(self):
-        return self.pub_date
 
     def parse_index(self):
         soup = self.index_to_soup(self.INDEX)

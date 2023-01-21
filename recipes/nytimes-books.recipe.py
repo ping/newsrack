@@ -12,7 +12,7 @@ from urllib.parse import urlparse
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -22,7 +22,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "New York Times Books"
 
 
-class NYTimesBooks(BasicNewsRecipe):
+class NYTimesBooks(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     language = "en"
     description = (
@@ -34,19 +34,12 @@ class NYTimesBooks(BasicNewsRecipe):
     oldest_article = 7  # days
     max_articles_per_feed = 25
     use_embedded_content = False
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     delay = 2
     bot_blocked = False
 
-    remove_javascript = True
-    no_stylesheets = True
     auto_cleanup = False
-    compress_news_images = True
     scale_news_images = (600, 600)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
 
     remove_attributes = ["style", "font"]
     remove_tags_before = [dict(id="story")]
@@ -92,9 +85,6 @@ class NYTimesBooks(BasicNewsRecipe):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
             self.title = format_title(_name, article.utctime)
-
-    def publication_date(self):
-        return self.pub_date
 
     def preprocess_initial_data(self, template_html, info, raw_html, url):
         article = (info.get("initialData", {}) or {}).get("data", {}).get("article")

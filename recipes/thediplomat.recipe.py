@@ -8,25 +8,21 @@ thediplomat.com
 """
 import json
 import os
-import shutil
 import sys
-import time
-from datetime import datetime, timedelta, timezone
+from datetime import datetime
 from html import unescape
-from urllib.parse import urlencode
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import WordPressNewsrackRecipe
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
-from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "The Diplomat"
 
 
-class TheDiplomat(BasicNewsRecipe):
+class TheDiplomat(WordPressNewsrackRecipe, BasicNewsRecipe):
     title = _name
     description = "The Diplomat is a current-affairs magazine for the Asia-Pacific, with news and analysis on politics, security, business, technology and life across the region. https://thediplomat.com/"
     language = "en"
@@ -36,21 +32,11 @@ class TheDiplomat(BasicNewsRecipe):
     oldest_article = 7
     max_articles_per_feed = 25
     encoding = "utf-8"
-    use_embedded_content = False
-    no_stylesheets = True
     masthead_url = "https://thediplomat.com/wp-content/themes/td_theme_v3/assets/logo/diplomat_logo_black.svg"
     ignore_duplicate_articles = {"url"}
 
-    compress_news_images = True
     compress_news_images_auto_size = 8
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    auto_cleanup = False
-    timeout = 20
     reverse_article_order = False
-    timefmt = ""  # suppress date output
-    pub_date = None  # custom publication date
-    temp_dir = None
 
     remove_attributes = ["style", "width", "height"]
 
@@ -126,36 +112,21 @@ class TheDiplomat(BasicNewsRecipe):
             BeautifulSoup(post["excerpt"]["rendered"])
         )
         # inject authors
-        try:
-            post_authors = [
-                a["name"] for a in post.get("_embedded", {}).get("author", [])
-            ]
-            if post_authors:
-                soup.find(class_="article-meta").insert(
-                    0,
-                    BeautifulSoup(
-                        f'<span class="author">{", ".join(post_authors)}</span>'
-                    ),
-                )
-        except (KeyError, TypeError):
-            pass
+        post_authors = self.extract_authors(post)
+        if post_authors:
+            soup.find(class_="article-meta").insert(
+                0,
+                BeautifulSoup(f'<span class="author">{", ".join(post_authors)}</span>'),
+            )
         # inject categories
-        if post.get("categories"):
-            categories = []
-            try:
-                for terms in post.get("_embedded", {}).get("wp:term", []):
-                    categories.extend(
-                        [t["name"] for t in terms if t["taxonomy"] == "category"]
-                    )
-            except (KeyError, TypeError):
-                pass
-            if categories:
-                soup.body.article.insert(
-                    0,
-                    BeautifulSoup(
-                        f'<span class="article-section">{" / ".join(categories)}</span>'
-                    ),
-                )
+        categories = self.extract_categories(post)
+        if categories:
+            soup.body.article.insert(
+                0,
+                BeautifulSoup(
+                    f'<span class="article-section">{" / ".join(categories)}</span>'
+                ),
+            )
         soup.body.article.append(BeautifulSoup(self._extract_featured_media(post)))
         return str(soup)
 
@@ -166,86 +137,11 @@ class TheDiplomat(BasicNewsRecipe):
             article.url = og_link[0]["data-og-link"]
         article.title = soup.find("h1", class_="headline").string
 
-    def publication_date(self):
-        return self.pub_date
-
-    def cleanup(self):
-        if self.temp_dir:
-            self.log("Deleting temp files...")
-            shutil.rmtree(self.temp_dir)
-
     def parse_index(self):
-        br = self.get_browser()
-        per_page = 100
         articles = {}
-        self.temp_dir = PersistentTemporaryDirectory()
-
+        br = self.get_browser()
         for feed_name, feed_url in self.feeds:
-            posts = []
-            page = 1
-            while True:
-                cutoff_date = datetime.today().replace(
-                    hour=0, minute=0, second=0, microsecond=0
-                ) - timedelta(days=self.oldest_article)
-
-                params = {
-                    "rest_route": "/wp/v2/posts",
-                    "page": page,
-                    "per_page": per_page,
-                    "after": cutoff_date.isoformat(),
-                    "_embed": "1",
-                    "_": int(time.time() * 1000),
-                }
-                endpoint = f"{feed_url}?{urlencode(params)}"
-                try:
-                    res = br.open_novisit(endpoint)
-                    posts_json_raw = res.read().decode("utf-8")
-                    retrieved_posts = json.loads(posts_json_raw)
-                    if not retrieved_posts:
-                        break
-                    posts.extend(retrieved_posts)
-                    try:
-                        # abort early to save one extra request
-                        headers = res.info()
-                        if headers.get("x-wp-totalpages"):
-                            wp_totalpages = int(headers["x-wp-totalpages"])
-                            if wp_totalpages == page:
-                                break
-                    except:
-                        # do nothing else if we can't parse headers for page info
-                        # rely on HTTP 400 to detect paging break
-                        pass
-                    page += 1
-                except:  # HTTP 400
-                    break
-
-            latest_post_date = None
-            for p in posts:
-                post_update_dt = datetime.strptime(
-                    p["modified_gmt"], "%Y-%m-%dT%H:%M:%S"
-                ).replace(tzinfo=timezone.utc)
-                if not self.pub_date or post_update_dt > self.pub_date:
-                    self.pub_date = post_update_dt
-                post_date = datetime.strptime(p["date"], "%Y-%m-%dT%H:%M:%S")
-                if not latest_post_date or post_date > latest_post_date:
-                    latest_post_date = post_date
-                    self.title = format_title(feed_name, post_date)
-
-                section_name = f"{post_date:%-d %B, %Y}"
-                if len(self.get_feeds()) > 1:
-                    section_name = f"{feed_name}: {post_date:%-d %B, %Y}"
-                if section_name not in articles:
-                    articles[section_name] = []
-
-                with PersistentTemporaryFile(suffix=".json", dir=self.temp_dir) as f:
-                    f.write(json.dumps(p).encode("utf-8"))
-
-                articles[section_name].append(
-                    {
-                        "title": p["title"]["rendered"] or "Untitled",
-                        "url": "file://" + f.name,
-                        "date": f"{post_date:%-d %B, %Y}",
-                        "description": p["excerpt"]["rendered"],
-                    }
-                )
+            articles = self.get_articles(
+                articles, feed_name, feed_url, self.oldest_article, {}, br
+            )
         return articles.items()

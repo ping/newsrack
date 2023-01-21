@@ -17,14 +17,14 @@ from datetime import datetime, timezone, timedelta
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Asahi Shimbun"
 
 
-class AsahiShimbunEnglishNews(BasicNewsRecipe):
+class AsahiShimbunEnglishNews(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "Albert Aparicio Isarn"
 
@@ -45,16 +45,8 @@ class AsahiShimbunEnglishNews(BasicNewsRecipe):
     max_articles_per_feed = 25
     ignore_duplicate_articles = {"url"}
 
-    no_stylesheets = True
-    remove_javascript = True
-
-    compress_news_images = True
     compress_news_images_auto_size = 10
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
     timeout = 90
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     cutoff_date_utc = datetime.today().replace(tzinfo=timezone.utc) - timedelta(
         days=oldest_article
@@ -76,9 +68,6 @@ class AsahiShimbunEnglishNews(BasicNewsRecipe):
     div.Image img, div.insert_image_full img { max-width: 100%; height: auto; }
     div.Image .Caption, div.insert_image_full div > div { display: block; font-size: 0.8rem; margin-top: 0.2rem; }
     """
-
-    def publication_date(self):
-        return self.pub_date
 
     def populate_article_metadata(self, article, soup, _):
         last_update_ele = soup.find(name="p", attrs={"class": "EnLastUpdated"})

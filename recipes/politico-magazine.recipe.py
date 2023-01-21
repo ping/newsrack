@@ -12,7 +12,7 @@ from datetime import timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.web.feeds import Feed
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -20,7 +20,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "POLITICO Magazine"
 
 
-class PoliticoMagazine(BasicNewsRecipe):
+class PoliticoMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "ping"
     description = "News, Analysis and Opinion from POLITICO https://www.politico.com/"
@@ -30,18 +30,10 @@ class PoliticoMagazine(BasicNewsRecipe):
     encoding = "utf-8"
     language = "en"
     masthead_url = "https://www.politico.com/dims4/default/bbb0fd2/2147483647/resize/1160x%3E/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F0e%2F5b%2F3cf3e0f04ca58370112ab667c255%2Fpolitico-logo.png"
-    no_stylesheets = True
-    remove_javascript = True
     use_embedded_content = False
 
     oldest_article = 7
     max_articles_per_feed = 25
-
-    compress_news_images = True
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 20
-    pub_date = None  # custom publication date
 
     keep_only_tags = [dict(name=["main"])]
     remove_tags = [
@@ -68,9 +60,6 @@ class PoliticoMagazine(BasicNewsRecipe):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
             self.title = format_title(_name, article.utctime)
-
-    def publication_date(self):
-        return self.pub_date
 
     def parse_feeds(self):
         # convert single parsed feed into date-sectioned feed

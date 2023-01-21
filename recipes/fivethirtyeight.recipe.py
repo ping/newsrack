@@ -8,16 +8,13 @@ fivethirtyeight.com
 """
 import json
 import os
-import shutil
 import sys
-import time
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from html import unescape
-from urllib.parse import urlencode
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import WordPressNewsrackRecipe, format_title
 
 
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
@@ -26,7 +23,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "FiveThirtyEight"
 
 
-class FiveThirtyEight(BasicNewsRecipe):
+class FiveThirtyEight(WordPressNewsrackRecipe, BasicNewsRecipe):
     title = _name
     description = "FiveThirtyEight uses statistical analysis — hard numbers — to tell compelling stories about politics, sports, science, economics and culture. https://fivethirtyeight.com/"
     language = "en"
@@ -35,20 +32,10 @@ class FiveThirtyEight(BasicNewsRecipe):
     oldest_article = 14
     max_articles_per_feed = 10
     encoding = "utf-8"
-    use_embedded_content = False
-    no_stylesheets = True
     masthead_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/FiveThirtyEight_Logo.svg/1024px-FiveThirtyEight_Logo.svg.png"
     ignore_duplicate_articles = {"url"}
 
-    compress_news_images = True
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    auto_cleanup = False
-    timeout = 20
     reverse_article_order = False
-    timefmt = ""  # suppress date output
-    pub_date = None  # custom publication date
-    temp_dir = None
 
     remove_attributes = ["style", "width", "height"]
     remove_tags = [dict(class_=["video-title", "videoplayer", "video-footer"])]
@@ -82,66 +69,18 @@ class FiveThirtyEight(BasicNewsRecipe):
             </article>
         </body></html>"""
 
-    def populate_article_metadata(self, article, soup, first):
-        # pick up the og link from preprocess_raw_html() and set it as url instead of the api endpoint
-        og_link = soup.select("[data-og-link]")
-        if og_link:
-            article.url = og_link[0]["data-og-link"]
-
-    def publication_date(self):
-        return self.pub_date
-
-    def cleanup(self):
-        if self.temp_dir:
-            self.log("Deleting temp files...")
-            shutil.rmtree(self.temp_dir)
-
     def parse_index(self):
         br = self.get_browser()
-        per_page = 100
         articles = {}
         self.temp_dir = PersistentTemporaryDirectory()
 
         for feed_name, feed_url in self.feeds:
-            posts = []
-            page = 1
-            while True:
-                cutoff_date = datetime.today().replace(
-                    hour=0, minute=0, second=0, microsecond=0
-                ) - timedelta(days=self.oldest_article)
-
-                params = {
-                    "rest_route": "/wp/v2/fte_features",
-                    "page": page,
-                    "per_page": per_page,
-                    "after": cutoff_date.isoformat(),
-                    "espn_verticals_exclude": 67,  # Sports
-                    "tags_exclude": 329557888,  # Podcasts
-                    "_embed": "1",
-                    "_": int(time.time() * 1000),
-                }
-                endpoint = f"{feed_url}?{urlencode(params)}"
-                try:
-                    res = br.open_novisit(endpoint)
-                    posts_json_raw = res.read().decode("utf-8")
-                    retrieved_posts = json.loads(posts_json_raw)
-                    if not retrieved_posts:
-                        break
-                    posts.extend(retrieved_posts)
-                    try:
-                        # abort early to save one extra request
-                        headers = res.info()
-                        if headers.get("x-wp-totalpages"):
-                            wp_totalpages = int(headers["x-wp-totalpages"])
-                            if wp_totalpages == page:
-                                break
-                    except:
-                        # do nothing else if we can't parse headers for page info
-                        # rely on HTTP 400 to detect paging break
-                        pass
-                    page += 1
-                except:  # HTTP 400
-                    break
+            custom_params = {
+                "rest_route": "/wp/v2/fte_features",
+                "espn_verticals_exclude": 67,  # Sports
+                "tags_exclude": 329557888,  # Podcasts
+            }
+            posts = self.get_posts(feed_url, self.oldest_article, custom_params, br)
 
             latest_post_date = None
             for p in posts:

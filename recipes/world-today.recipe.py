@@ -2,8 +2,14 @@
 #
 # This software is released under the GNU General Public License v3.0
 # https://opensource.org/licenses/GPL-3.0
+import os
+import sys
 from datetime import datetime
 from urllib.parse import urljoin
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import BasicNewsrackRecipe
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -12,7 +18,7 @@ _issue_url = ""
 _name = "The World Today"
 
 
-class WorldToday(BasicNewsRecipe):
+class WorldToday(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "ping"
     description = "The World Today is a bi-monthly global affairs magazine founded by Chatham House, international affairs think tank, in 1945. https://www.chathamhouse.org/publications/the-world-today/"
@@ -20,16 +26,9 @@ class WorldToday(BasicNewsRecipe):
     language = "en"
     encoding = "utf-8"
     ignore_duplicate_articles = {"url"}
-    no_javascript = True
-    no_stylesheets = True
-    compress_news_images = True
     compress_news_images_auto_size = 4
     scale_news_images = (800, 1200)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
     remove_empty_feeds = True
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     BASE_URL = "https://www.chathamhouse.org"
     keep_only_tags = [
@@ -72,9 +71,6 @@ class WorldToday(BasicNewsRecipe):
     .js-sidebar-responsive { margin-top: 2rem; }
     .js-sidebar-responsive h2 { font-size: 1rem; }
     """
-
-    def publication_date(self):
-        return self.pub_date
 
     def _urlize(self, url_string, base_url=None):
         if url_string.startswith("//"):

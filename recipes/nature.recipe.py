@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -29,7 +29,7 @@ def check_words(words):
 _name = "Nature"
 
 
-class Nature(BasicNewsRecipe):
+class Nature(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "Jose Ortiz"
     description = (
@@ -46,14 +46,7 @@ class Nature(BasicNewsRecipe):
     encoding = "utf-8"
     masthead_url = "https://media.springernature.com/full/nature-cms/uploads/product/nature/header-86f1267ea01eccd46b530284be10585e.svg"
 
-    no_javascript = True
-    no_stylesheets = True
-    compress_news_images = True
     scale_news_images = (800, 1200)
-    # scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     keep_only_tags = [dict(name="article")]
 
@@ -85,9 +78,6 @@ class Nature(BasicNewsRecipe):
     p.figure__caption { font-size: 0.8rem; margin-top: 0.2rem; }
     .figure img { max-width: 100%; height: auto; }
     """
-
-    def publication_date(self):
-        return self.pub_date
 
     def populate_article_metadata(self, article, soup, _):
         article_identifiers = soup.find_all(

@@ -1,5 +1,11 @@
 import json
+import os
+import sys
 from urllib.parse import urljoin, urlparse
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import BasicNewsrackRecipe
 
 from calibre.web.feeds.news import BasicNewsRecipe, classes, prefixed_classes
 from calibre.utils.date import parse_date
@@ -7,7 +13,7 @@ from calibre.utils.date import parse_date
 _name = "Smithsonian Magazine"
 
 
-class SmithsonianMag(BasicNewsRecipe):
+class SmithsonianMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
 
     title = _name
     __author__ = "ping"
@@ -19,16 +25,7 @@ class SmithsonianMag(BasicNewsRecipe):
     encoding = "UTF-8"
     BASE = "https://www.smithsonianmag.com/"
 
-    no_javascript = True
-    no_stylesheets = True
-
-    compress_news_images = True
     compress_news_images_auto_size = 10
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     keep_only_tags = [classes("main-hero main-content")]
     remove_tags = [
@@ -49,9 +46,6 @@ class SmithsonianMag(BasicNewsRecipe):
     .caption { font-size: 0.8rem; margin-top: 0.2rem; margin-bottom: 0.5rem; }
     img { max-width: 100%; height: auto; }
     """
-
-    def publication_date(self):
-        return self.pub_date
 
     def preprocess_html(self, soup):
         for hr in soup.select(".category-label hr") + soup.select(".article-line hr"):

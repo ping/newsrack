@@ -13,7 +13,7 @@ from urllib.parse import urljoin
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -22,7 +22,7 @@ from calibre.web.feeds.news import BasicNewsRecipe, classes
 _name = "Wired Magazine"
 
 
-class WiredMagazine(BasicNewsRecipe):
+class WiredMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = (
         "Darko Miletic, update by Howard Cornett, Zach Lapidus, Michael Marotta"
@@ -44,18 +44,10 @@ class WiredMagazine(BasicNewsRecipe):
     oldest_article = 45
     max_articles_per_feed = 200
 
-    no_stylesheets = True
-    no_javascript = True
     use_embedded_content = False
     remove_empty_feeds = True
     ignore_duplicate_articles = {"url"}
 
-    compress_news_images = True
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
     BASE_URL = "https://www.wired.com"
 
     extra_css = """
@@ -86,9 +78,6 @@ class WiredMagazine(BasicNewsRecipe):
         dict(id=["sharing", "social", "article-tags", "sidebar"]),
         dict(attrs={"data-testid": ["ContentHeaderRubric", "GenericCallout"]}),
     ]
-
-    def publication_date(self):
-        return self.pub_date
 
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)

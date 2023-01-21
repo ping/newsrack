@@ -2,9 +2,15 @@
 newrepublic.com
 """
 import json
+import os
+import sys
 from datetime import datetime
 from functools import cmp_to_key
 from urllib.parse import urljoin, urlencode, urlsplit
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import BasicNewsrackRecipe
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -31,7 +37,7 @@ def sort_section(a, b, sections_sort):
         return -1 if a["section"] < b["section"] else 1
 
 
-class NewRepublicMagazine(BasicNewsRecipe):
+class NewRepublicMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     language = "en"
     __author__ = "ping"
@@ -42,20 +48,14 @@ class NewRepublicMagazine(BasicNewsRecipe):
         "today’s most critical issues. https://newrepublic.com/magazine"
     )
     publication_type = "magazine"
-    no_stylesheets = True
     use_embedded_content = False
     masthead_url = "https://images.newrepublic.com/f5acdc0030e3212e601040dd24d5c2c0c684b15f.png?w=1024&q=65&dpi=1&fit=crop&crop=faces&h=512"
     remove_attributes = ["height", "width"]
     ignore_duplicate_articles = {"title", "url"}
     remove_empty_feeds = True
 
-    compress_news_images = True
     compress_news_images_auto_size = 6
     scale_news_images = (800, 1200)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     BASE_URL = "https://newrepublic.com"
 
@@ -73,9 +73,6 @@ class NewRepublicMagazine(BasicNewsRecipe):
     .lede-media .caption, .article-embed .caption { font-size: 0.8rem; }
     div.author-bios { margin-top: 2rem; font-style: italic; color: #444; border-top: solid 1px #444; }
     """
-
-    def publication_date(self):
-        return self.pub_date
 
     def _urlize(self, url_string, base_url=None):
         if url_string.startswith("//"):

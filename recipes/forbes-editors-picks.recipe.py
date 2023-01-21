@@ -6,7 +6,7 @@ from urllib.parse import urlencode
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -14,7 +14,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "Forbes - Editor's Picks"
 
 
-class ForbesEditorsPicks(BasicNewsRecipe):
+class ForbesEditorsPicks(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "ping"
     description = "Forbe's Editors' Picks https://www.forbes.com/editors-picks/"
@@ -24,13 +24,8 @@ class ForbesEditorsPicks(BasicNewsRecipe):
     oldest_article = 7
     max_articles_per_feed = 15
 
-    no_javascript = True
-    no_stylesheets = True
-    compress_news_images = True
     scale_news_images = (800, 1200)
     timeout = 10
-    timefmt = ""
-    pub_date = None  # custom publication date
     simultaneous_downloads = 1
 
     keep_only_tags = [dict(name="article")]
@@ -76,9 +71,6 @@ class ForbesEditorsPicks(BasicNewsRecipe):
     blockquote { font-size: 1.25rem; margin-left: 0; text-align: center; }
     blockquote .text-align { font-size: 1rem; }
     """
-
-    def publication_date(self):
-        return self.pub_date
 
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)

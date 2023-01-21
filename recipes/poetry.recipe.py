@@ -2,11 +2,16 @@
 #
 # This software is released under the GNU General Public License v3.0
 # https://opensource.org/licenses/GPL-3.0
-
+import os
 import re
+import sys
 from collections import OrderedDict
 from datetime import datetime, timezone
 from urllib.parse import urlparse
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import BasicNewsrackRecipe
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -14,7 +19,7 @@ _issue_url = ""
 _name = "Poetry"
 
 
-class Nature(BasicNewsRecipe):
+class Nature(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "ping"
     description = (
@@ -26,21 +31,24 @@ class Nature(BasicNewsRecipe):
     encoding = "utf-8"
 
     ignore_duplicate_articles = {"url"}
-    no_javascript = True
-    no_stylesheets = True
-    # compress_news_images = True
+    compress_news_images = False
     scale_news_images = (800, 1200)
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     remove_attributes = ["style", "font"]
     keep_only_tags = [dict(name="article")]
 
     remove_tags = [
+        dict(name="button"),
         dict(
             attrs={
-                "class": ["c-socialBlocks", "c-index", "o-stereo", "u-hideAboveSmall"]
+                "class": [
+                    "c-socialBlocks",
+                    "c-index",
+                    "o-stereo",
+                    "u-hideAboveSmall",
+                    "c-slideTrigger",
+                    "js-slideshow",
+                ]
             }
         ),
     ]
@@ -54,9 +62,6 @@ class Nature(BasicNewsRecipe):
     div.c-feature-bd { margin-bottom: 2rem; }
     div.c-auxContent { color: #222; font-size: 0.85rem; margin-top: 2rem; }
     """
-
-    def publication_date(self):
-        return self.pub_date
 
     def preprocess_html(self, soup):
         for img in soup.select("div.o-mediaEnclosure img"):

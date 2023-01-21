@@ -21,14 +21,14 @@ from datetime import datetime
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Japan Times"
 
 
-class JapanTimes(BasicNewsRecipe):
+class JapanTimes(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "Albert Aparicio Isarn (original recipe by Darko Miletic)"
     description = "The latest news from Japan Times, Japan's leading English-language daily newspaper"
@@ -37,20 +37,12 @@ class JapanTimes(BasicNewsRecipe):
     publisher = "The Japan Times"
     oldest_article = 1
     max_articles_per_feed = 60
-    no_stylesheets = True
-    remove_javascript = True
     use_embedded_content = False
     encoding = "utf-8"
     publication_type = "newspaper"
     masthead_url = "https://cdn-japantimes.com/wp-content/themes/jt_theme/library/img/japantimes-logo-tagline.png"
 
-    compress_news_images = True
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
     auto_cleanup = False
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     conversion_options = {
         "comment": description,
@@ -119,9 +111,6 @@ class JapanTimes(BasicNewsRecipe):
         ("Culture", "https://www.japantimes.co.jp/culture/feed/"),
         # ("Sports", "https://www.japantimes.co.jp/sports/feed/"),
     ]
-
-    def publication_date(self):
-        return self.pub_date
 
     def preprocess_html(self, soup):
         # "unbullet" the images

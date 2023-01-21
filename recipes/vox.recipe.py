@@ -7,14 +7,14 @@ import sys
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Vox"
 
 
-class Vox(BasicNewsRecipe):
+class Vox(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     language = "en"
     description = "General interest news site https://www.vox.com/"
@@ -26,16 +26,9 @@ class Vox(BasicNewsRecipe):
 
     max_articles_per_feed = 25
     use_embedded_content = True
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
-    remove_javascript = True
-    no_stylesheets = True
     auto_cleanup = False
-    compress_news_images = True
     scale_news_images = (600, 600)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
 
     remove_attributes = ["style", "font"]
 
@@ -51,9 +44,6 @@ class Vox(BasicNewsRecipe):
     .e-image cite { display: block; }
     .e-image div, .e-image cite { font-size: 0.8rem; }
     """
-
-    def publication_date(self):
-        return self.pub_date
 
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:

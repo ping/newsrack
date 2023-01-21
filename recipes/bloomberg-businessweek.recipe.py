@@ -4,8 +4,14 @@
 # https://opensource.org/licenses/GPL-3.0
 
 import json
+import os
 import re
+import sys
 from urllib.parse import urljoin, urlparse
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import BasicNewsrackRecipe
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -18,7 +24,7 @@ issue_url = ""  # ex: https://www.bloomberg.com/magazine/businessweek/22_44
 blocked_path_re = re.compile(r"/tosv.*.html")
 
 
-class BloombergBusinessweek(BasicNewsRecipe):
+class BloombergBusinessweek(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "ping"
     description = (
@@ -28,10 +34,7 @@ class BloombergBusinessweek(BasicNewsRecipe):
     language = "en"
     masthead_url = "https://assets.bwbx.io/s3/javelin/public/hub/images/BW-Logo-Black-cc9035fbb3.svg"
     ignore_duplicate_articles = {"url"}
-    no_stylesheets = True
-    remove_javascript = True
     auto_cleanup = False
-    timeout = 20
 
     # NOTES: Bot detection kicks in really easily so either:
     # - limit the number of feeds
@@ -41,12 +44,7 @@ class BloombergBusinessweek(BasicNewsRecipe):
     oldest_article = 7
     max_articles_per_feed = 25
 
-    compress_news_images = True
     compress_news_images_auto_size = 8
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timefmt = ""  # suppress date output
-    pub_date = None  # custom publication date
     bot_blocked = False
     download_count = 0
 
@@ -77,9 +75,6 @@ class BloombergBusinessweek(BasicNewsRecipe):
     .news-figure-caption-text, .news-figure-credit { display: block; font-size: 0.8rem; margin-top: 0.2rem; }
     .trashline { font-style: italic; }
     """
-
-    def publication_date(self):
-        return self.pub_date
 
     # We send no cookies to avoid triggering bot detection
     def get_browser(self, *args, **kwargs):

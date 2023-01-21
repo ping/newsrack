@@ -12,7 +12,7 @@ from datetime import timezone, timedelta
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.web.feeds import Feed
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -20,7 +20,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "Rest of World"
 
 
-class RestOfWorld(BasicNewsRecipe):
+class RestOfWorld(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     description = "Reporting Global Tech Stories https://restofworld.org/"
     language = "en"
@@ -29,17 +29,10 @@ class RestOfWorld(BasicNewsRecipe):
     oldest_article = 30  # days
     max_articles_per_feed = 25
     use_embedded_content = False
-    no_stylesheets = True
-    remove_javascript = True
     encoding = "utf-8"
-    compress_news_images = True
     masthead_url = "https://restofworld.org/style-guide/images/Variation_3.svg"
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
     auto_cleanup = False
     timeout = 60
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     keep_only_tags = [dict(id="content")]
 
@@ -71,9 +64,6 @@ class RestOfWorld(BasicNewsRecipe):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
             self.title = format_title(_name, article.utctime)
-
-    def publication_date(self):
-        return self.pub_date
 
     def preprocess_html(self, soup):
         for img in soup.find_all("img", attrs={"data-srcset": True}):

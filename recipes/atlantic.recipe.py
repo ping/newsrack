@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -131,7 +131,7 @@ def extract_html(soup):
 _name = "The Atlantic"
 
 
-class TheAtlantic(BasicNewsRecipe):
+class TheAtlantic(BasicNewsrackRecipe, BasicNewsRecipe):
 
     title = _name
     description = "News and editorial about politics, culture, entertainment, tech, etc. Contains many articles not seen in The Atlantic magazine https://www.theatlantic.com/"
@@ -142,15 +142,7 @@ class TheAtlantic(BasicNewsRecipe):
     use_embedded_content = False
     masthead_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/The_Atlantic_Logo_11.2019.svg/1200px-The_Atlantic_Logo_11.2019.svg.png"
 
-    no_stylesheets = True
-    remove_javascript = True
     remove_empty_feeds = True
-    compress_news_images = True
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     remove_attributes = ["style", "width", "height"]
     remove_tags_before = [dict(name=["main"])]
@@ -243,9 +235,6 @@ class TheAtlantic(BasicNewsRecipe):
                 ul.insert_after(li.extract())
             ul.decompose()
         return soup
-
-    def publication_date(self):
-        return self.pub_date
 
     def populate_article_metadata(self, article, soup, _):
         headline = soup.find("h1", attrs={"class": "headline"})

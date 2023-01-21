@@ -1,7 +1,13 @@
 """
 spectator.co.uk
 """
+import os
+import sys
 from urllib.parse import urlparse, urljoin
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import BasicNewsrackRecipe
 
 from calibre.utils.date import parse_date
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -9,7 +15,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "The Spectator"
 
 
-class SpectatorMagazine(BasicNewsRecipe):
+class SpectatorMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     description = (
         "The Spectator is a weekly British magazine on politics, culture, and current affairs. "
@@ -21,17 +27,8 @@ class SpectatorMagazine(BasicNewsRecipe):
     encoding = "utf-8"
     publication_type = "magazine"
     masthead_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/The_Spectator_logo.svg/1024px-The_Spectator_logo.svg.png"
-    remove_javascript = True
-    no_stylesheets = True
     auto_cleanup = False
-    compress_news_images = True
     compress_news_images_auto_size = 8
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     keep_only_tags = [
         dict(class_=["entry-header", "entry-content__wrapper", "author-bio__content"])
@@ -64,9 +61,6 @@ class SpectatorMagazine(BasicNewsRecipe):
     .wp-block-pullquote blockquote { font-size: 1.25rem; margin-left: 0; text-align: center; }
     .author-bio__content { font-style: italic; border-top: 1px solid black; padding-top: 0.5rem; padding-bottom: 0.5rem }
     """
-
-    def publication_date(self):
-        return self.pub_date
 
     def preprocess_html(self, soup):
         paywall_ele = soup.find(name="meta", content="hard-paywall")

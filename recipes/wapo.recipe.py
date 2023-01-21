@@ -11,7 +11,7 @@ from urllib.parse import urljoin
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -19,7 +19,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "Washington Post"
 
 
-class TheWashingtonPost(BasicNewsRecipe):
+class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "ping"
     description = "Breaking news and analysis on politics, business, world national news, entertainment more. In-depth DC, Virginia, Maryland news coverage including traffic, weather, crime, education, restaurant reviews and more. https://www.washingtonpost.com/"  # noqa
@@ -27,8 +27,6 @@ class TheWashingtonPost(BasicNewsRecipe):
     category = "news, politics, USA"
     publication_type = "newspaper"
     use_embedded_content = False
-    no_stylesheets = True
-    remove_javascript = True
     remove_empty_feeds = True
     auto_cleanup = False
     encoding = "utf-8"
@@ -39,13 +37,6 @@ class TheWashingtonPost(BasicNewsRecipe):
     max_articles_per_feed = 25
     ignore_duplicate_articles = {"url"}
     masthead_url = "https://www.washingtonpost.com/sf/brand-connect/dell-technologies/the-economics-of-change/media/wp_logo_black.png"
-
-    compress_news_images = True
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     remove_attributes = ["style"]
 
@@ -198,9 +189,6 @@ class TheWashingtonPost(BasicNewsRecipe):
             else:
                 self.log.warning(f"{url} has unexpected element: {node_type}")
                 self.log.debug(json.dumps(c))
-
-    def publication_date(self):
-        return self.pub_date
 
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)

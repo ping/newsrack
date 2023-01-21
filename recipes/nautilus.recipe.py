@@ -7,14 +7,14 @@ import sys
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 _name = "Nautilus"
 
 
-class Nautilus(BasicNewsRecipe):
+class Nautilus(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     language = "en"
     __author__ = "unkn0wn"
@@ -26,20 +26,13 @@ class Nautilus(BasicNewsRecipe):
         " no matter how complex, can be explained with clarity and vitality."
         " https://nautil.us/"
     )
-    no_stylesheets = True
     use_embedded_content = False
     masthead_url = "https://assets.nautil.us/13891_bb83b72bf545e376f3ff9443bda39421.png"
     remove_attributes = ["height", "width"]
     ignore_duplicate_articles = {"title", "url"}
     remove_empty_feeds = True
 
-    compress_news_images = True
     compress_news_images_auto_size = 10
-    scale_news_images = (800, 1200)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     keep_only_tags = [classes("article-left-col feature-image article-content")]
 
@@ -83,9 +76,6 @@ class Nautilus(BasicNewsRecipe):
         ("Technology", "https://nautil.us/topics/technology/feed/"),
         ("Zoology", "https://nautil.us/topics/zoology/feed/"),
     ]
-
-    def publication_date(self):
-        return self.pub_date
 
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:

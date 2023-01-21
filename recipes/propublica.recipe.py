@@ -11,14 +11,14 @@ import sys
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "ProPublica"
 
 
-class ProPublica(BasicNewsRecipe):
+class ProPublica(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     description = (
         "ProPublica is an independent, nonprofit newsroom that produces investigative "
@@ -30,19 +30,12 @@ class ProPublica(BasicNewsRecipe):
     oldest_article = 30  # days
     max_articles_per_feed = 25
     use_embedded_content = False
-    no_stylesheets = True
-    remove_javascript = True
     encoding = "utf-8"
     masthead_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/ProPublica_text_logo.svg/1280px-ProPublica_text_logo.svg.png"
 
-    compress_news_images = True
     scale_news_images = (800, 1200)
-    compress_news_images_auto_size = 10
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
     auto_cleanup = False
     timeout = 60
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     keep_only_tags = [dict(name="article")]
     remove_attributes = ["width", "height"]
@@ -89,9 +82,6 @@ class ProPublica(BasicNewsRecipe):
     feeds = [
         ("ProPublica", "https://www.propublica.org/feeds/propublica/main"),
     ]
-
-    def publication_date(self):
-        return self.pub_date
 
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:

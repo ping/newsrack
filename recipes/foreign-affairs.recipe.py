@@ -1,7 +1,13 @@
 # Original at https://github.com/kovidgoyal/calibre/blob/962fc18be18cccb6fc70d29a086f16a7e0a36519/recipes/foreignaffairs.recipe
 import json
+import os
 import re
+import sys
 from datetime import datetime
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import BasicNewsrackRecipe
 
 import mechanize
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -108,7 +114,7 @@ def get_issue_data(br, log, node_id="1126213", year="2020", volnum="99", issue_v
     return feeds
 
 
-class ForeignAffairsRecipe(BasicNewsRecipe):
+class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "Kovid Goyal"
     language = "en"
@@ -122,15 +128,10 @@ class ForeignAffairsRecipe(BasicNewsRecipe):
     publication_type = "magazine"
     INDEX = "https://www.foreignaffairs.com/magazine"
 
-    no_stylesheets = True
-    remove_javascript = True
     needs_subscription = "optional"
     ignore_duplicate_articles = {"title", "url"}
     remove_empty_feeds = True
     remove_attributes = ["style"]
-
-    timefmt = ""
-    pub_date = None
 
     keep_only_tags = [
         classes("article-header article-body article-lead-image article-body-text"),
@@ -152,9 +153,6 @@ class ForeignAffairsRecipe(BasicNewsRecipe):
     .article-inline-img-block--figcaption { font-size: 0.8rem; }
     blockquote.internal-blockquote { font-size: 1.25rem; margin-left: 0; text-align: center; }
     """
-
-    def publication_date(self):
-        return self.pub_date
 
     def parse_index(self):
         soup = self.index_to_soup(self.INDEX)

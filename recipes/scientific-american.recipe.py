@@ -4,9 +4,15 @@ __license__ = "GPL v3"
 # Original at https://github.com/kovidgoyal/calibre/blob/29cd8d64ea71595da8afdaec9b44e7100bff829a/recipes/scientific_american.recipe
 
 import json
+import os
 import re
+import sys
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urlparse
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import BasicNewsrackRecipe
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -22,7 +28,7 @@ def absurl(url):
 _name = "Scientific American"
 
 
-class ScientificAmerican(BasicNewsRecipe):
+class ScientificAmerican(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     description = (
         "Popular Science. Monthly magazine. Should be downloaded around the middle of each month. "
@@ -36,15 +42,7 @@ class ScientificAmerican(BasicNewsRecipe):
     masthead_url = (
         "https://static.scientificamerican.com/sciam/assets/Image/newsletter/salogo.png"
     )
-    no_stylesheets = True
-    remove_javascript = True
     remove_empty_feeds = True
-    compress_news_images = True
-    scale_news_images = (800, 800)
-    scale_news_images_to_device = False  # force img to be resized to scale_news_images
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     remove_attributes = ["width", "height"]
     keep_only_tags = [
@@ -79,9 +77,6 @@ class ScientificAmerican(BasicNewsRecipe):
     .article-media img, .image-captioned img { max-width: 100%; height: auto; }
     .image-captioned div, .t_caption { font-size: 0.8rem; margin-top: 0.2rem; margin-bottom: 0.5rem; }
     """
-
-    def publication_date(self):
-        return self.pub_date
 
     def get_browser(self, *a, **kw):
         kw[
