@@ -11,7 +11,11 @@ from urllib.parse import urljoin, urlparse
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe
+try:
+    from recipes_shared import BasicNewsrackRecipe
+except ImportError:
+    # just for Pycharm to pick up for auto-complete
+    from includes.recipes_shared import BasicNewsrackRecipe
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -141,7 +145,7 @@ class BloombergBusinessweek(BasicNewsrackRecipe, BasicNewsRecipe):
         article = article["story"]
         date_published = parse_date(article["publishedAt"], assume_utc=True)
         soup = BeautifulSoup(
-            f"""<html>
+            """<html>
         <head><title></title></head>
         <body>
             <article>

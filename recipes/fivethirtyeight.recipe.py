@@ -14,8 +14,12 @@ from html import unescape
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import WordPressNewsrackRecipe, format_title
 
+try:
+    from recipes_shared import WordPressNewsrackRecipe, format_title
+except ImportError:
+    # just for Pycharm to pick up for auto-complete
+    from includes.recipes_shared import WordPressNewsrackRecipe, format_title
 
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
 from calibre.web.feeds.news import BasicNewsRecipe

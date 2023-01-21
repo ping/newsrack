@@ -16,7 +16,11 @@ from datetime import datetime, timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, format_title
+try:
+    from recipes_shared import BasicNewsrackRecipe, format_title
+except ImportError:
+    # just for Pycharm to pick up for auto-complete
+    from includes.recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre import replace_entities
 from calibre.ebooks.BeautifulSoup import NavigableString, Tag

@@ -10,7 +10,11 @@ from urllib.parse import urljoin, urlencode, urlsplit
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe
+try:
+    from recipes_shared import BasicNewsrackRecipe
+except ImportError:
+    # just for Pycharm to pick up for auto-complete
+    from includes.recipes_shared import BasicNewsrackRecipe
 
 from calibre.web.feeds.news import BasicNewsRecipe
 

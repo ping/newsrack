@@ -9,7 +9,11 @@ import sys
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, format_title
+try:
+    from recipes_shared import BasicNewsrackRecipe, format_title
+except ImportError:
+    # just for Pycharm to pick up for auto-complete
+    from includes.recipes_shared import BasicNewsrackRecipe, format_title
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
@@ -19,7 +23,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 _name = "Sydney Morning Herald"
 
 
-class SydneyMorningHerald(BasicNewsRecipe):
+class SydneyMorningHerald(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "Darko Miletic"
     description = "Breaking news from Sydney, Australia and the world. Features the latest business, sport, entertainment, travel, lifestyle, and technology news. https://www.smh.com.au/"  # noqa
@@ -36,14 +40,7 @@ class SydneyMorningHerald(BasicNewsRecipe):
     masthead_url = "https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Sydney_Morning_Herald_logo.svg/1024px-Sydney_Morning_Herald_logo.svg.png"
     publication_type = "newspaper"
 
-    no_stylesheets = True
-    no_javascript = True
-    compress_news_images = True
     compress_news_images_auto_size = 10
-    scale_news_images = (800, 800)
-    timeout = 20
-    timefmt = ""
-    pub_date = None  # custom publication date
 
     remove_attributes = ["style", "font", "width", "height"]
     keep_only_tags = [dict(name="article")]
@@ -79,9 +76,6 @@ class SydneyMorningHerald(BasicNewsRecipe):
         # ("Ruby League", "https://www.smh.com.au/rss/sport/nrl.xml"),
         # ("AFL", "https://www.smh.com.au/rss/sport/afl.xml"),
     ]
-
-    def publication_date(self):
-        return self.pub_date
 
     def populate_article_metadata(self, article, _, __):
         if not self.pub_date or article.utctime > self.pub_date:
