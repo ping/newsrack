@@ -145,7 +145,6 @@ class Nature(BasicNewsrackRecipe, BasicNewsRecipe):
             ]
         )
         try:
-
             self.cover_url = re.sub(
                 r"\bw\d+\b", "w1000", self.cover_url
             )  # enlarge cover size resolution
