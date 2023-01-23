@@ -201,6 +201,11 @@ h2.category {
 
         }
         .contents {
+            p.cover img {
+                width: 100%;
+                max-width: 20rem;
+                border: 1px solid $base-disabled-color;
+            }
             margin: 0.5rem 0 1.5rem 0;
             color: $base-color;
             font-size: 0.8em;
@@ -329,6 +334,10 @@ footer {
             }
             .contents {
                 color: $dark-base-color;
+
+                p.cover img {
+                    border-color: $dark-base-disabled-color;
+                }
             }
             .tags {
                 color: $dark-tags-color;

@@ -63,8 +63,8 @@ jobs:
       - name: Install python requirements
         run: pip install -r requirements.txt
 
-      - name: Install calibre dependencies
-        run: sudo apt-fast update -y && sudo apt-fast install --no-install-recommends -y libegl1 libopengl0
+      - name: Install calibre and other dependencies
+        run: sudo apt-fast update -y && sudo apt-fast install --no-install-recommends -y libegl1 libopengl0 imagemagick
 
       - name: Get latest calibre version
         id: calibrelatest

@@ -103,7 +103,13 @@ https://opensource.org/licenses/GPL-3.0
             this.nextElementSibling.classList.toggle("hide");   // content
             var slug = this.parentElement.id;
             if (this.nextElementSibling.childElementCount <= 0 && RECIPE_DESCRIPTIONS[slug] !== undefined) {
-                this.nextElementSibling.innerHTML = RECIPE_DESCRIPTIONS[slug];
+                if (RECIPE_COVERS[slug] !== undefined) {
+                    this.nextElementSibling.innerHTML = '<p class="cover">'
+                        + '<a href="' + RECIPE_COVERS[slug] + '">'
+                        + '<img alt="Cover" src="'
+                        + RECIPE_COVERS[slug] + '"></a></p>';
+                }
+                this.nextElementSibling.innerHTML += RECIPE_DESCRIPTIONS[slug];
             }
         };
     }

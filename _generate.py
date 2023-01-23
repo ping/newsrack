@@ -194,6 +194,21 @@ def _write_opds(generated_output, publish_site):
                 author_tag.appendChild(simple_tag(doc, "name", category.title()))
                 entry.appendChild(author_tag)
 
+                cover_file_name = f"{os.path.splitext(books[0].file)[0]}.jpg"
+                cover_file_path = os.path.join(publish_folder, cover_file_name)
+                if os.path.exists(cover_file_path):
+                    entry.appendChild(
+                        simple_tag(
+                            doc,
+                            "link",
+                            attributes={
+                                "rel": "http://opds-spec.org/image",
+                                "type": "image/jpeg",
+                                "href": cover_file_name,
+                            },
+                        )
+                    )
+
                 for book in books:
                     book_ext = os.path.splitext(book.file)[1]
                     link_type = (
@@ -337,6 +352,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
     cached = _fetch_cache(publish_site)
     index = {}  # type: ignore
     recipe_descriptions = {}
+    recipe_covers = {}
     generated: Dict[str, Dict[str, List[RecipeOutput]]] = {}
 
     # skip specified recipes in CI
@@ -727,6 +743,56 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                         os.path.join(publish_folder, book.file),
                         os.path.join(publish_folder, book.rename_to),
                     )
+                cover_file_name = f"{os.path.splitext(book.rename_to)[0]}.jpg"
+                cover_file_path = os.path.join(publish_folder, cover_file_name)
+                if (not book.recipe.overwrite_cover) and (
+                    not os.path.exists(cover_file_path)
+                ):
+                    # only extract default cover
+                    cover_get_cmd = [
+                        "ebook-meta",
+                        f"--get-cover={cover_file_path}",
+                        os.path.join(publish_folder, book.rename_to),
+                    ]
+                    try:
+                        _ = subprocess.call(cover_get_cmd, stdout=subprocess.PIPE)
+                        temp_cover_file_name = (
+                            f"{os.path.splitext(book.rename_to)[0]}.temp.jpg"
+                        )
+                        temp_cover_file_path = os.path.join(
+                            publish_folder, temp_cover_file_name
+                        )
+                        logger.info(
+                            f"filesize {cover_file_path}: {os.path.getsize(cover_file_path)}"
+                        )
+                        imagemagick_cmd = [
+                            "convert",
+                            cover_file_path,
+                            "-quality",
+                            "70",
+                            "-resize",
+                            "1024x1024>",
+                            temp_cover_file_path,
+                        ]
+                        logger.info(" ".join(imagemagick_cmd))
+                        exit_code = subprocess.call(imagemagick_cmd)
+                        if exit_code:
+                            logger.warning(
+                                "convert exited with the code: {0!s}".format(exit_code)
+                            )
+                        else:
+                            os.rename(temp_cover_file_path, cover_file_path)
+                    except Exception as get_cover_err:
+                        logger.warning(
+                            f"Unable to extract cover for %s: %s",
+                            book.rename_to,
+                            str(get_cover_err),
+                        )
+                if (not book.recipe.overwrite_cover) and os.path.exists(
+                    cover_file_path
+                ):
+                    recipe_covers[book.recipe.slug] = cover_file_name
+
                 file_size = os.path.getsize(
                     os.path.join(publish_folder, book.rename_to)
                 )
@@ -808,6 +874,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
     ):
         site_css = f_site_css.read()
         site_js = f"var RECIPE_DESCRIPTIONS = {json.dumps(recipe_descriptions)};"
+        site_js += f"var RECIPE_COVERS = {json.dumps(recipe_covers)};"
         site_js += f_site_js.read()
         html_output = f_in.read().format(
             listing=listing,
