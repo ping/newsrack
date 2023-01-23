@@ -378,7 +378,6 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
         if os.path.exists(f"{recipe.recipe}.recipe"):
             os.environ["newsrack_title_dt_format"] = recipe.title_date_format
 
-        recipe.is_enabled()
         job_status = ""
         recipe.last_run = job_log.get(recipe.slug, 0)
         logger.info(f"::group::{recipe.name}")
