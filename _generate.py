@@ -762,9 +762,6 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                         temp_cover_file_path = os.path.join(
                             publish_folder, temp_cover_file_name
                         )
-                        logger.info(
-                            f"filesize {cover_file_path}: {os.path.getsize(cover_file_path)}"
-                        )
                         imagemagick_cmd = [
                             "convert",
                             cover_file_path,
@@ -774,7 +771,6 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                             "1024x1024>",
                             temp_cover_file_path,
                         ]
-                        logger.info(" ".join(imagemagick_cmd))
                         exit_code = subprocess.call(imagemagick_cmd)
                         if exit_code:
                             logger.warning(
