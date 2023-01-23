@@ -275,12 +275,8 @@ class NewYorker(BasicNewsrackRecipe, BasicNewsRecipe):
             if cover_img is not None:
                 self.cover_url = cover_img.get("src")
                 try:
-                    # the src original resolution w_280 was too low, replace w_280 with w_560
-                    cover_url_width_index = self.cover_url.find("w_")
-                    old_width = self.cover_url[
-                        cover_url_width_index : cover_url_width_index + 5
-                    ]
-                    self.cover_url = self.cover_url.replace(old_width, "w_560")
+                    # the src original resolution w_280 was too low, replace w_280 with w_960
+                    self.cover_url = re.sub(r"\bw_\d+\b", "w_960", self.cover_url)
                 except Exception:
                     self.log.warning(
                         "Failed enlarging cover img, using the original one"
