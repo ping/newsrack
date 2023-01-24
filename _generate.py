@@ -938,7 +938,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
 
     static_assets_elapsed_time = timedelta(seconds=timer() - static_assets_start_time)
 
-    job_summary += f'\nStatic assets took {humanize.naturaldelta(static_assets_elapsed_time, minimum_unit="seconds")}\n'
+    job_summary += f'\nStatic assets took {humanize.naturaldelta(static_assets_elapsed_time, minimum_unit="seconds")}.\n'
 
     with open("job_summary.md", "w", encoding="utf-8") as f:
         f.write(job_summary)
