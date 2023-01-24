@@ -8,7 +8,6 @@ import re
 import sys
 import textwrap
 import unicodedata
-import warnings
 from typing import Tuple
 
 import requests

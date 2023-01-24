@@ -794,6 +794,9 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                             "70",
                             "-resize",
                             "1024x1024>",
+                            "-unsharp",
+                            "0x.5",
+                            "-strip",
                             temp_cover_file_path,
                         ]
                         exit_code = subprocess.call(imagemagick_cmd)
@@ -807,9 +810,11 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                             "convert",
                             cover_file_path,
                             "-quality",
-                            "70",
-                            "-resize",
+                            "80",
+                            "-thumbnail",
                             "500x500>",
+                            "-unsharp",
+                            "0x.5",
                             cover_thumbnail_file_path,
                         ]
                         exit_code = subprocess.call(imagemagick_cmd)
