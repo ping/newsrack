@@ -105,9 +105,9 @@ https://opensource.org/licenses/GPL-3.0
             if (this.nextElementSibling.childElementCount <= 0 && RECIPE_DESCRIPTIONS[slug] !== undefined) {
                 if (RECIPE_COVERS[slug] !== undefined) {
                     this.nextElementSibling.innerHTML = '<p class="cover">'
-                        + '<a href="' + RECIPE_COVERS[slug] + '">'
+                        + '<a href="' + RECIPE_COVERS[slug]["cover"] + '">'
                         + '<img alt="Cover" src="'
-                        + RECIPE_COVERS[slug] + '"></a></p>';
+                        + RECIPE_COVERS[slug]["thumbnail"] + '"></a></p>';
                 }
                 this.nextElementSibling.innerHTML += RECIPE_DESCRIPTIONS[slug];
             }
