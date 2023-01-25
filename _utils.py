@@ -136,7 +136,6 @@ def generate_cover(
         text_w_h = []
         for i, text in enumerate(title_texts):
             if i == 0 and cover_options.title_font_size:
-                line_gap = int(cover_options.title_font_size / 4.0)
                 max_chars_per_length = int(
                     1.5
                     * (
@@ -153,11 +152,12 @@ def generate_cover(
                         (0, 0), ii, font=font_title
                     )
                     text_w_h.append([ii, text_w, text_h, text_h, font_title])
-                    total_height += text_h + line_gap
+                    total_height += text_h
 
                 _, __, text_w, text_h = img_draw.textbbox(
                     (0, 0), word_list[-1], font=font_title
                 )
+                line_gap = int(cover_options.title_font_size / 4.0)
                 text_w_h.append(
                     [word_list[-1], text_w, text_h, text_h + line_gap, font_title]
                 )
@@ -165,7 +165,6 @@ def generate_cover(
             elif i > 0 and cover_options.datestamp_font_size:
                 # also support multi-lines for the date string to support long text,
                 # such as "Volume 12, Issue 4 January 2022"
-                line_gap = int(cover_options.datestamp_font_size / 4.0)
                 max_chars_per_length = int(
                     1.5
                     * (
@@ -182,12 +181,15 @@ def generate_cover(
                         (0, 0), ii, font=font_date
                     )
                     text_w_h.append([ii, text_w, text_h, text_h, font_date])
-                    total_height += text_h + line_gap
+                    total_height += text_h
 
                 _, __, text_w, text_h = img_draw.textbbox(
                     (0, 0), word_list[-1], font=font_date
                 )
-                text_w_h.append([word_list[-1], text_w, text_h, text_h, font_date])
+                line_gap = int(cover_options.datestamp_font_size / 4.0)
+                text_w_h.append(
+                    [word_list[-1], text_w, text_h + line_gap, text_h, font_date]
+                )
                 total_height += text_h + line_gap
 
         if cover_options.logo_path_or_url:
