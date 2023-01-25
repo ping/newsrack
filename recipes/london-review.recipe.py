@@ -7,6 +7,7 @@ import json
 import os
 import sys
 from datetime import datetime, timezone
+from urllib.parse import urljoin
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
@@ -19,16 +20,11 @@ except ImportError:
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 
-def absolutize(href):
-    if href.startswith("/"):
-        href = "https://www.lrb.co.uk" + href
-    return href
-
-
+_issue_url = ""  # custom issue url
 _name = "London Review of Books"
 
 
-class LondonReviewOfBooksPayed(BasicNewsrackRecipe, BasicNewsRecipe):
+class LondonReviewOfBooks(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "Kovid Goyal"
     description = "Literary review publishing essay-length book reviews and topical articles on politics, literature, history, philosophy, science and the arts by leading writers and thinkers https://www.lrb.co.uk/"  # noqa
@@ -43,7 +39,6 @@ class LondonReviewOfBooksPayed(BasicNewsrackRecipe, BasicNewsRecipe):
     needs_subscription = False
     requires_version = (3, 0, 0)
 
-    # masthead_url = "https://www.lrb.co.uk/assets/icons/apple-touch-icon.png"
     masthead_url = (
         "https://www.pw.org/files/small_press_images/london_review_of_books.png"
     )
@@ -82,10 +77,6 @@ class LondonReviewOfBooksPayed(BasicNewsrackRecipe, BasicNewsRecipe):
         if info_ele:
             info = json.loads(info_ele.contents[0])
             soup.body["data-og-summary"] = info.get("description", "")
-            # example: 2022-08-04T00:00:00+00:00
-            published_date = datetime.strptime(
-                info["datePublished"][:19], "%Y-%m-%dT%H:%M:%S"
-            ).replace(tzinfo=timezone.utc)
             # example: 2022-07-28T12:07:08+00:00
             modified_date = datetime.strptime(
                 info["dateModified"][:19], "%Y-%m-%dT%H:%M:%S"
@@ -93,7 +84,6 @@ class LondonReviewOfBooksPayed(BasicNewsrackRecipe, BasicNewsRecipe):
             soup.body["data-og-date"] = f"{modified_date:%Y-%m-%d %H:%M:%S}"
             if not self.pub_date or modified_date > self.pub_date:
                 self.pub_date = modified_date
-                self.title = format_title(_name, published_date)
         else:
             letter_ele = soup.find(attrs={"class": "letters-titles--date"})
             if letter_ele:
@@ -124,16 +114,25 @@ class LondonReviewOfBooksPayed(BasicNewsrackRecipe, BasicNewsRecipe):
             article.localtime = modified_date
 
     def parse_index(self):
-        soup = self.index_to_soup(self.INDEX)
-        container = soup.find(attrs={"class": "issue-grid"})
-        img = container.find("img")
-        self.cover_url = img["data-srcset"].split()[-2]
-        a = img.findParent("a")
-        soup = self.index_to_soup(absolutize(a["href"]))
+        if not _issue_url:
+            soup = self.index_to_soup(self.INDEX)
+            container = soup.find(class_="issue-grid")
+            a = container.find("a")
+
+            soup = self.index_to_soup(urljoin(self.INDEX, a["href"]))
+        else:
+            soup = self.index_to_soup(_issue_url)
+        cover_link = soup.find("a", class_="issue-cover-link")
+        if cover_link:
+            self.cover_url = cover_link["href"]
+
+        h1 = soup.find("h1", class_="toc-title")
+        self.title = f"{_name}: {self.tag_to_string(h1)}"
+
         grid = soup.find(attrs={"class": "toc-grid-items"})
         articles = []
         for a in grid.findAll(**classes("toc-item")):
-            url = absolutize(a["href"])
+            url = urljoin(self.INDEX, a["href"])
             h3 = a.find("h3")
             h4 = a.find("h4")
             review_items = h4.find_all(
