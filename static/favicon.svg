@@ -1,20 +1,8 @@
-<svg id="kindle" width="48px" height="48px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 48 48">
-    <path id="bezel" fill="#37474F" d="M8,41V7c0-2.2,1.8-4,4-4h24c2.2,0,4,1.8,4,4v34c0,2.2-1.8,4-4,4H12C9.8,45,8,43.2,8,41z"/>
-    <path id="screen" fill="#eee" d="M35,6H13c-0.6,0-1,0.4-1,1v29c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V7C36,6.4,35.6,6,35,6z"/>
-    <rect x="20" y="40" fill="#546E7A" width="8" height="2"/>
-    <g fill="#A1A1A1">
-        <rect x="16" y="11" width="16" height="3"/>
-        <rect x="16" y="18" width="16" height="2"/>
-        <rect x="16" y="22" width="12" height="2"/>
-        <rect x="16" y="26" width="16" height="2"/>
-        <rect x="16" y="30" width="12" height="2"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="news" d="M368 415.86V72a24.07 24.07 0 00-24-24H72a24.07 24.07 0 00-24 24v352a40.12 40.12 0 0040 40h328" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path class="news" d="M416 464h0a48 48 0 01-48-48V128h72a24 24 0 0124 24v264a48 48 0 01-48 48z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path class="news" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M240 128h64M240 192h64M112 256h192M112 320h192M112 384h192"/><path id="img" class="news" d="M176 208h-64a16 16 0 01-16-16v-64a16 16 0 0116-16h64a16 16 0 0116 16v64a16 16 0 01-16 16z" fill="currentColor"/>
 <style>
-svg#kindle path#bezel { fill: #333333; stroke: #333333; }
-svg#kindle path#screen { fill: #eeeeee; }
+path.news { color: #000; }
 @media (prefers-color-scheme: dark) {
-    svg#kindle path#bezel { fill: #f0f0f0; }
-    svg#kindle path#screen { fill: #333333; }
+path.news { color: #e7e9f2; }
 }
 </style>
 </svg>
