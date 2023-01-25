@@ -26,6 +26,9 @@ class WorldToday(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "ping"
     description = "The World Today is a bi-monthly global affairs magazine founded by Chatham House, international affairs think tank, in 1945. https://www.chathamhouse.org/publications/the-world-today/"
+    masthead_url = (
+        "https://www.chathamhouse.org/themes/custom/numiko/logo/chatham-house-logo.png"
+    )
     publication_type = "magazine"
     language = "en"
     encoding = "utf-8"

@@ -26,6 +26,7 @@ _name = "Knowable Magazine"
 
 class KnowableMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
+    __author__ = "ping"
     description = (
         "Knowable Magazine explores the real-world significance of scholarly work "
         "through a journalistic lens. We report on the current state of play across "
@@ -33,17 +34,17 @@ class KnowableMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
         "biochemistry to water security; the origins of the universe to psychology. "
         "https://knowablemagazine.org/"
     )
+    masthead_url = "https://knowablemagazine.org/pb-assets/knowable-assets/images/logo-1586554394067.svg"
     language = "en"
-    __author__ = "ping"
-    publication_type = "newspaper"
+    encoding = "utf-8"
+    publication_type = "magazine"
+    auto_cleanup = False
+    use_embedded_content = False
+    timeout = 60
+
     oldest_article = 45  # days
     max_articles_per_feed = 15
-    use_embedded_content = False
-    encoding = "utf-8"
-    masthead_url = "https://knowablemagazine.org/pb-assets/knowable-assets/images/logo-1586554394067.svg"
     scale_news_images = (800, 1200)
-    auto_cleanup = False
-    timeout = 60
 
     keep_only_tags = [
         dict(class_=["article-container"]),
