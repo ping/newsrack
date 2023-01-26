@@ -30,15 +30,29 @@ https://opensource.org/licenses/GPL-3.0
     background-color: $dark-base-bg-color;
     color: $dark-base-color;
 
+    * {
+      color: $dark-base-color;
+    }
+
     a {
       color: $dark-link-color;
 
+      * {
+        color: unset;
+      }
+
       &:hover {
         color: $dark-link-hover-color;
+        * {
+          color: unset;
+        }
       }
 
       &:visited {
         color: $dark-link-visited-color;
+        * {
+          color: unset;
+        }
       }
     }
   }
