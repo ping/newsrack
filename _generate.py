@@ -19,7 +19,7 @@ from functools import cmp_to_key
 from math import ceil
 from timeit import default_timer as timer
 from typing import List, Dict
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlencode
 from xml.dom import minidom
 
 import humanize  # type: ignore
@@ -841,8 +841,15 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                 file_size = os.path.getsize(
                     os.path.join(publish_folder, book.rename_to)
                 )
+                book_ext = os.path.splitext(book.file)[1]
+                reader_link = ""
+                if book_ext == ".epub":
+                    reader_link = f'<a class="reader" title="Read in browser" href="reader.html?{urlencode({"url": book.rename_to})}"><svg><use href="reader_sprites.svg#icon-book"></use></svg></a>'
                 book_links.append(
-                    f'<div class="book"><a href="{book.rename_to}">{os.path.splitext(book.file)[1]}<span class="file-size">{humanize.naturalsize(file_size).replace(" ", "")}</span></a></div>'
+                    f'<div class="book">'
+                    f'<a href="{book.rename_to}">{book_ext}<span class="file-size">{humanize.naturalsize(file_size).replace(" ", "")}</span>'
+                    f"</a>{reader_link}"
+                    f"</div>"
                 )
             publication_listing.append(
                 f"""

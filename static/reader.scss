@@ -1,0 +1,128 @@
+/*
+Copyright (c) 2022 https://github.com/ping/
+
+This software is released under the GNU General Public License v3.0
+https://opensource.org/licenses/GPL-3.0
+*/
+
+@import 'colours';
+
+body {
+  background-color: grayscale(darken($base-bg-color, 3%));
+  color: $base-color;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  &:visited {
+    color: $link-visited-color;
+  }
+}
+svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+a.home svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+}
+
+#toc-container {
+  height: 5vh;
+}
+
+#display-container {
+  height: 90vh;
+}
+
+#centre-container {
+  width: calc(100% - 9rem);
+  max-width: 1100px;
+}
+
+.pagination-container, #prev, #next {
+  min-width: 3rem;
+}
+
+#prev, #next {
+  text-decoration: none;
+
+  &:hover {
+    background-color: $base-bg-color;
+  }
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+
+@media (max-width: 575px) {
+  main.container-fluid {
+    --bs-gutter-x: 0;
+  }
+  #centre-container {
+    width: calc(100% - 6rem);
+  }
+  .pagination-container, #prev, #next {
+    min-width: 2rem;
+  }
+  #prev, #next {
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #epub-container:after {
+    position: absolute;
+    width: 1px;
+    border-right: 1px $base-disabled-color solid;
+    height: 85vh;
+    z-index: 1;
+    left: 50%;
+    margin-left: -1px;
+    top: 8vh;
+    opacity: .15;
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 1);
+    content: "";
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: $dark-base-color;
+    background-color: lighten($dark-base-bg-color, 3%);
+  }
+  a {
+    color: $dark-link-color;
+
+    &:hover {
+      color: $dark-link-hover-color;
+    }
+
+    &:visited {
+      color: $dark-link-visited-color;
+    }
+  }
+  #prev, #next {
+    &:hover {
+      background-color: $dark-base-bg-color;
+    }
+  }
+  #epub-container:after {
+    border-right-color: $dark-base-disabled-color;
+  }
+
+}

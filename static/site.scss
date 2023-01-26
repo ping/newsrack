@@ -5,26 +5,7 @@ This software is released under the GNU General Public License v3.0
 https://opensource.org/licenses/GPL-3.0
 */
 
-$base-bg-color: #fffefc;
-$base-color: #000000;
-$base-disabled-color: #61697c;
-$link-color: #0000e6;
-$link-hover-color: darken($link-color, 20%);
-$link-visited-color: #551a8a;
-$book-bg-color: #eaeaea;
-$error-color: #b90404;
-$tags-color: mix($base-disabled-color, $base-color);
-
-$dark-base-bg-color: #1e2228;
-$dark-base-color: #e7e9f2;
-$dark-base-disabled-color: #a2a5af;
-$dark-link-color: #5ccaec;
-$dark-link-hover-color: lighten($dark-link-color, 20%);
-$dark-link-visited-color: #bbb9ff;
-$dark-book-bg-color: lighten($dark-base-bg-color, 5%);
-$dark-error-color: #ff6464;
-$dark-tags-color: mix($dark-base-disabled-color, $dark-base-color);
-
+@import 'colours';
 
 body {
     font-size: 10pt;    /* Use pt instead of px because px is odd on the Kindle browser */
@@ -241,6 +222,10 @@ h2.category {
         font-size: 0.7em;
         color: $base-disabled-color;
     }
+
+    a.reader {
+        display: none;
+    }
 }
 
 footer {
@@ -374,6 +359,21 @@ body.nonkindle {
     #search-text {
         width: 85%;
     }
+    .book {
+        a.reader {
+            display: unset;
+            margin-left: 0.45rem;
+            color: $base-color;
+            &:hover {
+                color: $base-disabled-color;
+            }
+            svg {
+                width: 1.25rem;
+                height: 1.25rem;
+                vertical-align: middle;
+            }
+        }
+    }
 
 }
 
@@ -441,6 +441,14 @@ body.nonkindle {
         background-color: lighten($dark-base-bg-color, 3%);
         .category-container {
             background-color: $dark-base-bg-color;
+        }
+        .book {
+            a.reader {
+                color: $dark-base-color;
+                &:hover {
+                    color: $dark-base-disabled-color;
+                }
+            }
         }
     }
 }
