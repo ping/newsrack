@@ -77,7 +77,10 @@
         alert("Remote books not allowed.");
     } else {
         const book = ePub(url);
-        const rendition = book.renderTo("epub-container", {width: "100%", height: "100%"});
+        const rendition = book.renderTo(
+            "epub-container",
+            {width: "100%", height: "100%", snap: true, manager: "continuous"}
+        );
         rendition.display(currentSectionIndex);
 
         book.ready.then(function () {
