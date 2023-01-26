@@ -30,14 +30,16 @@ class KoreaJoongAngDaily(BasicNewsrackRecipe, BasicNewsRecipe):
     language = "en"
     __author__ = "ping"
     publication_type = "newspaper"
-    oldest_article = 1  # days
-    max_articles_per_feed = 60
-    use_embedded_content = True
-    encoding = "utf-8"
     masthead_url = (
         "https://koreajoongangdaily.joins.com/resources/images/common/logo.png"
     )
+    encoding = "utf-8"
+    use_embedded_content = True
     auto_cleanup = True
+    compress_news_images_auto_size = 10
+
+    oldest_article = 1  # days
+    max_articles_per_feed = 60
 
     feeds = [
         ("Korea JoongAng Daily", "https://koreajoongangdaily.joins.com/xmls/joins"),
