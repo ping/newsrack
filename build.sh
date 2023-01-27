@@ -28,4 +28,4 @@ mkdir -p public meta \
 && cp -p static/reader.html public/ \
 && python3 _generate.py "$CI_PAGES_URL" "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/" "$GITHUB_SHA" \
 && html-minifier-terser --input-dir public/ --output-dir public/ --minify-js --collapse-whitespace --file-ext html \
-&& rm -f *.recipe
+&& rm -f *.recipe static/site.compiled.js
