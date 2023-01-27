@@ -9,6 +9,11 @@ https://opensource.org/licenses/GPL-3.0
 /*
     To maintain compat with the Kindle browser
     this will be transpiled with babel to ES5
+
+    Document what doesn't work in the Kindle browser:
+    - `const elements = document.querySelectorAll("selector")`
+        - `elements.forEach()` is undefined
+        - `for (const e in elements)` is undefined
 */
 (function () {
 
@@ -44,7 +49,7 @@ https://opensource.org/licenses/GPL-3.0
                 if (typeof (Intl) !== "undefined") {
                     return rtf.format(diff, u);
                 }
-                // manually construct format
+                // manually construct format, for the Kindle browser
                 let unit = u;
                 if (Math.abs(diff) > 1) {
                     unit = u + "s";
