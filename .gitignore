@@ -1,3 +1,5 @@
+static/*.compiled.js
+
 .env
 meta/
 *.recipe
@@ -7,6 +9,11 @@ public/
 debug/
 static/*.css
 job_summary.md
+
+# Node #
+# Dependency directories
+node_modules/
+jspm_packages/
 
 venv/
 venv3/

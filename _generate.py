@@ -909,7 +909,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
     site_css = "static/site.css"
     if os.path.exists("static/custom.css"):
         site_css = "static/custom.css"
-    site_js = "static/site.js"
+    site_js = "static/site.compiled.js"
     if os.path.exists("static/custom.js"):
         site_js = "static/custom.js"
     site_html = "static/index.html"

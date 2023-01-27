@@ -61,7 +61,7 @@
     const currentSectionIndex = (params && params.get("loc")) ? params.get("loc") : undefined;
     let validBook;
     try {
-        new URL(url)
+        new URL(url);
         validBook = false;
     } catch (e) {
         validBook = true;

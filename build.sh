@@ -21,6 +21,7 @@ done
 
 mkdir -p public meta \
 && cp -p static/*.svg public/ \
+&& npx babel static/site.js --out-file static/site.compiled.js \
 && sass -s compressed --no-source-map static/site.scss static/site.css \
 && sass -s compressed --no-source-map static/reader.scss public/reader.css \
 && sass -s compressed --no-source-map static/viewer-theme.scss public/viewer-theme.css \
