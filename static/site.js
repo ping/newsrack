@@ -7,21 +7,19 @@ https://opensource.org/licenses/GPL-3.0
 
 
 /*
-    To maintain compat with the Kindle browser:
-    - no `let`, `const`
-    - no `Intl`
-    - no `Object.keys`, `Object.values`
+    To maintain compat with the Kindle browser
+    this will be transpiled with babel to ES5
 */
 (function () {
 
-    var searchInfo = document.getElementById("search-info");
-    var searchTextField = document.getElementById("search-text");
-    var searchButton = document.getElementById("search-button");
+    const searchInfo = document.getElementById("search-info");
+    const searchTextField = document.getElementById("search-text");
+    const searchButton = document.getElementById("search-button");
     searchTextField.disabled = true;
     searchButton.disabled = true;
 
     // in miliseconds
-    var units = {
+    const units = {
         year: 24 * 60 * 60 * 1000 * 365,
         month: 24 * 60 * 60 * 1000 * 365 / 12,
         day: 24 * 60 * 60 * 1000,
@@ -30,23 +28,24 @@ https://opensource.org/licenses/GPL-3.0
         second: 1000
     };
 
-    var rtf = null;
+    let rtf = null;
     if (typeof (Intl) !== "undefined") {
+        // the Kindle browser doesn't support Intl
         rtf = new Intl.RelativeTimeFormat("en", {numeric: "auto"});
     }
 
     function getRelativeTime(d1, d2) {
         d2 = (typeof d2 !== "undefined") ? d2 : new Date();
-        var elapsed = d1 - d2;
+        const elapsed = d1 - d2;
         // "Math.abs" accounts for both "past" & "future" scenarios
-        for (var u in units) {
+        for (const u in units) {
             if (Math.abs(elapsed) > units[u] || u === "second") {
-                var diff = Math.round(elapsed / units[u]);
+                const diff = Math.round(elapsed / units[u]);
                 if (typeof (Intl) !== "undefined") {
                     return rtf.format(diff, u);
                 }
                 // manually construct format
-                var unit = u;
+                let unit = u;
                 if (Math.abs(diff) > 1) {
                     unit = u + "s";
                 }
@@ -60,8 +59,8 @@ https://opensource.org/licenses/GPL-3.0
     }
 
     function toggleDateDisplay(target, isRelative) {
-        var publishedDate = new Date(parseInt(target.attributes["data-pub-date"].value));
-        var tags = "";
+        const publishedDate = new Date(parseInt(target.attributes["data-pub-date"].value));
+        let tags = "";
         if (typeof(target.parentElement.dataset["tags"]) !== "undefined"
             && target.parentElement.dataset["tags"].trim().length > 0) {
             tags = " " + '<span class="tags">' + target.parentElement.dataset["tags"] + "</span>";
@@ -74,15 +73,15 @@ https://opensource.org/licenses/GPL-3.0
         }
     }
 
-    var refreshedDateEle = document.getElementById("refreshed_dt");
-    var refreshedDate = new Date(parseInt(refreshedDateEle.attributes["data-refreshed-date"].value));
+    const refreshedDateEle = document.getElementById("refreshed_dt");
+    const refreshedDate = new Date(parseInt(refreshedDateEle.attributes["data-refreshed-date"].value));
     refreshedDateEle.title = refreshedDate.toLocaleString();
     refreshedDateEle.innerHTML = getRelativeTime(refreshedDate);
 
     // toggle pub date display
-    var pudDateElements = document.querySelectorAll("[data-pub-date]");
-    for (var i = 0; i < pudDateElements.length; i++) {
-        var pubDateEle = pudDateElements[i];
+    const pudDateElements = document.querySelectorAll("[data-pub-date]");
+    for (let i = 0; i < pudDateElements.length; i++) {
+        const pubDateEle = pudDateElements[i];
         toggleDateDisplay(pubDateEle, true);
 
         pubDateEle.addEventListener("pointerenter", function (event) {
@@ -95,13 +94,13 @@ https://opensource.org/licenses/GPL-3.0
     }
 
     // toggle collapsible toc for publication
-    var accordionBtns = document.querySelectorAll(".pub-date");
-    for (var i = 0; i < accordionBtns.length; i++) {
-        var accordion = accordionBtns[i];
+    const accordionBtns = document.querySelectorAll(".pub-date");
+    for (let i = 0; i < accordionBtns.length; i++) {
+        const accordion = accordionBtns[i];
         accordion.onclick = function () {
             this.classList.toggle("is-open");
             this.nextElementSibling.classList.toggle("hide");   // content
-            var slug = this.parentElement.id;
+            const slug = this.parentElement.id;
             if (this.nextElementSibling.childElementCount <= 0 && RECIPE_DESCRIPTIONS[slug] !== undefined) {
                 if (RECIPE_COVERS[slug] !== undefined) {
                     this.nextElementSibling.innerHTML = '<p class="cover">'
@@ -115,9 +114,9 @@ https://opensource.org/licenses/GPL-3.0
     }
 
     // toggle publications listing for category
-    var categoryButtons = document.querySelectorAll("h2.category");
-    for (var i = 0; i < categoryButtons.length; i++) {
-        var category = categoryButtons[i];
+    const categoryButtons = document.querySelectorAll("h2.category");
+    for (let i = 0; i < categoryButtons.length; i++) {
+        const category = categoryButtons[i];
         category.onclick = function (e) {
             if (e.target.nodeName.toLowerCase() === "a") {
                 // don't do toggle action if it's a link
@@ -128,12 +127,12 @@ https://opensource.org/licenses/GPL-3.0
         };
     }
 
-    var catCloseShortcuts = document.querySelectorAll("[data-click-target]");
-    for (var i = 0; i < catCloseShortcuts.length; i++) {
-        var shortcut = catCloseShortcuts[i];
+    const catCloseShortcuts = document.querySelectorAll("[data-click-target]");
+    for (let i = 0; i < catCloseShortcuts.length; i++) {
+        const shortcut = catCloseShortcuts[i];
         shortcut.onclick = function (e) {
             e.preventDefault();
-            var cat = document.getElementById(e.target.dataset["clickTarget"]);
+            const cat = document.getElementById(e.target.dataset["clickTarget"]);
             cat.parentElement.classList.toggle("is-open");
             cat.nextElementSibling.classList.toggle("hide");    // content
             if (!cat.parentElement.classList.contains("is-open")) {
@@ -144,40 +143,40 @@ https://opensource.org/licenses/GPL-3.0
 
     window.addEventListener("DOMContentLoaded", function() {
         if (typeof(lunr) !== "undefined") {
-            var ogPlaceholderText = searchTextField.placeholder;
+            const ogPlaceholderText = searchTextField.placeholder;
             searchTextField.placeholder = "Indexing search...";
-            var periodicalsEles = document.querySelectorAll("ol.books > li");
+            const periodicalsEles = document.querySelectorAll("ol.books > li");
 
             function resetSearch() {
-                for (var i = 0; i < periodicalsEles.length; i++) {
-                    var periodical = periodicalsEles[i];
+                for (let i = 0; i < periodicalsEles.length; i++) {
+                    const periodical = periodicalsEles[i];
                     periodical.classList.remove("hide");
-                    var pubDate = periodical.querySelector(".pub-date");
+                    const pubDate = periodical.querySelector(".pub-date");
                     if (pubDate) {
                         pubDate.classList.remove("is-open");
                     }
-                    var contents = periodical.querySelector(".contents");
+                    const contents = periodical.querySelector(".contents");
                     if (contents) {
                         contents.classList.add("hide");
                     }
                 }
             }
 
-            var idx = lunr(function () {
+            const idx = lunr(function () {
                 this.field("title");
                 this.field("articles");
                 this.field("tags");
                 this.field("category");
 
-                for (var i = 0; i < periodicalsEles.length; i++) {
-                    var periodical = periodicalsEles[i];
-                    var id = periodical["id"];
-                    var catName = periodical.dataset["catName"]
-                    var title = periodical.querySelector(".title").textContent;
-                    var articlesEles = periodical.querySelectorAll(".contents > ul > li");
-                    var articles = [];
-                    for (var j = 0; j < articlesEles.length; j++) {
-                        var articleEle = articlesEles[j];
+                for (let i = 0; i < periodicalsEles.length; i++) {
+                    const periodical = periodicalsEles[i];
+                    const id = periodical["id"];
+                    const catName = periodical.dataset["catName"];
+                    const title = periodical.querySelector(".title").textContent;
+                    const articlesEles = periodical.querySelectorAll(".contents > ul > li");
+                    const articles = [];
+                    for (let j = 0; j < articlesEles.length; j++) {
+                        const articleEle = articlesEles[j];
                         articles.push(articleEle.textContent);
                     }
                     this.add({
@@ -206,43 +205,43 @@ https://opensource.org/licenses/GPL-3.0
             document.getElementById("search-form").onsubmit = function (e) {
                 e.preventDefault();
                 searchInfo.innerText = "";
-                var searchText = document.getElementById("search-text").value.trim();
+                const searchText = document.getElementById("search-text").value.trim();
                 if (searchText.length < 3) {
                     searchInfo.innerText = "Search text must be at least 3 characters long.";
                     return;
                 }
 
-                var results = idx.search(searchText);
+                const results = idx.search(searchText);
                 if (results.length <= 0) {
                     searchInfo.innerText = "No results.";
                     resetSearch();
                     return;
                 }
 
-                var bookIds = []
-                var resultsSumm = {}
-                for (var i = 0; i < results.length; i++) {
+                const bookIds = [];
+                const resultsSumm = {};
+                for (let i = 0; i < results.length; i++) {
                     bookIds.push(results[i].ref);
-                    var fields = []
-                    var metadata = results[i].matchData.metadata;
-                    for (var key in metadata) {
-                        for (var kkey in metadata[key]) {
+                    const fields = [];
+                    const metadata = results[i].matchData.metadata;
+                    for (const key in metadata) {
+                        for (const kkey in metadata[key]) {
                             fields.push(kkey);
                         }
                     }
                     resultsSumm[results[i].ref] = fields;
 
                 }
-                for (var i = 0; i < periodicalsEles.length; i++) {
-                    var periodical = periodicalsEles[i];
-                    var id = periodical["id"];
+                for (let i = 0; i < periodicalsEles.length; i++) {
+                    const periodical = periodicalsEles[i];
+                    const id = periodical["id"];
 
                     if (bookIds.indexOf(id) < 0) {
                         periodical.classList.add("hide");
                         continue;
                     }
                     periodical.classList.remove("hide");
-                    var cat = document.getElementById(periodical.dataset["catId"]);
+                    const cat = document.getElementById(periodical.dataset["catId"]);
                     if (cat) {
                         if (!cat.classList.contains("is-open")) {
                             cat.classList.add("is-open");
@@ -251,8 +250,8 @@ https://opensource.org/licenses/GPL-3.0
                             cat.nextElementSibling.classList.remove("hide");
                         }
                     }
-                    var pubDateEle = periodical.querySelector(".pub-date");
-                    var contentsEle = periodical.querySelector(".contents");
+                    const pubDateEle = periodical.querySelector(".pub-date");
+                    const contentsEle = periodical.querySelector(".contents");
                     if (resultsSumm[id].indexOf("articles") >= 0) {
                         pubDateEle.classList.add("is-open");
                         if (contentsEle) {
@@ -265,7 +264,6 @@ https://opensource.org/licenses/GPL-3.0
                             contentsEle.classList.add("hide");
                         }
                     }
-
                 }
             };
         }
