@@ -39,6 +39,11 @@ h1 {
     }
 }
 
+.not-for-kindle {
+    display: none;
+}
+
+
 // search form
 #search-form-container {
     margin-left: 1em;
@@ -222,10 +227,6 @@ h2.category {
         font-size: 0.7em;
         color: $base-disabled-color;
     }
-
-    a.reader {
-        display: none;
-    }
 }
 
 footer {
@@ -356,16 +357,22 @@ body.nonkindle {
     margin-right: auto;
     background-color: grayscale(darken($base-bg-color, 3%));
 
+    .not-for-kindle {
+        display: unset;
+    }
+
     #search-text {
         width: 85%;
     }
     .book {
         a.reader {
-            display: unset;
             margin-left: 0.45rem;
+            padding-left: 4pt;
+            border-left: solid 1px $base-disabled-color;
+
             color: $base-color;
             &:hover {
-                color: $base-disabled-color;
+                color: $link-hover-color;
             }
             svg {
                 width: 1.25rem;
@@ -445,8 +452,9 @@ body.nonkindle {
         .book {
             a.reader {
                 color: $dark-base-color;
+                border-color: $dark-base-disabled-color;
                 &:hover {
-                    color: $dark-base-disabled-color;
+                    color: $dark-link-hover-color;
                 }
             }
         }
