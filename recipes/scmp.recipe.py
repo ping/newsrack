@@ -162,7 +162,11 @@ class SCMP(BasicNewsrackRecipe, BasicNewsRecipe):
                 article = json.loads(article_js)
                 break
             except json.JSONDecodeError:
-                self.log.exception("Unable to parse __APOLLO_STATE__")
+                # sometimes this borks because of a stray '\n'
+                try:
+                    article = json.loads(article_js.replace("\n", " "))
+                except json.JSONDecodeError:
+                    self.log.exception("Unable to parse __APOLLO_STATE__")
 
         if not article:
             if os.environ.get("recipe_debug_folder", ""):
