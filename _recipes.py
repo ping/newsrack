@@ -263,6 +263,18 @@ recipes: List[Recipe] = [
         ),
     ),
     Recipe(
+        recipe="lithub",
+        slug="lithub",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Books",
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -5)
+        and onlyat_hours(list(range(10, 17)), -5),
+        cover_options=CoverOptions(
+            logo_path_or_url="https://s26162.pcdn.co/wp-content/themes/rigel/images/social_logo.png"
+        ),
+    ),
+    Recipe(
         recipe="london-review",
         slug="lrb",
         src_ext="mobi",

@@ -233,9 +233,10 @@ In alphabetical order:
 
 1. [Asian Review of Books](https://asianreviewofbooks.com)
 2. [Five Books](https://fivebooks.com/)
-3. [London Review of Books](https://www.lrb.co.uk/)
-4. [The New Yorks Times - Books](https://www.nytimes.com/section/books)
-5. [Poetry](https://www.poetryfoundation.org/poetrymagazine)
+3. [Literary Hub](https://lithub.com)
+4. [London Review of Books](https://www.lrb.co.uk/)
+5. [The New Yorks Times - Books](https://www.nytimes.com/section/books)
+6. [Poetry](https://www.poetryfoundation.org/poetrymagazine)
 
 </details>
 
