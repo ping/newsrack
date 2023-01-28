@@ -85,7 +85,7 @@ a.home svg {
 }
 
 @media (min-width: 992px) {
-  #epub-container:after {
+  #epub-viewer:after {
     position: absolute;
     width: 1px;
     border-right: 1px $base-disabled-color solid;
@@ -121,7 +121,7 @@ a.home svg {
       background-color: $dark-base-bg-color;
     }
   }
-  #epub-container:after {
+  #epub-viewer:after {
     border-right-color: $dark-base-disabled-color;
   }
 
