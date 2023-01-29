@@ -844,7 +844,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                 book_ext = os.path.splitext(book.file)[1]
                 reader_link = ""
                 if book_ext == ".epub":
-                    reader_link = f'<a class="reader not-for-kindle" title="Read in browser" href="reader.html?{urlencode({"url": book.rename_to})}"><svg><use href="reader_sprites.svg#icon-book"></use></svg></a>'
+                    reader_link = f'<a class="reader not-for-kindle" title="Read in browser" href="reader.html?{urlencode({"file": book.rename_to})}"><svg><use href="reader_sprites.svg#icon-book"></use></svg></a>'
                 book_links.append(
                     f'<div class="book">'
                     f'<a href="{book.rename_to}">{book_ext}<span class="file-size">{humanize.naturalsize(file_size).replace(" ", "")}</span>'

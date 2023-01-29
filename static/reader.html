@@ -57,30 +57,37 @@
         integrity="sha256-BurhV0UQe0qlCMlVOCdSUfab+58RdWIfxFjZ9C7QgtQ=" crossorigin="anonymous"></script>
 <script>
     const params = URLSearchParams && new URLSearchParams(document.location.search.substring(1));
-    const url = params && params.get("url") && decodeURIComponent(params.get("url"));
+    const file = params && params.get("file") && decodeURIComponent(params.get("file"));
     const currentSectionIndex = (params && params.get("loc")) ? params.get("loc") : undefined;
     let isValidBook;
     try {
-        new URL(url);
+        new URL(file);
         isValidBook = false;
     } catch (e) {
         isValidBook = true;
     }
     const loadingContainer = document.getElementById("loading-container");
     const displayContainer = document.getElementById("display-container");
+    const errEle = document.createElement("span");
+    errEle.classList.add("m-5");
 
     if (!isValidBook) {
-        if (loadingContainer) {
-            loadingContainer.remove();
-        }
-        alert("Remote books not allowed.");
+        errEle.innerText = "Remote books not allowed.";
+        loadingContainer.innerHTML = "";
+        loadingContainer.append(errEle);
     } else {
-        const book = ePub(url);
+        const book = ePub(file);
         const rendition = book.renderTo(
             "epub-viewer",
             {width: "100%", height: "100%", snap: true, manager: "continuous"}
         );
         rendition.display(currentSectionIndex);
+        book.on("openFailed", function (e) {
+            console.error(e);
+            errEle.innerText = e.toString();
+            loadingContainer.innerHTML = "";
+            loadingContainer.append(errEle);
+        });
 
         book.ready.then(function () {
             if (loadingContainer) {
