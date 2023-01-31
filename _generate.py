@@ -941,6 +941,20 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
         )
         f_out.write(html_output)
 
+    # Generate reader html
+    with (
+        open("static/reader.compiled.js", "r", encoding="utf-8") as f_reader_js,
+        open("static/reader.css", "r", encoding="utf-8") as f_reader_css,
+        open("static/reader.html", "r", encoding="utf-8") as f_in,
+        open(
+            os.path.join(publish_folder, "reader.html"), "w", encoding="utf-8"
+        ) as f_out,
+    ):
+        reader_css = f_reader_css.read()
+        reader_js = f_reader_js.read()
+        html_output = f_in.read().format(css=reader_css, js=reader_js)
+        f_out.write(html_output)
+
     _write_opds(generated, publish_site)
 
     static_assets_elapsed_time = timedelta(seconds=timer() - static_assets_start_time)
