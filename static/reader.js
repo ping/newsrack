@@ -1,3 +1,10 @@
+/*
+Copyright (c) 2023 https://github.com/ping/
+
+This software is released under the GNU General Public License v3.0
+https://opensource.org/licenses/GPL-3.0
+*/
+
 (function () {
     const params = URLSearchParams && new URLSearchParams(document.location.search.substring(1));
     const file = params && params.get("file") && decodeURIComponent(params.get("file"));
@@ -61,10 +68,6 @@
             };
             rendition.on("keyup", keyListener);
             document.addEventListener("keyup", keyListener, false);
-        });
-
-        window.addEventListener("unload", function () {
-            this.book.destroy();
         });
 
         book.loaded.navigation.then(function (toc) {
@@ -141,6 +144,10 @@
         rendition.themes.select("viewer-theme");
 
         window.book = book;
+        window.addEventListener("unload", function () {
+            this.book.destroy();
+        });
+
     }
 
 })();
