@@ -71,7 +71,7 @@ https://opensource.org/licenses/GPL-3.0
         });
 
         book.loaded.navigation.then(function (toc) {
-            const $select = document.getElementById("toc");
+            const tocSelect = document.getElementById("toc");
             const docfrag = document.createDocumentFragment();
 
             toc.forEach(function (chapter) {
@@ -93,11 +93,11 @@ https://opensource.org/licenses/GPL-3.0
                 });
             });
 
-            $select.appendChild(docfrag);
+            tocSelect.appendChild(docfrag);
 
-            $select.onchange = function () {
-                const index = $select.selectedIndex;
-                const url = $select.options[index].getAttribute("ref");
+            tocSelect.onchange = function () {
+                const index = tocSelect.selectedIndex;
+                const url = tocSelect.options[index].getAttribute("ref");
                 rendition.display(url);
                 return false;
             };
@@ -109,17 +109,17 @@ https://opensource.org/licenses/GPL-3.0
         });
 
         rendition.on("relocated", function (location) {
-            const $select = document.getElementById("toc");
-            const $selected = $select.querySelector("option[selected]");
-            if ($selected) {
-                $selected.removeAttribute("selected");
+            const tocSelect = document.getElementById("toc");
+            const selectedOption = tocSelect.querySelector("option[selected]");
+            if (selectedOption) {
+                selectedOption.removeAttribute("selected");
             }
 
-            const $options = $select.querySelectorAll("option");
-            for (let i = 0; i < $options.length; ++i) {
-                let selected = $options[i].getAttribute("ref") === location.start.href;
+            const options = tocSelect.querySelectorAll("option");
+            for (let i = 0; i < options.length; ++i) {
+                let selected = options[i].getAttribute("ref") === location.start.href;
                 if (selected) {
-                    $options[i].setAttribute("selected", "");
+                    options[i].setAttribute("selected", "");
                 }
             }
 
