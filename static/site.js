@@ -33,6 +33,7 @@ https://opensource.org/licenses/GPL-3.0
         second: 1000
     };
 
+    const isKindleBrowser = typeof (Intl) === "undefined";
     let rtf = null;
     if (typeof (Intl) !== "undefined") {
         // the Kindle browser doesn't support Intl
@@ -111,7 +112,8 @@ https://opensource.org/licenses/GPL-3.0
     for (let i = 0; i < accordionBtns.length; i++) {
         const accordion = accordionBtns[i];
         accordion.onclick = function () {
-            if (!this.classList.contains("is-open")) {
+            if (!isKindleBrowser && !this.classList.contains("is-open")) {
+                // don't do this for the Kindle browser, because scrollIntoView doesn't seem to work
                 // opening periodical
                 const openedPeriodicals = document.querySelectorAll(".pub-date.is-open");
                 for (let j = 0; j < openedPeriodicals.length; j++) {
@@ -136,8 +138,9 @@ https://opensource.org/licenses/GPL-3.0
             try {
                 // scroll into element into view in case closing off another
                 // content listing causes current periodical to go off-screen
-                if (!isScrolledIntoView(this.parentElement)) {
-                    this.parentElement.scrollIntoView({block: "start"});
+                // don't do this for the Kindle browser, because scrollIntoView doesn't seem to work
+                if (!isKindleBrowser && !isScrolledIntoView(this.parentElement)) {
+                    this.parentElement.scrollIntoView();
                 }
             } catch (e) {
                 console.error(e);
