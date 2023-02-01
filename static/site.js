@@ -78,6 +78,14 @@ https://opensource.org/licenses/GPL-3.0
         }
     }
 
+    function isScrolledIntoView(ele) {
+        const rect = ele.getBoundingClientRect();
+        // Only completely visible elements return true:
+        return (rect.top >= 0) && (rect.bottom <= window.innerHeight);
+        // Partially visible elements return true:
+        // return rect.top < window.innerHeight && rect.bottom >= 0;
+    }
+
     const refreshedDateEle = document.getElementById("refreshed_dt");
     const refreshedDate = new Date(parseInt(refreshedDateEle.attributes["data-refreshed-date"].value));
     refreshedDateEle.title = refreshedDate.toLocaleString();
@@ -124,6 +132,15 @@ https://opensource.org/licenses/GPL-3.0
                         + RECIPE_COVERS[slug]["thumbnail"] + '"></a></p>';
                 }
                 this.nextElementSibling.innerHTML += RECIPE_DESCRIPTIONS[slug];
+            }
+            try {
+                // scroll into element into view in case closing off another
+                // content listing causes current periodical to go off-screen
+                if (!isScrolledIntoView(this.parentElement)) {
+                    this.parentElement.scrollIntoView({block: "start"});
+                }
+            } catch (e) {
+                console.error(e);
             }
         };
     }
