@@ -103,6 +103,16 @@ https://opensource.org/licenses/GPL-3.0
     for (let i = 0; i < accordionBtns.length; i++) {
         const accordion = accordionBtns[i];
         accordion.onclick = function () {
+            if (!this.classList.contains("is-open")) {
+                // opening periodical
+                const openedPeriodicals = document.querySelectorAll(".pub-date.is-open");
+                for (let j = 0; j < openedPeriodicals.length; j++) {
+                    // close other opened periodicals
+                    const openedPeriodical = openedPeriodicals[j];
+                    openedPeriodical.classList.remove("is-open");
+                    openedPeriodical.nextElementSibling.classList.add("hide");  // content
+                }
+            }
             this.classList.toggle("is-open");
             this.nextElementSibling.classList.toggle("hide");   // content
             const slug = this.parentElement.id;
@@ -178,7 +188,9 @@ https://opensource.org/licenses/GPL-3.0
                     const id = periodical["id"];
                     const catName = periodical.dataset["catName"];
                     const title = periodical.querySelector(".title").textContent;
-                    const articlesEles = periodical.querySelectorAll(".contents > ul > li");
+                    const contentTemp = document.createElement("div");
+                    contentTemp.innerHTML = RECIPE_DESCRIPTIONS[id];
+                    const articlesEles = contentTemp.querySelectorAll("ul > li");
                     const articles = [];
                     for (let j = 0; j < articlesEles.length; j++) {
                         const articleEle = articlesEles[j];
@@ -262,7 +274,11 @@ https://opensource.org/licenses/GPL-3.0
                         if (contentsEle) {
                             contentsEle.classList.remove("hide");
                         }
-                        periodical.querySelector(".contents").classList.remove("hide");
+                        contentsEle.classList.remove("hide");
+                        if (contentsEle.innerHTML === "") {
+                            contentsEle.innerHTML = RECIPE_DESCRIPTIONS[id];
+                        }
+
                     } else {
                         pubDateEle.classList.remove("is-open");
                         if (contentsEle) {
