@@ -221,10 +221,11 @@ In alphabetical order:
 10. [Nautilus](https://nautil.us/)
 11. [Politico](https://www.politico.com/)
 12. [ProPublica](https://www.propublica.org/)
-13. [Rest of World](https://restofworld.org)
-14. [The Third Pole](https://www.thethirdpole.net/)
-15. [Vox](https://www.vox.com/)
-16. [Wired](https://www.wired.com/magazine/)
+13. [Quanta Magazine](https://www.quantamagazine.org/)
+14. [Rest of World](https://restofworld.org)
+15. [The Third Pole](https://www.thethirdpole.net/)
+16. [Vox](https://www.vox.com/)
+17. [Wired](https://www.wired.com/magazine/)
 
 </details>
 

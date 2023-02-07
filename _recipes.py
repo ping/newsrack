@@ -444,6 +444,19 @@ recipes: List[Recipe] = [
         ),
     ),
     Recipe(
+        recipe="quanta-magazine",
+        slug="quanta-magazine",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Online Magazines",
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -5)
+        and onlyat_hours(list(range(8, 14))),
+        tags=["science"],
+        cover_options=CoverOptions(
+            logo_path_or_url="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Quanta_Magazine_Logo_05.2022.svg/640px-Quanta_Magazine_Logo_05.2022.svg.png"
+        ),
+    ),
+    Recipe(
         recipe="restofworld",
         slug="restofworld",
         src_ext="mobi",
