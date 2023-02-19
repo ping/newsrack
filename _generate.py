@@ -125,7 +125,7 @@ def _add_recipe_summary(rec, status, duration=None):
     return f"| {rec.name} | {status} | {duration or 0} |\n"
 
 
-def _write_opds(generated_output, publish_site):
+def _write_opds(generated_output, recipe_covers, publish_site):
     """
     Generate minimal OPDS
 
@@ -194,38 +194,38 @@ def _write_opds(generated_output, publish_site):
                 author_tag.appendChild(simple_tag(doc, "name", category.title()))
                 entry.appendChild(author_tag)
 
-                cover_file_name = f"{os.path.splitext(books[0].file)[0]}.jpg"
-                cover_file_path = os.path.join(publish_folder, cover_file_name)
-                cover_thumbnail_file_name = (
-                    f"{os.path.splitext(books[0].file)[0]}.thumb.jpg"
-                )
-                cover_thumbnail_file_path = os.path.join(
-                    publish_folder, cover_thumbnail_file_name
-                )
-                if os.path.exists(cover_file_path):
-                    entry.appendChild(
-                        simple_tag(
-                            doc,
-                            "link",
-                            attributes={
-                                "rel": "http://opds-spec.org/image",
-                                "type": "image/jpeg",
-                                "href": cover_file_name,
-                            },
-                        )
+                covers = recipe_covers.get(books[0].recipe.slug)
+                if covers:
+                    cover_file_name = covers["cover"]
+                    cover_file_path = os.path.join(publish_folder, cover_file_name)
+                    cover_thumbnail_file_name = covers["thumbnail"]
+                    cover_thumbnail_file_path = os.path.join(
+                        publish_folder, cover_thumbnail_file_name
                     )
-                if os.path.exists(cover_thumbnail_file_path):
-                    entry.appendChild(
-                        simple_tag(
-                            doc,
-                            "link",
-                            attributes={
-                                "rel": "http://opds-spec.org/image/thumbnail",
-                                "type": "image/jpeg",
-                                "href": cover_thumbnail_file_name,
-                            },
+                    if os.path.exists(cover_file_path):
+                        entry.appendChild(
+                            simple_tag(
+                                doc,
+                                "link",
+                                attributes={
+                                    "rel": "http://opds-spec.org/image",
+                                    "type": "image/jpeg",
+                                    "href": cover_file_name,
+                                },
+                            )
                         )
-                    )
+                    if os.path.exists(cover_thumbnail_file_path):
+                        entry.appendChild(
+                            simple_tag(
+                                doc,
+                                "link",
+                                attributes={
+                                    "rel": "http://opds-spec.org/image/thumbnail",
+                                    "type": "image/jpeg",
+                                    "href": cover_thumbnail_file_name,
+                                },
+                            )
+                        )
 
                 for book in books:
                     book_ext = os.path.splitext(book.file)[1]
@@ -955,7 +955,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
         html_output = f_in.read().format(css=reader_css, js=reader_js)
         f_out.write(html_output)
 
-    _write_opds(generated, publish_site)
+    _write_opds(generated, recipe_covers, publish_site)
 
     static_assets_elapsed_time = timedelta(seconds=timer() - static_assets_start_time)
 
