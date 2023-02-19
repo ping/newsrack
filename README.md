@@ -2,6 +2,10 @@
 
 Generate an online "newsrack" of periodicals for your ereader.
 
+Features:
+- Download anywhere using your device browser
+- Subscribe via OPDS feeds
+
 Uses [calibre](https://calibre-ebook.com/) + [recipes](https://manual.calibre-ebook.com/news_recipe.html), [GitHub Actions](.github/workflows/build.yml), and hosted
 on [GitHub Pages](https://pages.github.com/).
 
@@ -13,8 +17,10 @@ on [GitHub Pages](https://pages.github.com/).
 2. Create a new branch, for example `custom`. Using a new branch makes a few things, like contributing fixes for example, easier.
 3. Add your own recipes to the [`recipes_custom/`](recipes_custom) folder and customise [_recipes_custom.py](_recipes_custom.py). Optional.
 4. Customise the cron schedule and job run time in [.github/workflows/build.yml](.github/workflows/build.yml). Optional.
-5. Set the new branch `custom` as default.
-6. Enable Pages in repository settings to deploy from `GitHub Actions`.
+5. Set the new branch `custom` as default
+   - from Settings > Branches > Default branch
+6. Enable Pages in repository settings to deploy from `GitHub Actions`
+   - from Settings > Pages > Build and deployment > Source
 7. If needed, manually trigger the `Build` workflow from Actions to start your first build.
 
 ### What Can Be Customised
