@@ -496,7 +496,7 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         category="Magazines",
-        enable_on=onlyon_days(list(range(1, 14)), -5)
+        enable_on=onlyon_days(list(range(16, 31)), -5)
         and onlyat_hours(list(range(10, 19)), -5),
         overwrite_cover=False,
     ),
