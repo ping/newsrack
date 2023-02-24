@@ -57,6 +57,7 @@ Recipe(
     retry_attempts=1,  # retry attempts on TimeoutExpired, ReadTimeout
     cover_options=CoverOptions(),  # cover options
     tags=["example"],   # used in search
+    title_date_format = "%-d %b, %Y"  # used to format the date in the title
 ),
 ```
 
