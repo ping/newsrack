@@ -50,26 +50,43 @@ h1 {
     margin-right: 1em;
     margin-bottom: 0.5em;
 }
+#search-text, #search-button {
+    color: $base-color;
+    background-color: $base-bg-color;
+    border: 1px solid lighten($base-disabled-color, 20%);
+    border-radius: 0.25rem;
 
+    &:disabled {
+        background-color: $book-bg-color;
+    }
+}
 #search-text {
     display: inline-block;
     margin-right: 0.3em;
     font-size: 0.8em;
-    padding: 0.2em;
+    padding: 0.25em 0.4em;
     width: 100%;
     box-sizing: border-box;
+
+    &::placeholder {
+        color: grayscale(lighten($base-color, 7%));
+    }
 }
 #search-button {
     font-size: 0.8em;
     display: inline-block;
-    padding: 0.2em 1em;
+    padding: 0.25em 1em;
     min-width: 4em;
     cursor: pointer;
+    &:hover {
+        background-color: grayscale(darken($base-bg-color, 3%));
+        border-color: $base-disabled-color;
+    }
 }
 #search-info {
     display: inline-block;
     font-size: 0.75em;
-    margin-top: 0.25em;
+    margin-top: 0.35em;
     margin-bottom: 0.25em;
     color: $error-color;
 }
@@ -282,6 +299,25 @@ footer {
     }
     #search-info {
         color: $dark-error-color;
+    }
+    #search-text, #search-button {
+        color: $dark-base-color;
+        background-color: $dark-base-bg-color;
+        border: 1px solid darken($dark-base-disabled-color, 20%);
+        &:disabled {
+            background-color: $dark-book-bg-color;
+        }
+    }
+    #search-text {
+        &::placeholder {
+            color: grayscale(darken($dark-base-color, 7%));
+        }
+    }
+    #search-button {
+        &:hover {
+            background-color: lighten($dark-base-bg-color, 3%);
+            border-color: $dark-base-disabled-color;
+        }
     }
 
     .category-container {
