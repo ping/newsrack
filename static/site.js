@@ -140,7 +140,7 @@ https://opensource.org/licenses/GPL-3.0
                 // content listing causes current periodical to go off-screen
                 // don't do this for the Kindle browser, because scrollIntoView doesn't seem to work
                 if (!isKindleBrowser && !isScrolledIntoView(this)) {
-                    this.scrollIntoView();
+                    this.parentElement.scrollIntoView();
                 }
             } catch (e) {
                 console.error(e);
