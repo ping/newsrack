@@ -9,8 +9,8 @@ Features:
 Uses [calibre](https://calibre-ebook.com/) + [recipes](https://manual.calibre-ebook.com/news_recipe.html), [GitHub Actions](.github/workflows/build.yml), and hosted
 on [GitHub Pages](https://pages.github.com/).
 
-![eInk Kindle Screenshot](https://user-images.githubusercontent.com/104607/219942600-b3d7347b-0f7b-46f2-9397-d8809c54ae62.jpg)
-![Mobile Screenshot](https://user-images.githubusercontent.com/104607/219942710-792ea417-b662-430b-8f63-855e8aee1635.jpg)
+![eInk Kindle Screenshot](https://user-images.githubusercontent.com/104607/221388326-f3f80593-18e9-4f48-9e80-340a00dce10f.png)
+![Mobile Screenshot](https://user-images.githubusercontent.com/104607/221388328-b1fc17f6-2f60-4691-9a8d-177ced28f5a4.jpg)
 
 ## Running Your Own Instance
 
