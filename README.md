@@ -12,6 +12,8 @@ on [GitHub Pages](https://pages.github.com/).
 ![eInk Kindle Screenshot](https://user-images.githubusercontent.com/104607/221388326-f3f80593-18e9-4f48-9e80-340a00dce10f.png)
 ![Mobile Screenshot](https://user-images.githubusercontent.com/104607/221388328-b1fc17f6-2f60-4691-9a8d-177ced28f5a4.jpg)
 
+<a href="https://www.buymeacoffee.com/ping"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=ping&button_colour=FFDD00&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=ffffff" /></a>
+
 ## Running Your Own Instance
 
 ### General Steps
