@@ -30,7 +30,7 @@ class CoverOptions:
     background_colour: str = "white"
     title_font_path: str = "static/OpenSans-Bold.ttf"
     title_font_size: int = 80
-    datestamp_font_path: str = "static/OpenSans-Bold.ttf"
+    datestamp_font_path: str = "static/OpenSans-Semibold.ttf"
     datestamp_font_size: int = 72
     logo_path_or_url: str = ""  # must be a png/jpg/gif
 
