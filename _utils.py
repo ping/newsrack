@@ -111,7 +111,15 @@ def generate_cover(
         cover_options.datestamp_font_path, cover_options.datestamp_font_size
     )
 
+    default_calibre_title_re = re.compile(r"(.+)\s\[(.+?)\]", re.IGNORECASE)
+
     title_texts = [t.strip() for t in title_text.split(":")]
+    if len(title_texts) == 1:
+        # not the expected newsrack-customised title
+        # try to parse default calibre title format
+        mobj = default_calibre_title_re.match(title_text)
+        if mobj:
+            title_texts = [str(t).strip() for t in mobj.groups()]
 
     with Image.new(
         "RGB",
@@ -260,6 +268,10 @@ def generate_cover(
             + cover_options.border_offset
             + cover_options.border_width
         )
+        if not cover_options.logo_path_or_url:
+            # we can bump up the text title a little to make it look better
+            text_start_pos_y -= int(cover_options.title_font_size / 2)
+
         cumu_offset = 0
         for text, text_w, text_h, h_offset, font in text_w_h:
             img_draw.text(
