@@ -35,7 +35,7 @@ from _recipe_utils import (
 #   - Recipe can be defined twice with different src_ext, will work except
 #     for potential throttling and time/bandwidth taken
 
-categories_sort: List[str] = ["News", "Magazines", "Online Magazines", "Books"]
+categories_sort: List[str] = ["News", "Magazines", "Online Magazines", "Arts & Culture"]
 
 # Keep this list in alphabetical order
 recipes: List[Recipe] = [
@@ -55,9 +55,9 @@ recipes: List[Recipe] = [
         slug="arb",
         src_ext="mobi",
         target_ext=["epub"],
-        category="Books",
+        category="Arts & Culture",
         enable_on=onlyon_weekdays([0, 1, 2, 3, 4], 8),
-        tags=["asia"],
+        tags=["asia", "literature"],
         cover_options=CoverOptions(
             logo_path_or_url="https://i2.wp.com/asianreviewofbooks.com/content/wp-content/uploads/2016/09/ARBwidelogo.png"
         ),
@@ -122,11 +122,12 @@ recipes: List[Recipe] = [
         slug="fivebooks",
         src_ext="mobi",
         target_ext=["epub"],
-        category="Books",
+        category="Arts & Culture",
         enable_on=onlyon_weekdays([0, 1, 2, 3, 4]),
         cover_options=CoverOptions(
             logo_path_or_url="https://fivebooks.com/app/themes/five-books/assets/images/logo.png"
         ),
+        tags=["literature", "books"],
     ),
     Recipe(
         recipe="fivethirtyeight",
@@ -267,12 +268,13 @@ recipes: List[Recipe] = [
         slug="lithub",
         src_ext="mobi",
         target_ext=["epub"],
-        category="Books",
+        category="Arts & Culture",
         enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -5)
         and onlyat_hours(list(range(10, 17)), -5),
         cover_options=CoverOptions(
             logo_path_or_url="https://s26162.pcdn.co/wp-content/themes/rigel/images/social_logo.png"
         ),
+        tags=["literature", "books"],
     ),
     Recipe(
         recipe="london-review",
@@ -280,7 +282,7 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         overwrite_cover=False,
-        category="Books",
+        category="Arts & Culture",
         enable_on=onlyon_weekdays([0, 1, 2, 3, 4]),
     ),
     Recipe(
@@ -404,12 +406,24 @@ recipes: List[Recipe] = [
         slug="nytimes-books",
         src_ext="mobi",
         target_ext=["epub"],
-        category="Books",
+        category="Arts & Culture",
         timeout=300,
         retry_attempts=0,
         enable_on=onlyat_hours(list(range(18, 22))),
         cover_options=CoverOptions(
             logo_path_or_url="https://static01.nyt.com/newsgraphics/2015/12/23/masthead-2016/8118277965bda8228105578895f2f4a7aeb22ce2/nyt-logo.png"
+        ),
+        tags=["literature", "books"],
+    ),
+    Recipe(
+        recipe="paris-review-blog",
+        slug="paris-review-blog",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Arts & Culture",
+        enable_on=onlyat_hours(list(range(12, 18)), -5),
+        cover_options=CoverOptions(
+            logo_path_or_url="https://www.theparisreview.org/il/7d2a53fbaa/medium/Hadada-Circle-holding.png"
         ),
     ),
     Recipe(
@@ -418,9 +432,9 @@ recipes: List[Recipe] = [
         src_ext="mobi",
         target_ext=["epub"],
         overwrite_cover=False,
-        category="Books",
+        category="Arts & Culture",
         enable_on=first_n_days_of_month(7, -6) or last_n_days_of_month(7, -5),
-        tags=["literature", "arts"],
+        tags=["literature"],
     ),
     Recipe(
         recipe="politico-magazine",
