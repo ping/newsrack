@@ -383,6 +383,7 @@ recipes: List[Recipe] = [
         cover_options=CoverOptions(
             logo_path_or_url="https://www.noemamag.com/wp-content/uploads/2020/04/noema-logo.png"
         ),
+        tags=["editorial", "commentary"],
     ),
     # don't let NYT recipes overlap to avoid throttling
     Recipe(
