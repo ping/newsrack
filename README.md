@@ -231,13 +231,14 @@ In alphabetical order:
 8. [MIT Press Reader](https://thereader.mitpress.mit.edu/)
 9. [MIT Technology Review](https://www.technologyreview.com/)
 10. [Nautilus](https://nautil.us/)
-11. [Politico](https://www.politico.com/)
-12. [ProPublica](https://www.propublica.org/)
-13. [Quanta Magazine](https://www.quantamagazine.org/)
-14. [Rest of World](https://restofworld.org)
-15. [The Third Pole](https://www.thethirdpole.net/)
-16. [Vox](https://www.vox.com/)
-17. [Wired](https://www.wired.com/magazine/)
+11. [Noema](https://www.noemamag.com/)
+12. [Politico](https://www.politico.com/)
+13. [ProPublica](https://www.propublica.org/)
+14. [Quanta Magazine](https://www.quantamagazine.org/)
+15. [Rest of World](https://restofworld.org)
+16. [The Third Pole](https://www.thethirdpole.net/)
+17. [Vox](https://www.vox.com/)
+18. [Wired](https://www.wired.com/magazine/)
 
 </details>
 

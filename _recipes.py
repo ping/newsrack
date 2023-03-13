@@ -372,6 +372,18 @@ recipes: List[Recipe] = [
         enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -5),
         tags=["editorial", "commentary"],
     ),
+    Recipe(
+        recipe="noema-magazine",
+        slug="noema-magazine",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Online Magazines",
+        enable_on=onlyon_weekdays([0, 1, 2, 3, 4])
+        and onlyat_hours(list(range(10, 22))),
+        cover_options=CoverOptions(
+            logo_path_or_url="https://www.noemamag.com/wp-content/uploads/2020/04/noema-logo.png"
+        ),
+    ),
     # don't let NYT recipes overlap to avoid throttling
     Recipe(
         recipe="nytimes-global",
