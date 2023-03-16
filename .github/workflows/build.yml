@@ -63,7 +63,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install python requirements
-        run: pip install -r requirements.txt
+        run: python -m pip install -r requirements.txt --upgrade
 
       - name: Install calibre and other dependencies
         run: sudo apt-fast update -y && sudo apt-fast install --no-install-recommends -y libegl1 libopengl0 imagemagick
