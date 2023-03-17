@@ -98,11 +98,11 @@ def _get_env_accounts_info():
 
 
 # fetch index.json from published site
-def _fetch_cache(site):
+def _fetch_cache(site, cache_sess):
     retry_attempts = 1
     timeout = 15
     for attempt in range(1 + retry_attempts):
-        res = requests.get(urljoin(site, index_json_filename), timeout=timeout)
+        res = cache_sess.get(urljoin(site, index_json_filename), timeout=timeout)
         try:
             res.raise_for_status()
             return res.json()
@@ -367,7 +367,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
 
     today = datetime.utcnow().replace(tzinfo=timezone.utc)
     cache_sess = requests.Session()
-    cached = _fetch_cache(publish_site)
+    cached = _fetch_cache(publish_site, cache_sess)
     index = {}  # type: ignore
     recipe_descriptions = {}
     recipe_covers = {}
