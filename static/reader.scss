@@ -39,6 +39,13 @@ a.home svg {
   height: 5vh;
 }
 
+#toc {
+  color: $base-color;
+  background-color: $base-bg-color;
+  border: 1px solid lighten($base-disabled-color, 20%);
+  border-radius: 0.25rem;
+}
+
 #display-container {
   height: 90vh;
 }
@@ -123,6 +130,12 @@ a.home svg {
   }
   #epub-viewer:after {
     border-right-color: $dark-base-disabled-color;
+  }
+  #toc {
+    color: $dark-base-color;
+    background-color: $dark-base-bg-color;
+    border-color: darken($dark-base-disabled-color, 20%);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23e7e9f2' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   }
 
 }
