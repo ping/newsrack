@@ -99,4 +99,7 @@ class SmithsonianMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
                     "description": description,
                 }
             )
+        if not articles:
+            self.abort_recipe_processing("No articles found.")
+
         return [(_name, articles)]
