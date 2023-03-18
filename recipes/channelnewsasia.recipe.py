@@ -65,9 +65,13 @@ class ChannelNewsAsia(BasicNewsrackRecipe, BasicNewsRecipe):
     """
 
     feeds = [
+        # (
+        #     "Latest News",
+        #     "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml",
+        # ),
         (
-            "Latest News",
-            "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml",
+            "Singapore",
+            "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=10416",
         ),
         (
             "Asia",
@@ -77,18 +81,14 @@ class ChannelNewsAsia(BasicNewsrackRecipe, BasicNewsRecipe):
             "Business",
             "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=6936",
         ),
-        (
-            "Singapore",
-            "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=10416",
-        ),
-        (
-            "Sport",
-            "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=10296",
-        ),
-        (
-            "World",
-            "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=6311",
-        ),
+        # (
+        #     "Sport",
+        #     "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=10296",
+        # ),
+        # (
+        #     "World",
+        #     "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=6311",
+        # ),
     ]
 
     def populate_article_metadata(self, article, __, _):
