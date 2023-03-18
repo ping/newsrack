@@ -167,13 +167,18 @@ h2.category {
         font-size: 1em;
         text-transform: none;
 
+        .title {
+            font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+            font-size: 1.1em;
+        }
+
         &:target .title {
             border-bottom: 1px dotted $base-disabled-color;
         }
 
         .pub-date {
             display: block;
-            margin-top: 0.2em;
+            margin-top: 0.3em;
             font-size: 0.8em;
             color: $base-disabled-color;
 
@@ -473,6 +478,7 @@ body.nonkindle {
                 .pub-date {
                     padding-bottom: 0.1em;
                     margin-bottom: 0.2em;
+                    margin-top: 0.5em;
                 }
             }
         }
