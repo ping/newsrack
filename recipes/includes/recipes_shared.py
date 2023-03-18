@@ -7,6 +7,15 @@ from html import unescape
 from urllib.parse import urlencode
 
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
+from calibre.ebooks.BeautifulSoup import BeautifulSoup
+
+
+def get_date_format():
+    try:
+        var_value = os.environ["newsrack_title_dt_format"]
+    except:  # noqa
+        var_value = "%-d %b, %Y"
+    return var_value
 
 
 def format_title(feed_name, post_date):
@@ -14,11 +23,7 @@ def format_title(feed_name, post_date):
     Format title
     :return:
     """
-    try:
-        var_value = os.environ["newsrack_title_dt_format"]
-        return f"{feed_name}: {post_date:{var_value}}"
-    except:  # noqa
-        return f"{feed_name}: {post_date:%-d %b, %Y}"
+    return f"{feed_name}: {post_date:{get_date_format()}}"
 
 
 class BasicNewsrackRecipe(object):
@@ -174,9 +179,9 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
                 latest_post_date = post_date
                 self.title = format_title(feed_name, post_date)
 
-            section_name = f"{post_date:%-d %B, %Y}"
+            section_name = f"{post_date:{get_date_format()}}"
             if len(self.get_feeds()) > 1:
-                section_name = f"{feed_name}: {post_date:%-d %B, %Y}"
+                section_name = f"{feed_name}: {post_date:{get_date_format()}}"
             if section_name not in articles:
                 articles[section_name] = []
 
@@ -184,7 +189,8 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
                 f.write(json.dumps(p).encode("utf-8"))
             articles[section_name].append(
                 {
-                    "title": unescape(p["title"]["rendered"]) or "Untitled",
+                    "title": BeautifulSoup(unescape(p["title"]["rendered"])).get_text()
+                    or "Untitled",
                     "url": "file://" + f.name,
                     "date": f"{post_date:%-d %B, %Y}",
                     "description": unescape(p["excerpt"]["rendered"]),
