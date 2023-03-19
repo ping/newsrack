@@ -32,6 +32,7 @@ class BasicNewsrackRecipe(object):
     compress_news_images = True
     scale_news_images = (800, 800)
     scale_news_images_to_device = False  # force img to be resized to scale_news_images
+    ignore_duplicate_articles = {"url"}
 
     timeout = 20
     timefmt = ""  # suppress date output
