@@ -5,6 +5,7 @@
 
 # Helpers to generate opds xml - extremely minimal
 from datetime import datetime
+from xml.dom import minidom
 
 extension_contenttype_map = {
     ".epub": "application/epub+zip",
@@ -25,7 +26,7 @@ def simple_tag(doc_root, tag, value=None, attributes=None):
     return new_tag
 
 
-def init_feed(doc, publish_site, feed_id, title):
+def init_feed(doc: minidom.Document, publish_site: str, feed_id: str, title: str):
     feed = simple_tag(
         doc,
         "feed",

@@ -8,6 +8,7 @@ import re
 import sys
 import textwrap
 import unicodedata
+from pathlib import Path
 from typing import Tuple
 
 import requests
@@ -86,7 +87,7 @@ def calc_resize(
 
 
 def generate_cover(
-    file_name: str, title_text: str, cover_options: CoverOptions, logger=None
+    file_name: Path, title_text: str, cover_options: CoverOptions, logger=None
 ):
     """
     Generate a plain image cover file
@@ -257,7 +258,7 @@ def generate_cover(
                     )
                     img.paste(logo_alpha_composite, (logo_pos_x, logo_pos_y))
 
-            except Exception:  # noqa
+            except Exception:  # noqa, pylint: disable=broad-except
                 # fail gracefully since logo is not absolutely necessary
                 logger.exception(
                     "Error processing cover logo: %s", cover_options.logo_path_or_url

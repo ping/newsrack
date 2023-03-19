@@ -4,7 +4,6 @@
 # https://opensource.org/licenses/GPL-3.0
 
 import argparse
-import glob
 import json
 import logging
 import os
@@ -17,8 +16,9 @@ from collections import namedtuple
 from datetime import datetime, timezone, timedelta
 from functools import cmp_to_key
 from math import ceil
+from pathlib import Path
 from timeit import default_timer as timer
-from typing import List, Dict
+from typing import List, Dict, Optional
 from urllib.parse import urljoin, urlencode
 from xml.dom import minidom
 
@@ -44,8 +44,8 @@ ch.setLevel(logging.DEBUG)
 logger.addHandler(ch)
 logger.setLevel(logging.INFO)
 
-publish_folder = "public"
-meta_folder = "meta"
+publish_folder = Path("public")
+meta_folder = Path("meta")
 job_log_filename = "job_log.json"
 catalog_path = "catalog.xml"
 index_json_filename = "index.json"
@@ -64,12 +64,13 @@ RecipeOutput = namedtuple(
 )
 
 # sort categories for display
-sort_category_key = cmp_to_key(
+# Ignoring mypy error below because of https://github.com/python/mypy/issues/9372
+sort_category_key = cmp_to_key(  # type: ignore[misc]
     lambda a, b: sort_category(a, b, custom_categories_sort or default_categories_sort)
 )
 
 
-def _get_env_csv(key):
+def _get_env_csv(key: str) -> List[str]:
     # get csv format env values
     slugs: List[str] = []
     try:
@@ -79,7 +80,7 @@ def _get_env_csv(key):
     return slugs
 
 
-def _get_env_accounts_info():
+def _get_env_accounts_info() -> Dict:
     accounts_info = {}
     try:
         json_str = str(os.environ["accounts"])
@@ -98,7 +99,7 @@ def _get_env_accounts_info():
 
 
 # fetch index.json from published site
-def _fetch_cache(site, cache_sess):
+def _fetch_cache(site, cache_sess: requests.Session) -> Dict:
     retry_attempts = 1
     timeout = 15
     for attempt in range(1 + retry_attempts):
@@ -106,7 +107,7 @@ def _fetch_cache(site, cache_sess):
         try:
             res.raise_for_status()
             return res.json()
-        except Exception as err:  # noqa
+        except Exception as err:  # noqa, pylint: disable=broad-except
             if attempt < retry_attempts:
                 logger.warning(
                     f"{err.__class__.__name__} downloading {index_json_filename}"
@@ -116,16 +117,19 @@ def _fetch_cache(site, cache_sess):
                 time.sleep(default_retry_wait_interval)
                 continue
             logger.exception(f"{err.__class__.__name__} fetching {index_json_filename}")
-            return {}
+    return {}
 
 
-def _add_recipe_summary(rec, status, duration=None):
+def _add_recipe_summary(
+    rec: Recipe, status: str, duration: Optional[timedelta] = None
+) -> str:
+    duration_str = "0"
     if duration:
-        duration = humanize.precisedelta(duration)
-    return f"| {rec.name} | {status} | {duration or 0} |\n"
+        duration_str = humanize.precisedelta(duration)
+    return f"| {rec.name} | {status} | {duration_str} |\n"
 
 
-def _write_opds(generated_output, recipe_covers, publish_site):
+def _write_opds(generated_output: Dict, recipe_covers: Dict, publish_site: str) -> None:
     """
     Generate minimal OPDS
 
@@ -197,12 +201,12 @@ def _write_opds(generated_output, recipe_covers, publish_site):
                 covers = recipe_covers.get(books[0].recipe.slug)
                 if covers:
                     cover_file_name = covers["cover"]
-                    cover_file_path = os.path.join(publish_folder, cover_file_name)
+                    cover_file_path = publish_folder.joinpath(cover_file_name)
                     cover_thumbnail_file_name = covers["thumbnail"]
-                    cover_thumbnail_file_path = os.path.join(
-                        publish_folder, cover_thumbnail_file_name
+                    cover_thumbnail_file_path = publish_folder.joinpath(
+                        cover_thumbnail_file_name
                     )
-                    if os.path.exists(cover_file_path):
+                    if cover_file_path.exists():
                         entry.appendChild(
                             simple_tag(
                                 doc,
@@ -214,7 +218,7 @@ def _write_opds(generated_output, recipe_covers, publish_site):
                                 },
                             )
                         )
-                    if os.path.exists(cover_thumbnail_file_path):
+                    if cover_thumbnail_file_path.exists():
                         entry.appendChild(
                             simple_tag(
                                 doc,
@@ -228,7 +232,7 @@ def _write_opds(generated_output, recipe_covers, publish_site):
                         )
 
                 for book in books:
-                    book_ext = os.path.splitext(book.file)[1]
+                    book_ext = Path(book.file).suffix
                     link_type = (
                         extension_contenttype_map.get(book_ext)
                         or "application/octet-stream"
@@ -240,22 +244,22 @@ def _write_opds(generated_output, recipe_covers, publish_site):
                             attributes={
                                 "rel": "http://opds-spec.org/acquisition",
                                 "type": link_type,
-                                "href": f"{os.path.basename(book.rename_to)}",
+                                "href": f"{Path(book.rename_to).name}",
                             },
                         )
                     )
                 feed.appendChild(entry)
 
-        opds_xml_path = os.path.join(publish_folder, f"{slugify(category, True)}.xml")
-        with open(opds_xml_path, "wb") as f:  # type: ignore
+        opds_xml_path = publish_folder.joinpath(f"{slugify(category, True)}.xml")
+        with opds_xml_path.open("wb") as f:  # type: ignore
             f.write(cat_doc.toprettyxml(encoding="utf-8", indent=""))
 
-    opds_xml_path = os.path.join(publish_folder, catalog_path)
-    with open(opds_xml_path, "wb") as f:  # type: ignore
+    opds_xml_path = publish_folder.joinpath(catalog_path)
+    with opds_xml_path.open("wb") as f:  # type: ignore
         f.write(main_doc.toprettyxml(encoding="utf-8", indent=""))
 
 
-def _find_output(folder_path, slug, ext):
+def _find_output(folder_path: Path, slug: str, ext: str) -> List[Path]:
     """
     This is an improvement over using just glob because it finds outputs
     more precisely by the exact slug.
@@ -263,11 +267,13 @@ def _find_output(folder_path, slug, ext):
     using glob will result in the wrong outputs being detected.
     """
     slug_match_re = re.compile(slug + r"(-\d{4}-\d{2}-\d{2})?\." + ext)
-    res = glob.glob(f"{folder_path}/{slug}*.{ext}")
-    return [r for r in res if slug_match_re.match(os.path.basename(r))]
+    res = folder_path.glob(f"{slug}*.{ext}")
+    return [r for r in res if slug_match_re.match(r.name)]
 
 
-def _download_from_cache(recipe, cached, publish_site, cache_sess):
+def _download_from_cache(
+    recipe: Recipe, cached: Dict, publish_site: str, cache_sess: requests.Session
+) -> bool:
     """
     Download a recipe output from the published site
     :param recipe:
@@ -280,7 +286,7 @@ def _download_from_cache(recipe, cached, publish_site, cache_sess):
     # [TODO] changed from using name to slug, check name to keep backward compat
     cached_files = cached.get(recipe.slug, []) or cached.get(recipe.name, [])
     for cached_item in cached_files:
-        _, ext = os.path.splitext(cached_item["filename"])
+        ext = Path(cached_item["filename"]).suffix
         if ext != f".{recipe.src_ext}" and ext not in [
             f".{x}" for x in recipe.target_ext
         ]:
@@ -305,10 +311,7 @@ def _download_from_cache(recipe, cached, publish_site, cache_sess):
                 logger.debug(f'Downloading "{ebook_url}"...')
                 ebook_res = cache_sess.get(ebook_url, timeout=timeout, stream=True)
                 ebook_res.raise_for_status()
-                with open(  # type: ignore
-                    os.path.join(publish_folder, os.path.basename(ebook_url)),
-                    "wb",
-                ) as f:
+                with publish_folder.joinpath(cached_item["filename"]).open("wb") as f:
                     shutil.copyfileobj(ebook_res.raw, f)
                 abort = False
                 break
@@ -332,7 +335,7 @@ def _download_from_cache(recipe, cached, publish_site, cache_sess):
     return abort
 
 
-def _linkify_attrs(attrs, new=False):
+def _linkify_attrs(attrs, _=False):
     """
     Add required attributes when linkifying
     :param attrs:
@@ -344,10 +347,11 @@ def _linkify_attrs(attrs, new=False):
     return attrs
 
 
-def run(publish_site, source_url, commit_hash, verbose_mode):
-
+def run(
+    publish_site: str, source_url: str, commit_hash: str, verbose_mode: bool
+) -> None:
     # set path to recipe includes in os environ so that recipes can pick it up
-    os.environ["recipes_includes"] = os.path.abspath("recipes/includes/")
+    os.environ["recipes_includes"] = str(Path("recipes/includes/").absolute())
 
     # for GitHub
     job_summary = """| Recipe | Status | Duration |
@@ -358,11 +362,9 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
 
     job_log: Dict[str, float] = {}
     try:
-        with open(
-            os.path.join(meta_folder, job_log_filename), "r", encoding="utf-8"
-        ) as f:
+        with meta_folder.joinpath(job_log_filename).open("r", encoding="utf-8") as f:
             job_log = json.load(f)
-    except Exception as err:  # noqa
+    except Exception as err:  # noqa, pylint: disable=broad-except
         logger.warning(f"Unable to load job log: {err}")
 
     today = datetime.utcnow().replace(tzinfo=timezone.utc)
@@ -384,9 +386,10 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
 
     recipes: List[Recipe] = custom_recipes or default_recipes
     for recipe in recipes:
+        recipe_path = Path(f"{recipe.recipe}.recipe")
         if not recipe.name:
             try:
-                with open(f"{recipe.recipe}.recipe") as f:
+                with recipe_path.open("r", encoding="utf-8") as f:
                     recipe_source = f.read()
                     mobj = re.search(
                         r"\n_name\s=\s['\"](?P<name>.+)['\"]\n", recipe_source
@@ -405,11 +408,11 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                     f"Built-in recipes should be configured with a recipe name: {recipe.recipe}"
                 )
                 recipe.name = f"{recipe.recipe}.recipe"
-            except Exception as err:  # noqa
+            except Exception:  # noqa, pylint: disable=broad-except
                 logger.exception("Error getting recipe name")
                 continue
 
-        if os.path.exists(f"{recipe.recipe}.recipe"):
+        if recipe_path.exists():
             os.environ["newsrack_title_dt_format"] = recipe.title_date_format
 
         job_status = ""
@@ -430,12 +433,12 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
         generated[recipe.category][recipe.name] = []
         index[recipe.slug] = []
 
-        source_file_name = f"{recipe.slug}.{recipe.src_ext}"
-        source_file_path = os.path.join(publish_folder, source_file_name)
+        source_file_name = Path(f"{recipe.slug}.{recipe.src_ext}")
+        source_file_path = publish_folder.joinpath(source_file_name)
         cmd = [
             "ebook-convert",
-            f"{recipe.recipe}.recipe",
-            source_file_path,
+            str(recipe_path),
+            str(source_file_path),
         ]
         try:
             recipe_account = accounts_info.get(recipe.slug, {})
@@ -445,13 +448,13 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                 cmd.extend(
                     [f"--username={recipe_username}", f"--password={recipe_password}"]
                 )
-        except:  # noqa
+        except:  # noqa, pylint: disable=bare-except
             pass
         if recipe.conv_options and recipe.conv_options.get(recipe.src_ext):
             cmd.extend(recipe.conv_options[recipe.src_ext])
-        customised_css_filename = os.path.join("static", f"{recipe.src_ext}.css")
-        if os.path.exists(customised_css_filename):
-            cmd.append(f"--extra-css={customised_css_filename}")
+        customised_css_filename = Path("static", f"{recipe.src_ext}.css")
+        if customised_css_filename.exists():
+            cmd.append(f"--extra-css={str(customised_css_filename)}")
         if verbose_mode:
             cmd.append("-vv")
 
@@ -459,7 +462,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
 
         # set recipe debug output folder
         if verbose_mode:
-            os.environ["recipe_debug_folder"] = os.path.abspath(publish_folder)
+            os.environ["recipe_debug_folder"] = str(publish_folder.absolute())
 
         # [TODO] changed from using name to slug, check name to keep backward compat
         cached_files = cached.get(recipe.slug, []) or cached.get(recipe.name, [])
@@ -585,11 +588,11 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
             continue
 
         source_file_path = source_file_paths[-1]
-        source_file_name = os.path.basename(source_file_path)
+        source_file_name = Path(source_file_path.name)
         if not exit_code:
             logger.debug(f'Get book meta info for "{source_file_path}"')
             proc = subprocess.Popen(
-                ["ebook-meta", source_file_path], stdout=subprocess.PIPE
+                ["ebook-meta", str(source_file_path)], stdout=subprocess.PIPE
             )
             meta_out = proc.stdout.read().decode("utf-8")  # type: ignore
             mobj = re.search(
@@ -605,7 +608,9 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
             mobj = re.search(r"Title\s+:\s(?P<title>.+)", meta_out)
             if mobj:
                 title = mobj.group("title")
-            rename_file_name = f"{recipe.slug}-{pub_date:%Y-%m-%d}.{recipe.src_ext}"
+            rename_file_name = Path(
+                f"{recipe.slug}-{pub_date:%Y-%m-%d}.{recipe.src_ext}"
+            )
 
             comments = []
             description = ""
@@ -622,7 +627,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                         f'<ul><li>{"</li><li>".join(comments[1:-1])}</li></ul>'
                         f"{linkify(comments[-1], callbacks=[_linkify_attrs])}"
                     )
-                except:  # noqa
+                except:  # noqa, pylint: disable=bare-except
                     pass
 
             generated[recipe.category][recipe.name].append(
@@ -647,27 +652,27 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                 # customise cover
                 logger.debug(f'Setting cover for "{source_file_path}"')
                 try:
-                    cover_file_path = f"{source_file_path}.png"
+                    cover_file_path = Path(f"{str(source_file_path)}.png")
                     generate_cover(
                         cover_file_path, title, recipe.cover_options, logger=logger
                     )
                     cover_cmd = [
                         "ebook-meta",
-                        source_file_path,
-                        f"--cover={cover_file_path}",
+                        str(source_file_path),
+                        f"--cover={str(cover_file_path)}",
                         f"--series={recipe.name}",
                         f"--index={pseudo_series_index}",
                         f"--publisher={publish_site}",
                     ]
                     _ = subprocess.call(cover_cmd, stdout=subprocess.PIPE)
-                    os.remove(cover_file_path)
-                except Exception:  # noqa
+                    cover_file_path.unlink()
+                except Exception:  # noqa, pylint: disable=broad-except
                     logger.exception("Error generating cover")
             elif rename_file_name != source_file_name:
                 # just set series name
                 series_cmd = [
                     "ebook-meta",
-                    source_file_path,
+                    str(source_file_path),
                     f"--series={recipe.name}",
                     f"--index={pseudo_series_index}",
                     f"--publisher={publish_site}",
@@ -683,13 +688,13 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
 
             # convert generate book into alternative formats
             for ext in recipe.target_ext:
-                target_file_name = f"{recipe.slug}.{ext}"
-                target_file_path = os.path.join(publish_folder, target_file_name)
+                target_file_name = Path(f"{recipe.slug}.{ext}")
+                target_file_path = Path(publish_folder, target_file_name)
 
                 cmd = [
                     "ebook-convert",
-                    source_file_path,
-                    target_file_path,
+                    str(source_file_path),
+                    str(target_file_path),
                     f"--series={recipe.name}",
                     f"--series-index={pseudo_series_index}",
                     f"--publisher={publish_site}",
@@ -697,9 +702,9 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                 if recipe.conv_options and recipe.conv_options.get(ext):
                     cmd.extend(recipe.conv_options[ext])
 
-                customised_css_filename = os.path.join("static", f"{ext}.css")
-                if os.path.exists(customised_css_filename):
-                    cmd.append(f"--extra-css={customised_css_filename}")
+                customised_css_filename = Path("static", f"{ext}.css")
+                if customised_css_filename.exists():
+                    cmd.append(f"--extra-css={str(customised_css_filename)}")
                 if verbose_mode:
                     cmd.append("-vv")
                 if not _find_output(publish_folder, recipe.slug, ext):
@@ -712,7 +717,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                 target_file_path = sorted(
                     _find_output(publish_folder, recipe.slug, ext)
                 )[-1]
-                target_file_name = os.path.basename(target_file_path)
+                target_file_name = Path(target_file_path.name)
 
                 if not exit_code:
                     generated[recipe.category][recipe.name].append(
@@ -746,7 +751,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
     static_assets_start_time = timer()
     # generate index.html
     listing = ""
-    for i, (category, publications) in enumerate(
+    for _, (category, publications) in enumerate(
         sorted(generated.items(), key=sort_category_key)
     ):
         generated_items = [(k, v) for k, v in publications.items() if v]
@@ -757,39 +762,32 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
             book_links = []
             for book in books:
                 # change filename to datestamped name
+                book_file = publish_folder.joinpath(book.file)
+                book_rename_to = publish_folder.joinpath(book.rename_to)
                 if book.file != book.rename_to:
-                    os.rename(
-                        os.path.join(publish_folder, book.file),
-                        os.path.join(publish_folder, book.rename_to),
-                    )
-                cover_file_name = f"{os.path.splitext(book.rename_to)[0]}.jpg"
-                cover_file_path = os.path.join(publish_folder, cover_file_name)
-                cover_thumbnail_file_name = (
-                    f"{os.path.splitext(book.rename_to)[0]}.thumb.jpg"
+                    book_file.rename(book_rename_to)
+                cover_file_name = Path(f"{book_rename_to.stem}.jpg")
+                cover_file_path = publish_folder.joinpath(cover_file_name)
+                cover_thumbnail_file_name = Path(f"{book_rename_to.stem}.thumb.jpg")
+                cover_thumbnail_file_path = publish_folder.joinpath(
+                    cover_thumbnail_file_name
                 )
-                cover_thumbnail_file_path = os.path.join(
-                    publish_folder, cover_thumbnail_file_name
-                )
-                if (not book.recipe.overwrite_cover) and (
-                    not os.path.exists(cover_file_path)
-                ):
+                if (not book.recipe.overwrite_cover) and (not cover_file_path.exists()):
                     # only extract default cover not generated by newsrack
                     cover_get_cmd = [
                         "ebook-meta",
-                        f"--get-cover={cover_file_path}",
-                        os.path.join(publish_folder, book.rename_to),
+                        f"--get-cover={str(cover_file_path)}",
+                        str(book_rename_to),
                     ]
                     try:
                         _ = subprocess.call(cover_get_cmd, stdout=subprocess.PIPE)
-                        temp_cover_file_name = (
-                            f"{os.path.splitext(book.rename_to)[0]}.temp.jpg"
-                        )
-                        temp_cover_file_path = os.path.join(
-                            publish_folder, temp_cover_file_name
+                        temp_cover_file_name = Path(f"{book_rename_to.stem}.temp.jpg")
+                        temp_cover_file_path = publish_folder.joinpath(
+                            temp_cover_file_name
                         )
                         imagemagick_cmd = [
                             "convert",
-                            cover_file_path,
+                            str(cover_file_path),
                             "-quality",
                             "70",
                             "-resize",
@@ -797,7 +795,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                             "-unsharp",
                             "0x.5",
                             "-strip",
-                            temp_cover_file_path,
+                            str(temp_cover_file_path),
                         ]
                         exit_code = subprocess.call(imagemagick_cmd)
                         if exit_code:
@@ -805,17 +803,17 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                                 "convert exited with the code: {0!s}".format(exit_code)
                             )
                         else:
-                            os.rename(temp_cover_file_path, cover_file_path)
+                            temp_cover_file_path.rename(cover_file_path)
                         imagemagick_cmd = [
                             "convert",
-                            cover_file_path,
+                            str(cover_file_path),
                             "-quality",
                             "80",
                             "-thumbnail",
                             "500x500>",
                             "-unsharp",
                             "0x.5",
-                            cover_thumbnail_file_path,
+                            str(cover_thumbnail_file_path),
                         ]
                         exit_code = subprocess.call(imagemagick_cmd)
                         if exit_code:
@@ -824,24 +822,22 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
                                     exit_code
                                 )
                             )
-                    except Exception as get_cover_err:
+                    except (
+                        Exception  # noqa, pylint: disable=broad-except
+                    ) as get_cover_err:
                         logger.warning(
-                            f"Unable to extract cover for %s: %s",
+                            "Unable to extract cover for %s: %s",
                             book.rename_to,
                             str(get_cover_err),
                         )
-                if (not book.recipe.overwrite_cover) and os.path.exists(
-                    cover_file_path
-                ):
+                if (not book.recipe.overwrite_cover) and cover_file_path.exists():
                     recipe_covers[book.recipe.slug] = {
-                        "cover": cover_file_name,
-                        "thumbnail": cover_thumbnail_file_name,
+                        "cover": str(cover_file_name),
+                        "thumbnail": str(cover_thumbnail_file_name),
                     }
 
-                file_size = os.path.getsize(
-                    os.path.join(publish_folder, book.rename_to)
-                )
-                book_ext = os.path.splitext(book.file)[1]
+                file_size = book_rename_to.stat().st_size
+                book_ext = book_file.suffix
                 reader_link = ""
                 if book_ext == ".epub":
                     reader_link = f'<a class="reader not-for-kindle" title="Read in browser" href="reader.html?{urlencode({"file": book.rename_to})}"><svg><use href="reader_sprites.svg#icon-book"></use></svg></a>'
@@ -893,17 +889,17 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
         </div>
         """
 
-    with open(
-        os.path.join(publish_folder, index_json_filename), "w", encoding="utf-8"
+    with publish_folder.joinpath(index_json_filename).open(
+        "w", encoding="utf-8"
     ) as f_in:
         index["_generated"] = int(time.time())
         json.dump(index, f_in, indent=0)
 
     elapsed_time = timedelta(seconds=timer() - start_time)
 
-    if not os.path.exists(meta_folder):
-        os.makedirs(meta_folder)
-    with open(os.path.join(meta_folder, job_log_filename), "w", encoding="utf-8") as f:
+    if not meta_folder.exists():
+        meta_folder.mkdir(parents=True, exist_ok=True)
+    with meta_folder.joinpath(job_log_filename).open("w", encoding="utf-8") as f:
         json.dump(job_log, f, indent=0)
 
     site_css = "static/site.css"
@@ -920,9 +916,7 @@ def run(publish_site, source_url, commit_hash, verbose_mode):
         open(site_css, "r", encoding="utf-8") as f_site_css,
         open(site_js, "r", encoding="utf-8") as f_site_js,
         open(site_html, "r", encoding="utf-8") as f_in,
-        open(
-            os.path.join(publish_folder, "index.html"), "w", encoding="utf-8"
-        ) as f_out,
+        Path(publish_folder, "index.html").open("w", encoding="utf-8") as f_out,
     ):
         site_css = f_site_css.read()
         site_js = f"var RECIPE_DESCRIPTIONS = {json.dumps(recipe_descriptions)};"

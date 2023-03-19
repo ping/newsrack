@@ -153,9 +153,9 @@ def every_x_days(last_run: float, days: float, drift: float = 0.0) -> bool:
     """
     if not last_run:
         return True
-    last_run = datetime.utcfromtimestamp(last_run).replace(tzinfo=timezone.utc)
+    last_run_dt = datetime.utcfromtimestamp(last_run).replace(tzinfo=timezone.utc)
     now = datetime.utcnow().replace(tzinfo=timezone.utc)
-    return (now - last_run) >= (timedelta(days=days) - timedelta(minutes=drift))
+    return (now - last_run_dt) >= (timedelta(days=days) - timedelta(minutes=drift))
 
 
 def every_x_hours(last_run: float, hours: float, drift: float = 0.0) -> bool:
@@ -181,9 +181,9 @@ def every_x_hours(last_run: float, hours: float, drift: float = 0.0) -> bool:
     """
     if not last_run:
         return True
-    last_run = datetime.utcfromtimestamp(last_run).replace(tzinfo=timezone.utc)
+    last_run_dt = datetime.utcfromtimestamp(last_run).replace(tzinfo=timezone.utc)
     now = datetime.utcnow().replace(tzinfo=timezone.utc)
-    return (now - last_run) >= (timedelta(hours=hours) - timedelta(minutes=drift))
+    return (now - last_run_dt) >= (timedelta(hours=hours) - timedelta(minutes=drift))
 
 
 def last_n_days_of_month(n_days: int, offset: float = 0.0) -> bool:
