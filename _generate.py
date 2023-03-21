@@ -936,17 +936,18 @@ def run(
         f_out.write(html_output)
 
     # Generate reader html
+    reader_js = "static/reader.compiled.js"
+    if os.path.exists("static/reader_custom.js"):
+        reader_js = "static/reader_custom.js"
     with (
-        open("static/reader.compiled.js", "r", encoding="utf-8") as f_reader_js,
+        open(reader_js, "r", encoding="utf-8") as f_reader_js,
         open("static/reader.css", "r", encoding="utf-8") as f_reader_css,
         open("static/reader.html", "r", encoding="utf-8") as f_in,
         open(
             os.path.join(publish_folder, "reader.html"), "w", encoding="utf-8"
         ) as f_out,
     ):
-        reader_css = f_reader_css.read()
-        reader_js = f_reader_js.read()
-        html_output = f_in.read().format(css=reader_css, js=reader_js)
+        html_output = f_in.read().format(css=f_reader_css.read(), js=f_reader_js.read())
         f_out.write(html_output)
 
     _write_opds(generated, recipe_covers, publish_site)
