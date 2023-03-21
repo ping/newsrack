@@ -30,140 +30,16 @@ on [GitHub Pages](https://pages.github.com/).
 
 ### What Can Be Customised
 
-- The formats generated (`src_ext`, `target_ext`)
-- When periodical recipes are enabled (`enable_on`)
-- Remove/add recipes
-- cron schedule and job timeout interval in [.github/workflows/build.yml](.github/workflows/build.yml)
-- Cover colours and fonts
+`newsrack` supports extensive customisation such as:
+- add/remove recipes
+- the formats generated
+- when recipes are executed
+- cover colours and fonts
 
-Look at the `Recipe` class in [_recipe_utils.py](_recipe_utils.py) to discover other options.
+Review the [wiki](https://github.com/ping/newsrack/wiki#customisation) page to understand what can be changed according to your preference.
 
-[Example fork repo](https://github.com/ping/newsrack-fork-test/) / [Example customisations](https://github.com/ping/newsrack-fork-test/compare/main...custom)
+You can also refer to the [example fork repo](https://github.com/ping/newsrack-fork-test/) and see the [actual customisations](https://github.com/ping/newsrack-fork-test/compare/main...custom) in action.
 
-#### Recipe Definition
-
-```python
-# To be defined in _recipes_custom.py
-Recipe(
-    recipe="example",  # actual recipe name
-    slug="example",  # file name slug
-    src_ext="mobi",  # recipe output format
-    category="news",  # category
-    name="An Example Publication",
-    # display name, taken from recipe source by default. Must be defined for built-in recipes.
-    target_ext=[],
-    # alt formats that the src_ext format will be converted to
-    timeout=300,  # max interval (seconds) for executing the recipe, default 180 seconds
-    overwrite_cover=False,  # generate a plain cover to overwrite Calibre's
-    enable_on=True,  # determines when to run the recipe
-    retry_attempts=1,  # retry attempts on TimeoutExpired, ReadTimeout
-    cover_options=CoverOptions(),  # cover options
-    tags=["example"],   # used in search
-    title_date_format = "%-d %b, %Y"  # used to format the date in the title
-),
-```
-
-#### Examples
-
-Run a built-in Calibre periodical recipe:
-
-```python
-Recipe(
-    recipe="Associated Press",
-    name="Associated Press",  # Required for built-in recipes
-    slug="ap",
-    src_ext="mobi",
-    category="news",
-),
-```
-
-Only generate epubs:
-
-```python
-Recipe(
-    recipe="example",  # example.recipe.py
-    slug="example",
-    src_ext="epub",  # generate epub
-    target_ext=[],  # don't generate alt formats
-    category="example",
-),
-```
-
-Use `enable_on` to conditionally enable a recipe:
-
-```python
-from _recipe_utils import Recipe, onlyon_days, onlyat_hours, onlyon_weekdays
-
-Recipe(
-    recipe="example1",
-    slug="example1",
-    src_ext="epub",
-    category="example",
-    enable_on=onlyon_weekdays([0]),  # only on Mondays
-),
-Recipe(
-    recipe="example2",
-    slug="example2",
-    src_ext="epub",
-    category="example",
-    enable_on=onlyon_days([1, 14]),  # only on days 1, 14 of each month
-),
-Recipe(
-    recipe="example3",
-    slug="example3",
-    src_ext="epub",
-    category="example",
-    enable_on=onlyat_hours(list(range(6, 12)), -5),  # from 6am-11.59am daily, for the timezone UTC-5
-),
-
-# instead of using the available functions, you can
-# also define your own custom functions for enable_on
-```
-
-Use calibre-generated cover:
-
-```python
-Recipe(
-    recipe="example",
-    slug="example",
-    src_ext="epub",
-    category="example",
-    overwrite_cover=False,
-),
-```
-
-Customise the title date format and generated cover:
-
-```python
-from _recipe_utils import CoverOptions
-
-Recipe(
-    recipe="example",
-    slug="example",
-    src_ext="epub",
-    category="example",
-    title_date_format = "%Y-%m-%d",
-    cover_options=CoverOptions(
-        text_colour="white",
-        background_colour="black",
-        title_font_path="path/to/example.ttf",
-        datestamp_font_path="path/to/example.ttf"
-    ),
-),
-```
-
-#### Recipe Accounts
-
-Recipe accounts can be defined using a [environment secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets) named ``ACCOUNTS``. The secret value is a json-serialised ``dict`` of recipe accounts like below:
-
-```json
-{
-  "example-recipe-slug": {
-    "username": "example_username",
-    "password": "example_password"
-  }
-}
-```
 
 ## Available Recipes
 
