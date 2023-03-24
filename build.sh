@@ -23,9 +23,7 @@ mkdir -p public meta \
 && cp -p static/*.svg public/ \
 && npx babel static/site.js --out-file static/site.compiled.js \
 && npx babel static/reader.js --out-file static/reader.compiled.js \
-&& sass -s compressed --no-source-map static/site.scss static/site.css \
-&& sass -s compressed --no-source-map static/reader.scss static/reader.css \
-&& sass -s compressed --no-source-map static/viewer-theme.scss public/viewer-theme.css \
+&& npx sass -s compressed --no-source-map static/site.scss:static/site.css static/reader.scss:static/reader.css static/viewer-theme.scss:public/viewer-theme.css \
 && python3 _generate.py "$CI_PAGES_URL" "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/" "$GITHUB_SHA" \
-&& html-minifier-terser --input-dir public/ --output-dir public/ --collapse-whitespace --file-ext html \
+&& npx html-minifier-terser --input-dir public/ --output-dir public/ --collapse-whitespace --file-ext html \
 && rm -f *.recipe static/site.compiled.js static/reader.compiled.js

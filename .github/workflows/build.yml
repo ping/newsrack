@@ -55,8 +55,7 @@ jobs:
 
       - name: Install npm dependencies
         run: |
-          npm install && \
-          npm install -g sass terser html-minifier-terser
+          npm install
 
       - uses: actions/setup-python@v4
         with:
