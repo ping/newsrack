@@ -52,6 +52,10 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
     use_embedded_content = False
     auto_cleanup = False  # don't clean up because it messes up the embed code and sometimes ruins the og-link logic
 
+    @staticmethod
+    def parse_datetime(date_string):
+        return datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%S")
+
     def extract_authors(self, post):
         try:
             post_authors = [
