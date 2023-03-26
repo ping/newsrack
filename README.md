@@ -36,11 +36,11 @@ on [GitHub Pages](https://pages.github.com/).
 - when recipes are executed
 - cover colours and fonts
 
-Review the [wiki](https://github.com/ping/newsrack/wiki#customisation) page to understand what can be changed according to your preference.
+Review the [wiki](https://github.com/ping/newsrack/wiki#customisation) page to understand what can be customised and how to do so.
 
-You can also refer to the [example fork repo](https://github.com/ping/newsrack-fork-test/) and see the [actual customisations](https://github.com/ping/newsrack-fork-test/compare/main...custom) in action.
+You can also refer to the [example fork repo](https://github.com/ping/newsrack-fork-test/) and see the [actual customisations](https://github.com/ping/newsrack-fork-test/compare/main...custom#files_bucket) in action.
 
 
 ## Available Recipes
 
-`newsrack` has its own set of customised recipes. The full list of available recipes can be viewed on the [wiki](https://github.com/ping/newsrack/wiki/Available-Recipes).
+`newsrack` has its own set of customised recipes. The full list of available recipes can be viewed on [here](https://github.com/ping/newsrack/wiki/Available-Recipes).
