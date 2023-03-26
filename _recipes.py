@@ -471,6 +471,16 @@ recipes: List[Recipe] = [
         ),
     ),
     Recipe(
+        recipe="prospect-magazine",
+        slug="prospect-magazine",
+        src_ext="mobi",
+        target_ext=["epub"],
+        overwrite_cover=False,
+        category="Magazines",
+        tags=["europe", "britain"],
+        enable_on=onlyon_weekdays([0, 2, 4, 6]) and onlyat_hours(list(range(6, 12))),
+    ),
+    Recipe(
         recipe="quanta-magazine",
         slug="quanta-magazine",
         src_ext="mobi",
