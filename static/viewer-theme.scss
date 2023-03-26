@@ -26,6 +26,23 @@ https://opensource.org/licenses/GPL-3.0
     }
   }
 
+  table.touchscreen_navbar {
+    background-color: $base-disabled-color;
+
+    &:first-child {
+      margin-bottom: 0.5rem;
+    }
+
+    td {
+      color: $base-color;
+      background-color: $base-bg-color;
+
+      a {
+        color: $link-color;
+      }
+    }
+  }
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,6 +63,7 @@ https://opensource.org/licenses/GPL-3.0
 
       &:hover {
         color: $dark-link-hover-color;
+
         * {
           color: unset;
         }
@@ -53,8 +71,22 @@ https://opensource.org/licenses/GPL-3.0
 
       &:visited {
         color: $dark-link-visited-color;
+
         * {
           color: unset;
+        }
+      }
+    }
+
+    table.touchscreen_navbar {
+      background-color: $dark-base-disabled-color;
+
+      td {
+        color: $dark-base-color;
+        background-color: $dark-base-bg-color;
+
+        a {
+          color: $dark-link-color;
         }
       }
     }
