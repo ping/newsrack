@@ -12,7 +12,7 @@ import os
 import re
 import sys
 from collections import OrderedDict
-from datetime import datetime, timezone
+from datetime import timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
@@ -105,13 +105,13 @@ class MitTechnologyReviewMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         # formulate the api response into html
         post = json.loads(raw_html)
-        post_update_dt = datetime.strptime(
-            post["modified_gmt"], "%Y-%m-%dT%H:%M:%S"
-        ).replace(tzinfo=timezone.utc)
+        post_update_dt = self.parse_datetime(post["modified_gmt"]).replace(
+            tzinfo=timezone.utc
+        )
         if not self.pub_date or post_update_dt > self.pub_date:
             self.pub_date = post_update_dt
 
-        date_published_loc = datetime.strptime(post["date"], "%Y-%m-%dT%H:%M:%S")
+        date_published_loc = self.parse_datetime(post["date"])
         post_authors = self.extract_authors(post)
         categories = self.extract_categories(post)
 

@@ -9,7 +9,6 @@ thediplomat.com
 import json
 import os
 import sys
-from datetime import datetime
 from html import unescape
 
 # custom include to share code between recipes
@@ -94,7 +93,7 @@ class TheDiplomat(WordPressNewsrackRecipe, BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         # formulate the api response into html
         post = json.loads(raw_html)
-        post_date = datetime.strptime(post["date"], "%Y-%m-%dT%H:%M:%S")
+        post_date = self.parse_datetime(post["date"])
         soup = BeautifulSoup(
             f"""<html>
         <head></head>

@@ -9,7 +9,6 @@ theparisreview.org
 import json
 import os
 import sys
-from datetime import datetime
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
@@ -93,7 +92,7 @@ class ParisReviewBlog(WordPressNewsrackRecipe, BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         # formulate the api response into html
         post = json.loads(raw_html)
-        date_published_loc = datetime.strptime(post["date"], "%Y-%m-%dT%H:%M:%S")
+        date_published_loc = self.parse_datetime(post["date"])
         post_authors = self.extract_authors(post)
         categories = self.extract_categories(post)
 
