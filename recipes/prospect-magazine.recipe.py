@@ -94,9 +94,11 @@ class ProspectMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
                 container_ele = soup.new_tag("p", attrs={"class": "article-img"})
                 img_ele = soup.new_tag("img", src=feature_info["source_url"])
                 container_ele.append(img_ele)
-                if feature_info.get("title", {}).get("rendered"):
+                if feature_info.get("caption", {}).get("rendered"):
                     cap_ele = soup.new_tag("span", attrs={"class": "caption"})
-                    cap_ele.append(feature_info["title"]["rendered"])
+                    cap_ele.append(
+                        BeautifulSoup(feature_info["caption"]["rendered"]).get_text()
+                    )
                     container_ele.append(cap_ele)
                 post_content = str(container_ele) + post_content
             else:
