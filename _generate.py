@@ -299,6 +299,7 @@ def _download_from_cache(
         except (
             requests.exceptions.ReadTimeout,
             requests.exceptions.HTTPError,  # it happens
+            requests.exceptions.ConnectionError,  # e.g. Connection aborted.
         ) as head_err:  # noqa
             logger.warning(
                 f"{head_err.__class__.__name__} sending HEAD request for {ebook_url}"
@@ -318,6 +319,7 @@ def _download_from_cache(
             except (
                 requests.exceptions.ReadTimeout,
                 requests.exceptions.HTTPError,  # it happens
+                requests.exceptions.ConnectionError,  # e.g. Connection aborted.
             ) as err:
                 if attempt < recipe.retry_attempts:
                     logger.warning(
