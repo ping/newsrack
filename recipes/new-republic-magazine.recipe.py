@@ -249,7 +249,13 @@ fragment ArticlePageFields on Article {
         br = self.get_browser()
         res = br.open_novisit("https://newrepublic.com/api/content/magazine")
         magazine = json.loads(res.read().decode("utf-8"))["data"]
-        self.pub_date = datetime.fromisoformat(magazine["metaData"]["publishedAt"])
+        try:
+            self.pub_date = datetime.fromisoformat(magazine["metaData"]["publishedAt"])
+        except ValueError:
+            # Example: 2023-03-16T10:00:00.000Z
+            self.pub_date = datetime.strptime(
+                magazine["metaData"]["publishedAt"], "%Y-%m-%dT%H:%M:%S.%fZ"
+            )
         self.log.debug(f'Found issue: {magazine["metaData"]["issueTag"]["text"]}')
         self.title = f'{_name}: {magazine["metaData"]["issueTag"]["text"]}'
         self.cover_url = self._urlize(magazine["metaData"]["image"]["src"])
