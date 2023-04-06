@@ -53,28 +53,43 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
     auto_cleanup = False  # don't clean up because it messes up the embed code and sometimes ruins the og-link logic
 
     @staticmethod
-    def parse_datetime(date_string):
-        return datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%S")
+    def parse_datetime(date_string, wordpresscom=False):
+        return datetime.strptime(
+            date_string, "%Y-%m-%dT%H:%M:%S%z" if wordpresscom else "%Y-%m-%dT%H:%M:%S"
+        )
 
-    def extract_authors(self, post):
-        try:
-            post_authors = [
-                a["name"] for a in post.get("_embedded", {}).get("author", [])
-            ]
-        except (KeyError, TypeError):
+    def extract_authors(self, post, wordpresscom=False):
+        if wordpresscom:
             post_authors = []
+            if post.get("author"):
+                post_authors = [post["author"]["name"]]
+        else:
+            try:
+                post_authors = [
+                    a["name"] for a in post.get("_embedded", {}).get("author", [])
+                ]
+            except (KeyError, TypeError):
+                post_authors = []
         return post_authors
 
-    def extract_categories(self, post):
+    def extract_categories(self, post, wordpresscom=False):
         categories = []
-        if post.get("categories"):
-            categories = [t["name"] for t in self.extract_terms(post, "category")]
+        if wordpresscom:
+            if post.get("categories"):
+                categories = [c["name"] for c in post["categories"].values()]
+        else:
+            if post.get("categories"):
+                categories = [t["name"] for t in self.extract_terms(post, "category")]
         return categories
 
-    def extract_tags(self, post):
+    def extract_tags(self, post, wordpresscom=False):
         tags = []
-        if post.get("tags"):
-            tags = [t["name"] for t in self.extract_terms(post, "post_tag")]
+        if wordpresscom:
+            if post.get("tags"):
+                tags = [c["name"] for c in post["tags"].values()]
+        else:
+            if post.get("tags"):
+                tags = [t["name"] for t in self.extract_terms(post, "post_tag")]
         return tags
 
     def extract_terms(self, post, taxonomy):
@@ -92,13 +107,16 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
         if og_link:
             article.url = og_link["data-og-link"]
 
-    def get_posts(self, feed_url, oldest_article, custom_params, br):
+    def get_posts(
+        self, feed_url, oldest_article, custom_params, br, wordpresscom=False
+    ):
         """
         Get posts from WP
         :param feed_url: WP posts endpoint
         :param oldest_article: in days
         :param custom_params: overwrite default params
         :param br: browser instance
+        :param wordpresscom: Is wordpress.com
         :return:
         """
         per_page = 100
@@ -113,14 +131,21 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
             custom_params = {}
 
         while True:
-            params = {
-                "rest_route": "/wp/v2/posts",
-                "page": page,
-                "per_page": per_page,
-                "after": cutoff_date.isoformat(),
-                "_embed": "1",
-                "_": int(time.time() * 1000),
-            }
+            if wordpresscom:
+                params = {
+                    "page": page,
+                    "number": per_page,
+                    "after": cutoff_date.isoformat(),
+                }
+            else:
+                params = {
+                    "rest_route": "/wp/v2/posts",
+                    "page": page,
+                    "per_page": per_page,
+                    "after": cutoff_date.isoformat(),
+                    "_embed": "1",
+                    "_": int(time.time() * 1000),
+                }
             params.update(custom_params)
             # clear out None values to allow custom_params to unset default params
             for k in [k for k in params.keys() if params[k] is None]:
@@ -131,7 +156,10 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
             try:
                 res = br.open_novisit(endpoint)
                 posts_json_raw = res.read().decode("utf-8")
-                retrieved_posts = json.loads(posts_json_raw)
+                if wordpresscom:
+                    retrieved_posts = json.loads(posts_json_raw).get("posts", [])
+                else:
+                    retrieved_posts = json.loads(posts_json_raw)
                 if not retrieved_posts:
                     break
                 posts.extend(retrieved_posts)
@@ -153,7 +181,14 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
         return posts
 
     def get_articles(
-        self, articles, feed_name, feed_url, oldest_article, custom_params, br
+        self,
+        articles,
+        feed_name,
+        feed_url,
+        oldest_article,
+        custom_params,
+        br,
+        wordpresscom=False,
     ):
         """
         Extract articles
@@ -164,19 +199,28 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
         :param oldest_article: in days
         :param custom_params: overwrite default params
         :param br: browser instance
+        :param wordpresscom: Is wordpress.com
         :return:
         """
-        posts = self.get_posts(feed_url, oldest_article, custom_params, br)
+        posts = self.get_posts(
+            feed_url, oldest_article, custom_params, br, wordpresscom
+        )
 
         self.temp_dir = PersistentTemporaryDirectory()
         latest_post_date = None
         for p in posts:
-            post_update_dt = datetime.strptime(
-                p["modified_gmt"], "%Y-%m-%dT%H:%M:%S"
-            ).replace(tzinfo=timezone.utc)
+            if wordpresscom:
+                # Example: 2023-04-04T10:09:05+06:00
+                post_update_dt = datetime.strptime(p["modified"], "%Y-%m-%dT%H:%M:%S%z")
+                post_date = datetime.strptime(p["date"], "%Y-%m-%dT%H:%M:%S%z")
+            else:
+                post_update_dt = datetime.strptime(
+                    p["modified_gmt"], "%Y-%m-%dT%H:%M:%S"
+                ).replace(tzinfo=timezone.utc)
+                post_date = datetime.strptime(p["date"], "%Y-%m-%dT%H:%M:%S")
+
             if not self.pub_date or post_update_dt > self.pub_date:
                 self.pub_date = post_update_dt
-            post_date = datetime.strptime(p["date"], "%Y-%m-%dT%H:%M:%S")
             if not latest_post_date or post_date > latest_post_date:
                 latest_post_date = post_date
                 self.title = format_title(feed_name, post_date)
@@ -191,11 +235,15 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
                 f.write(json.dumps(p).encode("utf-8"))
             articles[section_name].append(
                 {
-                    "title": BeautifulSoup(unescape(p["title"]["rendered"])).get_text()
+                    "title": BeautifulSoup(
+                        unescape(p["title"] if wordpresscom else p["title"]["rendered"])
+                    ).get_text()
                     or "Untitled",
                     "url": "file://" + f.name,
                     "date": f"{post_date:%-d %B, %Y}",
-                    "description": unescape(p["excerpt"]["rendered"]),
+                    "description": unescape(
+                        p["excerpt"] if wordpresscom else p["excerpt"]["rendered"]
+                    ),
                 }
             )
         return articles
