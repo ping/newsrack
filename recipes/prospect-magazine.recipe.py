@@ -8,16 +8,12 @@ import os
 import sys
 from datetime import timedelta, timezone
 
-# custom include to share code between recipes
 from functools import cmp_to_key
 from html import unescape
 
+# custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-try:
-    from recipes_shared import WordPressNewsrackRecipe
-except ImportError:
-    # just for Pycharm to pick up for auto-complete
-    from includes.recipes_shared import WordPressNewsrackRecipe
+from recipes_shared import WordPressNewsrackRecipe
 
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
 from calibre.ebooks.BeautifulSoup import BeautifulSoup

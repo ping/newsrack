@@ -12,12 +12,7 @@ import sys
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-
-try:
-    from recipes_shared import WordPressNewsrackRecipe, format_title
-except ImportError:
-    # just for Pycharm to pick up for auto-complete
-    from includes.recipes_shared import WordPressNewsrackRecipe, format_title
+from recipes_shared import WordPressNewsrackRecipe
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
