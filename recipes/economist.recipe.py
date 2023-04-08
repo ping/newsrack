@@ -2,17 +2,13 @@
 # License: GPLv3 Copyright: 2008, Kovid Goyal <kovid at kovidgoyal.net>
 
 # Modified from https://github.com/kovidgoyal/calibre/blob/1f9c67ce02acfd69b5934bba3d74ce6875b9809e/recipes/economist.recipe
-import os
-import sys
-
-try:
-    from http.cookiejar import Cookie
-except ImportError:
-    from cookielib import Cookie
 
 import json
+import os
+import sys
 from collections import defaultdict
 from datetime import datetime, timezone
+from http.cookiejar import Cookie
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])

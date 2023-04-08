@@ -37,8 +37,6 @@ class NewYorker(BasicNewsrackRecipe, BasicNewsRecipe):
     description = (
         "Articles of the week's New Yorker magazine https://www.newyorker.com/magazine"
     )
-
-    url_list = []
     language = "en"
     __author__ = "Kovid Goyal"
     encoding = "utf-8"
