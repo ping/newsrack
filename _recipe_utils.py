@@ -71,13 +71,13 @@ class Recipe:
         return self.enable_on
 
 
-def sort_category(a, b, categories_sort):
+def sort_category(a: str, b: str, categories_sort: List[str]) -> int:
     try:
-        a_index = categories_sort.index(a[0])
+        a_index = categories_sort.index(a)
     except ValueError:
         a_index = 999
     try:
-        b_index = categories_sort.index(b[0])
+        b_index = categories_sort.index(b)
     except ValueError:
         b_index = 999
 
@@ -85,8 +85,7 @@ def sort_category(a, b, categories_sort):
         return -1
     if a_index > b_index:
         return 1
-    if a_index == b_index:
-        return -1 if a[0] < b[0] else 1
+    return -1 if a < b else 1
 
 
 def get_local_now(offset: float = 0.0) -> datetime:

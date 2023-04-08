@@ -66,7 +66,9 @@ RecipeOutput = namedtuple(
 # sort categories for display
 # Ignoring mypy error below because of https://github.com/python/mypy/issues/9372
 sort_category_key = cmp_to_key(  # type: ignore[misc]
-    lambda a, b: sort_category(a, b, custom_categories_sort or default_categories_sort)
+    lambda a, b: sort_category(
+        a[0], b[0], custom_categories_sort or default_categories_sort  # type: ignore[index]
+    )
 )
 
 
