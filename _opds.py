@@ -5,6 +5,7 @@
 
 # Helpers to generate opds xml - extremely minimal
 from datetime import datetime
+from typing import Optional, Dict
 from xml.dom import minidom
 
 extension_contenttype_map = {
@@ -16,7 +17,12 @@ extension_contenttype_map = {
 }
 
 
-def simple_tag(doc_root, tag, value=None, attributes=None):
+def simple_tag(
+    doc_root: minidom.Document,
+    tag: str,
+    value: Optional[str] = None,
+    attributes: Optional[Dict] = None,
+) -> minidom.Element:
     new_tag = doc_root.createElement(tag)
     if value:
         new_tag.appendChild(doc_root.createTextNode(value))
@@ -26,7 +32,9 @@ def simple_tag(doc_root, tag, value=None, attributes=None):
     return new_tag
 
 
-def init_feed(doc: minidom.Document, publish_site: str, feed_id: str, title: str):
+def init_feed(
+    doc: minidom.Document, publish_site: str, feed_id: str, title: str
+) -> minidom.Element:
     feed = simple_tag(
         doc,
         "feed",

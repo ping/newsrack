@@ -9,7 +9,7 @@ import sys
 import textwrap
 import unicodedata
 from pathlib import Path
-from typing import Tuple
+from typing import Tuple, Optional
 
 import requests
 from PIL import Image, ImageDraw, ImageFont  # type: ignore
@@ -22,7 +22,7 @@ class ExperimentalFunctionWarning(UserWarning):
 
 
 # From django
-def slugify(value, allow_unicode=False):
+def slugify(value: str, allow_unicode: bool = False) -> str:
     """
     Convert to ASCII if 'allow_unicode' is False. Convert spaces to hyphens.
     Remove characters that aren't alphanumerics, underscores, or hyphens.
@@ -43,7 +43,7 @@ def calc_resize(
     max_size: Tuple[int, int],
     curr_size: Tuple[int, int],
     min_size: Tuple[int, int] = (0, 0),
-):
+) -> Optional[Tuple[int, int]]:
     """
     Calculate if resize is required based on the max size desired
     and the current size
@@ -84,6 +84,7 @@ def calc_resize(
         new_width = int(resize_factor * orig_width)
         new_height = int(resize_factor * orig_height)
         return new_width, new_height
+    return None
 
 
 def generate_cover(
