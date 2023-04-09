@@ -4,6 +4,7 @@ nautil.us
 # Original from https://github.com/kovidgoyal/calibre/blob/946ae082e1291f61d88638ff3f3723df591da835/recipes/nautilus.recipe
 import os
 import sys
+from urllib.parse import urljoin
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
@@ -76,6 +77,17 @@ class Nautilus(BasicNewsrackRecipe, BasicNewsRecipe):
         ("Technology", "https://nautil.us/topics/technology/feed/"),
         ("Zoology", "https://nautil.us/topics/zoology/feed/"),
     ]
+
+    def get_feeds(self):
+        soup = self.index_to_soup("https://nautil.us/")
+        topics = soup.find_all(
+            name="a",
+            attrs={"data-ev-act": "topics", "data-ev-label": True, "href": True},
+        )
+        if not topics:
+            return self.feeds
+        feeds = [(t["data-ev-label"], urljoin(t["href"], "feed/")) for t in topics]
+        return feeds
 
     def populate_article_metadata(self, article, __, _):
         if (not self.pub_date) or article.utctime > self.pub_date:
