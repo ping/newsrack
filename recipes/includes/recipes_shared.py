@@ -156,13 +156,27 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
 
             endpoint = f"{feed_url}?{urlencode(params)}"
             self.log.debug(f"Fetching {endpoint} ...")  # type: ignore[attr-defined]
+            retrieved_posts = []
             try:
                 res = br.open_novisit(endpoint)
-                posts_json_raw = res.read().decode("utf-8")
-                if self.is_wordpresscom:
-                    retrieved_posts = json.loads(posts_json_raw).get("posts", [])
-                else:
-                    retrieved_posts = json.loads(posts_json_raw)
+                posts_json_raw_bytes = res.read()
+                encodings = ["utf-8", "utf-8-sig"]
+                for i, encoding in enumerate(encodings, start=1):
+                    try:
+                        posts_json_raw = posts_json_raw_bytes.decode(encoding)
+                        if self.is_wordpresscom:
+                            retrieved_posts = json.loads(posts_json_raw).get(
+                                "posts", []
+                            )
+                        else:
+                            retrieved_posts = json.loads(posts_json_raw)
+                        break
+                    except json.decoder.JSONDecodeError as json_err:
+                        self.log.warning(f"Error decoding json: {json_err}")
+                        if i < len(encodings):
+                            continue
+                        raise
+
                 if not retrieved_posts:
                     break
                 posts.extend(retrieved_posts)
@@ -178,7 +192,10 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
                     # rely on HTTP 400 to detect paging break
                     pass
                 page += 1
-            except:  # HTTP 400
+            except json.decoder.JSONDecodeError:
+                raise
+            except Exception as err:  # HTTP 400
+                self.log.warning(f"Error encountered while fetching posts: {err}")
                 break
 
         return posts
