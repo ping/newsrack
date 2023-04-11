@@ -244,6 +244,17 @@ recipes: List[Recipe] = [
         ),
     ),
     Recipe(
+        recipe="kirkus",
+        slug="kirkus",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Arts & Culture",
+        tags=["books", "reviews"],
+        overwrite_cover=False,
+        enable_on=onlyat_hours(list(range(0, 6)))
+        and (first_n_days_of_month(3) or last_n_days_of_month(3)),
+    ),
+    Recipe(
         recipe="knowable-magazine",
         slug="knowable-magazine",
         src_ext="mobi",
