@@ -1,0 +1,284 @@
+# Copyright (c) 2023 https://github.com/ping/
+#
+# This software is released under the GNU General Public License v3.0
+# https://opensource.org/licenses/GPL-3.0
+
+import json
+import os
+import sys
+from datetime import datetime
+from urllib.parse import urljoin
+
+# custom include to share code between recipes
+sys.path.append(os.environ["recipes_includes"])
+from recipes_shared import BasicNewsrackRecipe
+
+from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from calibre.web.feeds.news import BasicNewsRecipe
+from calibre.utils.cleantext import clean_ascii_chars
+
+_name = "Washington Post (Print)"
+_skip_sections = ["Sports", "Style", "Weekend"]
+
+
+class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
+    title = _name
+    __author__ = "ping"
+    description = "Today's Washington Post https://www.washingtonpost.com/todays_paper/updates/"  # noqa
+    publisher = "The Washington Post Company"
+    category = "news, politics, USA"
+    publication_type = "newspaper"
+    masthead_url = "https://www.washingtonpost.com/sf/brand-connect/dell-technologies/the-economics-of-change/media/wp_logo_black.png"
+
+    use_embedded_content = False
+    remove_empty_feeds = True
+    auto_cleanup = False
+    encoding = "utf-8"
+    language = "en"
+    simultaneous_downloads = 8
+
+    oldest_article = 1
+    max_articles_per_feed = 25
+    ignore_duplicate_articles = {"url"}
+
+    remove_attributes = ["style"]
+    index = "https://www.washingtonpost.com/todays_paper/updates/"
+
+    extra_css = """
+    .headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
+    .sub-headline { font-size: 1.2rem; font-style: italic; margin-bottom: 0.5rem; }
+    .article-meta {  margin-top: 0.5rem; margin-bottom: 1rem; }
+    .article-meta .author { font-weight: bold; color: #444; display: block; }
+    .figure, .video { margin: 0.5rem 0; }
+    .figure img { max-width: 100%; height: auto; }
+    .figure .caption { font-size: 0.8rem; margin-top: 0.2rem; }
+    .video { color: #444; font-size: 0.8rem; }
+    .video .caption { margin-top: 0.2rem; }
+    .keyupdates li { margin-bottom: 0.5rem; }
+    """
+
+    def _extract_child_nodes(self, nodes, parent_element, soup, url):
+        if not nodes:
+            return
+        for c in nodes:
+            node_type = c["type"]
+            if node_type in [
+                "interstitial_link",
+                "",
+                "custom_embed",
+                "divider",
+                "gallery",  # real estate ads
+            ]:
+                continue
+            if node_type == "text":
+                para_ele = soup.new_tag("p")
+                para_ele.append(BeautifulSoup(c["content"]))
+                parent_element.append(para_ele)
+            elif node_type == "image":
+                figure_ele = soup.new_tag("figure", attrs={"class": "figure"})
+                # this is mad slow -_-, better to just download the original img from s3
+                # img_url = f'https://www.washingtonpost.com/wp-apps/imrs.php?{urlencode({"src": c["url"], "w": 916})}'
+                img_ele = soup.new_tag("img", src=c["url"])
+                figure_ele.append(img_ele)
+                caption_ele = soup.new_tag("figcaption", attrs={"class": "caption"})
+                caption_ele.string = c.get("credits_caption_display", "")
+                figure_ele.append(caption_ele)
+                parent_element.append(figure_ele)
+            elif node_type == "video":
+                video_url = urljoin(
+                    "https://www.washingtonpost.com", c["canonical_url"]
+                )
+                container_ele = soup.new_tag("div", attrs={"class": "video"})
+                video_link_ele = soup.new_tag("a", href=video_url)
+                video_link_ele.string = video_url
+                caption_ele = soup.new_tag("figcaption", attrs={"class": "caption"})
+                caption_ele.string = f'Video: {c.get("credits_caption_display", "")}'
+                container_ele.append(caption_ele)
+                container_ele.append(video_link_ele)
+                parent_element.append(container_ele)
+            elif node_type == "header":
+                header_ele = soup.new_tag(f'h{c["level"]}')
+                header_ele.string = c["content"]
+                parent_element.append(header_ele)
+            elif node_type == "correction":
+                para_ele = soup.new_tag("p", attrs={"class": "correction"})
+                para_ele.append(BeautifulSoup(c.get("content") or c.get("text")))
+                parent_element.append(para_ele)
+            elif node_type == "oembed_response":
+                embed_ele = BeautifulSoup(c["raw_oembed"]["html"])
+                parent_element.append(embed_ele)
+            elif node_type == "raw_html":
+                content = BeautifulSoup(c["content"])
+                container = content.find("div", attrs={"data-fallback-image-url": True})
+                if container:
+                    figure_ele = soup.new_tag("figure")
+                    figure_ele["class"] = "figure"
+                    img_url = container["data-fallback-image-url"]
+                    img_ele = soup.new_tag("img", src=img_url)
+                    figure_ele.append(img_ele)
+                    caption_ele = soup.new_tag("figcaption", attrs={"class": "caption"})
+                    caption_ele.string = c.get("additional_properties", {}).get(
+                        "fallback_image_description", ""
+                    )
+                    figure_ele.append(caption_ele)
+                    parent_element.append(figure_ele)
+            elif (
+                node_type in ["keyupdates", "list"]
+                and c.get("list_type") == "unordered"
+            ):
+                container_ele = soup.new_tag("div", attrs={"class": node_type})
+                header_string = c.get("additional_properties", {}).get(
+                    "header", ""
+                ) or c.get("header")
+                if header_string:
+                    header_ele = soup.new_tag("h3")
+                    header_ele.string = header_string
+                    container_ele.append(header_ele)
+                ol_ele = soup.new_tag("ol")
+                for i in c.get("items", []):
+                    li_ele = soup.new_tag("li")
+                    li_ele.append(BeautifulSoup(i["content"]))
+                    ol_ele.append(li_ele)
+                container_ele.append(ol_ele)
+                parent_element.append(container_ele)
+            elif node_type == "story" and c["subtype"] in [
+                "live-update",
+                "live-reporter-insight",
+            ]:
+                container_ele = soup.new_tag("div", attrs={"class": node_type})
+                # add a hr to separate stories
+                container_ele.append(soup.new_tag("hr", attrs={"class": "story"}))
+
+                header_ele = soup.new_tag("h3")
+                header_ele.append(
+                    BeautifulSoup(c.get("headlines", {}).get("basic", ""))
+                )
+                container_ele.append(header_ele)
+
+                # Example 2022-04-13T14:04:03.051Z
+                post_date = datetime.strptime(
+                    c["display_date"], "%Y-%m-%dT%H:%M:%S.%fZ"
+                )
+                meta_ele = BeautifulSoup(
+                    f"""<div class="article-meta">
+                        <span class="author"></span>
+                        <span class="published-dt">{post_date:%-I:%M%p %-d %B, %Y}</span>
+                    </div>"""
+                )
+                authors = [a["name"] for a in c.get("credits", {}).get("by", [])]
+                meta_ele.find("span", class_="author").string = ", ".join(authors)
+                container_ele.append(meta_ele)
+                self._extract_child_nodes(
+                    c["content_elements"], container_ele, soup, url
+                )
+                parent_element.append(container_ele)
+            elif node_type == "quote" and c.get("subtype") == "blockquote":
+                container_ele = soup.new_tag("blockquote")
+                self._extract_child_nodes(
+                    c["content_elements"], container_ele, soup, url
+                )
+                parent_element.append(container_ele)
+            else:
+                self.log.warning(f"{url} has unexpected element: {node_type}")
+                self.log.debug(json.dumps(c))
+
+    def preprocess_raw_html(self, raw_html, url):
+        soup = BeautifulSoup(raw_html)
+        script = soup.find_all("script", id="__NEXT_DATA__")
+        data = {}
+        try:
+            data = json.loads(script[0].contents[0])
+        except IndexError:
+            self.log.exception("Unable to get script contents")
+        except json.decoder.JSONDecodeError:
+            # self.log.error(script[0].contents[0])
+            self.log.exception("Unable to decode script json")
+        content = data.get("props", {}).get("pageProps", {}).get("globalContent", {})
+        if not content:
+            # E.g. interactive articles
+            # https://www.washingtonpost.com/world/interactive/2022/china-shanghai-covid-lockdown-food-shortage/
+            self.abort_article(f"Unable to get content from script: {url}")
+
+        # Example 2022-04-13T14:04:03.051Z
+        post_date = datetime.strptime(content["display_date"], "%Y-%m-%dT%H:%M:%S.%fZ")
+        if post_date > datetime.today():  # it happens
+            try:
+                post_date = datetime.strptime(
+                    content["publish_date"][:-5], "%Y-%m-%dT%H:%M:%S"
+                )
+            except:  # noqa
+                # do nothing
+                pass
+        if not self.pub_date or post_date > self.pub_date:
+            self.pub_date = post_date
+        description = content.get("description", {}).get("basic", "")
+
+        title = content["headlines"]["basic"]
+        html = f"""<html>
+        <head></head>
+        <body>
+            <article>
+                <h1 class="headline"></h1>
+                <div class="sub-headline"></div>
+                <div class="article-meta">
+                    <span class="author"></span>
+                    <span class="published-dt">{post_date:%-I:%M%p %-d %B, %Y}</span>
+                </div>
+            </article>
+        </body></html>"""
+        new_soup = BeautifulSoup(html)
+        title_ele = new_soup.new_tag("title")
+        title_ele.string = title
+        new_soup.head.append(title_ele)
+        new_soup.body.article.h1.string = title
+        if description:
+            new_soup.body.article["data-description"] = description
+        if content.get("subheadlines", {}).get("basic", ""):
+            new_soup.find("div", class_="sub-headline").string = content[
+                "subheadlines"
+            ]["basic"]
+        else:
+            new_soup.find("div", class_="sub-headline").decompose()
+        authors = [a["name"] for a in content.get("credits", {}).get("by", [])]
+        new_soup.find("span", class_="author").string = ", ".join(authors)
+        self._extract_child_nodes(
+            content.get("content_elements"), new_soup.body.article, new_soup, url
+        )
+        return str(new_soup)
+
+    def populate_article_metadata(self, article, soup, first):
+        desc_ele = soup.find(attrs={"data-description": True})
+        if desc_ele:
+            article.summary = desc_ele["data-description"]
+            article.text_summary = clean_ascii_chars(desc_ele["data-description"])
+
+    def parse_index(self):
+        soup = self.index_to_soup(self.index)
+        articles = {}
+        for section in soup.find_all(class_="todays-content"):
+            today_ele = section.find(class_="todays-date")
+            if today_ele:
+                self.title = f"{_name}: {self.tag_to_string(today_ele)}"
+                today_ele.extract()
+            section_name = self.tag_to_string(section.find(class_="heading")).strip()
+            if section_name in _skip_sections:
+                continue
+            section_articles = []
+            self.log(f"Section: {section_name}")
+            for link in section.find_all("a", class_="headline"):
+                if link["href"] in (
+                    "https://www.washingtonpost.com/",
+                    "https://www.washingtonpost.com/local/",
+                ):
+                    # Digest links
+                    continue
+                section_articles.append(
+                    {"url": link["href"], "title": self.tag_to_string(link).strip()}
+                )
+                self.log(f'\t{self.tag_to_string(link)}\n\t{link["href"]}')
+            if not section_articles:
+                continue
+            if section_name not in articles:
+                articles[section_name] = []
+            articles[section_name].extend(section_articles)
+        return articles.items()
