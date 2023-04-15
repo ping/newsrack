@@ -623,7 +623,7 @@ recipes: List[Recipe] = [
         cover_options=CoverOptions(
             logo_path_or_url="https://www.washingtonpost.com/sf/brand-connect/dell-technologies/the-economics-of-change/media/wp_logo_black.png"
         ),
-        enable_on=onlyat_hours(list(range(0, 4)) + list(range(8, 24))),
+        enable_on=onlyat_hours(list(range(0, 8)) + list(range(12, 24))),
     ),
     Recipe(
         recipe="wapo-paper",
@@ -635,7 +635,7 @@ recipes: List[Recipe] = [
         cover_options=CoverOptions(
             logo_path_or_url="https://www.washingtonpost.com/sf/brand-connect/dell-technologies/the-economics-of-change/media/wp_logo_black.png"
         ),
-        enable_on=onlyat_hours(list(range(4, 8))),
+        enable_on=onlyat_hours(list(range(8, 12))),
     ),
     Recipe(
         recipe="wired",
