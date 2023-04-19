@@ -8,7 +8,8 @@ https://opensource.org/licenses/GPL-3.0
 (function () {
     const params = URLSearchParams && new URLSearchParams(document.location.search.substring(1));
     const file = params && params.get("file") && decodeURIComponent(params.get("file"));
-    const currentSectionIndex = (params && params.get("loc")) ? params.get("loc") : undefined;
+    const hashParams = URLSearchParams && new URLSearchParams(document.location.hash.substring(1));
+    const currentSectionIndex = (hashParams && hashParams.get("loc")) ? hashParams.get("loc") : undefined;
     let isValidBook;
     try {
         new URL(file);
@@ -137,6 +138,11 @@ https://opensource.org/licenses/GPL-3.0
             } else {
                 prev.classList.remove("invisible");
             }
+
+            const cfi = location.start.cfi;
+            const hashParams = URLSearchParams && new URLSearchParams(document.location.hash.substring(1));
+            hashParams.set("loc", cfi)
+            document.location.hash = "#" + hashParams.toString();
 
         });
 
