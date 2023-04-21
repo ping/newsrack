@@ -103,7 +103,7 @@ def get_issue_data(br, log, node_id="1126213", year="2020", volnum="99", issue_v
         source = entry["_source"]
         section = source["fa_node_type_or_subtype"][0]
         ans.setdefault(section, []).append(as_article(source))
-    for sectitle in sorted(ans):
+    for sectitle in ans:
         articles = ans[sectitle]
         log(sectitle)
         if articles:
@@ -127,7 +127,7 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
     encoding = "utf-8"
     publication_type = "magazine"
     INDEX = "https://www.foreignaffairs.com/magazine"
-
+    compress_news_images_auto_size = 8
     needs_subscription = "optional"
     ignore_duplicate_articles = {"title", "url"}
     remove_empty_feeds = True

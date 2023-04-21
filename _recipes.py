@@ -162,7 +162,7 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         overwrite_cover=False,
         category="Magazines",
-        enable_on=(first_n_days_of_month(7, -4) or last_n_days_of_month(7, -4))
+        enable_on=(first_n_days_of_month(4, -4) or last_n_days_of_month(10, -4))
         and onlyat_hours(list(range(8, 22)), -4),
     ),
     Recipe(
