@@ -153,7 +153,10 @@ class ScientificAmerican(BasicNewsrackRecipe, BasicNewsRecipe):
         self.cover_url = f"https://static.scientificamerican.com/sciam/cache/file/{image_id}_source.jpg?w=960"
 
         issue_date = datetime.strptime(issue_info["issue_date"], "%Y-%m-%d")
-        self.title = f"{_name}: {issue_date:%B %Y}"
+        self.title = (
+            f"{_name}: {issue_date:%B %Y} "
+            f'Vol. {issue_info.get("volume", "")}, Issue {issue_info.get("issue", "")}'
+        )
 
         feeds = {}
         for section in ("featured", "departments"):
