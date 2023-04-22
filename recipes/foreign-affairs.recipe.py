@@ -156,9 +156,15 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
 
     def parse_index(self):
         soup = self.index_to_soup(self.INDEX)
-        # get dates
-        date = re.split(r"\s\|\s", self.tag_to_string(soup.head.title.string))[0]
-        self.title = f"{_name}: {date}"
+        # get edition
+        edition_date_ele = soup.find("meta", property="og:title")
+        if edition_date_ele:
+            self.title = f'{_name}: {edition_date_ele["content"]}'
+        else:
+            title_date = re.split(
+                r"\s\|\s", self.tag_to_string(soup.head.title.string)
+            )[0]
+            self.title = f"{_name}: {title_date}"
         link = soup.find("link", rel="canonical", href=True)["href"]
         year, vol_num, issue_vol = link.split("/")[-3:]
         self.cover_url = soup.find(**classes("subscribe-callout-image"))[
