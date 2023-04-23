@@ -259,7 +259,7 @@ recipes: List[Recipe] = [
         slug="knowable-magazine",
         src_ext="mobi",
         target_ext=["epub"],
-        category="Magazines",
+        category="Online Magazines",
         tags=["science"],
         cover_options=CoverOptions(logo_path_or_url="https://i.imgur.com/OMxGtzQ.jpg"),
     ),
