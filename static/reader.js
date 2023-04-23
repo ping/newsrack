@@ -20,10 +20,15 @@ https://opensource.org/licenses/GPL-3.0
     const loadingContainer = document.getElementById("loading-container");
     const displayContainer = document.getElementById("display-container");
     const errEle = document.createElement("span");
-    errEle.classList.add("m-5");
+    errEle.classList.add("m-5", "d-block");
+    const backLink = document.createElement("a");
+    backLink["href"] = "index.html";
+    backLink.innerHTML = '<svg><use href="reader_sprites.svg#icon-home"></use></svg> Back to Home';
+    backLink.classList.add("d-flex", "align-items-center", "my-1", "gap-1", "justify-content-center");
 
     if (!isValidBook) {
         errEle.innerText = "Remote books not allowed.";
+        errEle.append(backLink);
         loadingContainer.innerHTML = "";
         loadingContainer.append(errEle);
     } else {
@@ -36,6 +41,7 @@ https://opensource.org/licenses/GPL-3.0
         book.on("openFailed", function (e) {
             console.error(e);
             errEle.innerText = e.toString();
+            errEle.append(backLink);
             loadingContainer.innerHTML = "";
             loadingContainer.append(errEle);
         });
