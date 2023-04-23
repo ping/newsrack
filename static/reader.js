@@ -22,7 +22,7 @@ https://opensource.org/licenses/GPL-3.0
     const errEle = document.createElement("span");
     errEle.classList.add("m-5", "d-block");
     const backLink = document.createElement("a");
-    backLink["href"] = "index.html";
+    backLink["href"] = "./";
     backLink.innerHTML = '<svg><use href="reader_sprites.svg#icon-home"></use></svg> Back to Home';
     backLink.classList.add("d-flex", "align-items-center", "my-1", "gap-1", "justify-content-center");
 
