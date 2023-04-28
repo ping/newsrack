@@ -37,14 +37,22 @@ class RestOfWorld(BasicNewsrackRecipe, BasicNewsRecipe):
     keep_only_tags = [dict(id="content")]
 
     remove_tags = [
-        dict(class_=["reading-header", "footer-recirc"]),
+        dict(
+            class_=[
+                "reading-header",
+                "footer-recirc",
+                "contrib-headshots",
+                "post-image-credit",
+            ]
+        ),
         dict(attrs={"aria-hidden": "true"}),
     ]
     extra_css = """
     h1.post-header__text__title { font-size: 1.8rem; margin-bottom: 0.4rem; }
     h3.post-header__text__dek { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; font-weight: normal; }
     .post-subheader { margin-bottom: 1rem; }
-    .post-subheader .post-subheader__byline { font-weight: bold; color: #444; }
+    .post-subheader .post-subheader__byline, .contrib-byline { font-weight: bold; color: #444; }
+    .post-header__text__contrib p.contrib-bio { margin: 0.2rem 0; }
     .post-header__image { margin-top: 0.5rem; margin-bottom: 0.8rem; }
     .image__wrapper img {
         display: block; margin-bottom: 0.3rem; max-width: 100%; height: auto;
@@ -66,6 +74,8 @@ class RestOfWorld(BasicNewsrackRecipe, BasicNewsRecipe):
             self.title = format_title(_name, article.utctime)
 
     def preprocess_html(self, soup):
+        for h in soup.find_all("h2", class_="contrib-byline"):
+            h.name = "div"
         for img in soup.find_all("img", attrs={"data-srcset": True}):
             sources = [s.strip() for s in img["data-srcset"].split(",") if s.strip()]
             img["src"] = sources[-1].split(" ")[0].strip()
