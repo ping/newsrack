@@ -43,6 +43,7 @@ class RestOfWorld(BasicNewsrackRecipe, BasicNewsRecipe):
                 "footer-recirc",
                 "contrib-headshots",
                 "post-image-credit",
+                "series-callout",
             ]
         ),
         dict(attrs={"aria-hidden": "true"}),
