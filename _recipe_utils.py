@@ -18,6 +18,8 @@ default_conv_options: Dict[str, List[str]] = {
         "--output-profile=tablet",
         # to fix the problem of images having a fixed height after conversion
         "--extra-css=img{height:auto !important;}",
+        # to fix the problem of some font sizes being too small
+        "--font-size-mapping=10,12,14,16,18,20,22,24",
     ],
 }
 
