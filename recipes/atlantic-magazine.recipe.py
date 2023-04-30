@@ -89,7 +89,11 @@ def json_to_html(raw):
             new_soup.main.append(embed_image(new_soup, item))
             continue
         content_html = item.get("innerHtml")
-        if (not content_html) or "</iframe>" in content_html:
+        if (
+            (not content_html)
+            or "</iframe>" in content_html
+            or "newsletters/sign-up" in content_html
+        ):
             continue
         if tn == "ArticleHeading":
             tag_name = "h2"
@@ -144,8 +148,9 @@ class TheAtlanticMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
 
     publication_type = "magazine"
     remove_empty_feeds = True
-
     remove_attributes = ["style"]
+    remove_tags = [dict(class_=["related-content"])]
+
     extra_css = """
     .issue { font-weight: bold; margin-bottom: 0.2rem; }
     .headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
