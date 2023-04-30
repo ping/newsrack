@@ -21,4 +21,14 @@
 <path d="M12 6l0 13"></path>
 <path d="M21 6l0 13"></path>
 </symbol>
+<symbol id="icon-chevrons-left" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+<path d="M11 7l-5 5l5 5"></path>
+<path d="M17 7l-5 5l5 5"></path>
+</symbol>
+<symbol id="icon-chevrons-right" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+<path d="M7 7l5 5l-5 5"></path>
+<path d="M13 7l5 5l-5 5"></path>
+</symbol>
 </svg>

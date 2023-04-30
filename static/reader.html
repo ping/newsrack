@@ -16,8 +16,8 @@
     </style>
 </head>
 <body>
-<main class="container-fluid">
-    <div id="display-container" class="d-flex justify-content-between gap-2 d-none">
+<main class="container-fluid vh-100">
+    <div id="display-container" class="h-100 d-flex justify-content-between gap-2 d-none">
         <div class="pagination-container fs-1">
             <a id="prev" href="#prev"
                class="d-flex position-absolute align-items-center justify-content-center top-0 bottom-0">
@@ -26,16 +26,26 @@
                 </svg>
             </a>
         </div>
-        <div id="centre-container" class="flex-grow-1">
+        <div id="centre-container" class="h-100 flex-grow-1">
             <div id="toc-container" class="d-flex gap-1">
-                    <span class="align-self-center">
-                        <a href="./" class="home mx-1 fs-2">
-                            <svg><use href="reader_sprites.svg#icon-home"></use></svg>
-                        </a>
-                    </span>
+                <span class="align-self-center">
+                    <a href="./" class="home mx-1 fs-2 d-flex flex-column">
+                        <svg class="align-self-center"><use href="reader_sprites.svg#icon-home"></use></svg>
+                    </a>
+                </span>
+                <a id="prev-chapter" href="#prev-chapter" class="align-self-center p-1">
+                    <svg>
+                        <use href="reader_sprites.svg#icon-chevrons-left"></use>
+                    </svg>
+                </a>
                 <select id="toc" class="my-1 form-select form-select-sm"></select>
+                <a id="next-chapter" href="#next-chapter" class="align-self-center p-1">
+                    <svg>
+                        <use href="reader_sprites.svg#icon-chevrons-right"></use>
+                    </svg>
+                </a>
             </div>
-            <div id="epub-viewer" class="h-100 mx-auto shadow">
+            <div id="epub-viewer" class="mx-auto shadow">
             </div>
         </div>
         <div class="pagination-container fs-1">

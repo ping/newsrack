@@ -46,6 +46,19 @@ https://opensource.org/licenses/GPL-3.0
             loadingContainer.append(errEle);
         });
 
+        function gotoNextChapter() {
+            const nextIndex = book.package.metadata.direction === "rtl" ? rendition.location.end.index-1 : rendition.location.end.index+1;
+            if (nextIndex >= 0 && nextIndex < rendition.book.spine.spineItems.length) {
+                rendition.display(rendition.book.spine.spineItems[nextIndex]["href"]);
+            }
+        }
+        function gotoPrevChapter() {
+            const prevIndex = book.package.metadata.direction === "rtl" ? rendition.location.start.index+1 : rendition.location.start.index-1;
+            if (prevIndex >= 0 && prevIndex < rendition.book.spine.spineItems.length) {
+                rendition.display(rendition.book.spine.spineItems[prevIndex]["href"]);
+            }
+        }
+
         book.ready.then(function () {
             if (loadingContainer) {
                 loadingContainer.remove();
@@ -63,6 +76,18 @@ https://opensource.org/licenses/GPL-3.0
                 e.preventDefault();
             }, false);
 
+            const nextChapter = document.getElementById("next-chapter");
+            nextChapter.addEventListener("click", function (e) {
+                e.preventDefault();
+                gotoNextChapter();
+            }, false);
+
+            const prevChapter = document.getElementById("prev-chapter");
+            prevChapter.addEventListener("click", function (e) {
+                e.preventDefault();
+                gotoPrevChapter();
+            }, false);
+
             const keyListener = function (e) {
                 // Left Key
                 if ((e.keyCode || e.which) === 37) {
@@ -71,6 +96,14 @@ https://opensource.org/licenses/GPL-3.0
                 // Right Key
                 if ((e.keyCode || e.which) === 39) {
                     book.package.metadata.direction === "rtl" ? rendition.prev() : rendition.next();
+                }
+                // Up key
+                if ((e.keyCode || e.which) === 38) {
+                    gotoPrevChapter();
+                }
+                // Down key
+                if ((e.keyCode || e.which) === 40) {
+                    gotoNextChapter();
                 }
             };
             rendition.on("keyup", keyListener);
@@ -143,6 +176,22 @@ https://opensource.org/licenses/GPL-3.0
                 prev.classList.add("invisible");
             } else {
                 prev.classList.remove("invisible");
+            }
+
+            const nextChapter = book.package.metadata.direction === "rtl" ? document.getElementById("prev-chapter") : document.getElementById("next-chapter");
+            const prevChapter = book.package.metadata.direction === "rtl" ? document.getElementById("next-chapter") : document.getElementById("prev-chapter");
+
+            if (location.start.index <= 0 || location.start.index <= 0 ) {
+                prevChapter.classList.add("invisible");
+            } else {
+                prevChapter.classList.remove("invisible");
+            }
+
+            const maxIndex = book.spine.spineItems.length - 1;
+            if (location.start.index >= maxIndex || location.start.index >= maxIndex ) {
+                nextChapter.classList.add("invisible");
+            } else {
+                nextChapter.classList.remove("invisible");
             }
 
             const cfi = location.start.cfi;

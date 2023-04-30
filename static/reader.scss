@@ -37,6 +37,7 @@ a.home svg {
 
 #toc-container {
   height: 5vh;
+  min-height: 2.5rem;
 }
 
 #toc {
@@ -46,20 +47,20 @@ a.home svg {
   border-radius: 0.25rem;
 }
 
-#display-container {
-  height: 90vh;
-}
-
 #centre-container {
   width: calc(100% - 9rem);
   max-width: 1100px;
+}
+
+#epub-viewer {
+  height: calc(100% - 10vh);
 }
 
 .pagination-container, #prev, #next {
   min-width: 3rem;
 }
 
-#prev, #next {
+#prev, #next, #prev-chapter, #next-chapter {
   text-decoration: none;
 
   &:hover {
@@ -71,6 +72,12 @@ a.home svg {
     height: 2rem;
   }
 }
+#prev-chapter, #next-chapter {
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
 
 
 @media (max-width: 575px) {
@@ -80,6 +87,10 @@ a.home svg {
   #centre-container {
     width: calc(100% - 6rem);
   }
+  #epub-viewer {
+    height: calc(100% - 15vh);
+  }
+
   .pagination-container, #prev, #next {
     min-width: 2rem;
   }
@@ -123,7 +134,7 @@ a.home svg {
       color: $dark-link-visited-color;
     }
   }
-  #prev, #next {
+  #prev, #next, #prev-chapter, #next-chapter {
     &:hover {
       background-color: $dark-base-bg-color;
     }
