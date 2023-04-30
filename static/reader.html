@@ -18,15 +18,15 @@
 <body>
 <main class="container-fluid vh-100">
     <div id="display-container" class="h-100 d-flex justify-content-between gap-2 d-none">
-        <div class="pagination-container fs-1">
+        <div class="pagination-container fs-1 flex-fill d-flex">
             <a id="prev" href="#prev"
-               class="d-flex position-absolute align-items-center justify-content-center top-0 bottom-0">
+               class="flex-fill d-flex align-items-center justify-content-center">
                 <svg>
                     <use href="reader_sprites.svg#icon-chevron-left"></use>
                 </svg>
             </a>
         </div>
-        <div id="centre-container" class="h-100 flex-grow-1">
+        <div id="centre-container" class="h-100">
             <div id="toc-container" class="d-flex gap-1">
                 <span class="align-self-center">
                     <a href="./" class="home mx-1 fs-2 d-flex flex-column">
@@ -48,9 +48,9 @@
             <div id="epub-viewer" class="mx-auto shadow">
             </div>
         </div>
-        <div class="pagination-container fs-1">
+        <div class="pagination-container fs-1 flex-fill d-flex">
             <a id="next" href="#next"
-               class="d-flex position-absolute align-items-center justify-content-center top-0 bottom-0">
+               class="flex-fill d-flex align-items-center justify-content-center">
                 <svg>
                     <use href="reader_sprites.svg#icon-chevron-right"></use>
                 </svg>
