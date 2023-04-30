@@ -37,6 +37,10 @@ class KoreaJoongAngDaily(BasicNewsrackRecipe, BasicNewsRecipe):
     oldest_article = 1  # days
     max_articles_per_feed = 60
 
+    extra_css = """
+    .caption { font-size: 0.8rem; margin: 0.5rem 0; }
+    """
+
     feeds = [
         ("Korea JoongAng Daily", "https://koreajoongangdaily.joins.com/xmls/joins"),
     ]
