@@ -85,19 +85,18 @@ a.home svg {
     --bs-gutter-x: 0;
   }
   #centre-container {
-    width: calc(100% - 6rem);
+    width: calc(100% - 5rem);
   }
   #epub-viewer {
     height: calc(100% - 15vh);
   }
-
   .pagination-container, #prev, #next {
-    min-width: 2rem;
+    min-width: 1.7rem;
   }
   #prev, #next {
     svg {
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 1.2rem;
+      height: 1.2rem;
     }
   }
 }
