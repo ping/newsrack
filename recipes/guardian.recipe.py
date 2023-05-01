@@ -96,6 +96,12 @@ class Guardian(BasicNewsrackRecipe, BasicNewsRecipe):
     ]
 
     def preprocess_html(self, soup):
+        script_json = soup.find("script", attrs={"type": "application/ld+json"})
+        if script_json and script_json.contents:
+            meta = json.loads(script_json.contents[0])[0]
+            if meta.get("@type", "") == "LiveBlogPosting":
+                self.abort_article("Do not include live postings")
+
         meta = soup.find(attrs={"data-gu-name": "meta"})
         if meta:
             # remove author image
@@ -177,7 +183,6 @@ class Guardian(BasicNewsrackRecipe, BasicNewsRecipe):
             a_link = soup.new_tag("a", href=link)
             a_link.append(link)
             yt.append(a_link)
-            self.log("*" * 5, yt)
 
         return soup
 
