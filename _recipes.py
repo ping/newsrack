@@ -651,15 +651,16 @@ recipes: List[Recipe] = [
             logo_path_or_url="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Wired_logo.svg/1024px-Wired_logo.svg.png"
         ),
     ),
-    Recipe(
-        recipe="world-today",
-        slug="world-today",
-        src_ext="mobi",
-        target_ext=["epub"],
-        category="Magazines",
-        enable_on=(first_n_days_of_month(7) or last_n_days_of_month(7))
-        and onlyat_hours(list(range(4, 12))),
-    ),
+    # # Blocked HTTP403 with captcha challenge
+    # Recipe(
+    #     recipe="world-today",
+    #     slug="world-today",
+    #     src_ext="mobi",
+    #     target_ext=["epub"],
+    #     category="Magazines",
+    #     enable_on=(first_n_days_of_month(7) or last_n_days_of_month(7))
+    #     and onlyat_hours(list(range(4, 12))),
+    # ),
     Recipe(
         recipe="wsj-paper",
         slug="wsj-print",
