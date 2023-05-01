@@ -65,7 +65,10 @@ class Guardian(BasicNewsrackRecipe, BasicNewsRecipe):
                 "data-spacefinder-type": "model.dotcomrendering.pageElements.NewsletterSignupBlockElement"
             }
         ),
-        dict(name="gu-island", attrs={"name": ["HeaderTopBar", "Carousel"]}),
+        dict(
+            name="gu-island",
+            attrs={"name": ["HeaderTopBar", "Carousel", "GuideAtomWrapper"]},
+        ),
         dict(attrs={"data-link-name": "nav3 : logo"}),
     ]
 
@@ -86,7 +89,7 @@ class Guardian(BasicNewsrackRecipe, BasicNewsRecipe):
     img { max-width: 100%; height: auto; margin-bottom: 0.2rem; }
     [data-name="placeholder"] { color: #444; font-style: italic; }
     [data-name="placeholder"] a { color: #444; }
-    blockquote { font-size: 0.85rem; color: #222; }
+    blockquote { font-size: 1.2rem; color: #222; margin-left: 0; text-align: center; }
     time { margin-right: 0.5rem; }
     .embed { color: #444; font-size: 0.8rem; }
     """
@@ -128,20 +131,16 @@ class Guardian(BasicNewsrackRecipe, BasicNewsRecipe):
 
         # search for highest resolution image
         for picture in soup.find_all("picture"):
-            max_img_width = 0
-            max_img_url = None
+            source = picture.find("source")  # use first one
+            if not source:
+                continue
+            max_img_url = source["srcset"]
             for source in picture.find_all("source"):
-                for img in source["srcset"].split(","):
-                    if len(img.strip().split(" ")) > 1:
-                        img_url, img_width = img.strip().split(" ")
-                        # Example: 1400w
-                        img_width = int(img_width[:-1])
-                        if img_width > max_img_width:
-                            max_img_url = img_url
-                    else:
-                        max_img_url = img.strip()
-                        break
+                source.decompose()
             img = picture.find("img")
+            if not img:
+                img = soup.new_tag("img", attrs={"class": "custom-added"})
+                picture.append(img)
             img["src"] = max_img_url
 
         # remove share on social media links for live articles
