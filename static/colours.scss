@@ -24,3 +24,5 @@ $dark-link-visited-color: #bbb9ff;
 $dark-book-bg-color: lighten($dark-base-bg-color, 5%);
 $dark-error-color: #ff6464;
 $dark-tags-color: mix($dark-base-disabled-color, $dark-base-color);
+
+@import 'colours_custom';
