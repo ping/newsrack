@@ -4,6 +4,7 @@ smh.com.au
 __license__ = "GPL v3"
 __copyright__ = "2010-2011, Darko Miletic <darko.miletic at gmail.com>"
 
+import json
 import os
 import sys
 
@@ -85,6 +86,12 @@ class SydneyMorningHerald(BasicNewsrackRecipe, BasicNewsRecipe):
         )
         if vid_player:
             self.abort_article("Video article")
+        for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
+            if not script.contents:
+                continue
+            meta = json.loads(script.contents[0])
+            if meta.get("@type", "") == "LiveBlogPosting":
+                self.abort_article("Exclude live post")
 
         ul_eles = soup.find_all("ul") or []
         for ul in ul_eles:
