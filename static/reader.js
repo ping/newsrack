@@ -47,13 +47,14 @@ https://opensource.org/licenses/GPL-3.0
         });
 
         function gotoNextChapter() {
-            const nextIndex = book.package.metadata.direction === "rtl" ? rendition.location.end.index-1 : rendition.location.end.index+1;
+            const nextIndex = book.package.metadata.direction === "rtl" ? rendition.location.end.index - 1 : rendition.location.end.index + 1;
             if (nextIndex >= 0 && nextIndex < rendition.book.spine.spineItems.length) {
                 rendition.display(rendition.book.spine.spineItems[nextIndex]["href"]);
             }
         }
+
         function gotoPrevChapter() {
-            const prevIndex = book.package.metadata.direction === "rtl" ? rendition.location.start.index+1 : rendition.location.start.index-1;
+            const prevIndex = book.package.metadata.direction === "rtl" ? rendition.location.start.index + 1 : rendition.location.start.index - 1;
             if (prevIndex >= 0 && prevIndex < rendition.book.spine.spineItems.length) {
                 rendition.display(rendition.book.spine.spineItems[prevIndex]["href"]);
             }
@@ -181,14 +182,14 @@ https://opensource.org/licenses/GPL-3.0
             const nextChapter = book.package.metadata.direction === "rtl" ? document.getElementById("prev-chapter") : document.getElementById("next-chapter");
             const prevChapter = book.package.metadata.direction === "rtl" ? document.getElementById("next-chapter") : document.getElementById("prev-chapter");
 
-            if (location.start.index <= 0 || location.start.index <= 0 ) {
+            if (location.start.index <= 0 || location.start.index <= 0) {
                 prevChapter.classList.add("invisible");
             } else {
                 prevChapter.classList.remove("invisible");
             }
 
             const maxIndex = book.spine.spineItems.length - 1;
-            if (location.start.index >= maxIndex || location.start.index >= maxIndex ) {
+            if (location.start.index >= maxIndex || location.start.index >= maxIndex) {
                 nextChapter.classList.add("invisible");
             } else {
                 nextChapter.classList.remove("invisible");
