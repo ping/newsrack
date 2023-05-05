@@ -202,7 +202,7 @@ https://opensource.org/licenses/GPL-3.0
         const cfi = location.start.cfi;
         const hashParams = URLSearchParams && new URLSearchParams(document.location.hash.substring(1));
         hashParams.set("loc", cfi)
-        document.location.hash = "#" + hashParams.toString();
+        document.location.replace("#" + hashParams.toString());
 
     });
 
