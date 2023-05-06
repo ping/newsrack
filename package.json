@@ -4,8 +4,9 @@
     "@babel/core": "^7.21.3",
     "@babel/preset-env": "^7.20.2",
     "babel-preset-minify": "^0.5.2",
+    "html-minifier-terser": "^7.1.0",
+    "lunr": "^2.3.9",
     "sass": "^1.60.0",
-    "terser": "^5.16.6",
-    "html-minifier-terser": "^7.1.0"
+    "terser": "^5.16.6"
   }
 }

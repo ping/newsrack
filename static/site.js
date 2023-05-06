@@ -197,37 +197,25 @@ https://opensource.org/licenses/GPL-3.0
                 }
             }
 
-            const idx = lunr(function () {
-                this.field("title");
-                this.field("articles");
-                this.field("tags");
-                this.field("category");
-
-                for (let i = 0; i < periodicalsEles.length; i++) {
-                    const periodical = periodicalsEles[i];
-                    const id = periodical["id"];
-                    const catName = periodical.dataset["catName"];
-                    const title = periodical.querySelector(".title").textContent;
-                    const contentTemp = document.createElement("div");
-                    contentTemp.innerHTML = RECIPE_DESCRIPTIONS[id];
-                    const articlesEles = contentTemp.querySelectorAll("ul > li");
-                    const articles = [];
-                    for (let j = 0; j < articlesEles.length; j++) {
-                        const articleEle = articlesEles[j];
-                        articles.push(articleEle.textContent);
+            let idx = null;
+            function handler() {
+                if (this.readyState === XMLHttpRequest.DONE) {
+                    const status = this.status;
+                    if (status === 0 || (status >= 200 && status < 400)) {
+                        idx = lunr.Index.load(JSON.parse(this.responseText));
+                        searchTextField.placeholder = ogPlaceholderText;
+                        searchTextField.disabled = false;
+                        searchButton.disabled = false;
+                    } else {
+                        console.error("Unable to load lunr.json");
+                        console.error(this);
                     }
-                    this.add({
-                        "id": id,
-                        "title": title,
-                        "articles": articles.join(" "),
-                        "tags": periodical.dataset["tags"],
-                        "category": catName
-                    });
                 }
-                searchTextField.placeholder = ogPlaceholderText;
-                searchTextField.disabled = false;
-                searchButton.disabled = false;
-            });
+            }
+            const httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = handler;
+            httpRequest.open("GET", "lunr.json", true);
+            httpRequest.send();
 
             // unhide everything when search field is cleared
             document.getElementById("search-text").onchange = function(e) {
