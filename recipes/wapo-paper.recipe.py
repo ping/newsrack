@@ -73,7 +73,7 @@ class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
                 continue
             if node_type == "text":
                 para_ele = soup.new_tag("p")
-                para_ele.append(BeautifulSoup(c["content"]))
+                para_ele.append(BeautifulSoup(c["content"], features="html.parser"))
                 parent_element.append(para_ele)
             elif node_type == "image":
                 figure_ele = soup.new_tag("figure", attrs={"class": "figure"})
@@ -99,7 +99,7 @@ class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
                 parent_element.append(container_ele)
             elif node_type == "header":
                 header_ele = soup.new_tag(f'h{c["level"]}')
-                header_ele.string = c["content"]
+                header_ele.append(BeautifulSoup(c["content"], features="html.parser"))
                 parent_element.append(header_ele)
             elif node_type == "correction":
                 para_ele = soup.new_tag("p", attrs={"class": "correction"})
@@ -133,12 +133,14 @@ class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
                 ) or c.get("header")
                 if header_string:
                     header_ele = soup.new_tag("h3")
-                    header_ele.string = header_string
+                    header_ele.append(
+                        BeautifulSoup(header_string, features="html.parser")
+                    )
                     container_ele.append(header_ele)
                 ol_ele = soup.new_tag("ol")
                 for i in c.get("items", []):
                     li_ele = soup.new_tag("li")
-                    li_ele.append(BeautifulSoup(i["content"]))
+                    li_ele.append(BeautifulSoup(i["content"], features="html.parser"))
                     ol_ele.append(li_ele)
                 container_ele.append(ol_ele)
                 parent_element.append(container_ele)
@@ -152,7 +154,9 @@ class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
 
                 header_ele = soup.new_tag("h3")
                 header_ele.append(
-                    BeautifulSoup(c.get("headlines", {}).get("basic", ""))
+                    BeautifulSoup(
+                        c.get("headlines", {}).get("basic", ""), features="html.parser"
+                    )
                 )
                 container_ele.append(header_ele)
 
@@ -164,10 +168,11 @@ class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
                     f"""<div class="article-meta">
                         <span class="author"></span>
                         <span class="published-dt">{post_date:%-I:%M%p %-d %B, %Y}</span>
-                    </div>"""
+                    </div>""",
+                    features="html.parser",
                 )
                 authors = [a["name"] for a in c.get("credits", {}).get("by", [])]
-                meta_ele.find("span", class_="author").string = ", ".join(authors)
+                meta_ele.find("span", class_="author").append(", ".join(authors))
                 container_ele.append(meta_ele)
                 self._extract_child_nodes(
                     c["content_elements"], container_ele, soup, url
@@ -229,19 +234,19 @@ class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
         </body></html>"""
         new_soup = BeautifulSoup(html)
         title_ele = new_soup.new_tag("title")
-        title_ele.string = title
+        title_ele.append(title)
         new_soup.head.append(title_ele)
-        new_soup.body.article.h1.string = title
+        new_soup.body.article.h1.append(title)
         if description:
             new_soup.body.article["data-description"] = description
         if content.get("subheadlines", {}).get("basic", ""):
-            new_soup.find("div", class_="sub-headline").string = content[
-                "subheadlines"
-            ]["basic"]
+            new_soup.find("div", class_="sub-headline").append(
+                content["subheadlines"]["basic"]
+            )
         else:
             new_soup.find("div", class_="sub-headline").decompose()
         authors = [a["name"] for a in content.get("credits", {}).get("by", [])]
-        new_soup.find("span", class_="author").string = ", ".join(authors)
+        new_soup.find("span", class_="author").append(", ".join(authors))
         self._extract_child_nodes(
             content.get("content_elements"), new_soup.body.article, new_soup, url
         )
