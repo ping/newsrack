@@ -178,8 +178,7 @@ https://opensource.org/licenses/GPL-3.0
 
     window.addEventListener("DOMContentLoaded", function() {
         if (typeof(lunr) !== "undefined") {
-            const ogPlaceholderText = searchTextField.placeholder;
-            searchTextField.placeholder = "Indexing search...";
+            const readyPlaceholderText = searchTextField.getAttribute("data-placeholder");
             const periodicalsEles = document.querySelectorAll("ol.books > li");
 
             function resetSearch() {
@@ -203,11 +202,12 @@ https://opensource.org/licenses/GPL-3.0
                     const status = this.status;
                     if (status === 0 || (status >= 200 && status < 400)) {
                         idx = lunr.Index.load(JSON.parse(this.responseText));
-                        searchTextField.placeholder = ogPlaceholderText;
+                        searchTextField.placeholder = readyPlaceholderText;
                         searchTextField.disabled = false;
                         searchButton.disabled = false;
                     } else {
-                        console.error("Unable to load lunr.json");
+                        searchTextField.placeholder = "Unable to load search index: " + this.statusText;
+                        console.error("Unable to load search index");
                         console.error(this);
                     }
                 }
