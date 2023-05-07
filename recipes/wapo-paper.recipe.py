@@ -18,7 +18,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.utils.cleantext import clean_ascii_chars
 
 _name = "Washington Post (Print)"
-_skip_sections = ["Sports", "Style", "Weekend"]
+_skip_sections = ["sports", "style", "weekend"]
 
 
 class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
@@ -36,6 +36,7 @@ class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
     encoding = "utf-8"
     language = "en"
     simultaneous_downloads = 8
+    compress_news_images_auto_size = 8
 
     oldest_article = 1
     max_articles_per_feed = 25
@@ -254,18 +255,20 @@ class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
 
     def parse_index(self):
         soup = self.index_to_soup(self.index)
+        today_ele = soup.find("h2")
+        if today_ele:
+            self.title = f"{_name}: {self.tag_to_string(today_ele)}"
         articles = {}
-        for section in soup.find_all(class_="todays-content"):
-            today_ele = section.find(class_="todays-date")
-            if today_ele:
-                self.title = f"{_name}: {self.tag_to_string(today_ele)}"
-                today_ele.extract()
-            section_name = self.tag_to_string(section.find(class_="heading")).strip()
-            if section_name in _skip_sections:
+        for section in soup.find_all("section", attrs={"id": True}):
+            section_name = self.tag_to_string(section.find("label")).strip()
+            if section_name.lower() in _skip_sections:
                 continue
             section_articles = []
             self.log(f"Section: {section_name}")
-            for link in section.find_all("a", class_="headline"):
+            for link in section.find_all("a", attrs={"href": True}):
+                if link.find("img"):
+                    # cover page link
+                    continue
                 if link["href"] in (
                     "https://www.washingtonpost.com/",
                     "https://www.washingtonpost.com/local/",
