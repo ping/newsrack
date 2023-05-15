@@ -97,6 +97,10 @@ h1 {
   margin-top: 0.35em;
   margin-bottom: 0.25em;
   color: $error-color;
+
+  a {
+    margin-right: 0.3rem;
+  }
 }
 
 .category-container {
@@ -183,6 +187,7 @@ h2.category {
 
     &:target .title {
       border-bottom: 1px dotted $base-disabled-color;
+      color: $link-hover-color;
     }
 
     .pub-date {
@@ -375,6 +380,7 @@ footer {
     li {
       &:target .title {
         border-color: $dark-base-disabled-color;
+        color: $dark-link-hover-color;
       }
 
       .pub-date {

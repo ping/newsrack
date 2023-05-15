@@ -18,6 +18,7 @@ https://opensource.org/licenses/GPL-3.0
 (function () {
 
     const searchInfo = document.getElementById("search-info");
+    const searchSyntaxLink = searchInfo.querySelector("a")
     const searchTextField = document.getElementById("search-text");
     const searchButton = document.getElementById("search-button");
     searchTextField.disabled = true;
@@ -223,6 +224,7 @@ https://opensource.org/licenses/GPL-3.0
                     return;
                 }
                 searchInfo.innerText = "";
+                searchInfo.appendChild(searchSyntaxLink);
                 resetSearch();
             };
 
@@ -232,17 +234,20 @@ https://opensource.org/licenses/GPL-3.0
                 searchInfo.innerText = "";
                 const searchText = document.getElementById("search-text").value.trim();
                 if (searchText.length < 3) {
-                    searchInfo.innerText = "Search text must be at least 3 characters long.";
+                    searchInfo.appendChild(searchSyntaxLink);
+                    searchInfo.append("Search text must be at least 3 characters long.");
                     return;
                 }
 
                 const results = idx.search(searchText);
                 if (results.length <= 0) {
-                    searchInfo.innerText = "No results.";
+                    searchInfo.appendChild(searchSyntaxLink);
+                    searchInfo.append("No results.");
                     resetSearch();
                     return;
                 }
 
+                searchInfo.appendChild(searchSyntaxLink);
                 const bookIds = [];
                 const resultsSumm = {};
                 for (let i = 0; i < results.length; i++) {
