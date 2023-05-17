@@ -382,7 +382,11 @@ class Economist(BasicNewsrackRecipe, BasicNewsRecipe):
                 data, "props", "pageProps", "content", "hasPart", "parts"
             ):
                 section = safe_dict(part, "print", "section", "headline") or ""
-                title = safe_dict(part, "print", "headline") or ""
+                title = (
+                    safe_dict(part, "print", "headline")
+                    or safe_dict(part, "headline")
+                    or ""
+                )
                 url = safe_dict(part, "url", "canonical") or ""
                 if not section or not title or not url:
                     continue
