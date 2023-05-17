@@ -764,7 +764,7 @@ def run(
                 {
                     "id": books[0].recipe.slug,
                     "title": books[0].title or recipe_name,
-                    "articles": " ".join(books[0].articles),
+                    "articles": "<li>" + "</li><li>".join(books[0].articles) + "</li>",
                     "tags": " ".join(books[0].recipe.tags),
                     "category": books[0].recipe.category,
                 }

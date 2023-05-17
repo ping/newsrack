@@ -80,6 +80,25 @@ https://opensource.org/licenses/GPL-3.0
         }
     }
 
+    function markSearchTerms(positions, originalString) {
+        const padding = originalString.indexOf("<li>");
+        let markedString = "";
+        let cumu_pos = padding > -1 ? padding : 0;
+        if (cumu_pos >= 0) {
+            markedString += originalString.substring(0, cumu_pos);
+        }
+        const offset = padding > -1 ? padding : 0;
+        for (let z = 0; z < positions.length; z++) {
+            const pos = positions[z];
+            markedString += originalString.substring(cumu_pos, pos[0] + offset);
+            cumu_pos += (pos[0] + offset - cumu_pos);
+            markedString += "<mark>" + originalString.substring(cumu_pos, cumu_pos + pos[1]) + "</mark>";
+            cumu_pos += pos[1];
+        }
+        markedString += originalString.substring(cumu_pos);
+        return markedString;
+    }
+
     function isScrolledIntoView(ele) {
         const rect = ele.getBoundingClientRect();
         // Only completely visible elements return true:
@@ -234,19 +253,20 @@ https://opensource.org/licenses/GPL-3.0
                 searchInfo.innerText = "";
                 const searchText = document.getElementById("search-text").value.trim();
                 if (searchText.length < 3) {
+                    // this makes it work in the Kindle browser
                     searchInfo.appendChild(searchSyntaxLink);
-                    searchInfo.append("Search text must be at least 3 characters long.");
+                    searchInfo.innerHTML += "Search text must be at least 3 characters long.";
                     return;
                 }
+
                 try {
                     const results = idx.search(searchText);
                     if (results.length <= 0) {
                         searchInfo.appendChild(searchSyntaxLink);
-                        searchInfo.append("No results.");
+                        searchInfo.innerHTML += "No results.";
                         resetSearch();
                         return;
                     }
-
                     searchInfo.appendChild(searchSyntaxLink);
                     const bookIds = [];
                     const resultsSumm = {};
@@ -254,17 +274,39 @@ https://opensource.org/licenses/GPL-3.0
                         bookIds.push(results[i].ref);
                         const fields = [];
                         const metadata = results[i].matchData.metadata;
-                        for (const key in metadata) {
-                            for (const kkey in metadata[key]) {
-                                fields.push(kkey);
+                        let resultPositions = {};
+                        for (const key in metadata) {   // term
+                            for (const kkey in metadata[key]) {     // field
+                                if (!resultPositions[kkey]) {
+                                    resultPositions[kkey] = [];
+                                }
+                                const positions = metadata[key][kkey]["position"] || [];
+                                for (let z = 0; z < positions.length; z++) {
+                                    resultPositions[kkey].push(positions[z]);
+                                }
                             }
                         }
-                        resultsSumm[results[i].ref] = fields;
+                        resultsSumm[results[i].ref] = resultPositions;
 
                     }
                     for (let i = 0; i < periodicalsEles.length; i++) {
                         const periodical = periodicalsEles[i];
                         const id = periodical["id"];
+                        const contentsEle = periodical.querySelector(".contents");
+                        const titleEle = periodical.querySelector(".title");
+
+                        if (contentsEle && contentsEle.innerHTML !== "") {
+                            contentsEle.innerHTML = RECIPE_DESCRIPTIONS[id];
+                        }
+                        if (titleEle) {
+                            if (!titleEle.dataset["original"]) {
+                                titleEle.dataset["original"] = titleEle.innerHTML;
+                            }
+                            // reset title ele
+                            if (titleEle.innerHTML !== titleEle.dataset["original"]) {
+                                titleEle.innerHTML = titleEle.dataset["original"];
+                            }
+                        }
 
                         if (bookIds.indexOf(id) < 0) {
                             periodical.classList.add("hide");
@@ -281,28 +323,31 @@ https://opensource.org/licenses/GPL-3.0
                             }
                         }
                         const pubDateEle = periodical.querySelector(".pub-date");
-                        const contentsEle = periodical.querySelector(".contents");
-                        if (resultsSumm[id].indexOf("articles") >= 0) {
+
+                        if (resultsSumm[id]["articles"]) {
                             pubDateEle.classList.add("is-open");
                             if (contentsEle) {
                                 contentsEle.classList.remove("hide");
+                                const positions = resultsSumm[id]["articles"];
+                                contentsEle.innerHTML = markSearchTerms(positions, RECIPE_DESCRIPTIONS[id]);
                             }
-                            contentsEle.classList.remove("hide");
-                            if (contentsEle.innerHTML === "") {
-                                contentsEle.innerHTML = RECIPE_DESCRIPTIONS[id];
+                        }
+                        if (resultsSumm[id]["title"]) {
+                            if (!resultsSumm[id]["articles"]) {
+                                pubDateEle.classList.remove("is-open");
+                                if (contentsEle) {
+                                    contentsEle.classList.add("hide");
+                                }
                             }
-
-                        } else {
-                            pubDateEle.classList.remove("is-open");
-                            if (contentsEle) {
-                                contentsEle.classList.add("hide");
+                            if (titleEle) {
+                                const positions = resultsSumm[id]["title"] || [];
+                                titleEle.innerHTML = markSearchTerms(positions, titleEle.innerHTML);
                             }
                         }
                     }
                 } catch (e) {
                     searchInfo.appendChild(searchSyntaxLink);
-                    searchInfo.append(e.name + ": " + e.message);
-                    return;
+                    searchInfo.innerHTML += e.name + ": " + e.message;
                 }
 
             };
