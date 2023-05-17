@@ -14,6 +14,7 @@ from urllib.parse import quote_plus, urljoin
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, format_title
 
+from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 
@@ -173,10 +174,19 @@ class FinancialTimesPrint(BasicNewsrackRecipe, BasicNewsRecipe):
         """
         return html_output
 
-    def get_browser(self, *a, **kw):
-        kw[
-            "user_agent"
-        ] = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
-        br = BasicNewsRecipe.get_browser(self, *a, **kw)
+    # FT changes the content it delivers based on cookies, so the
+    # following ensures that we send no cookies
+    def get_browser(self, *args, **kwargs):
+        return self
+
+    def clone_browser(self, *args, **kwargs):
+        return self.get_browser()
+
+    def open_novisit(self, *args, **kwargs):
+        br = browser(
+            user_agent="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+        )
         br.addheaders = [("referer", "https://www.google.com/")]
-        return br
+        return br.open_novisit(*args, **kwargs)
+
+    open = open_novisit
