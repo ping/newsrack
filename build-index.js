@@ -11,6 +11,10 @@ stdin.on('data', function (data) {
     buffer.push(data)
 })
 
+// Ref https://github.com/olivernn/lunr.js/blob/aa5a878f62a6bba1e8e5b95714899e17e8150b38/lib/stop_word_filter.js#L43
+customStopWordFilter = lunr.generateStopWordFilter(['li'])  // to exclude <li>
+lunr.Pipeline.registerFunction(customStopWordFilter, 'customStopWordFilter')
+
 stdin.on('end', function () {
     // modified to exclude "/" "<" ">"
     lunr.tokenizer.separator = /[\s\-\/<>]+/
@@ -22,6 +26,7 @@ stdin.on('end', function () {
         this.field('tags')
         this.field('category')
         this.metadataWhitelist = ['position']
+        this.pipeline.before(lunr.stopWordFilter, customStopWordFilter)
 
         documents.forEach(function (doc) {
             this.add(doc)
