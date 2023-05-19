@@ -240,9 +240,10 @@ https://opensource.org/licenses/GPL-3.0
                     const status = this.status;
                     if (status === 0 || (status >= 200 && status < 400)) {
                         idx = lunr.Index.load(JSON.parse(this.responseText));
+                        searchButton.disabled = false;
                         searchTextField.placeholder = readyPlaceholderText;
                         searchTextField.disabled = false;
-                        searchButton.disabled = false;
+                        searchTextField.focus();
                     } else {
                         searchTextField.placeholder = "Unable to load search index: " + this.statusText;
                         console.error("Unable to load search index");
