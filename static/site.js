@@ -80,6 +80,24 @@ https://opensource.org/licenses/GPL-3.0
         }
     }
 
+    function sortSearchTermsPositions(a, b) {
+        // by position, earlier mark sorts first
+        if (a[0] < b[0]) {
+            return -1;
+        }
+        if (a[0] > b[0]) {
+            return 1;
+        }
+        // same position, longer mark sorts first
+        if (a[1] > b[1]) {
+            return -1;
+        }
+        if (a[1] < b[1]) {
+            return 1;
+        }
+        return 0;
+    }
+
     function markSearchTerms(positions, originalString) {
         const padding = originalString.indexOf("<li>");
         let markedString = "";
@@ -284,6 +302,8 @@ https://opensource.org/licenses/GPL-3.0
                                 for (let z = 0; z < positions.length; z++) {
                                     resultPositions[kkey].push(positions[z]);
                                 }
+                                // sort enables multi-terms search to be properly marked
+                                resultPositions[kkey].sort(sortSearchTermsPositions);
                             }
                         }
                         resultsSumm[results[i].ref] = resultPositions;
