@@ -261,7 +261,7 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         category="Online Magazines",
         tags=["science"],
-        cover_options=CoverOptions(logo_path_or_url="https://i.imgur.com/OMxGtzQ.jpg"),
+        cover_options=CoverOptions(logo_path_or_url="recipes/logos/knowable.png"),
     ),
     Recipe(
         recipe="korea-herald",
