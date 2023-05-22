@@ -17,7 +17,7 @@ lunr.Pipeline.registerFunction(customStopWordFilter, 'customStopWordFilter')
 
 stdin.on('end', function () {
     // modified to exclude "/" "<" ">"
-    lunr.tokenizer.separator = /[\s\-\/<>]+/
+    lunr.tokenizer.separator = /[\s\-\/<>’]+/
     var documents = JSON.parse(buffer.join(''))
     var idx = lunr(function () {
         this.ref('id')
