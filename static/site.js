@@ -16,6 +16,22 @@ https://opensource.org/licenses/GPL-3.0
         - `for (const e in elements)` is undefined
 */
 (function () {
+    if (document.body.classList.contains("nonkindle")) {
+        // use "read" param as a shortcut to the latest epub reader
+        const params = URLSearchParams && new URLSearchParams(document.location.search.substring(1));
+        const slug = (params && params.get("read")) ? params.get("read") : undefined;
+        if (slug) {
+            const periodical = document.getElementById(slug);
+            if (periodical) {
+                const readerLink = periodical.querySelector("a.reader");
+                if (readerLink && readerLink["href"]) {
+                    window.location.href = readerLink["href"];
+                } else {
+                    periodical.focus();
+                }
+            }
+        }
+    }
 
     const searchInfo = document.getElementById("search-info");
     const searchSyntaxLink = searchInfo.querySelector("a")
