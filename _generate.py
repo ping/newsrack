@@ -850,7 +850,11 @@ def run(
                 book_ext = book_file.suffix
                 reader_link = ""
                 if book_ext == ".epub":
-                    reader_link = f'<a class="reader not-for-kindle" title="Read in browser" href="reader.html?{urlencode({"file": book.rename_to})}"><svg><use href="reader_sprites.svg#icon-book"></use></svg></a>'
+                    reader_link = (
+                        f'<a class="reader not-for-kindle" title="Read in browser" '
+                        f'href="reader.html?{urlencode({"file": book.rename_to, "id": books[0].recipe.slug})}">'
+                        f'<svg><use href="reader_sprites.svg#icon-book"></use></svg></a>'
+                    )
                 book_links.append(
                     f'<div class="book">'
                     f'<a href="{book.rename_to}">{book_ext}<span class="file-size">{humanize.naturalsize(file_size).replace(" ", "")}</span>'

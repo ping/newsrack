@@ -9,7 +9,9 @@ https://opensource.org/licenses/GPL-3.0
     const params = URLSearchParams && new URLSearchParams(document.location.search.substring(1));
     const file = (params && params.get("file")) ? params.get("file") : undefined;
     const hashParams = URLSearchParams && new URLSearchParams(document.location.hash.substring(1));
-    const currentSectionIndex = (hashParams && hashParams.get("loc")) ? hashParams.get("loc") : undefined;
+    const titleId = (params && params.get("id")) ? params.get("id") : "";
+    const cookieKey = "title_" + titleId;
+    const currentSectionIndex = (hashParams && hashParams.get("loc")) ? hashParams.get("loc") : JSON.parse(Cookies.get(cookieKey) || "{}")[file];
     let isValidBook;
     try {
         new URL(file);
@@ -201,9 +203,11 @@ https://opensource.org/licenses/GPL-3.0
 
         const cfi = location.start.cfi;
         const hashParams = URLSearchParams && new URLSearchParams(document.location.hash.substring(1));
-        hashParams.set("loc", cfi)
+        hashParams.set("loc", cfi);
         document.location.replace("#" + hashParams.toString());
-
+        let progress = {};
+        progress[file] = cfi;
+        Cookies.set(cookieKey, JSON.stringify(progress), { path: "", expires: 30 });
     });
 
     rendition.themes.register("viewer-theme", "viewer-theme.css");
