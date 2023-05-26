@@ -713,12 +713,13 @@ def run(
                         stdout=sys.stdout,
                         stderr=sys.stderr,
                     )
-                target_file_path = sorted(
-                    _find_output(publish_folder, recipe.slug, ext)
-                )[-1]
-                target_file_name = Path(target_file_path.name)
 
                 if not exit_code:
+                    target_file_path = sorted(
+                        _find_output(publish_folder, recipe.slug, ext)
+                    )[-1]
+                    target_file_name = Path(target_file_path.name)
+
                     generated[recipe.category][recipe.name].append(
                         RecipeOutput(
                             recipe=recipe,
