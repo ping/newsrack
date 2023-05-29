@@ -13,11 +13,7 @@ default_recipe_timeout = 180
 # format-specific ebook-convert options
 default_conv_options: Dict[str, List[str]] = {
     "mobi": ["--output-profile=kindle_oasis", "--mobi-file-type=both"],
-    # calibre v6.18: --pdf-page-numbers causes text to be invisible
-    # Ref: https://www.mobileread.com/forums/showthread.php?t=354144
-    # Restore when https://github.com/kovidgoyal/calibre/commit/59503c21dc7f59c025d4ace2bfa57643b04dfdab
-    # is released
-    # "pdf": ["--pdf-page-numbers"],
+    "pdf": ["--pdf-page-numbers"],
     "epub": [
         "--output-profile=tablet",
         # to fix the problem of images having a fixed height after conversion
