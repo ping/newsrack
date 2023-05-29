@@ -167,11 +167,18 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
             self.title = f"{_name}: {title_date}"
         link = soup.find("link", rel="canonical", href=True)["href"]
         year, vol_num, issue_vol = link.split("/")[-3:]
-        self.cover_url = soup.find(**classes("subscribe-callout-image"))[
-            "data-src"
-        ].split("|")[-1]
-        self.cover_url = self.cover_url.split("?")[0].replace(
-            "_webp_issue_small_2x", "_webp_issue_large_2x"
+        src_set = [
+            s.strip()
+            for s in soup.find(**classes("subscribe-callout-image"))["srcset"].split(
+                " , "
+            )
+            if s.strip()
+        ]
+        self.cover_url = (
+            src_set[-1]
+            .split(" ")[0]
+            .strip()
+            .replace("_webp_issue_small_2x", "_webp_issue_large_2x")
         )
         cls = soup.find("body")["class"]
         if isinstance(cls, (list, tuple)):
