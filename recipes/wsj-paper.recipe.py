@@ -127,7 +127,7 @@ class WSJ(BasicNewsrackRecipe, BasicNewsRecipe):
         sections = []
 
         for d in range(3):
-            issue_date = datetime.today() - timedelta(days=d)
+            issue_date = datetime.now(tz=timezone.utc) - timedelta(days=d)
             issue_url = (
                 f'https://www.wsj.com/print-edition/{issue_date.strftime("%Y%m%d")}'
             )
