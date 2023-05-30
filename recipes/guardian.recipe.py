@@ -129,6 +129,11 @@ class Guardian(BasicNewsrackRecipe, BasicNewsRecipe):
                 detail.name = "div"
                 detail["class"] = "meta-date"
 
+        # re-position lede image
+        media = soup.find(attrs={"data-gu-name": "media"})
+        if media and meta:
+            meta.insert_after(media.extract())
+
         # search for highest resolution image
         for picture in soup.find_all("picture"):
             source = picture.find("source")  # use first one
