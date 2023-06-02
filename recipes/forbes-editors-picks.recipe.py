@@ -22,7 +22,7 @@ class ForbesEditorsPicks(BasicNewsrackRecipe, BasicNewsRecipe):
     encoding = "utf-8"
 
     oldest_article = 7
-    max_articles_per_feed = 15
+    max_articles_per_feed = 10
 
     scale_news_images = (800, 1200)
     timeout = 10
