@@ -250,6 +250,11 @@ h2.category {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+
+          &:hover {
+            text-overflow: unset;
+            white-space: unset;
+          }
         }
       }
     }
