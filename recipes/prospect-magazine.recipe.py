@@ -112,9 +112,11 @@ class ProspectMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
             curr_issue_url = _issue_url
 
         soup = self.index_to_soup(curr_issue_url)
-        issue_name = self.tag_to_string(
-            soup.find(class_="magazine-lhc__issue-name")
-        ).replace(" issue", "")
+        issue_name = (
+            self.tag_to_string(soup.find(class_="magazine-lhc__issue-name"))
+            .replace(" issue", "")
+            .strip()
+        )
         self.title = f"{_name}: {issue_name}"
 
         self.cover_url = soup.find("img", class_="magazine-lhc__cover-image")[
@@ -141,12 +143,15 @@ class ProspectMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
             for sect_article in section.find_all(
                 class_="pro-magazine-section__article"
             ):
-                article_title = self.tag_to_string(
-                    sect_article.find(class_="pro-magazine-section__article-headline")
-                )
-                article_url = urljoin(self.INDEX, sect_article.find("a")["href"])
                 articles.setdefault(section_name, []).append(
-                    {"url": article_url, "title": article_title}
+                    {
+                        "url": urljoin(self.INDEX, sect_article.find("a")["href"]),
+                        "title": self.tag_to_string(
+                            sect_article.find(
+                                class_="pro-magazine-section__article-headline"
+                            )
+                        ),
+                    }
                 )
 
         # remove empty sections
