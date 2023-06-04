@@ -16,6 +16,7 @@ from recipes_shared import BasicNewsrackRecipe
 from calibre.web.feeds.news import BasicNewsRecipe, prefixed_classes
 
 _name = "Prospect Magazine"
+_issue_url = ""
 
 
 class ProspectMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
@@ -33,7 +34,6 @@ class ProspectMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     publication_type = "magazine"
     masthead_url = "https://media.prospectmagazine.co.uk/prod/images/gm_grid_thumbnail/358ffc17208c-f4c3cddcdeda-prospect-masthead.png"
     encoding = "utf-8"
-    reverse_article_order = False
     compress_news_images_auto_size = 8
     ignore_duplicate_articles = {"url"}
     INDEX = "https://www.prospectmagazine.co.uk/issues"
@@ -102,18 +102,24 @@ class ProspectMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
         return soup
 
     def parse_index(self):
-        issues_soup = self.index_to_soup(self.INDEX)
-        curr_issue_a_ele = issues_soup.find("a", class_="pros-collection-landing__item")
-        self.cover_url = curr_issue_a_ele.find("img")["src"].replace(
-            "portrait_small_fit", "portrait_large_fit"
-        )
+        if not _issue_url:
+            issues_soup = self.index_to_soup(self.INDEX)
+            curr_issue_a_ele = issues_soup.find(
+                "a", class_="pros-collection-landing__item"
+            )
+            curr_issue_url = urljoin(self.INDEX, curr_issue_a_ele["href"])
+        else:
+            curr_issue_url = _issue_url
+
+        soup = self.index_to_soup(curr_issue_url)
         issue_name = self.tag_to_string(
-            curr_issue_a_ele.find(class_="pros-collection-landing__item-info-name")
+            soup.find(class_="magazine-lhc__issue-name")
         ).replace(" issue", "")
         self.title = f"{_name}: {issue_name}"
 
-        curr_issue_url = urljoin(self.INDEX, curr_issue_a_ele["href"])
-        soup = self.index_to_soup(curr_issue_url)
+        self.cover_url = soup.find("img", class_="magazine-lhc__cover-image")[
+            "data-src"
+        ].replace("portrait_small_fit", "portrait_large_fit")
 
         # sections order
         sections_order = [
