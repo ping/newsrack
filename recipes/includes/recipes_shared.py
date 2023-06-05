@@ -208,6 +208,7 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
         oldest_article: int,
         custom_params: Dict,
         br: Browser,
+        group_by_date: bool = True,
     ) -> Dict:
         """
         Extract articles
@@ -218,6 +219,7 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
         :param oldest_article: in days
         :param custom_params: overwrite default params
         :param br: browser instance
+        :param group_by_date: group posts by date
         :return:
         """
         posts = self.get_posts(feed_url, oldest_article, custom_params, br)
@@ -243,31 +245,32 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
                 latest_post_date = post_date
                 self.title = format_title(feed_name, post_date)
 
-            section_name = f"{post_date:{get_date_format()}}"
-            if len(self.get_feeds()) > 1:  # type: ignore[attr-defined]
-                section_name = f"{feed_name}: {post_date:{get_date_format()}}"
-            if section_name not in articles:
-                articles[section_name] = []
+            if group_by_date:
+                section_name = f"{post_date:{get_date_format()}}"
+                if len(self.get_feeds()) > 1:  # type: ignore[attr-defined]
+                    section_name = f"{feed_name}: {post_date:{get_date_format()}}"
+            else:
+                section_name = feed_name
 
             with PersistentTemporaryFile(suffix=".json", dir=self.temp_dir) as f:
                 f.write(json.dumps(p).encode("utf-8"))
-            articles[section_name].append(
-                {
-                    "title": BeautifulSoup(
-                        unescape(
-                            p["title"]
+                articles.setdefault(section_name, []).append(
+                    {
+                        "title": BeautifulSoup(
+                            unescape(
+                                p["title"]
+                                if self.is_wordpresscom
+                                else p["title"]["rendered"]
+                            )
+                        ).get_text()
+                        or "Untitled",
+                        "url": "file://" + f.name,
+                        "date": f"{post_date:%-d %B, %Y}",
+                        "description": unescape(
+                            p["excerpt"]
                             if self.is_wordpresscom
-                            else p["title"]["rendered"]
-                        )
-                    ).get_text()
-                    or "Untitled",
-                    "url": "file://" + f.name,
-                    "date": f"{post_date:%-d %B, %Y}",
-                    "description": unescape(
-                        p["excerpt"]
-                        if self.is_wordpresscom
-                        else p["excerpt"]["rendered"]
-                    ),
-                }
-            )
+                            else p["excerpt"]["rendered"]
+                        ),
+                    }
+                )
         return articles
