@@ -211,6 +211,17 @@ recipes: List[Recipe] = [
         ),
     ),
     Recipe(
+        recipe="harpers-magazine",
+        slug="harpers-magazine",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Magazines",
+        overwrite_cover=False,
+        tags=["editorial", "commentary"],
+        enable_on=(first_n_days_of_month(2, -4) or last_n_days_of_month(10, -4))
+        and onlyat_hours(list(range(0, 6)), -4),
+    ),
+    Recipe(
         recipe="harvard-intl-review",
         slug="harvard-intl-review",
         src_ext="mobi",
