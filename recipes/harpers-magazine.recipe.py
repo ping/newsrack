@@ -81,18 +81,20 @@ class HarpersMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
         return str(soup)
 
     def preprocess_html(self, soup):
-        # tweak ui elements
+        # move subheading to before byline (instead of after)
         subheading_ele = soup.find(class_="subheading")
         byline_ele = soup.find(class_="byline")
         if byline_ele and subheading_ele:
             byline_ele.insert_before(subheading_ele.extract())
 
+        # strip extraneous stuff from author bio
         for bio in soup.find_all(class_="author-bio"):
             for dec_ele in bio.find_all("br"):
                 dec_ele.decompose()
             for unwrap_ele in bio.find_all("p") + bio.find_all("a"):
                 unwrap_ele.unwrap()
 
+        # remove extraneous hr
         after_post_ele = soup.find(class_="after-post-content")
         if after_post_ele:
             for hr in after_post_ele.find_all("hr"):
@@ -112,25 +114,29 @@ class HarpersMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
         self.title = f'{_name}: {self.tag_to_string(soup.find("h1", class_="issue-heading")).strip()}'
         self.cover_url = soup.find("img", class_="cover-img")["src"]
 
-        articles = []
-        for card in soup.find_all("div", class_="article-card"):
-            title_ele = card.find(class_="ac-title")
-            if not title_ele:
+        articles = {}
+        for section_name in ("features", "readings", "articles"):
+            section = soup.find("section", class_=f"issue-{section_name}")
+            if not section:
                 continue
-            article_url = card.find("a")["href"]
-            article_title = self.tag_to_string(title_ele)
-            article_description = (
-                f'{self.tag_to_string(card.find(class_="ac-tax"))} '
-                f'{self.tag_to_string(card.find(class_="ac-subtitle"))}'
-            ).strip()
-            articles.append(
-                {
-                    "url": article_url,
-                    "title": article_title,
-                    "description": article_description,
-                }
-            )
-        return [(_name, articles)]
+            for card in section.find_all("div", class_="article-card"):
+                title_ele = card.find(class_="ac-title")
+                if not title_ele:
+                    continue
+                article_url = card.find("a")["href"]
+                article_title = self.tag_to_string(title_ele)
+                article_description = (
+                    f'{self.tag_to_string(card.find(class_="ac-tax"))} '
+                    f'{self.tag_to_string(card.find(class_="ac-subtitle"))}'
+                ).strip()
+                articles.setdefault(section_name.title(), []).append(
+                    {
+                        "url": article_url,
+                        "title": article_title,
+                        "description": article_description,
+                    }
+                )
+        return articles.items()
 
     # Harper's changes the content it delivers based on cookies, so the
     # following ensures that we send no cookies
