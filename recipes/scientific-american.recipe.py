@@ -20,6 +20,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 
 
 _name = "Scientific American"
+_issue_url = ""
 
 
 class ScientificAmerican(BasicNewsrackRecipe, BasicNewsRecipe):
@@ -129,12 +130,15 @@ class ScientificAmerican(BasicNewsrackRecipe, BasicNewsRecipe):
                 self.pub_date = pub_date
 
     def parse_index(self):
-        # Get the cover, date and issue URL
-        fp_soup = self.index_to_soup("https://www.scientificamerican.com")
-        curr_issue_link = fp_soup.select(".tout_current-issue__cover a")
-        if not curr_issue_link:
-            self.abort_recipe_processing("Unable to find issue link")
-        issue_url = curr_issue_link[0]["href"]
+        if not _issue_url:
+            fp_soup = self.index_to_soup("https://www.scientificamerican.com")
+            curr_issue_link = fp_soup.select(".tout_current-issue__cover a")
+            if not curr_issue_link:
+                self.abort_recipe_processing("Unable to find issue link")
+            issue_url = curr_issue_link[0]["href"]
+        else:
+            issue_url = _issue_url
+
         soup = self.index_to_soup(issue_url)
         script = soup.find("script", id="__NEXT_DATA__")
         if not script:
