@@ -566,7 +566,7 @@ recipes: List[Recipe] = [
         target_ext=["epub"],
         category="Magazines",
         tags=["europe", "britain"],
-        enable_on=onlyon_weekdays([4]),
+        enable_on=onlyon_weekdays([3, 4]),
         overwrite_cover=False,
     ),
     Recipe(
