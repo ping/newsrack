@@ -33,7 +33,14 @@ class HarpersMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     base_url = "https://harpers.org"
     compress_news_images_auto_size = 8
 
-    keep_only_tags = [dict(class_=["article-content"])]
+    keep_only_tags = [
+        dict(
+            class_=[
+                "article-content",
+                "template-index-archive",  # harper's index
+            ]
+        )
+    ]
     remove_tags = [
         dict(
             class_=[
@@ -45,6 +52,11 @@ class HarpersMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
                 "d-none",
                 "COA_roles_fix_space",
                 "section-tags",
+                # harper's index
+                "aria-font-adjusts",
+                "component-share-buttons",
+                "index-footer",
+                "index-prev-link",
             ]
         )
     ]
@@ -62,21 +74,26 @@ class HarpersMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     blockquote { font-size: 1.25rem; margin-left: 0; text-align: center; }
     .author-bio { margin-top: 2.5rem; font-style: italic; }
     .author-bio em { font-weight: bold; }
+    
+    .index-item { font-size: large; margin: 1rem 0; }
+    .index-statement > p { display: inline-block; margin: 0.5rem 0; }
+    .index-statement > span { display: inline-block; }
+    .index-statement .index-tooltip { font-size: small; }
     """
 
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
         soup.find("meta", attrs={"property": "article:modified_time"})
         # Example: 2023-05-16T16:43:24+00:00
-        post_date = datetime.strptime(
-            (
-                soup.find("meta", attrs={"property": "article:modified_time"})
-                or soup.find("meta", attrs={"property": "article:published_time"})
-            )["content"],
-            "%Y-%m-%dT%H:%M:%S%z",
-        )
-        if (not self.pub_date) or post_date > self.pub_date:
-            self.pub_date = post_date
+        article_datetime = soup.find(
+            "meta", attrs={"property": "article:modified_time"}
+        ) or soup.find("meta", attrs={"property": "article:published_time"})
+        if article_datetime:
+            post_date = datetime.strptime(
+                article_datetime["content"], "%Y-%m-%dT%H:%M:%S%z"
+            )
+            if (not self.pub_date) or post_date > self.pub_date:
+                self.pub_date = post_date
 
         return str(soup)
 
