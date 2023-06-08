@@ -67,8 +67,6 @@ class HarpersMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
         soup.find("meta", attrs={"property": "article:modified_time"})
-        print("*" * 10, soup.find("meta", attrs={"property": "article:modified_time"}))
-
         # Example: 2023-05-16T16:43:24+00:00
         post_date = datetime.strptime(
             (
@@ -94,6 +92,11 @@ class HarpersMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
                 dec_ele.decompose()
             for unwrap_ele in bio.find_all("p") + bio.find_all("a"):
                 unwrap_ele.unwrap()
+
+        after_post_ele = soup.find(class_="after-post-content")
+        if after_post_ele:
+            for hr in after_post_ele.find_all("hr"):
+                hr.decompose()
 
         return soup
 
