@@ -133,6 +133,7 @@ def extract_html(soup):
 
 
 _name = "The Atlantic Magazine"
+_issue_url = ""
 
 
 class TheAtlanticMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
@@ -219,7 +220,7 @@ class TheAtlanticMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
                 self.pub_date = published_date
 
     def parse_index(self):
-        soup = self.index_to_soup(self.INDEX)
+        soup = self.index_to_soup(_issue_url if _issue_url else self.INDEX)
         script = soup.findAll("script", id="__NEXT_DATA__")
         if not script:
             raise NoJSON("No script tag with JSON data found")
@@ -229,9 +230,13 @@ class TheAtlanticMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
             data.get("props", {}).get("pageProps", {}).get("urqlState", {}).values()
         ):
             d = json.loads(t["data"])
-            if not d.get("latestMagazineIssue"):
+            if not (
+                d.get("latestMagazineIssue")
+                or d.get("magazineIssue", {}).get("toc", {}).get("sections", [])
+            ):
                 continue
-            issue = d["latestMagazineIssue"]
+            issue = d.get("latestMagazineIssue") or d.get("magazineIssue")
+
         self.title = f'{_name}: {issue["displayName"]}'
         self.cover_url = (
             issue["cover"]["srcSet"].split(",")[-1].strip().split(" ")[0].strip()

@@ -14,6 +14,7 @@ from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 _name = "Foreign Affairs"
+_issue_url = ""
 
 
 def get_issue_data(br, log, node_id="1126213", year="2020", volnum="99", issue_vol="5"):
@@ -155,7 +156,7 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
     """
 
     def parse_index(self):
-        soup = self.index_to_soup(self.INDEX)
+        soup = self.index_to_soup(_issue_url if _issue_url else self.INDEX)
         # get edition
         edition_date_ele = soup.find("meta", property="og:title")
         if edition_date_ele:

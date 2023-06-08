@@ -31,6 +31,7 @@ def absurl(x):
 
 
 _name = "MIT Technology Review Magazine"
+_issue_url = ""
 
 
 class MitTechnologyReviewMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
@@ -139,7 +140,7 @@ class MitTechnologyReviewMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
         return str(soup)
 
     def parse_index(self):
-        soup = self.index_to_soup(self.INDEX)
+        soup = self.index_to_soup(_issue_url if _issue_url else self.INDEX)
         index = {}
         for script in soup.find_all(name="script"):
             if not script.contents:

@@ -14,6 +14,7 @@ from calibre.utils.date import parse_date
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "The Spectator"
+_issue_url = ""
 
 
 class SpectatorMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
@@ -106,7 +107,9 @@ class SpectatorMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
         return soup
 
     def parse_index(self):
-        soup = self.index_to_soup("https://www.spectator.co.uk/magazine")
+        soup = self.index_to_soup(
+            _issue_url if _issue_url else "https://www.spectator.co.uk/magazine"
+        )
         cover_ele = soup.find("img", class_="magazine-header__image")
         if cover_ele:
             cover_url = cover_ele["src"]
@@ -114,6 +117,7 @@ class SpectatorMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
         issue_date_ele = soup.find(name="time", class_="magazine-header__meta-item")
         if issue_date_ele:
             self.title = f"{_name}: {self.tag_to_string(issue_date_ele)}"
+            self.log(f"Found: {self.title}")
 
         feed = {}
         for sect_link in soup.select(

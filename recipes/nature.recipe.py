@@ -27,6 +27,7 @@ def check_words(words):
 
 
 _name = "Nature"
+_issue_url = ""
 
 
 class Nature(BasicNewsrackRecipe, BasicNewsRecipe):
@@ -133,7 +134,9 @@ class Nature(BasicNewsrackRecipe, BasicNewsRecipe):
         return soup
 
     def parse_index(self):
-        soup = self.index_to_soup(BASE + "/nature/current-issue")
+        soup = self.index_to_soup(
+            _issue_url if _issue_url else f"{BASE}/nature/current-issue"
+        )
         self.cover_url = (
             "https:"
             + soup.find("img", attrs={"data-test": check_words("issue-cover-image")})[
