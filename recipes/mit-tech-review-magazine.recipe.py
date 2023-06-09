@@ -47,7 +47,7 @@ class MitTechnologyReviewMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
     remove_empty_feeds = True
     masthead_url = "https://wp-preprod.technologyreview.com/wp-content/uploads/2021/08/Screen-Shot-2021-08-20-at-11.11.12-AM-e1629473232355.png"
 
-    compress_news_images = False
+    compress_news_images_auto_size = 10
 
     remove_attributes = ["height", "width", "style", "padding", "padding-top"]
 
@@ -193,9 +193,7 @@ class MitTechnologyReviewMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
                                 continue
                             post_config = post["config"]
                             topic = post_config.get("topic", "Articles")
-                            if topic not in feeds:
-                                feeds[topic] = []
-                            feeds[topic].append(
+                            feeds.setdefault(topic, []).append(
                                 {
                                     "title": post_config["title"],
                                     "description": post_config["excerpt"],
@@ -203,4 +201,4 @@ class MitTechnologyReviewMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
                                 }
                             )
 
-        return [(key, val) for key, val in feeds.items()]
+        return feeds.items()
