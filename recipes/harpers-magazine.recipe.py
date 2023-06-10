@@ -145,8 +145,11 @@ class HarpersMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
                     f'{self.tag_to_string(card.find(class_="ac-tax"))} '
                     f'{self.tag_to_string(card.find(class_="ac-subtitle"))}'
                 ).strip()
-                if card.find(class_="byline"):
-                    article_description += f' {self.tag_to_string(card.find(class_="byline")).strip().strip(",")}'
+                byline = card.find(class_="byline")
+                if byline:
+                    article_description += (
+                        f' {self.tag_to_string(byline).strip().strip(",")}'
+                    )
                 articles.setdefault(section_name.title(), []).append(
                     {
                         "url": article_url,
