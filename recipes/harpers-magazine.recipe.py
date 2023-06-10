@@ -51,6 +51,7 @@ class HarpersMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
                 "d-none",
                 "COA_roles_fix_space",
                 "section-tags",
+                "comma",
                 # harper's index
                 "aria-font-adjusts",
                 "component-share-buttons",
@@ -97,7 +98,8 @@ class HarpersMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
         return str(soup)
 
     def preprocess_html(self, soup):
-        # move subheading to before byline (instead of after)
+        # General UI tweaks
+        # move subheading to before byline (instead of where it is now, after)
         subheading_ele = soup.find(class_="subheading")
         byline_ele = soup.find(class_="byline")
         if byline_ele and subheading_ele:
@@ -111,10 +113,8 @@ class HarpersMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
                 unwrap_ele.unwrap()
 
         # remove extraneous hr
-        after_post_ele = soup.find(class_="after-post-content")
-        if after_post_ele:
-            for hr in after_post_ele.find_all("hr"):
-                hr.decompose()
+        for hr in soup.select(".after-post-content hr"):
+            hr.decompose()
 
         return soup
 
@@ -145,6 +145,8 @@ class HarpersMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
                     f'{self.tag_to_string(card.find(class_="ac-tax"))} '
                     f'{self.tag_to_string(card.find(class_="ac-subtitle"))}'
                 ).strip()
+                if card.find(class_="byline"):
+                    article_description += f' {self.tag_to_string(card.find(class_="byline")).strip().strip(",")}'
                 articles.setdefault(section_name.title(), []).append(
                     {
                         "url": article_url,
