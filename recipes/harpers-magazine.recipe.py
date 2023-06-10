@@ -5,9 +5,8 @@ from urllib.parse import urljoin
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe
+from recipes_shared import BasicCookielessNewsrackRecipe
 
-from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -15,7 +14,7 @@ _name = "Harper's Magazine"
 _issue_url = ""
 
 
-class HarpersMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
+class HarpersMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "ping"
     description = (
@@ -154,17 +153,3 @@ class HarpersMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
                     }
                 )
         return articles.items()
-
-    # Harper's changes the content it delivers based on cookies, so the
-    # following ensures that we send no cookies
-    def get_browser(self, *args, **kwargs):
-        return self
-
-    def clone_browser(self, *args, **kwargs):
-        return self.get_browser()
-
-    def open_novisit(self, *args, **kwargs):
-        br = browser()
-        return br.open_novisit(*args, **kwargs)
-
-    open = open_novisit

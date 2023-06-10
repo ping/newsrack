@@ -7,9 +7,8 @@ from urllib.parse import urlparse, urljoin
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe
+from recipes_shared import BasicCookielessNewsrackRecipe
 
-from calibre import browser
 from calibre.utils.date import parse_date
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -17,7 +16,7 @@ _name = "The Spectator"
 _issue_url = ""
 
 
-class SpectatorMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
+class SpectatorMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     title = _name
     description = (
         "The Spectator is a weekly British magazine on politics, culture, and current affairs. "
@@ -144,16 +143,3 @@ class SpectatorMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
                     }
                 )
         return feed.items()
-
-    # Ensure that we send no cookies
-    def get_browser(self, *args, **kwargs):
-        return self
-
-    def clone_browser(self, *args, **kwargs):
-        return self.get_browser()
-
-    def open_novisit(self, *args, **kwargs):
-        br = browser()
-        return br.open_novisit(*args, **kwargs)
-
-    open = open_novisit

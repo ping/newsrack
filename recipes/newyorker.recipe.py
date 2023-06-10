@@ -14,9 +14,8 @@ from datetime import datetime, timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe
+from recipes_shared import BasicCookielessNewsrackRecipe
 
-from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes, prefixed_classes
 from calibre.ebooks.markdown import Markdown
@@ -31,7 +30,7 @@ def absurl(x):
 _name = "New Yorker"
 
 
-class NewYorker(BasicNewsrackRecipe, BasicNewsRecipe):
+class NewYorker(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
 
     title = _name
     description = (
@@ -330,17 +329,3 @@ class NewYorker(BasicNewsrackRecipe, BasicNewsRecipe):
                 )
 
         return [(k, stories[k]) for k, v in stories.items()]
-
-    # The New Yorker changes the content it delivers based on cookies, so the
-    # following ensures that we send no cookies
-    def get_browser(self, *args, **kwargs):
-        return self
-
-    def clone_browser(self, *args, **kwargs):
-        return self.get_browser()
-
-    def open_novisit(self, *args, **kwargs):
-        br = browser()
-        return br.open_novisit(*args, **kwargs)
-
-    open = open_novisit

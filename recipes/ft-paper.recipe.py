@@ -12,16 +12,15 @@ from urllib.parse import quote_plus, urljoin
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, format_title
+from recipes_shared import BasicCookielessNewsrackRecipe, format_title
 
-from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 _name = "Financial Times (Print)"
 
 
-class FinancialTimesPrint(BasicNewsrackRecipe, BasicNewsRecipe):
+class FinancialTimesPrint(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "ping"
     description = (
@@ -39,6 +38,7 @@ class FinancialTimesPrint(BasicNewsrackRecipe, BasicNewsRecipe):
     ignore_duplicate_articles = {"url"}
 
     compress_news_images_auto_size = 6
+    request_as_gbot = True
 
     extra_css = """
     .headline { font-size: 1.8rem; margin-bottom: 0.5rem; }
@@ -173,20 +173,3 @@ class FinancialTimesPrint(BasicNewsrackRecipe, BasicNewsRecipe):
         </body></html>
         """
         return html_output
-
-    # FT changes the content it delivers based on cookies, so the
-    # following ensures that we send no cookies
-    def get_browser(self, *args, **kwargs):
-        return self
-
-    def clone_browser(self, *args, **kwargs):
-        return self.get_browser()
-
-    def open_novisit(self, *args, **kwargs):
-        br = browser(
-            user_agent="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
-        )
-        br.addheaders = [("referer", "https://www.google.com/")]
-        return br.open_novisit(*args, **kwargs)
-
-    open = open_novisit

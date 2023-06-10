@@ -7,6 +7,7 @@ from html import unescape
 from typing import Optional, Dict, List
 from urllib.parse import urlencode
 
+from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
 from calibre.utils.browser import Browser
@@ -48,6 +49,33 @@ class BasicNewsrackRecipe(object):
         if self.temp_dir:
             self.log("Deleting temp files...")  # type: ignore[attr-defined]
             shutil.rmtree(self.temp_dir)
+
+
+class BasicCookielessNewsrackRecipe(BasicNewsrackRecipe):
+    """
+    The basic recipe extended to not send cookies. This is meant for news
+    sources that change the content it delivers based on cookies.
+    """
+
+    request_as_gbot = False  # flag to toggle gbot emulation
+
+    def get_browser(self, *args, **kwargs):
+        return self
+
+    def clone_browser(self, *args, **kwargs):
+        return self.get_browser()
+
+    def open_novisit(self, *args, **kwargs):
+        if self.request_as_gbot:
+            br = browser(
+                user_agent="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+            )
+            br.addheaders = [("referer", "https://www.google.com/")]
+        else:
+            br = browser()
+        return br.open_novisit(*args, **kwargs)
+
+    open = open_novisit
 
 
 class WordPressNewsrackRecipe(BasicNewsrackRecipe):
