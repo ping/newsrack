@@ -64,7 +64,7 @@ class ProspectMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
         display: inline-block; font-weight: bold; color: #444; margin-right: 0.5rem; }
     .prop-book-review-header-wrapper_details-date { display: inline-block; }
     .gd-picture img { display: block; max-width: 100%; height: auto; }
-    .pros-article-body__img-caption {
+    .pros-article-body__img-caption, .prop-book-review-header-wrapper__image-caption {
         font-size: 0.8rem; display: block; margin-top: 0.2rem;
     }
     .pullquote, blockquote { text-align: center; margin-left: 0; margin-bottom: 0.4rem; font-size: 1.25rem; }
@@ -76,10 +76,15 @@ class ProspectMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     def preprocess_html(self, soup):
         # re-position lede image
         lede_img = soup.find("img", class_="prop-book-review-header-wrapper_image")
+        leded_img_caption = soup.find(
+            "div", class_="prop-book-review-header-wrapper__image-caption"
+        )
         meta = soup.find("div", class_="prop-book-review-header-wrapper_details")
         if lede_img and meta:
             lede_img = lede_img.extract()
             meta.insert_after(lede_img)
+            if leded_img_caption:
+                lede_img.insert_after(leded_img_caption)
 
         for img in soup.find_all("img", attrs={"data-src": True}):
             img["src"] = img["data-src"]
