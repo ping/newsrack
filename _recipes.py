@@ -148,21 +148,22 @@ recipes: List[Recipe] = [
             logo_path_or_url="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/FiveThirtyEight_Logo.svg/1024px-FiveThirtyEight_Logo.svg.png"
         ),
     ),
-    Recipe(
-        recipe="forbes-editors-picks",
-        slug="forbes-editors-picks",
-        src_ext="mobi",
-        target_ext=["epub"],
-        timeout=360,  # will glitch often and take a really long time
-        retry_attempts=1,
-        category="Online Magazines",
-        tags=["business"],
-        enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -4)
-        and onlyat_hours(list(range(8, 20)), -4),
-        cover_options=CoverOptions(
-            logo_path_or_url="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Forbes_logo.svg/1024px-Forbes_logo.svg.png"
-        ),
-    ),
+    # Not reading this
+    # Recipe(
+    #     recipe="forbes-editors-picks",
+    #     slug="forbes-editors-picks",
+    #     src_ext="mobi",
+    #     target_ext=["epub"],
+    #     timeout=360,  # will glitch often and take a really long time
+    #     retry_attempts=1,
+    #     category="Online Magazines",
+    #     tags=["business"],
+    #     enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -4)
+    #     and onlyat_hours(list(range(8, 20)), -4),
+    #     cover_options=CoverOptions(
+    #         logo_path_or_url="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Forbes_logo.svg/1024px-Forbes_logo.svg.png"
+    #     ),
+    # ),
     Recipe(
         recipe="foreign-affairs",
         slug="foreign-affairs",
