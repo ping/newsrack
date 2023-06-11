@@ -66,12 +66,12 @@ class LondonReviewOfBooks(BasicNewsrackRecipe, BasicNewsRecipe):
         return br
 
     def preprocess_html(self, soup):
-        info_ele = soup.find(
-            name="script",
+        info = self.get_ld_json(
+            soup,
+            lambda d: d,
             attrs={"data-schema": "Article", "type": "application/ld+json"},
         )
-        if info_ele:
-            info = json.loads(info_ele.contents[0])
+        if info:
             soup.body["data-og-summary"] = info.get("description", "")
             # example: 2022-07-28T12:07:08+00:00
             modified_date = datetime.strptime(

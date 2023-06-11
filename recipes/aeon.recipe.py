@@ -56,13 +56,7 @@ class Aeon(BasicNewsrackRecipe, BasicNewsRecipe):
 
     def preprocess_raw_html_(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
-        for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
-            if not script.contents:
-                continue
-            article = json.loads(script.contents[0])
-            if not (article.get("@type") and article["@type"] == "Article"):
-                continue
-            break
+        article = self.get_ld_json(soup, lambda d: d.get("@type", "") == "Article")
         if not (article and article.get("articleBody")):
             err_msg = f"Unable to find article: {url}"
             self.log.warn(err_msg)

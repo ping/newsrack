@@ -51,6 +51,42 @@ class BasicNewsrackRecipe(object):
             self.log("Deleting temp files...")  # type: ignore[attr-defined]
             shutil.rmtree(self.temp_dir)
 
+    def get_ld_json(self, soup: BeautifulSoup, filter_fn: Callable, attrs=None) -> Dict:
+        """
+        Get the script element containing the LD-JSON content
+
+        :param soup:
+        :param filter_fn:
+        :param attrs:
+        :return:
+        """
+        if attrs is None:
+            attrs = {"type": "application/ld+json"}
+        for script_json in soup.find_all("script", attrs=attrs):
+            if not script_json.contents:
+                continue
+            data = json.loads(script_json.contents[0])
+            if filter_fn(data):
+                return data
+        return {}
+
+    def generate_debug_index(self, urls):
+        """
+        Helper function to debug articles. To be used in parse_index().
+
+        :param urls:
+        :return:
+        """
+        return [
+            (
+                "Tests",
+                [
+                    {"title": f"Test {n}", "url": url}
+                    for n, url in enumerate(urls, start=1)
+                ],
+            )
+        ]
+
     def group_feeds_by_date(
         self, timezone_offset_hours: int = 0, filter_article: Optional[Callable] = None
     ):

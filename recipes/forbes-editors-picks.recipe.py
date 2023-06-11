@@ -75,13 +75,9 @@ class ForbesEditorsPicks(BasicNewsrackRecipe, BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
         article = soup.find("article")
-        for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
-            meta = json.loads(script.contents[0])
-            if not (meta.get("@type") and meta["@type"] == "NewsArticle"):
-                continue
-            modified_date = meta.get("dateModified") or meta.get("datePublished")
-            article["data-og-modified-date"] = modified_date
-            break
+        meta = self.get_ld_json(soup, lambda d: d.get("@type", "") == "NewsArticle")
+        modified_date = meta.get("dateModified") or meta.get("datePublished")
+        article["data-og-modified-date"] = modified_date
         for img in soup.find_all("progressive-image"):
             img.name = "img"
         return str(soup)

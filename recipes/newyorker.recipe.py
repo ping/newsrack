@@ -126,101 +126,92 @@ class NewYorker(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
                     images.append(interactive_img)
             except Exception as err:
                 self.log.warning(f"Unable to get interactive elements: {err}")
-        for script in soup.find_all(name="script", type="application/ld+json"):
-            info = json.loads(script.contents[0])
-            if not info.get("headline"):
-                continue
-            interactive_container = soup.body.find(id="___gatsby")
-            try:
-                if interactive_container:
-                    interactive_container.clear()
-                    md = Markdown()
-                    article_body = info["articleBody"]
-                    # replace line breaks
-                    article_body = re.sub(r"\\\n", "<br/>", article_body)
-                    # replace +++ md
-                    article_body = re.sub(r"\+\+\+.*?\n", "", article_body)
-                    article_body = re.sub(r"{: .+}\n", "", article_body)
-                    # replace image markdown with image markup
-                    if images:
-                        image_markdowns = re.findall(
-                            r"\[#(?P<md_type>[a-z]+): /(?P<md_path>[a-z]+)/(?P<image_id>[a-f0-9]+)\]",
-                            info["articleBody"],
-                        )
-                        for md_type, md_path, image_id in image_markdowns:
-                            image_source = [
-                                img for img in images if img.get("id", "") == image_id
-                            ]
-                            if image_source:
-                                image_source = image_source[0]
-                                image_url = (
-                                    image_source.get("sources", {})
-                                    .get(
-                                        "md", {}
-                                    )  # other sizes as well, e.g. "sm" or "lg"
-                                    .get("url", "")
-                                )
-                                if image_url:
-                                    caption_html = '<span class="caption">'
-                                    if image_source.get("dangerousCaption"):
-                                        caption_html += image_source["dangerousCaption"]
-                                    if image_source.get("dangerousCredit"):
-                                        caption_html += (
-                                            f' {image_source["dangerousCredit"]}'
-                                        )
-                                    caption_html += "</span>"
-                                    image_html = f'<p class="cust-lightbox-img"><img src="{image_url}">{caption_html}</p>'
-                                    article_body = article_body.replace(
-                                        f"[#{md_type}: /{md_path}/{image_id}]",
-                                        image_html,
-                                    )
-
-                    interactive_container.append(
-                        BeautifulSoup(md.convert(article_body))
+        info = self.get_ld_json(soup, lambda d: d.get("headline"))
+        interactive_container = soup.body.find(id="___gatsby")
+        try:
+            if interactive_container:
+                interactive_container.clear()
+                md = Markdown()
+                article_body = info["articleBody"]
+                # replace line breaks
+                article_body = re.sub(r"\\\n", "<br/>", article_body)
+                # replace +++ md
+                article_body = re.sub(r"\+\+\+.*?\n", "", article_body)
+                article_body = re.sub(r"{: .+}\n", "", article_body)
+                # replace image markdown with image markup
+                if images:
+                    image_markdowns = re.findall(
+                        r"\[#(?P<md_type>[a-z]+): /(?P<md_path>[a-z]+)/(?P<image_id>[a-f0-9]+)\]",
+                        info["articleBody"],
                     )
-                    interactive_container["class"] = "og"
-            except Exception as e:
-                self.log.warning(f"Unable to convert interactive article: {e}")
+                    for md_type, md_path, image_id in image_markdowns:
+                        image_source = [
+                            img for img in images if img.get("id", "") == image_id
+                        ]
+                        if image_source:
+                            image_source = image_source[0]
+                            image_url = (
+                                image_source.get("sources", {})
+                                .get("md", {})  # other sizes as well, e.g. "sm" or "lg"
+                                .get("url", "")
+                            )
+                            if image_url:
+                                caption_html = '<span class="caption">'
+                                if image_source.get("dangerousCaption"):
+                                    caption_html += image_source["dangerousCaption"]
+                                if image_source.get("dangerousCredit"):
+                                    caption_html += (
+                                        f' {image_source["dangerousCredit"]}'
+                                    )
+                                caption_html += "</span>"
+                                image_html = f'<p class="cust-lightbox-img"><img src="{image_url}">{caption_html}</p>'
+                                article_body = article_body.replace(
+                                    f"[#{md_type}: /{md_path}/{image_id}]",
+                                    image_html,
+                                )
 
-            h1 = soup.new_tag("h1", attrs={"class": "og headline"})
-            h1.append(info["headline"])
-            soup.body.insert(0, h1)
+                interactive_container.append(BeautifulSoup(md.convert(article_body)))
+                interactive_container["class"] = "og"
+        except Exception as e:
+            self.log.warning(f"Unable to convert interactive article: {e}")
 
-            meta = soup.new_tag("div", attrs={"class": "og article-meta"})
-            authors = [a["name"] for a in info.get("author", [])]
-            if authors:
-                author_ele = soup.new_tag("span", attrs={"class": "author"})
-                author_ele.append(", ".join(authors))
-                meta.append(author_ele)
+        h1 = soup.new_tag("h1", attrs={"class": "og headline"})
+        h1.append(info["headline"])
+        soup.body.insert(0, h1)
 
-            pub_date = datetime.fromisoformat(info["datePublished"])
-            pub_ele = soup.new_tag("span", attrs={"class": "published-dt"})
-            pub_ele["datePublished"] = info["datePublished"]
-            pub_ele.append(f"{pub_date:%-d %B, %Y}")
-            meta.append(pub_ele)
+        meta = soup.new_tag("div", attrs={"class": "og article-meta"})
+        authors = [a["name"] for a in info.get("author", [])]
+        if authors:
+            author_ele = soup.new_tag("span", attrs={"class": "author"})
+            author_ele.append(", ".join(authors))
+            meta.append(author_ele)
 
-            if info.get("dateModified"):
-                mod_date = datetime.fromisoformat(info["dateModified"])
-                mod_ele = soup.new_tag("span", attrs={"class": "modified-dt"})
-                mod_ele["dateModified"] = info["dateModified"]
-                mod_ele.append(f"Updated {mod_date:%-I:%M%p %-d %B, %Y}")
-                meta.append(mod_ele)
-            h1.insert_after(meta)
+        pub_date = datetime.fromisoformat(info["datePublished"])
+        pub_ele = soup.new_tag("span", attrs={"class": "published-dt"})
+        pub_ele["datePublished"] = info["datePublished"]
+        pub_ele.append(f"{pub_date:%-d %B, %Y}")
+        meta.append(pub_ele)
 
-            if info.get("description"):
-                subheadline = soup.new_tag("div", attrs={"class": "og sub-headline"})
-                subheadline.append(info["description"])
-                h1.insert_after(subheadline)
+        if info.get("dateModified"):
+            mod_date = datetime.fromisoformat(info["dateModified"])
+            mod_ele = soup.new_tag("span", attrs={"class": "modified-dt"})
+            mod_ele["dateModified"] = info["dateModified"]
+            mod_ele.append(f"Updated {mod_date:%-I:%M%p %-d %B, %Y}")
+            meta.append(mod_ele)
+        h1.insert_after(meta)
 
-            if info.get("image"):
-                lede_img_container = soup.new_tag(
-                    "div", attrs={"class": "og responsive-asset"}
-                )
-                lede_image = soup.new_tag("img", attrs={"src": info["image"][-1]})
-                lede_img_container.append(lede_image)
-                meta.insert_after(lede_img_container)
+        if info.get("description"):
+            subheadline = soup.new_tag("div", attrs={"class": "og sub-headline"})
+            subheadline.append(info["description"])
+            h1.insert_after(subheadline)
 
-            break
+        if info.get("image"):
+            lede_img_container = soup.new_tag(
+                "div", attrs={"class": "og responsive-asset"}
+            )
+            lede_image = soup.new_tag("img", attrs={"src": info["image"][-1]})
+            lede_img_container.append(lede_image)
+            meta.insert_after(lede_img_container)
 
         return str(soup)
 

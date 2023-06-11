@@ -104,10 +104,10 @@ class FiveBooks(BasicNewsrackRecipe, BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
         content = soup.find(class_="main-content")
-        script = soup.find("script", attrs={"type": "application/ld+json"})
-        if not (script and script.get_text()):
+        data = self.get_ld_json(soup, lambda d: d.get("@graph", []))
+        if not data:
             return raw_html
-        graph = json.loads(script.get_text()).get("@graph", [])
+        graph = data.get("@graph", [])
         if not graph:
             return raw_html
         for g in graph:

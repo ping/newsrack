@@ -50,11 +50,10 @@ class SmithsonianMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     def preprocess_html(self, soup):
         for hr in soup.select(".category-label hr") + soup.select(".article-line hr"):
             hr.decompose()
-        for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
-            article = json.loads(script.contents[0])
-            date_modified = parse_date(article["dateModified"])
-            if (not self.pub_date) or date_modified > self.pub_date:
-                self.pub_date = date_modified
+        article = self.get_ld_json(soup, lambda d: d.get("dateModified"))
+        date_modified = parse_date(article["dateModified"])
+        if (not self.pub_date) or date_modified > self.pub_date:
+            self.pub_date = date_modified
         return soup
 
     def populate_article_metadata(self, article, soup, first):
