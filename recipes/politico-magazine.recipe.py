@@ -8,13 +8,11 @@ politico.com
 """
 import os
 import sys
-from datetime import timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, format_title
 
-from calibre.web.feeds import Feed
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "POLITICO Magazine"
@@ -62,48 +60,4 @@ class PoliticoMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
             self.title = format_title(_name, article.utctime)
 
     def parse_feeds(self):
-        # convert single parsed feed into date-sectioned feed
-        # use this only if there is just 1 feed
-        parsed_feeds = super().parse_feeds()
-        if len(parsed_feeds or []) != 1:
-            return parsed_feeds
-
-        articles = []
-        for feed in parsed_feeds:
-            articles.extend(feed.articles)
-        articles = sorted(articles, key=lambda a: a.utctime, reverse=True)
-        new_feeds = []
-        curr_feed = None
-        parsed_feed = parsed_feeds[0]
-        for i, a in enumerate(articles, start=1):
-            date_published = a.utctime.replace(tzinfo=timezone.utc)
-            article_index = f"{date_published:%-d %B, %Y}"
-            if i == 1:
-                curr_feed = Feed(log=parsed_feed.logger)
-                curr_feed.title = article_index
-                curr_feed.description = parsed_feed.description
-                curr_feed.image_url = parsed_feed.image_url
-                curr_feed.image_height = parsed_feed.image_height
-                curr_feed.image_alt = parsed_feed.image_alt
-                curr_feed.oldest_article = parsed_feed.oldest_article
-                curr_feed.articles = []
-                curr_feed.articles.append(a)
-                continue
-            if curr_feed.title == article_index:
-                curr_feed.articles.append(a)
-            else:
-                new_feeds.append(curr_feed)
-                curr_feed = Feed(log=parsed_feed.logger)
-                curr_feed.title = article_index
-                curr_feed.description = parsed_feed.description
-                curr_feed.image_url = parsed_feed.image_url
-                curr_feed.image_height = parsed_feed.image_height
-                curr_feed.image_alt = parsed_feed.image_alt
-                curr_feed.oldest_article = parsed_feed.oldest_article
-                curr_feed.articles = []
-                curr_feed.articles.append(a)
-            if i == len(articles):
-                # last article
-                new_feeds.append(curr_feed)
-
-        return new_feeds
+        return self.group_feeds_by_date()

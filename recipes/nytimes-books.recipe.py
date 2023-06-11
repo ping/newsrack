@@ -14,9 +14,7 @@ from urllib.parse import urlparse
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, format_title
 
-from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
-from calibre.web.feeds import Feed
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "New York Times Books"
@@ -718,110 +716,4 @@ class NYTimesBooks(BasicNewsrackRecipe, BasicNewsRecipe):
         return raw_html
 
     def parse_feeds(self):
-        # convert single parsed feed into date-sectioned feed
-        # use this only if there is just 1 feed
-        parsed_feeds = super().parse_feeds()
-        if len(parsed_feeds or []) != 1:
-            return parsed_feeds
-
-        articles = []
-        for feed in parsed_feeds:
-            articles.extend(feed.articles)
-        articles = sorted(articles, key=lambda a: a.utctime, reverse=True)
-        new_feeds = []
-        curr_feed = None
-        parsed_feed = parsed_feeds[0]
-        for i, a in enumerate(articles, start=1):
-            date_published = a.utctime.replace(tzinfo=datetime.timezone.utc)
-            article_index = f"{date_published:%-d %B, %Y}"
-            if i == 1:
-                curr_feed = Feed(log=parsed_feed.logger)
-                curr_feed.title = article_index
-                curr_feed.description = parsed_feed.description
-                curr_feed.image_url = parsed_feed.image_url
-                curr_feed.image_height = parsed_feed.image_height
-                curr_feed.image_alt = parsed_feed.image_alt
-                curr_feed.oldest_article = parsed_feed.oldest_article
-                curr_feed.articles = []
-                curr_feed.articles.append(a)
-                continue
-            if curr_feed.title == article_index:
-                curr_feed.articles.append(a)
-            else:
-                new_feeds.append(curr_feed)
-                curr_feed = Feed(log=parsed_feed.logger)
-                curr_feed.title = article_index
-                curr_feed.description = parsed_feed.description
-                curr_feed.image_url = parsed_feed.image_url
-                curr_feed.image_height = parsed_feed.image_height
-                curr_feed.image_alt = parsed_feed.image_alt
-                curr_feed.oldest_article = parsed_feed.oldest_article
-                curr_feed.articles = []
-                curr_feed.articles.append(a)
-            if i == len(articles):
-                # last article
-                new_feeds.append(curr_feed)
-
-        return new_feeds
-
-    # The NYT occassionally returns bogus articles for some reason just in case
-    # it is because of cookies, dont store cookies
-    def get_browser(self, *args, **kwargs):
-        return self
-
-    def clone_browser(self, *args, **kwargs):
-        return self.get_browser()
-
-    def open_from_wayback(self, url, br=None):
-        """
-        Fallback to wayback cache from calibre.
-        Modified from `download_url()` from https://github.com/kovidgoyal/calibre/blob/d2977ebec40a66af568adff7976cfd16f99ccbe5/src/calibre/web/site_parsers/nytimes.py
-        :param url:
-        :param br:
-        :return:
-        """
-        from mechanize import Request
-
-        rq = Request(
-            "https://wayback1.calibre-ebook.com/nytimes",
-            data=json.dumps({"url": url}),
-            headers={"User-Agent": "calibre", "Content-Type": "application/json"},
-        )
-        if br is None:
-            br = browser()
-        br.set_handle_gzip(True)
-        return br.open_novisit(rq, timeout=3 * 60)
-
-    def open_novisit(self, *args, **kwargs):
-        target_url = args[0]
-        is_wayback_cached = urlparse(target_url).netloc == "www.nytimes.com"
-
-        if is_wayback_cached and self.bot_blocked:
-            # don't use wayback for static assets because these are not blocked currently
-            # and the wayback cache does not support them anyway
-            self.log.warn(f"Block detected. Fetching from wayback cache: {target_url}")
-            return self.open_from_wayback(target_url)
-
-        br = browser(
-            user_agent="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
-        )
-        try:
-            return br.open_novisit(*args, **kwargs)
-        except Exception as e:
-            if hasattr(e, "code") and e.code == 403:
-                self.bot_blocked = True
-                self.delay = 0  # I don't think this makes a difference but oh well
-                if is_wayback_cached:
-                    self.log.warn(
-                        f"Blocked by bot detection. Fetching from wayback cache: {target_url}"
-                    )
-                    return self.open_from_wayback(target_url)
-
-                # if static asset is also blocked, give up
-                err_msg = f"Blocked by bot detection: {target_url}"
-                self.log.warn(err_msg)
-                self.abort_recipe_processing(err_msg)
-                self.abort_article(err_msg)
-            raise
-
-    open = open_novisit
+        return self.group_feeds_by_date()

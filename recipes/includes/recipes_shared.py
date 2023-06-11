@@ -4,13 +4,14 @@ import shutil
 import time
 from datetime import datetime, timedelta, timezone
 from html import unescape
-from typing import Optional, Dict, List
+from typing import Optional, Dict, List, Callable
 from urllib.parse import urlencode
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
 from calibre.utils.browser import Browser
+from calibre.web.feeds import Feed
 
 
 def get_date_format() -> str:
@@ -49,6 +50,70 @@ class BasicNewsrackRecipe(object):
         if self.temp_dir:
             self.log("Deleting temp files...")  # type: ignore[attr-defined]
             shutil.rmtree(self.temp_dir)
+
+    def group_feeds_by_date(
+        self, timezone_offset_hours: int = 0, filter_article: Optional[Callable] = None
+    ):
+        """
+        Group feed articles by date
+
+        :param timezone_offset_hours:
+        :param filter_article:
+        :return:
+        """
+        parsed_feeds = super().parse_feeds()
+        if len(parsed_feeds or []) != 1:
+            return parsed_feeds
+
+        articles = []
+        for feed in parsed_feeds:
+            if filter_article:
+                articles.extend([a for a in feed.articles if filter_article(a)])
+            else:
+                articles.extend(feed.articles)
+        articles = sorted(articles, key=lambda a: a.utctime, reverse=True)
+        new_feeds = []
+        curr_feed = None
+        parsed_feed = parsed_feeds[0]
+
+        for i, a in enumerate(articles, start=1):
+            date_published = a.utctime.replace(tzinfo=timezone.utc)
+            date_published_loc = date_published.astimezone(
+                timezone(offset=timedelta(hours=timezone_offset_hours))
+            )
+            article_index = f"{date_published_loc:{get_date_format()}}"
+            if i == 1:
+                curr_feed = Feed(log=parsed_feed.logger)
+                curr_feed.title = article_index
+                curr_feed.description = parsed_feed.description
+                curr_feed.image_url = parsed_feed.image_url
+                curr_feed.image_height = parsed_feed.image_height
+                curr_feed.image_alt = parsed_feed.image_alt
+                curr_feed.oldest_article = parsed_feed.oldest_article
+                curr_feed.articles = []
+                curr_feed.articles.append(a)
+                if i == len(articles):
+                    # last article
+                    new_feeds.append(curr_feed)
+                continue
+            if curr_feed.title == article_index:
+                curr_feed.articles.append(a)
+            else:
+                new_feeds.append(curr_feed)
+                curr_feed = Feed(log=parsed_feed.logger)
+                curr_feed.title = article_index
+                curr_feed.description = parsed_feed.description
+                curr_feed.image_url = parsed_feed.image_url
+                curr_feed.image_height = parsed_feed.image_height
+                curr_feed.image_alt = parsed_feed.image_alt
+                curr_feed.oldest_article = parsed_feed.oldest_article
+                curr_feed.articles = []
+                curr_feed.articles.append(a)
+            if i == len(articles):
+                # last article
+                new_feeds.append(curr_feed)
+
+        return new_feeds
 
 
 class BasicCookielessNewsrackRecipe(BasicNewsrackRecipe):
