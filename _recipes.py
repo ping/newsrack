@@ -40,6 +40,14 @@ categories_sort: List[str] = ["News", "Magazines", "Online Magazines", "Arts & C
 # Keep this list in alphabetical order
 recipes: List[Recipe] = [
     Recipe(
+        recipe="aeon",
+        slug="aeon",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Online Magazines",
+        cover_options=CoverOptions(logo_path_or_url="https://aeon.co/logo.png"),
+    ),
+    Recipe(
         recipe="asahi-shimbun",
         slug="asahi-shimbun",
         src_ext="mobi",
