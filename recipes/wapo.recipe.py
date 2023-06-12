@@ -249,10 +249,3 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
             content.get("content_elements"), new_soup.body.article, new_soup, url
         )
         return str(new_soup)
-
-    def parse_index(self):
-        return self.generate_debug_index(
-            [
-                "https://www.washingtonpost.com/world/2023/06/10/colombia-plane-crash-children-survived-explainer/"
-            ]
-        )
