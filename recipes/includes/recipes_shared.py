@@ -164,11 +164,6 @@ class BasicNewsrackRecipe(object):
                 curr_feed.image_alt = parsed_feed.image_alt
                 curr_feed.oldest_article = parsed_feed.oldest_article
                 curr_feed.articles = []
-                curr_feed.articles.append(a)
-                if i == len(articles):
-                    # last article
-                    new_feeds.append(curr_feed)
-                continue
             if curr_feed.title == article_index:
                 curr_feed.articles.append(a)
             else:
