@@ -31,9 +31,7 @@ def embed_image(soup, block):
     return container
 
 
-def json_to_html(raw):
-    data = json.loads(raw)
-
+def json_to_html(data):
     # open('/t/p.json', 'w').write(json.dumps(data, indent=2))
     data = sorted(
         (v["data"] for v in data["props"]["pageProps"]["urqlState"].values()), key=len
@@ -120,14 +118,6 @@ class NoJSON(ValueError):
     pass
 
 
-def extract_html(soup):
-    script = soup.findAll("script", id="__NEXT_DATA__")
-    if not script:
-        raise NoJSON("No script tag with JSON data found")
-    raw = script[0].contents[0]
-    return json_to_html(raw)
-
-
 _name = "The Atlantic"
 
 
@@ -193,6 +183,14 @@ class TheAtlantic(BasicNewsrackRecipe, BasicNewsRecipe):
         ("Notes", "https://feeds.feedburner.com/TheAtlanticNotes"),
     ]
 
+    def extract_html(self, soup):
+        data = self.get_script_json(
+            soup, "", attrs={"id": "__NEXT_DATA__", "src": False}
+        )
+        if not data:
+            raise NoJSON("No script tag with JSON data found")
+        return json_to_html(data)
+
     def get_browser(self):
         br = BasicNewsRecipe.get_browser(self)
         br.set_cookie("inEuropeanUnion", "0", ".theatlantic.com")
@@ -200,7 +198,7 @@ class TheAtlantic(BasicNewsrackRecipe, BasicNewsRecipe):
 
     def preprocess_raw_html(self, raw_html, url):
         try:
-            return extract_html(self.index_to_soup(raw_html))
+            return self.extract_html(self.index_to_soup(raw_html))
         except NoJSON:
             self.log.warn("No JSON found in: {} falling back to HTML".format(url))
         except Exception:

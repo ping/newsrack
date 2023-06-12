@@ -356,9 +356,10 @@ class Economist(BasicNewsrackRecipe, BasicNewsRecipe):
         return ans
 
     def economist_parse_index(self, soup):
-        script_tag = soup.find("script", id="__NEXT_DATA__")
-        if script_tag is not None:
-            data = json.loads(script_tag.string)
+        data = self.get_script_json(
+            soup, "", attrs={"id": "__NEXT_DATA__", "src": False}
+        )
+        if data:
             self.cover_url = safe_dict(
                 data,
                 "props",

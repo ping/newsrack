@@ -3,9 +3,7 @@ __license__ = "GPL v3"
 
 # Original at https://github.com/kovidgoyal/calibre/blob/29cd8d64ea71595da8afdaec9b44e7100bff829a/recipes/scientific_american.recipe
 
-import json
 import os
-import re
 import sys
 from datetime import datetime, timezone, timedelta
 from os.path import splitext
@@ -83,19 +81,8 @@ class ScientificAmerican(BasicNewsrackRecipe, BasicNewsRecipe):
 
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
-        for script in soup.find_all(name="script"):
-            if not script.contents:
-                continue
-            article_js = script.contents[0].strip()
-            if not article_js.startswith("dataLayer"):
-                continue
-            article_js = re.sub(r"dataLayer\s*=\s*", "", article_js)
-            if article_js.endswith(";"):
-                article_js = article_js[:-1]
-            try:
-                info = json.loads(article_js)
-            except json.JSONDecodeError:
-                continue
+        info = self.get_script_json(soup, r"dataLayer\s*=\s*")
+        if info:
             for i in info:
                 if not i.get("content"):
                     continue
@@ -140,16 +127,11 @@ class ScientificAmerican(BasicNewsrackRecipe, BasicNewsRecipe):
             issue_url = _issue_url
 
         soup = self.index_to_soup(issue_url)
-        script = soup.find("script", id="__NEXT_DATA__")
-        if not script:
+        info = self.get_script_json(soup, "", attrs={"id": "__NEXT_DATA__"})
+        if not info:
             self.abort_recipe_processing("Unable to find script")
 
-        issue_info = (
-            json.loads(script.contents[0])
-            .get("props", {})
-            .get("pageProps", {})
-            .get("issue", {})
-        )
+        issue_info = info.get("props", {}).get("pageProps", {}).get("issue", {})
         if not issue_info:
             self.abort_recipe_processing("Unable to find issue info")
 

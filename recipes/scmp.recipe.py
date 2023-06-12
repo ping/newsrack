@@ -1,9 +1,7 @@
 """
 scmp.com
 """
-import json
 import os
-import re
 import sys
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urlparse
@@ -141,29 +139,8 @@ class SCMP(BasicNewsrackRecipe, BasicNewsRecipe):
         ele.append(BeautifulSoup(child_html))
 
     def preprocess_raw_html(self, raw_html, url):
-        article = None
         soup = BeautifulSoup(raw_html)
-
-        for script in soup.find_all("script"):
-            if not script.contents:
-                continue
-            if not script.contents[0].startswith("window.__APOLLO_STATE__"):
-                continue
-            article_js = re.sub(
-                r"window.__APOLLO_STATE__\s*=\s*", "", script.contents[0].strip()
-            )
-            if article_js.endswith(";"):
-                article_js = article_js[:-1]
-            try:
-                article = json.loads(article_js)
-                break
-            except json.JSONDecodeError:
-                # sometimes this borks because of a stray '\n'
-                try:
-                    article = json.loads(article_js.replace("\n", " "))
-                except json.JSONDecodeError:
-                    self.log.exception("Unable to parse __APOLLO_STATE__")
-
+        article = self.get_script_json(soup, r"window.__APOLLO_STATE__\s*=\s*")
         if not article:
             if os.environ.get("recipe_debug_folder", ""):
                 recipe_folder = os.path.join(os.environ["recipe_debug_folder"], "scmp")

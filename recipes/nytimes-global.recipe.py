@@ -9,7 +9,6 @@ nytimes.com
 import datetime
 import json
 import os
-import re
 import sys
 from urllib.parse import urlparse
 
@@ -692,26 +691,8 @@ class NYTimesGlobal(BasicNewsrackRecipe, BasicNewsRecipe):
         return str(new_soup)
 
     def preprocess_raw_html(self, raw_html, url):
-        info = None
         soup = BeautifulSoup(raw_html)
-
-        for script in soup.find_all("script"):
-            if not script.contents:
-                continue
-            if not script.contents[0].strip().startswith("window.__preloadedData"):
-                continue
-            article_js = re.sub(
-                r"window.__preloadedData\s*=\s*", "", script.contents[0].strip()
-            )
-            if article_js.endswith(";"):
-                article_js = article_js[:-1]
-            article_js = article_js.replace(":undefined", ":null")
-            try:
-                info = json.loads(article_js)
-                break
-            except json.JSONDecodeError:
-                self.log.exception("Unable to parse preloadedData")
-
+        info = self.get_script_json(soup, r"window.__preloadedData\s*=\s*")
         if not info:
             self.log(f"Unable to find article from script in {url}")
             return raw_html

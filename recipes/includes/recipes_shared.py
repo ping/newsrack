@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import shutil
 import time
 from datetime import datetime, timedelta, timezone
@@ -68,6 +69,42 @@ class BasicNewsrackRecipe(object):
             data = json.loads(script_json.contents[0])
             if filter_fn(data):
                 return data
+        return {}
+
+    def get_script_json(
+        self, soup: BeautifulSoup, prefix_expr: str, attrs=None
+    ) -> Dict:
+        """
+        Converts a script element's json content into a dict object
+
+        :param soup:
+        :param prefix_expr:
+        :param attrs:
+        :return:
+        """
+        if attrs is None:
+            attrs = {"src": False}
+        prefix_expr_re = re.compile(prefix_expr) if prefix_expr else None
+        for script in soup.find_all("script", attrs):
+            if not script.contents:
+                continue
+            script_js = script.contents[0].strip()
+            if prefix_expr and not prefix_expr_re.match(script_js):
+                continue
+            if prefix_expr:
+                script_js = prefix_expr_re.sub("", script_js)
+            if script_js.endswith(";"):
+                script_js = script_js[:-1]
+            script_js = script_js.replace(":undefined", ":null")
+            try:
+                return json.loads(script_js)
+            except json.JSONDecodeError:
+                # sometimes this borks because of a stray '\n', e.g. scmp
+                try:
+                    return json.loads(script_js.replace("\n", " "))
+                except json.JSONDecodeError:
+                    self.log.exception("Unable to parse script as json")
+                    self.log.debug(script.contents[0])
         return {}
 
     def generate_debug_index(self, urls):

@@ -5,10 +5,8 @@
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-import json
 import os
 import random
-import re
 import sys
 import time
 from collections import OrderedDict
@@ -95,22 +93,7 @@ class WSJ(BasicNewsrackRecipe, BasicNewsRecipe):
         return br
 
     def _get_page_info(self, soup):
-        for script in soup.find_all("script"):
-            if not script.contents:
-                continue
-            if not script.contents[0].strip().startswith("window.__STATE__"):
-                continue
-            index_js = re.sub(
-                r"window.__STATE__\s*=\s*", "", script.contents[0].strip()
-            )
-            if index_js.endswith(";"):
-                index_js = index_js[:-1]
-            try:
-                info = json.loads(index_js)
-                return info
-            except json.JSONDecodeError:
-                self.log.exception("Unable to parse __STATE__")
-        return None
+        return self.get_script_json(soup, r"window.__STATE__\s*=\s*")
 
     def _do_wait(self, message):
         if message:
