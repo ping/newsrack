@@ -113,7 +113,7 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
                 parent_element.append(container_ele)
             elif node_type == "header":
                 header_ele = soup.new_tag(f'h{c["level"]}')
-                header_ele.string = c["content"]
+                header_ele.append(BeautifulSoup(c["content"], features="html.parser"))
                 parent_element.append(header_ele)
             elif node_type == "correction":
                 para_ele = soup.new_tag("p", attrs={"class": "correction"})
@@ -249,3 +249,10 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
             content.get("content_elements"), new_soup.body.article, new_soup, url
         )
         return str(new_soup)
+
+    def parse_index(self):
+        return self.generate_debug_index(
+            [
+                "https://www.washingtonpost.com/world/2023/06/10/colombia-plane-crash-children-survived-explainer/"
+            ]
+        )
