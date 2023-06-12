@@ -7,7 +7,7 @@ import json
 import os
 import sys
 from datetime import datetime
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlencode
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
@@ -32,6 +32,7 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
     encoding = "utf-8"
     language = "en"
     simultaneous_downloads = 8
+    compress_news_images_auto_size = 12
 
     oldest_article = 1
     max_articles_per_feed = 25
@@ -64,6 +65,12 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
         # ("Sports", u"http://feeds.washingtonpost.com/rss/sports"),
         # ("Redskins", u"http://feeds.washingtonpost.com/rss/sports/redskins"),
     ]
+
+    def image_url_processor(self, article_url, image_url):
+        image_processor = "https://www.washingtonpost.com/wp-apps/imrs.php"
+        if image_url.startswith(image_processor):
+            return image_url
+        return f'{image_processor}?{urlencode({"src": image_url, "w": 1200})}'
 
     def _extract_child_nodes(self, nodes, parent_element, soup, url):
         if not nodes:
