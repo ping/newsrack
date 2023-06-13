@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # vim:fileencoding=utf-8
 # License: GPLv3 Copyright: 2015, Kovid Goyal <kovid at kovidgoyal.net>
+
+# Original at https://github.com/kovidgoyal/calibre/blob/ce8b82f8dc70e9edca4309abc523e08605254604/recipes/atlantic.recipe
 from __future__ import unicode_literals
 
 import json
