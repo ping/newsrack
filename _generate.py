@@ -267,6 +267,18 @@ def _find_output(folder_path: Path, slug: str, ext: str) -> List[Path]:
     return [r for r in res if slug_match_re.match(r.name)]
 
 
+def _get_cached_files(recipe: Recipe, cached: Dict):
+    """
+    Get the list of cached files for a recipe
+
+    :param recipe:
+    :param cached:
+    :return:
+    """
+    # [TODO] changed from using name to slug, check name to keep backward compat
+    return cached.get(recipe.slug, []) or cached.get(recipe.name, [])
+
+
 def _download_from_cache(
     recipe: Recipe, cached: Dict, publish_site: str, cache_sess: requests.Session
 ) -> bool:
@@ -279,8 +291,7 @@ def _download_from_cache(
     :return:
     """
     abort = False
-    # [TODO] changed from using name to slug, check name to keep backward compat
-    cached_files = cached.get(recipe.slug, []) or cached.get(recipe.name, [])
+    cached_files = _get_cached_files(recipe, cached)
     for cached_item in cached_files:
         ext = Path(cached_item["filename"]).suffix
         if ext != f".{recipe.src_ext}" and ext not in [
@@ -462,8 +473,7 @@ def run(
         if verbose_mode:
             os.environ["recipe_debug_folder"] = str(publish_folder.absolute())
 
-        # [TODO] changed from using name to slug, check name to keep backward compat
-        cached_files = cached.get(recipe.slug, []) or cached.get(recipe.name, [])
+        cached_files = _get_cached_files(recipe, cached)
 
         if not _find_output(publish_folder, recipe.slug, recipe.src_ext):
             # existing file does not exist
