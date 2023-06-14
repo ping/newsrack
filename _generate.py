@@ -868,15 +868,17 @@ def run(
                     )
                 book_links.append(
                     f'<div class="book">'
-                    f'<a href="{book.rename_to}">{book_ext}<span class="file-size">{humanize.naturalsize(file_size).replace(" ", "")}</span>'
+                    f'<a title="Download {book_ext[1:]}" href="{book.rename_to}">{book_ext}<span class="file-size">{humanize.naturalsize(file_size).replace(" ", "")}</span>'
                     f"</a>{reader_link}"
                     f"</div>"
                 )
             tags_html = (
                 ""
                 if not books[0].recipe.tags
-                else '<div class="tags"><span class="tag">#'
-                + '</span><span class="tag">#'.join(books[0].recipe.tags)
+                else '<div class="tags"><span title="Search with this tag" class="tag">#'
+                + '</span><span title="Search with this tag" class="tag">#'.join(
+                    books[0].recipe.tags
+                )
                 + "</span></div>"
             )
             publication_listing.append(
@@ -916,7 +918,7 @@ def run(
         listing += f"""<div class="category-container is-open"><h2 id="cat-{slugify(category, True)}" class="category is-open">{category}
         <a class="opds" title="OPDS for {category.title()}" href="{slugify(category, True)}.xml">OPDS</a></h2>
         <ol class="books">{"".join(publication_listing)}</ol>
-        <div class="close-cat-container"><div class="close-cat-shortcut" data-click-target="cat-{slugify(category)}"></div></div>
+        <div class="close-cat-container"><div class="close-cat-shortcut" title="Collapse category" data-click-target="cat-{slugify(category)}"></div></div>
         </div>
         """
 
@@ -966,7 +968,7 @@ def run(
             publish_site=publish_site,
             elapsed=humanize.naturaldelta(elapsed_time, minimum_unit="seconds"),
             catalog=catalog_path,
-            source_link=f'<a class="git" href="{source_url}">{commit_hash[0:7]}</a>',
+            source_link=f'<a class="git" title="Source" href="{source_url}">{commit_hash[0:7]}</a>',
         )
         f_out.write(html_output)
 
