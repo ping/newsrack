@@ -225,7 +225,17 @@ h2.category {
       color: $tags-color;
       display: inline-block;
 
-      .tag:hover { cursor: pointer; color: $link-hover-color; }
+      .tag {
+        margin-right: 0.8rem;
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        &:hover {
+          cursor: pointer;
+          color: $link-hover-color;
+        }
+      }
     }
 
     .contents {
