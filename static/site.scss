@@ -191,7 +191,7 @@ h2.category {
     }
 
     .pub-date {
-      display: block;
+      display: inline-block;
       margin-top: 0.3em;
       font-size: 0.8em;
       color: $base-disabled-color;
@@ -219,11 +219,13 @@ h2.category {
 
     .tags {
       font-family: monospace;
-      font-size: 0.9em;
+      font-size: 0.8em;
       font-weight: bold;
       margin-left: 0.5em;
       color: $tags-color;
+      display: inline-block;
 
+      .tag:hover { cursor: pointer; color: $link-hover-color; }
     }
 
     .contents {
@@ -402,6 +404,8 @@ footer {
 
       .tags {
         color: $dark-tags-color;
+
+        .tag:hover { color: $dark-link-hover-color; }
       }
     }
   }

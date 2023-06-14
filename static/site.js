@@ -83,16 +83,11 @@ https://opensource.org/licenses/GPL-3.0
 
     function toggleDateDisplay(target, isRelative) {
         const publishedDate = new Date(parseInt(target.attributes["data-pub-date"].value));
-        let tags = "";
-        if (typeof(target.parentElement.dataset["tags"]) !== "undefined"
-            && target.parentElement.dataset["tags"].trim().length > 0) {
-            tags = " " + '<span class="tags">' + target.parentElement.dataset["tags"] + "</span>";
-        }
         target.title = publishedDate.toLocaleString();
         if (isRelative) {
-            target.innerHTML = "Published " + getRelativeTime(publishedDate) + tags;
+            target.innerHTML = "Published " + getRelativeTime(publishedDate);
         } else {
-            target.innerHTML = "Published " + publishedDate.toLocaleString() + tags;
+            target.innerHTML = "Published " + publishedDate.toLocaleString();
         }
     }
 
@@ -174,20 +169,21 @@ https://opensource.org/licenses/GPL-3.0
                     // close other opened periodicals
                     const openedPeriodical = openedPeriodicals[j];
                     openedPeriodical.classList.remove("is-open");
-                    openedPeriodical.nextElementSibling.classList.add("hide");  // content
+                    openedPeriodical.parentElement.parentElement.querySelector(".contents").classList.add("hide");  // content
                 }
             }
+            const contents = this.parentElement.parentElement.querySelector(".contents");
             this.classList.toggle("is-open");
-            this.nextElementSibling.classList.toggle("hide");   // content
-            const slug = this.parentElement.id;
-            if (this.nextElementSibling.childElementCount <= 0 && RECIPE_DESCRIPTIONS[slug] !== undefined) {
-                if (RECIPE_COVERS[slug] !== undefined) {
-                    this.nextElementSibling.innerHTML = '<p class="cover">'
-                        + '<a href="' + RECIPE_COVERS[slug]["cover"] + '">'
+            contents.classList.toggle("hide");   // content
+            const publication_id = this.parentElement.dataset["pubId"];
+            if (contents.childElementCount <= 0 && RECIPE_DESCRIPTIONS[publication_id] !== undefined) {
+                if (RECIPE_COVERS[publication_id] !== undefined) {
+                    contents.innerHTML = '<p class="cover">'
+                        + '<a href="' + RECIPE_COVERS[publication_id]["cover"] + '">'
                         + '<img alt="Cover" src="'
-                        + RECIPE_COVERS[slug]["thumbnail"] + '"></a></p>';
+                        + RECIPE_COVERS[publication_id]["thumbnail"] + '"></a></p>';
                 }
-                this.nextElementSibling.innerHTML += RECIPE_DESCRIPTIONS[slug];
+                contents.innerHTML += RECIPE_DESCRIPTIONS[publication_id];
             }
             try {
                 // scroll into element into view in case closing off another
@@ -213,6 +209,21 @@ https://opensource.org/licenses/GPL-3.0
             }
             this.parentElement.classList.toggle("is-open");
             this.nextElementSibling.classList.toggle("hide");   // content
+        };
+    }
+
+    // tag search shortcuts
+    const tagShortcuts = document.querySelectorAll(".tags .tag");
+    for (let i = 0; i < tagShortcuts.length; i++) {
+        const tag = tagShortcuts[i];
+        tag.onclick = function(e) {
+            e.preventDefault();
+            const tagSearchQuery = "tags:"+ e.target.innerText.substring(1);
+            const currSearchQuery = searchTextField.value.trim();
+            if (currSearchQuery.indexOf(tagSearchQuery) < 0) {
+                searchTextField.value = currSearchQuery + (currSearchQuery === "" ? "" : " ") + tagSearchQuery;
+            }
+            searchTextField.focus();
         };
     }
 

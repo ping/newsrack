@@ -872,15 +872,23 @@ def run(
                     f"</a>{reader_link}"
                     f"</div>"
                 )
+            tags_html = (
+                ""
+                if not books[0].recipe.tags
+                else '<div class="tags"><span class="tag">#'
+                + '</span><span class="tag">#'.join(books[0].recipe.tags)
+                + "</span></div>"
+            )
             publication_listing.append(
                 f"""
-            <li id="{books[0].recipe.slug}" data-cat-id="cat-{slugify(category, True)}" data-cat-name="{category}"
-                    data-tags="{"" if not books[0].recipe.tags else "#" + " #".join(books[0].recipe.tags)}">
+            <li id="{books[0].recipe.slug}" data-cat-id="cat-{slugify(category, True)}" data-cat-name="{category}">
             <span class="title">{books[0].title or recipe_name}</span>
             {" ".join(book_links)}
+            <div class="meta" data-pub-id="{books[0].recipe.slug}">
             <div class="pub-date" data-pub-date="{int(books[0].published_dt.timestamp() * 1000)}">
                 Published at {books[0].published_dt:%Y-%m-%d %-I:%M%p %z}
-                {"" if not books[0].recipe.tags else '<span class="tags">#' + " #".join(books[0].recipe.tags) + "</span>"}
+            </div>
+            {tags_html}
             </div>
             <div class="contents hide"></div>
             </li>"""
