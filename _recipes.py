@@ -610,9 +610,7 @@ recipes: List[Recipe] = [
         category="Online Magazines",
         enable_on=onlyat_hours(list(range(5, 20)), 5.5),
         tags=["asia", "climate"],
-        cover_options=CoverOptions(
-            logo_path_or_url="https://www.thethirdpole.net/content/uploads/2020/02/TheThirdPoleLogo2.png"
-        ),
+        cover_options=CoverOptions(logo_path_or_url="recipes/logos/thirdpole.png"),
     ),
     Recipe(
         recipe="time-magazine",
