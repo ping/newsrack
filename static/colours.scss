@@ -26,3 +26,7 @@ $dark-error-color: #ff6464;
 $dark-tags-color: mix($dark-base-disabled-color, $dark-base-color);
 
 @import 'colours_custom';
+
+@function url-friendly-colour($colour) {
+    @return '%23' + str-slice('#{$colour}', 2, -1)
+}
