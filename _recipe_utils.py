@@ -2,12 +2,15 @@
 #
 # This software is released under the GNU General Public License v3.0
 # https://opensource.org/licenses/GPL-3.0
-
+import sys
 from calendar import monthrange
 from dataclasses import dataclass, field
 from datetime import datetime, timezone, timedelta
 from typing import List, Union, Callable, Dict
 
+# adapted from calibre.constants.iswindows
+_plat = sys.platform.lower()
+is_windows = "win32" in _plat or "win64" in _plat
 default_recipe_timeout = 180
 
 # format-specific ebook-convert options
@@ -69,7 +72,12 @@ class Recipe:
         CoverOptions()
     )  # customise script-generated cover, used when overwrite_cover=True
     tags: List[str] = field(default_factory=list)  # used in search
-    title_date_format: str = "%-d %b, %Y"  # used to format the date in the title
+    title_date_format: str = (
+        "%d %b, %Y" if is_windows else "%-d %b, %Y"
+    )  # used to format a date in the title and recipe
+    recipe_datetime_format: str = (
+        "%I:%M%p, %-d %b, %Y" if is_windows else "%-I:%M%p, %-d %b, %Y"
+    )  # used to format a datetime in the recipe
 
     def is_enabled(self) -> bool:
         if callable(self.enable_on):

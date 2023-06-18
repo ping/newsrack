@@ -423,6 +423,7 @@ def run(
 
         if recipe_path.exists():
             os.environ["newsrack_title_dt_format"] = recipe.title_date_format
+            os.environ["newsrack_title_dts_format"] = recipe.recipe_datetime_format
 
         job_status = ""
         recipe.last_run = job_log.get(recipe.slug, 0)

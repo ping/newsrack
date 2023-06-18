@@ -9,6 +9,7 @@ from typing import Optional, Dict, List, Callable
 from urllib.parse import urlencode
 
 from calibre import browser
+from calibre.constants import iswindows
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
 from calibre.utils.browser import Browser
@@ -19,7 +20,16 @@ def get_date_format() -> str:
     try:
         var_value = os.environ["newsrack_title_dt_format"]
     except:  # noqa
-        var_value = "%-d %b, %Y"
+        # %-d is not available on Windoows
+        var_value = "%d %b, %Y" if iswindows else "%-d %b, %Y"
+    return var_value
+
+
+def get_datetime_format() -> str:
+    try:
+        var_value = os.environ["newsrack_title_dts_format"]
+    except:  # noqa
+        var_value = "%I:%M%p, %-d %b, %Y" if iswindows else "%-I:%M%p, %-d %b, %Y"
     return var_value
 
 
@@ -426,7 +436,7 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
                         ).get_text()
                         or "Untitled",
                         "url": "file://" + f.name,
-                        "date": f"{post_date:%-d %B, %Y}",
+                        "date": f"{post_date:{get_date_format()}}",
                         "description": unescape(
                             p["excerpt"]
                             if self.is_wordpresscom
