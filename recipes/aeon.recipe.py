@@ -75,6 +75,20 @@ class Aeon(BasicNewsrackRecipe, BasicNewsRecipe):
             date_ele = soup.new_tag("div", attrs={"class": "custom-date-published"})
             date_ele.append(f"{published_date:{get_date_format()}}")
             header.insert_after(date_ele)
+
+        # re-position header image
+        essay_header = soup.find(
+            "div", class_=lambda c: c and c.startswith("article__EssayHeader-sc-")
+        )
+        if essay_header:
+            header_img = essay_header.find("img")
+            attribution = essay_header.find(
+                "div",
+                class_=lambda c: c
+                and c.startswith("styled__ThumbnailAttributionWrapper-sc-"),
+            )
+            if header_img and attribution:
+                attribution.insert_before(header_img.extract())
         return str(soup)
 
     def parse_feeds(self):
