@@ -11,7 +11,7 @@ from urllib.parse import urljoin, urlparse
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe
+from recipes_shared import BasicNewsrackRecipe, get_datetime_format
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -155,10 +155,10 @@ class BloombergBusinessweek(BasicNewsrackRecipe, BasicNewsRecipe):
         if (not self.pub_date) or date_published > self.pub_date:
             self.pub_date = date_published
         published_at = soup.find(class_="published-dt")
-        published_at.append(f"{date_published:%-I:%M%p, %-d %b, %Y}")
+        published_at.append(f"{date_published:{get_datetime_format()}}")
         if article.get("updatedAt"):
             date_updated = parse_date(article["updatedAt"], assume_utc=True)
-            published_at.append(f", Updated {date_updated:%-I:%M%p, %-d %b, %Y}")
+            published_at.append(f", Updated {date_updated:{get_datetime_format()}}")
             if (not self.pub_date) or date_updated > self.pub_date:
                 self.pub_date = date_updated
 

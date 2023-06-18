@@ -14,7 +14,11 @@ from datetime import datetime, timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicCookielessNewsrackRecipe
+from recipes_shared import (
+    BasicCookielessNewsrackRecipe,
+    get_date_format,
+    get_datetime_format,
+)
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes, prefixed_classes
@@ -189,14 +193,14 @@ class NewYorker(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
         pub_date = datetime.fromisoformat(info["datePublished"])
         pub_ele = soup.new_tag("span", attrs={"class": "published-dt"})
         pub_ele["datePublished"] = info["datePublished"]
-        pub_ele.append(f"{pub_date:%-d %B, %Y}")
+        pub_ele.append(f"{pub_date:{get_date_format()}}")
         meta.append(pub_ele)
 
         if info.get("dateModified"):
             mod_date = datetime.fromisoformat(info["dateModified"])
             mod_ele = soup.new_tag("span", attrs={"class": "modified-dt"})
             mod_ele["dateModified"] = info["dateModified"]
-            mod_ele.append(f"Updated {mod_date:%-I:%M%p %-d %B, %Y}")
+            mod_ele.append(f"Updated {mod_date:{get_datetime_format()}}")
             meta.append(mod_ele)
         h1.insert_after(meta)
 

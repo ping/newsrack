@@ -10,7 +10,7 @@ from urllib.parse import urljoin, urlencode, urlsplit
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe
+from recipes_shared import BasicNewsrackRecipe, get_date_format
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -232,7 +232,7 @@ fragment ArticlePageFields on Article {
             <div class="article-meta">
                 {f'<span class="author">{", ".join(post_authors)}</span>' if post_authors else ""}
                 <span class="published-dt">
-                    {date_published_loc:%-d %b, %Y}
+                    {date_published_loc:{get_date_format()}}
                 </span>
             </div>
             {lede_image_html}

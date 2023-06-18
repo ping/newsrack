@@ -12,7 +12,7 @@ from urllib.parse import quote_plus, urljoin
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicCookielessNewsrackRecipe, format_title
+from recipes_shared import BasicCookielessNewsrackRecipe, format_title, get_date_format
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
@@ -161,7 +161,7 @@ class FinancialTimesPrint(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
             {"" if not article.get("description") else '<div class="sub-headline">' + article.get("description", "") + '</div>'}
             <div class="article-meta">
                 <span class="author">{author}</span>
-                <span class="published-dt">{date_published:%-d %B, %Y}</span>
+                <span class="published-dt">{date_published:{get_date_format()}}</span>
             </div>
             {article_body}
             </article>

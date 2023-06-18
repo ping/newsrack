@@ -12,7 +12,12 @@ from urllib.parse import urlparse
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, format_title
+from recipes_shared import (
+    BasicNewsrackRecipe,
+    format_title,
+    get_datetime_format,
+    get_date_format,
+)
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -163,10 +168,10 @@ class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
             self.pub_date = date_published
             self.title = format_title(_name, date_published)
         published_at = soup.find(class_="published-dt")
-        published_at.append(f"{date_published:%-I:%M%p, %-d %b, %Y}")
+        published_at.append(f"{date_published:{get_datetime_format()}}")
         if article.get("updatedAt"):
             date_updated = parse_date(article["updatedAt"], assume_utc=True)
-            published_at.append(f", Updated {date_updated:%-I:%M%p, %-d %b, %Y}")
+            published_at.append(f", Updated {date_updated:{get_datetime_format()}}")
             if (not self.pub_date) or date_updated > self.pub_date:
                 self.pub_date = date_updated
                 self.title = format_title(_name, date_updated)
@@ -260,7 +265,7 @@ class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
                     {
                         "title": url_node.find("news:title").get_text(),
                         "url": url_node.find("loc").get_text(),
-                        "date": f"{article_date:%-d %B, %Y}",
+                        "date": f"{article_date:{get_date_format()}}",
                         "pub_date": article_date,
                     }
                 )

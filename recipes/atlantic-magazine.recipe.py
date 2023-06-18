@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe
+from recipes_shared import BasicNewsrackRecipe, get_datetime_format
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -68,7 +68,7 @@ def json_to_html(data):
     ).replace(tzinfo=timezone.utc)
     pub_ele = new_soup.new_tag("span", attrs={"class": "published-dt"})
     pub_ele["data-published"] = f"{published_date:%Y-%m-%dT%H:%M:%SZ}"
-    pub_ele.append(f"{published_date:%-I:%M%p, %-d %B, %Y}")
+    pub_ele.append(f"{published_date:{get_datetime_format()}}")
     meta.append(pub_ele)
     if article.get("dateModified"):
         modified_date = datetime.strptime(
@@ -76,7 +76,7 @@ def json_to_html(data):
         ).replace(tzinfo=timezone.utc)
         upd_ele = new_soup.new_tag("span", attrs={"class": "modified-dt"})
         upd_ele["data-modified"] = f"{modified_date:%Y-%m-%dT%H:%M:%SZ}"
-        upd_ele.append(f"Updated {modified_date:%-I.%M%p, %-d %B, %Y}")
+        upd_ele.append(f"Updated {modified_date:{get_datetime_format()}}")
         meta.append(upd_ele)
 
     new_soup.main.append(meta)

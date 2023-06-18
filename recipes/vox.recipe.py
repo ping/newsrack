@@ -7,7 +7,7 @@ import sys
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, format_title
+from recipes_shared import BasicNewsrackRecipe, format_title, get_datetime_format
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -58,7 +58,7 @@ class Vox(BasicNewsrackRecipe, BasicNewsRecipe):
                     f"""
                 <div class="article-meta">
                     <span class="author">{article.author}</span>
-                    <span class="published-dt">{article.utctime:%-I:%M%p, %-d %b, %Y}</span>
+                    <span class="published-dt">{article.utctime:{get_datetime_format()}}</span>
                 </div>
                 """
                     + article.content

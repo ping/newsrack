@@ -12,7 +12,12 @@ from datetime import timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, format_title
+from recipes_shared import (
+    BasicNewsrackRecipe,
+    format_title,
+    get_date_format,
+    get_datetime_format,
+)
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds import Feed
@@ -69,7 +74,7 @@ class HarvardInternationalReview(BasicNewsrackRecipe, BasicNewsRecipe):
         parsed_feed = parsed_feeds[0]
         for i, a in enumerate(articles, start=1):
             date_published = a.utctime.replace(tzinfo=timezone.utc)
-            article_index = f"{date_published:%-d %B, %Y}"
+            article_index = f"{date_published:{get_date_format()}}"
             # add author and pub date
             soup = BeautifulSoup(a.content)
             header = None
@@ -81,7 +86,7 @@ class HarvardInternationalReview(BasicNewsrackRecipe, BasicNewsRecipe):
                 author_ele.append(a.author)
                 meta.append(author_ele)
             pub_ele = soup.new_tag("span", attrs={"class": "published-dt"})
-            pub_ele.append(f"{date_published:%-I:%M%p, %-d %b, %Y}")
+            pub_ele.append(f"{date_published:{get_datetime_format()}}")
             meta.append(pub_ele)
             if header:
                 header.insert_after(meta)

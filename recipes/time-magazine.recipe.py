@@ -10,7 +10,7 @@ from datetime import datetime, timedelta, timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe
+from recipes_shared import BasicNewsrackRecipe, get_date_format
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
@@ -80,7 +80,7 @@ class TimeMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
                     {", ".join(authors)}
                 </span>
                 <span class="published-dt">
-                    {date_published_loc:%-d %b, %Y}
+                    {date_published_loc:{get_date_format()}}
                 </span>
             </div>
             {str(content_soup.body)}

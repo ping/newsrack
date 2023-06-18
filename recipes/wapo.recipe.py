@@ -11,7 +11,7 @@ from urllib.parse import urljoin, urlencode
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, format_title
+from recipes_shared import BasicNewsrackRecipe, format_title, get_datetime_format
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -177,7 +177,7 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
                 meta_ele = BeautifulSoup(
                     f"""<div class="article-meta">
                         <span class="author"></span>
-                        <span class="published-dt">{post_date:%-I:%M%p %-d %B, %Y}</span>
+                        <span class="published-dt">{post_date:{get_datetime_format()}}</span>
                     </div>"""
                 )
                 authors = [a["name"] for a in c.get("credits", {}).get("by", [])]
@@ -228,7 +228,7 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
                 <div class="sub-headline"></div>
                 <div class="article-meta">
                     <span class="author"></span>
-                    <span class="published-dt">{post_date:%-I:%M%p %-d %B, %Y}</span>
+                    <span class="published-dt">{post_date:{get_datetime_format()}}</span>
                 </div>
             </article>
         </body></html>"""

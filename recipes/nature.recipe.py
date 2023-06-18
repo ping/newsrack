@@ -94,7 +94,6 @@ class Nature(BasicNewsrackRecipe, BasicNewsRecipe):
             article.utctime = pub_date_utc
             if not self.pub_date or pub_date_utc > self.pub_date:
                 self.pub_date = pub_date_utc
-                # self.title = f"{_name}: {pub_date_utc:%-d %b, %Y}"
 
     def preprocess_html(self, soup):
         if soup.find(name="h2", id="access-options"):

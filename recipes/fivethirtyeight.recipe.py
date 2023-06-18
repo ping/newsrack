@@ -14,7 +14,7 @@ from html import unescape
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import WordPressNewsrackRecipe, format_title
+from recipes_shared import WordPressNewsrackRecipe, format_title, get_date_format
 
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -93,9 +93,9 @@ class FiveThirtyEight(WordPressNewsrackRecipe, BasicNewsRecipe):
                     latest_post_date = post_date
                     self.title = format_title(_name, post_date)
 
-                section_name = f"{post_date:%-d %B, %Y}"
+                section_name = f"{post_date:{get_date_format()}}"
                 if len(self.get_feeds()) > 1:
-                    section_name = f"{feed_name}: {post_date:%-d %B, %Y}"
+                    section_name = f"{feed_name}: {post_date:{get_date_format()}}"
                 if section_name not in articles:
                     articles[section_name] = []
 
@@ -121,7 +121,7 @@ class FiveThirtyEight(WordPressNewsrackRecipe, BasicNewsRecipe):
                     {
                         "title": unescape(p["title"]["rendered"]) or "Untitled",
                         "url": "file://" + f.name,
-                        "date": f"{post_date:%-d %B, %Y}",
+                        "date": f"{post_date:{get_date_format()}}",
                         "description": unescape(" / ".join(verticals)),
                     }
                 )

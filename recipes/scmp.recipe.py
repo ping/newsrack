@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, format_title
+from recipes_shared import BasicNewsrackRecipe, format_title, get_datetime_format
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -199,7 +199,7 @@ class SCMP(BasicNewsrackRecipe, BasicNewsRecipe):
             <div class="article-meta">
                 <span class="author">{", ".join(authors)}</span>
                 <span class="published-dt">
-                    {date_published_loc:%-I:%M%p, %-d %b, %Y}
+                    {date_published_loc:{get_datetime_format()}}
                 </span>
             </div>
             </article>

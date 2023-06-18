@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, format_title
+from recipes_shared import BasicNewsrackRecipe, format_title, get_date_format
 
 from calibre.web.feeds import Feed
 from calibre.web.feeds.news import BasicNewsRecipe, prefixed_classes
@@ -73,7 +73,7 @@ class Aeon(BasicNewsrackRecipe, BasicNewsRecipe):
         header = soup.find("h1") or soup.find("h2")
         if header:
             date_ele = soup.new_tag("div", attrs={"class": "custom-date-published"})
-            date_ele.append(f"{published_date:%-d %B, %Y}")
+            date_ele.append(f"{published_date:{get_date_format()}}")
             header.insert_after(date_ele)
         return str(soup)
 

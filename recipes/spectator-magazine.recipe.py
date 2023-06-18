@@ -7,7 +7,7 @@ from urllib.parse import urlparse, urljoin
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicCookielessNewsrackRecipe
+from recipes_shared import BasicCookielessNewsrackRecipe, get_datetime_format
 
 from calibre.utils.date import parse_date
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -92,7 +92,7 @@ class SpectatorMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
             if (not self.pub_date) or pub_date > self.pub_date:
                 self.pub_date = pub_date
             pub_date_ele = soup.new_tag("span", attrs={"class": "published-dt"})
-            pub_date_ele.append(f"{pub_date:%-I:%M%p, %-d %b, %Y}")
+            pub_date_ele.append(f"{pub_date:{get_datetime_format()}}")
             meta_ele.append(pub_date_ele)
         headline = soup.find(name="h2", class_="entry-header__headline") or soup.find(
             "h1"

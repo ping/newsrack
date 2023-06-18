@@ -329,7 +329,6 @@ class Economist(BasicNewsrackRecipe, BasicNewsRecipe):
             ).replace(tzinfo=timezone.utc)
             if not self.pub_date or date_published > self.pub_date:
                 self.pub_date = date_published
-                # self.title = f"{_name}: {date_published:%-d %b, %Y}"
 
     def parse_index(self):
         if edition_date:

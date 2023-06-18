@@ -6,7 +6,7 @@ from urllib.parse import urljoin
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicCookielessNewsrackRecipe
+from recipes_shared import BasicCookielessNewsrackRecipe, get_date_format
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
@@ -84,7 +84,7 @@ class HBR(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
         pub_date_ele["data-mod-date"] = mod_datetime["content"]
         post_date_ele = soup.new_tag("span")
         post_date_ele["class"] = "article-pub-date"
-        post_date_ele.append(f"{post_date:%-d %B, %Y}")
+        post_date_ele.append(f"{post_date:{get_date_format()}}")
         # pub_date_ele.append(post_date_ele)    # set this below together with the byline logic
 
         # break author byline out of list

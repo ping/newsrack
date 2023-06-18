@@ -7,7 +7,7 @@ import sys
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, format_title
+from recipes_shared import BasicNewsrackRecipe, format_title, get_datetime_format
 
 from calibre.utils.date import parse_date
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -71,7 +71,7 @@ class MITPressReader(BasicNewsrackRecipe, BasicNewsRecipe):
         athor_ele = soup.find(class_="ma-top-shares-left")
         if athor_ele:
             post_date_ele = soup.new_tag("div")
-            post_date_ele.append(f"{post_date:%-H:%M%p, %-d %B, %Y}")
+            post_date_ele.append(f"{post_date:{get_datetime_format()}}")
             athor_ele.append(post_date_ele)
             time_parent_ele = soup.find("div", class_="author-post-cont")
             if time_parent_ele:

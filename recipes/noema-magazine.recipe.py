@@ -8,7 +8,7 @@ import sys
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import WordPressNewsrackRecipe
+from recipes_shared import WordPressNewsrackRecipe, get_datetime_format
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -38,8 +38,8 @@ class NoemaMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
     .article-meta {  margin-top: 1rem; margin-bottom: 1rem; }
     .article-meta .author { font-weight: bold; color: #444; margin-right: 0.5rem; }
     .article-section { display: block; font-weight: bold; color: #444; }
-    .article-img img { display: block; max-width: 100%; height: auto; }
-    .article-img p {
+    .article-img img, img.attachment-full { display: block; max-width: 100%; height: auto; }
+    .article-img p, .wp-caption-text div {
         font-size: 0.8rem; display: block; margin-top: 0.2rem;
     }
     .quote { text-align: center; }
@@ -124,7 +124,7 @@ class NoemaMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
             <div class="article-meta">
                 {f'<span class="author">{", ".join(post_authors)}</span>' if post_authors else ''}
                 <span class="published-dt">
-                    {date_published_loc:%-I:%M%p, %-d %b, %Y}
+                    {date_published_loc:{get_datetime_format()}}
                 </span>
             </div>
             </article>

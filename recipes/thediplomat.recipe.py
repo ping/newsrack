@@ -13,7 +13,7 @@ from html import unescape
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import WordPressNewsrackRecipe
+from recipes_shared import WordPressNewsrackRecipe, get_date_format
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -98,7 +98,7 @@ class TheDiplomat(WordPressNewsrackRecipe, BasicNewsRecipe):
             <article data-og-link="{post["link"]}">
                 <div class="sub-headline"></div>
                 <div class="article-meta">
-                    <span class="published-dt">{post_date:%-d %B, %Y}</span>
+                    <span class="published-dt">{post_date:{get_date_format()}}</span>
                 </div>
             </div>
             </article>

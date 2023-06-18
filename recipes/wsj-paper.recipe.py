@@ -14,7 +14,7 @@ from datetime import datetime, timedelta, timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, format_title
+from recipes_shared import BasicNewsrackRecipe, format_title, get_date_format
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
@@ -133,7 +133,7 @@ class WSJ(BasicNewsrackRecipe, BasicNewsRecipe):
                     if not k.startswith("rss_subnav_collection_"):
                         continue
                     issue_date = datetime.strptime(v["data"]["id"], "%Y%m%d")
-                    self.title = f"{_name}: {issue_date:%-d %b, %Y}"
+                    self.title = f"{_name}: {issue_date:{get_date_format()}}"
                     self.log(
                         f'Issue date is: {issue_date:%Y%m%d}, title is "{self.title}"'
                     )

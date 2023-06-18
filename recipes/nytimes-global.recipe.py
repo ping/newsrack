@@ -14,7 +14,7 @@ from urllib.parse import urlparse
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, format_title
+from recipes_shared import BasicNewsrackRecipe, format_title, get_date_format
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
@@ -175,7 +175,7 @@ class NYTimesGlobal(BasicNewsrackRecipe, BasicNewsRecipe):
                         "%Y-%m-%dT%H:%M:%S.%fZ",
                     )
                     pub_dt_ele = new_soup.find("span", class_="published-dt")
-                    pub_dt_ele.string = f"{post_date:%-d %B, %Y}"
+                    pub_dt_ele.string = f"{post_date:{get_date_format()}}"
                 if c.get("ledeMedia"):
                     image_block = c["ledeMedia"]["media"]
                     container_ele = new_soup.new_tag(
@@ -457,7 +457,7 @@ class NYTimesGlobal(BasicNewsrackRecipe, BasicNewsRecipe):
                         "%Y-%m-%dT%H:%M:%S.%fZ",
                     )
                     pub_dt_ele = new_soup.find("span", class_="published-dt")
-                    pub_dt_ele.string = f"{post_date:%-d %B, %Y}"
+                    pub_dt_ele.string = f"{post_date:{get_date_format()}}"
                 if header_block.get("ledeMedia"):
                     image_block = content_service.get(
                         content_service[header_block["ledeMedia"]["id"]]["media"]["id"]
