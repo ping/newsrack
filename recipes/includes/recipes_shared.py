@@ -3,6 +3,7 @@ import os
 import re
 import shutil
 import time
+import warnings
 from datetime import datetime, timedelta, timezone
 from html import unescape
 from typing import Optional, Dict, List, Callable
@@ -33,6 +34,42 @@ def get_datetime_format() -> str:
     return var_value
 
 
+def parse_date(
+    date_string: str,
+    tz_info: Optional[timezone] = timezone.utc,
+    as_utc: bool = True,
+    **kwargs,
+):
+    """
+
+    :param date_string:
+    :param tz_info: Sets the parsed date to this timezone if it does not have a tz
+    :param as_utc: Returns value as a UTC datetime if True
+    :param kwargs: Other kwargs passed to parse()
+    :return:
+    """
+    # Inspired by: https://github.com/kovidgoyal/calibre/blob/ec9e64437cbd378c50dc0fc9f8261a958781ef8e/src/calibre/utils/date.py#L88C29-L116
+
+    # Difference:
+    # - defaults to day 1
+    # - allows custom tz
+
+    from dateutil.parser import parse  # provided by calibre
+
+    if not date_string:
+        return None
+    if "default" not in kwargs:
+        kwargs["default"] = datetime.now(tz_info).replace(
+            day=1, hour=0, minute=0, second=0, microsecond=0
+        )
+    dt = parse(date_string, **kwargs)
+    if tz_info and dt.tzinfo is None:
+        dt = dt.replace(tzinfo=tz_info)
+    if as_utc:
+        return dt.astimezone(timezone.utc)
+    return dt
+
+
 def format_title(feed_name: str, post_date: datetime) -> str:
     """
     Format title
@@ -56,6 +93,23 @@ class BasicNewsrackRecipe(object):
 
     def publication_date(self) -> Optional[datetime]:
         return self.pub_date
+
+    def parse_date(
+        self,
+        date_string: str,
+        tz_info: Optional[timezone] = timezone.utc,
+        as_utc: bool = True,
+        **kwargs,
+    ):
+        """
+
+        :param date_string:
+        :param tz_info: Sets the parsed date to this timezone if it does not have a tz
+        :param as_utc: Returns value as a UTC datetime if True
+        :param kwargs: Other kwargs passed to parse()
+        :return:
+        """
+        return parse_date(date_string, tz_info, as_utc, **kwargs)
 
     def cleanup(self) -> None:
         if self.temp_dir:
@@ -228,10 +282,20 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
 
     @staticmethod
     def parse_datetime(date_string, wordpresscom=False) -> datetime:
-        # Can't use is_wordpresscom because I made this a staticmethod -_-
-        return datetime.strptime(
-            date_string, "%Y-%m-%dT%H:%M:%S%z" if wordpresscom else "%Y-%m-%dT%H:%M:%S"
-        )
+        """
+        Deprecated in favour of parse_date(date_string, tz_info=None, as_utc=False).
+
+        :param date_string:
+        :param wordpresscom:
+        :return:
+        """
+        # Can't use self.is_wordpresscom because I made this a staticmethod -_-
+        warnings.warn(
+            "WordPressNewsrackRecipe.parse_datetime() is deprecated in favour of "
+            "self.parse_date(date_string, tz_info=None, as_utc=False)",
+            DeprecationWarning,
+        )  # 2023.06.19 - remove in 6 mths
+        return parse_date(date_string, tz_info=None, as_utc=False)
 
     def extract_authors(self, post: Dict) -> List:
         if self.is_wordpresscom:
@@ -400,15 +464,15 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
         for p in posts:
             if self.is_wordpresscom:
                 # Example: 2023-04-04T10:09:05+06:00
-                post_update_dt = self.parse_datetime(
-                    p["modified"], self.is_wordpresscom
+                post_update_dt = self.parse_date(
+                    p["modified"], tz_info=None, as_utc=False
                 )
-                post_date = self.parse_datetime(p["date"], self.is_wordpresscom)
+                post_date = self.parse_date(p["date"], tz_info=None, as_utc=False)
             else:
-                post_update_dt = self.parse_datetime(p["modified_gmt"]).replace(
-                    tzinfo=timezone.utc
+                post_update_dt = self.parse_date(
+                    p["modified_gmt"], tz_info=timezone.utc
                 )
-                post_date = self.parse_datetime(p["date"])
+                post_date = self.parse_date(p["date"], tz_info=None, as_utc=False)
 
             if not self.pub_date or post_update_dt > self.pub_date:
                 self.pub_date = post_update_dt
