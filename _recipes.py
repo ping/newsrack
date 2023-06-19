@@ -123,7 +123,8 @@ recipes: List[Recipe] = [
         overwrite_cover=False,
         category="Magazines",
         tags=["business"],
-        timeout=240,
+        enable_on=onlyon_weekdays([4]),
+        timeout=360,
     ),
     Recipe(
         recipe="fivebooks",

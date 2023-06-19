@@ -230,10 +230,8 @@ class Economist(BasicNewsrackRecipe, BasicNewsRecipe):
     ]
     keep_only_tags = [dict(name="article", id=lambda x: not x)]
     remove_attributes = ["data-reactid", "width", "height"]
-    # economist.com has started throttling after about 60% of the total has
-    # downloaded with connection reset by peer (104) errors.
-    # delay = 1
-    simultaneous_downloads = 2  # doesn't seem throttled now 2022.04.15
+    # economist.com has started throttling with HTTP 429
+    delay = 1
 
     masthead_url = "https://www.economist.com/assets/the-economist-logo.png"
 
