@@ -3,7 +3,6 @@ ft.com
 """
 # Original from https://github.com/kovidgoyal/calibre/blob/902e80ec173bc40037efb164031043994044ec6c/recipes/financial_times_print_edition.recipe
 
-import json
 import os
 import re
 import sys

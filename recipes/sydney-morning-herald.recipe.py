@@ -4,7 +4,6 @@ smh.com.au
 __license__ = "GPL v3"
 __copyright__ = "2010-2011, Darko Miletic <darko.miletic at gmail.com>"
 
-import json
 import os
 import sys
 

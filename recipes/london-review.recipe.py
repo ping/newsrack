@@ -3,7 +3,6 @@
 # License: GPLv3 Copyright: 2019, Kovid Goyal <kovid at kovidgoyal.net>
 # Original at: https://github.com/kovidgoyal/calibre/blob/640ca33197ea2c7772278183b3f77701009bb733/recipes/lrb.recipe
 
-import json
 import os
 import sys
 from datetime import datetime, timezone

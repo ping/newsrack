@@ -1,4 +1,3 @@
-import json
 import os
 import sys
 from datetime import datetime, timezone
@@ -7,7 +6,6 @@ from datetime import datetime, timezone
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, format_title, get_date_format
 
-from calibre.web.feeds import Feed
 from calibre.web.feeds.news import BasicNewsRecipe, prefixed_classes
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
