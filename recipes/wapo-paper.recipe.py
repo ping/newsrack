@@ -6,7 +6,7 @@
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from urllib.parse import urljoin, urlencode
 
 # custom include to share code between recipes
@@ -203,7 +203,7 @@ class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
 
         # Example 2022-04-13T14:04:03.051Z "%Y-%m-%dT%H:%M:%S.%fZ"
         post_date = self.parse_date(content["display_date"])
-        if post_date > datetime.today():  # it happens
+        if post_date > datetime.utcnow().replace(tzinfo=timezone.utc):  # it happens
             try:
                 # "%Y-%m-%dT%H:%M:%S"
                 post_date = self.parse_date(content["publish_date"][:-5])
