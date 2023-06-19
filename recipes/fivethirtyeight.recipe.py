@@ -83,12 +83,12 @@ class FiveThirtyEight(WordPressNewsrackRecipe, BasicNewsRecipe):
 
             latest_post_date = None
             for p in posts:
-                post_update_dt = self.parse_datetime(p["modified_gmt"]).replace(
-                    tzinfo=timezone.utc
+                post_update_dt = self.parse_date(
+                    p["modified_gmt"], tz_info=timezone.utc
                 )
                 if not self.pub_date or post_update_dt > self.pub_date:
                     self.pub_date = post_update_dt
-                post_date = self.parse_datetime(p["date"])
+                post_date = self.parse_date(p["date"], tz_info=None, as_utc=False)
                 if not latest_post_date or post_date > latest_post_date:
                     latest_post_date = post_date
                     self.title = format_title(_name, post_date)

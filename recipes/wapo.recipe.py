@@ -170,10 +170,8 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
                 )
                 container_ele.append(header_ele)
 
-                # Example 2022-04-13T14:04:03.051Z
-                post_date = datetime.strptime(
-                    c["display_date"], "%Y-%m-%dT%H:%M:%S.%fZ"
-                )
+                # Example 2022-04-13T14:04:03.051Z "%Y-%m-%dT%H:%M:%S.%fZ"
+                post_date = self.parse_date(c["display_date"])
                 meta_ele = BeautifulSoup(
                     f"""<div class="article-meta">
                         <span class="author"></span>
@@ -206,13 +204,12 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
             # https://www.washingtonpost.com/world/interactive/2022/china-shanghai-covid-lockdown-food-shortage/
             self.abort_article(f"Unable to get content from script: {url}")
 
-        # Example 2022-04-13T14:04:03.051Z
-        post_date = datetime.strptime(content["display_date"], "%Y-%m-%dT%H:%M:%S.%fZ")
+        # Example 2022-04-13T14:04:03.051Z "%Y-%m-%dT%H:%M:%S.%fZ"
+        post_date = self.parse_date(content["display_date"])
         if post_date > datetime.today():  # it happens
             try:
-                post_date = datetime.strptime(
-                    content["publish_date"][:-5], "%Y-%m-%dT%H:%M:%S"
-                )
+                # "%Y-%m-%dT%H:%M:%S"
+                post_date = self.parse_date(content["publish_date"][:-5])
             except:  # noqa
                 # do nothing
                 pass

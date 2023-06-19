@@ -7,7 +7,6 @@ import json
 import os
 import sys
 from collections import defaultdict
-from datetime import datetime, timezone
 from http.cookiejar import Cookie
 
 # custom include to share code between recipes
@@ -323,10 +322,8 @@ class Economist(BasicNewsrackRecipe, BasicNewsRecipe):
         article.text_summary = clean_ascii_chars(article.summary)
         div_date = soup.find(attrs={"datecreated": True})
         if div_date:
-            date_published = datetime.strptime(
-                div_date["datecreated"],
-                "%Y-%m-%dT%H:%M:%SZ",
-            ).replace(tzinfo=timezone.utc)
+            # "%Y-%m-%dT%H:%M:%SZ"
+            date_published = self.parse_date(div_date["datecreated"])
             if not self.pub_date or date_published > self.pub_date:
                 self.pub_date = date_published
 
@@ -371,11 +368,10 @@ class Economist(BasicNewsrackRecipe, BasicNewsRecipe):
             )
             self.log("Got cover:", self.cover_url)
 
-            # Example 2022-04-16T00:00:00Z
-            date_published = datetime.strptime(
-                data["props"]["pageProps"]["content"]["datePublished"],
-                "%Y-%m-%dT%H:%M:%SZ",
-            ).replace(tzinfo=timezone.utc)
+            # Example 2022-04-16T00:00:00Z "%Y-%m-%dT%H:%M:%SZ"
+            date_published = self.parse_date(
+                data["props"]["pageProps"]["content"]["datePublished"]
+            )
             self.title = format_title(_name, date_published)
             feeds_dict = defaultdict(list)
             for part in safe_dict(

@@ -8,7 +8,6 @@ __copyright__ = "2014, Darko Miletic <darko.miletic at gmail.com>"
 import os
 import sys
 
-from datetime import datetime
 from urllib.parse import urljoin
 
 # custom include to share code between recipes
@@ -83,7 +82,8 @@ class WiredMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
         pub_date_meta = soup.find(
             name="meta", attrs={"property": "article:published_time"}
         )
-        post_date = datetime.strptime(pub_date_meta["content"], "%Y-%m-%dT%H:%M:%S.%fZ")
+        # "%Y-%m-%dT%H:%M:%S.%fZ"
+        post_date = self.parse_date(pub_date_meta["content"])
         if not self.pub_date or post_date > self.pub_date:
             self.pub_date = post_date
             self.title = format_title(_name, post_date)

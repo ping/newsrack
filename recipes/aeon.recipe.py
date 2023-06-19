@@ -60,9 +60,8 @@ class Aeon(BasicNewsrackRecipe, BasicNewsRecipe):
             self.log.warn(err_msg)
             self.abort_article(err_msg)
 
-        published_date = datetime.strptime(
-            article["datePublished"], "%Y-%m-%d"
-        ).replace(tzinfo=timezone.utc)
+        # "%Y-%m-%d"
+        published_date = self.parse_date(article["datePublished"])
         if (not self.pub_date) or published_date > self.pub_date:
             self.pub_date = published_date
             self.title = format_title(_name, published_date)

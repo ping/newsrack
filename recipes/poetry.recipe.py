@@ -6,7 +6,6 @@ import os
 import re
 import sys
 from collections import OrderedDict
-from datetime import datetime, timezone
 from urllib.parse import urlparse
 
 # custom include to share code between recipes
@@ -84,9 +83,8 @@ class Nature(BasicNewsrackRecipe, BasicNewsRecipe):
         issue_edition = self.tag_to_string(soup.find("h1"))
         self.title = f"{_name}: {issue_edition}"
         try:
-            self.pub_date = datetime.strptime(issue_edition, "%B %Y").replace(
-                tzinfo=timezone.utc
-            )
+            # "%B %Y"
+            self.pub_date = self.parse_date(issue_edition)
         except ValueError:
             # 2-month issue e.g. "July/August 2021"
             mobj = re.match(
@@ -94,9 +92,7 @@ class Nature(BasicNewsrackRecipe, BasicNewsRecipe):
             )
             if not mobj:
                 self.abort_recipe_processing("Unable to parse issue date")
-            self.pub_date = datetime.strptime(
-                f'{mobj.group("mth")} {mobj.group("yr")}', "%B %Y"
-            ).replace(tzinfo=timezone.utc)
+            self.pub_date = self.parse_date(f'{mobj.group("mth")} {mobj.group("yr")}')
 
         cover_image = soup.select("div.c-issueBillboard-cover-media img")[0]
         parsed_cover_url = urlparse(

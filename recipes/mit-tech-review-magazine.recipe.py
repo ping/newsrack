@@ -102,13 +102,11 @@ class MitTechnologyReviewMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         # formulate the api response into html
         post = json.loads(raw_html)
-        post_update_dt = self.parse_datetime(post["modified_gmt"]).replace(
-            tzinfo=timezone.utc
-        )
+        post_update_dt = self.parse_date(post["modified_gmt"], tz_info=timezone.utc)
         if not self.pub_date or post_update_dt > self.pub_date:
             self.pub_date = post_update_dt
 
-        date_published_loc = self.parse_datetime(post["date"])
+        date_published_loc = self.parse_date(post["date"], tz_info=None, as_utc=False)
         post_authors = self.extract_authors(post)
         categories = self.extract_categories(post)
 

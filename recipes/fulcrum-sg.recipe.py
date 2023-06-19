@@ -110,7 +110,7 @@ class FulcrumSg(WordPressNewsrackRecipe, BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         # formulate the api response into html
         post = json.loads(raw_html)
-        date_published_loc = self.parse_datetime(post["date"])
+        date_published_loc = self.parse_date(post["date"], tz_info=None, as_utc=False)
         if post.get("commentaries_author"):
             post_authors = [post["commentaries_author"]]
         else:

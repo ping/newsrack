@@ -86,10 +86,8 @@ class WorldToday(BasicNewsrackRecipe, BasicNewsRecipe):
         soup = BeautifulSoup(raw_html)
         # find pub date
         mod_date_ele = soup.find("meta", attrs={"property": "article:modified_time"})
-        # Example: 2022-09-30T12:40:17+0100
-        post_mod_date = datetime.strptime(
-            mod_date_ele["content"], "%Y-%m-%dT%H:%M:%S%z"
-        )
+        # Example: 2022-09-30T12:40:17+0100 "%Y-%m-%dT%H:%M:%S%z"
+        post_mod_date = self.parse_date(mod_date_ele["content"])
         if not self.pub_date or post_mod_date > self.pub_date:
             self.pub_date = post_mod_date
         for img in soup.find_all("img", attrs={"srcset": True}):

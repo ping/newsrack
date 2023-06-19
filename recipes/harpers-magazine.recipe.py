@@ -1,6 +1,5 @@
 import os
 import sys
-from datetime import datetime
 from urllib.parse import urljoin
 
 # custom include to share code between recipes
@@ -84,14 +83,12 @@ class HarpersMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
         soup.find("meta", attrs={"property": "article:modified_time"})
-        # Example: 2023-05-16T16:43:24+00:00
+        # Example: 2023-05-16T16:43:24+00:00 "%Y-%m-%dT%H:%M:%S%z"
         article_datetime = soup.find(
             "meta", attrs={"property": "article:modified_time"}
         ) or soup.find("meta", attrs={"property": "article:published_time"})
         if article_datetime:
-            post_date = datetime.strptime(
-                article_datetime["content"], "%Y-%m-%dT%H:%M:%S%z"
-            )
+            post_date = self.parse_date(article_datetime["content"])
             if (not self.pub_date) or post_date > self.pub_date:
                 self.pub_date = post_date
 

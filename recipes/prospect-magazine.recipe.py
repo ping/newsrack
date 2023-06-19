@@ -6,7 +6,6 @@
 import os
 import sys
 from collections import OrderedDict
-from datetime import datetime, timezone
 from urllib.parse import urljoin
 
 # custom include to share code between recipes
@@ -95,12 +94,12 @@ class ProspectMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
         for author_link in soup.find_all("a", class_="pros-article-author"):
             author_link.unwrap()
 
-        article_date = datetime.strptime(
+        # "%B %d, %Y"
+        article_date = self.parse_date(
             self.tag_to_string(
                 soup.find(class_="prop-book-review-header-wrapper_details-date")
-            ),
-            "%B %d, %Y",
-        ).replace(tzinfo=timezone.utc)
+            )
+        )
         if (not self.pub_date) or article_date > self.pub_date:
             self.pub_date = article_date
 

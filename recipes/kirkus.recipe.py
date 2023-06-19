@@ -1,6 +1,5 @@
 import os
 import sys
-from datetime import datetime, timezone
 from urllib.parse import urljoin
 
 # custom include to share code between recipes
@@ -88,10 +87,8 @@ class Kirkus(BasicNewsrackRecipe, BasicNewsRecipe):
         if h1:
             edition = self.tag_to_string(h1)
             self.title = f"{_name}: {edition}"
-            # Example: April 1, 2023
-            self.pub_date = datetime.strptime(edition, "%B %d, %Y").replace(
-                tzinfo=timezone.utc
-            )
+            # Example: April 1, 2023 "%B %d, %Y"
+            self.pub_date = self.parse_date(edition)
 
         articles = {}
         for book_ele in soup.find_all(name="div", class_="issue-featured-book"):

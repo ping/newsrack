@@ -9,11 +9,15 @@ import json
 import os
 import re
 import sys
-from datetime import datetime, timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, format_title, get_datetime_format
+from recipes_shared import (
+    BasicNewsrackRecipe,
+    format_title,
+    get_datetime_format,
+    parse_date,
+)
 
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -62,18 +66,15 @@ def json_to_html(data):
     author_ele.append(", ".join(authors))
     meta.append(author_ele)
 
-    # Example: 2022-04-04T10:00:00Z
-    published_date = datetime.strptime(
-        article["datePublished"], "%Y-%m-%dT%H:%M:%SZ"
-    ).replace(tzinfo=timezone.utc)
+    # Example: 2022-04-04T10:00:00Z "%Y-%m-%dT%H:%M:%SZ"
+    published_date = parse_date(article["datePublished"])
     pub_ele = new_soup.new_tag("span", attrs={"class": "published-dt"})
     pub_ele["data-published"] = f"{published_date:%Y-%m-%dT%H:%M:%SZ}"
     pub_ele.append(f"{published_date:{get_datetime_format()}}")
     meta.append(pub_ele)
     if article.get("dateModified"):
-        modified_date = datetime.strptime(
-            article["dateModified"], "%Y-%m-%dT%H:%M:%SZ"
-        ).replace(tzinfo=timezone.utc)
+        # "%Y-%m-%dT%H:%M:%SZ"
+        modified_date = parse_date(article["dateModified"])
         upd_ele = new_soup.new_tag("span", attrs={"class": "modified-dt"})
         upd_ele["data-modified"] = f"{modified_date:%Y-%m-%dT%H:%M:%SZ}"
         upd_ele.append(f"Updated {modified_date:{get_datetime_format()}}")
@@ -239,18 +240,16 @@ class TheAtlantic(BasicNewsrackRecipe, BasicNewsRecipe):
 
         modified = soup.find(attrs={"data-modified": True})
         if modified:
-            modified_date = datetime.strptime(
-                modified["data-modified"], "%Y-%m-%dT%H:%M:%SZ"
-            ).replace(tzinfo=timezone.utc)
+            # "%Y-%m-%dT%H:%M:%SZ"
+            modified_date = self.parse_date(modified["data-modified"])
             if (not self.pub_date) or modified_date > self.pub_date:
                 self.pub_date = modified_date
                 self.title = format_title(_name, modified_date)
 
         published = soup.find(attrs={"data-published": True})
         if published:
-            published_date = datetime.strptime(
-                published["data-published"], "%Y-%m-%dT%H:%M:%SZ"
-            ).replace(tzinfo=timezone.utc)
+            # "%Y-%m-%dT%H:%M:%SZ"
+            published_date = self.parse_date(published["data-published"])
             article.utctime = published_date
             if (not self.pub_date) or published_date > self.pub_date:
                 self.pub_date = published_date

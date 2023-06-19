@@ -22,6 +22,7 @@ from recipes_shared import BasicNewsrackRecipe, format_title
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Asahi Shimbun"
+JST = timezone(timedelta(hours=9))
 
 
 class AsahiShimbunEnglishNews(BasicNewsrackRecipe, BasicNewsRecipe):
@@ -51,7 +52,7 @@ class AsahiShimbunEnglishNews(BasicNewsrackRecipe, BasicNewsRecipe):
     cutoff_date_utc = datetime.today().replace(tzinfo=timezone.utc) - timedelta(
         days=oldest_article
     )
-    cutoff_date_jst = cutoff_date_utc.astimezone(timezone(timedelta(hours=9))).replace(
+    cutoff_date_jst = cutoff_date_utc.astimezone(JST).replace(
         hour=0, minute=0, second=0, microsecond=0
     )
 
@@ -72,9 +73,13 @@ class AsahiShimbunEnglishNews(BasicNewsrackRecipe, BasicNewsRecipe):
     def populate_article_metadata(self, article, soup, _):
         last_update_ele = soup.find(name="p", attrs={"class": "EnLastUpdated"})
         if last_update_ele:
-            post_date = datetime.strptime(
-                self.tag_to_string(last_update_ele), "%B %d, %Y at %H:%M JST"
-            ).replace(tzinfo=timezone(timedelta(hours=9)))
+            # "%B %d, %Y at %H:%M JST"
+            post_date = self.parse_date(
+                self.tag_to_string(last_update_ele),
+                tz_info=JST,
+                as_utc=False,
+                tzinfos={"JST": JST},
+            )
             post_date_utc = post_date.astimezone(timezone.utc)
             if (
                 not self.pub_date or post_date_utc > self.pub_date
@@ -102,8 +107,9 @@ class AsahiShimbunEnglishNews(BasicNewsrackRecipe, BasicNewsRecipe):
 
         for item in news_section.findAll("li"):
             date_string = item.find("p", attrs={"class": "date"}).next
-            post_date_jst = datetime.strptime(date_string.strip(), "%B %d, %Y").replace(
-                tzinfo=timezone(timedelta(hours=9))
+            # "%B %d, %Y"
+            post_date_jst = self.parse_date(
+                date_string.strip(), tz_info=JST, as_utc=False
             )
             if post_date_jst < self.cutoff_date_jst:
                 continue
@@ -129,8 +135,9 @@ class AsahiShimbunEnglishNews(BasicNewsrackRecipe, BasicNewsRecipe):
 
         for item in top.findAll("li"):
             date_string = item.find("p", attrs={"class": "date"}).next
-            post_date_jst = datetime.strptime(date_string.strip(), "%B %d, %Y").replace(
-                tzinfo=timezone(timedelta(hours=9))
+            # "%B %d, %Y"
+            post_date_jst = self.parse_date(
+                date_string.strip(), tz_info=JST, as_utc=False
             )
             if post_date_jst < self.cutoff_date_jst:
                 continue
@@ -156,8 +163,9 @@ class AsahiShimbunEnglishNews(BasicNewsrackRecipe, BasicNewsRecipe):
 
         for item in news_grid.findAll("li"):
             date_string = item.find("p", attrs={"class": "date"}).next
-            post_date_jst = datetime.strptime(date_string.strip(), "%B %d, %Y").replace(
-                tzinfo=timezone(timedelta(hours=9))
+            # "%B %d, %Y"
+            post_date_jst = self.parse_date(
+                date_string.strip(), tz_info=JST, as_utc=False
             )
             if post_date_jst < self.cutoff_date_jst:
                 continue

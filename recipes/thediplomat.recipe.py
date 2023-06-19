@@ -89,7 +89,7 @@ class TheDiplomat(WordPressNewsrackRecipe, BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         # formulate the api response into html
         post = json.loads(raw_html)
-        post_date = self.parse_datetime(post["date"])
+        post_date = self.parse_date(post["date"], tz_info=None, as_utc=False)
         soup = BeautifulSoup(
             f"""<html>
         <head></head>

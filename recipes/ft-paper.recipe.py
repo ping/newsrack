@@ -113,10 +113,8 @@ class FinancialTimesPrint(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
 
         date_published = article.get("datePublished", None)
         if date_published:
-            # Example: 2022-03-29T04:00:05.154Z
-            date_published = datetime.strptime(
-                date_published, "%Y-%m-%dT%H:%M:%S.%fZ"
-            ).replace(tzinfo=timezone.utc)
+            # Example: 2022-03-29T04:00:05.154Z "%Y-%m-%dT%H:%M:%S.%fZ"
+            date_published = self.parse_date(date_published)
             if (not self.pub_date) or date_published > self.pub_date:
                 self.pub_date = date_published
                 self.title = format_title(_name, date_published)

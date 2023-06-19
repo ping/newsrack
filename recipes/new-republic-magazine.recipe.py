@@ -197,10 +197,8 @@ fragment ArticlePageFields on Article {
     def preprocess_raw_html(self, raw_html, url):
         # formulate the api response into html
         article = json.loads(raw_html)["data"]["Article"]
-        # Example: 2022-08-12T10:00:00.000Z
-        date_published_loc = datetime.strptime(
-            article["publishedAt"], "%Y-%m-%dT%H:%M:%S.%fZ"
-        )
+        # Example: 2022-08-12T10:00:00.000Z "%Y-%m-%dT%H:%M:%S.%fZ"
+        date_published_loc = self.parse_date(article["publishedAt"])
         # authors
         author_bios_html = ""
         post_authors = []
@@ -248,8 +246,8 @@ fragment ArticlePageFields on Article {
         try:
             self.pub_date = datetime.fromisoformat(magazine["metaData"]["publishedAt"])
         except ValueError:
-            # Example: 2023-03-16T10:00:00.000Z
-            self.pub_date = datetime.strptime(
+            # Example: 2023-03-16T10:00:00.000Z "%Y-%m-%dT%H:%M:%S.%fZ"
+            self.pub_date = self.parse_date(
                 magazine["metaData"]["publishedAt"], "%Y-%m-%dT%H:%M:%S.%fZ"
             )
         self.log.debug(f'Found issue: {magazine["metaData"]["issueTag"]["text"]}')

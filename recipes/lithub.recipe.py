@@ -98,7 +98,7 @@ class LitHub(WordPressNewsrackRecipe, BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         # formulate the api response into html
         post = json.loads(raw_html)
-        date_published_loc = self.parse_datetime(post["date"])
+        date_published_loc = self.parse_date(post["date"], tz_info=None, as_utc=False)
         post_authors = self.extract_authors(post)
         categories = self.extract_categories(post)
 

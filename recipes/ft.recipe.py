@@ -9,7 +9,6 @@ ft.com
 import os
 import re
 import sys
-from datetime import datetime, timezone
 from urllib.parse import urljoin, quote_plus
 
 # custom include to share code between recipes
@@ -83,10 +82,8 @@ class FinancialTimes(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
 
         date_published = article.get("datePublished", None)
         if date_published:
-            # Example: 2022-03-29T04:00:05.154Z
-            date_published = datetime.strptime(
-                date_published, "%Y-%m-%dT%H:%M:%S.%fZ"
-            ).replace(tzinfo=timezone.utc)
+            # Example: 2022-03-29T04:00:05.154Z "%Y-%m-%dT%H:%M:%S.%fZ"
+            date_published = self.parse_date(date_published)
 
         paragraphs = []
         lede_image_url = article.get("image", {}).get("url")

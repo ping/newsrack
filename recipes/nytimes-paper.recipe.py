@@ -20,7 +20,6 @@ from recipes_shared import BasicNewsrackRecipe, format_title, get_date_format
 from calibre import browser
 from calibre import strftime
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
-from calibre.utils.date import strptime
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "New York Times (Print)"
@@ -152,11 +151,8 @@ class NewYorkTimesPrint(BasicNewsrackRecipe, BasicNewsRecipe):
                     subheadline = new_soup.find("div", class_="sub-headline")
                     subheadline.string = summary_text
                 if c.get("timestampBlock"):
-                    # Example 2022-04-12T09:00:05.000Z
-                    post_date = datetime.datetime.strptime(
-                        c["timestampBlock"]["timestamp"],
-                        "%Y-%m-%dT%H:%M:%S.%fZ",
-                    )
+                    # Example 2022-04-12T09:00:05.000Z "%Y-%m-%dT%H:%M:%S.%fZ"
+                    post_date = self.parse_date(c["timestampBlock"]["timestamp"])
                     pub_dt_ele = new_soup.find("span", class_="published-dt")
                     pub_dt_ele.string = f"{post_date:{get_date_format()}}"
                 if c.get("ledeMedia"):
@@ -432,12 +428,11 @@ class NewYorkTimesPrint(BasicNewsrackRecipe, BasicNewsRecipe):
                     subheadline = new_soup.find("div", class_="sub-headline")
                     subheadline.string = summary_text
                 if header_block.get("timestampBlock"):
-                    # Example 2022-04-12T09:00:05.000Z
-                    post_date = datetime.datetime.strptime(
+                    # Example 2022-04-12T09:00:05.000Z "%Y-%m-%dT%H:%M:%S.%fZ"
+                    post_date = self.parse_date(
                         content_service[header_block["timestampBlock"]["id"]][
                             "timestamp"
-                        ],
-                        "%Y-%m-%dT%H:%M:%S.%fZ",
+                        ]
                     )
                     pub_dt_ele = new_soup.find("span", class_="published-dt")
                     pub_dt_ele.string = f"{post_date:{get_date_format()}}"
@@ -733,7 +728,7 @@ class NewYorkTimesPrint(BasicNewsrackRecipe, BasicNewsRecipe):
     def read_nyt_metadata(self):
         soup = self.read_todays_paper()
         pdate = soup.find("meta", attrs={"name": "pdate", "content": True})["content"]
-        date = strptime(pdate, "%Y%m%d", assume_utc=False, as_utc=False)
+        date = self.parse_date(pdate)
         self.cover_url = (
             "https://static01.nyt.com/images/{}/nytfrontpage/scan.jpg".format(
                 date.strftime("%Y/%m/%d")

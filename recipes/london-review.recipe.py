@@ -5,12 +5,11 @@
 
 import os
 import sys
-from datetime import datetime, timezone
 from urllib.parse import urljoin
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, format_title
+from recipes_shared import BasicNewsrackRecipe
 
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 
@@ -73,18 +72,15 @@ class LondonReviewOfBooks(BasicNewsrackRecipe, BasicNewsRecipe):
         if info:
             soup.body["data-og-summary"] = info.get("description", "")
             # example: 2022-07-28T12:07:08+00:00
-            modified_date = datetime.strptime(
-                info["dateModified"][:19], "%Y-%m-%dT%H:%M:%S"
-            ).replace(tzinfo=timezone.utc)
+            modified_date = self.parse_date(info["dateModified"])
             soup.body["data-og-date"] = f"{modified_date:%Y-%m-%d %H:%M:%S}"
             if not self.pub_date or modified_date > self.pub_date:
                 self.pub_date = modified_date
         else:
             letter_ele = soup.find(attrs={"class": "letters-titles--date"})
             if letter_ele:
-                published_date = datetime.strptime(letter_ele.text, "%d %B %Y").replace(
-                    tzinfo=timezone.utc
-                )
+                # "%d %B %Y"
+                published_date = self.parse_date(letter_ele.text)
                 soup.body["data-og-date"] = f"{published_date:%Y-%m-%d %H:%M:%S}"
             for letter in soup.find_all(attrs={"class": "letter"}):
                 letter.insert_before(soup.new_tag("hr"))
@@ -102,9 +98,8 @@ class LondonReviewOfBooks(BasicNewsrackRecipe, BasicNewsRecipe):
 
         article_date = soup.find(attrs={"data-og-date": True})
         if article_date:
-            modified_date = datetime.strptime(
-                article_date["data-og-date"], "%Y-%m-%d %H:%M:%S"
-            ).replace(tzinfo=timezone.utc)
+            # "%Y-%m-%d %H:%M:%S"
+            modified_date = self.parse_date(article_date["data-og-date"])
             article.utctime = modified_date
             article.localtime = modified_date
 

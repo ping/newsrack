@@ -6,7 +6,7 @@
 import json
 import os
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import timedelta, timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
@@ -49,9 +49,12 @@ class TimeMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
         except TypeError:
             # sometimes authors = [[]]
             authors = []
-        date_published_loc = datetime.strptime(
-            article["time"]["published"], "%Y-%m-%d %H:%M:%S"
-        ).replace(tzinfo=timezone(timedelta(hours=-4)))
+        # "%Y-%m-%d %H:%M:%S"
+        date_published_loc = self.parse_date(
+            article["time"]["published"],
+            tz_info=timezone(timedelta(hours=-4)),
+            as_utc=False,
+        )
         date_published_utc = date_published_loc.astimezone(timezone.utc)
         if not self.pub_date or date_published_utc > self.pub_date:
             self.pub_date = date_published_utc

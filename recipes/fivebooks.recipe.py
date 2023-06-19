@@ -10,7 +10,6 @@ import os
 import re
 import sys
 from datetime import datetime
-from datetime import timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
@@ -87,9 +86,8 @@ class FiveBooks(BasicNewsrackRecipe, BasicNewsRecipe):
             if dated_tag:
                 post_date = datetime.fromisoformat(dated_tag["data-post-modified-date"])
         else:
-            post_date = datetime.strptime(dt.text, "%B %d, %Y").replace(
-                tzinfo=timezone.utc
-            )
+            # "%B %d, %Y"
+            post_date = self.parse_date(dt.text)
         if post_date:
             if not self.pub_date or post_date > self.pub_date:
                 self.pub_date = post_date

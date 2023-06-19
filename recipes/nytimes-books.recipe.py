@@ -3,7 +3,6 @@
 # This software is released under the GNU General Public License v3.0
 # https://opensource.org/licenses/GPL-3.0
 
-import datetime
 import json
 import os
 import sys
@@ -129,11 +128,8 @@ class NYTimesBooks(BasicNewsrackRecipe, BasicNewsRecipe):
                     subheadline = new_soup.find("div", class_="sub-headline")
                     subheadline.string = summary_text
                 if c.get("timestampBlock"):
-                    # Example 2022-04-12T09:00:05.000Z
-                    post_date = datetime.datetime.strptime(
-                        c["timestampBlock"]["timestamp"],
-                        "%Y-%m-%dT%H:%M:%S.%fZ",
-                    )
+                    # Example 2022-04-12T09:00:05.000Z "%Y-%m-%dT%H:%M:%S.%fZ"
+                    post_date = self.parse_date(c["timestampBlock"]["timestamp"])
                     pub_dt_ele = new_soup.find("span", class_="published-dt")
                     pub_dt_ele.string = f"{post_date:{get_date_format()}}"
                 if c.get("ledeMedia"):
@@ -409,12 +405,11 @@ class NYTimesBooks(BasicNewsrackRecipe, BasicNewsRecipe):
                     subheadline = new_soup.find("div", class_="sub-headline")
                     subheadline.string = summary_text
                 if header_block.get("timestampBlock"):
-                    # Example 2022-04-12T09:00:05.000Z
-                    post_date = datetime.datetime.strptime(
+                    # Example 2022-04-12T09:00:05.000Z "%Y-%m-%dT%H:%M:%S.%fZ"
+                    post_date = self.parse_date(
                         content_service[header_block["timestampBlock"]["id"]][
                             "timestamp"
-                        ],
-                        "%Y-%m-%dT%H:%M:%S.%fZ",
+                        ]
                     )
                     pub_dt_ele = new_soup.find("span", class_="published-dt")
                     pub_dt_ele.string = f"{post_date:{get_date_format()}}"
