@@ -95,7 +95,7 @@ class WiredMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
         category_div = soup.new_tag("div", attrs={"class": "category"})
         category_div.append(category)
         pub_div = soup.new_tag("div", attrs={"class": "published-dt"})
-        pub_div.append(f"{post_date:%B %d, %Y %H:%H %p}")
+        pub_div.append(f"{post_date:%B %d, %Y %H:%M %p}")
         meta_div = soup.new_tag("div", attrs={"class": "article-meta"})
         meta_div.append(authors_div)
         meta_div.append(pub_div)
