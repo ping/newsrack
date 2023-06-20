@@ -67,7 +67,7 @@ class SpectatorMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
         paywall_ele = soup.find(name="section", class_="paywall")
         if paywall_ele:
             err_msg = f'Article is paywalled: "{self.tag_to_string(soup.find("h1"))}"'
-            self.log.warn(err_msg)
+            self.log.warning(err_msg)
             self.abort_article(err_msg)
 
         # inject article meta element

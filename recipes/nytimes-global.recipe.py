@@ -773,7 +773,7 @@ class NYTimesGlobal(BasicNewsrackRecipe, BasicNewsRecipe):
 
                 # if static asset is also blocked, give up
                 err_msg = f"Blocked by bot detection: {target_url}"
-                self.log.warn(err_msg)
+                self.log.warning(err_msg)
                 self.abort_recipe_processing(err_msg)
                 self.abort_article(err_msg)
             raise

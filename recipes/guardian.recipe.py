@@ -101,7 +101,9 @@ class Guardian(BasicNewsrackRecipe, BasicNewsRecipe):
             soup, lambda d: d[0].get("@type", "") == "LiveBlogPosting"
         )
         if live_blog:
-            self.abort_article("Do not include live postings")
+            err_msg = "Exclude live postings"
+            self.log.warning(err_msg)
+            self.abort_article(err_msg)
 
         meta = soup.find(attrs={"data-gu-name": "meta"})
         if meta:

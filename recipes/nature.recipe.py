@@ -96,7 +96,9 @@ class Nature(BasicNewsrackRecipe, BasicNewsRecipe):
     def preprocess_html(self, soup):
         if soup.find(name="h2", id="access-options"):
             # paid access required
-            self.abort_article("Subscription required")
+            err_msg = "Subscription required"
+            self.log.warning(err_msg)
+            self.abort_article(err_msg)
 
         article_identifier = soup.find(
             name="ul", attrs={"class": "c-article-identifiers"}

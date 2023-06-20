@@ -175,7 +175,9 @@ class SCMP(BasicNewsrackRecipe, BasicNewsRecipe):
 
         if content.get("sponsorType"):
             # skip sponsored articles
-            self.abort_article(f"Sponsored article: {url}")
+            err_msg = f"Sponsored article: {url}"
+            self.log.warning(err_msg)
+            self.abort_article(err_msg)
 
         body = None
         for k, v in content.items():

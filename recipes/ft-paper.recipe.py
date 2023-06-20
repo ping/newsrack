@@ -103,7 +103,7 @@ class FinancialTimesPrint(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
         article = self.get_ld_json(soup, lambda d: d.get("@type", "") == "NewsArticle")
         if not (article and article.get("articleBody")):
             err_msg = f"Unable to find article: {url}"
-            self.log.warn(err_msg)
+            self.log.warning(err_msg)
             self.abort_article(err_msg)
 
         try:

@@ -202,7 +202,12 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
         if not content:
             # E.g. interactive articles
             # https://www.washingtonpost.com/world/interactive/2022/china-shanghai-covid-lockdown-food-shortage/
-            self.abort_article(f"Unable to get content from script: {url}")
+            if "/interactive/" in url:
+                err_msg = f"Exclude interactive article: {url}"
+            else:
+                err_msg = f"Unable to get content from script: {url}"
+            self.log.warning(err_msg)
+            self.abort_article(err_msg)
 
         # Example 2022-04-13T14:04:03.051Z "%Y-%m-%dT%H:%M:%S.%fZ"
         post_date = self.parse_date(content["display_date"])
