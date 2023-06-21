@@ -27,7 +27,7 @@ import requests  # type: ignore
 from bleach import linkify
 
 from _opds import init_feed, simple_tag, extension_contenttype_map
-from _recipe_utils import sort_category, Recipe
+from _recipe_utils import sort_category, Recipe, is_windows
 from _recipes import (
     recipes as default_recipes,
     categories_sort as default_categories_sort,
@@ -165,7 +165,10 @@ def _write_opds(generated_output: Dict, recipe_covers: Dict, publish_site: str) 
                     simple_tag(
                         doc,
                         "summary",
-                        f"{books[0].title or recipe_name} published at {books[0].published_dt:%Y-%m-%d %H:%M%p}.",
+                        (
+                            f"{books[0].title or recipe_name} published at "
+                            f'{books[0].published_dt:{"%Y-%m-%d %I:%M%p %Z" if is_windows else "%Y-%m-%d %-I:%M%p %Z"}}'
+                        ),
                     )
                 )
                 entry.appendChild(
