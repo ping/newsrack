@@ -879,8 +879,8 @@ def run(
             tags_html = (
                 ""
                 if not books[0].recipe.tags
-                else '<div class="tags"><span title="Search with this tag" class="tag">#'
-                + '</span><span title="Search with this tag" class="tag">#'.join(
+                else '<div class="tags"><span tabindex="0" title="Search with this tag" class="tag">#'
+                + '</span><span tabindex="0" title="Search with this tag" class="tag">#'.join(
                     books[0].recipe.tags
                 )
                 + "</span></div>"
@@ -891,7 +891,7 @@ def run(
             <span class="title">{books[0].title or recipe_name}</span>
             {" ".join(book_links)}
             <div class="meta" data-pub-id="{books[0].recipe.slug}">
-            <div class="pub-date" data-pub-date="{int(books[0].published_dt.timestamp() * 1000)}">
+            <div tabindex="0" class="pub-date" data-pub-date="{int(books[0].published_dt.timestamp() * 1000)}">
                 Published at {books[0].published_dt:%Y-%m-%d %-I:%M%p %z}
             </div>
             {tags_html}
@@ -919,10 +919,10 @@ def run(
                 </div></li>"""
             )
 
-        listing += f"""<div class="category-container is-open"><h2 id="cat-{slugify(category, True)}" class="category is-open">{category}
+        listing += f"""<div class="category-container is-open"><h2 tabindex="0" id="cat-{slugify(category, True)}" class="category is-open">{category}
         <a class="opds" title="OPDS for {category.title()}" href="{slugify(category, True)}.xml">OPDS</a></h2>
         <ol class="books">{"".join(publication_listing)}</ol>
-        <div class="close-cat-container"><div class="close-cat-shortcut" title="Collapse category" data-click-target="cat-{slugify(category)}"></div></div>
+        <div class="close-cat-container"><div tabindex="0" class="close-cat-shortcut" title="Collapse category" data-click-target="cat-{slugify(category)}"></div></div>
         </div>
         """
 

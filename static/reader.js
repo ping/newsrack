@@ -111,6 +111,10 @@ https://opensource.org/licenses/GPL-3.0
             if ((e.keyCode || e.which) === 40) {
                 gotoNextChapter();
             }
+            // "t" key
+            if ((e.keyCode || e.which) === 84) {
+                document.getElementById("toc").focus();
+            }
         };
         rendition.on("keyup", keyListener);
         document.addEventListener("keyup", keyListener, false);

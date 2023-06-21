@@ -49,6 +49,8 @@ https://opensource.org/licenses/GPL-3.0
         minute: 60 * 1000,
         second: 1000
     };
+    // supported keyCodes: enter=13, space=32
+    const supportedKeyCodes = [13];
 
     const isKindleBrowser = typeof (Intl) === "undefined";
     let rtf = null;
@@ -157,88 +159,108 @@ https://opensource.org/licenses/GPL-3.0
     }
 
     // toggle collapsible toc for publication
+    function pubdateActivate(e) {
+        if (e.type === "keyup" && supportedKeyCodes.indexOf(e.keyCode || e.which) < 0) {     // not enter key
+            return;
+        }
+        if (!isKindleBrowser && !this.classList.contains("is-open")) {
+            // don't do this for the Kindle browser, because scrollIntoView doesn't seem to work
+            // opening periodical
+            const openedPeriodicals = document.querySelectorAll(".pub-date.is-open");
+            for (let j = 0; j < openedPeriodicals.length; j++) {
+                // close other opened periodicals
+                const openedPeriodical = openedPeriodicals[j];
+                openedPeriodical.classList.remove("is-open");
+                openedPeriodical.parentElement.parentElement.querySelector(".contents").classList.add("hide");  // content
+            }
+        }
+        const contents = this.parentElement.parentElement.querySelector(".contents");
+        this.classList.toggle("is-open");
+        contents.classList.toggle("hide");   // content
+        const publication_id = this.parentElement.dataset["pubId"];
+        if (contents.childElementCount <= 0 && RECIPE_DESCRIPTIONS[publication_id] !== undefined) {
+            if (RECIPE_COVERS[publication_id] !== undefined) {
+                contents.innerHTML = '<p class="cover">'
+                    + '<a href="' + RECIPE_COVERS[publication_id]["cover"] + '">'
+                    + '<img alt="Cover" src="'
+                    + RECIPE_COVERS[publication_id]["thumbnail"] + '"></a></p>';
+            }
+            contents.innerHTML += RECIPE_DESCRIPTIONS[publication_id];
+        }
+        try {
+            // scroll into element into view in case closing off another
+            // content listing causes current periodical to go off-screen
+            // don't do this for the Kindle browser, because scrollIntoView doesn't seem to work
+            if (!isKindleBrowser && !isScrolledIntoView(this)) {
+                this.parentElement.scrollIntoView();
+            }
+        } catch (e) {
+            console.error(e);
+        }
+    }
     const accordionBtns = document.querySelectorAll(".pub-date");
     for (let i = 0; i < accordionBtns.length; i++) {
         const accordion = accordionBtns[i];
-        accordion.onclick = function () {
-            if (!isKindleBrowser && !this.classList.contains("is-open")) {
-                // don't do this for the Kindle browser, because scrollIntoView doesn't seem to work
-                // opening periodical
-                const openedPeriodicals = document.querySelectorAll(".pub-date.is-open");
-                for (let j = 0; j < openedPeriodicals.length; j++) {
-                    // close other opened periodicals
-                    const openedPeriodical = openedPeriodicals[j];
-                    openedPeriodical.classList.remove("is-open");
-                    openedPeriodical.parentElement.parentElement.querySelector(".contents").classList.add("hide");  // content
-                }
-            }
-            const contents = this.parentElement.parentElement.querySelector(".contents");
-            this.classList.toggle("is-open");
-            contents.classList.toggle("hide");   // content
-            const publication_id = this.parentElement.dataset["pubId"];
-            if (contents.childElementCount <= 0 && RECIPE_DESCRIPTIONS[publication_id] !== undefined) {
-                if (RECIPE_COVERS[publication_id] !== undefined) {
-                    contents.innerHTML = '<p class="cover">'
-                        + '<a href="' + RECIPE_COVERS[publication_id]["cover"] + '">'
-                        + '<img alt="Cover" src="'
-                        + RECIPE_COVERS[publication_id]["thumbnail"] + '"></a></p>';
-                }
-                contents.innerHTML += RECIPE_DESCRIPTIONS[publication_id];
-            }
-            try {
-                // scroll into element into view in case closing off another
-                // content listing causes current periodical to go off-screen
-                // don't do this for the Kindle browser, because scrollIntoView doesn't seem to work
-                if (!isKindleBrowser && !isScrolledIntoView(this)) {
-                    this.parentElement.scrollIntoView();
-                }
-            } catch (e) {
-                console.error(e);
-            }
-        };
+        accordion.addEventListener("click", pubdateActivate);
+        accordion.addEventListener("keyup", pubdateActivate);
     }
 
     // toggle publications listing for category
+    function categoryActivate(e) {
+        if (e.type === "keyup" && supportedKeyCodes.indexOf(e.keyCode || e.which) < 0) {     // not enter key
+            return;
+        }
+        if (e.target.nodeName.toLowerCase() === "a") {
+            // don't do toggle action if it's a link
+            return;
+        }
+        this.parentElement.classList.toggle("is-open");
+        this.nextElementSibling.classList.toggle("hide");   // content
+    }
     const categoryButtons = document.querySelectorAll("h2.category");
     for (let i = 0; i < categoryButtons.length; i++) {
         const category = categoryButtons[i];
-        category.onclick = function (e) {
-            if (e.target.nodeName.toLowerCase() === "a") {
-                // don't do toggle action if it's a link
-                return;
-            }
-            this.parentElement.classList.toggle("is-open");
-            this.nextElementSibling.classList.toggle("hide");   // content
-        };
+        category.addEventListener("click", categoryActivate);
+        category.addEventListener("keyup", categoryActivate);
     }
 
     // tag search shortcuts
+    function tagActivate(e) {
+        if (e.type === "keyup" && supportedKeyCodes.indexOf(e.keyCode || e.which) < 0) {     // not enter key
+            return;
+        }
+        e.preventDefault();
+        const tagSearchQuery = "tags:"+ e.target.innerText.substring(1);
+        const currSearchQuery = searchTextField.value.trim();
+        if (currSearchQuery.indexOf(tagSearchQuery) < 0) {
+            searchTextField.value = currSearchQuery + (currSearchQuery === "" ? "" : " ") + tagSearchQuery;
+        }
+        searchTextField.focus();
+    }
     const tagShortcuts = document.querySelectorAll(".tags .tag");
     for (let i = 0; i < tagShortcuts.length; i++) {
         const tag = tagShortcuts[i];
-        tag.onclick = function(e) {
-            e.preventDefault();
-            const tagSearchQuery = "tags:"+ e.target.innerText.substring(1);
-            const currSearchQuery = searchTextField.value.trim();
-            if (currSearchQuery.indexOf(tagSearchQuery) < 0) {
-                searchTextField.value = currSearchQuery + (currSearchQuery === "" ? "" : " ") + tagSearchQuery;
-            }
-            searchTextField.focus();
-        };
+        tag.addEventListener("click", tagActivate);
+        tag.addEventListener("keyup", tagActivate);
     }
 
+    function catCloseActivate(e) {
+        if (e.type === "keyup" && supportedKeyCodes.indexOf(e.keyCode || e.which) < 0) {     // not enter key
+            return;
+        }
+        e.preventDefault();
+        const cat = document.getElementById(e.target.dataset["clickTarget"]);
+        cat.parentElement.classList.toggle("is-open");
+        cat.nextElementSibling.classList.toggle("hide");    // content
+        if (!cat.parentElement.classList.contains("is-open")) {
+            cat.parentElement.scrollIntoView();
+       }
+    }
     const catCloseShortcuts = document.querySelectorAll("[data-click-target]");
     for (let i = 0; i < catCloseShortcuts.length; i++) {
         const shortcut = catCloseShortcuts[i];
-        shortcut.onclick = function (e) {
-            e.preventDefault();
-            const cat = document.getElementById(e.target.dataset["clickTarget"]);
-            cat.parentElement.classList.toggle("is-open");
-            cat.nextElementSibling.classList.toggle("hide");    // content
-            if (!cat.parentElement.classList.contains("is-open")) {
-                cat.parentElement.scrollIntoView();
-           }
-        };
+        shortcut.addEventListener("click", catCloseActivate);
+        shortcut.addEventListener("keyup", catCloseActivate);
     }
 
     window.addEventListener("DOMContentLoaded", function() {
