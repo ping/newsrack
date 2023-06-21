@@ -249,9 +249,19 @@ def _write_opds(generated_output: Dict, recipe_covers: Dict, publish_site: str) 
                     )
                 feed.appendChild(entry)
 
+        cat_style = main_doc.createProcessingInstruction(
+            "xml-stylesheet", 'type="text/xsl" href="opds.xsl"'
+        )
+        cat_doc.insertBefore(cat_style, cat_feed)
+
         opds_xml_path = publish_folder.joinpath(f"{slugify(category, True)}.xml")
         with opds_xml_path.open("wb") as f:  # type: ignore
             f.write(cat_doc.toprettyxml(encoding="utf-8", indent=""))
+
+    main_style = main_doc.createProcessingInstruction(
+        "xml-stylesheet", 'type="text/xsl" href="opds.xsl"'
+    )
+    main_doc.insertBefore(main_style, main_feed)
 
     opds_xml_path = publish_folder.joinpath(catalog_path)
     with opds_xml_path.open("wb") as f:  # type: ignore
