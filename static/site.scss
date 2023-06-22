@@ -156,7 +156,11 @@ h2.category {
   .opds {
     float: right;
     font-size: 0.7em;
-    margin-top: 0.3em;
+    padding: 0.2em 0.4em;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &:hover {
