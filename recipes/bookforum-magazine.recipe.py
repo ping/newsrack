@@ -54,7 +54,7 @@ class BookforumMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
         )
         meta_ele = soup.find("meta", property="og:title")
         if meta_ele:
-            self.title = f'{_name}: {soup.find("meta", property="og:title")["content"]}'
+            self.title = f'{_name}: {meta_ele["content"]}'
 
         cover_ele = soup.find("img", class_="toc-issue__cover")
         if cover_ele:
