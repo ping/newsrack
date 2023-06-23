@@ -1,0 +1,38 @@
+/*
+Copyright (c) 2022 https://github.com/ping/
+
+This software is released under the GNU General Public License v3.0
+https://opensource.org/licenses/GPL-3.0
+*/
+
+@import 'viewer-theme';
+
+.viewer-theme {
+  background-color: $base-bg-color;
+  color: $base-color;
+
+  a {
+    color: $link-color;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+
+    &:visited {
+      color: $link-visited-color;
+    }
+  }
+
+  table.touchscreen_navbar {
+    background-color: $base-disabled-color;
+
+    td {
+      color: $base-color;
+      background-color: $base-bg-color;
+
+      a {
+        color: $link-color;
+      }
+    }
+  }
+}

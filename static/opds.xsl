@@ -1,5 +1,5 @@
 <xsl:stylesheet exclude-result-prefixes="opds" version="3.0" xmlns:opds="http://www.w3.org/2005/Atom"
-                xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="html" html-version="5.0" encoding="utf-8" indent="no" doctype-system="about:legacy-compat"/>
     <xsl:output doctype-public="-//W3c//DTD html 4.01//EN"/>
     <xsl:output doctype-system="http://www.w3c.org/tr/html4/strict.dtd"/>
@@ -18,12 +18,16 @@
                 <link href="opds.css" media="screen" rel="stylesheet" type="text/css"/>
             </head>
             <body>
+                <script src="theme.min.js"></script>
                 <div class="container">
                     <div class="notice">
-                        <b>This page is an OPDS catalog feed.</b>
-                        The URL in your browser's address bar can be used with an ereader
-                        that supports OPDS. This will allow you to browse and download
-                        new periodicals directly from the ereader.
+                        <p>
+                            <b>This page is an OPDS catalog feed.</b>
+                            The URL in your browser's address bar can be used with an ereader
+                            that supports OPDS. This will allow you to browse and download
+                            new periodicals directly from the ereader.
+                        </p>
+                        <a href="./">Back</a>
                     </div>
                     <h1>
                         <a>
@@ -50,19 +54,16 @@
                                 Doesn't work in Firefox
                                 <xsl:value-of select="opds:content" disable-output-escaping="yes"/>
                                 -->
-                                Downloads:
-                                <ul class="downloads">
+                                <div class="downloads">
                                     <xsl:for-each select="opds:link[@rel='http://opds-spec.org/acquisition']">
-                                        <li>
-                                            <a>
-                                                <xsl:attribute name="href">
-                                                    <xsl:value-of select="@href"/>
-                                                </xsl:attribute>
+                                        <a class="book">
+                                            <xsl:attribute name="href">
                                                 <xsl:value-of select="@href"/>
-                                            </a>
-                                        </li>
+                                            </xsl:attribute>
+                                            .<xsl:value-of select="substring-after(@href, '.')"/>
+                                        </a>
                                     </xsl:for-each>
-                                </ul>
+                                </div>
                             </li>
                         </xsl:for-each>
                     </ul>

@@ -14,6 +14,7 @@ a {
   text-decoration: none;
 
   &:hover {
+    color: $link-hover-color;
     text-decoration: underline;
   }
 
@@ -27,6 +28,17 @@ a {
   background-color: $link-color;
   padding: 1rem;
   color: $base-bg-color;
+
+  a {
+    color: $base-bg-color;
+
+    &:before {
+      content: "\2190";
+      margin-right: 0.2rem;
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
 }
 
 ul.entries {
@@ -38,7 +50,7 @@ ul.entries {
 }
 
 .item-header {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
@@ -47,36 +59,71 @@ ul.entries {
   margin: 0.4rem 0;
 
   .cat {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-right: 0.5rem;
+    margin-right: 0.4rem;
+    padding: 0.1rem 0.6rem;
+    border-radius: 1rem;
+    color: $base-color;
+    border: 1px solid $base-color;
   }
 }
 
-ul.downloads {
-  margin-top: 0.5rem;
+.downloads {
+  margin-top: 0.6rem;
 
-  > li {
-    margin-bottom: 0.4rem;
+  a.book {
+    display: inline-block;
+    text-align: center;
+    min-width: 6rem;
+    margin-right: 0.6rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
+    border: 1px solid $base-disabled-color;
+    background-color: $book-bg-color;
   }
 }
 
-@media (prefers-color-scheme: dark) {
+[data-theme="dark"] {
   body {
     color: $dark-base-color;
     background-color: $dark-base-bg-color;
   }
+
   a {
     color: $dark-link-color;
+
+    &:hover {
+      color: $dark-link-hover-color;
+    }
 
     &:visited {
       color: $dark-link-visited-color;
     }
   }
+
   .notice {
     background-color: $dark-link-color;
     border-left-color: darken($dark-link-color, 20%);
     color: $dark-base-bg-color;
+
+    a {
+      color: $dark-base-bg-color;
+    }
+  }
+
+  .item-updated {
+
+    .cat {
+      color: $dark-base-color;
+      border-color: $dark-base-color;
+    }
+  }
+
+  .downloads {
+
+    a.book {
+      border-color: $dark-base-disabled-color;
+      background-color: $dark-book-bg-color;
+    }
   }
 }
 

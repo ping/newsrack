@@ -10,85 +10,11 @@ https://opensource.org/licenses/GPL-3.0
 .viewer-theme {
   font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
   line-height: 1.4;
-  background-color: $base-bg-color;
-  color: $base-color;
   text-align: left;
 
-  a {
-    color: $link-color;
-
-    &:hover {
-      color: $link-hover-color;
-    }
-
-    &:visited {
-      color: $link-visited-color;
-    }
-  }
-
   table.touchscreen_navbar {
-    background-color: $base-disabled-color;
-
     &:first-child {
       margin-bottom: 0.5rem;
-    }
-
-    td {
-      color: $base-color;
-      background-color: $base-bg-color;
-
-      a {
-        color: $link-color;
-      }
-    }
-  }
-
-}
-
-@media (prefers-color-scheme: dark) {
-  .viewer-theme {
-    background-color: $dark-base-bg-color;
-    color: $dark-base-color;
-
-    * {
-      color: $dark-base-color;
-    }
-
-    a {
-      color: $dark-link-color;
-
-      * {
-        color: unset;
-      }
-
-      &:hover {
-        color: $dark-link-hover-color;
-
-        * {
-          color: unset;
-        }
-      }
-
-      &:visited {
-        color: $dark-link-visited-color;
-
-        * {
-          color: unset;
-        }
-      }
-    }
-
-    table.touchscreen_navbar {
-      background-color: $dark-base-disabled-color;
-
-      td {
-        color: $dark-base-color;
-        background-color: $dark-base-bg-color;
-
-        a {
-          color: $dark-link-color;
-        }
-      }
     }
   }
 }

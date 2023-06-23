@@ -963,10 +963,12 @@ def run(
     site_html = "static/index.html"
     if os.path.exists("static/custom.html"):
         site_html = "static/custom.html"
+    theme_js = "static/theme.compiled.js"
 
     with (
         open(site_css, "r", encoding="utf-8") as f_site_css,
         open(site_js, "r", encoding="utf-8") as f_site_js,
+        open(theme_js, "r", encoding="utf-8") as f_theme_js,
         open(site_html, "r", encoding="utf-8") as f_in,
         Path(publish_folder, "index.html").open("w", encoding="utf-8") as f_out,
     ):
@@ -979,6 +981,7 @@ def run(
             refreshed_ts=int(time.time() * 1000),
             refreshed_dt=datetime.now(tz=timezone.utc),
             js=site_js,
+            theme_js=f_theme_js.read(),
             publish_site=publish_site,
             elapsed=humanize.naturaldelta(elapsed_time, minimum_unit="seconds"),
             catalog=catalog_path,
@@ -992,13 +995,16 @@ def run(
         reader_js = "static/reader_custom.js"
     with (
         open(reader_js, "r", encoding="utf-8") as f_reader_js,
+        open(theme_js, "r", encoding="utf-8") as f_theme_js,
         open("static/reader.css", "r", encoding="utf-8") as f_reader_css,
         open("static/reader.html", "r", encoding="utf-8") as f_in,
         open(
             os.path.join(publish_folder, "reader.html"), "w", encoding="utf-8"
         ) as f_out,
     ):
-        html_output = f_in.read().format(css=f_reader_css.read(), js=f_reader_js.read())
+        html_output = f_in.read().format(
+            css=f_reader_css.read(), js=f_reader_js.read(), theme_js=f_theme_js.read()
+        )
         f_out.write(html_output)
 
     _write_opds(generated, recipe_covers, publish_site)

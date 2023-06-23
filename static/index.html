@@ -28,6 +28,9 @@ https://opensource.org/licenses/GPL-3.0
     if (navigator.userAgent.indexOf("Mozilla/5.0 (X11") < 0)
         document.body.classList.add("nonkindle");
     </script>
+    <script type="application/javascript">
+    {theme_js}
+    </script>
 
     <h1>News Rack</h1>
     <main>
@@ -39,6 +42,9 @@ https://opensource.org/licenses/GPL-3.0
             <input type="submit" name="Search" id="search-button" value="Search" disabled>
             </form>
 
+            <span id="toggle-theme" class="not-for-kindle" tabindex="0" title="Toggle theme">
+                <svg id="toggle-theme-icon"><use href="reader_sprites.svg#icon-theme-auto"></use></svg>
+            </span>
             <span id="search-info"><a href="https://lunrjs.com/guides/searching.html">Search syntax</a></span>
         </div>
         {listing}

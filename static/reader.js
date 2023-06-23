@@ -214,7 +214,11 @@ https://opensource.org/licenses/GPL-3.0
         Cookies.set(cookieKey, JSON.stringify(progress), { path: "", expires: 30 });
     });
 
-    rendition.themes.register("viewer-theme", "viewer-theme.css");
+    rendition.themes.register(
+        "viewer-theme",
+        document.documentElement.getAttribute('data-theme') === "light" ?
+            "viewer-theme-light.css" : "viewer-theme-dark.css"
+    );
     rendition.themes.select("viewer-theme");
 
     window.book = book;
