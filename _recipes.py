@@ -92,6 +92,16 @@ recipes: List[Recipe] = [
         tags=["editorial", "commentary"],
     ),
     Recipe(
+        recipe="bookforum-magazine",
+        slug="bookforum-magazine",
+        src_ext="mobi",
+        target_ext=["epub"],
+        overwrite_cover=False,
+        category="Arts & Culture",
+        enable_on=last_n_days_of_month(3, -4) and onlyat_hours(list(range(8, 14)), -4),
+        tags=["literature", "books"],
+    ),
+    Recipe(
         recipe="channelnewsasia",
         slug="channelnewsasia",
         src_ext="mobi",
