@@ -30,4 +30,4 @@ mkdir -p public meta \
 && python3 _generate.py "$CI_PAGES_URL" "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/" "$GITHUB_SHA" \
 && node build-index.js < public/lunr_docs.json > public/lunr.json \
 && npx html-minifier-terser --input-dir public/ --output-dir public/ --collapse-whitespace --file-ext html \
-&& rm -f *.recipe static/site.compiled.js static/reader.compiled.js public/lunr_docs.json
+&& rm -f *.recipe static/*.compiled.js public/lunr_docs.json
