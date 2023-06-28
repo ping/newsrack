@@ -33,6 +33,12 @@ https://opensource.org/licenses/GPL-3.0
     </script>
 
     <h1>News Rack</h1>
+    <div id="refreshed-info-top">
+        Updated <span data-refreshed-date="{refreshed_ts}">at {refreshed_dt:%-d %B, %Y %-I:%M%p %z}</span>
+        <span id="toggle-theme" class="not-for-kindle" tabindex="0" title="Toggle theme">
+            <svg id="toggle-theme-icon"><use href="reader_sprites.svg#icon-theme-auto"></use></svg>
+        </span>
+    </div>
     <main>
         <div id="search-form-container">
             <form id="search-form">
@@ -42,9 +48,6 @@ https://opensource.org/licenses/GPL-3.0
             <input type="submit" name="Search" id="search-button" value="Search" disabled>
             </form>
 
-            <span id="toggle-theme" class="not-for-kindle" tabindex="0" title="Toggle theme">
-                <svg id="toggle-theme-icon"><use href="reader_sprites.svg#icon-theme-auto"></use></svg>
-            </span>
             <span id="search-info"><a href="https://lunrjs.com/guides/searching.html">Search syntax</a></span>
         </div>
         {listing}
@@ -54,7 +57,7 @@ https://opensource.org/licenses/GPL-3.0
         <div class="meta">
             {source_link}
             <div class="refreshed-info">
-                Generated <span id="refreshed_dt" data-refreshed-date="{refreshed_ts}">at {refreshed_dt:%-d %B, %Y %-I:%M%p %z}</span>, and took about {elapsed}.
+                Updated <span id="refreshed_dt" data-refreshed-date="{refreshed_ts}">at {refreshed_dt:%-d %B, %Y %-I:%M%p %z}</span>, and took about {elapsed}.
             </div>
         </div>
     </footer>

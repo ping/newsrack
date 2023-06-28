@@ -138,10 +138,13 @@ https://opensource.org/licenses/GPL-3.0
         // return rect.top < window.innerHeight && rect.bottom >= 0;
     }
 
-    const refreshedDateEle = document.getElementById("refreshed_dt");
-    const refreshedDate = new Date(parseInt(refreshedDateEle.attributes["data-refreshed-date"].value));
-    refreshedDateEle.title = refreshedDate.toLocaleString();
-    refreshedDateEle.innerHTML = getRelativeTime(refreshedDate);
+    const refreshedDateEles = document.querySelectorAll("[data-refreshed-date]");
+    for (let i = 0; i < refreshedDateEles.length; i++) {
+        const refreshedDateEle = refreshedDateEles[i];
+        const refreshedDate = new Date(parseInt(refreshedDateEle.attributes["data-refreshed-date"].value));
+        refreshedDateEle.title = refreshedDate.toLocaleString();
+        refreshedDateEle.innerHTML = getRelativeTime(refreshedDate);
+    }
 
     // toggle pub date display
     const pudDateElements = document.querySelectorAll("[data-pub-date]");
@@ -319,6 +322,7 @@ https://opensource.org/licenses/GPL-3.0
             document.getElementById("search-form").onsubmit = function (e) {
                 e.preventDefault();
                 searchInfo.innerText = "";
+                searchInfo.classList.add("error");
                 const searchText = document.getElementById("search-text").value.trim();
                 if (searchText.length < 3) {
                     // this makes it work in the Kindle browser
