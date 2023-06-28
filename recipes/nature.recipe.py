@@ -21,10 +21,6 @@ def absurl(url):
     return url
 
 
-def check_words(words):
-    return lambda x: x and frozenset(words.split()).intersection(x.split())
-
-
 _name = "Nature"
 _issue_url = ""
 
@@ -121,24 +117,22 @@ class Nature(BasicNewsrackRecipe, BasicNewsRecipe):
         if subheadline:
             subheadline.name = "h2"
 
-        for img in soup.findAll("img", {"data-src": True}):
+        for img in soup.find_all("img", {"data-src": True}):
             if img["data-src"].startswith("//"):
                 img["src"] = "https:" + img["data-src"]
             else:
                 img["src"] = img["data-src"]
-        for div in soup.findAll(
-            "div", {"data-component": check_words("article-container")}
-        )[1:]:
-            div.extract()
+        for div in soup.find_all("div", {"data-component": "article-container"})[1:]:
+            div.decompose()
         return soup
 
     def parse_index(self):
         soup = self.index_to_soup(
             _issue_url if _issue_url else f"{BASE}/nature/current-issue"
         )
-        self.cover_url = soup.find(
-            "img", attrs={"data-test": check_words("issue-cover-image")}
-        )["src"]
+        self.cover_url = soup.find("img", attrs={"data-test": "issue-cover-image"})[
+            "src"
+        ]
         try:
             self.cover_url = re.sub(
                 r"\bw\d+\b", "w1000", self.cover_url
@@ -187,8 +181,8 @@ class Nature(BasicNewsrackRecipe, BasicNewsRecipe):
                         "date": article_tag.find("time", attrs={"datetime": True})[
                             "datetime"
                         ],
-                        "autor": self.tag_to_string(
-                            article_tag.find("li", {"itemprop": check_words("creator")})
+                        "author": self.tag_to_string(
+                            article_tag.find("li", {"itemprop": "creator"})
                         ),
                     }
                 )
