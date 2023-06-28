@@ -175,11 +175,10 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
             )
             if s.strip()
         ]
-        self.cover_url = (
-            src_set[-1]
-            .split(" ")[0]
-            .strip()
-            .replace("_webp_issue_small_2x", "_webp_issue_large_2x")
+        self.cover_url = re.sub(
+            r"_webp_issue_small_\dx",
+            "_webp_issue_large_2x",
+            src_set[-1].split(" ")[0].strip(),
         )
         cls = soup.find("body")["class"]
         if isinstance(cls, (list, tuple)):
