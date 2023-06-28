@@ -170,9 +170,7 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
         year, vol_num, issue_vol = link.split("/")[-3:]
         src_set = [
             s.strip()
-            for s in soup.find(**classes("subscribe-callout-image"))["srcset"].split(
-                " , "
-            )
+            for s in soup.find(class_="subscribe-callout-image")["srcset"].split(",")
             if s.strip()
         ]
         self.cover_url = re.sub(
