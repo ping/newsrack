@@ -247,9 +247,7 @@ fragment ArticlePageFields on Article {
             self.pub_date = datetime.fromisoformat(magazine["metaData"]["publishedAt"])
         except ValueError:
             # Example: 2023-03-16T10:00:00.000Z "%Y-%m-%dT%H:%M:%S.%fZ"
-            self.pub_date = self.parse_date(
-                magazine["metaData"]["publishedAt"], "%Y-%m-%dT%H:%M:%S.%fZ"
-            )
+            self.pub_date = self.parse_date(magazine["metaData"]["publishedAt"])
         self.log.debug(f'Found issue: {magazine["metaData"]["issueTag"]["text"]}')
         self.title = f'{_name}: {magazine["metaData"]["issueTag"]["text"]}'
         self.cover_url = self._urlize(magazine["metaData"]["image"]["src"])
