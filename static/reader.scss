@@ -81,6 +81,14 @@ a.home svg {
   }
 }
 
+#epub-title {
+  font-size: 0.8rem;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: $base-disabled-color;
+}
 
 @media (max-width: 575px) {
   main.container-fluid {
@@ -149,6 +157,10 @@ a.home svg {
     background-color: $dark-base-bg-color;
     border-color: darken($dark-base-disabled-color, 20%);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23e7e9f2' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  }
+  #epub-title {
+    font-size: 0.8rem;
+    color: $dark-base-disabled-color;
   }
 
 }

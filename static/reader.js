@@ -156,6 +156,7 @@ https://opensource.org/licenses/GPL-3.0
 
     book.loaded.metadata.then(function (meta) {
         document.title = meta.title;
+        document.getElementById("epub-title").innerText = meta.title;
     });
 
     rendition.on("relocated", function (location) {
