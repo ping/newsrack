@@ -241,6 +241,7 @@ h2.category {
     .pub-date {
       display: inline-block;
       margin-top: 0.3em;
+      margin-bottom: 0.2em;
       font-size: 0.8em;
       color: $base-disabled-color;
 
@@ -271,10 +272,11 @@ h2.category {
       font-weight: bold;
       margin-left: 0.5em;
       color: $tags-color;
-      display: inline-block;
+      display: inline;
 
       .tag {
         margin-right: 0.8rem;
+        display: inline-block;
 
         &:last-of-type {
           margin-right: 0;
@@ -607,8 +609,10 @@ body.nonkindle {
 
         .pub-date {
           padding-bottom: 0.1em;
-          margin-bottom: 0.2em;
           margin-top: 0.5em;
+        }
+        .tags .tag {
+          margin-bottom: 0.2rem;
         }
       }
     }
