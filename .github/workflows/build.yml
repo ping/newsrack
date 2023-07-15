@@ -64,7 +64,7 @@ jobs:
       - name: Install python requirements
         run: python -m pip install -r requirements.txt --upgrade
 
-      - name: Install calibre and other dependencies
+      - name: Install calibre's and other dependencies
         run: sudo apt-fast update -y && sudo apt-fast install --no-install-recommends -y libegl1 libopengl0 imagemagick
 
       - name: Get latest calibre version
@@ -74,7 +74,7 @@ jobs:
           echo "calibre_ver=${tag#*v}" && \
           echo "calibre_ver=${tag#*v}" >> $GITHUB_ENV
 
-      - name: Calibre binaries cache
+      - name: Get calibre binaries cache
         id: cache-bin
         uses: actions/cache@v3
         with:

@@ -46,7 +46,7 @@ class CoverOptions:
 
 @dataclass
 class Recipe:
-    """A Calibre recipe definition"""
+    """A calibre recipe definition"""
 
     recipe: str  # actual recipe name
     slug: str  # file name slug
@@ -57,7 +57,7 @@ class Recipe:
         default_factory=list
     )  # alt formats that src_ext will be converted to
     timeout: int = default_recipe_timeout  # max time allowed for executing the recipe
-    overwrite_cover: bool = True  # generate a plain cover to overwrite Calibre's
+    overwrite_cover: bool = True  # generate a plain cover to overwrite calibre's
     last_run: float = 0  # last run unix timestamp
     enable_on: Union[
         bool, Callable[..., bool]
@@ -201,7 +201,7 @@ def every_x_hours(last_run: float, hours: float, drift: float = 0.0) -> bool:
 
 def last_n_days_of_month(n_days: int, offset: float = 0.0) -> bool:
     """
-    Enable recipe only at the last n days of the month
+    Enable recipe only on the last n days of the month
 
     :param n_days:
     :param offset: timezone offset hours
@@ -215,7 +215,7 @@ def last_n_days_of_month(n_days: int, offset: float = 0.0) -> bool:
 
 def first_n_days_of_month(n_days: int, offset: float = 0.0) -> bool:
     """
-    Enable recipe only at the first n days of the month
+    Enable recipe only on the first n days of the month
 
     :param n_days:
     :param offset: timezone offset hours

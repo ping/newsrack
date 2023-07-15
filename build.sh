@@ -8,7 +8,7 @@ do
         cp -p "$f" "${b%.py}"
     done
   fi
-  # also support *.recipe files as is in Calibre
+  # also support *.recipe files as is in calibre
   # copy recipe_folder/*.recipe files to *.recipe
   if [ -n "$(ls -A "${recipe_folder}"/*.recipe 2>/dev/null)" ]
   then

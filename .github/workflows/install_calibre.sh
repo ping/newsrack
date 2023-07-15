@@ -13,16 +13,16 @@ if [ -f "${bin_folder}/${bin_file}" ]; then
 else
   echo "Cached $bin_file does not exist."
   rm -rf "${bin_folder}/calibre-*"
-  tag="$(curl -L --retry 2 --show-error --silent --fail 'https://api.github.com/repos/kovidgoyal/calibre/releases/latest' | jq -r .tag_name)" && \
+  tag="$(curl -L --retry 3 --show-error --silent --fail 'https://api.github.com/repos/kovidgoyal/calibre/releases/latest' | jq -r .tag_name)" && \
   latest_version="${tag#*v}" && \
   echo "Latest version: ${latest_version}" && \
   dl_url="https://github.com/kovidgoyal/calibre/releases/download/${tag}/calibre-${latest_version}-${platform}.txz" && \
   sig_url="https://calibre-ebook.com/signatures/calibre-${latest_version}-${platform}.txz.sha512" && \
   sig2_url="https://code.calibre-ebook.com/signatures/calibre-${latest_version}-${platform}.txz.sha512" && \
-  { echo "Downloading sig $sig_url ..." && curl -L --retry 2 --show-error --silent --fail --output "${bin_folder}/${sig_file}" "$sig_url" || \
-    echo "Downloading sig $sig2_url ..." && curl -L --retry 2 --show-error --insecure --fail --silent --output "${bin_folder}/${sig_file}" "$sig2_url"; } && \
+  { echo "Downloading sig $sig_url ..." && curl -L --retry 3 --show-error --silent --fail --output "${bin_folder}/${sig_file}" "$sig_url" || \
+    echo "Downloading sig $sig2_url ..." && curl -L --retry 3 --show-error --insecure --fail --silent --output "${bin_folder}/${sig_file}" "$sig2_url"; } && \
   echo "Downloading bin $dl_url ..."
-  curl -L --retry 2 --show-error --silent --fail --output "${bin_folder}/${bin_file}.part" "$dl_url" && \
+  curl -L --retry 3 --show-error --silent --fail --output "${bin_folder}/${bin_file}.part" "$dl_url" && \
   echo "$(cat "${bin_folder}/${sig_file}")  ${bin_folder}/${bin_file}.part" | sha512sum --check --status && \
   mv "${bin_folder}/${bin_file}.part" "${bin_folder}/${bin_file}"
 fi

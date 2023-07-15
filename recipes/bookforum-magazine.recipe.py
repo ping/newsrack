@@ -4,9 +4,7 @@ from urllib.parse import urljoin
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import (
-    BasicNewsrackRecipe,
-)
+from recipes_shared import BasicNewsrackRecipe
 
 from mechanize import Request
 from calibre.web.feeds.news import BasicNewsRecipe
