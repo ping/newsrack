@@ -924,9 +924,10 @@ def run(
             publication_listing.append(
                 f"""<li id="{r.slug}" data-cat-id="cat-{slugify(r.category, True)}" data-cat-name="{r.category}" class="not-available" data-tags="{"" if not r.tags else "#" + " #".join(r.tags)}">
                 <span class="title">{r.name}</span>
+                <div class="meta" data-pub-id="{r.slug}">
                 <div class="pub-date">Not available
                     <span class="tags">{"" if not r.tags else "#" + " #".join(r.tags)}</span>
-                </div></li>"""
+                </div></div></li>"""
             )
 
         listing += f"""<div class="category-container is-open"><h2 tabindex="0" id="cat-{slugify(category, True)}" class="category is-open">{category}
