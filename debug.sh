@@ -2,7 +2,7 @@
 if [ -z "$1" ];
 then
     echo "No recipe specified."
-    echo "Usage: sh _debug.sh example"
+    echo "Usage: sh debug.sh example"
     exit 9
 fi
 
