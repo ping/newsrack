@@ -146,6 +146,12 @@ class BloombergBusinessweek(BasicNewsRecipe):
         if content_type == "br":
             br = soup.new_tag("br")
             return br
+        if content_type in ("div", "byTheNumbers"):
+            div = soup.new_tag("div")
+            css_class = content.get("data", {}).get("class")
+            if css_class:
+                div["class"] = css_class
+            return div
         if content_type == "aside":
             return soup.new_tag("blockquote")
         if content_type == "embed" and content.get("iframeData", {}).get("html"):
@@ -223,6 +229,22 @@ class BloombergBusinessweek(BasicNewsRecipe):
                     caption.append(attachment["title"])
                     div.append(caption)
                 return div
+        if content_type == "tabularData":
+            return soup.new_tag("table")
+        if content_type == "columns":
+            thead = soup.new_tag("thead")
+            tr = soup.new_tag("tr")
+            for defn in content.get("data", {}).get("definitions", []):
+                if defn.get("title"):
+                    th = soup.new_tag("th")
+                    th.append(defn["title"])
+                    tr.append(th)
+            thead.append(tr)
+            return thead
+        if content_type == "row":
+            return soup.new_tag("tr")
+        if content_type == "cell":
+            return soup.new_tag("td")
 
         self.log.warning(f"Unknown content type: {content_type}: {json.dumps(content)}")
         return None
