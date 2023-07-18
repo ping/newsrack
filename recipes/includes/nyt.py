@@ -137,10 +137,6 @@ class NYTRecipe:
             return div
         if content_type == "SummaryBlock":
             div = soup.new_tag("div", attrs={"class": "sub-headline"})
-            for c in content.get("content", []):
-                d = self.render_content(c, soup, div)
-                if d:
-                    div.append(d)
             return div
         if content_type == "ListItemBlock":
             return soup.new_tag("li")
