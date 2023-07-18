@@ -118,10 +118,3 @@ class NYTimesGlobal(NYTRecipe, BasicNewsrackRecipe, BasicNewsRecipe):
         if (not self.pub_date) or article.utctime > self.pub_date:
             self.pub_date = article.utctime
             self.title = format_title(_name, article.utctime)
-
-    def parse_index(self):
-        return self.generate_debug_index(
-            [
-                "https://www.nytimes.com/2023/07/17/us/wildfire-smoke-canada-ny-air-quality.html"
-            ]
-        )
