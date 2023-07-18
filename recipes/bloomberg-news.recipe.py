@@ -47,7 +47,7 @@ class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
     # - limit the number of feeds
     # - or max_articles_per_feed
     # - or increase delay
-    delay = 3
+    delay = 2
     oldest_article = 1
     max_articles_per_feed = 25
 
@@ -65,6 +65,8 @@ class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
                 "inline-newsletter-bottom",
                 "for-you__wrapper",
                 "video-player__overlay",
+                "css--social-wrapper-outer",
+                "css--recirc-wrapper",
             ]
         ),
         dict(name=["aside"], class_=["postr-recirc"]),
@@ -73,13 +75,17 @@ class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
     ]
 
     extra_css = """
-    .headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
-    .sub-headline { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; }
+    .headline, h1.css--lede-hed { font-size: 1.8rem; margin-bottom: 0.4rem; }
+    .sub-headline, .css--lede-dek p { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; }
     .article-meta { padding-bottom: 0.5rem; }
     .article-meta .author { font-weight: bold; color: #444; margin-right: 0.5rem; }
     .article-section { display: block; font-weight: bold; color: #444; }
-    .image img { display: block; max-width: 100%; height: auto; }
-    .news-figure-caption-text, .news-figure-credit { display: block; font-size: 0.8rem; margin-top: 0.2rem; }
+    .image img, .css--multi-image-wrapper img, .css--image-wrapper img { display: block; max-width: 100%; height: auto; }
+    .news-figure-caption-text, .news-figure-credit, .caption, .credit,
+    .css--caption-outer-wrapper, .css--multi-caption-outer-wrapper
+     {
+        display: block; font-size: 0.8rem; margin-top: 0.2rem;
+    }
     .trashline { font-style: italic; }
     """
 
@@ -128,8 +134,114 @@ class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
             self.log.warn(err_msg)
             self.abort_recipe_processing(err_msg)
 
-    def _downsize_image_url(self, img_url):
-        return img_url.replace("/-1x-1.", "/800x-1.")
+    def image_url_processor(self, base_url, img_url):
+        # downsize image
+        for frag in ("/-1x-1.", "/-999x-999.", "/1200x-1."):
+            img_url = img_url.replace(frag, "/800x-1.")
+        return img_url
+
+    def render_content(self, content, soup, parent):
+        content_type = content.get("type", "")
+        content_subtype = content.get("subType", "")
+        if content_type in ("inline-newsletter", "inline-recirc", "ad", "list"):
+            return None
+        if content_type == "text":
+            parent.append(content["value"])
+            return
+        if content_type == "paragraph":
+            p = soup.new_tag("p")
+            return p
+        if content_type == "br":
+            br = soup.new_tag("br")
+            return br
+        if content_type == "aside":
+            return soup.new_tag("blockquote")
+        if content_type == "embed" and content.get("iframeData", {}).get("html"):
+            return BeautifulSoup(content["iframeData"]["html"], features="html.parser")
+        if content_type == "link" and content.get("data", {}).get(
+            "destination", {}
+        ).get("web"):
+            a = soup.new_tag("a")
+            a["href"] = content["data"]["destination"]["web"]
+            return a
+        if content_type == "link" and content.get("data", {}).get("href"):
+            a = soup.new_tag("a")
+            a["href"] = content["data"]["href"]
+            return a
+        if content_type == "link":
+            return soup.new_tag("span", attrs={"class": "link"})
+        if content_type == "entity" and content_subtype == "story":
+            link = (
+                content.get("data", {})
+                .get("link", {})
+                .get("destination", {})
+                .get("web", "")
+            )
+            if link:
+                a = soup.new_tag("a")
+                a["href"] = link
+                return a
+        if content_type == "entity" and content_subtype in (
+            "person",
+            "security",
+            "story",
+        ):
+            return soup.new_tag("span", attrs={"class": content_subtype})
+        if content_type == "media" and content_subtype == "chart":
+            chart = content.get("data", {}).get("chart", {})
+            if chart.get("fallback"):
+                div = soup.new_tag("div", attrs={"class": "image"})
+                img = soup.new_tag(
+                    "img",
+                    attrs={
+                        "src": content.get("data", {}).get("chart", {}).get("fallback")
+                    },
+                )
+                div.append(img)
+                return div
+        if content_type == "media" and content_subtype == "photo":
+            photo = content.get("data", {}).get("photo", {})
+            if photo.get("src"):
+                div = soup.new_tag("div", attrs={"class": "image"})
+                img = soup.new_tag(
+                    "img",
+                    attrs={"src": photo["src"]},
+                )
+                div.append(img)
+                if photo.get("caption"):
+                    caption = soup.new_tag("div", attrs={"class": "caption"})
+                    caption.append(photo["caption"])
+                    div.append(caption)
+                if photo.get("credit"):
+                    credit = soup.new_tag("div", attrs={"class": "credit"})
+                    credit.append(photo["credit"])
+                    div.append(credit)
+                return div
+        if content_type == "media" and content_subtype == "video":
+            attachment = content.get("data", {}).get("attachment")
+            if attachment.get("thumbnail", {}).get("url"):
+                div = soup.new_tag("div", attrs={"class": "image"})
+                img = soup.new_tag(
+                    "img",
+                    attrs={"src": attachment["thumbnail"]["url"]},
+                )
+                div.append(img)
+                if attachment.get("title"):
+                    caption = soup.new_tag("div", attrs={"class": "caption"})
+                    caption.append(attachment["title"])
+                    div.append(caption)
+                return div
+
+        self.log.warning(f"Unknown content type: {content_type}: {json.dumps(content)}")
+        return None
+
+    def nested_render(self, content, soup, parent):
+        for cc in content.get("content", []):
+            content_ele = self.render_content(cc, soup, parent)
+            if content_ele:
+                if cc.get("content"):
+                    self.nested_render(cc, soup, content_ele)
+                parent.append(content_ele)
 
     def preprocess_raw_html(self, raw_html, url):
         article = None
@@ -141,22 +253,38 @@ class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
                 "data-component-props": ["ArticleBody", "FeatureBody"],
             },
         ):
-            article = json.loads(script.contents[0])
-            if not article.get("story"):
+            j = json.loads(script.contents[0])
+            if not j.get("story"):
                 continue
+            article = j
             break
-        if not (article and article.get("story")):
+        if not article:
+            script = soup.find(
+                "script", id="__NEXT_DATA__", attrs={"type": "application/json"}
+            )
+            if script:
+                article = json.loads(script.contents[0])
+
+        if not article:
+            err_msg = f"Unable to find json: {url}"
+            self.log.warn(err_msg)
+            # self.abort_article(err_msg)
+            return raw_html
+
+        article = article.get("story") or article.get("props", {}).get(
+            "pageProps", {}
+        ).get("story")
+        if not article:
             err_msg = f"Unable to find article json: {url}"
             self.log.warn(err_msg)
             self.abort_article(err_msg)
 
-        article = article["story"]
         date_published = parse_date(article["publishedAt"], assume_utc=True)
         soup = BeautifulSoup(
             """<html>
         <head><title></title></head>
         <body>
-            <article>
+            <article id="article-container">
             <h1 class="headline"></h1>
             <div class="article-meta">
                 <span class="published-dt"></span>
@@ -178,7 +306,12 @@ class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
 
         soup.head.title.append(article.get("headlineText") or article["headline"])
         h1_title = soup.find("h1")
-        h1_title.append(article.get("headlineText") or article["headline"])
+        h1_title.append(
+            BeautifulSoup(
+                article.get("headlineText") or article["headline"],
+                features="html.parser",
+            )
+        )
         if article.get("summaryText") or article.get("abstract"):
             sub_headline = soup.new_tag("div", attrs={"class": "sub-headline"})
             if article.get("summaryText"):
@@ -221,9 +354,7 @@ class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
             lede_img_url = article["ledeImageUrl"]
             lede_img_caption_html = article.get("ledeCaption", "")
             img_container = soup.new_tag("div", attrs={"class": "image"})
-            img_ele = soup.new_tag(
-                "img", attrs={"src": self._downsize_image_url(lede_img_url)}
-            )
+            img_ele = soup.new_tag("img", attrs={"src": lede_img_url})
             img_container.append(img_ele)
             if lede_img_caption_html:
                 caption_ele = soup.new_tag(
@@ -233,13 +364,20 @@ class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
                 img_container.append(caption_ele)
             soup.body.article.append(img_container)
 
-        body_soup = BeautifulSoup(article["body"])
-        for img_div in body_soup.find_all(name="figure", attrs={"data-type": "image"}):
-            for img in img_div.find_all("img", attrs={"data-native-src": True}):
-                img["src"] = img["data-native-src"]
-        for img in body_soup.find_all(name="img", attrs={"src": True}):
-            img["src"] = self._downsize_image_url(img["src"])
-        soup.body.article.append(body_soup)
+        if type(article["body"]) == str:
+            body_soup = BeautifulSoup(article["body"], features="html.parser")
+            for img_div in body_soup.find_all(
+                name="figure", attrs={"data-type": "image"}
+            ):
+                for img in img_div.find_all("img", attrs={"data-native-src": True}):
+                    img["src"] = img["data-native-src"]
+            for img in body_soup.find_all(name="img", attrs={"src": True}):
+                img["src"] = img["src"]
+            soup.body.article.append(body_soup)
+        else:
+            body_soup = BeautifulSoup(features="html.parser")
+            self.nested_render(article["body"], body_soup, body_soup)
+            soup.body.article.append(body_soup)
         return str(soup)
 
     def parse_index(self):
