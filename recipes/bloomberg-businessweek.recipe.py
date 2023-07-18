@@ -3,29 +3,25 @@
 # This software is released under the GNU General Public License v3.0
 # https://opensource.org/licenses/GPL-3.0
 
+# This is a vanilla calibre recipe, not recommended for newsrack use because
+# Bloomberg blocks non-residential IPs
+
 import json
-import os
 import re
-import sys
 from urllib.parse import urljoin, urlparse
 
-# custom include to share code between recipes
-sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, get_datetime_format
-
-from calibre import browser
+from calibre import browser, iswindows
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.utils.date import parse_date
 from calibre.web.feeds.news import BasicNewsRecipe
 
-_name = "Bloomberg Businessweek"
 issue_url = ""  # ex: https://www.bloomberg.com/magazine/businessweek/22_44
 
 blocked_path_re = re.compile(r"/tosv.*.html")
 
 
-class BloombergBusinessweek(BasicNewsrackRecipe, BasicNewsRecipe):
-    title = _name
+class BloombergBusinessweek(BasicNewsRecipe):
+    title = "Bloomberg Businessweek"
     __author__ = "ping"
     description = (
         "Bloomberg delivers business and markets news, data, analysis, and video "
@@ -35,6 +31,11 @@ class BloombergBusinessweek(BasicNewsrackRecipe, BasicNewsRecipe):
     masthead_url = "https://assets.bwbx.io/s3/javelin/public/hub/images/BW-Logo-Black-cc9035fbb3.svg"
     ignore_duplicate_articles = {"url"}
     auto_cleanup = False
+    remove_javascript = True
+    no_stylesheets = True
+    compress_news_images = True
+    timeout = 20
+    date_format = "%I:%M%p, %-d %b, %Y" if iswindows else "%-I:%M%p, %-d %b, %Y"
 
     # NOTES: Bot detection kicks in really easily so either:
     # - limit the number of feeds
@@ -137,6 +138,8 @@ class BloombergBusinessweek(BasicNewsrackRecipe, BasicNewsRecipe):
         if content_type == "text":
             parent.append(content["value"])
             return
+        if content_type == "heading" and content.get("data", {}).get("level"):
+            return soup.new_tag(f'h{content["data"]["level"]}')
         if content_type == "paragraph":
             p = soup.new_tag("p")
             return p
@@ -281,15 +284,11 @@ class BloombergBusinessweek(BasicNewsrackRecipe, BasicNewsRecipe):
             </article>
         </body></html>"""
         )
-        if (not self.pub_date) or date_published > self.pub_date:
-            self.pub_date = date_published
         published_at = soup.find(class_="published-dt")
-        published_at.append(f"{date_published:{get_datetime_format()}}")
+        published_at.append(f"{date_published:{self.date_format}}")
         if article.get("updatedAt"):
             date_updated = parse_date(article["updatedAt"], assume_utc=True)
-            published_at.append(f", Updated {date_updated:{get_datetime_format()}}")
-            if (not self.pub_date) or date_updated > self.pub_date:
-                self.pub_date = date_updated
+            published_at.append(f", Updated {date_updated:{self.date_format}}")
 
         soup.head.title.append(article.get("headlineText") or article["headline"])
         h1_title = soup.find("h1")
@@ -380,7 +379,7 @@ class BloombergBusinessweek(BasicNewsrackRecipe, BasicNewsRecipe):
             edition_url = issue_url
         soup = self.index_to_soup(edition_url)
         edition = self.tag_to_string(soup.find("h1")).replace(" Issue", "")
-        self.title = f"{_name}: {edition}"
+        self.timefmt = f": {edition}"
         cover_img = soup.find("img", class_="story-list-module__image")
         self.cover_url = cover_img["src"].replace("/280x-1.jpg", "/800x-1.jpg")
         feeds = []

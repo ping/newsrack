@@ -3,34 +3,24 @@
 # This software is released under the GNU General Public License v3.0
 # https://opensource.org/licenses/GPL-3.0
 
+# This is a vanilla calibre recipe, not recommended for newsrack use because
+# Bloomberg blocks non-residential IPs
+
 import json
-import os
 import re
-import sys
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urlparse
 
-# custom include to share code between recipes
-sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import (
-    BasicNewsrackRecipe,
-    format_title,
-    get_datetime_format,
-    get_date_format,
-)
-
-from calibre import browser
+from calibre import browser, iswindows
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.utils.date import parse_date
 from calibre.web.feeds.news import BasicNewsRecipe
 
-_name = "Bloomberg News"
-
 blocked_path_re = re.compile(r"/tosv.*.html")
 
 
-class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
-    title = _name
+class BloombergNews(BasicNewsRecipe):
+    title = "Bloomberg News"
     __author__ = "ping"
     description = (
         "Bloomberg delivers business and markets news, data, analysis, and video "
@@ -42,6 +32,11 @@ class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
     )
     ignore_duplicate_articles = {"url"}
     auto_cleanup = False
+    remove_javascript = True
+    no_stylesheets = True
+    compress_news_images = True
+    timeout = 20
+    date_format = "%I:%M%p, %-d %b, %Y" if iswindows else "%-I:%M%p, %-d %b, %Y"
 
     # NOTES: Bot detection kicks in really easily so either:
     # - limit the number of feeds
@@ -56,6 +51,7 @@ class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
     download_count = 0
 
     remove_attributes = ["style", "height", "width", "align"]
+    keep_only_tags = [dict(id="article-container")]
     remove_tags = [
         dict(
             class_=[
@@ -148,6 +144,8 @@ class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
         if content_type == "text":
             parent.append(content["value"])
             return
+        if content_type == "heading" and content.get("data", {}).get("level"):
+            return soup.new_tag(f'h{content["data"]["level"]}')
         if content_type == "paragraph":
             p = soup.new_tag("p")
             return p
@@ -292,17 +290,12 @@ class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
             </article>
         </body></html>"""
         )
-        if (not self.pub_date) or date_published > self.pub_date:
-            self.pub_date = date_published
-            self.title = format_title(_name, date_published)
+
         published_at = soup.find(class_="published-dt")
-        published_at.append(f"{date_published:{get_datetime_format()}}")
+        published_at.append(f"{date_published:{self.date_format}}")
         if article.get("updatedAt"):
             date_updated = parse_date(article["updatedAt"], assume_utc=True)
-            published_at.append(f", Updated {date_updated:{get_datetime_format()}}")
-            if (not self.pub_date) or date_updated > self.pub_date:
-                self.pub_date = date_updated
-                self.title = format_title(_name, date_updated)
+            published_at.append(f", Updated {date_updated:{self.date_format}}")
 
         soup.head.title.append(article.get("headlineText") or article["headline"])
         h1_title = soup.find("h1")
@@ -403,7 +396,7 @@ class BloombergNews(BasicNewsrackRecipe, BasicNewsRecipe):
                     {
                         "title": url_node.find("news:title").get_text(),
                         "url": url_node.find("loc").get_text(),
-                        "date": f"{article_date:{get_date_format()}}",
+                        "date": f"{article_date:{self.date_format}}",
                         "pub_date": article_date,
                     }
                 )
