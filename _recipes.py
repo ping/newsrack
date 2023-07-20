@@ -91,17 +91,17 @@ recipes: List[Recipe] = [
         enable_on=onlyon_weekdays([0, 1, 2, 3, 4], -4) and last_n_days_of_month(14, -4),
         tags=["editorial", "commentary"],
     ),
-    # Still blocked from DC IPs
-    Recipe(
-        recipe="bloomberg-businessweek",
-        slug="bloomberg-businessweek",
-        src_ext="epub",
-        category="Magazines",
-        tags=["business"],
-        overwrite_cover=False,
-        enable_on=onlyon_weekdays([5]) and onlyat_hours(list(range(2, 8))),
-        timeout=300,
-    ),
+    # Still blocked from DC IPs: 2023-07-20
+    # Recipe(
+    #     recipe="bloomberg-businessweek",
+    #     slug="bloomberg-businessweek",
+    #     src_ext="epub",
+    #     category="Magazines",
+    #     tags=["business"],
+    #     overwrite_cover=False,
+    #     enable_on=onlyon_weekdays([5]) and onlyat_hours(list(range(2, 8))),
+    #     timeout=300,
+    # ),
     Recipe(
         recipe="bookforum-magazine",
         slug="bookforum-magazine",
