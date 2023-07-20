@@ -7,11 +7,13 @@
 # Bloomberg blocks non-residential IPs
 
 import json
+import random
 import re
+import time
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urlparse
 
-from calibre import browser, iswindows
+from calibre import browser, iswindows, random_user_agent
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.utils.date import parse_date
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -42,7 +44,8 @@ class BloombergNews(BasicNewsRecipe):
     # - limit the number of feeds
     # - or max_articles_per_feed
     # - or increase delay
-    delay = 5
+    # delay = 0.1
+    simultaneous_downloads = 2
     oldest_article = 1
     max_articles_per_feed = 25
 
@@ -98,11 +101,27 @@ class BloombergNews(BasicNewsRecipe):
         return self.get_browser()
 
     def open_novisit(self, *args, **kwargs):
+        target_url = args[0]
+        if urlparse(target_url).hostname != "assets.bwbx.io":
+            time.sleep(random.choice([r * 0.5 for r in range(1, 5)]))
         if self.bot_blocked:
-            self.log.warn(f"Block detected. Skipping {args[0]}")
+            self.log.warn(f"Block detected. Skipping {target_url}")
             # Abort article without making actual request
-            self.abort_article(f"Block detected. Skipped {args[0]}")
+            self.abort_article(f"Block detected. Skipped {target_url}")
         br = browser()
+        br.addheaders = [
+            (
+                "user-agent",
+                random_user_agent(),
+            ),
+            ("referer", "https://www.google.com/"),
+            (
+                "accept",
+                "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            ),
+            ("accept-language", "en,en-US;q=0.5"),
+            ("connection", "keep-alive"),
+        ]
         br.set_handle_redirect(False)
         try:
             res = br.open_novisit(*args, **kwargs)
@@ -116,7 +135,7 @@ class BloombergNews(BasicNewsRecipe):
                 )
             if is_redirected_to_challenge or (hasattr(e, "code") and e.code == 307):
                 self.bot_blocked = True
-                err_msg = f"Blocked by bot detection: {args[0]}"
+                err_msg = f"Blocked by bot detection: {target_url}"
                 self.log.warn(err_msg)
                 self.abort_recipe_processing(err_msg)
                 self.abort_article(err_msg)
@@ -147,11 +166,11 @@ class BloombergNews(BasicNewsRecipe):
         if content_type == "heading" and content.get("data", {}).get("level"):
             return soup.new_tag(f'h{content["data"]["level"]}')
         if content_type == "paragraph":
-            p = soup.new_tag("p")
-            return p
+            return soup.new_tag("p")
         if content_type == "br":
-            br = soup.new_tag("br")
-            return br
+            return soup.new_tag("br")
+        if content_type == "quote":
+            return soup.new_tag("blockquote")
         if content_type in ("div", "byTheNumbers"):
             div = soup.new_tag("div")
             css_class = content.get("data", {}).get("class")
