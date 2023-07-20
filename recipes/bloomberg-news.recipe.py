@@ -254,6 +254,12 @@ class BloombergNews(BasicNewsRecipe):
                     caption.append(attachment["title"])
                     div.append(caption)
                 return div
+        if content_type == "embed" and content.get("href"):
+            div = soup.new_tag("div", attrs={"class": content_type})
+            a_ele = soup.new_tag("a", attrs={"href": content["href"]})
+            a_ele.append(content["href"])
+            div.append(a_ele)
+            return div
         if content_type == "tabularData":
             return soup.new_tag("table")
         if content_type == "columns":
