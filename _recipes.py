@@ -197,6 +197,26 @@ recipes: List[Recipe] = [
         and onlyat_hours(list(range(8, 22)), -4),
     ),
     Recipe(
+        recipe="foreign-policy",
+        slug="foreign-policy",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Online Magazines",
+        cover_options=CoverOptions(
+            logo_path_or_url="https://foreignpolicy.com/wp-content/themes/foreign-policy-2017/assets/src/images/logos/favicon-256.png"
+        ),
+        enable_on=onlyat_hours(list(range(18, 23)), -4),
+    ),
+    Recipe(
+        recipe="foreign-policy-magazine",
+        slug="foreign-policy-magazine",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Magazines",
+        overwrite_cover=False,
+        enable_on=onlyon_weekdays([5, 6], -4) and onlyat_hours(list(range(0, 6)), -4),
+    ),
+    Recipe(
         recipe="ft",
         slug="ft-online",
         src_ext="mobi",
