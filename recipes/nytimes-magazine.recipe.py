@@ -77,10 +77,11 @@ class NYTimesBooks(NYTRecipe, BasicNewsrackRecipe, BasicNewsRecipe):
 
     def populate_article_metadata(self, article, soup, __):
         ts_ele = soup.find(attrs={"data-timestamp": True})
-        if ts_ele:
-            post_date = self.parse_date(ts_ele["data-timestamp"])
-            if (not self.pub_date) or post_date > self.pub_date:
-                self.pub_date = post_date
+        if not ts_ele:
+            return
+        post_date = self.parse_date(ts_ele["data-timestamp"])
+        if (not self.pub_date) or post_date > self.pub_date:
+            self.pub_date = post_date
 
     def parse_index(self):
         index_url = "https://www.nytimes.com/section/magazine"
@@ -94,8 +95,45 @@ class NYTimesBooks(NYTRecipe, BasicNewsrackRecipe, BasicNewsRecipe):
             self.cover_url = issue_cover["src"]
         issue_url = urljoin(index_url, issue_link["href"])
         soup = self.index_to_soup(issue_url)
-        self.title = f'{_name}: {self.tag_to_string(soup.find("h1"))}'
+        info = self.get_script_json(soup, r"window.__preloadedData\s*=\s*")
+        if info and info.get("initialState"):
+            content_service = info.get("initialState")
+            for k, v in content_service["ROOT_QUERY"].items():
+                if not (
+                    k.startswith("workOrLocation")
+                    and v
+                    and v["typename"] == "LegacyCollection"
+                ):
+                    continue
+                content_node_id = v["id"]
+                break
+            issue_info = content_service.get(content_node_id)
+            self.pub_date = self.parse_date(
+                issue_info.get("lastModified") or issue_info["firstPublished"]
+            )
+            self.title = f'{_name}: {issue_info["name"]}'
+            articles = []
+            for v in content_service.values():
+                if v.get("__typename", "") != "Article":
+                    continue
+                try:
+                    articles.append(
+                        {
+                            "url": v["url"],
+                            "title": content_service.get(
+                                v.get("headline", {}).get("id", "")
+                            ).get("default"),
+                            "description": v.get("summary", ""),
+                            "date": self.parse_date(v["lastMajorModification"]),
+                        }
+                    )
+                except Exception as err:
+                    self.log.warning("Error extracting article: %s" % err)
 
+            if articles:
+                return [("Articles", articles)]
+
+        self.title = f'{_name}: {self.tag_to_string(soup.find("h1"))}'
         articles = []
         for article in soup.find_all("article"):
             articles.append(
