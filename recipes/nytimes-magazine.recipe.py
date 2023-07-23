@@ -21,11 +21,14 @@ class NYTimesBooks(NYTRecipe, BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     language = "en"
     description = (
-        "The latest book reviews, best sellers, news and features from "
-        "The NY TImes critics and reporters. https://www.nytimes.com/section/books"
+        "The New York Times Magazine is an American Sunday magazine "
+        "included with the Sunday edition of The New York Times. It "
+        "features articles longer than those typically in the newspaper "
+        "and has attracted many notable contributors. "
+        "https://www.nytimes.com/section/magazine"
     )
     __author__ = "ping"
-    publication_type = "newspaper"
+    publication_type = "magazine"
     oldest_article = 7  # days
     max_articles_per_feed = 25
     use_embedded_content = False
