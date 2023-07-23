@@ -495,8 +495,7 @@ recipes: List[Recipe] = [
         category="Arts & Culture",
         timeout=300,
         retry_attempts=0,
-        enable_on=onlyon_weekdays([0, 1, 2, 3, 4, 6])
-        and onlyat_hours(list(range(18, 22))),
+        enable_on=onlyat_hours(list(range(18, 22))),
         cover_options=CoverOptions(
             logo_path_or_url="https://static01.nyt.com/newsgraphics/2015/12/23/masthead-2016/8118277965bda8228105578895f2f4a7aeb22ce2/nyt-logo.png"
         ),
