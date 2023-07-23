@@ -36,9 +36,6 @@ class NewYorkTimesPrint(NYTRecipe, BasicNewsrackRecipe, BasicNewsRecipe):
 
     INDEX = "https://www.nytimes.com/section/todayspaper"
 
-    delay = 2
-    bot_blocked = False
-
     remove_attributes = ["style", "font"]
     remove_tags_before = [dict(id="story")]
     remove_tags_after = [dict(id="story")]

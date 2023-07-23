@@ -29,9 +29,6 @@ class NYTimesBooks(NYTRecipe, BasicNewsrackRecipe, BasicNewsRecipe):
     max_articles_per_feed = 25
     use_embedded_content = False
 
-    delay = 2
-    bot_blocked = False
-
     auto_cleanup = False
     scale_news_images = (600, 600)
 

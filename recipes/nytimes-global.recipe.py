@@ -31,9 +31,6 @@ class NYTimesGlobal(NYTRecipe, BasicNewsrackRecipe, BasicNewsRecipe):
     max_articles_per_feed = 20
     use_embedded_content = False
 
-    delay = 2
-    bot_blocked = False
-
     auto_cleanup = False
     ignore_duplicate_articles = {"title", "url"}
 

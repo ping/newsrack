@@ -1,14 +1,21 @@
 import json
 import os
+import random
+import time
 from urllib.parse import urlparse
 
-from recipes_shared import get_date_format
+from recipes_shared import BasicNewsrackRecipe, get_date_format
 
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
 
-class NYTRecipe:
+class NYTRecipe(BasicNewsrackRecipe):
+    delay = 0
+    simultaneous_downloads = 1
+    delay_range = list(range(2, 5))
+    bot_blocked = False
+
     # The NYT occassionally returns bogus articles for some reason just in case
     # it is because of cookies, dont store cookies
     def get_browser(self, *args, **kwargs):
@@ -46,6 +53,11 @@ class NYTRecipe:
             # and the wayback cache does not support them anyway
             self.log.warn(f"Block detected. Fetching from wayback cache: {target_url}")
             return self.open_from_wayback(target_url)
+
+        if urlparse(target_url).hostname != "static01.nyt.com":
+            sleep_interval = random.choice(self.delay_range)
+            self.log.debug(f"Sleeping {sleep_interval}s before fetching {target_url}")
+            time.sleep(sleep_interval)
 
         br = browser(
             user_agent="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
@@ -367,6 +379,9 @@ class NYTRecipe:
                         ]
                     )
                     pub_dt_ele = new_soup.find("span", class_="published-dt")
+                    pub_dt_ele["data-timestamp"] = content_service[
+                        header_block["timestampBlock"]["id"]
+                    ]["timestamp"]
                     pub_dt_ele.string = f"{post_date:{get_date_format()}}"
                 if header_block.get("ledeMedia"):
                     image_block = content_service.get(
