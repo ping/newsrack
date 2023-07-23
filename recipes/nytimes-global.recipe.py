@@ -29,10 +29,6 @@ class NYTimesGlobal(NYTRecipe, BasicNewsrackRecipe, BasicNewsRecipe):
 
     oldest_article = 1  # days
     max_articles_per_feed = 20
-    use_embedded_content = False
-
-    auto_cleanup = False
-    ignore_duplicate_articles = {"title", "url"}
 
     remove_attributes = ["style", "font"]
     remove_tags_before = [dict(id="story")]

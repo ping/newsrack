@@ -11,6 +11,11 @@ from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
 
 class NYTRecipe(BasicNewsrackRecipe):
+    use_embedded_content = False
+    auto_cleanup = False
+    compress_news_images_auto_size = 10
+    ignore_duplicate_articles = {"title", "url"}
+
     delay = 0
     simultaneous_downloads = 1
     delay_range = list(range(2, 5))

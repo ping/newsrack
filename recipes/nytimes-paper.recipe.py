@@ -31,8 +31,6 @@ class NewYorkTimesPrint(NYTRecipe, BasicNewsrackRecipe, BasicNewsRecipe):
     language = "en"
     publication_type = "newspaper"
     masthead_url = "https://mwcm.nyt.com/.resources/mkt-wcm/dist/libs/assets/img/logo-nyt-header.svg"
-    ignore_duplicate_articles = {"title", "url"}
-    compress_news_images_auto_size = 10
 
     INDEX = "https://www.nytimes.com/section/todayspaper"
 
