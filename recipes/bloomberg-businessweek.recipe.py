@@ -104,10 +104,6 @@ class BloombergBusinessweek(BasicNewsRecipe):
             self.abort_article(f"Block detected. Skipped {target_url}")
         br = browser()
         br.addheaders = [
-            (
-                "user-agent",
-                random_user_agent(),
-            ),
             ("referer", "https://www.google.com/"),
             (
                 "accept",
