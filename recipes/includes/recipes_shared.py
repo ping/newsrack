@@ -393,7 +393,7 @@ class WordPressNewsrackRecipe(BasicNewsrackRecipe):
             self.log.debug(f"Fetching {endpoint} ...")  # type: ignore[attr-defined]
             retrieved_posts = []
             try:
-                res = br.open_novisit(endpoint)
+                res = br.open_novisit(endpoint, timeout=self.timeout)
                 posts_json_raw_bytes = res.read()
                 encodings = ["utf-8", "utf-8-sig"]
                 for i, encoding in enumerate(encodings, start=1):
