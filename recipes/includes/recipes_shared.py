@@ -78,6 +78,37 @@ def format_title(feed_name: str, post_date: datetime) -> str:
     return f"{feed_name}: {post_date:{get_date_format()}}"
 
 
+COMMA_SEP_RE = re.compile(r"\s*,\s*")
+SPACE_SEP_RE = re.compile(r"\s+")
+NON_NUMERIC_RE = re.compile(r"[^\d]+")
+
+
+def extract_from_img_srcset(srcset: str, max_width=0):
+    sources = [s.strip() for s in COMMA_SEP_RE.split(srcset) if s.strip()]
+    if len(sources) == 1:
+        # just regular img url probably
+        return sources[0]
+    parsed_sources = []
+    for src in sources:
+        src_n_width = [s.strip() for s in SPACE_SEP_RE.split(src) if s.strip()]
+        if len(src_n_width) != 2:
+            raise ValueError(f"Not a valid srcset: {srcset}")
+        parsed_sources.append(
+            (
+                src_n_width[0].strip(),
+                int(NON_NUMERIC_RE.sub("", src_n_width[1].strip())),
+            )
+        )
+    parsed_sources = list(set(parsed_sources))
+    parsed_sources = sorted(parsed_sources, key=lambda x: x[1], reverse=True)
+    if not max_width:
+        return parsed_sources[0][0]
+    for img, width in parsed_sources:
+        if width <= max_width:
+            return img
+    return parsed_sources[-1][0]
+
+
 class BasicNewsrackRecipe(object):
     remove_javascript = True
     no_stylesheets = True
@@ -170,6 +201,9 @@ class BasicNewsrackRecipe(object):
                     self.log.exception("Unable to parse script as json")
                     self.log.debug(script.contents[0])
         return {}
+
+    def extract_from_img_srcset(self, srcset: str, max_width=0):
+        return extract_from_img_srcset(srcset, max_width)
 
     def generate_debug_index(self, urls):
         """
