@@ -76,8 +76,9 @@ class RestOfWorld(BasicNewsrackRecipe, BasicNewsRecipe):
         for h in soup.find_all("h2", class_="contrib-byline"):
             h.name = "div"
         for img in soup.find_all("img", attrs={"data-srcset": True}):
-            sources = [s.strip() for s in img["data-srcset"].split(",") if s.strip()]
-            img["src"] = sources[-1].split(" ")[0].strip()
+            img["src"] = self.extract_from_img_srcset(
+                img["data-srcset"], max_width=1000
+            )
         for picture in soup.find_all("picture"):
             sources = picture.find_all("source", attrs={"srcset": True})
             if not sources:
