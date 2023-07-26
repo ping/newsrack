@@ -132,7 +132,7 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
     needs_subscription = "optional"
     ignore_duplicate_articles = {"title", "url"}
     remove_empty_feeds = True
-    remove_attributes = ["style"]
+    remove_attributes = ["style", "width", "height", "sizes", "loading"]
 
     keep_only_tags = [
         classes("article-header article-body article-lead-image article-body-text"),
@@ -168,15 +168,12 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
             self.title = f"{_name}: {title_date}"
         link = soup.find("link", rel="canonical", href=True)["href"]
         year, vol_num, issue_vol = link.split("/")[-3:]
-        src_set = [
-            s.strip()
-            for s in soup.find(class_="subscribe-callout-image")["srcset"].split(",")
-            if s.strip()
-        ]
         self.cover_url = re.sub(
             r"_webp_issue_small_\dx",
             "_webp_issue_large_2x",
-            src_set[-1].split(" ")[0].strip(),
+            self.extract_from_img_srcset(
+                soup.find(class_="subscribe-callout-image")["srcset"]
+            ),
         )
         cls = soup.find("body")["class"]
         if isinstance(cls, (list, tuple)):
@@ -193,9 +190,9 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
             modified_dt = datetime.fromisoformat(modified_meta["content"])
             if not self.pub_date or modified_dt > self.pub_date:
                 self.pub_date = modified_dt
-        for attr in ("ng-src", "data-blazy", "data-src"):
+        for attr in ("ng-src", "data-blazy", "data-src", "srcset"):
             for img in soup.findAll("img", attrs={attr: True}):
-                img["src"] = img[attr]
+                img["src"] = self.extract_from_img_srcset(img[attr], max_width=800)
         author_info = soup.find(id="author-info")
         if author_info:
             author_info.name = "div"
