@@ -263,7 +263,6 @@ fragment ArticlePageFields on Article {
                             "section": k[len("magazine") :],
                         }
                     )
-                    print(feed_articles[-1]["section"], feed_articles[-1]["title"])
             except TypeError:
                 # not iterable
                 pass
