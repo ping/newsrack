@@ -263,6 +263,7 @@ fragment ArticlePageFields on Article {
                             "section": k[len("magazine") :],
                         }
                     )
+                    print(feed_articles[-1]["section"], feed_articles[-1]["title"])
             except TypeError:
                 # not iterable
                 pass
@@ -278,6 +279,8 @@ fragment ArticlePageFields on Article {
             "Backstory",
             "SignsAndWonders",
             "Usandtheworld",
+            "Booksandthearts",
+            "Poetry",
             "Exposure",
         ]
         sort_category_key = cmp_to_key(lambda a, b: sort_section(a, b, sort_sections))
