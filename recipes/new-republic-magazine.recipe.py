@@ -44,15 +44,13 @@ class NewRepublicMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     language = "en"
     __author__ = "ping"
-    oldest_article = 62  # days
-    max_articles_per_feed = 30
     description = (
         "Founded in 1914, The New Republic is a media organization dedicated to addressing "
         "today’s most critical issues. https://newrepublic.com/magazine"
     )
     publication_type = "magazine"
     use_embedded_content = False
-    masthead_url = "https://images.newrepublic.com/f5acdc0030e3212e601040dd24d5c2c0c684b15f.png?w=1024&q=65&dpi=1&fit=crop&crop=faces&h=512"
+    masthead_url = "https://images.newrepublic.com/f5acdc0030e3212e601040dd24d5c2c0c684b15f.png?w=512&q=65&dpi=1&fit=crop&crop=faces&h=256"
     remove_attributes = ["height", "width"]
     ignore_duplicate_articles = {"title", "url"}
     remove_empty_feeds = True
@@ -78,6 +76,11 @@ class NewRepublicMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     """
 
     def _article_endpoint(self, nid):
+        """
+        Graphql endpoint to fetch full article
+        :param nid:
+        :return:
+        """
         query = """
 query ($id: ID, $nid: ID) {
   Article(id: $id, nid: $nid) {
@@ -169,7 +172,10 @@ fragment ArticlePageFields on Article {
         return f"https://newrepublic.com/graphql?{urlencode(params)}"
 
     def _resize_image(self, image_url, width, height):
-        # fetch a device appropriate sized image instead
+        """
+        Rewrite the image url to fetch a device appropriate sized one instead
+        of the full-res one
+        """
         max_width = self.scale_news_images[0] if self.scale_news_images else 800
         crop_params = {
             "auto": "compress",
