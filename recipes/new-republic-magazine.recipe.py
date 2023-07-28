@@ -6,7 +6,7 @@ import os
 import sys
 from datetime import datetime
 from functools import cmp_to_key
-from urllib.parse import urljoin, urlencode, urlsplit
+from urllib.parse import urljoin, urlencode, urlsplit, urlparse
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
@@ -15,6 +15,7 @@ from recipes_shared import BasicNewsrackRecipe, get_date_format
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "The New Republic Magazine"
+_issue_url = ""  # example: https://newrepublic.com/magazine/may-2023
 
 
 def sort_section(a, b, sections_sort):
@@ -234,7 +235,10 @@ fragment ArticlePageFields on Article {
 
     def parse_index(self):
         br = self.get_browser()
-        res = br.open_novisit("https://newrepublic.com/api/content/magazine")
+        if _issue_url:
+            month = urlparse(_issue_url).path.split("/")[-1]
+            params = f'?{urlencode({"magazineTag": month})}'
+        res = br.open_novisit(f"https://newrepublic.com/api/content/magazine{params}")
         magazine = json.loads(res.read().decode("utf-8"))["data"]
         try:
             self.pub_date = datetime.fromisoformat(magazine["metaData"]["publishedAt"])
