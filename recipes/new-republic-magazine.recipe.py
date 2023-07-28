@@ -74,13 +74,6 @@ class NewRepublicMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     div.author-bios { margin-top: 2rem; font-style: italic; color: #444; border-top: solid 1px #444; }
     """
 
-    def _urlize(self, url_string, base_url=None):
-        if url_string.startswith("//"):
-            url_string = "https:" + url_string
-        if url_string.startswith("/"):
-            url_string = urljoin(base_url or self.BASE_URL, url_string)
-        return url_string
-
     def _article_endpoint(self, nid):
         query = """
 query ($id: ID, $nid: ID) {
@@ -214,7 +207,7 @@ fragment ArticlePageFields on Article {
         if article.get("ledeImage"):
             img = article["ledeImage"]
             lede_img_url = self._resize_image(
-                self._urlize(img["src"]), img["width"], img["height"]
+                urljoin(self.BASE_URL, img["src"]), img["width"], img["height"]
             )
             lede_image_html = f"""<p class="lede-media">
                 <img src="{lede_img_url}">
@@ -250,7 +243,7 @@ fragment ArticlePageFields on Article {
             self.pub_date = self.parse_date(magazine["metaData"]["publishedAt"])
         self.log.debug(f'Found issue: {magazine["metaData"]["issueTag"]["text"]}')
         self.title = f'{_name}: {magazine["metaData"]["issueTag"]["text"]}'
-        self.cover_url = self._urlize(magazine["metaData"]["image"]["src"])
+        self.cover_url = urljoin(self.BASE_URL, magazine["metaData"]["image"]["src"])
 
         feed_articles = []
         for k, articles in magazine.items():

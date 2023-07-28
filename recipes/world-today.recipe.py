@@ -4,7 +4,6 @@
 # https://opensource.org/licenses/GPL-3.0
 import os
 import sys
-from datetime import datetime
 from urllib.parse import urljoin
 
 # custom include to share code between recipes
@@ -75,13 +74,6 @@ class WorldToday(BasicNewsrackRecipe, BasicNewsRecipe):
     .js-sidebar-responsive h2 { font-size: 1rem; }
     """
 
-    def _urlize(self, url_string, base_url=None):
-        if url_string.startswith("//"):
-            url_string = "https:" + url_string
-        if url_string.startswith("/"):
-            url_string = urljoin(base_url or self.BASE_URL, url_string)
-        return url_string
-
     def preprocess_raw_html(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
         # find pub date
@@ -91,8 +83,9 @@ class WorldToday(BasicNewsrackRecipe, BasicNewsRecipe):
         if not self.pub_date or post_mod_date > self.pub_date:
             self.pub_date = post_mod_date
         for img in soup.find_all("img", attrs={"srcset": True}):
-            img["src"] = self._urlize(
-                img["srcset"].strip().split(",")[-1].strip().split(" ")[0]
+            img["src"] = urljoin(
+                self.BASE_URL,
+                img["srcset"].strip().split(",")[-1].strip().split(" ")[0],
             )
             del img["srcset"]
         return str(soup)
@@ -123,7 +116,7 @@ class WorldToday(BasicNewsrackRecipe, BasicNewsRecipe):
             description = self.tag_to_string(
                 item.find("div", attrs={"class": "teaser__summary"})
             )
-            link = self._urlize(item["about"])
+            link = urljoin(self.BASE_URL, item["about"])
             articles.append({"title": title, "url": link, "description": description})
 
         return [(_name, articles)]
