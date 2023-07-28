@@ -8,6 +8,8 @@ from datetime import datetime
 from functools import cmp_to_key
 from urllib.parse import urljoin, urlencode, urlsplit, urlparse
 
+from calibre.ebooks.BeautifulSoup import BeautifulSoup
+
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, get_date_format
@@ -167,7 +169,8 @@ fragment ArticlePageFields on Article {
         return f"https://newrepublic.com/graphql?{urlencode(params)}"
 
     def _resize_image(self, image_url, width, height):
-        max_width = 800
+        # fetch a device appropriate sized image instead
+        max_width = self.scale_news_images[0] if self.scale_news_images else 800
         crop_params = {
             "auto": "compress",
             "ar": f"{width}:{height}",
@@ -215,6 +218,20 @@ fragment ArticlePageFields on Article {
                 {f'<span class="caption">{article["ledeImageRealCaption"]}</span>' if article.get("ledeImageRealCaption") else ""}
             </p>"""
 
+        body_soup = BeautifulSoup(article["body"], features="html.parser")
+        for img in body_soup.find_all("img", attrs={"data-serialized": True}):
+            try:
+                img_info = json.loads(img["data-serialized"])
+                img_src = self._resize_image(
+                    urljoin(self.BASE_URL, img_info["src"]),
+                    img_info["width"],
+                    img_info["height"],
+                )
+                img["src"] = img_src
+                del img["data-serialized"]
+            except:  # noqa
+                pass
+
         return f"""<html>
         <head><title>{article["cleanTitle"]}</title></head>
         <body>
@@ -228,13 +245,14 @@ fragment ArticlePageFields on Article {
                 </span>
             </div>
             {lede_image_html}
-            {article["body"]}
+            {str(body_soup)}
             {author_bios_html}
             </article>
         </body></html>"""
 
     def parse_index(self):
         br = self.get_browser()
+        params = ""
         if _issue_url:
             month = urlparse(_issue_url).path.split("/")[-1]
             params = f'?{urlencode({"magazineTag": month})}'
