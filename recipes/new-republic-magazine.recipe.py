@@ -62,7 +62,7 @@ class NewRepublicMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
 
     extra_css = """
     h1.headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
-    h2.subheadline { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; }
+    h2.subheadline { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; font-weight: normal; }
     .article-meta {  margin-bottom: 1rem; }
     .article-meta span { display: inline-block; font-weight: bold; color: #444; margin-right: 0.5rem; }
     .article-meta span:last-child { font-weight: normal; }
@@ -175,6 +175,11 @@ fragment ArticlePageFields on Article {
         """
         Rewrite the image url to fetch a device appropriate sized one instead
         of the full-res one
+
+        :param image_url:
+        :param width:
+        :param height:
+        :return:
         """
         max_width = self.scale_news_images[0] if self.scale_news_images else 800
         crop_params = {
@@ -208,7 +213,10 @@ fragment ArticlePageFields on Article {
         try:
             post_authors = [a["name"] for a in article.get("authors", [])]
             if post_authors:
-                author_bios_html = f'<div class="author-bios">{"".join([a.get("blurb", "") for a in article.get("authors", [])])}</div>'
+                author_bios_html = "".join(
+                    [a.get("blurb", "") for a in article.get("authors", [])]
+                )
+                author_bios_html = f'<div class="author-bios">{author_bios_html}</div>'
         except (KeyError, TypeError):
             pass
 
@@ -219,10 +227,14 @@ fragment ArticlePageFields on Article {
             lede_img_url = self._resize_image(
                 urljoin(self.BASE_URL, img["src"]), img["width"], img["height"]
             )
+            lede_image_caption = ""
+            if article.get("ledeImageRealCaption"):
+                lede_image_caption = (
+                    f'<span class="caption">{article["ledeImageRealCaption"]}>/span>'
+                )
             lede_image_html = f"""<p class="lede-media">
-                <img src="{lede_img_url}">
-                {f'<span class="caption">{article["ledeImageRealCaption"]}</span>' if article.get("ledeImageRealCaption") else ""}
-            </p>"""
+                <img src="{lede_img_url}">{lede_image_caption}
+                </p>"""
 
         body_soup = BeautifulSoup(article["body"], features="html.parser")
         for img in body_soup.find_all("img", attrs={"data-serialized": True}):
@@ -275,9 +287,7 @@ fragment ArticlePageFields on Article {
 
         feed_articles = []
         for k, articles in magazine.items():
-            if not k.startswith("magazine"):
-                continue
-            if not articles:
+            if not (k.startswith("magazine") and articles):
                 continue
             try:
                 for article in articles:
