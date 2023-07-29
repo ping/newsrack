@@ -32,9 +32,7 @@ class ProspectMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     language = "en"
     publication_type = "magazine"
     masthead_url = "https://media.prospectmagazine.co.uk/prod/images/gm_grid_thumbnail/358ffc17208c-f4c3cddcdeda-prospect-masthead.png"
-    encoding = "utf-8"
     compress_news_images_auto_size = 8
-    ignore_duplicate_articles = {"url"}
     INDEX = "https://www.prospectmagazine.co.uk/issues"
 
     keep_only_tags = [dict(class_="prop-book-article-panel_main")]

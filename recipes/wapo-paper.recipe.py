@@ -29,18 +29,12 @@ class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
     category = "news, politics, USA"
     publication_type = "newspaper"
     masthead_url = "https://www.washingtonpost.com/sf/brand-connect/dell-technologies/the-economics-of-change/media/wp_logo_black.png"
-
-    use_embedded_content = False
-    remove_empty_feeds = True
-    auto_cleanup = False
-    encoding = "utf-8"
     language = "en"
     simultaneous_downloads = 8
     compress_news_images_auto_size = 12
 
     oldest_article = 1
     max_articles_per_feed = 25
-    ignore_duplicate_articles = {"url"}
 
     remove_attributes = ["style"]
     index = "https://www.washingtonpost.com/todays_paper/updates/"

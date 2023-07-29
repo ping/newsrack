@@ -28,8 +28,6 @@ class SydneyMorningHerald(BasicNewsrackRecipe, BasicNewsRecipe):
     oldest_article = 1
     max_articles_per_feed = 50
     ignore_duplicate_articles = {"title", "url"}
-    use_embedded_content = False
-    encoding = "utf-8"
 
     language = "en_AU"
     remove_empty_feeds = True

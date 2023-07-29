@@ -30,10 +30,7 @@ class KnowableMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     )
     masthead_url = "https://knowablemagazine.org/pb-assets/knowable-assets/images/logo-1586554394067.svg"
     language = "en"
-    encoding = "utf-8"
     publication_type = "magazine"
-    auto_cleanup = False
-    use_embedded_content = False
     timeout = 60
 
     oldest_article = 45  # days

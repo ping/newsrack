@@ -23,11 +23,8 @@ class HarpersMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
         "as the iconic Harper’s Index. https://harpers.org/issues/"
     )
     language = "en"
-    encoding = "utf-8"
     masthead_url = "https://harpers.org/wp-content/themes/timber/assets/img/logo.svg"
     publication_type = "magazine"
-    use_embedded_content = False
-    auto_cleanup = False
     base_url = "https://harpers.org"
     compress_news_images_auto_size = 8
 

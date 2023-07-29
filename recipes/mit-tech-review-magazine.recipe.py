@@ -41,10 +41,8 @@ class MitTechnologyReviewMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
     description = "Bi-monthly magazine version of MIT Technology Review. https://www.technologyreview.com/magazine/"
     INDEX = "https://www.technologyreview.com/magazine/"
     language = "en"
-    encoding = "utf-8"
     publication_type = "magazine"
     tags = "news, technology, science"
-    remove_empty_feeds = True
     masthead_url = "https://wp-preprod.technologyreview.com/wp-content/uploads/2021/08/Screen-Shot-2021-08-20-at-11.11.12-AM-e1629473232355.png"
 
     compress_news_images_auto_size = 10

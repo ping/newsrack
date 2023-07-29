@@ -17,14 +17,11 @@ class Kirkus(BasicNewsrackRecipe, BasicNewsRecipe):
     language = "en"
     __author__ = "ping"
     publication_type = "magazine"
-    encoding = "utf-8"
     masthead_url = (
         "https://d1fd687oe6a92y.cloudfront.net/img/kir_images/logo/kirkus-nav-logo.svg"
     )
     max_articles_per_feed = 99
-    use_embedded_content = False
     compress_news_images_auto_size = 6
-    auto_cleanup = False
     keep_only_tags = [
         dict(
             class_=[

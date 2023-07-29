@@ -110,12 +110,16 @@ def extract_from_img_srcset(srcset: str, max_width=0):
 
 
 class BasicNewsrackRecipe(object):
+    encoding = "utf-8"
     remove_javascript = True
     no_stylesheets = True
+    auto_cleanup = False
     compress_news_images = True
     scale_news_images = (800, 800)
     scale_news_images_to_device = False  # force img to be resized to scale_news_images
     ignore_duplicate_articles = {"url"}
+    use_embedded_content = False
+    remove_empty_feeds = True
 
     timeout = 20
     timefmt = ""  # suppress date output

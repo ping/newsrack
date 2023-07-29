@@ -29,7 +29,6 @@ class ForeignPolicy(WordPressNewsrackRecipe, BasicNewsRecipe):
     language = "en"
     publication_type = "blog"
     oldest_article = 7  # days
-    encoding = "utf-8"
     masthead_url = "https://foreignpolicy.com/wp-content/themes/foreign-policy-2017/assets/src/images/logos/favicon-256.png"
     reverse_article_order = False
     compress_news_images_auto_size = 12

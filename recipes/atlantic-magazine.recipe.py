@@ -132,13 +132,11 @@ class TheAtlanticMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
 
     __author__ = "Kovid Goyal"
     language = "en"
-    encoding = "utf-8"
 
     masthead_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/The_Atlantic_magazine_logo.svg/1200px-The_Atlantic_magazine_logo.svg.png"
 
     publication_type = "magazine"
     compress_news_images_auto_size = 12
-    remove_empty_feeds = True
     remove_attributes = ["style"]
     remove_tags = [dict(class_=["related-content"])]
 

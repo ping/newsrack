@@ -125,13 +125,11 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
     masthead_url = (
         "https://www.foreignaffairs.com/themes/fa/assets/images/icon__FA-logotype.png"
     )
-    encoding = "utf-8"
     publication_type = "magazine"
     INDEX = "https://www.foreignaffairs.com/magazine"
     compress_news_images_auto_size = 8
     needs_subscription = "optional"
     ignore_duplicate_articles = {"title", "url"}
-    remove_empty_feeds = True
     remove_attributes = ["style", "width", "height", "sizes", "loading"]
 
     keep_only_tags = [

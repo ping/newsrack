@@ -31,7 +31,6 @@ class FulcrumSg(WordPressNewsrackRecipe, BasicNewsRecipe):
     masthead_url = "https://i0.wp.com/fulcrum.sg/wp-content/uploads/logo.png"
 
     oldest_article = 30  # days
-    encoding = "utf-8"
     compress_news_images_auto_size = 10
     reverse_article_order = False
 

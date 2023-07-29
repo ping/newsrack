@@ -28,7 +28,6 @@ class ThirdPole(WordPressNewsrackRecipe, BasicNewsRecipe):
     language = "en"
     publication_type = "blog"
     oldest_article = 14  # days
-    encoding = "utf-8"
     masthead_url = (
         "https://www.thethirdpole.net/content/uploads/2020/10/ThirdPoleLogo.svg"
     )

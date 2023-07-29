@@ -42,8 +42,6 @@ class NewYorker(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     )
     language = "en"
     __author__ = "Kovid Goyal"
-    encoding = "utf-8"
-    remove_empty_feeds = True
     masthead_url = "https://www.newyorker.com/verso/static/the-new-yorker/assets/logo-seo.38af6104b89a736857892504d04dbb9a3a56e570.png"
 
     compress_news_images_auto_size = 10

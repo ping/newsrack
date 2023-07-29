@@ -27,7 +27,6 @@ class KoreaJoongAngDaily(BasicNewsrackRecipe, BasicNewsRecipe):
     masthead_url = (
         "https://koreajoongangdaily.joins.com/resources/images/common/logo.png"
     )
-    encoding = "utf-8"
     use_embedded_content = True
     auto_cleanup = True
     compress_news_images_auto_size = 10

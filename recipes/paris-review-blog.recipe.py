@@ -34,8 +34,6 @@ class ParisReviewBlog(WordPressNewsrackRecipe, BasicNewsRecipe):
     masthead_url = (
         "https://www.theparisreview.org/il/7d2a53fbaa/medium/Hadada-Circle-holding.png"
     )
-    ignore_duplicate_articles = {"url"}
-
     reverse_article_order = False
 
     remove_attributes = ["style", "width", "height"]

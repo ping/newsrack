@@ -30,12 +30,9 @@ class FiveThirtyEight(WordPressNewsrackRecipe, BasicNewsRecipe):
 
     oldest_article = 14
     max_articles_per_feed = 10
-    encoding = "utf-8"
     masthead_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/FiveThirtyEight_Logo.svg/1024px-FiveThirtyEight_Logo.svg.png"
-    ignore_duplicate_articles = {"url"}
 
     reverse_article_order = False
-
     remove_attributes = ["style", "width", "height"]
     remove_tags = [dict(class_=["video-title", "videoplayer", "video-footer"])]
 

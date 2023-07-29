@@ -30,11 +30,7 @@ class FinancialTimes(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     category = "news, finance, politics, UK, World"
     publication_type = "newspaper"
     oldest_article = 1  # days
-    use_embedded_content = False
-    encoding = "utf-8"
-    auto_cleanup = False
     masthead_url = "https://www.ft.com/partnercontent/content-hub/static/media/ft-horiz-new-black.215c1169.png"
-    ignore_duplicate_articles = {"url"}
 
     compress_news_images_auto_size = 6
     request_as_gbot = True

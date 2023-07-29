@@ -44,7 +44,6 @@ class AsahiShimbunEnglishNews(BasicNewsrackRecipe, BasicNewsRecipe):
 
     oldest_article = 1
     max_articles_per_feed = 25
-    ignore_duplicate_articles = {"url"}
 
     compress_news_images_auto_size = 10
     timeout = 90

@@ -37,8 +37,6 @@ class JapanTimes(BasicNewsrackRecipe, BasicNewsRecipe):
     publisher = "The Japan Times"
     oldest_article = 1
     max_articles_per_feed = 60
-    use_embedded_content = False
-    encoding = "utf-8"
     publication_type = "newspaper"
     masthead_url = "https://cdn-japantimes.com/wp-content/themes/jt_theme/library/img/japantimes-logo-tagline.png"
 

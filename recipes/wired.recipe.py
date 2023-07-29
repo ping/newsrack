@@ -35,16 +35,11 @@ class WiredMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     )
     publisher = "Conde Nast"
     category = "news, IT, computers, technology"
-    encoding = "utf-8"
     language = "en"
     masthead_url = "https://www.wired.com/verso/static/wired/assets/logo-header.a7598835a549cb7d5ce024ef0710935927a034f9.svg"
 
     oldest_article = 45
     max_articles_per_feed = 200
-
-    use_embedded_content = False
-    remove_empty_feeds = True
-    ignore_duplicate_articles = {"url"}
 
     BASE_URL = "https://www.wired.com"
 

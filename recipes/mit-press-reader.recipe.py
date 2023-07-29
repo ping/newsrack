@@ -22,11 +22,8 @@ class MITPressReader(BasicNewsrackRecipe, BasicNewsRecipe):
     language = "en"
     publication_type = "blog"
     oldest_article = 30  # days
-    use_embedded_content = False
-    encoding = "utf-8"
     compress_news_images = False
     masthead_url = "https://thereader.mitpress.mit.edu/wp-content/themes/ta/img/log.png"
-    auto_cleanup = False
     reverse_article_order = False
 
     keep_only_tags = [dict(class_=["article-entry"])]

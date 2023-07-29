@@ -24,11 +24,7 @@ class SCMP(BasicNewsrackRecipe, BasicNewsRecipe):
     publication_type = "newspaper"
     oldest_article = 1
     max_articles_per_feed = 25
-    encoding = "utf-8"
-    use_embedded_content = False
     language = "en"
-    remove_empty_feeds = True
-    auto_cleanup = False
     ignore_duplicate_articles = {"title", "url"}
 
     masthead_url = (

@@ -29,7 +29,6 @@ class LitHub(WordPressNewsrackRecipe, BasicNewsRecipe):
     masthead_url = (
         "https://s26162.pcdn.co/wp-content/themes/rigel/images/social_logo.png"
     )
-    encoding = "utf-8"
     reverse_article_order = False
     compress_news_images_auto_size = 10
 

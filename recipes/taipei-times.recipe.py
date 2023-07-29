@@ -26,9 +26,6 @@ class TaipeiTimes(BasicNewsrackRecipe, BasicNewsRecipe):
 
     oldest_article = 1  # days
     max_articles_per_feed = 50
-    use_embedded_content = False
-
-    auto_cleanup = True
     ignore_duplicate_articles = {"title", "url"}
 
     keep_only_tags = [dict(name="div", class_="archives")]

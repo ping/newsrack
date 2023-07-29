@@ -30,11 +30,9 @@ class ProPublica(BasicNewsrackRecipe, BasicNewsRecipe):
     oldest_article = 30  # days
     max_articles_per_feed = 25
     use_embedded_content = False
-    encoding = "utf-8"
     masthead_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/ProPublica_text_logo.svg/1280px-ProPublica_text_logo.svg.png"
 
     scale_news_images = (800, 1200)
-    auto_cleanup = False
     timeout = 60
 
     keep_only_tags = [dict(name="article")]

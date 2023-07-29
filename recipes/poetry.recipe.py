@@ -27,9 +27,6 @@ class Nature(BasicNewsrackRecipe, BasicNewsRecipe):
     )
     publication_type = "magazine"
     language = "en"
-    encoding = "utf-8"
-
-    ignore_duplicate_articles = {"url"}
     compress_news_images = False
     scale_news_images = (800, 1200)
 

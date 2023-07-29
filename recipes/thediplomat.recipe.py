@@ -30,9 +30,7 @@ class TheDiplomat(WordPressNewsrackRecipe, BasicNewsRecipe):
 
     oldest_article = 7
     max_articles_per_feed = 25
-    encoding = "utf-8"
     masthead_url = "https://thediplomat.com/wp-content/themes/td_theme_v3/assets/logo/diplomat_logo_black.svg"
-    ignore_duplicate_articles = {"url"}
 
     compress_news_images_auto_size = 8
     reverse_article_order = False

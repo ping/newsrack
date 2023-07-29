@@ -23,7 +23,6 @@ class LongreadsFeatures(WordPressNewsrackRecipe, BasicNewsRecipe):
     description = "Sharing the best nonfiction storytelling on the web since 2011. https://longreads.com/features/"
     language = "en"
     oldest_article = 30  # days
-    encoding = "utf-8"
     masthead_url = "https://i0.wp.com/longreads.com/wp-content/uploads/2022/08/longreads-logo-1.png?w=600&ssl=1"
     reverse_article_order = False
 

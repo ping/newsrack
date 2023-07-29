@@ -22,9 +22,7 @@ class BookforumMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     language = "en"
     __author__ = "ping"
     publication_type = "magazine"
-    encoding = "utf-8"
     compress_news_images_auto_size = 8
-    auto_cleanup = False
 
     keep_only_tags = [dict(class_="blog-article")]
     remove_tags = [dict(name=["af-share-toggle", "af-related-articles"])]

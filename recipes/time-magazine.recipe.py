@@ -26,7 +26,6 @@ class TimeMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     language = "en"
     masthead_url = "https://time.com/img/logo.png"
     oldest_article = 14
-    auto_cleanup = False
     reverse_article_order = False
 
     remove_attributes = ["style"]

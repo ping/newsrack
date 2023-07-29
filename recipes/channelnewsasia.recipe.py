@@ -25,9 +25,6 @@ class ChannelNewsAsia(BasicNewsrackRecipe, BasicNewsRecipe):
     publisher = "Mediacorp"
     category = "news, Singapore"
     publication_type = "newspaper"
-    use_embedded_content = False
-    auto_cleanup = False
-    encoding = "utf-8"
     language = "en"
     masthead_url = "https://www.channelnewsasia.com/sites/default/themes/mc_cna_theme/images/logo.png"
 

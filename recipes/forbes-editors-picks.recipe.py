@@ -19,7 +19,6 @@ class ForbesEditorsPicks(BasicNewsrackRecipe, BasicNewsRecipe):
     __author__ = "ping"
     description = "Forbe's Editors' Picks https://www.forbes.com/editors-picks/"
     language = "en"
-    encoding = "utf-8"
 
     oldest_article = 7
     max_articles_per_feed = 10

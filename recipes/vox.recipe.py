@@ -22,12 +22,9 @@ class Vox(BasicNewsrackRecipe, BasicNewsRecipe):
     publication_type = "magazine"
     masthead_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Vox_logo.svg/300px-Vox_logo.svg.png"
     oldest_article = 7  # days
-    ignore_duplicate_articles = {"url"}
 
     max_articles_per_feed = 25
     use_embedded_content = True
-
-    auto_cleanup = False
     scale_news_images = (600, 600)
 
     remove_attributes = ["style", "font"]

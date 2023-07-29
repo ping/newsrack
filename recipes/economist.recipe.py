@@ -143,17 +143,19 @@ _name = "Economist"
 
 
 class Economist(BasicNewsrackRecipe, BasicNewsRecipe):
-
     title = _name
-    language = "en"
-    encoding = "utf-8"
-
     __author__ = "Kovid Goyal"
     description = (
         "Global news and current affairs from a European"
         " perspective. Best downloaded on Friday mornings (GMT)"
         " https://www.economist.com/printedition"
     )
+    language = "en"
+    encoding = "utf-8"
+
+    masthead_url = "https://www.economist.com/assets/the-economist-logo.png"
+    needs_subscription = False
+
     extra_css = """
         .headline {font-size: x-large;}
         h2 { font-size: medium; font-weight: bold;  }
@@ -237,10 +239,6 @@ class Economist(BasicNewsrackRecipe, BasicNewsRecipe):
     # economist.com has started throttling with HTTP 429
     delay = 0
     simultaneous_downloads = 1
-
-    masthead_url = "https://www.economist.com/assets/the-economist-logo.png"
-
-    needs_subscription = False
 
     def __init__(self, *args, **kwargs):
         BasicNewsRecipe.__init__(self, *args, **kwargs)

@@ -23,10 +23,7 @@ class QuantaMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     )
     publication_type = "magazine"
     language = "en"
-    encoding = "UTF-8"
     masthead_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Quanta_Magazine_Logo_05.2022.svg/320px-Quanta_Magazine_Logo_05.2022.svg.png"
-    auto_cleanup = False
-    use_embedded_content = False
 
     oldest_article = 30
     max_articles_per_feed = 100

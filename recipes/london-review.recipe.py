@@ -27,11 +27,9 @@ class LondonReviewOfBooks(BasicNewsrackRecipe, BasicNewsRecipe):
     language = "en_GB"
 
     # delay = 1
-    encoding = "utf-8"
     INDEX = "https://www.lrb.co.uk"
     publication_type = "magazine"
     needs_subscription = False
-    requires_version = (3, 0, 0)
 
     masthead_url = (
         "https://www.pw.org/files/small_press_images/london_review_of_books.png"

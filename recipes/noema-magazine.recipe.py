@@ -23,7 +23,6 @@ class NoemaMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
     language = "en"
     publication_type = "magazine"
     oldest_article = 30  # days
-    encoding = "utf-8"
     masthead_url = "https://www.noemamag.com/wp-content/uploads/2020/04/noema-logo.png"
     reverse_article_order = False
     compress_news_images_auto_size = 6

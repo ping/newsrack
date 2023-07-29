@@ -24,7 +24,6 @@ class MITTechologyReview(WordPressNewsrackRecipe, BasicNewsRecipe):
     language = "en"
     publication_type = "blog"
     oldest_article = 3  # days
-    encoding = "utf-8"
     masthead_url = "https://wp.technologyreview.com/wp-content/uploads/custom-story/1026960/images/logo-MIT-tecnology-review2.svg"
     compress_news_images = False
     compress_news_images_auto_size = 8

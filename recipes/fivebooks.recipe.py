@@ -29,13 +29,8 @@ class FiveBooks(BasicNewsrackRecipe, BasicNewsRecipe):
     category = "books"
     publication_type = "blog"
     max_articles_per_feed = 15
-    use_embedded_content = False
-    encoding = "utf-8"
     masthead_url = "https://fivebooks.com/app/themes/five-books/assets/images/logo.png"
     scale_news_images = (400, 400)
-    auto_cleanup = False
-
-    ignore_duplicate_articles = {"url"}
 
     remove_attributes = ["style", "font"]
     remove_tags = [

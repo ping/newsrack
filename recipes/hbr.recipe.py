@@ -27,13 +27,9 @@ class HBR(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
         " https://hbr.org/magazine"
     )
     language = "en"
-    encoding = "utf-8"
     base_url = "https://hbr.org"
     masthead_url = "http://hbr.org/resources/css/images/hbr_logo.svg"
     publication_type = "magazine"
-    use_embedded_content = False
-    auto_cleanup = False
-    ignore_duplicate_articles = {"url"}
 
     remove_attributes = ["height", "width", "style"]
     extra_css = """

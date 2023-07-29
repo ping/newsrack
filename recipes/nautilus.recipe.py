@@ -27,11 +27,9 @@ class Nautilus(BasicNewsrackRecipe, BasicNewsRecipe):
         " no matter how complex, can be explained with clarity and vitality."
         " https://nautil.us/"
     )
-    use_embedded_content = False
     masthead_url = "https://assets.nautil.us/13891_bb83b72bf545e376f3ff9443bda39421.png"
     remove_attributes = ["height", "width"]
     ignore_duplicate_articles = {"title", "url"}
-    remove_empty_feeds = True
 
     compress_news_images_auto_size = 10
 

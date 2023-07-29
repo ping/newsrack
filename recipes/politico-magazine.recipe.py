@@ -25,10 +25,8 @@ class PoliticoMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
     publisher = "Capitol News Company, LLC"
     category = "news, politics, USA"
     publication_type = "magazine"
-    encoding = "utf-8"
     language = "en"
     masthead_url = "https://www.politico.com/dims4/default/bbb0fd2/2147483647/resize/1160x%3E/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F0e%2F5b%2F3cf3e0f04ca58370112ab667c255%2Fpolitico-logo.png"
-    use_embedded_content = False
 
     oldest_article = 7
     max_articles_per_feed = 25

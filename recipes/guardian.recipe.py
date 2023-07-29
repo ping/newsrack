@@ -27,10 +27,7 @@ class Guardian(BasicNewsrackRecipe, BasicNewsRecipe):
     publication_type = "newspaper"
     oldest_article = 1  # days
     max_articles_per_feed = 60
-    use_embedded_content = False
-    encoding = "utf-8"
     masthead_url = "https://assets.guim.co.uk/images/guardian-logo-rss.c45beb1bafa34b347ac333af2e6fe23f.png"
-    auto_cleanup = False
 
     remove_attributes = ["style", "width", "height"]
     keep_only_tags = [dict(name=["header", "article"])]

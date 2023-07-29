@@ -32,7 +32,6 @@ class WSJ(BasicNewsrackRecipe, BasicNewsRecipe):
     )
     compress_news_images_auto_size = 9
     scale_news_images = (800, 1200)
-    ignore_duplicate_articles = {"url"}
 
     remove_attributes = ["style", "height", "width"]
     extra_css = """

@@ -22,15 +22,11 @@ class KoreaHerald(BasicNewsrackRecipe, BasicNewsRecipe):
     language = "en"
     description = "Korea Herald News articles https://koreaherald.com/"
     __author__ = "Seongkyoun Yoo"
-    use_embedded_content = False
-    encoding = "utf-8"
     publication_type = "newspaper"
     masthead_url = "https://res.heraldm.com/new_201209/images/common/logo.gif"
 
     oldest_article = 1
     max_articles_per_feed = 25
-
-    auto_cleanup = False
 
     remove_attributes = ["style", "align"]
     remove_tags_before = [dict(class_="main")]

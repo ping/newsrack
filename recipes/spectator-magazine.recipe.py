@@ -25,10 +25,8 @@ class SpectatorMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     )
     __author__ = "ping"
     language = "en"
-    encoding = "utf-8"
     publication_type = "magazine"
     masthead_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/The_Spectator_logo.svg/1024px-The_Spectator_logo.svg.png"
-    auto_cleanup = False
     compress_news_images_auto_size = 8
 
     keep_only_tags = [

@@ -35,7 +35,6 @@ class ScientificAmerican(BasicNewsrackRecipe, BasicNewsRecipe):
         "https://static.scientificamerican.com/sciam/assets/Image/newsletter/salogo.png"
     )
     compress_news_images_auto_size = 8
-    remove_empty_feeds = True
 
     remove_attributes = ["width", "height"]
     keep_only_tags = [

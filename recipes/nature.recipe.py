@@ -39,7 +39,6 @@ class Nature(BasicNewsrackRecipe, BasicNewsRecipe):
         " https://www.nature.com/nature/current-issue/"
     )
     language = "en"
-    encoding = "utf-8"
     masthead_url = "https://media.springernature.com/full/nature-cms/uploads/product/nature/header-86f1267ea01eccd46b530284be10585e.svg"
 
     scale_news_images = (800, 1200)

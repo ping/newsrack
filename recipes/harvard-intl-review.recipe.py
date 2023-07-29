@@ -35,7 +35,6 @@ class HarvardInternationalReview(BasicNewsrackRecipe, BasicNewsRecipe):
     oldest_article = 30  # days
     max_articles_per_feed = 30
     use_embedded_content = True
-    encoding = "utf-8"
     masthead_url = (
         "https://hir.harvard.edu/content/images/2020/12/HIRlogo_crimson-4.png"
     )

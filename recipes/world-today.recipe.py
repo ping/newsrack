@@ -26,11 +26,8 @@ class WorldToday(BasicNewsrackRecipe, BasicNewsRecipe):
     )
     publication_type = "magazine"
     language = "en"
-    encoding = "utf-8"
-    ignore_duplicate_articles = {"url"}
     compress_news_images_auto_size = 4
     scale_news_images = (800, 1200)
-    remove_empty_feeds = True
 
     BASE_URL = "https://www.chathamhouse.org"
     keep_only_tags = [
