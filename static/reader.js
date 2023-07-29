@@ -65,6 +65,11 @@ https://opensource.org/licenses/GPL-3.0
         }
     }
 
+    function stripHTMLTags(html) {
+        const parseHTML = new DOMParser().parseFromString(html, 'text/html');
+        return parseHTML.body.textContent || '';
+    }
+
     book.ready.then(function () {
         if (loadingContainer) {
             loadingContainer.remove();
@@ -126,17 +131,17 @@ https://opensource.org/licenses/GPL-3.0
 
         toc.forEach(function (chapter) {
             const option = document.createElement("option");
-            option.textContent = chapter.label;
+            option.textContent = stripHTMLTags(chapter.label);
             option.setAttribute("ref", chapter.href);
             docfrag.appendChild(option);
             chapter.subitems.forEach(function (subitem) {
                 const subOption = document.createElement("option");
-                subOption.textContent = "* " + subitem.label;
+                subOption.textContent = "* " + stripHTMLTags(subitem.label);
                 subOption.setAttribute("ref", subitem.href);
                 docfrag.appendChild(subOption);
                 subitem.subitems.forEach(function (sub2item) {
                     const sub2Option = document.createElement("option");
-                    sub2Option.textContent = "--- " + sub2item.label;
+                    sub2Option.textContent = "--- " + stripHTMLTags(sub2item.label);
                     sub2Option.setAttribute("ref", sub2item.href);
                     docfrag.appendChild(sub2Option);
                 });
