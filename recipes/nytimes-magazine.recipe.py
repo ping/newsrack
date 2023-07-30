@@ -88,7 +88,8 @@ class NYTimesBooks(NYTRecipe, BasicNewsrackRecipe, BasicNewsRecipe):
 
         issue_cover = next(iter(soup.select(".issue-promo .promo-image img")), None)
         if issue_cover:
-            self.cover_url = issue_cover["src"]
+            # "-superJumbo.jpg" will get an even higher-res version
+            self.cover_url = issue_cover["src"].replace("-blog480.jpg", "-jumbo.jpg")
         issue_url = urljoin(index_url, issue_link["href"])
         soup = self.index_to_soup(issue_url)
         info = self.get_script_json(soup, r"window.__preloadedData\s*=\s*")
