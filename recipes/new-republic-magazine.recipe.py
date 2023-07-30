@@ -34,10 +34,9 @@ def sort_section(a, b, sections_sort):
         return -1
     if a_index > b_index:
         return 1
-    if a_index == b_index:
-        if a["section"] == b["section"]:
-            return -1 if a["date"] < b["date"] else 1
-        return -1 if a["section"] < b["section"] else 1
+    if a["section"] == b["section"]:
+        return -1 if a["date"] < b["date"] else 1
+    return -1 if a["section"] < b["section"] else 1
 
 
 class NewRepublicMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
