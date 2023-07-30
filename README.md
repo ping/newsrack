@@ -9,8 +9,8 @@ Features:
 Uses [calibre](https://calibre-ebook.com/) + [recipes](https://manual.calibre-ebook.com/news_recipe.html), [GitHub Actions](.github/workflows/build.yml), and hosted
 on [GitHub Pages](https://pages.github.com/).
 
-![eInk Kindle Screenshot](https://user-images.githubusercontent.com/104607/226074902-b4a672ff-8fb0-4f2e-8307-b1ec736792e5.png)
-![Mobile Screenshot](https://user-images.githubusercontent.com/104607/226074930-45289aec-0d56-48a2-a02e-deeca497851f.jpg)
+![eInk Kindle Screenshot](https://github.com/ping/newsrack/assets/104607/475daa53-f2d5-4469-b88e-7d5463399d73)
+![Mobile Screenshot](https://github.com/ping/newsrack/assets/104607/76ec3514-8d89-43bc-a68c-909df42971cb)
 
 [![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=ping&button_colour=FFDD00&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/ping)
 
