@@ -12,7 +12,7 @@ import re
 import time
 from urllib.parse import urljoin, urlparse
 
-from calibre import browser, iswindows, random_user_agent
+from calibre import browser, iswindows
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.utils.date import parse_date
 from calibre.web.feeds.news import BasicNewsRecipe

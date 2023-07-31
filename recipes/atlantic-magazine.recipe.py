@@ -9,7 +9,6 @@ import json
 import os
 import re
 import sys
-from datetime import datetime, timezone
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])

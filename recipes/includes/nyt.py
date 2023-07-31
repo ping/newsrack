@@ -4,10 +4,10 @@ import random
 import time
 from urllib.parse import urlparse
 
-from recipes_shared import BasicNewsrackRecipe, get_date_format
-
 from calibre import browser
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
+
+from recipes_shared import BasicNewsrackRecipe, get_date_format
 
 
 class NYTRecipe(BasicNewsrackRecipe):
