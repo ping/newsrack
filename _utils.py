@@ -9,7 +9,7 @@ import sys
 import textwrap
 import unicodedata
 from pathlib import Path
-from typing import Tuple, Optional
+from typing import Optional, Tuple
 
 import requests
 from PIL import Image, ImageDraw, ImageFont  # type: ignore

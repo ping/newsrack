@@ -5,8 +5,8 @@
 import sys
 from calendar import monthrange
 from dataclasses import dataclass, field
-from datetime import datetime, timezone, timedelta
-from typing import List, Union, Callable, Dict
+from datetime import datetime, timedelta, timezone
+from typing import Callable, Dict, List, Union
 
 # adapted from calibre.constants.iswindows
 _plat = sys.platform.lower()

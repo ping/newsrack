@@ -5,7 +5,7 @@
 
 # Helpers to generate opds xml - extremely minimal
 from datetime import datetime
-from typing import Optional, Dict
+from typing import Dict, Optional
 from xml.dom import minidom
 
 extension_contenttype_map = {

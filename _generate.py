@@ -13,28 +13,28 @@ import subprocess
 import sys
 import time
 from collections import namedtuple
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta, timezone
 from functools import cmp_to_key
 from math import ceil
 from pathlib import Path
 from timeit import default_timer as timer
-from typing import List, Dict, Optional
-from urllib.parse import urljoin, urlencode
+from typing import Dict, List, Optional
+from urllib.parse import urlencode, urljoin
 from xml.dom import minidom
 
 import humanize  # type: ignore
 import requests  # type: ignore
 from bleach import linkify
 
-from _opds import init_feed, simple_tag, extension_contenttype_map
-from _recipe_utils import sort_category, Recipe, is_windows
+from _opds import extension_contenttype_map, init_feed, simple_tag
+from _recipe_utils import Recipe, is_windows, sort_category
 from _recipes import (
-    recipes as default_recipes,
     categories_sort as default_categories_sort,
+    recipes as default_recipes,
 )
 from _recipes_custom import (
-    recipes as custom_recipes,
     categories_sort as custom_categories_sort,
+    recipes as custom_recipes,
 )
 from _utils import generate_cover, slugify
 
