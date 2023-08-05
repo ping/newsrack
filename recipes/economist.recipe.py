@@ -184,6 +184,9 @@ class Economist(BasicNewsrackRecipe, BasicNewsRecipe):
             font-size: 1rem;
             text-transform: uppercase;
         }
+        #script-microapp .article-text {
+            margin: 1rem 0;
+        }
         """
     oldest_article = 7.0
     resolve_internal_links = True
@@ -221,6 +224,9 @@ class Economist(BasicNewsrackRecipe, BasicNewsRecipe):
                     "latest-updates-panel__container",
                     "latest-updates-panel__article-link",
                     "blog-post__section",
+                    "related-content",
+                    "scroller",  # interactive stuff that we can't render anyway
+                    "ai2html-chart",  # interactive stuff that we can't render anyway
                 ]
             }
         ),
@@ -285,10 +291,6 @@ class Economist(BasicNewsrackRecipe, BasicNewsRecipe):
 
     def open_novisit(self, *args, **kwargs):
         target_url = args[0]
-        if "/interactive/" in target_url:
-            msg = "Skip interactive article: %s" % target_url
-            self.log.warning(msg)
-            self.abort_article(msg)
         p, ext = splitext(urlparse(target_url).path)
         if not ext:
             # not an asset, e.g. .png .jpg
