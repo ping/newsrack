@@ -48,6 +48,8 @@ class Kirkus(BasicNewsrackRecipe, BasicNewsRecipe):
                 "button-row",
                 "hide-on-mobile",
                 "related-article",
+                "breadcrumb-row",
+                "shop-now-dropdown",
             ]
         )
     ]
