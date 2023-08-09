@@ -256,8 +256,6 @@ class Economist(BasicNewsrackRecipe, BasicNewsRecipe):
             self.log.warn(
                 "Kindle Output profile being used, reducing image quality to keep file size below amazon email threshold"
             )
-
-    def get_browser(self):
         br = BasicNewsRecipe.get_browser(self)
         # Add a cookie indicating we have accepted Economist's cookie
         # policy (needed when running from some European countries)
@@ -282,14 +280,25 @@ class Economist(BasicNewsrackRecipe, BasicNewsRecipe):
         )
         br.cookiejar.set_cookie(ck)
         br.set_handle_gzip(True)
-        return br
+        self._br = br
 
-    def get_url_specific_delay(self, url):
-        p, ext = splitext(urlparse(url).path)
+    # We send no cookies to avoid triggering bot detection
+    def get_browser(self, *args, **kwargs):
+        return self
+
+    def clone_browser(self, *args, **kwargs):
+        return self.get_browser()
+
+    def open_novisit(self, *args, **kwargs):
+        target_url = args[0]
+        p, ext = splitext(urlparse(target_url).path)
         if not ext:
             # not an asset, e.g. .png .jpg
-            return random.choice([r for r in range(1, 3)])
-        return 0
+            time.sleep(random.choice([r for r in range(1, 3)]))
+
+        return self._br.open_novisit(*args, **kwargs)
+
+    open = open_novisit
 
     def preprocess_raw_html(self, raw, _):
         root = parse(raw)
