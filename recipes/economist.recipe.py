@@ -7,6 +7,7 @@ import json
 import os
 import random
 import sys
+import time
 from collections import defaultdict
 from http.cookiejar import Cookie
 from os.path import splitext
@@ -14,9 +15,9 @@ from urllib.parse import urlparse
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicCookielessNewsrackRecipe, format_title
+from recipes_shared import BasicNewsrackRecipe, format_title
 
-from calibre import browser, replace_entities
+from calibre import replace_entities
 from calibre.ebooks.BeautifulSoup import NavigableString, Tag
 from calibre.utils.cleantext import clean_ascii_chars
 from calibre.web.feeds.news import BasicNewsRecipe, classes
@@ -141,7 +142,7 @@ def process_url(url):
 _name = "Economist"
 
 
-class Economist(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
+class Economist(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "Kovid Goyal"
     description = (
@@ -150,7 +151,7 @@ class Economist(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
         " https://www.economist.com/printedition"
     )
     language = "en"
-    requires_version = (6, 24, 0)  # cos we're using get_url_specific_delay()
+    encoding = "utf-8"
 
     masthead_url = "https://www.economist.com/assets/the-economist-logo.png"
     needs_subscription = False
@@ -242,7 +243,7 @@ class Economist(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     keep_only_tags = [dict(name="article", id=lambda x: not x)]
     remove_attributes = ["data-reactid", "width", "height"]
     # economist.com has started throttling with HTTP 429
-    delay = 2
+    delay = 0
     simultaneous_downloads = 1
 
     def __init__(self, *args, **kwargs):
@@ -255,17 +256,7 @@ class Economist(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
             self.log.warn(
                 "Kindle Output profile being used, reducing image quality to keep file size below amazon email threshold"
             )
-
-    def get_url_specific_delay(self, url):
-        p, ext = splitext(urlparse(url).path)
-        if ext and ext not in (".html", ".htm"):
-            return 0
-        return random.choice([r for r in range(1, 5)])
-
-    def open_novisit(self, *args, **kwargs):
-        # make requests cookie-less because blocking partly
-        # depends on cookies
-        br = browser()
+        br = BasicNewsRecipe.get_browser(self)
         # Add a cookie indicating we have accepted Economist's cookie
         # policy (needed when running from some European countries)
         ck = Cookie(
@@ -289,7 +280,25 @@ class Economist(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
         )
         br.cookiejar.set_cookie(ck)
         br.set_handle_gzip(True)
-        return br.open_novisit(*args, **kwargs)
+        self._br = br
+
+    # We send no cookies to avoid triggering bot detection
+    def get_browser(self, *args, **kwargs):
+        return self
+
+    def clone_browser(self, *args, **kwargs):
+        return self.get_browser()
+
+    def open_novisit(self, *args, **kwargs):
+        target_url = args[0]
+        p, ext = splitext(urlparse(target_url).path)
+        if not ext:
+            # not an asset, e.g. .png .jpg
+            time.sleep(random.choice([r for r in range(1, 3)]))
+
+        return self._br.open_novisit(*args, **kwargs)
+
+    open = open_novisit
 
     def preprocess_raw_html(self, raw, _):
         root = parse(raw)
