@@ -308,6 +308,7 @@ class BasicCookielessNewsrackRecipe(BasicNewsrackRecipe):
             br.addheaders = [("referer", "https://www.google.com/")]
         else:
             br = browser()
+        br.set_handle_gzip(True)
         return br.open_novisit(*args, **kwargs)
 
     open = open_novisit
