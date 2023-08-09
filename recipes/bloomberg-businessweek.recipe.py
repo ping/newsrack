@@ -9,10 +9,9 @@
 import json
 import random
 import re
-import time
 from urllib.parse import urljoin, urlparse
 
-from calibre import browser, iswindows
+from calibre import browser, iswindows, random_user_agent
 from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.utils.date import parse_date
 from calibre.web.feeds.news import BasicNewsRecipe
@@ -38,6 +37,7 @@ class BloombergBusinessweek(BasicNewsRecipe):
     compress_news_images = True
     timeout = 20
     date_format = "%I:%M%p, %-d %b, %Y" if iswindows else "%-I:%M%p, %-d %b, %Y"
+    requires_version = (6, 24, 0)  # cos we're using get_url_specific_delay()
 
     # NOTES: Bot detection kicks in really easily so either:
     # - limit the number of feeds
@@ -94,10 +94,13 @@ class BloombergBusinessweek(BasicNewsRecipe):
     def clone_browser(self, *args, **kwargs):
         return self.get_browser()
 
+    def get_url_specific_delay(self, url):
+        if urlparse(url).hostname != "assets.bwbx.io":
+            return random.choice([r * 0.5 for r in range(1, 5)])
+        return 0
+
     def open_novisit(self, *args, **kwargs):
         target_url = args[0]
-        if urlparse(target_url).hostname != "assets.bwbx.io":
-            time.sleep(random.choice([r * 0.5 for r in range(1, 5)]))
         if self.bot_blocked:
             self.log.warn(f"Block detected. Skipping {target_url}")
             # Abort article without making actual request
@@ -111,6 +114,7 @@ class BloombergBusinessweek(BasicNewsRecipe):
             ),
             ("accept-language", "en,en-US;q=0.5"),
             ("connection", "keep-alive"),
+            ("user-agent", random_user_agent(0, allow_ie=False)),
         ]
         br.set_handle_redirect(False)
         try:

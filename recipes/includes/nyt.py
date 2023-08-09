@@ -60,6 +60,8 @@ class NYTRecipe(BasicNewsrackRecipe):
             return self.open_from_wayback(target_url)
 
         if urlparse(target_url).hostname not in ("static01.nyt.com", "mwcm.nyt.com"):
+            # we could have used the new get_url_specific_delay() but
+            # wayback requests don't need to be delayed
             sleep_interval = random.choice(self.delay_range)
             self.log.debug(f"Sleeping {sleep_interval}s before fetching {target_url}")
             time.sleep(sleep_interval)
