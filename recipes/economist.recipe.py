@@ -242,7 +242,7 @@ class Economist(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     keep_only_tags = [dict(name="article", id=lambda x: not x)]
     remove_attributes = ["data-reactid", "width", "height"]
     # economist.com has started throttling with HTTP 429
-    delay = 1
+    delay = 2
     simultaneous_downloads = 1
 
     def __init__(self, *args, **kwargs):
@@ -260,7 +260,7 @@ class Economist(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
         p, ext = splitext(urlparse(url).path)
         if ext and ext not in (".html", ".htm"):
             return 0
-        return random.choice([r for r in range(1, 3)])
+        return random.choice([r for r in range(1, 5)])
 
     def open_novisit(self, *args, **kwargs):
         # make requests cookie-less because blocking partly
