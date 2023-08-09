@@ -62,7 +62,7 @@ class HarpersMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     h1.article-title { font-size: 1.8rem; margin-bottom: 0.4rem; }
     .subheading, .post-subtitle { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; }
     .byline { margin-bottom: 1rem; color: #444; }
-    .article-hero-img img, .flex-section-image img, .wp-caption img {
+    .article-hero-img img, .flex-section-image img, .wp-caption img, .article-hero img {
         display: block; margin-bottom: 0.3rem; max-width: 100%; height: auto;
         box-sizing: border-box;
     }
