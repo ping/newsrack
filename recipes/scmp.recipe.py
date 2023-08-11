@@ -57,6 +57,28 @@ class SCMP(BasicNewsrackRecipe, BasicNewsRecipe):
                 "read-more--hide",
             ]
         ),
+        dict(
+            attrs={
+                "data-qa": [
+                    "GenericArticle-WidgetsTop",
+                    "GenericArticle-Sponsor",
+                    "GenericArticle-Follow",
+                    "ArticleAuthorBlock-AvatarContainer",
+                    "FollowTooltip-ChildrenContainer",
+                    "ArticleTrustLabel-Container",
+                    "InlineAdSlot-Container",
+                    "AdSlot-Container",
+                    "GenericArticle-Comment",
+                    "GenericArticle-MoreOnThis",
+                    "GenericArticle-Topic",
+                    "GenericArticle-Left",
+                    "ArticleHeaderAdSlot-CSSTransition",
+                    "GenericArticle-MobileContentHeaderAdSlot",
+                    "Component-SCMPYoutubeVideoContainer",
+                    "DigitalArchiveLink-RootContainer",
+                ]
+            }
+        ),
         dict(attrs={"addthis_title": True}),
         dict(name=["script", "style", "svg"]),
     ]
@@ -79,17 +101,17 @@ class SCMP(BasicNewsrackRecipe, BasicNewsRecipe):
 
     # https://www.scmp.com/rss
     feeds = [
-        ("Hong Kong", "https://www.scmp.com/rss/2/feed"),
-        ("China", "https://www.scmp.com/rss/4/feed"),
+        # ("Hong Kong", "https://www.scmp.com/rss/2/feed"),
+        # ("China", "https://www.scmp.com/rss/4/feed"),
         ("Asia", "https://www.scmp.com/rss/3/feed"),
-        ("World", "https://www.scmp.com/rss/5/feed"),
-        ("Business", "https://www.scmp.com/rss/92/feed"),
-        ("Tech", "https://www.scmp.com/rss/36/feed"),
-        ("Life", "https://www.scmp.com/rss/94/feed"),
-        ("Culture", "https://www.scmp.com/rss/322296/feed"),
+        # ("World", "https://www.scmp.com/rss/5/feed"),
+        # ("Business", "https://www.scmp.com/rss/92/feed"),
+        # ("Tech", "https://www.scmp.com/rss/36/feed"),
+        # ("Life", "https://www.scmp.com/rss/94/feed"),
+        # ("Culture", "https://www.scmp.com/rss/322296/feed"),
         # ("Sport", "https://www.scmp.com/rss/95/feed"),
         # ("Post Mag", "https://www.scmp.com/rss/71/feed"),
-        ("Style", "https://www.scmp.com/rss/72/feed"),
+        # ("Style", "https://www.scmp.com/rss/72/feed"),
     ]
 
     def _extract_child_nodes(self, children, ele, soup, level=1):
