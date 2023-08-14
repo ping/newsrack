@@ -28,32 +28,15 @@ class KoreaHerald(BasicNewsrackRecipe, BasicNewsRecipe):
     oldest_article = 1
     max_articles_per_feed = 25
 
+    keep_only_tags = [dict(class_="news_content")]
     remove_attributes = ["style", "align"]
-    remove_tags_before = [dict(class_="main")]
-    remove_tags_after = [dict(class_="main")]
     remove_tags = [
         dict(name=["script", "style"]),
-        dict(id=["thumimage"]),
-        dict(
-            class_=[
-                "view_tit_icon",
-                "main_r_tit",
-                "view_main_c_li",
-                "spot_li",
-                "khadv_bg",
-                "main_r",
-            ]
-        ),
+        dict(class_=["news_btn_wrap", "news_journalist_area"]),
     ]
 
     extra_css = """
-    h1.view_tit { font-size: 1.8rem; margin-bottom: 0.5rem; }
-    h2.view_tit_sub { font-size: 1.4rem; font-weight: normal; margin-top: 0; margin-bottom: 0.5rem; }
-    .view_tit_byline { margin-top: 1rem; margin-bottom: 1rem; }
-    .view_tit_byline_l, .view_tit_byline_l a { font-weight: bold; color: #444; }
-    .view_tit_byline_r span { margin-right: 0.6rem; }
-    td img { max-width: 100%; height: auto; }
-    .view_con_caption { font-size: 0.8rem; margin-top: 0.2rem; }
+    .img_caption { font-size: 0.8rem; margin-top: 0.2rem; display: block; }
     """
 
     feeds = [
@@ -87,3 +70,8 @@ class KoreaHerald(BasicNewsrackRecipe, BasicNewsRecipe):
             for e in date_elements:
                 byline_date.append(e)
         return soup
+
+    def print_version(self, url):
+        # Patch messed up url from rss
+        # Example: https://www.koreaherald.com/view.php?ud=/view.php?ud=20230814000600
+        return url.replace("?ud=/view.php", "")
