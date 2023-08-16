@@ -148,6 +148,17 @@ recipes: List[Recipe] = [
         timeout=360,
     ),
     Recipe(
+        recipe="eighteen-fortythree",
+        slug="1843",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Online Magazines",
+        enable_on=onlyon_weekdays([1, 3, 5]) and onlyat_hours(list(range(12, 19))),
+        cover_options=CoverOptions(
+            logo_path_or_url="https://www.economist.com/cdn-cgi/image/width=480,quality=80,format=auto/sites/default/files/images/2021/04/articles/main/1843-master-logo-2019-black.png"
+        ),
+    ),
+    Recipe(
         recipe="fivebooks",
         slug="fivebooks",
         src_ext="mobi",
