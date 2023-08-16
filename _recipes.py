@@ -446,6 +446,17 @@ recipes: List[Recipe] = [
         tags=["editorial", "commentary"],
     ),
     Recipe(
+        recipe="nine-dashline",
+        slug="9dashline",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Online Magazines",
+        tags=["asia"],
+        cover_options=CoverOptions(
+            logo_path_or_url="https://images.squarespace-cdn.com/content/v1/5d57de05f940b100012af924/1668015012563-F5HGIPIR9FWXODQXN69S/9DASHLINE_Email+Signature.png"
+        ),
+    ),
+    Recipe(
         recipe="noema-magazine",
         slug="noema-magazine",
         src_ext="mobi",
