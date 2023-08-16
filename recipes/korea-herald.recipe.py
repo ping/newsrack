@@ -36,6 +36,9 @@ class KoreaHerald(BasicNewsrackRecipe, BasicNewsRecipe):
     ]
 
     extra_css = """
+    h1.news_title { font-size: 1.8rem; margin-bottom: 0.4rem; }
+    h2.news_title { font-size: 1.2rem; font-style: italic; font-weight: normal; margin-bottom: 0.8rem; }
+    p.news_date { margin-top: 0.2rem; }
     .img_caption { font-size: 0.8rem; margin-top: 0.2rem; display: block; }
     """
 
