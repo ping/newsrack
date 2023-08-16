@@ -7,7 +7,6 @@
 fivebooks.com
 """
 import os
-import re
 import sys
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urljoin
@@ -16,7 +15,6 @@ from urllib.parse import urljoin
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, format_title
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "9DASHLINE"
