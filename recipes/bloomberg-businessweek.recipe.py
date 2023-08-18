@@ -43,8 +43,9 @@ class BloombergBusinessweek(BasicNewsRecipe):
     # - limit the number of feeds
     # - or max_articles_per_feed
     # - or increase delay
-    # delay = 0.1
-    simultaneous_downloads = 2
+    delay = 5
+    simultaneous_downloads = 1
+    delay_range = range(5, 10)
     oldest_article = 7
     max_articles_per_feed = 25
 
@@ -65,6 +66,7 @@ class BloombergBusinessweek(BasicNewsRecipe):
                 "video-player__overlay",
                 "css--social-wrapper-outer",
                 "css--recirc-wrapper",
+                "__sticky__audio__bar__portal__",
             ]
         ),
         dict(name=["aside"], class_=["postr-recirc"]),
@@ -96,7 +98,7 @@ class BloombergBusinessweek(BasicNewsRecipe):
 
     def get_url_specific_delay(self, url):
         if urlparse(url).hostname != "assets.bwbx.io":
-            return random.choice([r * 0.5 for r in range(1, 5)])
+            return random.choice(self.delay_range)
         return 0
 
     def open_novisit(self, *args, **kwargs):

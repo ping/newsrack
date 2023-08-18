@@ -44,8 +44,9 @@ class BloombergNews(BasicNewsRecipe):
     # - limit the number of feeds
     # - or max_articles_per_feed
     # - or increase delay
-    # delay = 0.1
-    simultaneous_downloads = 2
+    delay = 5
+    simultaneous_downloads = 1
+    delay_range = range(5, 10)
     oldest_article = 1
     max_articles_per_feed = 25
 
@@ -105,7 +106,7 @@ class BloombergNews(BasicNewsRecipe):
 
     def get_url_specific_delay(self, url):
         if urlparse(url).hostname != "assets.bwbx.io":
-            return random.choice([r * 0.5 for r in range(1, 5)])
+            return random.choice(self.delay_range)
         return 0
 
     def open_novisit(self, *args, **kwargs):
