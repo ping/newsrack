@@ -28,9 +28,7 @@ class BloombergNews(BasicNewsRecipe):
         "to the world, featuring stories from Bloomberg News. https://www.bloomberg.com"
     )
     language = "en"
-    masthead_url = (
-        "https://upload.wikimedia.org/wikipedia/commons/5/5d/New_Bloomberg_Logo.svg"
-    )
+    masthead_url = "https://assets.bbhub.io/company/sites/70/2022/09/logoBBGblck.svg"
     ignore_duplicate_articles = {"url"}
     auto_cleanup = False
     remove_javascript = True
