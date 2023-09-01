@@ -37,7 +37,7 @@ class Aeon(BasicNewsrackRecipe, BasicNewsRecipe):
             "article__CurioPlayer-sc- article__EditorCredit-sc- article__Sidebar-sc-"
         )
     ]
-    remove_attributes = ["align", "style"]
+    remove_attributes = ["align", "style", "width", "height"]
 
     extra_css = """
     h2 { font-size: 1.8rem; margin-bottom: 0.4rem; }
@@ -48,9 +48,14 @@ class Aeon(BasicNewsrackRecipe, BasicNewsRecipe):
     """
     feeds = [(_name, "https://aeon.co/feed.rss")]
 
+    def _find_article(self, data):
+        if isinstance(data, dict):
+            return data.get("@type", "") == "Article"
+        return False
+
     def preprocess_raw_html_(self, raw_html, url):
         soup = BeautifulSoup(raw_html)
-        article = self.get_ld_json(soup, lambda d: d.get("@type", "") == "Article")
+        article = self.get_ld_json(soup, filter_fn=self._find_article)
         if not (article and article.get("articleBody")):
             err_msg = f"Unable to find article: {url}"
             self.log.warning(err_msg)
