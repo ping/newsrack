@@ -752,17 +752,17 @@ recipes: List[Recipe] = [
     #     enable_on=(first_n_days_of_month(7) or last_n_days_of_month(7))
     #     and onlyat_hours(list(range(4, 12))),
     # ),
-    Recipe(
-        recipe="wsj-paper",
-        slug="wsj-print",
-        src_ext="mobi",
-        target_ext=["epub"],
-        category="News",
-        tags=["business"],
-        timeout=300,
-        enable_on=onlyat_hours(list(range(0, 8)), -4),
-        cover_options=CoverOptions(
-            logo_path_or_url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/WSJ_Logo.svg/1024px-WSJ_Logo.svg.png"
-        ),
-    ),
+    # Recipe(
+    #     recipe="wsj-paper",
+    #     slug="wsj-print",
+    #     src_ext="mobi",
+    #     target_ext=["epub"],
+    #     category="News",
+    #     tags=["business"],
+    #     timeout=300,
+    #     enable_on=onlyat_hours(list(range(0, 8)), -4),
+    #     cover_options=CoverOptions(
+    #         logo_path_or_url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/WSJ_Logo.svg/1024px-WSJ_Logo.svg.png"
+    #     ),
+    # ),
 ]
