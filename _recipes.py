@@ -239,17 +239,6 @@ recipes: List[Recipe] = [
         ),
     ),
     Recipe(
-        recipe="ft-paper",
-        slug="ft-print",
-        src_ext="mobi",
-        target_ext=["epub"],
-        category="News",
-        tags=["business"],
-        cover_options=CoverOptions(
-            logo_path_or_url="https://www.ft.com/partnercontent/content-hub/static/media/ft-horiz-new-black.215c1169.png"
-        ),
-    ),
-    Recipe(
         recipe="fulcrum-sg",
         slug="fulcrum-sg",
         src_ext="mobi",

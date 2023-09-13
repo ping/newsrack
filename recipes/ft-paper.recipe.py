@@ -1,6 +1,10 @@
 """
 ft.com
 """
+# ------------------------------
+# 2023-09-05 No longer working
+# ------------------------------
+
 # Original from https://github.com/kovidgoyal/calibre/blob/902e80ec173bc40037efb164031043994044ec6c/recipes/financial_times_print_edition.recipe
 
 import os
