@@ -373,7 +373,7 @@ footer {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 [data-theme="dark"] {
