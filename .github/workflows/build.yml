@@ -43,7 +43,7 @@ jobs:
     # Customise: Total job run time limit
     timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
           fetch-depth: 1
@@ -95,7 +95,7 @@ jobs:
 
       - name: Setup Pages
         id: setup_pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v3
 
       - name: Generate periodicals
         env:
@@ -113,7 +113,7 @@ jobs:
 
       # Ref: https://github.com/actions/starter-workflows/blob/main/pages/static.yml
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ./public
 
