@@ -135,7 +135,7 @@ class ScientificAmerican(BasicNewsrackRecipe, BasicNewsRecipe):
             self.abort_recipe_processing("Unable to find issue info")
 
         image_id, _ = splitext(issue_info["image"])
-        self.cover_url = f"https://static.scientificamerican.com/sciam/cache/file/{image_id}_source.jpg?w=960"
+        self.cover_url = f"https://static.scientificamerican.com/sciam/cache/file/{image_id}_source.png?w=960"
 
         # "%Y-%m-%d"
         issue_date = self.parse_date(issue_info["issue_date"])
