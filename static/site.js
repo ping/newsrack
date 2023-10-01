@@ -154,10 +154,18 @@ https://opensource.org/licenses/GPL-3.0
 
         pubDateEle.addEventListener("pointerenter", function (event) {
             toggleDateDisplay(event.target, false);
+            const tags = event.target.parentElement.querySelector(".tags");
+            if (tags) {
+                tags.classList.add("hide");
+            }
         }, false);
 
         pubDateEle.addEventListener("pointerleave", function (event) {
             toggleDateDisplay(event.target, true);
+            const tags = event.target.parentElement.querySelector(".tags");
+            if (tags) {
+                tags.classList.remove("hide");
+            }
         }, false);
     }
 
@@ -178,11 +186,7 @@ https://opensource.org/licenses/GPL-3.0
             }
         }
         const contents = this.parentElement.parentElement.querySelector(".contents");
-        const tags = this.parentElement.querySelector(".tags");
         this.classList.toggle("is-open");
-        if (tags) {
-            tags.classList.toggle("hide");
-        }
         contents.classList.toggle("hide");   // content
         const publication_id = this.parentElement.dataset["pubId"];
         if (contents.childElementCount <= 0 && RECIPE_DESCRIPTIONS[publication_id] !== undefined) {
@@ -280,12 +284,8 @@ https://opensource.org/licenses/GPL-3.0
                     const periodical = periodicalsEles[i];
                     periodical.classList.remove("hide");
                     const pubDate = periodical.querySelector(".pub-date");
-                    const tags = periodical.querySelector(".tags");
                     if (pubDate) {
                         pubDate.classList.remove("is-open");
-                    }
-                    if (tags) {
-                        tags.classList.remove("hide");
                     }
                     const contents = periodical.querySelector(".contents");
                     if (contents) {
@@ -405,13 +405,9 @@ https://opensource.org/licenses/GPL-3.0
                             }
                         }
                         const pubDateEle = periodical.querySelector(".pub-date");
-                        const tags = periodical.querySelector(".tags");
 
                         if (resultsSumm[id]["articles"]) {
                             pubDateEle.classList.add("is-open");
-                            if (tags) {
-                                tags.classList.add("hide");
-                            }
                             if (contentsEle) {
                                 contentsEle.classList.remove("hide");
                                 const positions = resultsSumm[id]["articles"];
@@ -421,9 +417,6 @@ https://opensource.org/licenses/GPL-3.0
                         if (resultsSumm[id]["title"]) {
                             if (!resultsSumm[id]["articles"]) {
                                 pubDateEle.classList.remove("is-open");
-                                if (tags) {
-                                    tags.classList.remove("hide");
-                                }
                                 if (contentsEle) {
                                     contentsEle.classList.add("hide");
                                 }
