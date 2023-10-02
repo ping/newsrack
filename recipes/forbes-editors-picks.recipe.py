@@ -118,7 +118,7 @@ class ForbesEditorsPicks(BasicNewsrackRecipe, BasicNewsRecipe):
                 f"https://www.forbes.com/simple-data/chansec/stream/?{urlencode(query)}"
             )
 
-            res = br.open_novisit(endpoint)
+            res = br.open_novisit(endpoint, timeout=self.timeout)
             res_obj = json.loads(res.read().decode("utf-8"))
             items = res_obj.get("blocks", {}).get("items", [])
             if not items:

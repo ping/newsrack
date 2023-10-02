@@ -102,7 +102,9 @@ class TimeMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
         # https://time.com/api/magazine/region/europe/
         # https://time.com/api/magazine/region/asia/
         # https://time.com/api/magazine/region/south-pacific/
-        res = br.open_novisit("https://time.com/api/magazine/region/us/")
+        res = br.open_novisit(
+            "https://time.com/api/magazine/region/us/", timeout=self.timeout
+        )
         issue_json_raw = res.read().decode("utf-8")
         issue = json.loads(issue_json_raw)[0]
         self.cover_url = issue.get("hero", {}).get("src", {}).get("large_2x")

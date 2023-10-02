@@ -451,7 +451,7 @@ class BloombergNews(BasicNewsRecipe):
         br = self.get_browser()
         feed_items = {}
         for feed_name, feed_url in self.feeds:
-            res = br.open_novisit(feed_url)
+            res = br.open_novisit(feed_url, timeout=self.timeout)
             soup = BeautifulSoup(res.read().decode("utf-8"), "xml")
             articles = []
             cutoff_date = datetime.utcnow().replace(tzinfo=timezone.utc) - timedelta(

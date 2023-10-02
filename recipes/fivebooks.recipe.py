@@ -117,7 +117,9 @@ class FiveBooks(BasicNewsrackRecipe, BasicNewsRecipe):
         articles = {}
         for feed_name, feed_url in self.feeds:
             articles[feed_name] = []
-            raw_html = br.open_novisit(feed_url).read().decode("utf-8")
+            raw_html = (
+                br.open_novisit(feed_url, timeout=self.timeout).read().decode("utf-8")
+            )
             soup = BeautifulSoup(raw_html)
             interviews = soup.find_all(class_="library-page")
             if self.max_articles_per_feed < len(interviews):

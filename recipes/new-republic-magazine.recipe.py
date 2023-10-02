@@ -271,7 +271,10 @@ fragment ArticlePageFields on Article {
         if _issue_url:
             month = urlparse(_issue_url).path.split("/")[-1]
             params = f'?{urlencode({"magazineTag": month})}'
-        res = br.open_novisit(f"https://newrepublic.com/api/content/magazine{params}")
+        res = br.open_novisit(
+            f"https://newrepublic.com/api/content/magazine{params}",
+            timeout=self.timeout,
+        )
         magazine = json.loads(res.read().decode("utf-8"))["data"]
         try:
             self.pub_date = datetime.fromisoformat(magazine["metaData"]["publishedAt"])
