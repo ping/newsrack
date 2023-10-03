@@ -90,10 +90,6 @@ h1 {
   padding: 0.25em 0.4em;
   width: 100%;
   box-sizing: border-box;
-
-  &::placeholder {
-    color: grayscale(lighten($base-color, 7%));
-  }
 }
 
 #search-button {
@@ -411,11 +407,6 @@ footer {
 
     &:disabled {
       background-color: $dark-book-bg-color;
-    }
-  }
-  #search-text {
-    &::placeholder {
-      color: grayscale(darken($dark-base-color, 7%));
     }
   }
   #search-button {
