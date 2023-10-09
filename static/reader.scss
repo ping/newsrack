@@ -12,6 +12,9 @@ body {
   color: $base-color;
 }
 
+main.container-fluid {
+  inset: 0;
+}
 a {
   text-decoration: none;
   color: $link-color;
@@ -54,7 +57,8 @@ a.home svg {
 }
 
 #epub-viewer {
-  height: calc(100% - 10vh);
+  // 5vh is the toc height
+  height: calc(100% - 5vh - 2rem);
 }
 
 .pagination-container, #prev, #next {
@@ -96,9 +100,6 @@ a.home svg {
   }
   #centre-container {
     width: calc(100% - 5rem);
-  }
-  #epub-viewer {
-    height: calc(100% - 15vh);
   }
   .pagination-container, #prev, #next {
     min-width: 1.7rem;
