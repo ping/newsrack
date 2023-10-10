@@ -39,14 +39,17 @@ class PoliticoMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
                 "social-tools",
                 "below-article-section",
                 "pop-up-bar",
+                "inline-super-footer",
             ]
-        )
+        ),
+        dict(id=["weekend-promo"]),
+        dict(name=["source"]),
     ]
 
     extra_css = """
     .media-item__summary h2.headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
     .media-item__summary p.dek { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; margin-top: 0; }
-    .fig-graphic img { max-width: 100%; height: auto; }
+    .fig-graphic img, .story-photo__image img { max-width: 100%; height: auto; }
     .story-meta__credit, .story-photo__caption { font-size: 0.8rem; margin-top: 0.2rem; }
     """
 
