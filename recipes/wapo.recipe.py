@@ -7,13 +7,12 @@ import json
 import os
 import sys
 from datetime import datetime, timezone
-from urllib.parse import urljoin, urlencode
+from urllib.parse import urljoin, urlencode, urlparse
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, format_title, get_datetime_format
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Washington Post"
@@ -82,7 +81,7 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
                 continue
             if node_type == "text":
                 para_ele = soup.new_tag("p")
-                para_ele.append(BeautifulSoup(c["content"]))
+                para_ele.append(self.soup(c["content"]))
                 parent_element.append(para_ele)
             elif node_type == "image":
                 figure_ele = soup.new_tag("figure", attrs={"class": "figure"})
@@ -108,17 +107,17 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
                 parent_element.append(container_ele)
             elif node_type == "header":
                 header_ele = soup.new_tag(f'h{c["level"]}')
-                header_ele.append(BeautifulSoup(c["content"]))
+                header_ele.append(self.soup(c["content"]))
                 parent_element.append(header_ele)
             elif node_type == "correction":
                 para_ele = soup.new_tag("p", attrs={"class": "correction"})
-                para_ele.append(BeautifulSoup(c.get("content") or c.get("text")))
+                para_ele.append(self.soup(c.get("content") or c.get("text")))
                 parent_element.append(para_ele)
             elif node_type == "oembed_response":
-                embed_ele = BeautifulSoup(c["raw_oembed"]["html"])
+                embed_ele = self.soup(c["raw_oembed"]["html"])
                 parent_element.append(embed_ele)
             elif node_type == "raw_html":
-                content = BeautifulSoup(c["content"])
+                content = self.soup(c["content"])
                 container = content.find("div", attrs={"data-fallback-image-url": True})
                 if container:
                     figure_ele = soup.new_tag("figure")
@@ -147,7 +146,7 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
                 ol_ele = soup.new_tag("ol")
                 for i in c.get("items", []):
                     li_ele = soup.new_tag("li")
-                    li_ele.append(BeautifulSoup(i["content"]))
+                    li_ele.append(self.soup(i["content"]))
                     ol_ele.append(li_ele)
                 container_ele.append(ol_ele)
                 parent_element.append(container_ele)
@@ -160,14 +159,12 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
                 container_ele.append(soup.new_tag("hr", attrs={"class": "story"}))
 
                 header_ele = soup.new_tag("h3")
-                header_ele.append(
-                    BeautifulSoup(c.get("headlines", {}).get("basic", ""))
-                )
+                header_ele.append(self.soup(c.get("headlines", {}).get("basic", "")))
                 container_ele.append(header_ele)
 
                 # Example 2022-04-13T14:04:03.051Z "%Y-%m-%dT%H:%M:%S.%fZ"
                 post_date = self.parse_date(c["display_date"])
-                meta_ele = BeautifulSoup(
+                meta_ele = self.soup(
                     f"""<div class="article-meta">
                         <span class="author"></span>
                         <span class="published-dt">{post_date:{get_datetime_format()}}</span>
@@ -191,7 +188,13 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
                 self.log.debug(json.dumps(c))
 
     def preprocess_raw_html(self, raw_html, url):
-        soup = BeautifulSoup(raw_html)
+        parsed_url = urlparse(url)
+        if parsed_url.path in ("", "/"):
+            err_msg = f"Invalid article url: {url}"
+            self.log.warning(err_msg)
+            self.abort_article(err_msg)
+
+        soup = self.soup(raw_html)
         data = self.get_script_json(soup, "", {"id": "__NEXT_DATA__", "src": False})
         content = data.get("props", {}).get("pageProps", {}).get("globalContent", {})
         if not content:
@@ -201,6 +204,14 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
                 err_msg = f"Exclude interactive article: {url}"
             else:
                 err_msg = f"Unable to get content from script: {url}"
+            self.log.warning(err_msg)
+            self.abort_article(err_msg)
+
+        if (
+            content.get("type", "") == "story"
+            and content.get("subtype", "") == "live-all"
+        ):
+            err_msg = f"Exclude live posts: {url}"
             self.log.warning(err_msg)
             self.abort_article(err_msg)
 
@@ -229,7 +240,7 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
                 </div>
             </article>
         </body></html>"""
-        new_soup = BeautifulSoup(html)
+        new_soup = self.soup(html)
         title_ele = new_soup.new_tag("title")
         title_ele.string = title
         new_soup.head.append(title_ele)
