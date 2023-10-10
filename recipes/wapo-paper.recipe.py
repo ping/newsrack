@@ -73,7 +73,7 @@ class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
                 continue
             if node_type == "text":
                 para_ele = soup.new_tag("p")
-                para_ele.append(BeautifulSoup(c["content"], features="html.parser"))
+                para_ele.append(BeautifulSoup(c["content"]))
                 parent_element.append(para_ele)
             elif node_type == "image":
                 figure_ele = soup.new_tag("figure", attrs={"class": "figure"})
@@ -99,7 +99,7 @@ class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
                 parent_element.append(container_ele)
             elif node_type == "header":
                 header_ele = soup.new_tag(f'h{c["level"]}')
-                header_ele.append(BeautifulSoup(c["content"], features="html.parser"))
+                header_ele.append(BeautifulSoup(c["content"]))
                 parent_element.append(header_ele)
             elif node_type == "correction":
                 para_ele = soup.new_tag("p", attrs={"class": "correction"})
@@ -133,14 +133,12 @@ class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
                 ) or c.get("header")
                 if header_string:
                     header_ele = soup.new_tag("h3")
-                    header_ele.append(
-                        BeautifulSoup(header_string, features="html.parser")
-                    )
+                    header_ele.append(BeautifulSoup(header_string))
                     container_ele.append(header_ele)
                 ol_ele = soup.new_tag("ol")
                 for i in c.get("items", []):
                     li_ele = soup.new_tag("li")
-                    li_ele.append(BeautifulSoup(i["content"], features="html.parser"))
+                    li_ele.append(BeautifulSoup(i["content"]))
                     ol_ele.append(li_ele)
                 container_ele.append(ol_ele)
                 parent_element.append(container_ele)
@@ -154,9 +152,7 @@ class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
 
                 header_ele = soup.new_tag("h3")
                 header_ele.append(
-                    BeautifulSoup(
-                        c.get("headlines", {}).get("basic", ""), features="html.parser"
-                    )
+                    BeautifulSoup(c.get("headlines", {}).get("basic", ""))
                 )
                 container_ele.append(header_ele)
 
@@ -166,8 +162,7 @@ class TheWashingtonPostPrint(BasicNewsrackRecipe, BasicNewsRecipe):
                     f"""<div class="article-meta">
                         <span class="author"></span>
                         <span class="published-dt">{post_date:{get_datetime_format()}}</span>
-                    </div>""",
-                    features="html.parser",
+                    </div>"""
                 )
                 authors = [a["name"] for a in c.get("credits", {}).get("by", [])]
                 meta_ele.find("span", class_="author").append(", ".join(authors))

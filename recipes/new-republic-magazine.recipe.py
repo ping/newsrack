@@ -233,7 +233,7 @@ fragment ArticlePageFields on Article {
                 <img src="{lede_img_url}">{lede_image_caption}
                 </p>"""
 
-        body_soup = BeautifulSoup(article["body"], features="html.parser")
+        body_soup = BeautifulSoup(article["body"])
         for img in body_soup.find_all("img", attrs={"data-serialized": True}):
             try:
                 img_info = json.loads(img["data-serialized"])

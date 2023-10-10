@@ -199,7 +199,7 @@ class BloombergNews(BasicNewsRecipe):
         if content_type == "aside":
             return soup.new_tag("blockquote")
         if content_type == "embed" and content.get("iframeData", {}).get("html"):
-            return BeautifulSoup(content["iframeData"]["html"], features="html.parser")
+            return BeautifulSoup(content["iframeData"]["html"])
         if content_type == "link" and content.get("data", {}).get(
             "destination", {}
         ).get("web"):
@@ -367,10 +367,7 @@ class BloombergNews(BasicNewsRecipe):
         soup.head.title.append(article.get("headlineText") or article["headline"])
         h1_title = soup.find("h1")
         h1_title.append(
-            BeautifulSoup(
-                article.get("headlineText") or article["headline"],
-                features="html.parser",
-            )
+            BeautifulSoup(article.get("headlineText") or article["headline"])
         )
         if article.get("summaryText") or article.get("abstract"):
             sub_headline = soup.new_tag("div", attrs={"class": "sub-headline"})
@@ -386,10 +383,7 @@ class BloombergNews(BasicNewsRecipe):
         if article.get("byline"):
             soup.find(class_="article-meta").insert(
                 0,
-                BeautifulSoup(
-                    f'<span class="author">{article["byline"]}</span>',
-                    features="html.parser",
-                ),
+                BeautifulSoup(f'<span class="author">{article["byline"]}</span>'),
             )
         else:
             try:
@@ -398,8 +392,7 @@ class BloombergNews(BasicNewsRecipe):
                     soup.find(class_="article-meta").insert(
                         0,
                         BeautifulSoup(
-                            f'<span class="author">{", ".join(post_authors)}</span>',
-                            features="html.parser",
+                            f'<span class="author">{", ".join(post_authors)}</span>'
                         ),
                     )
             except (KeyError, TypeError):
@@ -410,8 +403,7 @@ class BloombergNews(BasicNewsRecipe):
             soup.body.article.insert(
                 0,
                 BeautifulSoup(
-                    f'<span class="article-section">{" / ".join(categories)}</span>',
-                    features="html.parser",
+                    f'<span class="article-section">{" / ".join(categories)}</span>'
                 ),
             )
         # inject lede image
@@ -425,14 +417,12 @@ class BloombergNews(BasicNewsRecipe):
                 caption_ele = soup.new_tag(
                     "div", attrs={"class": "news-figure-caption-text"}
                 )
-                caption_ele.append(
-                    BeautifulSoup(lede_img_caption_html), features="html.parser"
-                )
+                caption_ele.append(BeautifulSoup(lede_img_caption_html))
                 img_container.append(caption_ele)
             soup.body.article.append(img_container)
 
         if type(article["body"]) == str:
-            body_soup = BeautifulSoup(article["body"], features="html.parser")
+            body_soup = BeautifulSoup(article["body"])
             for img_div in body_soup.find_all(
                 name="figure", attrs={"data-type": "image"}
             ):
@@ -442,7 +432,7 @@ class BloombergNews(BasicNewsRecipe):
                 img["src"] = img["src"]
             soup.body.article.append(body_soup)
         else:
-            body_soup = BeautifulSoup(features="html.parser")
+            body_soup = BeautifulSoup()
             self.nested_render(article["body"], body_soup, body_soup)
             soup.body.article.append(body_soup)
         return str(soup)

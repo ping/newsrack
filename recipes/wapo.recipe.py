@@ -108,7 +108,7 @@ class TheWashingtonPost(BasicNewsrackRecipe, BasicNewsRecipe):
                 parent_element.append(container_ele)
             elif node_type == "header":
                 header_ele = soup.new_tag(f'h{c["level"]}')
-                header_ele.append(BeautifulSoup(c["content"], features="html.parser"))
+                header_ele.append(BeautifulSoup(c["content"]))
                 parent_element.append(header_ele)
             elif node_type == "correction":
                 para_ele = soup.new_tag("p", attrs={"class": "correction"})

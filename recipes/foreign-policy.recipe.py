@@ -108,11 +108,7 @@ class ForeignPolicy(WordPressNewsrackRecipe, BasicNewsRecipe):
                 lede.append(img)
                 if attachment.get("caption", {}).get("rendered"):
                     caption = soup.new_tag("div", attrs={"class": "wp-caption-text"})
-                    caption.append(
-                        BeautifulSoup(
-                            attachment["caption"]["rendered"], features="html.parser"
-                        )
-                    )
+                    caption.append(BeautifulSoup(attachment["caption"]["rendered"]))
                     lede.append(caption)
                 soup.body.article.append(lede)
 
