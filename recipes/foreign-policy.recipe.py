@@ -10,7 +10,6 @@ import sys
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import WordPressNewsrackRecipe, get_datetime_format
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Foreign Policy"
@@ -76,7 +75,7 @@ class ForeignPolicy(WordPressNewsrackRecipe, BasicNewsRecipe):
         post_authors = self.extract_authors(post)
         categories = self.extract_categories(post)
 
-        soup = BeautifulSoup(
+        soup = self.soup(
             f"""<html>
         <head><title>{post["title"]["rendered"]}</title></head>
         <body>
@@ -93,7 +92,7 @@ class ForeignPolicy(WordPressNewsrackRecipe, BasicNewsRecipe):
         </body></html>"""
         )
 
-        content = BeautifulSoup(post["content"]["rendered"])
+        content = self.soup(post["content"]["rendered"])
         # FP doesn't use featuremedia, the first attachment is the lede image
         attachment_endpoint = (
             post.get("_links", {}).get("wp:attachment", [{}])[0].get("href")
@@ -108,7 +107,7 @@ class ForeignPolicy(WordPressNewsrackRecipe, BasicNewsRecipe):
                 lede.append(img)
                 if attachment.get("caption", {}).get("rendered"):
                     caption = soup.new_tag("div", attrs={"class": "wp-caption-text"})
-                    caption.append(BeautifulSoup(attachment["caption"]["rendered"]))
+                    caption.append(self.soup(attachment["caption"]["rendered"]))
                     lede.append(caption)
                 soup.body.article.append(lede)
 

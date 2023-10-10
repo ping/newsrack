@@ -15,7 +15,6 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from calibre import browser, iswindows, random_user_agent
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.utils.date import parse_date
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -199,7 +198,7 @@ class BloombergNews(BasicNewsRecipe):
         if content_type == "aside":
             return soup.new_tag("blockquote")
         if content_type == "embed" and content.get("iframeData", {}).get("html"):
-            return BeautifulSoup(content["iframeData"]["html"])
+            return self.soup(content["iframeData"]["html"])
         if content_type == "link" and content.get("data", {}).get(
             "destination", {}
         ).get("web"):
@@ -310,7 +309,7 @@ class BloombergNews(BasicNewsRecipe):
     def preprocess_raw_html(self, raw_html, url):
         self.download_count += 1
         article = None
-        soup = BeautifulSoup(raw_html)
+        soup = self.soup(raw_html)
         for script in soup.find_all(
             "script",
             attrs={
@@ -345,7 +344,7 @@ class BloombergNews(BasicNewsRecipe):
             self.abort_article(err_msg)
 
         date_published = parse_date(article["publishedAt"], assume_utc=True)
-        soup = BeautifulSoup(
+        soup = self.soup(
             """<html>
         <head><title></title></head>
         <body>
@@ -366,9 +365,7 @@ class BloombergNews(BasicNewsRecipe):
 
         soup.head.title.append(article.get("headlineText") or article["headline"])
         h1_title = soup.find("h1")
-        h1_title.append(
-            BeautifulSoup(article.get("headlineText") or article["headline"])
-        )
+        h1_title.append(self.soup(article.get("headlineText") or article["headline"]))
         if article.get("summaryText") or article.get("abstract"):
             sub_headline = soup.new_tag("div", attrs={"class": "sub-headline"})
             if article.get("summaryText"):
@@ -383,7 +380,7 @@ class BloombergNews(BasicNewsRecipe):
         if article.get("byline"):
             soup.find(class_="article-meta").insert(
                 0,
-                BeautifulSoup(f'<span class="author">{article["byline"]}</span>'),
+                self.soup(f'<span class="author">{article["byline"]}</span>'),
             )
         else:
             try:
@@ -391,7 +388,7 @@ class BloombergNews(BasicNewsRecipe):
                 if post_authors:
                     soup.find(class_="article-meta").insert(
                         0,
-                        BeautifulSoup(
+                        self.soup(
                             f'<span class="author">{", ".join(post_authors)}</span>'
                         ),
                     )
@@ -402,7 +399,7 @@ class BloombergNews(BasicNewsRecipe):
         if categories:
             soup.body.article.insert(
                 0,
-                BeautifulSoup(
+                self.soup(
                     f'<span class="article-section">{" / ".join(categories)}</span>'
                 ),
             )
@@ -417,12 +414,12 @@ class BloombergNews(BasicNewsRecipe):
                 caption_ele = soup.new_tag(
                     "div", attrs={"class": "news-figure-caption-text"}
                 )
-                caption_ele.append(BeautifulSoup(lede_img_caption_html))
+                caption_ele.append(self.soup(lede_img_caption_html))
                 img_container.append(caption_ele)
             soup.body.article.append(img_container)
 
         if type(article["body"]) == str:
-            body_soup = BeautifulSoup(article["body"])
+            body_soup = self.soup(article["body"])
             for img_div in body_soup.find_all(
                 name="figure", attrs={"data-type": "image"}
             ):
@@ -432,7 +429,7 @@ class BloombergNews(BasicNewsRecipe):
                 img["src"] = img["src"]
             soup.body.article.append(body_soup)
         else:
-            body_soup = BeautifulSoup()
+            body_soup = self.soup()
             self.nested_render(article["body"], body_soup, body_soup)
             soup.body.article.append(body_soup)
         return str(soup)
@@ -442,7 +439,7 @@ class BloombergNews(BasicNewsRecipe):
         feed_items = {}
         for feed_name, feed_url in self.feeds:
             res = br.open_novisit(feed_url, timeout=self.timeout)
-            soup = BeautifulSoup(res.read().decode("utf-8"), "xml")
+            soup = self.soup(res.read().decode("utf-8"), "xml")
             articles = []
             cutoff_date = datetime.utcnow().replace(tzinfo=timezone.utc) - timedelta(
                 days=self.oldest_article

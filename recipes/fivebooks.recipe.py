@@ -15,7 +15,6 @@ from datetime import datetime
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, format_title
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Five Books"
@@ -94,7 +93,7 @@ class FiveBooks(BasicNewsrackRecipe, BasicNewsRecipe):
             article.text_summary = description_tag["data-post-description"]
 
     def preprocess_raw_html(self, raw_html, url):
-        soup = BeautifulSoup(raw_html)
+        soup = self.soup(raw_html)
         content = soup.find(class_="main-content")
         data = self.get_ld_json(soup, lambda d: d.get("@graph", []))
         if not data:
@@ -120,7 +119,7 @@ class FiveBooks(BasicNewsrackRecipe, BasicNewsRecipe):
             raw_html = (
                 br.open_novisit(feed_url, timeout=self.timeout).read().decode("utf-8")
             )
-            soup = BeautifulSoup(raw_html)
+            soup = self.soup(raw_html)
             interviews = soup.find_all(class_="library-page")
             if self.max_articles_per_feed < len(interviews):
                 interviews = interviews[: self.max_articles_per_feed]

@@ -11,8 +11,6 @@ import sys
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, format_title
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
-
 # Original at https://github.com/kovidgoyal/calibre/blob/8bc3d757f4bb78ee002caf2766d7285497349097/recipes/smh.recipe
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -77,7 +75,7 @@ class SydneyMorningHerald(BasicNewsrackRecipe, BasicNewsRecipe):
             self.title = format_title(_name, self.pub_date)
 
     def preprocess_raw_html(self, raw_html, url):
-        soup = BeautifulSoup(raw_html)
+        soup = self.soup(raw_html)
         vid_player = soup.find(
             "div", attrs={"data-testid": "video-player", "class": "noPrint"}
         )

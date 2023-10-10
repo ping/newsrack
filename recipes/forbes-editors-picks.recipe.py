@@ -8,7 +8,6 @@ from urllib.parse import urlencode
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, format_title
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Forbes - Editor's Picks"
@@ -72,7 +71,7 @@ class ForbesEditorsPicks(BasicNewsrackRecipe, BasicNewsRecipe):
     """
 
     def preprocess_raw_html(self, raw_html, url):
-        soup = BeautifulSoup(raw_html)
+        soup = self.soup(raw_html)
         article = soup.find("article")
         meta = self.get_ld_json(soup, lambda d: d.get("@type", "") == "NewsArticle")
         modified_date = meta.get("dateModified") or meta.get("datePublished")

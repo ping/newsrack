@@ -13,7 +13,6 @@ from urllib.parse import urljoin
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 
@@ -79,7 +78,7 @@ class ScientificAmerican(BasicNewsrackRecipe, BasicNewsRecipe):
         return br
 
     def preprocess_raw_html(self, raw_html, url):
-        soup = BeautifulSoup(raw_html)
+        soup = self.soup(raw_html)
         info = self.get_script_json(soup, r"dataLayer\s*=\s*")
         if info:
             for i in info:

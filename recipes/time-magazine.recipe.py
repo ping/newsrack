@@ -12,7 +12,6 @@ from datetime import timedelta, timezone
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, get_date_format
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.ptempfile import PersistentTemporaryDirectory, PersistentTemporaryFile
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -58,7 +57,7 @@ class TimeMagazine(BasicNewsrackRecipe, BasicNewsRecipe):
         if not self.pub_date or date_published_utc > self.pub_date:
             self.pub_date = date_published_utc
 
-        content_soup = BeautifulSoup(article["content"])
+        content_soup = self.soup(article["content"])
         cover_url = self.canonicalize_internal_url(self.cover_url)
         # clean up weirdness
         div_gmail = content_soup.find_all(name="div", attrs={"class": "gmail_default"})

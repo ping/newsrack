@@ -14,7 +14,6 @@ from urllib.parse import urljoin
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicCookielessNewsrackRecipe, format_title
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 _name = "Wired Magazine"
@@ -73,7 +72,7 @@ class WiredMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     ]
 
     def preprocess_raw_html(self, raw_html, url):
-        soup = BeautifulSoup(raw_html)
+        soup = self.soup(raw_html)
         pub_date_meta = soup.find(
             name="meta", attrs={"property": "article:published_time"}
         )

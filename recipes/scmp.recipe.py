@@ -10,7 +10,6 @@ from urllib.parse import urlparse
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, format_title, get_datetime_format
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "South China Morning Post"
@@ -154,10 +153,10 @@ class SCMP(BasicNewsrackRecipe, BasicNewsRecipe):
                         new_ele["class"] = "caption"
                         child_html += str(new_ele)
                     ele["class"] = "article-img"
-        ele.append(BeautifulSoup(child_html))
+        ele.append(self.soup(child_html))
 
     def preprocess_raw_html(self, raw_html, url):
-        soup = BeautifulSoup(raw_html)
+        soup = self.soup(raw_html)
         article = self.get_script_json(soup, r"window.__APOLLO_STATE__\s*=\s*")
         if not article:
             if os.environ.get("recipe_debug_folder", ""):
@@ -226,7 +225,7 @@ class SCMP(BasicNewsrackRecipe, BasicNewsRecipe):
         </body></html>
         """
 
-        new_soup = BeautifulSoup(html_output, "html.parser")
+        new_soup = self.soup(html_output)
         # sub headline
         for c in content.get("subHeadline", {}).get("json", []):
             ele = new_soup.new_tag(c["type"])

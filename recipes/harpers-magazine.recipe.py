@@ -6,7 +6,6 @@ from urllib.parse import urljoin
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicCookielessNewsrackRecipe
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Harper's Magazine"
@@ -78,7 +77,7 @@ class HarpersMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     """
 
     def preprocess_raw_html(self, raw_html, url):
-        soup = BeautifulSoup(raw_html)
+        soup = self.soup(raw_html)
         soup.find("meta", attrs={"property": "article:modified_time"})
         # Example: 2023-05-16T16:43:24+00:00 "%Y-%m-%dT%H:%M:%S%z"
         article_datetime = soup.find(

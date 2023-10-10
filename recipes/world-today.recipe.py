@@ -10,7 +10,6 @@ from urllib.parse import urljoin
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _issue_url = ""
@@ -72,7 +71,7 @@ class WorldToday(BasicNewsrackRecipe, BasicNewsRecipe):
     """
 
     def preprocess_raw_html(self, raw_html, url):
-        soup = BeautifulSoup(raw_html)
+        soup = self.soup(raw_html)
         # find pub date
         mod_date_ele = soup.find("meta", attrs={"property": "article:modified_time"})
         # Example: 2022-09-30T12:40:17+0100 "%Y-%m-%dT%H:%M:%S%z"

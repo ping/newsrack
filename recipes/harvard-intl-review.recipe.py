@@ -19,7 +19,6 @@ from recipes_shared import (
     get_datetime_format,
 )
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds import Feed
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -75,7 +74,7 @@ class HarvardInternationalReview(BasicNewsrackRecipe, BasicNewsRecipe):
             date_published = a.utctime.replace(tzinfo=timezone.utc)
             article_index = f"{date_published:{get_date_format()}}"
             # add author and pub date
-            soup = BeautifulSoup(a.content)
+            soup = self.soup(a.content)
             header = None
             if soup.body.contents[0].name in ["h1", "h2", "h3"]:
                 header = soup.body.contents[0]

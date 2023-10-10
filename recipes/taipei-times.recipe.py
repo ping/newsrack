@@ -10,7 +10,6 @@ from datetime import timezone, timedelta
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, format_title
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Taipei Times"
@@ -48,7 +47,7 @@ class TaipeiTimes(BasicNewsrackRecipe, BasicNewsRecipe):
             self.title = format_title(_name, post_date_local)
 
     def preprocess_raw_html(self, raw_html, _):
-        soup = BeautifulSoup(raw_html)
+        soup = self.soup(raw_html)
 
         # replace byline <ul> with actual byline element
         byline = soup.select_one("ul.as")

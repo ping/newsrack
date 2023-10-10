@@ -8,8 +8,6 @@ from datetime import datetime
 from functools import cmp_to_key
 from urllib.parse import urljoin, urlencode, urlsplit, urlparse
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
-
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, get_date_format
@@ -233,7 +231,7 @@ fragment ArticlePageFields on Article {
                 <img src="{lede_img_url}">{lede_image_caption}
                 </p>"""
 
-        body_soup = BeautifulSoup(article["body"])
+        body_soup = self.soup(article["body"])
         for img in body_soup.find_all("img", attrs={"data-serialized": True}):
             try:
                 img_info = json.loads(img["data-serialized"])

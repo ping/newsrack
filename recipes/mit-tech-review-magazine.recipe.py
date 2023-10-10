@@ -18,7 +18,6 @@ from datetime import timezone
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import WordPressNewsrackRecipe, get_date_format
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 
@@ -108,7 +107,7 @@ class MitTechnologyReviewMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
         post_authors = self.extract_authors(post)
         categories = self.extract_categories(post)
 
-        soup = BeautifulSoup(
+        soup = self.soup(
             f"""<html>
         <head><title>{post["title"]["rendered"]}</title></head>
         <body>

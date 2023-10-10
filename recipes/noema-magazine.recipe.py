@@ -10,7 +10,6 @@ import sys
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import WordPressNewsrackRecipe, get_datetime_format
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Noema Magazine"
@@ -73,7 +72,7 @@ class NoemaMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
         :param post_content: Extracted post content
         :return:
         """
-        post_soup = BeautifulSoup(post["content"]["rendered"])
+        post_soup = self.soup(post["content"]["rendered"])
         for h in post_soup.find_all("h5"):
             h.name = "h3"
         post_content = str(post_soup)
@@ -94,9 +93,7 @@ class NoemaMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
                 container_ele.append(img_ele)
                 if feature_info.get("caption", {}).get("rendered"):
                     container_ele.append(
-                        BeautifulSoup(
-                            feature_info["caption"]["rendered"], "html.parser"
-                        )
+                        self.soup(feature_info["caption"]["rendered"], "html.parser")
                     )
                 post_content = str(container_ele) + post_content
             else:
@@ -113,7 +110,7 @@ class NoemaMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
         post_authors = self.extract_authors(post)
         categories = self.extract_categories(post)
 
-        soup = BeautifulSoup(
+        soup = self.soup(
             f"""<html>
         <head><title>{post["title"]["rendered"]}</title></head>
         <body>
@@ -129,9 +126,7 @@ class NoemaMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
             </article>
         </body></html>"""
         )
-        soup.body.article.append(
-            BeautifulSoup(self._extract_featured_media(post, soup))
-        )
+        soup.body.article.append(self.soup(self._extract_featured_media(post, soup)))
         return str(soup)
 
     def parse_index(self):

@@ -13,7 +13,6 @@ from urllib.parse import urlparse, urlencode
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import WordPressNewsrackRecipe, get_datetime_format
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Foreign Policy Magazine"
@@ -79,7 +78,7 @@ class ForeignPolicyMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
         if not self.pub_date or date_published_gmt > self.pub_date:
             self.pub_date = date_published_gmt
 
-        soup = BeautifulSoup(
+        soup = self.soup(
             f"""<html>
         <head><title>{post["title"]["rendered"]}</title></head>
         <body>
@@ -96,7 +95,7 @@ class ForeignPolicyMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
         </body></html>"""
         )
 
-        content = BeautifulSoup(post["content"]["rendered"])
+        content = self.soup(post["content"]["rendered"])
         # FP doesn't use featuremedia, the first attachment is the lede image
         attachment_endpoint = (
             post.get("_links", {}).get("wp:attachment", [{}])[0].get("href")
@@ -111,7 +110,7 @@ class ForeignPolicyMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
                 lede.append(img)
                 if attachment.get("caption", {}).get("rendered"):
                     caption = soup.new_tag("div", attrs={"class": "wp-caption-text"})
-                    caption.append(BeautifulSoup(attachment["caption"]["rendered"]))
+                    caption.append(self.soup(attachment["caption"]["rendered"]))
                     lede.append(caption)
                 soup.body.article.append(lede)
 

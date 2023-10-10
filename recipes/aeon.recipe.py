@@ -7,7 +7,6 @@ sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, format_title, get_date_format
 
 from calibre.web.feeds.news import BasicNewsRecipe, prefixed_classes
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 
 _name = "Aeon"
 
@@ -55,7 +54,7 @@ class Aeon(BasicNewsrackRecipe, BasicNewsRecipe):
         return False
 
     def preprocess_raw_html_(self, raw_html, url):
-        soup = BeautifulSoup(raw_html)
+        soup = self.soup(raw_html)
         article = self.get_ld_json(soup, filter_fn=self._find_article)
         if not (article and article.get("articleBody")):
             err_msg = f"Unable to find article: {url}"

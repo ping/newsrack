@@ -20,7 +20,6 @@ from recipes_shared import (
     get_datetime_format,
 )
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes, prefixed_classes
 from calibre.ebooks.markdown import Markdown
 
@@ -85,7 +84,7 @@ class NewYorker(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     remove_attributes = ["style", "sizes", "data-event-click"]
 
     def preprocess_raw_html(self, raw_html, url):
-        soup = BeautifulSoup(raw_html)
+        soup = self.soup(raw_html)
 
         preload_state = {}
         preload_script_eles = [
@@ -172,7 +171,7 @@ class NewYorker(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
                                     image_html,
                                 )
 
-                interactive_container.append(BeautifulSoup(md.convert(article_body)))
+                interactive_container.append(self.soup(md.convert(article_body)))
                 interactive_container["class"] = "og"
         except Exception as e:
             self.log.warning(f"Unable to convert interactive article: {e}")

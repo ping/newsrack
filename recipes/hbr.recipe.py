@@ -7,7 +7,6 @@ from urllib.parse import urljoin
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicCookielessNewsrackRecipe, get_date_format
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 # Original https://github.com/kovidgoyal/calibre/blob/49a1d469ce4f04f79ce786a75b8f4bdcfd32ad2c/recipes/hbr.recipe
@@ -67,7 +66,7 @@ class HBR(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     ]
 
     def preprocess_raw_html(self, raw_html, _):
-        soup = BeautifulSoup(raw_html)
+        soup = self.soup(raw_html)
 
         # set article date
         pub_datetime = soup.find("meta", attrs={"property": "article:published_time"})

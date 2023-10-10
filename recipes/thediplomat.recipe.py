@@ -15,7 +15,6 @@ from html import unescape
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import WordPressNewsrackRecipe, get_date_format
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "The Diplomat"
@@ -88,7 +87,7 @@ class TheDiplomat(WordPressNewsrackRecipe, BasicNewsRecipe):
         # formulate the api response into html
         post = json.loads(raw_html)
         post_date = self.parse_date(post["date"], tz_info=None, as_utc=False)
-        soup = BeautifulSoup(
+        soup = self.soup(
             f"""<html>
         <head></head>
         <body>
@@ -106,25 +105,25 @@ class TheDiplomat(WordPressNewsrackRecipe, BasicNewsRecipe):
         title.string = unescape(post["title"]["rendered"])
         soup.body.h1.string = unescape(post["title"]["rendered"])
         soup.find("div", class_="sub-headline").append(
-            BeautifulSoup(post["excerpt"]["rendered"])
+            self.soup(post["excerpt"]["rendered"])
         )
         # inject authors
         post_authors = self.extract_authors(post)
         if post_authors:
             soup.find(class_="article-meta").insert(
                 0,
-                BeautifulSoup(f'<span class="author">{", ".join(post_authors)}</span>'),
+                self.soup(f'<span class="author">{", ".join(post_authors)}</span>'),
             )
         # inject categories
         categories = self.extract_categories(post)
         if categories:
             soup.body.article.insert(
                 0,
-                BeautifulSoup(
+                self.soup(
                     f'<span class="article-section">{" / ".join(categories)}</span>'
                 ),
             )
-        soup.body.article.append(BeautifulSoup(self._extract_featured_media(post)))
+        soup.body.article.append(self.soup(self._extract_featured_media(post)))
         return str(soup)
 
     def populate_article_metadata(self, article, soup, first):

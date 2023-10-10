@@ -17,7 +17,6 @@ from urllib.parse import quote_plus, urljoin
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicCookielessNewsrackRecipe, format_title, get_date_format
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 _name = "Financial Times (Print)"
@@ -99,7 +98,7 @@ class FinancialTimesPrint(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
         return feeds
 
     def preprocess_raw_html(self, raw_html, url):
-        soup = BeautifulSoup(raw_html)
+        soup = self.soup(raw_html)
         article = self.get_ld_json(soup, lambda d: d.get("@type", "") == "NewsArticle")
         if not (article and article.get("articleBody")):
             err_msg = f"Unable to find article: {url}"

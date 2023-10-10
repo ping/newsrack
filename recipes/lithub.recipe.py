@@ -11,7 +11,6 @@ import sys
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import WordPressNewsrackRecipe, get_datetime_format
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Literary Hub"
@@ -63,7 +62,7 @@ class LitHub(WordPressNewsrackRecipe, BasicNewsRecipe):
         :param post_content: Extracted post content
         :return:
         """
-        post_soup = BeautifulSoup(post["content"]["rendered"])
+        post_soup = self.soup(post["content"]["rendered"])
         for img in post_soup.find_all("img", attrs={"data-src": True}):
             img["src"] = img["data-src"]
         post_content = str(post_soup)
@@ -101,7 +100,7 @@ class LitHub(WordPressNewsrackRecipe, BasicNewsRecipe):
         post_authors = self.extract_authors(post)
         categories = self.extract_categories(post)
 
-        soup = BeautifulSoup(
+        soup = self.soup(
             f"""<html>
         <head><title>{post["title"]["rendered"]}</title></head>
         <body>
@@ -117,9 +116,7 @@ class LitHub(WordPressNewsrackRecipe, BasicNewsRecipe):
             </article>
         </body></html>"""
         )
-        soup.body.article.append(
-            BeautifulSoup(self._extract_featured_media(post, soup))
-        )
+        soup.body.article.append(self.soup(self._extract_featured_media(post, soup)))
         return str(soup)
 
     def parse_index(self):

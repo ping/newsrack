@@ -16,7 +16,6 @@ from datetime import datetime, timedelta, timezone
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, format_title, get_date_format
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 _name = "Wall Street Journal (Print)"
@@ -60,7 +59,7 @@ class WSJ(BasicNewsrackRecipe, BasicNewsRecipe):
     ]
 
     def preprocess_raw_html(self, raw_html, url):
-        soup = BeautifulSoup(raw_html)
+        soup = self.soup(raw_html)
         # find pub date
         mod_date_ele = soup.find(
             "meta", attrs={"name": "article.updated"}

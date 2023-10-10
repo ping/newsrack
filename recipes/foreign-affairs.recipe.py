@@ -10,7 +10,6 @@ sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe
 
 import mechanize
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe, classes
 
 _name = "Foreign Affairs"
@@ -64,7 +63,7 @@ def get_issue_data(br, log, node_id="1126213", year="2020", volnum="99", issue_v
     feeds = []
 
     def as_article(source):
-        title = BeautifulSoup(source["title"][0]).get_text()
+        title = self.soup(source["title"][0]).get_text()
         desc = ""
         fs = source.get("field_subtitle")
         if fs:

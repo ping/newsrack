@@ -11,7 +11,6 @@ import sys
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import WordPressNewsrackRecipe, get_datetime_format
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Fulcrum"
@@ -75,7 +74,7 @@ class FulcrumSg(WordPressNewsrackRecipe, BasicNewsRecipe):
         :param post_content: Extracted post content
         :return:
         """
-        post_soup = BeautifulSoup(post["content"]["rendered"])
+        post_soup = self.soup(post["content"]["rendered"])
         for img in post_soup.find_all("img", attrs={"data-src": True}):
             img["src"] = img["data-src"]
         post_content = str(post_soup)
@@ -96,7 +95,7 @@ class FulcrumSg(WordPressNewsrackRecipe, BasicNewsRecipe):
                 container_ele.append(img_ele)
                 if feature_info.get("caption", {}).get("rendered"):
                     cap_ele = soup.new_tag("div", attrs={"class": "caption"})
-                    cap_ele.append(BeautifulSoup(feature_info["caption"]["rendered"]))
+                    cap_ele.append(self.soup(feature_info["caption"]["rendered"]))
                     container_ele.append(cap_ele)
                 post_content = str(container_ele) + post_content
             else:
@@ -117,7 +116,7 @@ class FulcrumSg(WordPressNewsrackRecipe, BasicNewsRecipe):
         categories = self.extract_categories(post)
         categories.extend(self.extract_tags(post))
 
-        soup = BeautifulSoup(
+        soup = self.soup(
             f"""<html>
         <head><title>{post["title"]["rendered"]}</title></head>
         <body>
@@ -136,15 +135,11 @@ class FulcrumSg(WordPressNewsrackRecipe, BasicNewsRecipe):
         )
         sub_headline = soup.find("h2", class_="sub-headline")
         if post.get("excerpt", {}).get("rendered"):
-            sub_headline.append(
-                BeautifulSoup(post["excerpt"]["rendered"], "html.parser")
-            )
+            sub_headline.append(self.soup(post["excerpt"]["rendered"]))
         else:
             sub_headline.decompose()
 
-        soup.body.article.append(
-            BeautifulSoup(self._extract_featured_media(post, soup))
-        )
+        soup.body.article.append(self.soup(self._extract_featured_media(post, soup)))
         return str(soup)
 
     def parse_index(self):
