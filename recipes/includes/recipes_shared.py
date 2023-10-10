@@ -209,6 +209,9 @@ class BasicNewsrackRecipe(object):
     def extract_from_img_srcset(self, srcset: str, max_width=0):
         return extract_from_img_srcset(srcset, max_width)
 
+    def debug_json_dump(self, obj, indent=2):
+        self.log.debug(json.dumps(obj, indent=indent))
+
     def generate_debug_index(self, urls):
         """
         Helper function to debug articles. To be used in parse_index().
