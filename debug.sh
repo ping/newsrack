@@ -18,6 +18,9 @@ do
     if [ -f "$recipe_folder/$1.recipe.py" ]; then
       cp -p "$recipe_folder/$1.recipe.py" "$1.recipe"
     fi
+    if [ -f "$recipe_folder/$1.recipe" ]; then
+      cp -p "$recipe_folder/$1.recipe" "$1.recipe"
+    fi
 done
 
 rm -rf debug
