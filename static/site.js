@@ -39,6 +39,8 @@ https://opensource.org/licenses/GPL-3.0
     const searchButton = document.getElementById("search-button");
     searchTextField.disabled = true;
     searchButton.disabled = true;
+    const searchForm = document.getElementById("search-form");
+    const clearSearchTextButton = document.getElementById("search-text-clear-btn");
 
     // in miliseconds
     const units = {
@@ -294,6 +296,18 @@ https://opensource.org/licenses/GPL-3.0
                 }
             }
 
+            searchForm.onreset = function (event) {
+                clearSearchTextButton.classList.add("hide");
+                resetSearch();
+            };
+            searchTextField.onblur = function (event) {
+                if (searchTextField.value.length === 0) {
+                    clearSearchTextButton.classList.add("hide");
+                } else {
+                    clearSearchTextButton.classList.remove("hide");
+                }
+            };
+
             let idx = null;
             function handler() {
                 if (this.readyState === XMLHttpRequest.DONE) {
@@ -317,7 +331,7 @@ https://opensource.org/licenses/GPL-3.0
             httpRequest.send();
 
             // unhide everything when search field is cleared
-            document.getElementById("search-text").onchange = function(e) {
+            searchTextField.onchange = function(e) {
                 if (this.value.trim().length > 0) {
                     return;
                 }
@@ -327,11 +341,11 @@ https://opensource.org/licenses/GPL-3.0
             };
 
             // search form submitted
-            document.getElementById("search-form").onsubmit = function (e) {
+            searchForm.onsubmit = function (e) {
                 e.preventDefault();
                 searchInfo.innerText = "";
                 searchInfo.classList.add("error");
-                const searchText = document.getElementById("search-text").value.trim();
+                const searchText = searchTextField.value.trim();
                 if (searchText.length < 3) {
                     // this makes it work in the Kindle browser
                     searchInfo.appendChild(searchSyntaxLink);
