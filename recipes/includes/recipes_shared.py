@@ -304,11 +304,16 @@ class BasicCookielessNewsrackRecipe(BasicNewsrackRecipe):
         return self.get_browser()
 
     def open_novisit(self, *args, **kwargs):
+        br = browser()
         if self.request_as_gbot:
-            br = browser(
-                user_agent="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
-            )
-            br.addheaders = [("referer", "https://www.google.com/")]
+            br.addheaders = [
+                (
+                    "User-agent",
+                    "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+                ),
+                ("Referer", "https://www.google.com/"),
+                ("X-Forwarded-For", "66.249.66.1"),
+            ]
         else:
             br = browser()
         br.set_handle_gzip(True)
