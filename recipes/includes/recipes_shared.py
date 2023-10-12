@@ -314,8 +314,6 @@ class BasicCookielessNewsrackRecipe(BasicNewsrackRecipe):
                 ("Referer", "https://www.google.com/"),
                 ("X-Forwarded-For", "66.249.66.1"),
             ]
-        else:
-            br = browser()
         br.set_handle_gzip(True)
         return br.open_novisit(*args, **kwargs)
 
