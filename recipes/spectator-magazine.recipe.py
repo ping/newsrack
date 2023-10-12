@@ -29,6 +29,8 @@ class SpectatorMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     masthead_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/The_Spectator_logo.svg/1024px-The_Spectator_logo.svg.png"
     compress_news_images_auto_size = 8
 
+    request_as_gbot = True
+
     keep_only_tags = [
         dict(class_=["entry-header", "entry-content__wrapper", "author-bio__content"])
     ]
@@ -44,6 +46,7 @@ class SpectatorMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
                 "subscribe-ribbon",
                 "author-bio__title",
                 "entry-header__issue",
+                "audio-read-block",
             ]
         ),
         dict(id=["most-popular"]),
