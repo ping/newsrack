@@ -992,7 +992,7 @@ def run(
             catalog=catalog_path,
             source_link=(
                 f'<a class="git" title="Source" href="{source_url}">{commit_hash[0:7]}</a>'
-                f'<span class="ci-run">{run_id}</span>'
+                f'<span class="ci-run" title="Run">{run_id}</span>'
             ),
         )
         f_out.write(html_output)
