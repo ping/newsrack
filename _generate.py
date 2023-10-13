@@ -370,7 +370,11 @@ def _linkify_attrs(attrs, _=False):
 
 
 def run(
-    publish_site: str, source_url: str, commit_hash: str, verbose_mode: bool
+    publish_site: str,
+    source_url: str,
+    commit_hash: str,
+    run_id: str,
+    verbose_mode: bool,
 ) -> None:
     # set path to recipe includes in os environ so that recipes can pick it up
     os.environ["recipes_includes"] = str(Path("recipes/includes/").absolute())
@@ -986,7 +990,7 @@ def run(
             publish_site=publish_site,
             elapsed=humanize.naturaldelta(elapsed_time, minimum_unit="seconds"),
             catalog=catalog_path,
-            source_link=f'<a class="git" title="Source" href="{source_url}">{commit_hash[0:7]}</a>',
+            source_link=f'<a class="git" title="Source" href="{source_url}">{commit_hash[0:7]}</a> <span class="ci-run">Run: {run_id}</span>',
         )
         f_out.write(html_output)
 
@@ -1023,6 +1027,7 @@ if __name__ == "__main__":
     parser.add_argument("publish_site", type=str, help="Deployment site url")
     parser.add_argument("repo_url", type=str, help="Source repo url")
     parser.add_argument("commit_hash", type=str, help="Commit hash")
+    parser.add_argument("run_id", type=str, help="Run ID")
     parser.add_argument(
         "-v",
         "--verbose",
@@ -1041,4 +1046,4 @@ if __name__ == "__main__":
     if verbose:
         logger.setLevel(logging.DEBUG)
 
-    run(args.publish_site, args.repo_url, args.commit_hash, verbose)
+    run(args.publish_site, args.repo_url, args.commit_hash, args.run_id, verbose)

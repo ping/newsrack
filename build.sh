@@ -27,7 +27,7 @@ mkdir -p public meta \
 && npx babel static/theme.js --out-file static/theme.compiled.js \
 && cp -p static/theme.compiled.js public/theme.min.js \
 && npx sass -s compressed --no-source-map static/site.scss:static/site.css static/reader.scss:static/reader.css static/viewer-theme-light.scss:public/viewer-theme-light.css static/viewer-theme-dark.scss:public/viewer-theme-dark.css static/opds.scss:public/opds.css \
-&& python3 _generate.py "$CI_PAGES_URL" "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/" "$GITHUB_SHA" \
+&& python3 _generate.py "$CI_PAGES_URL" "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/" "$GITHUB_SHA" "${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
 && node build-index.js < public/lunr_docs.json > public/lunr.json \
 && npx html-minifier-terser --input-dir public/ --output-dir public/ --collapse-whitespace --file-ext html \
 && rm -f *.recipe static/*.compiled.js public/lunr_docs.json
