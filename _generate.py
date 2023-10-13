@@ -990,7 +990,10 @@ def run(
             publish_site=publish_site,
             elapsed=humanize.naturaldelta(elapsed_time, minimum_unit="seconds"),
             catalog=catalog_path,
-            source_link=f'<a class="git" title="Source" href="{source_url}">{commit_hash[0:7]}</a> <span class="ci-run">Run: {run_id}</span>',
+            source_link=(
+                f'<a class="git" title="Source" href="{source_url}">{commit_hash[0:7]}</a>'
+                f'<span class="ci-run">{run_id}</span>',
+            ),
         )
         f_out.write(html_output)
 
