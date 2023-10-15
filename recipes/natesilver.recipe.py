@@ -3,10 +3,11 @@ natesilver.net
 """
 import os
 import sys
+from datetime import timezone, timedelta
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe, format_title
+from recipes_shared import BasicNewsrackRecipe, format_title, get_date_format
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -26,12 +27,15 @@ class NateSilver(BasicNewsrackRecipe, BasicNewsRecipe):
     oldest_article = 30  # days
     max_articles_per_feed = 30
 
+    keep_only_tags = [dict(name="article")]
     remove_tags = [
         dict(class_=["subscription-widget-wrap", "image-link-expand", "button-wrapper"])
     ]
     remove_attributes = ["width"]
 
     extra_css = """
+    .article-meta {  margin-top: 1rem; margin-bottom: 1rem; }
+    .article-meta .author { font-weight: bold; color: #444; margin-right: 0.5rem; }
     .captioned-image-container img {
         display: block;
         max-width: 100%;
@@ -64,4 +68,20 @@ class NateSilver(BasicNewsrackRecipe, BasicNewsRecipe):
             self.title = format_title(_name, article.utctime)
 
     def parse_feeds(self):
-        return self.group_feeds_by_date(timezone_offset_hours=6)
+        timezone_offset_hours = -6
+        feeds = self.group_feeds_by_date(timezone_offset_hours=timezone_offset_hours)
+        for feed in feeds:
+            for article in feed.articles:
+                # inject title and pub date
+                date_published = article.utctime.replace(tzinfo=timezone.utc)
+                date_published_loc = date_published.astimezone(
+                    timezone(offset=timedelta(hours=timezone_offset_hours))
+                )
+                article_soup = self.soup(
+                    f'<article><h1>{article.title}</h1><div class="article-meta">'
+                    f'<span class="author">{article.author}</span>'
+                    f'<span class="pub-date">{date_published_loc:{get_date_format()}}</span>'
+                    f"</div><div>{article.content}</div></article>"
+                )
+                article.content = str(article_soup)
+        return feeds
