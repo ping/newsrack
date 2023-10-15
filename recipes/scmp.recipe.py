@@ -100,8 +100,8 @@ class SCMP(BasicNewsrackRecipe, BasicNewsRecipe):
 
     # https://www.scmp.com/rss
     feeds = [
-        # ("Hong Kong", "https://www.scmp.com/rss/2/feed"),
-        # ("China", "https://www.scmp.com/rss/4/feed"),
+        ("Hong Kong", "https://www.scmp.com/rss/2/feed"),
+        ("China", "https://www.scmp.com/rss/4/feed"),
         ("Asia", "https://www.scmp.com/rss/3/feed"),
         # ("World", "https://www.scmp.com/rss/5/feed"),
         # ("Business", "https://www.scmp.com/rss/92/feed"),
