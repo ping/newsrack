@@ -386,6 +386,28 @@ recipes: List[Recipe] = [
         tags=["technology"],
     ),
     Recipe(
+        recipe="mollywhite-newsletter",
+        slug="mollywhite-newsletter",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Blogs/Newsletters",
+        tags=["tech"],
+        cover_options=CoverOptions(
+            logo_path_or_url="https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F3b6a58dc-123a-492b-a1e2-b46138add2b9_856x856.png"
+        ),
+    ),
+    Recipe(
+        recipe="natesilver",
+        slug="natesilver",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Blogs/Newsletters",
+        tags=["commentary"],
+        cover_options=CoverOptions(
+            logo_path_or_url="https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9798f361-e880-406c-9ed4-29229df02c27_256x256.png"
+        ),
+    ),
+    Recipe(
         recipe="nature",
         slug="nature",
         src_ext="mobi",
