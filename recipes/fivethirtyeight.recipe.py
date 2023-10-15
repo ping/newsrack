@@ -4,7 +4,7 @@
 # https://opensource.org/licenses/GPL-3.0
 
 """
-fivethirtyeight.com
+fivethirtyeight.com is no more
 """
 import json
 import os
