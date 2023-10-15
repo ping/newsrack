@@ -61,7 +61,11 @@ class SpectatorMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     .entry-header__thumbnail-wrapper img, .wp-block-image img { display: block; max-width: 100%; height: auto; }
     .entry-header__thumbnail div, .wp-element-caption { display: block; font-size: 0.8rem; margin-top: 0.2rem; }
     .wp-block-pullquote blockquote { font-size: 1.25rem; margin-left: 0; text-align: center; }
+    blockquote.wp-block-quote { font-size: 1.15rem; }
     .author-bio__content { font-style: italic; border-top: 1px solid black; padding-top: 0.5rem; padding-bottom: 0.5rem }
+    .related-books__item { margin: 1rem 0; }
+    .related-books__item h3 { margin-top: 0; margin-bottom: 0.25rem; }
+    .related-books__item p { margin: 0; }
     """
 
     def preprocess_html(self, soup):
@@ -80,6 +84,7 @@ class SpectatorMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
             meta_ele.append(author_new_ele)
             author_ele.decompose()
 
+        # re-position author
         cartoon_author_ele = soup.find(name="h2", class_="entry-header__author")
         if cartoon_author_ele:
             author_new_ele = soup.new_tag("span", attrs={"class": "author"})
@@ -87,6 +92,14 @@ class SpectatorMagazine(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
             meta_ele.append(author_new_ele)
             cartoon_author_ele.decompose()
 
+        # re-jig books info
+        books_ele = soup.find(name="ul", class_="related-books")
+        if books_ele:
+            for book_ele in books_ele.find_all(name="li", class_="related-books__item"):
+                book_ele.name = "div"
+            books_ele.name = "div"
+
+        # inject published datetime
         pub_meta_ele = soup.find(name="meta", property="article:published_time")
         if pub_meta_ele:
             pub_date = parse_date(pub_meta_ele["content"])
