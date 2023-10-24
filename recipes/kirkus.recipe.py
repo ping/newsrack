@@ -95,19 +95,16 @@ class Kirkus(BasicNewsrackRecipe, BasicNewsRecipe):
             if not link:
                 continue
             section = self.tag_to_string(book_ele.find("h3")).upper()
-            if section not in articles:
-                articles[section] = []
-            articles[section].append(
+            articles.setdefault(section, []).append(
                 {"url": urljoin(issue_url, link["href"]), "title": link["title"]}
             )
+
         for post_ele in issue.select("div.issue-more-posts ul li div.lead-text"):
             link = post_ele.find("a")
             if not link:
                 continue
             section = self.tag_to_string(post_ele.find(class_="lead-text-type")).upper()
-            if section not in articles:
-                articles[section] = []
-            articles[section].append(
+            articles.setdefault(section, []).append(
                 {
                     "url": urljoin(issue_url, link["href"]),
                     "title": self.tag_to_string(link),
@@ -135,6 +132,6 @@ class Kirkus(BasicNewsrackRecipe, BasicNewsRecipe):
             section = self.tag_to_string(section_ele.find("h3")).upper()
             if section not in articles:
                 articles[section] = []
-            articles[section].extend(section_articles)
+            articles.setdefault(section, []).extend(section_articles)
 
         return articles.items()
