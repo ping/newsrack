@@ -295,7 +295,7 @@ recipes: List[Recipe] = [
         tags=["books", "reviews"],
         overwrite_cover=False,
         enable_on=onlyat_hours(list(range(0, 6)))
-        and (first_n_days_of_month(3) or last_n_days_of_month(3)),
+        and onlyon_days([1, 2, 3, 4, 15, 16, 17, 18]),
     ),
     Recipe(
         recipe="knowable-magazine",
