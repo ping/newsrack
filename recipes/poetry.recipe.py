@@ -18,7 +18,7 @@ _issue_url = ""
 _name = "Poetry"
 
 
-class Nature(BasicNewsrackRecipe, BasicNewsRecipe):
+class Poetry(BasicNewsrackRecipe, BasicNewsRecipe):
     title = _name
     __author__ = "ping"
     description = (
