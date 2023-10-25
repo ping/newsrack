@@ -39,7 +39,7 @@ class Nautilus(BasicNewsrackRecipe, BasicNewsRecipe):
         classes(
             "article-action-list article-bottom-newsletter_box main-post-comments-toggle-wrap "
             "main-post-comments-wrapper social-share supported-one article-collection_box "
-            "primis-ad"
+            "primis-ad browsi-ad"
         )
     ]
     extra_css = """
