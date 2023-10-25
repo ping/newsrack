@@ -92,9 +92,7 @@ class NoemaMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
                 img_ele = soup.new_tag("img", src=feature_info["source_url"])
                 container_ele.append(img_ele)
                 if feature_info.get("caption", {}).get("rendered"):
-                    container_ele.append(
-                        self.soup(feature_info["caption"]["rendered"], "html.parser")
-                    )
+                    container_ele.append(self.soup(feature_info["caption"]["rendered"]))
                 post_content = str(container_ele) + post_content
             else:
                 post_content = (

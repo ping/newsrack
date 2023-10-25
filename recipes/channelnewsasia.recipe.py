@@ -45,6 +45,7 @@ class ChannelNewsAsia(BasicNewsrackRecipe, BasicNewsRecipe):
                 "from-library",
                 "block-field-blocknodearticlefield-author",  # author bio
                 "mobile_author_card",  # author bio
+                "block-field-blocknodearticlefield-text-to-speech",  # article AI audio
             ]
         ),
         dict(name="div", attrs={"data-ad-entity": True}),

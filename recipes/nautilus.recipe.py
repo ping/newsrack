@@ -37,7 +37,9 @@ class Nautilus(BasicNewsrackRecipe, BasicNewsRecipe):
 
     remove_tags = [
         classes(
-            "article-action-list article-bottom-newsletter_box main-post-comments-toggle-wrap main-post-comments-wrapper social-share supported-one article-collection_box"
+            "article-action-list article-bottom-newsletter_box main-post-comments-toggle-wrap "
+            "main-post-comments-wrapper social-share supported-one article-collection_box "
+            "primis-ad"
         )
     ]
     extra_css = """
