@@ -153,7 +153,7 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
         box-sizing: border-box;
     }
     .article-byline h3 { font-weight: normal; font-size: 1rem; margin-bottom: 0; }
-    .article-header--metadata-date { margin-right: 1rem; font-weight: bold; color: gray; }
+    .article-header--metadata-date { margin-right: 0.5rem; font-weight: bold; color: gray; }
     .article-inline-img-block--figcaption { font-size: 0.8rem; }
     blockquote.internal-blockquote { font-size: 1.25rem; margin-left: 0; text-align: center; }
     """
