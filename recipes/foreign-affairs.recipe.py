@@ -152,7 +152,8 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
         display: block; margin-bottom: 0.3rem; max-width: 100%; height: auto;
         box-sizing: border-box;
     }
-    .article-header--metadata-date { margin-right: 1rem; }
+    .article-byline h3 { font-weight: normal; font-size: 1rem; margin-bottom: 0; }
+    .article-header--metadata-date { margin-right: 1rem; font-weight: bold; color: gray; }
     .article-inline-img-block--figcaption { font-size: 0.8rem; }
     blockquote.internal-blockquote { font-size: 1.25rem; margin-left: 0; text-align: center; }
     """
@@ -200,6 +201,12 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
             author_info.name = "div"
             for li in author_info.find_all("li"):
                 li.name = "p"
+        for unwrap_target in (
+            "a.article-byline-author",
+            ".article-header--metadata-date a",
+        ):
+            for a in soup.select(unwrap_target):
+                a.unwrap()
         return soup
 
     def get_browser(self):
