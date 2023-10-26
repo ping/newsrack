@@ -6,7 +6,7 @@ import sys
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicNewsrackRecipe, format_title, get_date_format
 
-from calibre.web.feeds.news import BasicNewsRecipe, prefixed_classes
+from calibre.web.feeds.news import BasicNewsRecipe
 
 _name = "Aeon"
 
@@ -28,23 +28,28 @@ class Aeon(BasicNewsrackRecipe, BasicNewsRecipe):
     max_articles_per_feed = 30
     compress_news_images_auto_size = 10
 
-    keep_only_tags = [prefixed_classes("styled__MainColumn-sc-")]
     remove_tags = [
-        prefixed_classes(
-            "SupportBar__Wrapper-sc- article__HideOnPrint-sc- article__AppendixContainer-sc- "
-            "ArticleInfo__Wrapper-sc- SyndicationButton__SyndicationButtonWrapper-sc- "
-            "article__SocialShareBar-sc- styled__MobileAttributionWrapper-sc- "
-            "article__CurioPlayer-sc- article__EditorCredit-sc- article__Sidebar-sc-"
-        )
+        dict(
+            class_=[
+                "sc-8c8cfef8-0",
+                "sc-114c07c9-0",
+                "sc-50e6fb3a-1",
+                "sc-c3e98e6e-0",
+                "sc-fd74dcf9-14",
+                "sc-50e6fb3a-1",
+                "sc-fd74dcf9-24",
+                "sc-a70232b9-5",
+            ]
+        ),
+        dict(attrs={"data-test": "footer"}),
     ]
     remove_attributes = ["align", "style", "width", "height"]
 
     extra_css = """
-    h2 { font-size: 1.8rem; margin-bottom: 0.4rem; }
-    h1 { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; }
-    div.custom-date-published { font-weight: bold; color: #444; }
-    .ld-image-block img { display: block; max-width: 100%; height: auto; }
-    .ld-image-caption p { margin-top: 0.4rem; font-size: 0.8rem; }
+    p .sc-2e8621ab-1 { margin-left: 0.5rem; }
+    .sc-fd74dcf9-18 { margin-right: 0.6rem; }
+    img.ld-image-block, img.lede-img, .sc-358cfb18-0 img { display: block; max-width: 100%; height: auto; }
+    .ld-image-caption { font-size: 0.8rem; }
     """
     feeds = [(_name, "https://aeon.co/feed.rss")]
 
@@ -75,18 +80,28 @@ class Aeon(BasicNewsrackRecipe, BasicNewsRecipe):
             header.insert_after(date_ele)
 
         # re-position header image
-        essay_header = soup.find(
-            "div", class_=lambda c: c and c.startswith("article__EssayHeader-sc-")
-        )
+        essay_header = soup.find("div", class_="sc-fd74dcf9-26")
         if essay_header:
             header_img = essay_header.find("img")
-            attribution = essay_header.find(
-                "div",
-                class_=lambda c: c
-                and c.startswith("styled__ThumbnailAttributionWrapper-sc-"),
-            )
+            attribution = essay_header.find("div", class_="sc-b78f3ea9-3")
             if header_img and attribution:
+                header_img["class"] = "lede-img"
                 attribution.insert_before(header_img.extract())
+            clean_up_ele = essay_header.find(class_="sc-358cfb18-6")
+            if clean_up_ele:
+                clean_up_ele.decompose()
+
+        byline = soup.find("div", class_="rah-static")
+        if byline:
+            for br in byline.find_all("br"):  # extraneous br
+                br.decompose()
+
+        for link_class in (
+            "a.sc-2e8621ab-1",  # author link
+            "a.sc-fd74dcf9-18",  # article cat
+        ):
+            for a in soup.select(link_class):  # tags
+                a.name = "span"
         return str(soup)
 
     def parse_feeds(self):
