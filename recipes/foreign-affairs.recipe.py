@@ -137,7 +137,9 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
         classes("article-header article-body article-lead-image article-body-text"),
     ]
     remove_tags = [
-        classes("loading-indicator paywall article-footer article-tools "),
+        classes(
+            "loading-indicator paywall article-footer article-tools d-none review--rail-title"
+        ),
         dict(attrs={"data-buylink-isbn": True}),
         dict(name=["svg", "button"]),
     ]
@@ -150,6 +152,7 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
         display: block; margin-bottom: 0.3rem; max-width: 100%; height: auto;
         box-sizing: border-box;
     }
+    .article-header--metadata-date { margin-right: 1rem; }
     .article-inline-img-block--figcaption { font-size: 0.8rem; }
     blockquote.internal-blockquote { font-size: 1.25rem; margin-left: 0; text-align: center; }
     """
