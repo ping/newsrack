@@ -185,7 +185,6 @@ class HBR(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
             if not article_ele:
                 continue
 
-            articles = []
             title = self.tag_to_string(article_link_ele)
             url = urljoin(self.base_url, article_link_ele["href"])
 
@@ -202,15 +201,7 @@ class HBR(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
                 .find("h4")
             )
             section_title = self.tag_to_string(section_ele).title()
-            self.log(section_title)
-            self.log("\t", title)
-            self.log("\t", article_desc)
-            self.log("\t\t", url)
-
-            articles.append({"title": title, "url": url, "description": article_desc})
-            if articles:
-                if section_title not in feeds:
-                    feeds[section_title] = []
-                feeds[section_title] += articles
-        ans = [(key, val) for key, val in feeds.items()]
-        return ans
+            feeds.setdefault(section_title, []).append(
+                {"title": title, "url": url, "description": article_desc}
+            )
+        return feeds.items()
