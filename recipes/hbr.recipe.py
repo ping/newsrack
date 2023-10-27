@@ -47,7 +47,6 @@ class HBR(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
             box-sizing: border-box;
         }
         .container--caption-credits-hero, .container--caption-credits-inline, span.credit { font-size: 0.8rem; }
-        .article-sidebar { border: 1px solid #000; padding: 0.8rem; display: block; }
         .question { font-weight: bold; }
         .description-text {
             margin: 1rem 0;
@@ -62,7 +61,6 @@ class HBR(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
             "headline-container article-dek-group pub-date hero-image-content "
             "article-body standard-content"
         ),
-        dict(name="article-sidebar"),
     ]
 
     remove_tags = [
