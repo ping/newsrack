@@ -164,9 +164,10 @@ class HBR(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
             issue_url = urljoin(self.base_url, a["href"])
         else:
             issue_url = _issue_url
-            mobj = re.search(r"\b(?P<issue>BR\d+)\b", issue_url)
+            mobj = re.search(r"archive-toc/(?P<issue>(BR)?\d+)\b", issue_url)
             if mobj:
                 self.cover_url = f'https://hbr.org/resources/images/covers/{mobj.group("issue")}_500.png'
+
         self.log("Downloading issue:", issue_url)
         soup = self.index_to_soup(issue_url)
         issue_title = soup.find("h1")
