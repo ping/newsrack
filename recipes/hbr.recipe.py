@@ -4,7 +4,7 @@ import sys
 from collections import OrderedDict
 from urllib.parse import urlencode, urljoin
 
-from calibre import random_user_agent
+from calibre import browser, random_user_agent
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
@@ -21,17 +21,17 @@ _issue_url = ""
 
 class HBR(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
     title = _name
-    __author__ = "unkn0wn"
+    __author__ = "ping"
     description = (
-        "Harvard Business Review is the leading destination for smart management thinking."
-        " Through its flagship magazine, books, and digital content and tools published on HBR.org,"
-        " Harvard Business Review aims to provide professionals around the world with rigorous insights"
-        " and best practices to help lead themselves and their organizations more effectively and to make a positive impact."
-        " https://hbr.org/magazine"
+        "Harvard Business Review is the leading destination for smart management thinking. "
+        "Through its flagship magazine, books, and digital content and tools published on HBR.org, "
+        "Harvard Business Review aims to provide professionals around the world with rigorous insights "
+        "and best practices to help lead themselves and their organizations more effectively and to "
+        "make a positive impact. https://hbr.org/magazine"
     )
     language = "en"
     base_url = "https://hbr.org"
-    masthead_url = "http://hbr.org/resources/css/images/hbr_logo.svg"
+    masthead_url = "https://hbr.org/resources/css/images/hbr_logo.svg"
     publication_type = "magazine"
 
     remove_attributes = ["height", "width", "style"]
@@ -58,15 +58,16 @@ class HBR(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
 
     keep_only_tags = [
         classes(
-            "headline-container article-dek-group pub-date hero-image-content article-body standard-content"
+            "headline-container article-dek-group pub-date hero-image-content "
+            "article-body standard-content"
         ),
         dict(name="article-sidebar"),
     ]
 
     remove_tags = [
         classes(
-            "left-rail--container translate-message follow-topic newsletter-container by-prefix "
-            "related-topics--common"
+            "left-rail--container translate-message follow-topic "
+            "newsletter-container by-prefix related-topics--common"
         ),
         dict(name=["article-sidebar"]),
     ]
@@ -132,7 +133,7 @@ class HBR(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
             "Content-Type": "application/json",
             "Referer": article_url,
         }
-        br = self.get_browser()
+        br = browser()
         req = Request(
             endpoint_url,
             headers=headers,
@@ -173,7 +174,6 @@ class HBR(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
             self.title = f"{_name}: {self.tag_to_string(issue_title)}"
 
         feeds = OrderedDict()
-
         for h3 in soup.find_all("h3", attrs={"class": "hed"}):
             article_link_ele = h3.find("a")
             if not article_link_ele:
