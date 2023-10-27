@@ -34,13 +34,14 @@ class ForeignPolicyMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
     masthead_url = "https://foreignpolicy.com/wp-content/themes/foreign-policy-2017/assets/src/images/logos/favicon-256.png"
     reverse_article_order = False
     compress_news_images_auto_size = 12
+    resolve_internal_links = True
 
     extra_css = """
     .headline { font-size: 1.8rem; margin-bottom: 0.4rem; }
     .article-meta {  margin-top: 1rem; margin-bottom: 1rem; }
     .article-meta .author { font-weight: bold; color: #444; margin-right: 0.5rem; }
     .article-section { display: block; font-weight: bold; color: #444; }
-    .article-img img, img.attachment-full { display: block; max-width: 100%; height: auto; }
+    .article-img img, img.attachment-full, .image-attachment  img { display: block; max-width: 100%; height: auto; }
     .article-img p, .wp-caption-text {
         font-size: 0.8rem; display: block; margin-top: 0.2rem;
     }
@@ -59,11 +60,14 @@ class ForeignPolicyMagazine(WordPressNewsrackRecipe, BasicNewsRecipe):
                 "sidebar-box_right",
                 "newsletter-unit-signup",
                 "newsletter-unit-signup--shortcode-fallback",
+                "related-articles-carousel",
+                "featured_related_content",
             ]
         ),
         dict(style="height:0;opacity:0;"),
         dict(name=["noscript"]),
     ]
+    remove_attributes = ["width", "height", "style"]
 
     def preprocess_raw_html(self, raw_html, url):
         # formulate the api response into html
