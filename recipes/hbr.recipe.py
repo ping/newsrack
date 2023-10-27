@@ -1,14 +1,17 @@
-# paywalled
+import json
 import os
 import sys
 from collections import OrderedDict
-from urllib.parse import urljoin
+from urllib.parse import urlencode, urljoin
+
+from calibre import random_user_agent
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
 from recipes_shared import BasicCookielessNewsrackRecipe, get_date_format
 
 from calibre.web.feeds.news import BasicNewsRecipe, classes
+from mechanize import Request
 
 # Original https://github.com/kovidgoyal/calibre/blob/49a1d469ce4f04f79ce786a75b8f4bdcfd32ad2c/recipes/hbr.recipe
 
@@ -62,11 +65,13 @@ class HBR(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
 
     remove_tags = [
         classes(
-            "left-rail--container translate-message follow-topic newsletter-container by-prefix"
+            "left-rail--container translate-message follow-topic newsletter-container by-prefix "
+            "related-topics--common"
         ),
+        dict(name=["article-sidebar"]),
     ]
 
-    def preprocess_raw_html(self, raw_html, _):
+    def preprocess_raw_html(self, raw_html, article_url):
         soup = self.soup(raw_html)
 
         # set article date
@@ -80,7 +85,6 @@ class HBR(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
         post_date_ele = soup.new_tag("span")
         post_date_ele["class"] = "article-pub-date"
         post_date_ele.append(f"{post_date:{get_date_format()}}")
-        # pub_date_ele.append(post_date_ele)    # set this below together with the byline logic
 
         # break author byline out of list
         byline_list = soup.find("ul", class_="article-byline-list")
@@ -99,6 +103,50 @@ class HBR(BasicCookielessNewsrackRecipe, BasicNewsRecipe):
         else:
             pub_date_ele.append(post_date_ele)  # attach post date to issue
 
+        # Extract full article content
+        content_ele = soup.find(
+            "content",
+            attrs={
+                "data-index": True,
+                "data-page-year": True,
+                "data-page-month": True,
+                "data-page-seo-title": True,
+                "data-page-slug": True,
+            },
+        )
+        endpoint_url = "https://hbr.org/api/article/piano/content?" + urlencode(
+            {
+                "year": content_ele["data-page-year"],
+                "month": content_ele["data-page-month"],
+                "seotitle": content_ele["data-page-seo-title"],
+            }
+        )
+        data = {
+            "contentKey": content_ele["data-index"],
+            "pageSlug": content_ele["data-page-slug"],
+        }
+        headers = {
+            "User-Agent": random_user_agent(),
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache",
+            "Content-Type": "application/json",
+            "Referer": article_url,
+        }
+        br = self.get_browser()
+        req = Request(
+            endpoint_url,
+            headers=headers,
+            data=json.dumps(data),
+            method="POST",
+            timeout=self.timeout,
+        )
+        res = br.open(req)
+        article = json.loads(res.read())
+        new_soup = self.soup(article["content"])
+        # clear out existing partial content
+        for c in list(content_ele.children):
+            c.extract()  # use extract() instead of decompose() because of strings
+        content_ele.append(new_soup.body)
         return str(soup)
 
     def populate_article_metadata(self, article, soup, _):
