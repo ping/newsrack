@@ -15,6 +15,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from calibre import browser, iswindows, random_user_agent
+from calibre.ebooks.BeautifulSoup import BeautifulSoup
 from calibre.utils.date import parse_date
 from calibre.web.feeds.news import BasicNewsRecipe
 
@@ -91,9 +92,9 @@ class BloombergNews(BasicNewsRecipe):
     # Sitemap urls can be extracted from https://www.bloomberg.com/robots.txt
     feeds = [
         ("News", "https://www.bloomberg.com/feeds/sitemap_news.xml"),
-        ("Business", "https://www.bloomberg.com/feeds/bbiz/sitemap_news.xml"),
-        ("Technology", "https://www.bloomberg.com/feeds/technology/sitemap_news.xml"),
-        ("Equality", "https://www.bloomberg.com/feeds/equality/sitemap_news.xml"),
+        # ("Business", "https://www.bloomberg.com/feeds/bbiz/sitemap_news.xml"),
+        # ("Technology", "https://www.bloomberg.com/feeds/technology/sitemap_news.xml"),
+        # ("Equality", "https://www.bloomberg.com/feeds/equality/sitemap_news.xml"),
     ]
 
     # We send no cookies to avoid triggering bot detection
@@ -139,7 +140,7 @@ class BloombergNews(BasicNewsRecipe):
             ("connection", "keep-alive"),
             ("host", urlparse(target_url).hostname),
             ("upgrade-insecure-requests", "1"),
-            ("user-agent", random_user_agent(0, allow_ie=False)),
+            ("user-agent", random_user_agent(allow_ie=False)),
         ]
         br.set_handle_redirect(False)
         try:
@@ -429,7 +430,7 @@ class BloombergNews(BasicNewsRecipe):
                 img["src"] = img["src"]
             soup.body.article.append(body_soup)
         else:
-            body_soup = self.soup()
+            body_soup = self.soup("")
             self.nested_render(article["body"], body_soup, body_soup)
             soup.body.article.append(body_soup)
         return str(soup)
@@ -439,7 +440,7 @@ class BloombergNews(BasicNewsRecipe):
         feed_items = {}
         for feed_name, feed_url in self.feeds:
             res = br.open_novisit(feed_url, timeout=self.timeout)
-            soup = self.soup(res.read().decode("utf-8"), "xml")
+            soup = BeautifulSoup(res.read().decode("utf-8"), "xml")
             articles = []
             cutoff_date = datetime.utcnow().replace(tzinfo=timezone.utc) - timedelta(
                 days=self.oldest_article

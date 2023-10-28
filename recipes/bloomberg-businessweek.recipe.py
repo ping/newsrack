@@ -18,6 +18,9 @@ from calibre.web.feeds.news import BasicNewsRecipe
 issue_url = ""  # ex: https://www.bloomberg.com/magazine/businessweek/22_44
 
 blocked_path_re = re.compile(r"/tosv.*.html")
+COMMA_SEP_RE = re.compile(r"\s*,\s*")
+SPACE_SEP_RE = re.compile(r"\s+")
+NON_NUMERIC_RE = re.compile(r"[^\d]+")
 
 
 class BloombergBusinessweek(BasicNewsRecipe):
@@ -51,7 +54,7 @@ class BloombergBusinessweek(BasicNewsRecipe):
     download_count = 0
 
     remove_attributes = ["style", "height", "width", "align"]
-    keep_only_tags = [dict(id="article-container")]
+    keep_only_tags = [dict(id="article-container"), dict(class_="dvz-content")]
     remove_tags = [
         dict(
             class_=[
@@ -64,11 +67,15 @@ class BloombergBusinessweek(BasicNewsRecipe):
                 "css--social-wrapper-outer",
                 "css--recirc-wrapper",
                 "__sticky__audio__bar__portal__",
+                "series-tout",
+                "dvz-button-group",
+                "scrolly-container",
             ]
         ),
         dict(name=["aside"], class_=["postr-recirc"]),
         dict(attrs={"data-tout-type": True}),
         dict(attrs={"data-ad-placeholder": True}),
+        dict(attrs={"data-type": ["narrow_ai2html", "ai2html"]}),
     ]
 
     extra_css = """
@@ -116,7 +123,7 @@ class BloombergBusinessweek(BasicNewsRecipe):
             ("connection", "keep-alive"),
             ("host", urlparse(target_url).hostname),
             ("upgrade-insecure-requests", "1"),
-            ("user-agent", random_user_agent(0, allow_ie=False)),
+            ("user-agent", random_user_agent(allow_ie=False)),
         ]
         br.set_handle_redirect(False)
         try:
@@ -283,6 +290,38 @@ class BloombergBusinessweek(BasicNewsRecipe):
                     self.nested_render(cc, soup, content_ele)
                 parent.append(content_ele)
 
+    def extract_from_img_srcset(self, srcset: str, max_width=0):
+        """
+        Extract img url from a srcset attribute
+
+        :param srcset:
+        :param max_width:
+        :return:
+        """
+        sources = [s.strip() for s in COMMA_SEP_RE.split(srcset) if s.strip()]
+        if len(sources) == 1:
+            # just regular img url probably
+            return sources[0]
+        parsed_sources = []
+        for src in sources:
+            src_n_width = [s.strip() for s in SPACE_SEP_RE.split(src) if s.strip()]
+            if len(src_n_width) != 2:
+                raise ValueError(f"Not a valid srcset: {srcset}")
+            parsed_sources.append(
+                (
+                    src_n_width[0].strip(),
+                    int(NON_NUMERIC_RE.sub("", src_n_width[1].strip())),
+                )
+            )
+        parsed_sources = list(set(parsed_sources))
+        parsed_sources = sorted(parsed_sources, key=lambda x: x[1], reverse=True)
+        if not max_width:
+            return parsed_sources[0][0]
+        for img, width in parsed_sources:
+            if width <= max_width:
+                return img
+        return parsed_sources[-1][0]
+
     def preprocess_raw_html(self, raw_html, url):
         self.download_count += 1
         article = None
@@ -310,7 +349,21 @@ class BloombergBusinessweek(BasicNewsRecipe):
             err_msg = f"Unable to find json: {url}"
             self.log.warn(err_msg)
             # self.abort_article(err_msg)
-            return raw_html
+            soup = self.soup(raw_html)
+            for img in soup.find_all(
+                "img", attrs={"data-pattern": True, "data-widths": True}
+            ):
+                pattern = img["data-pattern"]
+                width = next(
+                    iter(
+                        [w for w in sorted(json.loads(img["data-widths"])) if w >= 1000]
+                    ),
+                    None,
+                )
+                if width:
+                    img["src"] = pattern.replace("{{size}}", str(width))
+
+            return str(soup)
 
         article = article.get("story") or article.get("props", {}).get(
             "pageProps", {}
@@ -405,7 +458,7 @@ class BloombergBusinessweek(BasicNewsRecipe):
                 img["src"] = img["src"]
             soup.body.article.append(body_soup)
         else:
-            body_soup = self.soup()
+            body_soup = self.soup("")
             self.nested_render(article["body"], body_soup, body_soup)
             soup.body.article.append(body_soup)
         return str(soup)
@@ -424,15 +477,39 @@ class BloombergBusinessweek(BasicNewsRecipe):
         soup = self.index_to_soup(edition_url)
         edition = self.tag_to_string(soup.find("h1")).replace(" Issue", "")
         self.timefmt = f": {edition}"
-        cover_img = soup.find("img", class_="story-list-module__image")
-        self.cover_url = cover_img["src"].replace("/280x-1.jpg", "/800x-1.jpg")
+
+        cover_img_container = soup.find(
+            "div", class_=lambda c: c and c.startswith("styles_MagazineFeatures__")
+        )
+        if cover_img_container:
+            cover_img = cover_img_container.find("img", attrs={"srcset": True})
+            self.cover_url = self.extract_from_img_srcset(
+                cover_img["srcset"], max_width=1000
+            )
         feeds = []
-        for section in soup.find_all("div", class_="story-list-module__info"):
-            section_name = self.tag_to_string(section.find("h3"))
+        for section in soup.find_all(
+            "div",
+            class_=lambda c: c
+            and (
+                c.startswith("styles_MagazineFeatures__")
+                or c.startswith("styles_MagazineStoryList__")
+            ),
+        ):
+            section_name = self.tag_to_string(
+                section.find(
+                    "p",
+                    class_=lambda c: c
+                    and (
+                        c.startswith("styles_featuresTitle__")
+                        or c.startswith("styles_magazineSectionTitle__")
+                    ),
+                )
+            )
             section_articles = []
-            for article in section.find_all(
-                class_="story-list-story__info__headline-link"
+            for article_container in section.find_all(
+                attrs={"data-component": "headline"}
             ):
+                article = article_container.find("a")
                 section_articles.append(
                     {
                         "title": self.tag_to_string(article),
