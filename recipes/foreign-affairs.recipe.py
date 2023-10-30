@@ -193,9 +193,8 @@ class ForeignAffairsRecipe(BasicNewsrackRecipe, BasicNewsRecipe):
             modified_dt = datetime.fromisoformat(modified_meta["content"])
             if not self.pub_date or modified_dt > self.pub_date:
                 self.pub_date = modified_dt
-        for attr in ("ng-src", "data-blazy", "data-src", "srcset"):
-            for img in soup.findAll("img", attrs={attr: True}):
-                img["src"] = self.extract_from_img_srcset(img[attr], max_width=800)
+        for img in soup.find_all("img", attrs={"srcset": True}):
+            img["src"] = self.extract_from_img_srcset(img["srcset"], max_width=800)
         author_info = soup.find(id="author-info")
         if author_info:
             author_info.name = "div"
