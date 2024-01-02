@@ -53,6 +53,7 @@ class ScientificAmerican(BasicNewsrackRecipe, BasicNewsRecipe):
                 "article-date-published",
             ]
         ),
+        prefixed_classes('breakoutContainer- readThisNext- newsletterSignup-')
     ]
 
     extra_css = """
