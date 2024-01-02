@@ -11,9 +11,9 @@ from urllib.parse import urljoin
 
 # custom include to share code between recipes
 sys.path.append(os.environ["recipes_includes"])
-from recipes_shared import BasicNewsrackRecipe
+from recipes_shared import BasicNewsrackRecipe, parse_date
 
-from calibre.web.feeds.news import BasicNewsRecipe
+from calibre.web.feeds.news import BasicNewsRecipe, prefixed_classes
 
 
 _name = "Scientific American"
@@ -37,15 +37,8 @@ class ScientificAmerican(BasicNewsrackRecipe, BasicNewsRecipe):
 
     remove_attributes = ["width", "height"]
     keep_only_tags = [
-        dict(
-            class_=[
-                "feature-article--header-title",
-                "article-header",
-                "article-content",
-                "article-media",
-                "article-author",
-                "article-text",
-            ]
+        prefixed_classes(
+            'article_hed- article_dek- article_authors- lead_image- article__content- bio-'
         ),
     ]
     remove_tags = [
@@ -60,14 +53,15 @@ class ScientificAmerican(BasicNewsrackRecipe, BasicNewsRecipe):
                 "article-date-published",
             ]
         ),
+        prefixed_classes('breakoutContainer- readThisNext- newsletterSignup-')
     ]
 
     extra_css = """
-    h1[itemprop="headline"] { font-size: 1.8rem; margin-bottom: 0.4rem; }
-    p.t_article-subtitle { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; }
-    .meta-list { padding-left: 0; margin-bottom: 1rem; }
-    .article-media img, .image-captioned img { max-width: 100%; height: auto; }
-    .image-captioned div, .t_caption { font-size: 0.8rem; margin-top: 0.2rem; margin-bottom: 0.5rem; }
+    h1[class^="article_hed-"] { font-size: 1.8rem; margin-bottom: 0.4rem; }
+    [class^="article_dek-"] p { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; }
+    [class^="article_authors-"] { padding-left: 0; margin-bottom: 1rem; }
+    [class^="lead_image-"] img, [class^="article_image-"] img, [class^="article__image-"] img { max-width: 100%; height: auto; }
+    div[class^="lead_image__figcaption"], .t_caption { font-size: 0.8rem; margin-top: 0.2rem; margin-bottom: 0.5rem; }
     """
 
     def get_browser(self, *a, **kw):
@@ -79,13 +73,9 @@ class ScientificAmerican(BasicNewsrackRecipe, BasicNewsRecipe):
 
     def preprocess_raw_html(self, raw_html, url):
         soup = self.soup(raw_html)
-        info = self.get_script_json(soup, r"dataLayer\s*=\s*")
+        info = self.get_ld_json(soup, lambda d: d.get("dateModified"))
         if info:
-            for i in info:
-                if not i.get("content"):
-                    continue
-                content = i["content"]
-                soup.find("h1")["published_at"] = content["contentInfo"]["publishedAt"]
+            soup.find("h1")["published_at"] = info["datePublished"]
 
         # shift article media to after heading
         article_media = soup.find(class_="article-media")
@@ -103,9 +93,7 @@ class ScientificAmerican(BasicNewsrackRecipe, BasicNewsRecipe):
     def populate_article_metadata(self, article, soup, first):
         published_ele = soup.find(attrs={"published_at": True})
         if published_ele:
-            pub_date = datetime.utcfromtimestamp(
-                int(published_ele["published_at"])
-            ).replace(tzinfo=timezone.utc)
+            pub_date = parse_date(published_ele["published_at"], tz_info=timezone.utc)
             article.utctime = pub_date
 
             # pub date is always 1st of the coming month
