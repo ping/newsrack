@@ -148,8 +148,6 @@ fragment ArticlePageFields on Article {
   galleries {
     id
     galleryData {
-      captionText
-      creditText
       image {
         id
         src
