@@ -1,0 +1,115 @@
+#!/usr/bin/env python
+__license__ = 'GPL v3'
+__author__ = 'Alvaro Beiro, improving Jordi Balcells work based on an earlier version by Lorenzo Vigentini & Kovid Goyal'
+__copyright__ = '2008, Kovid Goyal kovid@kovidgoyal.net'
+description = 'Main daily newspaper from Spain - v1.05 (13, March 2023)'
+__docformat__ = 'restructuredtext en'
+
+'''
+elpais.es
+'''
+
+from calibre.web.feeds.news import BasicNewsRecipe
+
+
+class ElPais(BasicNewsRecipe):
+    __author__ = 'Kovid Goyal & Lorenzo Vigentini & Jordi Balcells & Alvaro Beiro'
+    description = 'Main daily newspaper from Spain'
+
+    title = u'El Pa\xeds'
+    publisher = u'Ediciones El Pa\xeds SL'
+    category = 'News, politics, culture, economy, general interest'
+    publication_type = 'newspaper'
+
+    language = 'es'
+    timefmt = '[%a, %d %b, %Y]'
+
+    oldest_article = 2.1
+    max_articles_per_feed = 25
+
+    use_embedded_content = False
+    recursion = 5
+
+    remove_javascript = True
+    no_stylesheets = True
+
+    extra_css = '''
+span._db {max-width: 100%; height: auto;}
+.a_m_p {font-size: .75rem;}
+.a_m_m {text-transform: uppercase; padding-top: 0.5rem;}
+div.a_md_a {text-align: center; text-transform: uppercase; font-size: .8rem;}
+'''
+
+    keep_only_tags = [
+        dict(attrs={'class': [
+                              'article_header',
+                              'article_body',
+                              'a_t',
+                              'a_st',
+                              'articulo-titulares',
+                              'articulo-apertura',
+                              'articulo__contenedor'
+                              'a_e_m',
+                              'a_md_a',
+                             ]}),
+        dict(name='div', attrs={'class': 'a_c',}),
+
+    ]
+
+    remove_tags = [
+        dict(
+            attrs={'class': [
+                              'sumario__interior',
+                              'articulo-trust',
+                              'compartir',
+                              'articulo-tags',
+                              'outbrain',
+                              'more_info',
+                              'articulo-apoyos',
+                              'top10',
+                              'a_ei',
+                              'w-cta',
+                              'ph-v_b',
+                             ]
+                    },
+            ),
+        dict(id='cta_id'),
+        dict(name='svg'),
+    ]
+
+    remove_attributes = ['width', 'height']
+
+    feeds = [
+        (u'Espa\xf1a', u'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/espana/portada'),
+        (u'Internacional',
+         u'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/internacional/portada'),
+        (u'Economía', u'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/economia/portada'),
+        (u'Opinión', u'http://ep00.epimg.net/rss/elpais/opinion.xml'),
+        (u'Ciencia', u'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/ciencia/portada'),
+        (u'Tecnología',
+         u'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/tecnologia/portada'),
+        (u'Cultura', u'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/cultura/portada'),
+        (u'Estilo', u'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/estilo/portada'),
+        (u'Deportes', u'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/deportes/portada'),
+        (u'Televisión', u'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/television/portada'),
+        (u'Sociedad', u'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/sociedad/portada'),
+        (u'Blogs', u'http://ep01.epimg.net/rss/elpais/blogs.xml'),
+    ]
+
+    def get_cover_url(self):
+        from datetime import date
+        cover = ('https://srv00.epimg.net/pdf/elpais/snapshot/' +
+                 str(date.today().year) + '/' + date.today().strftime('%m') + '/elpais/' +
+                 str(date.today().year) +  date.today().strftime('%m') + date.today().strftime('%d') + 'Big.jpg')
+        br = BasicNewsRecipe.get_browser(self)
+        try:
+            br.open(cover)
+        except:
+            self.log("\nCover unavailable")
+            cover = None
+        return cover
+
+    def image_url_processor(cls, baseurl, url):
+        splitUrl = url.split("cloudfront-")
+        parsedUrl = 'https://cloudfront-' + splitUrl[1]
+        return parsedUrl
