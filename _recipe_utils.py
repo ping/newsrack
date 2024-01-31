@@ -15,7 +15,7 @@ default_recipe_timeout = 180
 
 # format-specific ebook-convert options
 default_conv_options: Dict[str, List[str]] = {
-    "mobi": ["--output-profile=kindle_oasis", "--mobi-file-type=both"],
+    "mobi": ["--output-profile=kindle", "--mobi-file-type=both"],
     "pdf": ["--pdf-page-numbers"],
     "epub": [
         "--output-profile=tablet",
