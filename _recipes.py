@@ -137,6 +137,16 @@ recipes: List[Recipe] = [
     #     ),
     # ),
     Recipe(
+        recipe="deutsche-welle-es",
+        slug="deutsche-welle-es",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="News",
+        cover_options=CoverOptions(
+            logo_path_or_url="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Deutsche_Welle_Logo.svg/1024px-Deutsche_Welle_Logo.svg.png"
+        ),
+    ),
+    Recipe(
         recipe="economist",
         slug="economist",
         src_ext="mobi",
@@ -150,6 +160,16 @@ recipes: List[Recipe] = [
     Recipe(
         recipe="el_pais",
         slug="el_pais",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="News",
+        cover_options=CoverOptions(
+            logo_path_or_url="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/El_Pais_logo_2007.svg/1024px-El_Pais_logo_2007.svg.png"
+        ),
+    ),
+    Recipe(
+        recipe="el-pais-semanal",
+        slug="el-pais-semanal",
         src_ext="mobi",
         target_ext=["epub"],
         category="News",
@@ -492,6 +512,20 @@ recipes: List[Recipe] = [
     # ),
     # don't let NYT recipes overlap to avoid throttling
     Recipe(
+        recipe="natgeomag",
+        slug="natgeomag",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="Magazines",
+        timeout=300,
+        retry_attempts=0,
+        enable_on=onlyat_hours(list(range(18, 22))),
+        cover_options=CoverOptions(
+            logo_path_or_url="https://upload.wikimedia.org/wikipedia/commons/0/0a/Natgeo.png"
+        ),
+        tags=["nature", "science"],
+    ),
+    Recipe(
         recipe="nytimes-global",
         slug="nytimes-global",
         src_ext="mobi",
@@ -660,6 +694,17 @@ recipes: List[Recipe] = [
         tags=["europe", "britain"],
         enable_on=onlyon_weekdays([3, 4]),
         overwrite_cover=False,
+    ),
+    Recipe(
+        recipe="talcualdigital",
+        slug="talcualdigital",
+        src_ext="mobi",
+        target_ext=["epub"],
+        category="News",
+        enable_on=onlyat_hours(list(range(8, 14))),
+        cover_options=CoverOptions(
+            logo_path_or_url="https://talcualdigital.com/wp-content/uploads/2019/04/logo_02.png"
+        ),
     ),
     Recipe(
         recipe="time-magazine",
